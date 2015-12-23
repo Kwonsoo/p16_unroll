@@ -1,0 +1,72 @@
+#!/bin/bash
+
+set -e -u
+
+BUILD_CMD=ocamlbuild
+INCLUDE_DIRS=lib,cilext,pgm,domain,semantics,pre,sparse,report,research/pfs,research/widen,core,validator,instance
+TARGET=core/main.native
+PACKAGE=""
+LIBS=
+STATIC_BINDING=
+DOC_FLAGS="-docflags -hide-warnings,-charset,utf-8,-keep-code"
+
+function clean
+{
+	ocamlbuild -clean
+	exit 0
+}
+
+function rebuild
+{
+	ocamlbuild -clean
+}
+
+function doc
+{
+    TARGET=zoo.docdir/index.html
+    PACKAGE="$PACKAGE -package apron"
+}
+
+function byte
+{
+    TARGET=core/main.byte
+}
+
+function vis
+{
+    TARGET=core/vis.native
+}
+
+function oct
+{
+    TARGET=core/octmain.native
+    PACKAGE="$PACKAGE -package apron"
+    LIBS="$LIBS -lib octMPQ"
+}
+
+function static
+{
+    STATIC_BINDING="-lflags -ccopt,-static"
+}
+
+function profile
+{
+    TARGET=core/main.p.native
+}
+
+while [ $# -ne 0 ] && [ ! -z $1 ]; do
+	case $1 in
+		debug|clean|rebuild|doc|byte|vis|oct|static|profile) "$1" ;;
+		*) echo "build: invalid argument $1" && exit 1 ;;
+	esac
+	shift
+done
+
+time $BUILD_CMD $TARGET \
+    $PACKAGE $LIBS \
+    -use-ocamlfind \
+    -Is $INCLUDE_DIRS \
+    -cflag -annot \
+    $STATIC_BINDING \
+    $DOC_FLAGS
+
