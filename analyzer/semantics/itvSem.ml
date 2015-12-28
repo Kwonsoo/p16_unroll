@@ -47,47 +47,16 @@ let model_calloc mode node pid (lvo, exps) (mem, global) =
     end
   | _ -> (mem,global)
 
-let model_recv mode node pid (lvo, exps) (mem, global) =
+let model_strlen mode node pid lvo (mem, global) =
   match lvo with
   | Some lv ->
-    begin
-      match exps with
-      | _::_::size::_ -> 
-        (Mem.update mode global (eval_lv pid lv mem) (eval pid size mem) mem, global)
-      | _ -> raise (Failure "Error: arguments of realloc are not given")
-    end
-  | _ -> (mem,global)
-
-
-let model_strlen mode node pid (lvo,exps) (mem, global) =
-  match lvo with
-  | Some lv ->
-    begin
-      match exps with
-      | _::src::_ ->
-        (Mem.update mode global (eval_lv pid lv mem) (eval pid src mem) mem, global)
-      | _ -> (mem, global)
-    end
+    let v = val_of_itv (Itv.V (Itv.Int 0, Itv.PInf)) in
+      (Mem.update mode global (eval_lv pid lv mem) v mem, global)
   | _ -> (mem,global)
 
 let model_scanf mode node pid exps (mem, global) =
   match exps with 
     _::t -> 
-      List.fold_left (fun (mem, global) e -> 
-          match e with 
-            Cil.AddrOf lv -> 
-              let allocsite = Allocsite.allocsite_of_ext None in
-              let ext_v = ItvDom.external_value allocsite in
-              let ext_loc = PowLoc.singleton (Loc.loc_of_allocsite allocsite) in
-              let mem = Mem.update mode global (eval_lv pid lv mem) ext_v mem in
-              let mem = Mem.update mode global ext_loc ext_v mem in
-              (mem, global)
-          | _ -> (mem,global)) (mem,global) t
-  | _ -> (mem, global)
-
-let model_fscanf mode node pid exps (mem, global) =
-  match exps with 
-    _::_::t -> 
       List.fold_left (fun (mem, global) e -> 
           match e with 
             Cil.AddrOf lv -> 
@@ -109,13 +78,30 @@ let model_strdup mode node pid (lvo, exps) (mem, global) =
         let allocsite = Allocsite.allocsite_of_node node in
         let str_val = eval pid str mem in
         let size = ArrayBlk.sizeof (ItvDom.array_of_val str_val) in
-        let offset = ArrayBlk.offsetof (ItvDom.array_of_val str_val) in
-        let nullpos = ArrayBlk.nullposof (ItvDom.array_of_val str_val) in
-        let arr_val = ArrayBlk.make allocsite Itv.zero (Itv.minus size offset) Itv.one nullpos in 
+        let offset = ArrayBlk.sizeof (ItvDom.array_of_val str_val) in
+        let arr_val = ArrayBlk.make allocsite Itv.zero (Itv.minus size offset) Itv.one in 
         let loc = PowLoc.singleton (Loc.loc_of_allocsite allocsite) in
         let v = Val.join (ItvDom.val_of_array arr_val) (ItvDom.val_of_pow_loc loc) in
         let mem = Mem.update mode global (eval_lv pid lv mem) v mem in
         let mem = Mem.update mode global loc (Mem.lookup (pow_loc_of_val str_val) mem) mem in
+        (mem,global)
+      | _ -> (mem, global)
+    end
+  | _ -> (mem,global)
+ 
+let model_getenv mode node pid (lvo, exps) (mem, global) =
+  match lvo with
+  | Some lv ->
+    begin
+      match exps with
+      | str::_ -> 
+        let allocsite = Allocsite.allocsite_of_node node in
+        let size = Itv.one_pos in
+        let arr_val = ArrayBlk.make allocsite Itv.zero size Itv.one in 
+        let loc = PowLoc.singleton (Loc.loc_of_allocsite allocsite) in
+        let v = Val.join (ItvDom.val_of_array arr_val) (ItvDom.val_of_pow_loc loc) in
+        let mem = Mem.update mode global (eval_lv pid lv mem) v mem in
+        let mem = Mem.update mode global loc (val_of_itv Itv.top) mem in
         (mem,global)
       | _ -> (mem, global)
     end
@@ -129,10 +115,9 @@ let handle_undefined_functions mode silent node pid (lvo,f,exps) (mem,global) lo
   | "zoo_dump" -> zoo_dump silent mem loc; (mem, global)
   | "realloc" -> model_realloc mode node pid (lvo, exps) (mem, global)
   | "calloc" -> model_calloc mode node pid (lvo, exps) (mem, global)
-  | "strlen" -> model_strlen mode node pid (lvo, exps) (mem, global)
+  | "strlen" -> model_strlen mode node pid lvo (mem, global)
   | "scanf" -> model_scanf mode node pid exps (mem, global)
-  | "fscanf" -> model_fscanf mode node pid exps (mem, global)
-  | "recv" -> model_recv mode node pid (lvo,exps) (mem, global)
+  | "getenv" -> model_getenv mode node pid (lvo,exps) (mem, global)
 (*  | "strdup" -> model_strdup mode node pid (lvo, exps) (mem, global)*)
   | _ -> 
       match lvo with
@@ -163,18 +148,6 @@ let bind_arg_lvars_set : AbsDom.update_mode -> Global.t -> (LVar.t list) BatSet.
   let mode = if BatSet.cardinal arg_ids_set > 1 then AbsDom.Weak else mode in
   BatSet.fold (bind_arg_ids mode global vs) arg_ids_set mem
 
-let update_nullpos pid mode lv e (mem,global) = 
-  match lv, itv_of_val (eval pid e mem) with
-    (Var vi, Index (idx, _)), itv when itv = Itv.zero ->
-      let l = eval_lv pid (Var vi, NoOffset) mem in
-      let v = Mem.lookup l mem in
-      let arrays = array_of_val v in
-      let nullpos = itv_of_val (eval pid idx mem) in
-      let arrays = ArrayBlk.update_nullpos arrays nullpos in
-      let v = modify_array v arrays in
-        Mem.update mode global l v mem
-  | _ -> mem
-
 (** Default update option is weak update. *)
 let run ?(mode = Weak) ?(locset = BatSet.empty) ?(premem = Mem.bot) ?(silent = false) 
     : Node.t -> Mem.t * Global.t -> Mem.t * Global.t
@@ -185,8 +158,7 @@ let run ?(mode = Weak) ?(locset = BatSet.empty) ?(premem = Mem.bot) ?(silent = f
   | IntraCfg.Cmd.Cif _ -> invalid_arg "absSem.ml: run Cif" 
   | IntraCfg.Cmd.CLoop _ -> invalid_arg "absSem.ml: run CLoop" 
   | IntraCfg.Cmd.Cset (l, e, _) ->
-    let (mem, global) = (Mem.update mode global (eval_lv pid l mem) (eval pid e mem) mem, global) in
-      (update_nullpos pid mode l e (mem,global), global)
+    (Mem.update mode global (eval_lv pid l mem) (eval pid e mem) mem, global)
   | IntraCfg.Cmd.Cexternal (l, _) ->
     let allocsite = Allocsite.allocsite_of_ext None in
     let ext_v = ItvDom.external_value allocsite in

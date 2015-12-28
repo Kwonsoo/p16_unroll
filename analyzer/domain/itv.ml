@@ -145,6 +145,7 @@ let name : string = "interval"
 let zero = V (Int 0, Int 0)
 let one = V (Int 1, Int 1)
 let zero_pos = V (Int 0, PInf)
+let one_pos = V (Int 1, PInf)
 
 let to_string : t -> string = function
   | Bot -> "bot"

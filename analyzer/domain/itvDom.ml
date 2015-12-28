@@ -84,3 +84,11 @@ let external_value : Allocsite.t -> Val.t = fun allocsite ->
   let pow_loc = PowLoc.singleton loc in
   let array = ArrayBlk.extern allocsite in
   (Itv.top, pow_loc, array, PowProc.bot)
+
+let make_eraser_value : Itv.t -> Val.t 
+=fun itv -> 
+  let allocsite = Allocsite.allocsite_of_ext None in
+  let loc = Loc.loc_of_allocsite allocsite in
+  let pow_loc = PowLoc.singleton loc in 
+  let array = ArrayBlk.eraser itv allocsite in
+  (itv, pow_loc, array, PowProc.bot)

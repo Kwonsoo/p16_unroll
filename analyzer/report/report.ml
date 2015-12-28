@@ -31,7 +31,7 @@ let string_of_alarminfo offset size =
 let check_bo v1 v2opt : (status * Allocsite.t option * string) list = 
   let arr = array_of_val v1 in
   if ArrayBlk.eq arr ArrayBlk.bot then [(BotAlarm, None, "Array is Bot")] else
-    ArrayBlk.foldi (fun a (offset,size,_,_) lst ->
+    ArrayBlk.foldi (fun a (offset,size,_) lst ->
       let offset = 
         match v2opt with
         | None -> offset
@@ -69,13 +69,12 @@ let inspect_aexp_bo : InterCfg.node -> AlarmExp.t -> Mem.t -> query list -> quer
       else 
         List.map (fun (status,a,desc) -> 
           if status = BotAlarm
-          then { node = node; exp = aexp; loc = loc; status = Proven; allocsite = a; desc = "valid pointer dereference" }
+          then { node = node; exp = aexp; loc = loc; status = BotAlarm; allocsite = a; desc = "BotAlarm" }
           else { node = node; exp = aexp; loc = loc; status = status; allocsite = a; desc = desc }) lst
-  | IntraCfg.Cmd.Strcpy (e1, e2, loc) ->
+(*  | IntraCfg.Cmd.Strcpy (e1, e2, loc) ->
     let v1 = EvalOp.eval (InterCfg.Node.get_pid node) e1 mem in
     let v2 = EvalOp.eval (InterCfg.Node.get_pid node) e2 mem in
-(*    let v2 = val_of_itv (Itv.minus (ArrayBlk.nullposof (array_of_val v2)) Itv.one) in *)
-    let v2 = val_of_itv (ArrayBlk.nullposof (array_of_val v2)) in 
+    let v2 = val_of_itv (Itv.minus (ArrayBlk.nullposof (array_of_val v2)) Itv.one) in
     let lst = check_bo v1 (Some v2) in
       List.map (fun (status,a,desc) -> { node = node; exp = aexp; loc = loc; allocsite = a; status = status; desc = desc }) lst
   | IntraCfg.Cmd.Strncpy (e1, _, e3, loc) 
@@ -86,7 +85,7 @@ let inspect_aexp_bo : InterCfg.node -> AlarmExp.t -> Mem.t -> query list -> quer
     let v3 = EvalOp.eval (InterCfg.Node.get_pid node) e3_1 mem in
     let lst = check_bo v1 (Some v3) in
       List.map (fun (status,a,desc) -> { node = node; exp = aexp; loc = loc; allocsite = a; status = status; desc = desc }) lst
-  | _ -> []  (* TODO : strcat *)
+*)  | _ -> []  (* TODO : strcat *)
   )
 
 let check_nd v1 : (status * Allocsite.t option * string) list = 
@@ -238,6 +237,28 @@ let string_of_query q =
    | _ -> "") ^ "  " ^
   q.desc ^ " " ^ status_to_string (get_status [q])
 
+let print_raw : bool -> query list -> unit
+=fun summary_only queries ->
+  let unproven = List.filter (fun x -> x.status = UnProven) queries in
+  let botalarm = List.filter (fun x -> x.status = BotAlarm) queries in
+  prerr_newline ();
+  prerr_endline ("= "^"Alarms"^ "=");
+  ignore (List.fold_left (fun k q ->
+    prerr_string (string_of_int k ^ ". "); 
+    prerr_string ( "  " ^ AlarmExp.to_string q.exp ^ " @");
+    prerr_string (InterCfg.Node.to_string q.node);
+    prerr_string ("  ");
+    prerr_string (Cil2str.s_location q.loc);
+    prerr_endline ( ":  " ^ q.desc );
+    k+1
+    ) 1 (sort_queries unproven)); 
+  prerr_endline "";
+  prerr_endline ("#queries                 : " ^ i2s (List.length queries));
+  prerr_endline ("#proven                  : " ^ i2s (BatSet.cardinal (get_proved_query_point queries)));
+  prerr_endline ("#unproven                : " ^ i2s (List.length unproven));
+  prerr_endline ("#bot-involved            : " ^ i2s (List.length botalarm))
+
+
 let display_alarms title alarms_part = 
   prerr_endline "";
   prerr_endline ("= " ^ title ^ " =");
@@ -259,58 +280,111 @@ let display_alarms title alarms_part =
    k+1
   ) 1 alarms_part) 
 
-let print_pts queries = 
-  let n_alarms = List.fold_left (fun n q ->
-    if q.desc = "null" then n
-    else 
-      begin
-      prerr_endline (string_of_int n ^ ". LOC:" ^ Cil2str.s_location q.loc ^ " NODE:" ^ InterCfg.Node.to_string q.node ^ " EXPRESSION:" ^ AlarmExp.to_string q.exp ^ " ABSLOC:" ^ q.desc);
-      n+1
-      end
-  ) 1 queries in
-  prerr_endline "";
-  prerr_endline ("#points-to locations : " ^ i2s n_alarms)
+(* queries1: FI, queries2: FS *)
+let diff_alarms queries1 queries2 = 
+  let locs1 = BatMap.foldi (fun p _ -> BatSet.add p) queries1 BatSet.empty in
+  let locs2 = BatMap.foldi (fun p _ -> BatSet.add p) queries2 BatSet.empty in
+  let diff = BatSet.diff locs1 locs2 in
+  if BatSet.is_empty diff then prerr_endline "empty set";
+    BatSet.fold (fun loc ->
+      BatMap.add loc (BatMap.find loc queries1)
+    ) diff BatMap.empty
 
-let print : bool -> query list -> alarm_type -> unit
-=fun summary_only queries alarm_type ->
-  match alarm_type with
-  | PTSTO -> print_pts queries 
-  | _ -> 
-    let all = partition queries in
-    let unproven = partition (get queries UnProven) in
-    let bot = partition (get queries BotAlarm) in
-    if not summary_only then
-      begin
-        display_alarms "Alarms" unproven; 
-      end
-    else ();
+
+(* get alarm diff, excluding bot alarms *)
+let get_alarm_diff q1 q2 = 
+  let bot_alarms = (get q1 BotAlarm) @ (get q2 BotAlarm) in
+  let q1_unproven, q2_unproven = get q1 UnProven, get q2 UnProven in
+  let q1_unproven =  (* exclude bot alarms *)
+      List.filter (fun q -> not (List.exists (fun q' -> q.loc = q'.loc) bot_alarms)) q1_unproven in
+  let q2_unproven =  (* exclude bot alarms *)
+      List.filter (fun q -> not (List.exists (fun q' -> q.loc = q'.loc) bot_alarms)) q2_unproven in
+  let part1 = partition q1_unproven in
+  let part2 = partition q2_unproven in
+    (diff_alarms part1 part2, part1, part2)
+
+let ptstoqs2map qs = 
+    list_fold (fun q (m1,m2)->
+      let key = Cil2str.s_location q.loc ^ " " ^ AlarmExp.to_string q.exp in
+      let old = try BatMap.find key m1 with _ -> BatSet.empty in
+        (BatMap.add key (BatSet.add q.desc old) m1, 
+         BatMap.add key q.exp m2)
+    ) qs (BatMap.empty, BatMap.empty)
+ 
+(* qs1: FS, qs2: FI *)
+let print_pts_new show_diff qs1 qs2 = 
+  let string_of_key key = key in
+  let (map1,_) = ptstoqs2map qs1 in
+  let (map2,_) = ptstoqs2map qs2 in
+    if not show_diff then
+      ignore (BatMap.foldi (fun key set k ->
+        prerr_endline (string_of_int k ^ ". " ^ string_of_key key ^ " |-> " ^
+        (string_of_set id set));
+        k+1
+      ) map1 1)
+    else
+      ignore (BatMap.foldi (fun key set2 k ->
+        let set1 = try BatMap.find key map1 with _ -> BatSet.empty in
+        let diff = BatSet.diff set2 set1 in  (* diff = FI \ FS *)
+          if BatSet.is_empty (BatSet.diff set2 set1) then (* no difference *)
+            k
+          else
+            (prerr_endline (string_of_int k ^ ". " ^
+              string_of_key key ^ " |-> " ^ string_of_set id diff);
+              k+1)
+      ) map2 1)
+
+let print_pts show_diff queries1 queries2 = 
+  if show_diff then
+    begin
+      print_raw false queries1;
+      print_raw false queries2;
+      let diff,_,_ = get_alarm_diff queries2 queries1 in
+      let alarms = BatMap.bindings diff in
+        ignore (list_fold (fun (loc, alarms) k ->
+            prerr_endline (string_of_int k); k+1
+        ) alarms 1)
+    end
+  else
+    begin
+    let n_alarms = List.fold_left (fun n q ->
+      if q.desc = "null" then n
+      else 
+        begin
+        prerr_endline (string_of_int n ^ ". LOC:" ^ Cil2str.s_location q.loc ^ " NODE:" ^ InterCfg.Node.to_string q.node ^ " EXPRESSION:" ^ AlarmExp.to_string q.exp ^ " ABSLOC:" ^ q.desc);
+        n+1
+        end
+    ) 1 queries1 in
     prerr_endline "";
-    prerr_endline ("#queries                 : " ^ i2s (List.length queries));
-    prerr_endline ("#queries mod alarm point : " ^ i2s (BatMap.cardinal all));
-    prerr_endline ("#proven                  : " ^ i2s (BatSet.cardinal (get_proved_query_point queries)));
-    prerr_endline ("#unproven                : " ^ i2s (BatMap.cardinal unproven));
-    prerr_endline ("#bot-involved            : " ^ i2s (BatMap.cardinal bot))
+    prerr_endline ("#points-to locations : " ^ i2s n_alarms)
+    end
 
-let print_raw : bool -> query list -> unit
-=fun summary_only queries ->
-  let unproven = List.filter (fun x -> x.status = UnProven) queries in
-  let botalarm = List.filter (fun x -> x.status = BotAlarm) queries in
-  prerr_newline ();
-  prerr_endline ("= "^"Alarms"^ "=");
-  ignore (List.fold_left (fun k q ->
-    prerr_string (string_of_int k ^ ". "); 
-    prerr_string ( "  " ^ AlarmExp.to_string q.exp ^ " @");
-    prerr_string (InterCfg.Node.to_string q.node);
-    prerr_string ("  ");
-    prerr_string (Cil2str.s_location q.loc);
-    prerr_endline ( ":  " ^ q.desc );
-    k+1
-    ) 1 (sort_queries unproven)); 
-  prerr_endline "";
-  prerr_endline ("#queries                 : " ^ i2s (List.length queries));
-  prerr_endline ("#proven                  : " ^ i2s (BatSet.cardinal (get_proved_query_point queries)));
-  prerr_endline ("#unproven                : " ^ i2s (List.length unproven));
-  prerr_endline ("#bot-involved            : " ^ i2s (List.length botalarm))
+(* queries1 : FS alarm, queries2 : FI alarm *)
+let print : bool -> bool -> query list -> query list -> alarm_type -> unit
+=fun summary_only show_diff queries1 queries2 alarm_type ->
+  match alarm_type with
+  | PTSTO -> print_pts_new show_diff queries1 queries2
+  | _ -> 
+    let all1 = partition queries1 in
+    let all2 = partition queries2 in
+    let unproven1 = partition (get queries1 UnProven) in
+    let unproven2 = partition (get queries2 UnProven) in
+    let bot1 = partition (get queries1 BotAlarm) in
+    let bot2 = partition (get queries2 BotAlarm) in
+    if not show_diff then
+      (if not summary_only then
+        begin
+          display_alarms "Alarms" unproven1; 
+        end
+      else ();
+      prerr_endline "";
+      prerr_endline ("#queries                 : " ^ i2s (List.length queries1));
+      prerr_endline ("#queries mod alarm point : " ^ i2s (BatMap.cardinal all1));
+      prerr_endline ("#proven                  : " ^ i2s (BatSet.cardinal (get_proved_query_point queries1)));
+      prerr_endline ("#unproven                : " ^ i2s (BatMap.cardinal unproven1));
+      prerr_endline ("#bot-involved            : " ^ i2s (BatMap.cardinal bot1)))
+    else (* show diff : alarms in queries1 but not in queries 2 *)
+      (display_alarms "Alarm Diff" ((fun (x,_,_) -> x) (get_alarm_diff queries2 queries1)))
 
 
 let diff qs1_part qs2_part = 
@@ -348,3 +422,13 @@ let print_compare : bool -> query list -> query list -> unit
        display_alarms "2" qs2pcu;
        display_alarms "1-2" (diff qs1pcu qs2pcu)
      end
+
+let get_alarm_type () =
+  match !Options.opt_alarm_type with
+  | "bo" -> BO
+  | "nd" -> ND
+  | "dz" -> DZ 
+  | "ptsto" -> PTSTO
+  |  _   -> raise (Failure ("Unknown alarm type: " ^ !Options.opt_alarm_type)) 
+
+

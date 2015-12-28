@@ -3,7 +3,7 @@
 set -e -u
 
 BUILD_CMD=ocamlbuild
-INCLUDE_DIRS=lib,cilext,pgm,domain,semantics,pre,sparse,report,research/pfs,research/widen,core,validator,instance
+INCLUDE_DIRS=lib,cilext,pgm,domain,semantics,pre,sparse,report,research/pfs,research/widen,research/reduce,core,validator,instance
 TARGET=core/main.native
 PACKAGE=""
 LIBS=

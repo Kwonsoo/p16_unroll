@@ -18,8 +18,33 @@ let opt_alarm_type = ref "bo"
 let opt_deadcode = ref false
 let opt_debug = ref false
 let opt_pf = ref false
+let opt_diff = ref false
+let opt_dec_prec = ref 0
+let opt_insert_observe = ref false
+let opt_insert_observe_save_diff = ref false
+let opt_observe = ref false
+type diff_type = FS | CS
+let opt_diff_type = ref FS
+let opt_dir = ref ""
+let opt_inline_small_functions = ref false
 let opts =
   [
+  (* options for inserting observe-stmts *)
+  ("-dec_prec", (Arg.Set_int opt_dec_prec), "Randomly transform the input program to be less impreicse and then print it in C");
+  ("-insert_observe", (Arg.Set opt_insert_observe), "Insert airac_observe for each diff alarm and store each");
+  ("-insert_observe_save_diff", (Arg.Set opt_insert_observe_save_diff), "Save diff only");
+  ("-observe", (Arg.Set opt_observe), "observe");
+  ("-difftype", (Arg.String (fun s ->
+      match s with
+      | "fs" -> opt_diff_type := FS
+      | "cs" -> opt_diff_type := CS
+      | _ -> raise (Failure "Diff type must be either fs or cs")
+  )), "Diff type: fs, cs");
+  ("-dir", (Arg.String (fun s -> opt_dir := s)), "A directory to store");
+  ("-diff", (Arg.Set opt_diff), "Show the diff between FI and FS");
+ 
+  (* ordinary Sparrow options below *)
+  ("-inline_small", (Arg.Set opt_inline_small_functions), "Inline small functions");
   ("-cil", (Arg.Set opt_il), "Show the input program in CIL");
   ("-cfgs", (Arg.String (fun s -> opt_cfgs := true; opt_cfgs_dir := s)), "Store CFGs in dot. Supply a directory to store");
   ("-dug", (Arg.Set opt_dug), "Print Def-Use graph");

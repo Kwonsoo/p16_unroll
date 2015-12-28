@@ -15,6 +15,13 @@ let to_string t =
   | Strcat (e1, e2, _) -> "strcat ("^(Cil2str.s_exp e1)^", "^(Cil2str.s_exp e2)^")"
   | DivExp (e1, e2, _) -> Cil2str.s_exp e1 ^ " / " ^ Cil2str.s_exp e2
 
+let eq ale1 ale2 = 
+  match ale1, ale2 with
+  | ArrayExp (lv1,e1,loc1), ArrayExp (lv2,e2,loc2)  -> 
+      to_string ale1 = to_string ale2 && Cil2str.s_location loc1 = Cil2str.s_location loc2
+  | DerefExp (e1,loc1), DerefExp (e2,loc2) -> 
+      to_string ale1 = to_string ale2 && Cil2str.s_location loc1 = Cil2str.s_location loc2
+  | _ -> false (* TODO: consider other cases *)
 
 (* NOTE: you may use Cil.addOffset or Cil.addOffsetLval instead of
    add_offset, append_field, and append_index. *)

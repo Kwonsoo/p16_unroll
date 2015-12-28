@@ -14,25 +14,24 @@ struct
   type offset = Itv.t
   and size = Itv.t
   and stride = Itv.t
-  include Prod4 (Itv) (Itv) (Itv) (Itv) (* the last itv tracks null position *)
-  let top = (Itv.top, Itv.top, Itv.top, Itv.top)
+  include Prod3 (Itv) (Itv) (Itv)
+  let top = (Itv.top, Itv.top, Itv.top)
+  let eraser itv = (itv, itv, itv)
 
   let offset = fst
   let size = snd
   let stride = trd
-  let nullpos = frth
 
-  let make o sz st sl = (o, sz, st, sl)
-  let plus_offset (o, s, st, sl) i = (Itv.plus i o, s, st, sl)
-  let minus_offset (o, s, st, sl) i = (Itv.minus o i, s, st, sl)
-  let update_nullpos (o, s, st, np) i = (o, s, st, Itv.join np i)
+  let make o sz st = (o, sz, st)
+  let plus_offset (o, s, st) i = (Itv.plus i o, s, st)
+  let minus_offset (o, s, st) i = (Itv.minus o i, s, st)
 end
 
 include DMap (Allocsite) (ArrInfo)
 
-let make : Allocsite.t -> Itv.t -> Itv.t -> Itv.t -> Itv.t -> t
-= fun a o sz st sl ->
-  add a (ArrInfo.make o sz st sl) bot
+let make : Allocsite.t -> Itv.t -> Itv.t -> Itv.t -> t
+= fun a o sz st ->
+  add a (ArrInfo.make o sz st) bot
 
 let offsetof : t -> Itv.t
 = fun a ->
@@ -42,12 +41,14 @@ let sizeof : t -> Itv.t
 = fun a ->
   fold (fun arr -> Itv.join (ArrInfo.size arr)) a Itv.bot
 
-let nullposof : t -> Itv.t
-= fun a -> 
-  fold (fun arr -> Itv.join (ArrInfo.nullpos arr)) a Itv.bot
+let nullposof : t -> Itv.t (* TODO *)
+= fun a -> sizeof a
 
 let extern allocsite = 
-  add allocsite ArrInfo.top empty 
+  add allocsite ArrInfo.top empty
+
+let eraser itv allocsite = 
+  add allocsite (ArrInfo.eraser itv) empty
 
 let plus_offset : t -> Itv.t -> t
 = fun arr i ->
@@ -60,15 +61,12 @@ let minus_offset : t -> Itv.t -> t
 let cast_array : Itv.t -> t -> t 
 = fun new_st a ->
   let resize orig_st x = Itv.divide (Itv.times x orig_st) new_st in
-  let cast_offset (o, s, orig_st, sl) =
+  let cast_offset (o, s, orig_st) =
     let new_o = resize orig_st o in
     let new_s = resize orig_st s in
-    (new_o, new_s, new_st, sl) in
+    (new_o, new_s, new_st) in
   map cast_offset a
 
-let update_nullpos : t -> Itv.t -> t
-= fun arr nullpos -> 
-  map (fun a -> ArrInfo.update_nullpos a nullpos) arr
 
 let pow_loc_of_array : t -> PowLoc.t = fun array ->
   let pow_loc_of_allocsite k _ acc = BatSet.add (Loc.loc_of_allocsite k) acc in

@@ -4,13 +4,17 @@ open AbsDom
 open ItvDom
 open ArrayBlk
 
+let eraser_value = ref Itv.top
+
 let eval_const : Cil.constant -> Val.t = fun cst ->
   match cst with
   | Cil.CInt64 (i64, _, _) ->
-    let itv = try itv_of_int (Cil.i64_to_int i64) with _ -> Itv.top in
-    val_of_itv itv
+    if Cil.i64_to_int i64 = 614512 then make_eraser_value !eraser_value (* agreed to produce Top *)
+    else
+      let itv = try itv_of_int (Cil.i64_to_int i64) with _ -> Itv.top in
+      val_of_itv itv
   | Cil.CStr s -> invalid_arg ("evalOp.ml: eval_const string "^s)
-  | Cil.CWStr s -> val_of_itv Itv.top (* invalid_arg "evalOp.ml: eval_const wide string" *)
+  | Cil.CWStr s -> invalid_arg "evalOp.ml: eval_const wide string"
   | Cil.CChr c -> val_of_itv (itv_of_int (int_of_char c))
 
   (* Float numbers are modified to itvs.  If you want to make a
@@ -194,18 +198,16 @@ let eval_alloc : Node.t -> IntraCfg.Cmd.alloc -> bool -> Mem.t -> Val.t
     (* NOTE: stride is always one when allocating memory. *)
     let st = itv_of_int 1 in
     let pow_loc = (if not static then PowLoc.add Loc.null else id) (PowLoc.singleton (Loc.loc_of_allocsite allocsite)) in
-    let nullpos = Itv.bot in
-    let array = ArrayBlk.make allocsite o sz st nullpos in
+    let array = ArrayBlk.make allocsite o sz st in
       Val.join (val_of_pow_loc pow_loc) (val_of_array array)
 
 let eval_string : string -> Val.t = fun s ->
-  val_of_itv (Itv.V (Itv.Int 0, Itv.PInf)) (* TODO *)
+  val_of_itv (Itv.V (Itv.Int 0, Itv.PInf))
 
 let eval_string_loc : string -> Allocsite.t -> PowLoc.t -> Val.t
 = fun s allocsite pow_loc ->
   let o = itv_of_int 0 in
   let sz = itv_of_int (String.length s) in
   let st = itv_of_int 1 in
-  let nullpos = itv_of_int (String.length s) in
-  let array = ArrayBlk.make allocsite o sz st nullpos in
+  let array = ArrayBlk.make allocsite o sz st in
   Val.join (val_of_pow_loc pow_loc) (val_of_array array)
