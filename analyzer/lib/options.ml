@@ -1,5 +1,9 @@
 open Arg
 
+let opt_auto_fgen = ref false
+let opt_auto_train = ref false
+let opt_auto_apply = ref false
+
 let opt_il = ref false
 let opt_dug = ref false
 let opt_noalarm = ref false
@@ -29,7 +33,12 @@ let opt_dir = ref ""
 let opt_inline_small_functions = ref false
 let opts =
   [
-  (* options for inserting observe-stmts *)
+	(* options for the auto-feature research *)
+	("-auto_fgen", (Arg.Set opt_auto_fgen), "Automatically generate features from the T1 program set");
+	("-auto_train", (Arg.Set opt_auto_train), "Learn the classifier with the T2 program set");
+	("-auto_apply", (Arg.Set opt_auto_apply), "Selectively apply precision based on the learned knowledge");
+ 
+	(* options for inserting observe-stmts *)
   ("-dec_prec", (Arg.Set_int opt_dec_prec), "Randomly transform the input program to be less impreicse and then print it in C");
   ("-insert_observe", (Arg.Set opt_insert_observe), "Insert airac_observe for each diff alarm and store each");
   ("-insert_observe_save_diff", (Arg.Set opt_insert_observe_save_diff), "Save diff only");
