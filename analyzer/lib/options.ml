@@ -1,7 +1,6 @@
 open Arg
 
-let opt_auto_fgen = ref false
-let opt_auto_train = ref false
+let opt_auto_learn = ref false
 let opt_auto_apply = ref false
 
 let opt_il = ref false
@@ -34,8 +33,7 @@ let opt_inline_small_functions = ref false
 let opts =
   [
 	(* options for the auto-feature research *)
-	("-auto_fgen", (Arg.Set opt_auto_fgen), "Automatically generate features from the T1 program set");
-	("-auto_train", (Arg.Set opt_auto_train), "Learn the classifier with the T2 program set");
+	("-auto_learn", (Arg.Set opt_auto_learn), "Automatically generate features from the T1 program set and learn a classifier with the T2 program set.");
 	("-auto_apply", (Arg.Set opt_auto_apply), "Selectively apply precision based on the learned knowledge");
  
 	(* options for inserting observe-stmts *)

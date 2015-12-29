@@ -309,7 +309,16 @@ let main () =
   Cil.initCIL ();
 
   let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
-  try 
+
+	(* auto-feature research *)
+	if !Options.opt_auto_learn then (
+		
+	)
+	else if !Options.opt_auto_apply then (
+		
+	);
+	
+	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
    
 (*    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); *)
