@@ -10,6 +10,9 @@ open Visitors
 open Observe
 open Report
 
+open Classify
+open Training
+
 let _ = Random.self_init ()
 
 let print_cil out file = C.dumpFile !C.printerForMaincil out "" file
@@ -312,7 +315,11 @@ let main () =
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
-		
+		(*
+		Reduce.reduce ();
+		let fvector = Flang.fgen () in
+		Classifier.learn fvector
+		*)
 	)
 	else if !Options.opt_auto_apply then (
 		
