@@ -1,0 +1,7775 @@
+"pre/pre.ml" 62 2528 2534 "pre/pre.ml" 62 2528 2539
+type(
+  t
+)
+ident(
+  def empty "pre/pre.ml" 74 2828 2830 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 63 2544 2554 "pre/pre.ml" 63 2544 2561
+type(
+  ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.bot
+)
+"pre/pre.ml" 64 2563 2583 "pre/pre.ml" 64 2563 2595
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 65 2597 2610 "pre/pre.ml" 65 2597 2622
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 66 2624 2642 "pre/pre.ml" 66 2624 2654
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 67 2656 2675 "pre/pre.ml" 67 2656 2687
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 68 2689 2713 "pre/pre.ml" 68 2689 2725
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 69 2727 2754 "pre/pre.ml" 69 2727 2766
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 70 2768 2782 "pre/pre.ml" 70 2768 2794
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 71 2796 2810 "pre/pre.ml" 71 2796 2822
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 62 2528 2542 "pre/pre.ml" 72 2823 2826
+type(
+  t
+)
+"pre/pre.ml" 74 2828 2834 "pre/pre.ml" 74 2828 2841
+type(
+  t -> ItvDom.Mem.t
+)
+ident(
+  def get_mem "pre/pre.ml" 77 2874 2876 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 75 2855 2862 "pre/pre.ml" 75 2855 2863
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 75 2855 2867 "pre/pre.ml" 75 2855 2872
+)
+"pre/pre.ml" 75 2855 2867 "pre/pre.ml" 75 2855 2868
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 75 2855 2862 "pre/pre.ml" 75 2855 2863
+)
+"pre/pre.ml" 75 2855 2867 "pre/pre.ml" 75 2855 2872
+type(
+  ItvDom.Mem.t
+)
+"pre/pre.ml" 75 2855 2858 "pre/pre.ml" 75 2855 2872
+type(
+  t -> ItvDom.Mem.t
+)
+type(
+  t -> ItvDom.Mem.t
+)
+"pre/pre.ml" 77 2874 2880 "pre/pre.ml" 77 2874 2897
+type(
+  t -> Loc.t BatSet.t
+)
+ident(
+  def get_total_abslocs "pre/pre.ml" 80 2949 2951 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 78 2920 2927 "pre/pre.ml" 78 2920 2928
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 78 2920 2932 "pre/pre.ml" 78 2920 2947
+)
+"pre/pre.ml" 78 2920 2932 "pre/pre.ml" 78 2920 2933
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 78 2920 2927 "pre/pre.ml" 78 2920 2928
+)
+"pre/pre.ml" 78 2920 2932 "pre/pre.ml" 78 2920 2947
+type(
+  Loc.t BatSet.t
+)
+"pre/pre.ml" 78 2920 2923 "pre/pre.ml" 78 2920 2947
+type(
+  t -> Loc.t BatSet.t
+)
+type(
+  t -> Loc.t BatSet.t
+)
+"pre/pre.ml" 80 2949 2955 "pre/pre.ml" 80 2949 2965
+type(
+  t -> AbsDom.Node.t -> Access.t
+)
+ident(
+  def get_access "pre/pre.ml" 83 3057 3059 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 81 2992 2999 "pre/pre.ml" 81 2992 3000
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 81 2992 3001 "pre/pre.ml" 81 2992 3055
+)
+"pre/pre.ml" 81 2992 3001 "pre/pre.ml" 81 2992 3002
+type(
+  AbsDom.Node.t
+)
+ident(
+  def n "pre/pre.ml" 81 2992 3006 "pre/pre.ml" 81 2992 3055
+)
+"pre/pre.ml" 81 2992 3010 "pre/pre.ml" 81 2992 3021
+type(
+  AbsDom.Node.t -> (AbsDom.Node.t, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 81 2992 3022 "pre/pre.ml" 81 2992 3023
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref n "pre/pre.ml" 81 2992 3001 "pre/pre.ml" 81 2992 3002
+)
+"pre/pre.ml" 81 2992 3024 "pre/pre.ml" 81 2992 3025
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 81 2992 2999 "pre/pre.ml" 81 2992 3000
+)
+"pre/pre.ml" 81 2992 3024 "pre/pre.ml" 81 2992 3032
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 81 2992 3010 "pre/pre.ml" 81 2992 3032
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 81 2992 3038 "pre/pre.ml" 81 2992 3039
+type(
+  exn
+)
+"pre/pre.ml" 81 2992 3043 "pre/pre.ml" 81 2992 3055
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 81 2992 3006 "pre/pre.ml" 81 2992 3055
+type(
+  Access.t
+)
+"pre/pre.ml" 81 2992 2995 "pre/pre.ml" 81 2992 3055
+type(
+  t -> AbsDom.Node.t -> Access.t
+)
+type(
+  t -> AbsDom.Node.t -> Access.t
+)
+"pre/pre.ml" 83 3057 3063 "pre/pre.ml" 83 3057 3078
+type(
+  t -> AbsDom.Proc.t -> Access.t
+)
+ident(
+  def get_access_proc "pre/pre.ml" 87 3249 3251 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 84 3105 3112 "pre/pre.ml" 84 3105 3113
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 84 3105 3114 "pre/pre.ml" 84 3105 3177
+)
+"pre/pre.ml" 84 3105 3114 "pre/pre.ml" 84 3105 3117
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "pre/pre.ml" 84 3105 3121 "pre/pre.ml" 84 3105 3177
+)
+"pre/pre.ml" 84 3105 3125 "pre/pre.ml" 84 3105 3136
+type(
+  AbsDom.Proc.t -> (AbsDom.Proc.t, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 84 3105 3137 "pre/pre.ml" 84 3105 3140
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "pre/pre.ml" 84 3105 3114 "pre/pre.ml" 84 3105 3117
+)
+"pre/pre.ml" 84 3105 3141 "pre/pre.ml" 84 3105 3142
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 84 3105 3112 "pre/pre.ml" 84 3105 3113
+)
+"pre/pre.ml" 84 3105 3141 "pre/pre.ml" 84 3105 3154
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 84 3105 3125 "pre/pre.ml" 84 3105 3154
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 84 3105 3160 "pre/pre.ml" 84 3105 3161
+type(
+  exn
+)
+"pre/pre.ml" 84 3105 3165 "pre/pre.ml" 84 3105 3177
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 84 3105 3121 "pre/pre.ml" 84 3105 3177
+type(
+  Access.t
+)
+"pre/pre.ml" 84 3105 3108 "pre/pre.ml" 84 3105 3177
+type(
+  t -> AbsDom.Proc.t -> Access.t
+)
+type(
+  t -> AbsDom.Proc.t -> Access.t
+)
+"pre/pre.ml" 87 3249 3255 "pre/pre.ml" 87 3249 3271
+type(
+  t -> AbsDom.Proc.t -> Loc.t BatSet.t
+)
+ident(
+  def get_access_local "pre/pre.ml" 90 3384 3386 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 88 3304 3311 "pre/pre.ml" 88 3304 3312
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 88 3304 3313 "pre/pre.ml" 88 3304 3382
+)
+"pre/pre.ml" 88 3304 3313 "pre/pre.ml" 88 3304 3316
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "pre/pre.ml" 88 3304 3320 "pre/pre.ml" 88 3304 3382
+)
+"pre/pre.ml" 88 3304 3324 "pre/pre.ml" 88 3304 3335
+type(
+  AbsDom.Proc.t -> (AbsDom.Proc.t, Loc.t BatSet.t) BatMap.t -> Loc.t BatSet.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 88 3304 3336 "pre/pre.ml" 88 3304 3339
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "pre/pre.ml" 88 3304 3313 "pre/pre.ml" 88 3304 3316
+)
+"pre/pre.ml" 88 3304 3340 "pre/pre.ml" 88 3304 3341
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 88 3304 3311 "pre/pre.ml" 88 3304 3312
+)
+"pre/pre.ml" 88 3304 3340 "pre/pre.ml" 88 3304 3359
+type(
+  (AbsDom.Proc.t, Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 88 3304 3324 "pre/pre.ml" 88 3304 3359
+call(
+  stack
+)
+type(
+  Loc.t BatSet.t
+)
+"pre/pre.ml" 88 3304 3365 "pre/pre.ml" 88 3304 3366
+type(
+  exn
+)
+"pre/pre.ml" 88 3304 3370 "pre/pre.ml" 88 3304 3382
+type(
+  Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 88 3304 3320 "pre/pre.ml" 88 3304 3382
+type(
+  Loc.t BatSet.t
+)
+"pre/pre.ml" 88 3304 3307 "pre/pre.ml" 88 3304 3382
+type(
+  t -> AbsDom.Proc.t -> Loc.t BatSet.t
+)
+type(
+  t -> AbsDom.Proc.t -> Loc.t BatSet.t
+)
+"pre/pre.ml" 90 3384 3390 "pre/pre.ml" 90 3384 3414
+type(
+  t -> Loc.t BatSet.t
+)
+ident(
+  def get_access_local_program "pre/pre.ml" 93 3473 3475 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 91 3437 3444 "pre/pre.ml" 91 3437 3445
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 91 3437 3449 "pre/pre.ml" 91 3437 3471
+)
+"pre/pre.ml" 91 3437 3449 "pre/pre.ml" 91 3437 3450
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 91 3437 3444 "pre/pre.ml" 91 3437 3445
+)
+"pre/pre.ml" 91 3437 3449 "pre/pre.ml" 91 3437 3471
+type(
+  Loc.t BatSet.t
+)
+"pre/pre.ml" 91 3437 3440 "pre/pre.ml" 91 3437 3471
+type(
+  t -> Loc.t BatSet.t
+)
+type(
+  t -> Loc.t BatSet.t
+)
+"pre/pre.ml" 93 3473 3479 "pre/pre.ml" 93 3473 3495
+type(
+  t -> AbsDom.Proc.t -> Access.t
+)
+ident(
+  def get_access_reach "pre/pre.ml" 96 3597 3599 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 94 3522 3529 "pre/pre.ml" 94 3522 3530
+type(
+  t
+)
+ident(
+  def i "pre/pre.ml" 94 3522 3531 "pre/pre.ml" 94 3522 3595
+)
+"pre/pre.ml" 94 3522 3531 "pre/pre.ml" 94 3522 3534
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "pre/pre.ml" 94 3522 3538 "pre/pre.ml" 94 3522 3595
+)
+"pre/pre.ml" 94 3522 3542 "pre/pre.ml" 94 3522 3553
+type(
+  AbsDom.Proc.t -> (AbsDom.Proc.t, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 94 3522 3554 "pre/pre.ml" 94 3522 3557
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "pre/pre.ml" 94 3522 3531 "pre/pre.ml" 94 3522 3534
+)
+"pre/pre.ml" 94 3522 3558 "pre/pre.ml" 94 3522 3559
+type(
+  t
+)
+ident(
+  int_ref i "pre/pre.ml" 94 3522 3529 "pre/pre.ml" 94 3522 3530
+)
+"pre/pre.ml" 94 3522 3558 "pre/pre.ml" 94 3522 3572
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 94 3522 3542 "pre/pre.ml" 94 3522 3572
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 94 3522 3578 "pre/pre.ml" 94 3522 3579
+type(
+  exn
+)
+"pre/pre.ml" 94 3522 3583 "pre/pre.ml" 94 3522 3595
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 94 3522 3538 "pre/pre.ml" 94 3522 3595
+type(
+  Access.t
+)
+"pre/pre.ml" 94 3522 3525 "pre/pre.ml" 94 3522 3595
+type(
+  t -> AbsDom.Proc.t -> Access.t
+)
+type(
+  t -> AbsDom.Proc.t -> Access.t
+)
+"pre/pre.ml" 96 3597 3603 "pre/pre.ml" 96 3597 3614
+type(
+  t -> (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def get_defs_of "pre/pre.ml" 99 3679 3681 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 97 3656 3663 "pre/pre.ml" 97 3656 3664
+type(
+  t
+)
+ident(
+  def t "pre/pre.ml" 97 3656 3668 "pre/pre.ml" 97 3656 3677
+)
+"pre/pre.ml" 97 3656 3668 "pre/pre.ml" 97 3656 3669
+type(
+  t
+)
+ident(
+  int_ref t "pre/pre.ml" 97 3656 3663 "pre/pre.ml" 97 3656 3664
+)
+"pre/pre.ml" 97 3656 3668 "pre/pre.ml" 97 3656 3677
+type(
+  (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 97 3656 3659 "pre/pre.ml" 97 3656 3677
+type(
+  t -> (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+type(
+  t -> (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 99 3679 3685 "pre/pre.ml" 99 3679 3696
+type(
+  t -> (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def get_uses_of "pre/pre.ml" 102 3761 3763 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 100 3738 3745 "pre/pre.ml" 100 3738 3746
+type(
+  t
+)
+ident(
+  def t "pre/pre.ml" 100 3738 3750 "pre/pre.ml" 100 3738 3759
+)
+"pre/pre.ml" 100 3738 3750 "pre/pre.ml" 100 3738 3751
+type(
+  t
+)
+ident(
+  int_ref t "pre/pre.ml" 100 3738 3745 "pre/pre.ml" 100 3738 3746
+)
+"pre/pre.ml" 100 3738 3750 "pre/pre.ml" 100 3738 3759
+type(
+  (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 100 3738 3741 "pre/pre.ml" 100 3738 3759
+type(
+  t -> (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+type(
+  t -> (Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 102 3761 3767 "pre/pre.ml" 102 3761 3775
+type(
+  Loc.t BatSet.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def restrict "pre/pre.ml" 106 3944 3946 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 103 3855 3862 "pre/pre.ml" 103 3855 3869
+type(
+  Loc.t BatSet.t
+)
+ident(
+  def abslocs "pre/pre.ml" 103 3855 3870 "pre/pre.ml" 104 3877 3942
+)
+"pre/pre.ml" 103 3855 3870 "pre/pre.ml" 103 3855 3873
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def map "pre/pre.ml" 104 3877 3881 "pre/pre.ml" 104 3877 3942
+)
+"pre/pre.ml" 104 3877 3881 "pre/pre.ml" 104 3877 3891
+type(
+  (Access.t -> Access.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.map
+)
+"pre/pre.ml" 104 3877 3897 "pre/pre.ml" 104 3877 3903
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 104 3877 3907 "pre/pre.ml" 104 3877 3937
+)
+"pre/pre.ml" 104 3877 3907 "pre/pre.ml" 104 3877 3922
+type(
+  Loc.t BatSet.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.restrict
+)
+"pre/pre.ml" 104 3877 3923 "pre/pre.ml" 104 3877 3930
+type(
+  Loc.t BatSet.t
+)
+ident(
+  int_ref abslocs "pre/pre.ml" 103 3855 3862 "pre/pre.ml" 103 3855 3869
+)
+"pre/pre.ml" 104 3877 3931 "pre/pre.ml" 104 3877 3937
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 104 3877 3897 "pre/pre.ml" 104 3877 3903
+)
+"pre/pre.ml" 104 3877 3907 "pre/pre.ml" 104 3877 3937
+call(
+  tail
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 104 3877 3892 "pre/pre.ml" 104 3877 3938
+type(
+  Access.t -> Access.t
+)
+"pre/pre.ml" 104 3877 3939 "pre/pre.ml" 104 3877 3942
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref map "pre/pre.ml" 103 3855 3870 "pre/pre.ml" 103 3855 3873
+)
+"pre/pre.ml" 104 3877 3881 "pre/pre.ml" 104 3877 3942
+call(
+  tail
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 103 3855 3858 "pre/pre.ml" 104 3877 3942
+type(
+  Loc.t BatSet.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+type(
+  Loc.t BatSet.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 106 3944 3950 "pre/pre.ml" 106 3944 3969
+type(
+  ?locset:AccessSem.Access.Loc.t BatSet.t ->
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def compute_access_info "pre/pre.ml" 118 4520 4522 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 106 3944 3971 "pre/pre.ml" 106 3944 3977
+type(
+  AccessSem.Access.Loc.t BatSet.t option
+)
+ident(
+  def locset "pre/pre.ml" 106 3944 3978 "pre/pre.ml" 116 4483 4518
+)
+"pre/pre.ml" 107 4053 4060 "pre/pre.ml" 107 4053 4066
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 107 4053 4067 "pre/pre.ml" 116 4483 4518
+)
+"pre/pre.ml" 107 4053 4067 "pre/pre.ml" 107 4053 4070
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 108 4074 4078 "pre/pre.ml" 116 4483 4518
+)
+"pre/pre.ml" 108 4074 4082 "pre/pre.ml" 108 4074 4087
+type(
+  InterCfg.Node.t list
+)
+ident(
+  def nodes "pre/pre.ml" 109 4135 4139 "pre/pre.ml" 116 4483 4518
+)
+"pre/pre.ml" 108 4074 4090 "pre/pre.ml" 108 4074 4106
+type(
+  InterCfg.t -> InterCfg.Node.t list
+)
+ident(
+  ext_ref InterCfg.nodesof
+)
+"pre/pre.ml" 108 4074 4108 "pre/pre.ml" 108 4074 4123
+type(
+  Global.t -> InterCfg.t
+)
+ident(
+  ext_ref Global.get_icfg
+)
+"pre/pre.ml" 108 4074 4124 "pre/pre.ml" 108 4074 4130
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 107 4053 4060 "pre/pre.ml" 107 4053 4066
+)
+"pre/pre.ml" 108 4074 4107 "pre/pre.ml" 108 4074 4131
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 108 4074 4090 "pre/pre.ml" 108 4074 4131
+call(
+  stack
+)
+type(
+  InterCfg.Node.t list
+)
+"pre/pre.ml" 109 4135 4143 "pre/pre.ml" 109 4135 4146
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def map "pre/pre.ml" 113 4290 4294 "pre/pre.ml" 116 4483 4518
+)
+"pre/pre.ml" 110 4149 4155 "pre/pre.ml" 110 4149 4164
+type(
+  (AbsDom.Node.t ->
+   (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t) ->
+  AbsDom.Node.t list ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"pre/pre.ml" 110 4149 4170 "pre/pre.ml" 110 4149 4174
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "pre/pre.ml" 111 4178 4186 "pre/pre.ml" 111 4178 4259
+)
+"pre/pre.ml" 111 4178 4186 "pre/pre.ml" 111 4178 4196
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 111 4178 4197 "pre/pre.ml" 111 4178 4201
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 110 4149 4170 "pre/pre.ml" 110 4149 4174
+)
+"pre/pre.ml" 111 4178 4203 "pre/pre.ml" 111 4178 4221
+type(
+  ?mode:AbsDom.update_mode ->
+  ?locset:AccessSem.Access.Loc.t BatSet.t ->
+  Global.t -> AbsDom.Node.t -> ItvDom.Mem.t -> Access.t
+)
+ident(
+  int_ref AccessSem.accessof "pre/pre.ml" 13 181 183 "pre/pre.ml" 13 181 292
+)
+"pre/pre.ml" 111 4178 4228 "pre/pre.ml" 111 4178 4234
+type(
+  AbsDom.update_mode
+)
+"pre/pre.ml" 111 4178 4236 "pre/pre.ml" 111 4178 4242
+type(
+  AccessSem.Access.Loc.t BatSet.t option
+)
+ident(
+  int_ref locset "pre/pre.ml" 106 3944 3971 "pre/pre.ml" 106 3944 3977
+)
+"pre/pre.ml" 111 4178 4243 "pre/pre.ml" 111 4178 4249
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 107 4053 4060 "pre/pre.ml" 107 4053 4066
+)
+"pre/pre.ml" 111 4178 4250 "pre/pre.ml" 111 4178 4254
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 110 4149 4170 "pre/pre.ml" 110 4149 4174
+)
+"pre/pre.ml" 111 4178 4255 "pre/pre.ml" 111 4178 4258
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 107 4053 4067 "pre/pre.ml" 107 4053 4070
+)
+"pre/pre.ml" 111 4178 4202 "pre/pre.ml" 111 4178 4259
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 111 4178 4186 "pre/pre.ml" 111 4178 4259
+call(
+  tail
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 110 4149 4165 "pre/pre.ml" 112 4260 4267
+type(
+  AbsDom.Node.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 112 4260 4268 "pre/pre.ml" 112 4260 4273
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 108 4074 4082 "pre/pre.ml" 108 4074 4087
+)
+"pre/pre.ml" 112 4260 4274 "pre/pre.ml" 112 4260 4286
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 110 4149 4155 "pre/pre.ml" 112 4260 4286
+call(
+  stack
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 113 4290 4298 "pre/pre.ml" 113 4290 4305
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def abslocs "pre/pre.ml" 116 4483 4487 "pre/pre.ml" 116 4483 4518
+)
+"pre/pre.ml" 113 4290 4308 "pre/pre.ml" 113 4290 4320
+type(
+  (AbsDom.Node.t ->
+   Access.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 113 4290 4326 "pre/pre.ml" 113 4290 4327
+type(
+  AbsDom.Node.t
+)
+"pre/pre.ml" 113 4290 4328 "pre/pre.ml" 113 4290 4334
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 113 4290 4335 "pre/pre.ml" 115 4409 4461
+)
+"pre/pre.ml" 113 4290 4335 "pre/pre.ml" 113 4290 4338
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def acc "pre/pre.ml" 114 4342 4350 "pre/pre.ml" 115 4409 4461
+)
+"pre/pre.ml" 114 4342 4354 "pre/pre.ml" 114 4342 4357
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def acc "pre/pre.ml" 115 4409 4416 "pre/pre.ml" 115 4409 4461
+)
+"pre/pre.ml" 114 4342 4360 "pre/pre.ml" 114 4342 4379
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Vocab.set_union_small_big
+)
+"pre/pre.ml" 114 4342 4381 "pre/pre.ml" 114 4342 4393
+type(
+  Access.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Access.useof
+)
+"pre/pre.ml" 114 4342 4394 "pre/pre.ml" 114 4342 4400
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 113 4290 4328 "pre/pre.ml" 113 4290 4334
+)
+"pre/pre.ml" 114 4342 4380 "pre/pre.ml" 114 4342 4401
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 114 4342 4402 "pre/pre.ml" 114 4342 4405
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref acc "pre/pre.ml" 113 4290 4335 "pre/pre.ml" 113 4290 4338
+)
+"pre/pre.ml" 114 4342 4360 "pre/pre.ml" 114 4342 4405
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 115 4409 4416 "pre/pre.ml" 115 4409 4435
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Vocab.set_union_small_big
+)
+"pre/pre.ml" 115 4409 4437 "pre/pre.ml" 115 4409 4449
+type(
+  Access.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Access.defof
+)
+"pre/pre.ml" 115 4409 4450 "pre/pre.ml" 115 4409 4456
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 113 4290 4328 "pre/pre.ml" 113 4290 4334
+)
+"pre/pre.ml" 115 4409 4436 "pre/pre.ml" 115 4409 4457
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 115 4409 4458 "pre/pre.ml" 115 4409 4461
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref acc "pre/pre.ml" 114 4342 4354 "pre/pre.ml" 114 4342 4357
+)
+"pre/pre.ml" 115 4409 4416 "pre/pre.ml" 115 4409 4461
+call(
+  tail
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 114 4342 4350 "pre/pre.ml" 115 4409 4461
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 113 4290 4321 "pre/pre.ml" 115 4409 4462
+type(
+  AbsDom.Node.t -> Access.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 115 4409 4463 "pre/pre.ml" 115 4409 4466
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref map "pre/pre.ml" 109 4135 4143 "pre/pre.ml" 109 4135 4146
+)
+"pre/pre.ml" 115 4409 4467 "pre/pre.ml" 115 4409 4479
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 113 4290 4308 "pre/pre.ml" 115 4409 4479
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 116 4483 4488 "pre/pre.ml" 116 4483 4495
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref abslocs "pre/pre.ml" 113 4290 4298 "pre/pre.ml" 113 4290 4305
+)
+"pre/pre.ml" 116 4483 4497 "pre/pre.ml" 116 4483 4505
+type(
+  Loc.t BatSet.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref restrict "pre/pre.ml" 102 3761 3767 "pre/pre.ml" 102 3761 3775
+)
+"pre/pre.ml" 116 4483 4506 "pre/pre.ml" 116 4483 4513
+type(
+  Loc.t BatSet.t
+)
+ident(
+  int_ref abslocs "pre/pre.ml" 113 4290 4298 "pre/pre.ml" 113 4290 4305
+)
+"pre/pre.ml" 116 4483 4514 "pre/pre.ml" 116 4483 4517
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref map "pre/pre.ml" 109 4135 4143 "pre/pre.ml" 109 4135 4146
+)
+"pre/pre.ml" 116 4483 4497 "pre/pre.ml" 116 4483 4517
+call(
+  stack
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 116 4483 4487 "pre/pre.ml" 116 4483 4518
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 113 4290 4294 "pre/pre.ml" 116 4483 4518
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 109 4135 4139 "pre/pre.ml" 116 4483 4518
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 108 4074 4078 "pre/pre.ml" 116 4483 4518
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 107 4053 4056 "pre/pre.ml" 116 4483 4518
+type(
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+type(
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 118 4520 4526 "pre/pre.ml" 118 4520 4537
+type(
+  ?locset:AccessSem.Access.Loc.t BatSet.t ->
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def init_access "pre/pre.ml" 122 4686 4688 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 118 4520 4539 "pre/pre.ml" 118 4520 4545
+type(
+  AccessSem.Access.Loc.t BatSet.t option
+)
+ident(
+  def locset "pre/pre.ml" 118 4520 4546 "pre/pre.ml" 120 4625 4684
+)
+"pre/pre.ml" 120 4625 4632 "pre/pre.ml" 120 4625 4638
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 120 4625 4639 "pre/pre.ml" 120 4625 4684
+)
+"pre/pre.ml" 120 4625 4639 "pre/pre.ml" 120 4625 4642
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 120 4625 4646 "pre/pre.ml" 120 4625 4684
+)
+"pre/pre.ml" 120 4625 4646 "pre/pre.ml" 120 4625 4665
+type(
+  ?locset:AccessSem.Access.Loc.t BatSet.t ->
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref compute_access_info "pre/pre.ml" 106 3944 3950 "pre/pre.ml" 106 3944 3969
+)
+"pre/pre.ml" 120 4625 4667 "pre/pre.ml" 120 4625 4673
+type(
+  AccessSem.Access.Loc.t BatSet.t option
+)
+ident(
+  int_ref locset "pre/pre.ml" 118 4520 4539 "pre/pre.ml" 118 4520 4545
+)
+"pre/pre.ml" 120 4625 4674 "pre/pre.ml" 120 4625 4680
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 120 4625 4632 "pre/pre.ml" 120 4625 4638
+)
+"pre/pre.ml" 120 4625 4681 "pre/pre.ml" 120 4625 4684
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 120 4625 4639 "pre/pre.ml" 120 4625 4642
+)
+"pre/pre.ml" 120 4625 4646 "pre/pre.ml" 120 4625 4684
+call(
+  tail
+)
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 120 4625 4628 "pre/pre.ml" 120 4625 4684
+type(
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+type(
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 122 4686 4692 "pre/pre.ml" 122 4686 4709
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  Access.Loc.t BatSet.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def filter_out_access "pre/pre.ml" 128 4939 4941 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 123 4796 4803 "pre/pre.ml" 123 4796 4809
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def access "pre/pre.ml" 123 4796 4810 "pre/pre.ml" 126 4912 4937
+)
+"pre/pre.ml" 123 4796 4810 "pre/pre.ml" 123 4796 4814
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def locs "pre/pre.ml" 124 4820 4824 "pre/pre.ml" 126 4912 4937
+)
+"pre/pre.ml" 124 4820 4824 "pre/pre.ml" 124 4820 4836
+type(
+  (AbsDom.Node.t ->
+   Access.t ->
+   (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 124 4820 4842 "pre/pre.ml" 124 4820 4846
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "pre/pre.ml" 124 4820 4847 "pre/pre.ml" 125 4857 4910
+)
+"pre/pre.ml" 124 4820 4847 "pre/pre.ml" 124 4820 4853
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 125 4857 4863 "pre/pre.ml" 125 4857 4910
+)
+"pre/pre.ml" 125 4857 4863 "pre/pre.ml" 125 4857 4873
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 125 4857 4874 "pre/pre.ml" 125 4857 4878
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 124 4820 4842 "pre/pre.ml" 124 4820 4846
+)
+"pre/pre.ml" 125 4857 4880 "pre/pre.ml" 125 4857 4897
+type(
+  Access.Loc.t BatSet.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.filter_out
+)
+"pre/pre.ml" 125 4857 4898 "pre/pre.ml" 125 4857 4902
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref locs "pre/pre.ml" 123 4796 4810 "pre/pre.ml" 123 4796 4814
+)
+"pre/pre.ml" 125 4857 4903 "pre/pre.ml" 125 4857 4909
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 124 4820 4847 "pre/pre.ml" 124 4820 4853
+)
+"pre/pre.ml" 125 4857 4879 "pre/pre.ml" 125 4857 4910
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 125 4857 4863 "pre/pre.ml" 125 4857 4910
+call(
+  tail
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 124 4820 4837 "pre/pre.ml" 126 4912 4917
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 126 4912 4918 "pre/pre.ml" 126 4912 4924
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access "pre/pre.ml" 123 4796 4803 "pre/pre.ml" 123 4796 4809
+)
+"pre/pre.ml" 126 4912 4925 "pre/pre.ml" 126 4912 4937
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 124 4820 4824 "pre/pre.ml" 126 4912 4937
+call(
+  tail
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 123 4796 4799 "pre/pre.ml" 126 4912 4937
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  Access.Loc.t BatSet.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  Access.Loc.t BatSet.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 128 4939 4945 "pre/pre.ml" 128 4939 4960
+type(
+  t -> Access.Loc.t BatSet.t -> t
+)
+ident(
+  def restrict_access "pre/pre.ml" 135 5170 5172 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 129 4995 5002 "pre/pre.ml" 129 4995 5003
+type(
+  t
+)
+ident(
+  def t "pre/pre.ml" 129 4995 5004 "pre/pre.ml" 133 5135 5168
+)
+"pre/pre.ml" 129 4995 5004 "pre/pre.ml" 129 4995 5008
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def locs "pre/pre.ml" 130 5014 5018 "pre/pre.ml" 133 5135 5168
+)
+"pre/pre.ml" 130 5014 5020 "pre/pre.ml" 130 5014 5021
+type(
+  t
+)
+ident(
+  int_ref t "pre/pre.ml" 129 4995 5002 "pre/pre.ml" 129 4995 5003
+)
+"pre/pre.ml" 131 5037 5045 "pre/pre.ml" 131 5037 5057
+type(
+  (AbsDom.Node.t ->
+   Access.t ->
+   (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 131 5037 5063 "pre/pre.ml" 131 5037 5067
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "pre/pre.ml" 131 5037 5068 "pre/pre.ml" 132 5078 5133
+)
+"pre/pre.ml" 131 5037 5068 "pre/pre.ml" 131 5037 5074
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 132 5078 5088 "pre/pre.ml" 132 5078 5133
+)
+"pre/pre.ml" 132 5078 5088 "pre/pre.ml" 132 5078 5098
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 132 5078 5099 "pre/pre.ml" 132 5078 5103
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 131 5037 5063 "pre/pre.ml" 131 5037 5067
+)
+"pre/pre.ml" 132 5078 5105 "pre/pre.ml" 132 5078 5120
+type(
+  Access.Loc.t BatSet.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.restrict
+)
+"pre/pre.ml" 132 5078 5121 "pre/pre.ml" 132 5078 5125
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref locs "pre/pre.ml" 129 4995 5004 "pre/pre.ml" 129 4995 5008
+)
+"pre/pre.ml" 132 5078 5126 "pre/pre.ml" 132 5078 5132
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 131 5037 5068 "pre/pre.ml" 131 5037 5074
+)
+"pre/pre.ml" 132 5078 5104 "pre/pre.ml" 132 5078 5133
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 132 5078 5088 "pre/pre.ml" 132 5078 5133
+call(
+  tail
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 131 5037 5058 "pre/pre.ml" 133 5135 5144
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 133 5135 5145 "pre/pre.ml" 133 5135 5146
+type(
+  t
+)
+ident(
+  int_ref t "pre/pre.ml" 129 4995 5002 "pre/pre.ml" 129 4995 5003
+)
+"pre/pre.ml" 133 5135 5145 "pre/pre.ml" 133 5135 5153
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 133 5135 5154 "pre/pre.ml" 133 5135 5166
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 131 5037 5045 "pre/pre.ml" 133 5135 5166
+call(
+  stack
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 130 5014 5018 "pre/pre.ml" 133 5135 5168
+type(
+  t
+)
+"pre/pre.ml" 129 4995 4998 "pre/pre.ml" 133 5135 5168
+type(
+  t -> Access.Loc.t BatSet.t -> t
+)
+type(
+  t -> Access.Loc.t BatSet.t -> t
+)
+"pre/pre.ml" 135 5170 5176 "pre/pre.ml" 135 5170 5192
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  def init_access_proc "pre/pre.ml" 143 5526 5528 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 136 5254 5261 "pre/pre.ml" 136 5254 5267
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def access "pre/pre.ml" 137 5271 5275 "pre/pre.ml" 141 5472 5524
+)
+"pre/pre.ml" 137 5271 5279 "pre/pre.ml" 137 5271 5294
+type(
+  'a -> Access.t -> ('a, Access.t) BatMap.t -> ('a, Access.t) BatMap.t
+)
+ident(
+  def add_access_proc "pre/pre.ml" 139 5378 5382 "pre/pre.ml" 141 5472 5524
+)
+"pre/pre.ml" 137 5271 5295 "pre/pre.ml" 137 5271 5298
+type(
+  'a
+)
+ident(
+  def pid "pre/pre.ml" 137 5271 5299 "pre/pre.ml" 138 5310 5374
+)
+"pre/pre.ml" 137 5271 5299 "pre/pre.ml" 137 5271 5305
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 137 5271 5306 "pre/pre.ml" 138 5310 5374
+)
+"pre/pre.ml" 137 5271 5306 "pre/pre.ml" 137 5271 5307
+type(
+  ('a, Access.t) BatMap.t
+)
+ident(
+  def m "pre/pre.ml" 138 5310 5316 "pre/pre.ml" 138 5310 5374
+)
+"pre/pre.ml" 138 5310 5316 "pre/pre.ml" 138 5310 5333
+type(
+  Access.t ->
+  'a ->
+  (Access.t -> Access.t) ->
+  ('a, Access.t) BatMap.t -> ('a, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.modify_def
+)
+"pre/pre.ml" 138 5310 5334 "pre/pre.ml" 138 5310 5346
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 138 5310 5347 "pre/pre.ml" 138 5310 5350
+type(
+  'a
+)
+ident(
+  int_ref pid "pre/pre.ml" 137 5271 5295 "pre/pre.ml" 137 5271 5298
+)
+"pre/pre.ml" 138 5310 5352 "pre/pre.ml" 138 5310 5364
+type(
+  Access.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.union
+)
+"pre/pre.ml" 138 5310 5365 "pre/pre.ml" 138 5310 5371
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 137 5271 5299 "pre/pre.ml" 137 5271 5305
+)
+"pre/pre.ml" 138 5310 5351 "pre/pre.ml" 138 5310 5372
+call(
+  stack
+)
+type(
+  Access.t -> Access.t
+)
+"pre/pre.ml" 138 5310 5373 "pre/pre.ml" 138 5310 5374
+type(
+  ('a, Access.t) BatMap.t
+)
+ident(
+  int_ref m "pre/pre.ml" 137 5271 5306 "pre/pre.ml" 137 5271 5307
+)
+"pre/pre.ml" 138 5310 5316 "pre/pre.ml" 138 5310 5374
+call(
+  tail
+)
+type(
+  ('a, Access.t) BatMap.t
+)
+"pre/pre.ml" 139 5378 5386 "pre/pre.ml" 139 5378 5401
+type(
+  'b * 'c -> Access.t -> ('b, Access.t) BatMap.t -> ('b, Access.t) BatMap.t
+)
+ident(
+  def add_access_node "pre/pre.ml" 141 5472 5476 "pre/pre.ml" 141 5472 5524
+)
+"pre/pre.ml" 139 5378 5402 "pre/pre.ml" 139 5378 5406
+type(
+  'b * 'c
+)
+ident(
+  def node "pre/pre.ml" 139 5378 5407 "pre/pre.ml" 140 5418 5468
+)
+"pre/pre.ml" 139 5378 5407 "pre/pre.ml" 139 5378 5413
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 139 5378 5414 "pre/pre.ml" 140 5418 5468
+)
+"pre/pre.ml" 139 5378 5414 "pre/pre.ml" 139 5378 5415
+type(
+  ('b, Access.t) BatMap.t
+)
+ident(
+  def m "pre/pre.ml" 140 5418 5424 "pre/pre.ml" 140 5418 5468
+)
+"pre/pre.ml" 140 5418 5424 "pre/pre.ml" 140 5418 5439
+type(
+  'b -> Access.t -> ('b, Access.t) BatMap.t -> ('b, Access.t) BatMap.t
+)
+ident(
+  int_ref add_access_proc "pre/pre.ml" 137 5271 5279 "pre/pre.ml" 137 5271 5294
+)
+"pre/pre.ml" 140 5418 5441 "pre/pre.ml" 140 5418 5453
+type(
+  'b * 'c -> 'b
+)
+ident(
+  ext_ref AbsDom.Node.get_pid
+)
+"pre/pre.ml" 140 5418 5454 "pre/pre.ml" 140 5418 5458
+type(
+  'b * 'c
+)
+ident(
+  int_ref node "pre/pre.ml" 139 5378 5402 "pre/pre.ml" 139 5378 5406
+)
+"pre/pre.ml" 140 5418 5440 "pre/pre.ml" 140 5418 5459
+call(
+  stack
+)
+type(
+  'b
+)
+"pre/pre.ml" 140 5418 5460 "pre/pre.ml" 140 5418 5466
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 139 5378 5407 "pre/pre.ml" 139 5378 5413
+)
+"pre/pre.ml" 140 5418 5467 "pre/pre.ml" 140 5418 5468
+type(
+  ('b, Access.t) BatMap.t
+)
+ident(
+  int_ref m "pre/pre.ml" 139 5378 5414 "pre/pre.ml" 139 5378 5415
+)
+"pre/pre.ml" 140 5418 5424 "pre/pre.ml" 140 5418 5468
+call(
+  tail
+)
+type(
+  ('b, Access.t) BatMap.t
+)
+"pre/pre.ml" 141 5472 5476 "pre/pre.ml" 141 5472 5488
+type(
+  (AbsDom.Node.t ->
+   Access.t ->
+   (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 141 5472 5489 "pre/pre.ml" 141 5472 5504
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref add_access_node "pre/pre.ml" 139 5378 5386 "pre/pre.ml" 139 5378 5401
+)
+"pre/pre.ml" 141 5472 5505 "pre/pre.ml" 141 5472 5511
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access "pre/pre.ml" 136 5254 5261 "pre/pre.ml" 136 5254 5267
+)
+"pre/pre.ml" 141 5472 5512 "pre/pre.ml" 141 5472 5524
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 141 5472 5476 "pre/pre.ml" 141 5472 5524
+call(
+  tail
+)
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 139 5378 5382 "pre/pre.ml" 141 5472 5524
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 137 5271 5275 "pre/pre.ml" 141 5472 5524
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 136 5254 5257 "pre/pre.ml" 141 5472 5524
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 143 5526 5532 "pre/pre.ml" 143 5526 5545
+type(
+  ('d, 'e BatSet.t) BatMap.t ->
+  ('e, Access.t) BatMap.t -> ('d, Access.t) BatMap.t
+)
+ident(
+  def make_n2access "pre/pre.ml" 148 5746 5748 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 143 5526 5546 "pre/pre.ml" 143 5526 5552
+type(
+  ('d, 'e BatSet.t) BatMap.t
+)
+ident(
+  def n2pids "pre/pre.ml" 143 5526 5553 "pre/pre.ml" 146 5710 5744
+)
+"pre/pre.ml" 143 5526 5553 "pre/pre.ml" 143 5526 5564
+type(
+  ('e, Access.t) BatMap.t
+)
+ident(
+  def access_proc "pre/pre.ml" 144 5567 5571 "pre/pre.ml" 146 5710 5744
+)
+"pre/pre.ml" 144 5567 5575 "pre/pre.ml" 144 5567 5585
+type(
+  'e -> Access.t -> Access.t
+)
+ident(
+  def add_access "pre/pre.ml" 145 5638 5642 "pre/pre.ml" 146 5710 5744
+)
+"pre/pre.ml" 144 5567 5586 "pre/pre.ml" 144 5567 5589
+type(
+  'e
+)
+ident(
+  def pid "pre/pre.ml" 144 5567 5592 "pre/pre.ml" 144 5567 5634
+)
+"pre/pre.ml" 144 5567 5592 "pre/pre.ml" 144 5567 5604
+type(
+  Access.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.union
+)
+"pre/pre.ml" 144 5567 5606 "pre/pre.ml" 144 5567 5617
+type(
+  'e -> ('e, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 144 5567 5618 "pre/pre.ml" 144 5567 5621
+type(
+  'e
+)
+ident(
+  int_ref pid "pre/pre.ml" 144 5567 5586 "pre/pre.ml" 144 5567 5589
+)
+"pre/pre.ml" 144 5567 5622 "pre/pre.ml" 144 5567 5633
+type(
+  ('e, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 143 5526 5553 "pre/pre.ml" 143 5526 5564
+)
+"pre/pre.ml" 144 5567 5605 "pre/pre.ml" 144 5567 5634
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 144 5567 5592 "pre/pre.ml" 144 5567 5634
+call(
+  tail
+)
+type(
+  Access.t -> Access.t
+)
+"pre/pre.ml" 145 5638 5646 "pre/pre.ml" 145 5638 5658
+type(
+  'e BatSet.t -> Access.t
+)
+ident(
+  def access_procs "pre/pre.ml" 146 5710 5714 "pre/pre.ml" 146 5710 5744
+)
+"pre/pre.ml" 145 5638 5659 "pre/pre.ml" 145 5638 5663
+type(
+  'e BatSet.t
+)
+ident(
+  def pids "pre/pre.ml" 145 5638 5666 "pre/pre.ml" 145 5638 5706
+)
+"pre/pre.ml" 145 5638 5666 "pre/pre.ml" 145 5638 5677
+type(
+  ('e -> Access.t -> Access.t) -> 'e BatSet.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 145 5638 5678 "pre/pre.ml" 145 5638 5688
+type(
+  'e -> Access.t -> Access.t
+)
+ident(
+  int_ref add_access "pre/pre.ml" 144 5567 5575 "pre/pre.ml" 144 5567 5585
+)
+"pre/pre.ml" 145 5638 5689 "pre/pre.ml" 145 5638 5693
+type(
+  'e BatSet.t
+)
+ident(
+  int_ref pids "pre/pre.ml" 145 5638 5659 "pre/pre.ml" 145 5638 5663
+)
+"pre/pre.ml" 145 5638 5694 "pre/pre.ml" 145 5638 5706
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 145 5638 5666 "pre/pre.ml" 145 5638 5706
+call(
+  tail
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 146 5710 5714 "pre/pre.ml" 146 5710 5724
+type(
+  ('e BatSet.t -> Access.t) ->
+  ('d, 'e BatSet.t) BatMap.t -> ('d, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.map
+)
+"pre/pre.ml" 146 5710 5725 "pre/pre.ml" 146 5710 5737
+type(
+  'e BatSet.t -> Access.t
+)
+ident(
+  int_ref access_procs "pre/pre.ml" 145 5638 5646 "pre/pre.ml" 145 5638 5658
+)
+"pre/pre.ml" 146 5710 5738 "pre/pre.ml" 146 5710 5744
+type(
+  ('d, 'e BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2pids "pre/pre.ml" 143 5526 5546 "pre/pre.ml" 143 5526 5552
+)
+"pre/pre.ml" 146 5710 5714 "pre/pre.ml" 146 5710 5744
+call(
+  tail
+)
+type(
+  ('d, Access.t) BatMap.t
+)
+"pre/pre.ml" 145 5638 5642 "pre/pre.ml" 146 5710 5744
+type(
+  ('d, Access.t) BatMap.t
+)
+"pre/pre.ml" 144 5567 5571 "pre/pre.ml" 146 5710 5744
+type(
+  ('d, Access.t) BatMap.t
+)
+"pre/pre.ml" 148 5746 5756 "pre/pre.ml" 148 5746 5775
+type(
+  ('f, Access.t) BatMap.t ->
+  ('f, 'f BatSet.t) BatMap.t ->
+  'f -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+ident(
+  def make_n2reach_access "pre/pre.ml" 148 5746 5748 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 148 5746 5776 "pre/pre.ml" 148 5746 5784
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  def n2access "pre/pre.ml" 148 5746 5785 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 148 5746 5785 "pre/pre.ml" 148 5746 5794
+type(
+  ('f, 'f BatSet.t) BatMap.t
+)
+ident(
+  def n2next_ns "pre/pre.ml" 148 5746 5795 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 148 5746 5795 "pre/pre.ml" 148 5746 5800
+type(
+  'f
+)
+ident(
+  def cur_n "pre/pre.ml" 148 5746 5801 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 148 5746 5801 "pre/pre.ml" 148 5746 5815
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  def n2reach_access "pre/pre.ml" 149 5818 5822 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 149 5818 5825 "pre/pre.ml" 149 5818 5835
+type(
+  'f -> ('f, Access.t) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"pre/pre.ml" 149 5818 5836 "pre/pre.ml" 149 5818 5841
+type(
+  'f
+)
+ident(
+  int_ref cur_n "pre/pre.ml" 148 5746 5795 "pre/pre.ml" 148 5746 5800
+)
+"pre/pre.ml" 149 5818 5842 "pre/pre.ml" 149 5818 5856
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 148 5746 5801 "pre/pre.ml" 148 5746 5815
+)
+"pre/pre.ml" 149 5818 5825 "pre/pre.ml" 149 5818 5856
+call(
+  stack
+)
+type(
+  bool
+)
+"pre/pre.ml" 149 5818 5862 "pre/pre.ml" 149 5818 5876
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 148 5746 5801 "pre/pre.ml" 148 5746 5815
+)
+"pre/pre.ml" 150 5882 5890 "pre/pre.ml" 150 5882 5897
+type(
+  'f BatSet.t
+)
+ident(
+  def next_ns "pre/pre.ml" 151 5953 5957 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 150 5882 5900 "pre/pre.ml" 150 5882 5913
+type(
+  'f -> 'f BatSet.t -> 'f BatSet.t
+)
+ident(
+  ext_ref BatSet.remove
+)
+"pre/pre.ml" 150 5882 5914 "pre/pre.ml" 150 5882 5919
+type(
+  'f
+)
+ident(
+  int_ref cur_n "pre/pre.ml" 148 5746 5795 "pre/pre.ml" 148 5746 5800
+)
+"pre/pre.ml" 150 5882 5921 "pre/pre.ml" 150 5882 5932
+type(
+  'f -> ('f, 'f BatSet.t) BatMap.t -> 'f BatSet.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 150 5882 5933 "pre/pre.ml" 150 5882 5938
+type(
+  'f
+)
+ident(
+  int_ref cur_n "pre/pre.ml" 148 5746 5795 "pre/pre.ml" 148 5746 5800
+)
+"pre/pre.ml" 150 5882 5939 "pre/pre.ml" 150 5882 5948
+type(
+  ('f, 'f BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2next_ns "pre/pre.ml" 148 5746 5785 "pre/pre.ml" 148 5746 5794
+)
+"pre/pre.ml" 150 5882 5920 "pre/pre.ml" 150 5882 5949
+call(
+  stack
+)
+type(
+  'f BatSet.t
+)
+"pre/pre.ml" 150 5882 5900 "pre/pre.ml" 150 5882 5949
+call(
+  stack
+)
+type(
+  'f BatSet.t
+)
+"pre/pre.ml" 151 5953 5961 "pre/pre.ml" 151 5953 5977
+type(
+  'f -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+ident(
+  def add_reach_access "pre/pre.ml" 152 6022 6026 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 151 5953 5980 "pre/pre.ml" 151 5953 5999
+type(
+  ('f, Access.t) BatMap.t ->
+  ('f, 'f BatSet.t) BatMap.t ->
+  'f -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref make_n2reach_access "pre/pre.ml" 148 5746 5756 "pre/pre.ml" 148 5746 5775
+)
+"pre/pre.ml" 151 5953 6000 "pre/pre.ml" 151 5953 6008
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2access "pre/pre.ml" 148 5746 5776 "pre/pre.ml" 148 5746 5784
+)
+"pre/pre.ml" 151 5953 6009 "pre/pre.ml" 151 5953 6018
+type(
+  ('f, 'f BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2next_ns "pre/pre.ml" 148 5746 5785 "pre/pre.ml" 148 5746 5794
+)
+"pre/pre.ml" 151 5953 5980 "pre/pre.ml" 151 5953 6018
+call(
+  stack
+)
+type(
+  'f -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 152 6022 6030 "pre/pre.ml" 152 6022 6044
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  def n2reach_access "pre/pre.ml" 153 6102 6106 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 152 6022 6047 "pre/pre.ml" 152 6022 6058
+type(
+  ('f -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t) ->
+  'f BatSet.t -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 152 6022 6059 "pre/pre.ml" 152 6022 6075
+type(
+  'f -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref add_reach_access "pre/pre.ml" 151 5953 5961 "pre/pre.ml" 151 5953 5977
+)
+"pre/pre.ml" 152 6022 6076 "pre/pre.ml" 152 6022 6083
+type(
+  'f BatSet.t
+)
+ident(
+  int_ref next_ns "pre/pre.ml" 150 5882 5890 "pre/pre.ml" 150 5882 5897
+)
+"pre/pre.ml" 152 6022 6084 "pre/pre.ml" 152 6022 6098
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 148 5746 5801 "pre/pre.ml" 148 5746 5815
+)
+"pre/pre.ml" 152 6022 6047 "pre/pre.ml" 152 6022 6098
+call(
+  stack
+)
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 153 6102 6110 "pre/pre.ml" 153 6102 6120
+type(
+  'f -> Access.t -> Access.t
+)
+ident(
+  def add_access "pre/pre.ml" 154 6172 6176 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 153 6102 6121 "pre/pre.ml" 153 6102 6122
+type(
+  'f
+)
+ident(
+  def n "pre/pre.ml" 153 6102 6125 "pre/pre.ml" 153 6102 6168
+)
+"pre/pre.ml" 153 6102 6125 "pre/pre.ml" 153 6102 6137
+type(
+  Access.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.union
+)
+"pre/pre.ml" 153 6102 6139 "pre/pre.ml" 153 6102 6150
+type(
+  'f -> ('f, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 153 6102 6151 "pre/pre.ml" 153 6102 6152
+type(
+  'f
+)
+ident(
+  int_ref n "pre/pre.ml" 153 6102 6121 "pre/pre.ml" 153 6102 6122
+)
+"pre/pre.ml" 153 6102 6153 "pre/pre.ml" 153 6102 6167
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 152 6022 6030 "pre/pre.ml" 152 6022 6044
+)
+"pre/pre.ml" 153 6102 6138 "pre/pre.ml" 153 6102 6168
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 153 6102 6125 "pre/pre.ml" 153 6102 6168
+call(
+  tail
+)
+type(
+  Access.t -> Access.t
+)
+"pre/pre.ml" 154 6172 6180 "pre/pre.ml" 154 6172 6192
+type(
+  Access.t
+)
+ident(
+  def trans_access "pre/pre.ml" 155 6242 6246 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 154 6172 6195 "pre/pre.ml" 154 6172 6206
+type(
+  ('f -> Access.t -> Access.t) -> 'f BatSet.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 154 6172 6207 "pre/pre.ml" 154 6172 6217
+type(
+  'f -> Access.t -> Access.t
+)
+ident(
+  int_ref add_access "pre/pre.ml" 153 6102 6110 "pre/pre.ml" 153 6102 6120
+)
+"pre/pre.ml" 154 6172 6218 "pre/pre.ml" 154 6172 6225
+type(
+  'f BatSet.t
+)
+ident(
+  int_ref next_ns "pre/pre.ml" 150 5882 5890 "pre/pre.ml" 150 5882 5897
+)
+"pre/pre.ml" 154 6172 6226 "pre/pre.ml" 154 6172 6238
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 154 6172 6195 "pre/pre.ml" 154 6172 6238
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 155 6242 6250 "pre/pre.ml" 155 6242 6260
+type(
+  Access.t
+)
+ident(
+  def cur_access "pre/pre.ml" 156 6293 6297 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 155 6242 6263 "pre/pre.ml" 155 6242 6274
+type(
+  'f -> ('f, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 155 6242 6275 "pre/pre.ml" 155 6242 6280
+type(
+  'f
+)
+ident(
+  int_ref cur_n "pre/pre.ml" 148 5746 5795 "pre/pre.ml" 148 5746 5800
+)
+"pre/pre.ml" 155 6242 6281 "pre/pre.ml" 155 6242 6289
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2access "pre/pre.ml" 148 5746 5776 "pre/pre.ml" 148 5746 5784
+)
+"pre/pre.ml" 155 6242 6263 "pre/pre.ml" 155 6242 6289
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 156 6293 6301 "pre/pre.ml" 156 6293 6313
+type(
+  Access.t
+)
+ident(
+  def reach_access "pre/pre.ml" 157 6356 6360 "pre/pre.ml" 157 6356 6404
+)
+"pre/pre.ml" 156 6293 6316 "pre/pre.ml" 156 6293 6328
+type(
+  Access.t -> Access.t -> Access.t
+)
+ident(
+  ext_ref Access.union
+)
+"pre/pre.ml" 156 6293 6329 "pre/pre.ml" 156 6293 6339
+type(
+  Access.t
+)
+ident(
+  int_ref cur_access "pre/pre.ml" 155 6242 6250 "pre/pre.ml" 155 6242 6260
+)
+"pre/pre.ml" 156 6293 6340 "pre/pre.ml" 156 6293 6352
+type(
+  Access.t
+)
+ident(
+  int_ref trans_access "pre/pre.ml" 154 6172 6180 "pre/pre.ml" 154 6172 6192
+)
+"pre/pre.ml" 156 6293 6316 "pre/pre.ml" 156 6293 6352
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 157 6356 6360 "pre/pre.ml" 157 6356 6370
+type(
+  'f -> Access.t -> ('f, Access.t) BatMap.t -> ('f, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 157 6356 6371 "pre/pre.ml" 157 6356 6376
+type(
+  'f
+)
+ident(
+  int_ref cur_n "pre/pre.ml" 148 5746 5795 "pre/pre.ml" 148 5746 5800
+)
+"pre/pre.ml" 157 6356 6377 "pre/pre.ml" 157 6356 6389
+type(
+  Access.t
+)
+ident(
+  int_ref reach_access "pre/pre.ml" 156 6293 6301 "pre/pre.ml" 156 6293 6313
+)
+"pre/pre.ml" 157 6356 6390 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 152 6022 6030 "pre/pre.ml" 152 6022 6044
+)
+"pre/pre.ml" 157 6356 6360 "pre/pre.ml" 157 6356 6404
+call(
+  tail
+)
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 156 6293 6297 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 155 6242 6246 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 154 6172 6176 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 153 6102 6106 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 152 6022 6026 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 151 5953 5957 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 150 5882 5886 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 149 5818 5822 "pre/pre.ml" 157 6356 6404
+type(
+  ('f, Access.t) BatMap.t
+)
+"pre/pre.ml" 161 6506 6512 "pre/pre.ml" 161 6506 6533
+type(
+  ('g, Access.t) BatMap.t -> ('h, 'g) BatMap.t -> ('h, Access.t) BatMap.t
+)
+ident(
+  def make_pid2reach_access "pre/pre.ml" 166 6698 6700 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 161 6506 6534 "pre/pre.ml" 161 6506 6548
+type(
+  ('g, Access.t) BatMap.t
+)
+ident(
+  def n2reach_access "pre/pre.ml" 161 6506 6549 "pre/pre.ml" 164 6659 6696
+)
+"pre/pre.ml" 161 6506 6549 "pre/pre.ml" 161 6506 6554
+type(
+  ('h, 'g) BatMap.t
+)
+ident(
+  def pid2n "pre/pre.ml" 162 6557 6561 "pre/pre.ml" 164 6659 6696
+)
+"pre/pre.ml" 162 6557 6565 "pre/pre.ml" 162 6557 6581
+type(
+  'g -> Access.t
+)
+ident(
+  def get_reach_access "pre/pre.ml" 164 6659 6663 "pre/pre.ml" 164 6659 6696
+)
+"pre/pre.ml" 162 6557 6582 "pre/pre.ml" 162 6557 6583
+type(
+  'g
+)
+ident(
+  def n "pre/pre.ml" 163 6586 6592 "pre/pre.ml" 163 6586 6655
+)
+"pre/pre.ml" 163 6586 6596 "pre/pre.ml" 163 6586 6607
+type(
+  'g -> ('g, Access.t) BatMap.t -> Access.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 163 6586 6608 "pre/pre.ml" 163 6586 6609
+type(
+  'g
+)
+ident(
+  int_ref n "pre/pre.ml" 162 6557 6582 "pre/pre.ml" 162 6557 6583
+)
+"pre/pre.ml" 163 6586 6610 "pre/pre.ml" 163 6586 6624
+type(
+  ('g, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 161 6506 6534 "pre/pre.ml" 161 6506 6548
+)
+"pre/pre.ml" 163 6586 6596 "pre/pre.ml" 163 6586 6624
+call(
+  stack
+)
+type(
+  Access.t
+)
+"pre/pre.ml" 163 6586 6630 "pre/pre.ml" 163 6586 6639
+type(
+  exn
+)
+"pre/pre.ml" 163 6586 6643 "pre/pre.ml" 163 6586 6655
+type(
+  Access.t
+)
+ident(
+  ext_ref Access.empty
+)
+"pre/pre.ml" 163 6586 6592 "pre/pre.ml" 163 6586 6655
+type(
+  Access.t
+)
+"pre/pre.ml" 164 6659 6663 "pre/pre.ml" 164 6659 6673
+type(
+  ('g -> Access.t) -> ('h, 'g) BatMap.t -> ('h, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.map
+)
+"pre/pre.ml" 164 6659 6674 "pre/pre.ml" 164 6659 6690
+type(
+  'g -> Access.t
+)
+ident(
+  int_ref get_reach_access "pre/pre.ml" 162 6557 6565 "pre/pre.ml" 162 6557 6581
+)
+"pre/pre.ml" 164 6659 6691 "pre/pre.ml" 164 6659 6696
+type(
+  ('h, 'g) BatMap.t
+)
+ident(
+  int_ref pid2n "pre/pre.ml" 161 6506 6549 "pre/pre.ml" 161 6506 6554
+)
+"pre/pre.ml" 164 6659 6663 "pre/pre.ml" 164 6659 6696
+call(
+  tail
+)
+type(
+  ('h, Access.t) BatMap.t
+)
+"pre/pre.ml" 162 6557 6561 "pre/pre.ml" 164 6659 6696
+type(
+  ('h, Access.t) BatMap.t
+)
+"pre/pre.ml" 166 6698 6704 "pre/pre.ml" 166 6698 6721
+type(
+  InterCfg.pid list ->
+  Global.Callgraph.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  def init_access_reach "pre/pre.ml" 182 7545 7547 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 168 6823 6831 "pre/pre.ml" 168 6823 6835
+type(
+  InterCfg.pid list
+)
+ident(
+  def pids "pre/pre.ml" 168 6823 6836 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 168 6823 6836 "pre/pre.ml" 168 6823 6845
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 168 6823 6846 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 168 6823 6846 "pre/pre.ml" 168 6823 6857
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  def access_proc "pre/pre.ml" 169 6861 6865 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 169 6861 6870 "pre/pre.ml" 169 6861 6877
+type(
+  int
+)
+ident(
+  def scc_num "pre/pre.ml" 170 6940 6944 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 169 6861 6879 "pre/pre.ml" 169 6861 6889
+type(
+  Global.Callgraph.G.V.t -> int
+)
+ident(
+  def pid2n_func "pre/pre.ml" 170 6940 6944 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 169 6861 6869 "pre/pre.ml" 169 6861 6890
+type(
+  int * (Global.Callgraph.G.V.t -> int)
+)
+"pre/pre.ml" 169 6861 6893 "pre/pre.ml" 169 6861 6910
+type(
+  Global.Callgraph.G.t -> int * (Global.Callgraph.G.V.t -> int)
+)
+ident(
+  ext_ref Global.Callgraph.SCC.scc
+)
+"pre/pre.ml" 169 6861 6911 "pre/pre.ml" 169 6861 6920
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 168 6823 6836 "pre/pre.ml" 168 6823 6845
+)
+"pre/pre.ml" 169 6861 6911 "pre/pre.ml" 169 6861 6936
+type(
+  Global.Callgraph.G.t
+)
+"pre/pre.ml" 169 6861 6893 "pre/pre.ml" 169 6861 6936
+call(
+  stack
+)
+type(
+  int * (Global.Callgraph.G.V.t -> int)
+)
+"pre/pre.ml" 170 6940 6948 "pre/pre.ml" 170 6940 6953
+type(
+  (InterCfg.pid, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  def calls "pre/pre.ml" 171 6985 6989 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 170 6940 6956 "pre/pre.ml" 170 6940 6965
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 168 6823 6836 "pre/pre.ml" 168 6823 6845
+)
+"pre/pre.ml" 170 6940 6956 "pre/pre.ml" 170 6940 6981
+type(
+  (InterCfg.pid, InterCfg.pid BatSet.t) BatMap.t
+)
+"pre/pre.ml" 171 6985 6994 "pre/pre.ml" 171 6985 6999
+type(
+  (InterCfg.pid, int) BatMap.t
+)
+ident(
+  def pid2n "pre/pre.ml" 172 7062 7066 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 171 6985 7001 "pre/pre.ml" 171 6985 7010
+type(
+  int
+)
+ident(
+  def group_num "pre/pre.ml" 172 7062 7066 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 171 6985 6993 "pre/pre.ml" 171 6985 7011
+type(
+  (InterCfg.pid, int) BatMap.t * int
+)
+"pre/pre.ml" 171 6985 7014 "pre/pre.ml" 171 6985 7034
+type(
+  InterCfg.pid list ->
+  (InterCfg.pid -> int) -> int -> (InterCfg.pid, int) BatMap.t * int
+)
+ident(
+  ext_ref Global.Callgraph.make_pid2n
+)
+"pre/pre.ml" 171 6985 7035 "pre/pre.ml" 171 6985 7039
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref pids "pre/pre.ml" 168 6823 6831 "pre/pre.ml" 168 6823 6835
+)
+"pre/pre.ml" 171 6985 7040 "pre/pre.ml" 171 6985 7050
+type(
+  InterCfg.pid -> int
+)
+ident(
+  int_ref pid2n_func "pre/pre.ml" 169 6861 6879 "pre/pre.ml" 169 6861 6889
+)
+"pre/pre.ml" 171 6985 7051 "pre/pre.ml" 171 6985 7058
+type(
+  int
+)
+ident(
+  int_ref scc_num "pre/pre.ml" 169 6861 6870 "pre/pre.ml" 169 6861 6877
+)
+"pre/pre.ml" 171 6985 7014 "pre/pre.ml" 171 6985 7058
+call(
+  stack
+)
+type(
+  (InterCfg.pid, int) BatMap.t * int
+)
+"pre/pre.ml" 172 7062 7070 "pre/pre.ml" 172 7062 7076
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  def n2pids "pre/pre.ml" 173 7125 7129 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 172 7062 7079 "pre/pre.ml" 172 7062 7100
+type(
+  InterCfg.pid list ->
+  int ->
+  (InterCfg.pid, int) BatMap.t -> (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  ext_ref Global.Callgraph.make_n2pids
+)
+"pre/pre.ml" 172 7062 7101 "pre/pre.ml" 172 7062 7105
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref pids "pre/pre.ml" 168 6823 6831 "pre/pre.ml" 168 6823 6835
+)
+"pre/pre.ml" 172 7062 7106 "pre/pre.ml" 172 7062 7115
+type(
+  int
+)
+ident(
+  int_ref group_num "pre/pre.ml" 171 6985 7001 "pre/pre.ml" 171 6985 7010
+)
+"pre/pre.ml" 172 7062 7116 "pre/pre.ml" 172 7062 7121
+type(
+  (InterCfg.pid, int) BatMap.t
+)
+ident(
+  int_ref pid2n "pre/pre.ml" 171 6985 6994 "pre/pre.ml" 171 6985 6999
+)
+"pre/pre.ml" 172 7062 7079 "pre/pre.ml" 172 7062 7121
+call(
+  stack
+)
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+"pre/pre.ml" 173 7125 7133 "pre/pre.ml" 173 7125 7144
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  def n2next_pids "pre/pre.ml" 174 7190 7194 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 173 7125 7147 "pre/pre.ml" 173 7125 7173
+type(
+  (InterCfg.pid, InterCfg.pid BatSet.t) BatMap.t ->
+  (int, InterCfg.pid BatSet.t) BatMap.t ->
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  ext_ref Global.Callgraph.make_n2next_pids
+)
+"pre/pre.ml" 173 7125 7174 "pre/pre.ml" 173 7125 7179
+type(
+  (InterCfg.pid, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  int_ref calls "pre/pre.ml" 170 6940 6948 "pre/pre.ml" 170 6940 6953
+)
+"pre/pre.ml" 173 7125 7180 "pre/pre.ml" 173 7125 7186
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2pids "pre/pre.ml" 172 7062 7070 "pre/pre.ml" 172 7062 7076
+)
+"pre/pre.ml" 173 7125 7147 "pre/pre.ml" 173 7125 7186
+call(
+  stack
+)
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+"pre/pre.ml" 174 7190 7198 "pre/pre.ml" 174 7190 7207
+type(
+  (int, int BatSet.t) BatMap.t
+)
+ident(
+  def n2next_ns "pre/pre.ml" 175 7256 7260 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 174 7190 7210 "pre/pre.ml" 174 7190 7234
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t ->
+  (InterCfg.pid, int) BatMap.t -> (int, int BatSet.t) BatMap.t
+)
+ident(
+  ext_ref Global.Callgraph.make_n2next_ns
+)
+"pre/pre.ml" 174 7190 7235 "pre/pre.ml" 174 7190 7246
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2next_pids "pre/pre.ml" 173 7125 7133 "pre/pre.ml" 173 7125 7144
+)
+"pre/pre.ml" 174 7190 7247 "pre/pre.ml" 174 7190 7252
+type(
+  (InterCfg.pid, int) BatMap.t
+)
+ident(
+  int_ref pid2n "pre/pre.ml" 171 6985 6994 "pre/pre.ml" 171 6985 6999
+)
+"pre/pre.ml" 174 7190 7210 "pre/pre.ml" 174 7190 7252
+call(
+  stack
+)
+type(
+  (int, int BatSet.t) BatMap.t
+)
+"pre/pre.ml" 175 7256 7264 "pre/pre.ml" 175 7256 7271
+type(
+  int
+)
+ident(
+  def start_n "pre/pre.ml" 176 7301 7305 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 175 7256 7274 "pre/pre.ml" 175 7256 7285
+type(
+  InterCfg.pid -> (InterCfg.pid, int) BatMap.t -> int
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 175 7256 7286 "pre/pre.ml" 175 7256 7291
+type(
+  InterCfg.pid
+)
+"pre/pre.ml" 175 7256 7292 "pre/pre.ml" 175 7256 7297
+type(
+  (InterCfg.pid, int) BatMap.t
+)
+ident(
+  int_ref pid2n "pre/pre.ml" 171 6985 6994 "pre/pre.ml" 171 6985 6999
+)
+"pre/pre.ml" 175 7256 7274 "pre/pre.ml" 175 7256 7297
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 176 7301 7309 "pre/pre.ml" 176 7301 7317
+type(
+  (int, Access.t) BatMap.t
+)
+ident(
+  def n2access "pre/pre.ml" 177 7356 7360 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 176 7301 7320 "pre/pre.ml" 176 7301 7333
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (int, Access.t) BatMap.t
+)
+ident(
+  int_ref make_n2access "pre/pre.ml" 143 5526 5532 "pre/pre.ml" 143 5526 5545
+)
+"pre/pre.ml" 176 7301 7334 "pre/pre.ml" 176 7301 7340
+type(
+  (int, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2pids "pre/pre.ml" 172 7062 7070 "pre/pre.ml" 172 7062 7076
+)
+"pre/pre.ml" 176 7301 7341 "pre/pre.ml" 176 7301 7352
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 168 6823 6846 "pre/pre.ml" 168 6823 6857
+)
+"pre/pre.ml" 176 7301 7320 "pre/pre.ml" 176 7301 7352
+call(
+  stack
+)
+type(
+  (int, Access.t) BatMap.t
+)
+"pre/pre.ml" 177 7356 7364 "pre/pre.ml" 177 7356 7378
+type(
+  (int, Access.t) BatMap.t
+)
+ident(
+  def n2reach_access "pre/pre.ml" 179 7450 7454 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 178 7381 7387 "pre/pre.ml" 178 7381 7406
+type(
+  (int, Access.t) BatMap.t ->
+  (int, int BatSet.t) BatMap.t ->
+  int -> (int, Access.t) BatMap.t -> (int, Access.t) BatMap.t
+)
+ident(
+  int_ref make_n2reach_access "pre/pre.ml" 148 5746 5756 "pre/pre.ml" 148 5746 5775
+)
+"pre/pre.ml" 178 7381 7407 "pre/pre.ml" 178 7381 7415
+type(
+  (int, Access.t) BatMap.t
+)
+ident(
+  int_ref n2access "pre/pre.ml" 176 7301 7309 "pre/pre.ml" 176 7301 7317
+)
+"pre/pre.ml" 178 7381 7416 "pre/pre.ml" 178 7381 7425
+type(
+  (int, int BatSet.t) BatMap.t
+)
+ident(
+  int_ref n2next_ns "pre/pre.ml" 174 7190 7198 "pre/pre.ml" 174 7190 7207
+)
+"pre/pre.ml" 178 7381 7426 "pre/pre.ml" 178 7381 7433
+type(
+  int
+)
+ident(
+  int_ref start_n "pre/pre.ml" 175 7256 7264 "pre/pre.ml" 175 7256 7271
+)
+"pre/pre.ml" 178 7381 7434 "pre/pre.ml" 178 7381 7446
+type(
+  (int, Access.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 178 7381 7387 "pre/pre.ml" 178 7381 7446
+call(
+  stack
+)
+type(
+  (int, Access.t) BatMap.t
+)
+"pre/pre.ml" 179 7450 7458 "pre/pre.ml" 179 7450 7474
+type(
+  (InterCfg.pid, Access.t) BatMap.t
+)
+ident(
+  def pid2reach_access "pre/pre.ml" 180 7523 7527 "pre/pre.ml" 180 7523 7543
+)
+"pre/pre.ml" 179 7450 7477 "pre/pre.ml" 179 7450 7498
+type(
+  (int, Access.t) BatMap.t ->
+  (InterCfg.pid, int) BatMap.t -> (InterCfg.pid, Access.t) BatMap.t
+)
+ident(
+  int_ref make_pid2reach_access "pre/pre.ml" 161 6506 6512 "pre/pre.ml" 161 6506 6533
+)
+"pre/pre.ml" 179 7450 7499 "pre/pre.ml" 179 7450 7513
+type(
+  (int, Access.t) BatMap.t
+)
+ident(
+  int_ref n2reach_access "pre/pre.ml" 177 7356 7364 "pre/pre.ml" 177 7356 7378
+)
+"pre/pre.ml" 179 7450 7514 "pre/pre.ml" 179 7450 7519
+type(
+  (InterCfg.pid, int) BatMap.t
+)
+ident(
+  int_ref pid2n "pre/pre.ml" 171 6985 6994 "pre/pre.ml" 171 6985 6999
+)
+"pre/pre.ml" 179 7450 7477 "pre/pre.ml" 179 7450 7519
+call(
+  tail
+)
+type(
+  (InterCfg.pid, Access.t) BatMap.t
+)
+"pre/pre.ml" 180 7523 7527 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref pid2reach_access "pre/pre.ml" 179 7450 7458 "pre/pre.ml" 179 7450 7474
+)
+"pre/pre.ml" 179 7450 7454 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 177 7356 7360 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 176 7301 7305 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 175 7256 7260 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 174 7190 7194 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 173 7125 7129 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 172 7062 7066 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 171 6985 6989 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 170 6940 6944 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 169 6861 6865 "pre/pre.ml" 180 7523 7543
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 168 6823 6827 "pre/pre.ml" 180 7523 7543
+type(
+  InterCfg.pid list ->
+  Global.Callgraph.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+type(
+  InterCfg.pid list ->
+  Global.Callgraph.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 182 7545 7551 "pre/pre.ml" 182 7545 7573
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  def init_access_local_proc "pre/pre.ml" 202 8502 8504 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 184 7654 7662 "pre/pre.ml" 184 7654 7673
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  def access_proc "pre/pre.ml" 185 7677 7681 "pre/pre.ml" 200 8453 8500
+)
+"pre/pre.ml" 185 7677 7685 "pre/pre.ml" 185 7677 7702
+type(
+  'i ->
+  'j -> ('j, 'i) BatMap.t * 'j BatSet.t -> ('j, 'i) BatMap.t * 'j BatSet.t
+)
+ident(
+  def update_loc2proc_1 "pre/pre.ml" 193 8006 8010 "pre/pre.ml" 200 8453 8500
+)
+"pre/pre.ml" 185 7677 7703 "pre/pre.ml" 185 7677 7706
+type(
+  'i
+)
+ident(
+  def pid "pre/pre.ml" 185 7677 7707 "pre/pre.ml" 192 7973 8002
+)
+"pre/pre.ml" 185 7677 7707 "pre/pre.ml" 185 7677 7710
+type(
+  'j
+)
+ident(
+  def loc "pre/pre.ml" 185 7677 7711 "pre/pre.ml" 192 7973 8002
+)
+"pre/pre.ml" 185 7677 7712 "pre/pre.ml" 185 7677 7720
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  def loc2proc "pre/pre.ml" 186 7735 7741 "pre/pre.ml" 192 7973 8002
+)
+"pre/pre.ml" 185 7677 7722 "pre/pre.ml" 185 7677 7731
+type(
+  'j BatSet.t
+)
+ident(
+  def nonlocals "pre/pre.ml" 186 7735 7741 "pre/pre.ml" 192 7973 8002
+)
+"pre/pre.ml" 185 7677 7711 "pre/pre.ml" 185 7677 7732
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 186 7735 7744 "pre/pre.ml" 186 7735 7754
+type(
+  'j -> ('j, 'i) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"pre/pre.ml" 186 7735 7755 "pre/pre.ml" 186 7735 7758
+type(
+  'j
+)
+ident(
+  int_ref loc "pre/pre.ml" 185 7677 7707 "pre/pre.ml" 185 7677 7710
+)
+"pre/pre.ml" 186 7735 7759 "pre/pre.ml" 186 7735 7767
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 185 7677 7712 "pre/pre.ml" 185 7677 7720
+)
+"pre/pre.ml" 186 7735 7744 "pre/pre.ml" 186 7735 7767
+call(
+  stack
+)
+type(
+  bool
+)
+"pre/pre.ml" 187 7773 7785 "pre/pre.ml" 187 7773 7793
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  def loc2proc "pre/pre.ml" 188 7826 7834 "pre/pre.ml" 189 7878 7907
+)
+"pre/pre.ml" 187 7773 7796 "pre/pre.ml" 187 7773 7809
+type(
+  'j -> ('j, 'i) BatMap.t -> ('j, 'i) BatMap.t
+)
+ident(
+  ext_ref BatMap.remove
+)
+"pre/pre.ml" 187 7773 7810 "pre/pre.ml" 187 7773 7813
+type(
+  'j
+)
+ident(
+  int_ref loc "pre/pre.ml" 185 7677 7707 "pre/pre.ml" 185 7677 7710
+)
+"pre/pre.ml" 187 7773 7814 "pre/pre.ml" 187 7773 7822
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 185 7677 7712 "pre/pre.ml" 185 7677 7720
+)
+"pre/pre.ml" 187 7773 7796 "pre/pre.ml" 187 7773 7822
+call(
+  stack
+)
+type(
+  ('j, 'i) BatMap.t
+)
+"pre/pre.ml" 188 7826 7838 "pre/pre.ml" 188 7826 7847
+type(
+  'j BatSet.t
+)
+ident(
+  def nonlocals "pre/pre.ml" 189 7878 7886 "pre/pre.ml" 189 7878 7907
+)
+"pre/pre.ml" 188 7826 7850 "pre/pre.ml" 188 7826 7860
+type(
+  'j -> 'j BatSet.t -> 'j BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"pre/pre.ml" 188 7826 7861 "pre/pre.ml" 188 7826 7864
+type(
+  'j
+)
+ident(
+  int_ref loc "pre/pre.ml" 185 7677 7707 "pre/pre.ml" 185 7677 7710
+)
+"pre/pre.ml" 188 7826 7865 "pre/pre.ml" 188 7826 7874
+type(
+  'j BatSet.t
+)
+ident(
+  int_ref nonlocals "pre/pre.ml" 185 7677 7722 "pre/pre.ml" 185 7677 7731
+)
+"pre/pre.ml" 188 7826 7850 "pre/pre.ml" 188 7826 7874
+call(
+  stack
+)
+type(
+  'j BatSet.t
+)
+"pre/pre.ml" 189 7878 7887 "pre/pre.ml" 189 7878 7895
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 187 7773 7785 "pre/pre.ml" 187 7773 7793
+)
+"pre/pre.ml" 189 7878 7897 "pre/pre.ml" 189 7878 7906
+type(
+  'j BatSet.t
+)
+ident(
+  int_ref nonlocals "pre/pre.ml" 188 7826 7838 "pre/pre.ml" 188 7826 7847
+)
+"pre/pre.ml" 189 7878 7886 "pre/pre.ml" 189 7878 7907
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 188 7826 7834 "pre/pre.ml" 189 7878 7907
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 187 7773 7781 "pre/pre.ml" 189 7878 7907
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 191 7919 7931 "pre/pre.ml" 191 7919 7939
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  def loc2proc "pre/pre.ml" 192 7973 7981 "pre/pre.ml" 192 7973 8002
+)
+"pre/pre.ml" 191 7919 7942 "pre/pre.ml" 191 7919 7952
+type(
+  'j -> 'i -> ('j, 'i) BatMap.t -> ('j, 'i) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 191 7919 7953 "pre/pre.ml" 191 7919 7956
+type(
+  'j
+)
+ident(
+  int_ref loc "pre/pre.ml" 185 7677 7707 "pre/pre.ml" 185 7677 7710
+)
+"pre/pre.ml" 191 7919 7957 "pre/pre.ml" 191 7919 7960
+type(
+  'i
+)
+ident(
+  int_ref pid "pre/pre.ml" 185 7677 7703 "pre/pre.ml" 185 7677 7706
+)
+"pre/pre.ml" 191 7919 7961 "pre/pre.ml" 191 7919 7969
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 185 7677 7712 "pre/pre.ml" 185 7677 7720
+)
+"pre/pre.ml" 191 7919 7942 "pre/pre.ml" 191 7919 7969
+call(
+  stack
+)
+type(
+  ('j, 'i) BatMap.t
+)
+"pre/pre.ml" 192 7973 7982 "pre/pre.ml" 192 7973 7990
+type(
+  ('j, 'i) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 191 7919 7931 "pre/pre.ml" 191 7919 7939
+)
+"pre/pre.ml" 192 7973 7992 "pre/pre.ml" 192 7973 8001
+type(
+  'j BatSet.t
+)
+ident(
+  int_ref nonlocals "pre/pre.ml" 185 7677 7722 "pre/pre.ml" 185 7677 7731
+)
+"pre/pre.ml" 192 7973 7981 "pre/pre.ml" 192 7973 8002
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 191 7919 7927 "pre/pre.ml" 192 7973 8002
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 186 7735 7741 "pre/pre.ml" 192 7973 8002
+type(
+  ('j, 'i) BatMap.t * 'j BatSet.t
+)
+"pre/pre.ml" 193 8006 8014 "pre/pre.ml" 193 8006 8029
+type(
+  'k ->
+  Access.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+ident(
+  def update_loc2proc "pre/pre.ml" 196 8212 8216 "pre/pre.ml" 200 8453 8500
+)
+"pre/pre.ml" 193 8006 8030 "pre/pre.ml" 193 8006 8033
+type(
+  'k
+)
+ident(
+  def pid "pre/pre.ml" 193 8006 8034 "pre/pre.ml" 195 8140 8208
+)
+"pre/pre.ml" 193 8006 8034 "pre/pre.ml" 193 8006 8044
+type(
+  Access.t
+)
+ident(
+  def acc_of_pid "pre/pre.ml" 193 8006 8045 "pre/pre.ml" 195 8140 8208
+)
+"pre/pre.ml" 193 8006 8046 "pre/pre.ml" 193 8006 8054
+type(
+  (Access.Loc.t, 'k) BatMap.t
+)
+ident(
+  def loc2proc "pre/pre.ml" 194 8069 8075 "pre/pre.ml" 195 8140 8208
+)
+"pre/pre.ml" 193 8006 8056 "pre/pre.ml" 193 8006 8065
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def nonlocals "pre/pre.ml" 194 8069 8075 "pre/pre.ml" 195 8140 8208
+)
+"pre/pre.ml" 193 8006 8045 "pre/pre.ml" 193 8006 8066
+type(
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 194 8069 8079 "pre/pre.ml" 194 8069 8083
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def locs "pre/pre.ml" 195 8140 8146 "pre/pre.ml" 195 8140 8208
+)
+"pre/pre.ml" 194 8069 8086 "pre/pre.ml" 194 8069 8097
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.diff
+)
+"pre/pre.ml" 194 8069 8099 "pre/pre.ml" 194 8069 8114
+type(
+  Access.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Access.accessof
+)
+"pre/pre.ml" 194 8069 8115 "pre/pre.ml" 194 8069 8125
+type(
+  Access.t
+)
+ident(
+  int_ref acc_of_pid "pre/pre.ml" 193 8006 8034 "pre/pre.ml" 193 8006 8044
+)
+"pre/pre.ml" 194 8069 8098 "pre/pre.ml" 194 8069 8126
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 194 8069 8127 "pre/pre.ml" 194 8069 8136
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref nonlocals "pre/pre.ml" 193 8006 8056 "pre/pre.ml" 193 8006 8065
+)
+"pre/pre.ml" 194 8069 8086 "pre/pre.ml" 194 8069 8136
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 195 8140 8146 "pre/pre.ml" 195 8140 8157
+type(
+  (Access.Loc.t ->
+   (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t ->
+   (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t) ->
+  Access.Loc.t BatSet.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 195 8140 8159 "pre/pre.ml" 195 8140 8176
+type(
+  'k ->
+  Access.Loc.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+ident(
+  int_ref update_loc2proc_1 "pre/pre.ml" 185 7677 7685 "pre/pre.ml" 185 7677 7702
+)
+"pre/pre.ml" 195 8140 8177 "pre/pre.ml" 195 8140 8180
+type(
+  'k
+)
+ident(
+  int_ref pid "pre/pre.ml" 193 8006 8030 "pre/pre.ml" 193 8006 8033
+)
+"pre/pre.ml" 195 8140 8158 "pre/pre.ml" 195 8140 8181
+call(
+  stack
+)
+type(
+  Access.Loc.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t ->
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 195 8140 8182 "pre/pre.ml" 195 8140 8186
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref locs "pre/pre.ml" 194 8069 8079 "pre/pre.ml" 194 8069 8083
+)
+"pre/pre.ml" 195 8140 8188 "pre/pre.ml" 195 8140 8196
+type(
+  (Access.Loc.t, 'k) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 193 8006 8046 "pre/pre.ml" 193 8006 8054
+)
+"pre/pre.ml" 195 8140 8198 "pre/pre.ml" 195 8140 8207
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref nonlocals "pre/pre.ml" 193 8006 8056 "pre/pre.ml" 193 8006 8065
+)
+"pre/pre.ml" 195 8140 8187 "pre/pre.ml" 195 8140 8208
+type(
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 195 8140 8146 "pre/pre.ml" 195 8140 8208
+call(
+  tail
+)
+type(
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 194 8069 8075 "pre/pre.ml" 195 8140 8208
+type(
+  (Access.Loc.t, 'k) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 196 8212 8221 "pre/pre.ml" 196 8212 8229
+type(
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t
+)
+ident(
+  def loc2proc "pre/pre.ml" 198 8315 8319 "pre/pre.ml" 200 8453 8500
+)
+"pre/pre.ml" 196 8212 8231 "pre/pre.ml" 196 8212 8232
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 196 8212 8220 "pre/pre.ml" 196 8212 8233
+type(
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 197 8236 8242 "pre/pre.ml" 197 8236 8254
+type(
+  (AbsDom.Proc.t ->
+   Access.t ->
+   (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t ->
+   (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t) ->
+  (AbsDom.Proc.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t ->
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 197 8236 8255 "pre/pre.ml" 197 8236 8270
+type(
+  AbsDom.Proc.t ->
+  Access.t ->
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t ->
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t
+)
+ident(
+  int_ref update_loc2proc "pre/pre.ml" 193 8006 8014 "pre/pre.ml" 193 8006 8029
+)
+"pre/pre.ml" 197 8236 8271 "pre/pre.ml" 197 8236 8282
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 184 7654 7662 "pre/pre.ml" 184 7654 7673
+)
+"pre/pre.ml" 197 8236 8284 "pre/pre.ml" 197 8236 8296
+type(
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 197 8236 8298 "pre/pre.ml" 197 8236 8310
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 197 8236 8283 "pre/pre.ml" 197 8236 8311
+type(
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 197 8236 8242 "pre/pre.ml" 197 8236 8311
+call(
+  stack
+)
+type(
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t * Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 198 8315 8323 "pre/pre.ml" 198 8315 8332
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  def proc2locs "pre/pre.ml" 199 8385 8389 "pre/pre.ml" 200 8453 8500
+)
+"pre/pre.ml" 198 8315 8335 "pre/pre.ml" 198 8315 8345
+type(
+  (Access.t -> Access.Loc.t BatSet.t) ->
+  (AbsDom.Proc.t, Access.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.map
+)
+"pre/pre.ml" 198 8315 8351 "pre/pre.ml" 198 8315 8352
+type(
+  Access.t
+)
+"pre/pre.ml" 198 8315 8356 "pre/pre.ml" 198 8315 8368
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 198 8315 8346 "pre/pre.ml" 198 8315 8369
+type(
+  Access.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 198 8315 8370 "pre/pre.ml" 198 8315 8381
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 184 7654 7662 "pre/pre.ml" 184 7654 7673
+)
+"pre/pre.ml" 198 8315 8335 "pre/pre.ml" 198 8315 8381
+call(
+  stack
+)
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 199 8385 8393 "pre/pre.ml" 199 8385 8404
+type(
+  'l -> 'm -> ('m, 'l BatSet.t) BatMap.t -> ('m, 'l BatSet.t) BatMap.t
+)
+ident(
+  def add_loc_pid "pre/pre.ml" 200 8453 8457 "pre/pre.ml" 200 8453 8500
+)
+"pre/pre.ml" 199 8385 8405 "pre/pre.ml" 199 8385 8408
+type(
+  'l
+)
+ident(
+  def loc "pre/pre.ml" 199 8385 8409 "pre/pre.ml" 199 8385 8449
+)
+"pre/pre.ml" 199 8385 8409 "pre/pre.ml" 199 8385 8412
+type(
+  'm
+)
+ident(
+  def pid "pre/pre.ml" 199 8385 8415 "pre/pre.ml" 199 8385 8449
+)
+"pre/pre.ml" 199 8385 8415 "pre/pre.ml" 199 8385 8428
+type(
+  'm ->
+  ('l BatSet.t -> 'l BatSet.t) ->
+  ('m, 'l BatSet.t) BatMap.t -> ('m, 'l BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.modify
+)
+"pre/pre.ml" 199 8385 8429 "pre/pre.ml" 199 8385 8432
+type(
+  'm
+)
+ident(
+  int_ref pid "pre/pre.ml" 199 8385 8409 "pre/pre.ml" 199 8385 8412
+)
+"pre/pre.ml" 199 8385 8434 "pre/pre.ml" 199 8385 8444
+type(
+  'l -> 'l BatSet.t -> 'l BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"pre/pre.ml" 199 8385 8445 "pre/pre.ml" 199 8385 8448
+type(
+  'l
+)
+ident(
+  int_ref loc "pre/pre.ml" 199 8385 8405 "pre/pre.ml" 199 8385 8408
+)
+"pre/pre.ml" 199 8385 8433 "pre/pre.ml" 199 8385 8449
+call(
+  stack
+)
+type(
+  'l BatSet.t -> 'l BatSet.t
+)
+"pre/pre.ml" 199 8385 8415 "pre/pre.ml" 199 8385 8449
+call(
+  tail
+)
+type(
+  ('m, 'l BatSet.t) BatMap.t -> ('m, 'l BatSet.t) BatMap.t
+)
+"pre/pre.ml" 200 8453 8457 "pre/pre.ml" 200 8453 8469
+type(
+  (Access.Loc.t ->
+   AbsDom.Proc.t ->
+   (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t ->
+   (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t) ->
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 200 8453 8470 "pre/pre.ml" 200 8453 8481
+type(
+  Access.Loc.t ->
+  AbsDom.Proc.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref add_loc_pid "pre/pre.ml" 199 8385 8393 "pre/pre.ml" 199 8385 8404
+)
+"pre/pre.ml" 200 8453 8482 "pre/pre.ml" 200 8453 8490
+type(
+  (Access.Loc.t, AbsDom.Proc.t) BatMap.t
+)
+ident(
+  int_ref loc2proc "pre/pre.ml" 196 8212 8221 "pre/pre.ml" 196 8212 8229
+)
+"pre/pre.ml" 200 8453 8491 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref proc2locs "pre/pre.ml" 198 8315 8323 "pre/pre.ml" 198 8315 8332
+)
+"pre/pre.ml" 200 8453 8457 "pre/pre.ml" 200 8453 8500
+call(
+  tail
+)
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 199 8385 8389 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 198 8315 8319 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 196 8212 8216 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 193 8006 8010 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 185 7677 7681 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 184 7654 7658 "pre/pre.ml" 200 8453 8500
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 202 8502 8508 "pre/pre.ml" 202 8502 8533
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+ident(
+  def init_access_local_program "pre/pre.ml" 206 8720 8722 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 203 8602 8609 "pre/pre.ml" 203 8602 8626
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  def access_local_proc "pre/pre.ml" 204 8630 8634 "pre/pre.ml" 204 8630 8718
+)
+"pre/pre.ml" 204 8630 8634 "pre/pre.ml" 204 8630 8646
+type(
+  (AbsDom.Proc.t ->
+   Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t) ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t ->
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 204 8630 8652 "pre/pre.ml" 204 8630 8656
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def proc "pre/pre.ml" 204 8630 8657 "pre/pre.ml" 204 8630 8686
+)
+"pre/pre.ml" 204 8630 8657 "pre/pre.ml" 204 8630 8663
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def access "pre/pre.ml" 204 8630 8667 "pre/pre.ml" 204 8630 8686
+)
+"pre/pre.ml" 204 8630 8667 "pre/pre.ml" 204 8630 8679
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.union
+)
+"pre/pre.ml" 204 8630 8680 "pre/pre.ml" 204 8630 8686
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref access "pre/pre.ml" 204 8630 8657 "pre/pre.ml" 204 8630 8663
+)
+"pre/pre.ml" 204 8630 8667 "pre/pre.ml" 204 8630 8686
+call(
+  tail
+)
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 204 8630 8647 "pre/pre.ml" 204 8630 8687
+type(
+  AbsDom.Proc.t ->
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 204 8630 8688 "pre/pre.ml" 204 8630 8705
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref access_local_proc "pre/pre.ml" 203 8602 8609 "pre/pre.ml" 203 8602 8626
+)
+"pre/pre.ml" 204 8630 8706 "pre/pre.ml" 204 8630 8718
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 204 8630 8634 "pre/pre.ml" 204 8630 8718
+call(
+  tail
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 203 8602 8605 "pre/pre.ml" 204 8630 8718
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 206 8720 8726 "pre/pre.ml" 206 8720 8738
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def init_defs_of "pre/pre.ml" 215 9124 9126 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 207 8813 8820 "pre/pre.ml" 207 8813 8830
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def access_map "pre/pre.ml" 208 8834 8838 "pre/pre.ml" 213 9093 9122
+)
+"pre/pre.ml" 208 8834 8838 "pre/pre.ml" 208 8834 8850
+type(
+  (AbsDom.Node.t ->
+   Access.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 208 8834 8856 "pre/pre.ml" 208 8834 8860
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "pre/pre.ml" 208 8834 8861 "pre/pre.ml" 212 9055 9092
+)
+"pre/pre.ml" 208 8834 8861 "pre/pre.ml" 208 8834 8867
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 208 8834 8868 "pre/pre.ml" 212 9055 9092
+)
+"pre/pre.ml" 208 8834 8868 "pre/pre.ml" 208 8834 8875
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def defs_of "pre/pre.ml" 209 8879 8885 "pre/pre.ml" 212 9055 9092
+)
+"pre/pre.ml" 209 8879 8885 "pre/pre.ml" 209 8879 8896
+type(
+  (Access.Loc.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t) ->
+  Access.Loc.t BatSet.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 209 8879 8902 "pre/pre.ml" 209 8879 8905
+type(
+  Access.Loc.t
+)
+ident(
+  def loc "pre/pre.ml" 209 8879 8906 "pre/pre.ml" 211 8992 9054
+)
+"pre/pre.ml" 209 8879 8906 "pre/pre.ml" 209 8879 8913
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def defs_of "pre/pre.ml" 210 8917 8925 "pre/pre.ml" 211 8992 9054
+)
+"pre/pre.ml" 210 8917 8929 "pre/pre.ml" 210 8917 8938
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  def old_nodes "pre/pre.ml" 211 8992 9004 "pre/pre.ml" 211 8992 9054
+)
+"pre/pre.ml" 210 8917 8945 "pre/pre.ml" 210 8917 8956
+type(
+  Access.Loc.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t -> AbsDom.Node.t BatSet.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 210 8917 8957 "pre/pre.ml" 210 8917 8960
+type(
+  Access.Loc.t
+)
+ident(
+  int_ref loc "pre/pre.ml" 209 8879 8902 "pre/pre.ml" 209 8879 8905
+)
+"pre/pre.ml" 210 8917 8961 "pre/pre.ml" 210 8917 8968
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref defs_of "pre/pre.ml" 209 8879 8906 "pre/pre.ml" 209 8879 8913
+)
+"pre/pre.ml" 210 8917 8945 "pre/pre.ml" 210 8917 8968
+call(
+  stack
+)
+type(
+  AbsDom.Node.t BatSet.t
+)
+"pre/pre.ml" 210 8917 8974 "pre/pre.ml" 210 8917 8975
+type(
+  exn
+)
+"pre/pre.ml" 210 8917 8979 "pre/pre.ml" 210 8917 8991
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 210 8917 8941 "pre/pre.ml" 210 8917 8991
+type(
+  AbsDom.Node.t BatSet.t
+)
+"pre/pre.ml" 211 8992 9004 "pre/pre.ml" 211 8992 9014
+type(
+  Access.Loc.t ->
+  AbsDom.Node.t BatSet.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 211 8992 9015 "pre/pre.ml" 211 8992 9018
+type(
+  Access.Loc.t
+)
+ident(
+  int_ref loc "pre/pre.ml" 209 8879 8902 "pre/pre.ml" 209 8879 8905
+)
+"pre/pre.ml" 211 8992 9020 "pre/pre.ml" 211 8992 9030
+type(
+  AbsDom.Node.t -> AbsDom.Node.t BatSet.t -> AbsDom.Node.t BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"pre/pre.ml" 211 8992 9031 "pre/pre.ml" 211 8992 9035
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 208 8834 8856 "pre/pre.ml" 208 8834 8860
+)
+"pre/pre.ml" 211 8992 9036 "pre/pre.ml" 211 8992 9045
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  int_ref old_nodes "pre/pre.ml" 210 8917 8929 "pre/pre.ml" 210 8917 8938
+)
+"pre/pre.ml" 211 8992 9019 "pre/pre.ml" 211 8992 9046
+call(
+  stack
+)
+type(
+  AbsDom.Node.t BatSet.t
+)
+"pre/pre.ml" 211 8992 9047 "pre/pre.ml" 211 8992 9054
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref defs_of "pre/pre.ml" 209 8879 8906 "pre/pre.ml" 209 8879 8913
+)
+"pre/pre.ml" 211 8992 9004 "pre/pre.ml" 211 8992 9054
+call(
+  tail
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 210 8917 8925 "pre/pre.ml" 211 8992 9054
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 209 8879 8897 "pre/pre.ml" 212 9055 9062
+type(
+  Access.Loc.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 212 9055 9064 "pre/pre.ml" 212 9055 9076
+type(
+  Access.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Access.defof
+)
+"pre/pre.ml" 212 9055 9077 "pre/pre.ml" 212 9055 9083
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 208 8834 8861 "pre/pre.ml" 208 8834 8867
+)
+"pre/pre.ml" 212 9055 9063 "pre/pre.ml" 212 9055 9084
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 212 9055 9085 "pre/pre.ml" 212 9055 9092
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref defs_of "pre/pre.ml" 208 8834 8868 "pre/pre.ml" 208 8834 8875
+)
+"pre/pre.ml" 209 8879 8885 "pre/pre.ml" 212 9055 9092
+call(
+  tail
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 208 8834 8851 "pre/pre.ml" 213 9093 9098
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 213 9093 9099 "pre/pre.ml" 213 9093 9109
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_map "pre/pre.ml" 207 8813 8820 "pre/pre.ml" 207 8813 8830
+)
+"pre/pre.ml" 213 9093 9110 "pre/pre.ml" 213 9093 9122
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 208 8834 8838 "pre/pre.ml" 213 9093 9122
+call(
+  tail
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 207 8813 8816 "pre/pre.ml" 213 9093 9122
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 215 9124 9130 "pre/pre.ml" 215 9124 9142
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def init_uses_of "pre/pre.ml" 224 9528 9530 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 216 9217 9224 "pre/pre.ml" 216 9217 9234
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def access_map "pre/pre.ml" 217 9238 9242 "pre/pre.ml" 222 9497 9526
+)
+"pre/pre.ml" 217 9238 9242 "pre/pre.ml" 217 9238 9254
+type(
+  (AbsDom.Node.t ->
+   Access.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t) ->
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 217 9238 9260 "pre/pre.ml" 217 9238 9264
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "pre/pre.ml" 217 9238 9265 "pre/pre.ml" 221 9459 9496
+)
+"pre/pre.ml" 217 9238 9265 "pre/pre.ml" 217 9238 9271
+type(
+  Access.t
+)
+ident(
+  def access "pre/pre.ml" 217 9238 9272 "pre/pre.ml" 221 9459 9496
+)
+"pre/pre.ml" 217 9238 9272 "pre/pre.ml" 217 9238 9279
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def uses_of "pre/pre.ml" 218 9283 9289 "pre/pre.ml" 221 9459 9496
+)
+"pre/pre.ml" 218 9283 9289 "pre/pre.ml" 218 9283 9300
+type(
+  (Access.Loc.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+   (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t) ->
+  Access.Loc.t BatSet.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 218 9283 9306 "pre/pre.ml" 218 9283 9309
+type(
+  Access.Loc.t
+)
+ident(
+  def loc "pre/pre.ml" 218 9283 9310 "pre/pre.ml" 220 9396 9458
+)
+"pre/pre.ml" 218 9283 9310 "pre/pre.ml" 218 9283 9317
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def uses_of "pre/pre.ml" 219 9321 9329 "pre/pre.ml" 220 9396 9458
+)
+"pre/pre.ml" 219 9321 9333 "pre/pre.ml" 219 9321 9342
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  def old_nodes "pre/pre.ml" 220 9396 9408 "pre/pre.ml" 220 9396 9458
+)
+"pre/pre.ml" 219 9321 9349 "pre/pre.ml" 219 9321 9360
+type(
+  Access.Loc.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t -> AbsDom.Node.t BatSet.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pre/pre.ml" 219 9321 9361 "pre/pre.ml" 219 9321 9364
+type(
+  Access.Loc.t
+)
+ident(
+  int_ref loc "pre/pre.ml" 218 9283 9306 "pre/pre.ml" 218 9283 9309
+)
+"pre/pre.ml" 219 9321 9365 "pre/pre.ml" 219 9321 9372
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref uses_of "pre/pre.ml" 218 9283 9310 "pre/pre.ml" 218 9283 9317
+)
+"pre/pre.ml" 219 9321 9349 "pre/pre.ml" 219 9321 9372
+call(
+  stack
+)
+type(
+  AbsDom.Node.t BatSet.t
+)
+"pre/pre.ml" 219 9321 9378 "pre/pre.ml" 219 9321 9379
+type(
+  exn
+)
+"pre/pre.ml" 219 9321 9383 "pre/pre.ml" 219 9321 9395
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 219 9321 9345 "pre/pre.ml" 219 9321 9395
+type(
+  AbsDom.Node.t BatSet.t
+)
+"pre/pre.ml" 220 9396 9408 "pre/pre.ml" 220 9396 9418
+type(
+  Access.Loc.t ->
+  AbsDom.Node.t BatSet.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 220 9396 9419 "pre/pre.ml" 220 9396 9422
+type(
+  Access.Loc.t
+)
+ident(
+  int_ref loc "pre/pre.ml" 218 9283 9306 "pre/pre.ml" 218 9283 9309
+)
+"pre/pre.ml" 220 9396 9424 "pre/pre.ml" 220 9396 9434
+type(
+  AbsDom.Node.t -> AbsDom.Node.t BatSet.t -> AbsDom.Node.t BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"pre/pre.ml" 220 9396 9435 "pre/pre.ml" 220 9396 9439
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 217 9238 9260 "pre/pre.ml" 217 9238 9264
+)
+"pre/pre.ml" 220 9396 9440 "pre/pre.ml" 220 9396 9449
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  int_ref old_nodes "pre/pre.ml" 219 9321 9333 "pre/pre.ml" 219 9321 9342
+)
+"pre/pre.ml" 220 9396 9423 "pre/pre.ml" 220 9396 9450
+call(
+  stack
+)
+type(
+  AbsDom.Node.t BatSet.t
+)
+"pre/pre.ml" 220 9396 9451 "pre/pre.ml" 220 9396 9458
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref uses_of "pre/pre.ml" 218 9283 9310 "pre/pre.ml" 218 9283 9317
+)
+"pre/pre.ml" 220 9396 9408 "pre/pre.ml" 220 9396 9458
+call(
+  tail
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 219 9321 9329 "pre/pre.ml" 220 9396 9458
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 218 9283 9301 "pre/pre.ml" 221 9459 9466
+type(
+  Access.Loc.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 221 9459 9468 "pre/pre.ml" 221 9459 9480
+type(
+  Access.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Access.useof
+)
+"pre/pre.ml" 221 9459 9481 "pre/pre.ml" 221 9459 9487
+type(
+  Access.t
+)
+ident(
+  int_ref access "pre/pre.ml" 217 9238 9265 "pre/pre.ml" 217 9238 9271
+)
+"pre/pre.ml" 221 9459 9467 "pre/pre.ml" 221 9459 9488
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 221 9459 9489 "pre/pre.ml" 221 9459 9496
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref uses_of "pre/pre.ml" 217 9238 9272 "pre/pre.ml" 217 9238 9279
+)
+"pre/pre.ml" 218 9283 9289 "pre/pre.ml" 221 9459 9496
+call(
+  tail
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 217 9238 9255 "pre/pre.ml" 222 9497 9502
+type(
+  AbsDom.Node.t ->
+  Access.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 222 9497 9503 "pre/pre.ml" 222 9497 9513
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_map "pre/pre.ml" 216 9217 9224 "pre/pre.ml" 216 9217 9234
+)
+"pre/pre.ml" 222 9497 9514 "pre/pre.ml" 222 9497 9526
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 217 9238 9242 "pre/pre.ml" 222 9497 9526
+call(
+  tail
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 216 9217 9220 "pre/pre.ml" 222 9497 9526
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 224 9528 9534 "pre/pre.ml" 224 9528 9550
+type(
+  bool ->
+  AbsDom.Node.t list -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  def onestep_transfer "pre/pre.ml" 230 9758 9760 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 224 9528 9551 "pre/pre.ml" 224 9528 9557
+type(
+  bool
+)
+ident(
+  def silent "pre/pre.ml" 224 9528 9558 "pre/pre.ml" 228 9731 9755
+)
+"pre/pre.ml" 225 9612 9619 "pre/pre.ml" 225 9612 9624
+type(
+  AbsDom.Node.t list
+)
+ident(
+  def nodes "pre/pre.ml" 225 9612 9625 "pre/pre.ml" 228 9731 9755
+)
+"pre/pre.ml" 225 9612 9626 "pre/pre.ml" 225 9612 9629
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 226 9641 9645 "pre/pre.ml" 228 9731 9755
+)
+"pre/pre.ml" 225 9612 9630 "pre/pre.ml" 225 9612 9636
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 226 9641 9645 "pre/pre.ml" 228 9731 9755
+)
+"pre/pre.ml" 225 9612 9625 "pre/pre.ml" 225 9612 9637
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 226 9641 9645 "pre/pre.ml" 226 9641 9654
+type(
+  (AbsDom.Node.t -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t) ->
+  AbsDom.Node.t list -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"pre/pre.ml" 226 9641 9660 "pre/pre.ml" 226 9641 9664
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "pre/pre.ml" 226 9641 9665 "pre/pre.ml" 227 9681 9730
+)
+"pre/pre.ml" 226 9641 9666 "pre/pre.ml" 226 9641 9669
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 227 9681 9687 "pre/pre.ml" 227 9681 9730
+)
+"pre/pre.ml" 226 9641 9670 "pre/pre.ml" 226 9641 9676
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 227 9681 9687 "pre/pre.ml" 227 9681 9730
+)
+"pre/pre.ml" 226 9641 9665 "pre/pre.ml" 226 9641 9677
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 227 9681 9687 "pre/pre.ml" 227 9681 9697
+type(
+  ?mode:AbsDom.update_mode ->
+  ?locset:'_n BatSet.t ->
+  ?premem:ItvDom.Mem.t ->
+  ?silent:bool ->
+  AbsDom.Node.t -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  ext_ref ItvSem.run
+)
+"pre/pre.ml" 227 9681 9706 "pre/pre.ml" 227 9681 9712
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 224 9528 9551 "pre/pre.ml" 224 9528 9557
+)
+"pre/pre.ml" 227 9681 9713 "pre/pre.ml" 227 9681 9717
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 226 9641 9660 "pre/pre.ml" 226 9641 9664
+)
+"pre/pre.ml" 227 9681 9719 "pre/pre.ml" 227 9681 9722
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 226 9641 9666 "pre/pre.ml" 226 9641 9669
+)
+"pre/pre.ml" 227 9681 9723 "pre/pre.ml" 227 9681 9729
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 226 9641 9670 "pre/pre.ml" 226 9641 9676
+)
+"pre/pre.ml" 227 9681 9718 "pre/pre.ml" 227 9681 9730
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 227 9681 9687 "pre/pre.ml" 227 9681 9730
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 226 9641 9655 "pre/pre.ml" 228 9731 9736
+type(
+  AbsDom.Node.t -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 228 9731 9737 "pre/pre.ml" 228 9731 9742
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 225 9612 9619 "pre/pre.ml" 225 9612 9624
+)
+"pre/pre.ml" 228 9731 9744 "pre/pre.ml" 228 9731 9747
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 225 9612 9626 "pre/pre.ml" 225 9612 9629
+)
+"pre/pre.ml" 228 9731 9748 "pre/pre.ml" 228 9731 9754
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 225 9612 9630 "pre/pre.ml" 225 9612 9636
+)
+"pre/pre.ml" 228 9731 9743 "pre/pre.ml" 228 9731 9755
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 226 9641 9645 "pre/pre.ml" 228 9731 9755
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 225 9612 9615 "pre/pre.ml" 228 9731 9755
+type(
+  AbsDom.Node.t list -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+type(
+  AbsDom.Node.t list -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 230 9758 9768 "pre/pre.ml" 230 9758 9773
+type(
+  bool ->
+  AbsDom.Node.t list ->
+  int -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  def fixpt "pre/pre.ml" 230 9758 9760 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 230 9758 9774 "pre/pre.ml" 230 9758 9780
+type(
+  bool
+)
+ident(
+  def silent "pre/pre.ml" 230 9758 9781 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 231 9842 9849 "pre/pre.ml" 231 9842 9854
+type(
+  AbsDom.Node.t list
+)
+ident(
+  def nodes "pre/pre.ml" 231 9842 9855 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 231 9842 9855 "pre/pre.ml" 231 9842 9856
+type(
+  int
+)
+ident(
+  def k "pre/pre.ml" 231 9842 9857 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 231 9842 9858 "pre/pre.ml" 231 9842 9861
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 232 9873 9877 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 231 9842 9862 "pre/pre.ml" 231 9842 9868
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 232 9873 9877 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 231 9842 9857 "pre/pre.ml" 231 9842 9869
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 232 9873 9877 "pre/pre.ml" 232 9873 9892
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_string
+)
+"pre/pre.ml" 232 9873 9893 "pre/pre.ml" 232 9873 9899
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 230 9758 9774 "pre/pre.ml" 230 9758 9780
+)
+"pre/pre.ml" 232 9873 9901 "pre/pre.ml" 232 9873 9917
+type(
+  string
+)
+"pre/pre.ml" 232 9873 9918 "pre/pre.ml" 232 9873 9919
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pre/pre.ml" 232 9873 9920 "pre/pre.ml" 232 9873 9933
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"pre/pre.ml" 232 9873 9934 "pre/pre.ml" 232 9873 9935
+type(
+  int
+)
+ident(
+  int_ref k "pre/pre.ml" 231 9842 9855 "pre/pre.ml" 231 9842 9856
+)
+"pre/pre.ml" 232 9873 9920 "pre/pre.ml" 232 9873 9935
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 232 9873 9900 "pre/pre.ml" 232 9873 9936
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 232 9873 9877 "pre/pre.ml" 232 9873 9936
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 233 9938 9942 "pre/pre.ml" 233 9938 9947
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.flush
+)
+"pre/pre.ml" 233 9938 9948 "pre/pre.ml" 233 9938 9954
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stderr
+)
+"pre/pre.ml" 233 9938 9942 "pre/pre.ml" 233 9938 9954
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 234 9956 9965 "pre/pre.ml" 234 9956 9969
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem' "pre/pre.ml" 235 10027 10031 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 234 9956 9970 "pre/pre.ml" 234 9956 9977
+type(
+  Global.t
+)
+ident(
+  def global' "pre/pre.ml" 235 10027 10031 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 234 9956 9964 "pre/pre.ml" 234 9956 9978
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 234 9956 9981 "pre/pre.ml" 234 9956 9997
+type(
+  bool ->
+  AbsDom.Node.t list -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  int_ref onestep_transfer "pre/pre.ml" 224 9528 9534 "pre/pre.ml" 224 9528 9550
+)
+"pre/pre.ml" 234 9956 9998 "pre/pre.ml" 234 9956 10004
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 230 9758 9774 "pre/pre.ml" 230 9758 9780
+)
+"pre/pre.ml" 234 9956 10005 "pre/pre.ml" 234 9956 10010
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 231 9842 9849 "pre/pre.ml" 231 9842 9854
+)
+"pre/pre.ml" 234 9956 10012 "pre/pre.ml" 234 9956 10015
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 231 9842 9858 "pre/pre.ml" 231 9842 9861
+)
+"pre/pre.ml" 234 9956 10016 "pre/pre.ml" 234 9956 10022
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 231 9842 9862 "pre/pre.ml" 231 9842 9868
+)
+"pre/pre.ml" 234 9956 10011 "pre/pre.ml" 234 9956 10023
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 234 9956 9981 "pre/pre.ml" 234 9956 10023
+call(
+  stack
+)
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 235 10027 10035 "pre/pre.ml" 235 10027 10039
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem' "pre/pre.ml" 236 10064 10070 "pre/pre.ml" 238 10181 10231
+)
+"pre/pre.ml" 235 10027 10042 "pre/pre.ml" 235 10027 10051
+type(
+  ItvDom.Mem.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.widen
+)
+"pre/pre.ml" 235 10027 10052 "pre/pre.ml" 235 10027 10055
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 231 9842 9858 "pre/pre.ml" 231 9842 9861
+)
+"pre/pre.ml" 235 10027 10056 "pre/pre.ml" 235 10027 10060
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem' "pre/pre.ml" 234 9956 9965 "pre/pre.ml" 234 9956 9969
+)
+"pre/pre.ml" 235 10027 10042 "pre/pre.ml" 235 10027 10060
+call(
+  stack
+)
+type(
+  ItvDom.Mem.t
+)
+"pre/pre.ml" 236 10064 10073 "pre/pre.ml" 236 10064 10079
+type(
+  ItvDom.Mem.t -> ItvDom.Mem.t -> bool
+)
+ident(
+  ext_ref ItvDom.Mem.le
+)
+"pre/pre.ml" 236 10064 10080 "pre/pre.ml" 236 10064 10084
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem' "pre/pre.ml" 235 10027 10035 "pre/pre.ml" 235 10027 10039
+)
+"pre/pre.ml" 236 10064 10085 "pre/pre.ml" 236 10064 10088
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 231 9842 9858 "pre/pre.ml" 231 9842 9861
+)
+"pre/pre.ml" 236 10064 10073 "pre/pre.ml" 236 10064 10088
+call(
+  stack
+)
+type(
+  bool
+)
+"pre/pre.ml" 236 10064 10089 "pre/pre.ml" 236 10064 10091
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"pre/pre.ml" 236 10064 10092 "pre/pre.ml" 236 10064 10099
+type(
+  AbsDom.Dump.t -> AbsDom.Dump.t -> bool
+)
+ident(
+  ext_ref AbsDom.Dump.le
+)
+"pre/pre.ml" 236 10064 10100 "pre/pre.ml" 236 10064 10107
+type(
+  Global.t
+)
+ident(
+  int_ref global' "pre/pre.ml" 234 9956 9970 "pre/pre.ml" 234 9956 9977
+)
+"pre/pre.ml" 236 10064 10100 "pre/pre.ml" 236 10064 10112
+type(
+  AbsDom.Dump.t
+)
+"pre/pre.ml" 236 10064 10113 "pre/pre.ml" 236 10064 10119
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 231 9842 9862 "pre/pre.ml" 231 9842 9868
+)
+"pre/pre.ml" 236 10064 10113 "pre/pre.ml" 236 10064 10124
+type(
+  AbsDom.Dump.t
+)
+"pre/pre.ml" 236 10064 10092 "pre/pre.ml" 236 10064 10124
+call(
+  stack
+)
+type(
+  bool
+)
+"pre/pre.ml" 236 10064 10073 "pre/pre.ml" 236 10064 10124
+type(
+  bool
+)
+"pre/pre.ml" 237 10125 10137 "pre/pre.ml" 237 10125 10153
+type(
+  bool -> unit -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_newline
+)
+"pre/pre.ml" 237 10125 10154 "pre/pre.ml" 237 10125 10160
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 230 9758 9774 "pre/pre.ml" 230 9758 9780
+)
+"pre/pre.ml" 237 10125 10161 "pre/pre.ml" 237 10125 10163
+type(
+  unit
+)
+"pre/pre.ml" 237 10125 10137 "pre/pre.ml" 237 10125 10163
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 237 10125 10166 "pre/pre.ml" 237 10125 10170
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem' "pre/pre.ml" 235 10027 10035 "pre/pre.ml" 235 10027 10039
+)
+"pre/pre.ml" 237 10125 10171 "pre/pre.ml" 237 10125 10178
+type(
+  Global.t
+)
+ident(
+  int_ref global' "pre/pre.ml" 234 9956 9970 "pre/pre.ml" 234 9956 9977
+)
+"pre/pre.ml" 237 10125 10165 "pre/pre.ml" 237 10125 10179
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 237 10125 10136 "pre/pre.ml" 237 10125 10180
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 238 10181 10192 "pre/pre.ml" 238 10181 10197
+type(
+  bool ->
+  AbsDom.Node.t list ->
+  int -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  int_ref fixpt "pre/pre.ml" 230 9758 9768 "pre/pre.ml" 230 9758 9773
+)
+"pre/pre.ml" 238 10181 10198 "pre/pre.ml" 238 10181 10204
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 230 9758 9774 "pre/pre.ml" 230 9758 9780
+)
+"pre/pre.ml" 238 10181 10205 "pre/pre.ml" 238 10181 10210
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 231 9842 9849 "pre/pre.ml" 231 9842 9854
+)
+"pre/pre.ml" 238 10181 10212 "pre/pre.ml" 238 10181 10213
+type(
+  int
+)
+ident(
+  int_ref k "pre/pre.ml" 231 9842 9855 "pre/pre.ml" 231 9842 9856
+)
+"pre/pre.ml" 238 10181 10213 "pre/pre.ml" 238 10181 10214
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"pre/pre.ml" 238 10181 10214 "pre/pre.ml" 238 10181 10215
+type(
+  int
+)
+"pre/pre.ml" 238 10181 10211 "pre/pre.ml" 238 10181 10216
+type(
+  int
+)
+"pre/pre.ml" 238 10181 10218 "pre/pre.ml" 238 10181 10222
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem' "pre/pre.ml" 235 10027 10035 "pre/pre.ml" 235 10027 10039
+)
+"pre/pre.ml" 238 10181 10223 "pre/pre.ml" 238 10181 10230
+type(
+  Global.t
+)
+ident(
+  int_ref global' "pre/pre.ml" 234 9956 9970 "pre/pre.ml" 234 9956 9977
+)
+"pre/pre.ml" 238 10181 10217 "pre/pre.ml" 238 10181 10231
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 238 10181 10192 "pre/pre.ml" 238 10181 10231
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 236 10064 10070 "pre/pre.ml" 238 10181 10231
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 235 10027 10031 "pre/pre.ml" 238 10181 10231
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 234 9956 9960 "pre/pre.ml" 238 10181 10231
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 233 9938 9942 "pre/pre.ml" 238 10181 10231
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 232 9873 9877 "pre/pre.ml" 238 10181 10231
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 231 9842 9845 "pre/pre.ml" 238 10181 10231
+type(
+  AbsDom.Node.t list ->
+  int -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+type(
+  AbsDom.Node.t list ->
+  int -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 240 10233 10239 "pre/pre.ml" 240 10233 10249
+type(
+  InterCfg.t -> InterCfg.Node.t -> ItvDom.Mem.t -> AbsDom.PowProc.t
+)
+ident(
+  def callees_of "pre/pre.ml" 253 10790 10792 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 241 10304 10312 "pre/pre.ml" 241 10304 10316
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pre/pre.ml" 241 10304 10317 "pre/pre.ml" 251 10766 10788
+)
+"pre/pre.ml" 241 10304 10317 "pre/pre.ml" 241 10304 10321
+type(
+  InterCfg.Node.t
+)
+ident(
+  def node "pre/pre.ml" 241 10304 10322 "pre/pre.ml" 251 10766 10788
+)
+"pre/pre.ml" 241 10304 10322 "pre/pre.ml" 241 10304 10325
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 242 10329 10333 "pre/pre.ml" 251 10766 10788
+)
+"pre/pre.ml" 242 10329 10337 "pre/pre.ml" 242 10329 10340
+type(
+  InterCfg.pid
+)
+ident(
+  def pid "pre/pre.ml" 243 10373 10377 "pre/pre.ml" 251 10766 10788
+)
+"pre/pre.ml" 242 10329 10343 "pre/pre.ml" 242 10329 10364
+type(
+  InterCfg.Node.t -> InterCfg.pid
+)
+ident(
+  ext_ref InterCfg.Node.get_pid
+)
+"pre/pre.ml" 242 10329 10365 "pre/pre.ml" 242 10329 10369
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 241 10304 10317 "pre/pre.ml" 241 10304 10321
+)
+"pre/pre.ml" 242 10329 10343 "pre/pre.ml" 242 10329 10369
+call(
+  stack
+)
+type(
+  InterCfg.pid
+)
+"pre/pre.ml" 243 10373 10381 "pre/pre.ml" 243 10373 10382
+type(
+  IntraCfg.cmd
+)
+ident(
+  def c "pre/pre.ml" 244 10413 10417 "pre/pre.ml" 251 10766 10788
+)
+"pre/pre.ml" 243 10373 10385 "pre/pre.ml" 243 10373 10399
+type(
+  InterCfg.t -> InterCfg.Node.t -> IntraCfg.cmd
+)
+ident(
+  ext_ref InterCfg.cmdof
+)
+"pre/pre.ml" 243 10373 10400 "pre/pre.ml" 243 10373 10404
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 241 10304 10312 "pre/pre.ml" 241 10304 10316
+)
+"pre/pre.ml" 243 10373 10405 "pre/pre.ml" 243 10373 10409
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 241 10304 10317 "pre/pre.ml" 241 10304 10321
+)
+"pre/pre.ml" 243 10373 10385 "pre/pre.ml" 243 10373 10409
+call(
+  stack
+)
+type(
+  IntraCfg.cmd
+)
+"pre/pre.ml" 244 10413 10423 "pre/pre.ml" 244 10413 10424
+type(
+  IntraCfg.cmd
+)
+ident(
+  int_ref c "pre/pre.ml" 243 10373 10381 "pre/pre.ml" 243 10373 10382
+)
+"pre/pre.ml" 245 10430 10456 "pre/pre.ml" 245 10430 10457
+type(
+  Cil.lval option
+)
+"pre/pre.ml" 245 10430 10477 "pre/pre.ml" 245 10430 10479
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "pre/pre.ml" 246 10502 10513 "pre/pre.ml" 246 10502 10554
+)
+"pre/pre.ml" 245 10430 10469 "pre/pre.ml" 245 10430 10479
+type(
+  Cil.lhost
+)
+"pre/pre.ml" 245 10430 10481 "pre/pre.ml" 245 10430 10493
+type(
+  Cil.offset
+)
+"pre/pre.ml" 245 10430 10468 "pre/pre.ml" 245 10430 10494
+type(
+  Cil.lval
+)
+"pre/pre.ml" 245 10430 10459 "pre/pre.ml" 245 10430 10494
+type(
+  Cil.exp
+)
+"pre/pre.ml" 245 10430 10496 "pre/pre.ml" 245 10430 10497
+type(
+  Cil.exp list
+)
+"pre/pre.ml" 245 10430 10499 "pre/pre.ml" 245 10430 10500
+type(
+  Cil.location
+)
+"pre/pre.ml" 245 10430 10436 "pre/pre.ml" 245 10430 10501
+type(
+  IntraCfg.cmd
+)
+"pre/pre.ml" 246 10502 10513 "pre/pre.ml" 246 10502 10515
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "pre/pre.ml" 245 10430 10477 "pre/pre.ml" 245 10430 10479
+)
+"pre/pre.ml" 246 10502 10513 "pre/pre.ml" 246 10502 10525
+type(
+  string
+)
+"pre/pre.ml" 246 10502 10526 "pre/pre.ml" 246 10502 10527
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"pre/pre.ml" 246 10502 10528 "pre/pre.ml" 246 10502 10539
+type(
+  string
+)
+"pre/pre.ml" 246 10502 10513 "pre/pre.ml" 246 10502 10539
+type(
+  bool
+)
+"pre/pre.ml" 246 10502 10543 "pre/pre.ml" 246 10502 10554
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"pre/pre.ml" 247 10555 10581 "pre/pre.ml" 247 10555 10582
+type(
+  Cil.lval option
+)
+"pre/pre.ml" 247 10555 10602 "pre/pre.ml" 247 10555 10604
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "pre/pre.ml" 248 10627 10638 "pre/pre.ml" 248 10627 10678
+)
+"pre/pre.ml" 247 10555 10594 "pre/pre.ml" 247 10555 10604
+type(
+  Cil.lhost
+)
+"pre/pre.ml" 247 10555 10606 "pre/pre.ml" 247 10555 10618
+type(
+  Cil.offset
+)
+"pre/pre.ml" 247 10555 10593 "pre/pre.ml" 247 10555 10619
+type(
+  Cil.lval
+)
+"pre/pre.ml" 247 10555 10584 "pre/pre.ml" 247 10555 10619
+type(
+  Cil.exp
+)
+"pre/pre.ml" 247 10555 10621 "pre/pre.ml" 247 10555 10622
+type(
+  Cil.exp list
+)
+"pre/pre.ml" 247 10555 10624 "pre/pre.ml" 247 10555 10625
+type(
+  Cil.location
+)
+"pre/pre.ml" 247 10555 10561 "pre/pre.ml" 247 10555 10626
+type(
+  IntraCfg.cmd
+)
+"pre/pre.ml" 248 10627 10638 "pre/pre.ml" 248 10627 10640
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "pre/pre.ml" 247 10555 10602 "pre/pre.ml" 247 10555 10604
+)
+"pre/pre.ml" 248 10627 10638 "pre/pre.ml" 248 10627 10650
+type(
+  string
+)
+"pre/pre.ml" 248 10627 10651 "pre/pre.ml" 248 10627 10652
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"pre/pre.ml" 248 10627 10653 "pre/pre.ml" 248 10627 10663
+type(
+  string
+)
+"pre/pre.ml" 248 10627 10638 "pre/pre.ml" 248 10627 10663
+type(
+  bool
+)
+"pre/pre.ml" 248 10627 10667 "pre/pre.ml" 248 10627 10678
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"pre/pre.ml" 249 10679 10705 "pre/pre.ml" 249 10679 10706
+type(
+  Cil.lval option
+)
+"pre/pre.ml" 249 10679 10708 "pre/pre.ml" 249 10679 10709
+type(
+  Cil.exp
+)
+ident(
+  def e "pre/pre.ml" 250 10720 10726 "pre/pre.ml" 250 10720 10765
+)
+"pre/pre.ml" 249 10679 10711 "pre/pre.ml" 249 10679 10712
+type(
+  Cil.exp list
+)
+"pre/pre.ml" 249 10679 10714 "pre/pre.ml" 249 10679 10715
+type(
+  Cil.location
+)
+"pre/pre.ml" 249 10679 10685 "pre/pre.ml" 249 10679 10716
+type(
+  IntraCfg.cmd
+)
+"pre/pre.ml" 250 10720 10726 "pre/pre.ml" 250 10720 10741
+type(
+  ItvDom.Val.t -> AbsDom.PowProc.t
+)
+ident(
+  ext_ref ItvDom.pow_proc_of_val
+)
+"pre/pre.ml" 250 10720 10743 "pre/pre.ml" 250 10720 10754
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref EvalOp.eval
+)
+"pre/pre.ml" 250 10720 10755 "pre/pre.ml" 250 10720 10758
+type(
+  InterCfg.pid
+)
+ident(
+  int_ref pid "pre/pre.ml" 242 10329 10337 "pre/pre.ml" 242 10329 10340
+)
+"pre/pre.ml" 250 10720 10759 "pre/pre.ml" 250 10720 10760
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "pre/pre.ml" 249 10679 10708 "pre/pre.ml" 249 10679 10709
+)
+"pre/pre.ml" 250 10720 10761 "pre/pre.ml" 250 10720 10764
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 241 10304 10322 "pre/pre.ml" 241 10304 10325
+)
+"pre/pre.ml" 250 10720 10742 "pre/pre.ml" 250 10720 10765
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"pre/pre.ml" 250 10720 10726 "pre/pre.ml" 250 10720 10765
+call(
+  tail
+)
+type(
+  AbsDom.PowProc.t
+)
+"pre/pre.ml" 251 10766 10772 "pre/pre.ml" 251 10766 10773
+type(
+  IntraCfg.cmd
+)
+"pre/pre.ml" 251 10766 10777 "pre/pre.ml" 251 10766 10788
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"pre/pre.ml" 244 10413 10417 "pre/pre.ml" 251 10766 10788
+type(
+  AbsDom.PowProc.t
+)
+"pre/pre.ml" 243 10373 10377 "pre/pre.ml" 251 10766 10788
+type(
+  AbsDom.PowProc.t
+)
+"pre/pre.ml" 242 10329 10333 "pre/pre.ml" 251 10766 10788
+type(
+  AbsDom.PowProc.t
+)
+"pre/pre.ml" 241 10304 10308 "pre/pre.ml" 251 10766 10788
+type(
+  InterCfg.t -> InterCfg.Node.t -> ItvDom.Mem.t -> AbsDom.PowProc.t
+)
+type(
+  InterCfg.t -> InterCfg.Node.t -> ItvDom.Mem.t -> AbsDom.PowProc.t
+)
+"pre/pre.ml" 253 10790 10796 "pre/pre.ml" 253 10790 10810
+type(
+  InterCfg.t ->
+  ItvDom.Mem.t ->
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+  InterCfg.Node.t -> (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  def add_node_calls "pre/pre.ml" 259 11118 11120 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 253 10790 10964 "pre/pre.ml" 253 10790 10968
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pre/pre.ml" 253 10790 10969 "pre/pre.ml" 257 11106 11116
+)
+"pre/pre.ml" 253 10790 10969 "pre/pre.ml" 253 10790 10972
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 253 10790 10973 "pre/pre.ml" 257 11106 11116
+)
+"pre/pre.ml" 253 10790 10973 "pre/pre.ml" 253 10790 10974
+type(
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+ident(
+  def m "pre/pre.ml" 253 10790 10975 "pre/pre.ml" 257 11106 11116
+)
+"pre/pre.ml" 253 10790 10975 "pre/pre.ml" 253 10790 10979
+type(
+  InterCfg.Node.t
+)
+ident(
+  def node "pre/pre.ml" 254 10983 10987 "pre/pre.ml" 257 11106 11116
+)
+"pre/pre.ml" 254 10983 10990 "pre/pre.ml" 254 10983 11010
+type(
+  InterCfg.node -> InterCfg.t -> bool
+)
+ident(
+  ext_ref InterCfg.is_callnode
+)
+"pre/pre.ml" 254 10983 11011 "pre/pre.ml" 254 10983 11015
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 253 10790 10975 "pre/pre.ml" 253 10790 10979
+)
+"pre/pre.ml" 254 10983 11016 "pre/pre.ml" 254 10983 11020
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 253 10790 10964 "pre/pre.ml" 253 10790 10968
+)
+"pre/pre.ml" 254 10983 10990 "pre/pre.ml" 254 10983 11020
+call(
+  stack
+)
+type(
+  bool
+)
+"pre/pre.ml" 255 11026 11036 "pre/pre.ml" 255 11026 11043
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  def callees "pre/pre.ml" 256 11074 11080 "pre/pre.ml" 256 11074 11105
+)
+"pre/pre.ml" 255 11026 11046 "pre/pre.ml" 255 11026 11056
+type(
+  InterCfg.t -> InterCfg.Node.t -> ItvDom.Mem.t -> AbsDom.PowProc.t
+)
+ident(
+  int_ref callees_of "pre/pre.ml" 240 10233 10239 "pre/pre.ml" 240 10233 10249
+)
+"pre/pre.ml" 255 11026 11057 "pre/pre.ml" 255 11026 11061
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 253 10790 10964 "pre/pre.ml" 253 10790 10968
+)
+"pre/pre.ml" 255 11026 11062 "pre/pre.ml" 255 11026 11066
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 253 10790 10975 "pre/pre.ml" 253 10790 10979
+)
+"pre/pre.ml" 255 11026 11067 "pre/pre.ml" 255 11026 11070
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 253 10790 10969 "pre/pre.ml" 253 10790 10972
+)
+"pre/pre.ml" 255 11026 11046 "pre/pre.ml" 255 11026 11070
+call(
+  stack
+)
+type(
+  AbsDom.PowProc.t
+)
+"pre/pre.ml" 256 11074 11080 "pre/pre.ml" 256 11074 11090
+type(
+  InterCfg.Node.t ->
+  AbsDom.PowProc.t ->
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t ->
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pre/pre.ml" 256 11074 11091 "pre/pre.ml" 256 11074 11095
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref node "pre/pre.ml" 253 10790 10975 "pre/pre.ml" 253 10790 10979
+)
+"pre/pre.ml" 256 11074 11096 "pre/pre.ml" 256 11074 11103
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  int_ref callees "pre/pre.ml" 255 11026 11036 "pre/pre.ml" 255 11026 11043
+)
+"pre/pre.ml" 256 11074 11104 "pre/pre.ml" 256 11074 11105
+type(
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+ident(
+  int_ref m "pre/pre.ml" 253 10790 10973 "pre/pre.ml" 253 10790 10974
+)
+"pre/pre.ml" 256 11074 11080 "pre/pre.ml" 256 11074 11105
+call(
+  tail
+)
+type(
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+"pre/pre.ml" 255 11026 11032 "pre/pre.ml" 256 11074 11105
+type(
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+"pre/pre.ml" 257 11106 11115 "pre/pre.ml" 257 11106 11116
+type(
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+ident(
+  int_ref m "pre/pre.ml" 253 10790 10973 "pre/pre.ml" 253 10790 10974
+)
+"pre/pre.ml" 254 10983 10987 "pre/pre.ml" 257 11106 11116
+type(
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+"pre/pre.ml" 253 10790 10960 "pre/pre.ml" 257 11106 11116
+type(
+  InterCfg.t ->
+  ItvDom.Mem.t ->
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+  InterCfg.Node.t -> (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+type(
+  InterCfg.t ->
+  ItvDom.Mem.t ->
+  (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t ->
+  InterCfg.Node.t -> (InterCfg.Node.t, AbsDom.PowProc.t) BatMap.t
+)
+"pre/pre.ml" 259 11118 11124 "pre/pre.ml" 259 11118 11139
+type(
+  InterCfg.t ->
+  InterCfg.Node.t list ->
+  ItvDom.Mem.t -> Global.Callgraph.t -> Global.Callgraph.t
+)
+ident(
+  def init_node_calls "pre/pre.ml" 264 11388 11390 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 260 11216 11224 "pre/pre.ml" 260 11216 11228
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pre/pre.ml" 260 11216 11229 "pre/pre.ml" 262 11336 11386
+)
+"pre/pre.ml" 260 11216 11229 "pre/pre.ml" 260 11216 11234
+type(
+  InterCfg.Node.t list
+)
+ident(
+  def nodes "pre/pre.ml" 260 11216 11235 "pre/pre.ml" 262 11336 11386
+)
+"pre/pre.ml" 260 11216 11235 "pre/pre.ml" 260 11216 11238
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 260 11216 11239 "pre/pre.ml" 262 11336 11386
+)
+"pre/pre.ml" 260 11216 11239 "pre/pre.ml" 260 11216 11248
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 261 11252 11256 "pre/pre.ml" 262 11336 11386
+)
+"pre/pre.ml" 261 11252 11260 "pre/pre.ml" 261 11252 11270
+type(
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  def node_calls "pre/pre.ml" 262 11336 11340 "pre/pre.ml" 262 11336 11386
+)
+"pre/pre.ml" 261 11252 11273 "pre/pre.ml" 261 11252 11287
+type(
+  ((InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+   InterCfg.Node.t -> (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t) ->
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+  InterCfg.Node.t list -> (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"pre/pre.ml" 261 11252 11289 "pre/pre.ml" 261 11252 11303
+type(
+  InterCfg.t ->
+  ItvDom.Mem.t ->
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+  InterCfg.Node.t -> (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  int_ref add_node_calls "pre/pre.ml" 253 10790 10796 "pre/pre.ml" 253 10790 10810
+)
+"pre/pre.ml" 261 11252 11304 "pre/pre.ml" 261 11252 11308
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 260 11216 11224 "pre/pre.ml" 260 11216 11228
+)
+"pre/pre.ml" 261 11252 11309 "pre/pre.ml" 261 11252 11312
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 260 11216 11235 "pre/pre.ml" 260 11216 11238
+)
+"pre/pre.ml" 261 11252 11288 "pre/pre.ml" 261 11252 11313
+call(
+  stack
+)
+type(
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+  InterCfg.Node.t -> (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+"pre/pre.ml" 261 11252 11314 "pre/pre.ml" 261 11252 11326
+type(
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pre/pre.ml" 261 11252 11327 "pre/pre.ml" 261 11252 11332
+type(
+  InterCfg.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 260 11216 11229 "pre/pre.ml" 260 11216 11234
+)
+"pre/pre.ml" 261 11252 11273 "pre/pre.ml" 261 11252 11332
+call(
+  stack
+)
+type(
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+"pre/pre.ml" 262 11336 11340 "pre/pre.ml" 262 11336 11365
+type(
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t ->
+  Global.Callgraph.t -> Global.Callgraph.t
+)
+ident(
+  ext_ref Global.Callgraph.init_node_calls
+)
+"pre/pre.ml" 262 11336 11366 "pre/pre.ml" 262 11336 11376
+type(
+  (InterCfg.Node.t, InterCfg.pid BatSet.t) BatMap.t
+)
+ident(
+  int_ref node_calls "pre/pre.ml" 261 11252 11260 "pre/pre.ml" 261 11252 11270
+)
+"pre/pre.ml" 262 11336 11377 "pre/pre.ml" 262 11336 11386
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 260 11216 11239 "pre/pre.ml" 260 11216 11248
+)
+"pre/pre.ml" 262 11336 11340 "pre/pre.ml" 262 11336 11386
+call(
+  tail
+)
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 261 11252 11256 "pre/pre.ml" 262 11336 11386
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 260 11216 11220 "pre/pre.ml" 262 11336 11386
+type(
+  InterCfg.t ->
+  InterCfg.Node.t list ->
+  ItvDom.Mem.t -> Global.Callgraph.t -> Global.Callgraph.t
+)
+type(
+  InterCfg.t ->
+  InterCfg.Node.t list ->
+  ItvDom.Mem.t -> Global.Callgraph.t -> Global.Callgraph.t
+)
+"pre/pre.ml" 264 11388 11394 "pre/pre.ml" 264 11388 11408
+type(
+  AbsDom.Node.t list -> Global.t -> ItvDom.Mem.t -> Global.t
+)
+ident(
+  def init_callgraph "pre/pre.ml" 274 11895 11897 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 265 11456 11463 "pre/pre.ml" 265 11456 11468
+type(
+  AbsDom.Node.t list
+)
+ident(
+  def nodes "pre/pre.ml" 265 11456 11469 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 265 11456 11469 "pre/pre.ml" 265 11456 11475
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 265 11456 11476 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 265 11456 11476 "pre/pre.ml" 265 11456 11479
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 266 11483 11487 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 266 11483 11491 "pre/pre.ml" 266 11483 11495
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pre/pre.ml" 267 11517 11521 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 266 11483 11498 "pre/pre.ml" 266 11483 11506
+type(
+  Global.t -> InterCfg.t
+)
+ident(
+  ext_ref Global.get_icfg
+)
+"pre/pre.ml" 266 11483 11507 "pre/pre.ml" 266 11483 11513
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 265 11456 11469 "pre/pre.ml" 265 11456 11475
+)
+"pre/pre.ml" 266 11483 11498 "pre/pre.ml" 266 11483 11513
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 267 11517 11525 "pre/pre.ml" 267 11517 11534
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 268 11561 11565 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 267 11517 11537 "pre/pre.ml" 267 11517 11550
+type(
+  Global.t -> Global.Callgraph.t
+)
+ident(
+  ext_ref Global.get_callgraph
+)
+"pre/pre.ml" 267 11517 11551 "pre/pre.ml" 267 11517 11557
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 265 11456 11469 "pre/pre.ml" 265 11456 11475
+)
+"pre/pre.ml" 267 11517 11537 "pre/pre.ml" 267 11517 11557
+call(
+  stack
+)
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 268 11561 11569 "pre/pre.ml" 268 11561 11578
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 269 11627 11631 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 268 11561 11582 "pre/pre.ml" 268 11561 11597
+type(
+  InterCfg.t ->
+  AbsDom.Node.t list ->
+  ItvDom.Mem.t -> Global.Callgraph.t -> Global.Callgraph.t
+)
+ident(
+  int_ref init_node_calls "pre/pre.ml" 259 11118 11124 "pre/pre.ml" 259 11118 11139
+)
+"pre/pre.ml" 268 11561 11598 "pre/pre.ml" 268 11561 11602
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 266 11483 11491 "pre/pre.ml" 266 11483 11495
+)
+"pre/pre.ml" 268 11561 11603 "pre/pre.ml" 268 11561 11608
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 265 11456 11463 "pre/pre.ml" 265 11456 11468
+)
+"pre/pre.ml" 268 11561 11609 "pre/pre.ml" 268 11561 11612
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 265 11456 11476 "pre/pre.ml" 265 11456 11479
+)
+"pre/pre.ml" 268 11561 11613 "pre/pre.ml" 268 11561 11622
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 267 11517 11525 "pre/pre.ml" 267 11517 11534
+)
+"pre/pre.ml" 268 11561 11581 "pre/pre.ml" 268 11561 11623
+call(
+  stack
+)
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 269 11627 11635 "pre/pre.ml" 269 11627 11644
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 270 11692 11696 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 269 11627 11647 "pre/pre.ml" 269 11627 11667
+type(
+  InterCfg.t ->
+  AbsDom.Node.t list -> Global.Callgraph.t -> Global.Callgraph.t
+)
+ident(
+  ext_ref Global.Callgraph.init_graph
+)
+"pre/pre.ml" 269 11627 11668 "pre/pre.ml" 269 11627 11672
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 266 11483 11491 "pre/pre.ml" 266 11483 11495
+)
+"pre/pre.ml" 269 11627 11673 "pre/pre.ml" 269 11627 11678
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 265 11456 11463 "pre/pre.ml" 265 11456 11468
+)
+"pre/pre.ml" 269 11627 11679 "pre/pre.ml" 269 11627 11688
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 268 11561 11569 "pre/pre.ml" 268 11561 11578
+)
+"pre/pre.ml" 269 11627 11647 "pre/pre.ml" 269 11627 11688
+call(
+  stack
+)
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 270 11692 11700 "pre/pre.ml" 270 11692 11709
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 271 11769 11773 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 270 11692 11712 "pre/pre.ml" 270 11692 11732
+type(
+  InterCfg.pid list -> Global.Callgraph.t -> Global.Callgraph.t
+)
+ident(
+  ext_ref Global.Callgraph.init_calls
+)
+"pre/pre.ml" 270 11692 11734 "pre/pre.ml" 270 11692 11749
+type(
+  InterCfg.t -> InterCfg.pid list
+)
+ident(
+  ext_ref InterCfg.pidsof
+)
+"pre/pre.ml" 270 11692 11750 "pre/pre.ml" 270 11692 11754
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 266 11483 11491 "pre/pre.ml" 266 11483 11495
+)
+"pre/pre.ml" 270 11692 11733 "pre/pre.ml" 270 11692 11755
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"pre/pre.ml" 270 11692 11756 "pre/pre.ml" 270 11692 11765
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 269 11627 11635 "pre/pre.ml" 269 11627 11644
+)
+"pre/pre.ml" 270 11692 11712 "pre/pre.ml" 270 11692 11765
+call(
+  stack
+)
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 271 11769 11777 "pre/pre.ml" 271 11769 11786
+type(
+  Global.Callgraph.t
+)
+ident(
+  def callgraph "pre/pre.ml" 272 11852 11856 "pre/pre.ml" 272 11852 11893
+)
+"pre/pre.ml" 271 11769 11789 "pre/pre.ml" 271 11769 11815
+type(
+  InterCfg.pid list -> Global.Callgraph.t -> Global.Callgraph.t
+)
+ident(
+  ext_ref Global.Callgraph.init_trans_calls
+)
+"pre/pre.ml" 271 11769 11817 "pre/pre.ml" 271 11769 11832
+type(
+  InterCfg.t -> InterCfg.pid list
+)
+ident(
+  ext_ref InterCfg.pidsof
+)
+"pre/pre.ml" 271 11769 11833 "pre/pre.ml" 271 11769 11837
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pre/pre.ml" 266 11483 11491 "pre/pre.ml" 266 11483 11495
+)
+"pre/pre.ml" 271 11769 11816 "pre/pre.ml" 271 11769 11838
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"pre/pre.ml" 271 11769 11839 "pre/pre.ml" 271 11769 11848
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 270 11692 11700 "pre/pre.ml" 270 11692 11709
+)
+"pre/pre.ml" 271 11769 11789 "pre/pre.ml" 271 11769 11848
+call(
+  stack
+)
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 272 11852 11858 "pre/pre.ml" 272 11852 11864
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 265 11456 11469 "pre/pre.ml" 265 11456 11475
+)
+"pre/pre.ml" 272 11852 11882 "pre/pre.ml" 272 11852 11891
+type(
+  Global.Callgraph.t
+)
+ident(
+  int_ref callgraph "pre/pre.ml" 271 11769 11777 "pre/pre.ml" 271 11769 11786
+)
+"pre/pre.ml" 272 11852 11856 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 271 11769 11773 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 270 11692 11696 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 269 11627 11631 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 268 11561 11565 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 267 11517 11521 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 266 11483 11487 "pre/pre.ml" 272 11852 11893
+type(
+  Global.t
+)
+"pre/pre.ml" 265 11456 11459 "pre/pre.ml" 272 11852 11893
+type(
+  AbsDom.Node.t list -> Global.t -> ItvDom.Mem.t -> Global.t
+)
+type(
+  AbsDom.Node.t list -> Global.t -> ItvDom.Mem.t -> Global.t
+)
+"pre/pre.ml" 274 11895 11901 "pre/pre.ml" 274 11895 11929
+type(
+  bool -> t * Global.t -> Global.t
+)
+ident(
+  def remove_unreachable_functions "pre/pre.ml" 288 12622 12624 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 274 11895 11930 "pre/pre.ml" 274 11895 11936
+type(
+  bool
+)
+ident(
+  def silent "pre/pre.ml" 274 11895 11937 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 275 11965 11973 "pre/pre.ml" 275 11965 11977
+type(
+  t
+)
+ident(
+  def info "pre/pre.ml" 276 11990 11994 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 275 11965 11978 "pre/pre.ml" 275 11965 11984
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 276 11990 11994 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 275 11965 11972 "pre/pre.ml" 275 11965 11985
+type(
+  t * Global.t
+)
+"pre/pre.ml" 276 11990 11998 "pre/pre.ml" 276 11990 12006
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  def pids_all "pre/pre.ml" 277 12051 12055 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 276 11990 12009 "pre/pre.ml" 276 11990 12017
+type(
+  InterCfg.pid list -> InterCfg.pid BatSet.t
+)
+ident(
+  ext_ref Vocab.list2set
+)
+"pre/pre.ml" 276 11990 12019 "pre/pre.ml" 276 11990 12034
+type(
+  InterCfg.t -> InterCfg.pid list
+)
+ident(
+  ext_ref InterCfg.pidsof
+)
+"pre/pre.ml" 276 11990 12035 "pre/pre.ml" 276 11990 12041
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 275 11965 11978 "pre/pre.ml" 275 11965 11984
+)
+"pre/pre.ml" 276 11990 12035 "pre/pre.ml" 276 11990 12046
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 276 11990 12018 "pre/pre.ml" 276 11990 12047
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"pre/pre.ml" 276 11990 12009 "pre/pre.ml" 276 11990 12047
+call(
+  stack
+)
+type(
+  InterCfg.pid BatSet.t
+)
+"pre/pre.ml" 277 12051 12059 "pre/pre.ml" 277 12051 12068
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  def reachable "pre/pre.ml" 278 12136 12140 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 277 12051 12071 "pre/pre.ml" 277 12051 12094
+type(
+  InterCfg.pid -> Global.Callgraph.t -> InterCfg.pid BatSet.t
+)
+ident(
+  ext_ref Global.Callgraph.get_reachable
+)
+"pre/pre.ml" 277 12051 12095 "pre/pre.ml" 277 12051 12115
+type(
+  InterCfg.pid
+)
+ident(
+  ext_ref InterCfg.global_proc
+)
+"pre/pre.ml" 277 12051 12116 "pre/pre.ml" 277 12051 12122
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 275 11965 11978 "pre/pre.ml" 275 11965 11984
+)
+"pre/pre.ml" 277 12051 12116 "pre/pre.ml" 277 12051 12132
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 277 12051 12071 "pre/pre.ml" 277 12051 12132
+call(
+  stack
+)
+type(
+  InterCfg.pid BatSet.t
+)
+"pre/pre.ml" 278 12136 12144 "pre/pre.ml" 278 12136 12155
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  def unreachable "pre/pre.ml" 279 12192 12196 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 278 12136 12158 "pre/pre.ml" 278 12136 12169
+type(
+  InterCfg.pid BatSet.t -> InterCfg.pid BatSet.t -> InterCfg.pid BatSet.t
+)
+ident(
+  ext_ref BatSet.diff
+)
+"pre/pre.ml" 278 12136 12170 "pre/pre.ml" 278 12136 12178
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref pids_all "pre/pre.ml" 276 11990 11998 "pre/pre.ml" 276 11990 12006
+)
+"pre/pre.ml" 278 12136 12179 "pre/pre.ml" 278 12136 12188
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref reachable "pre/pre.ml" 277 12051 12059 "pre/pre.ml" 277 12051 12068
+)
+"pre/pre.ml" 278 12136 12158 "pre/pre.ml" 278 12136 12188
+call(
+  stack
+)
+type(
+  InterCfg.pid BatSet.t
+)
+"pre/pre.ml" 279 12192 12200 "pre/pre.ml" 279 12192 12206
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 281 12260 12266 "pre/pre.ml" 286 12608 12620
+)
+"pre/pre.ml" 279 12192 12209 "pre/pre.ml" 279 12192 12220
+type(
+  (InterCfg.pid -> Global.t -> Global.t) ->
+  InterCfg.pid BatSet.t -> Global.t -> Global.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 279 12192 12221 "pre/pre.ml" 279 12192 12236
+type(
+  InterCfg.pid -> Global.t -> Global.t
+)
+ident(
+  ext_ref Global.remove_function
+)
+"pre/pre.ml" 279 12192 12237 "pre/pre.ml" 279 12192 12248
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref unreachable "pre/pre.ml" 278 12136 12144 "pre/pre.ml" 278 12136 12155
+)
+"pre/pre.ml" 279 12192 12249 "pre/pre.ml" 279 12192 12255
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 275 11965 11978 "pre/pre.ml" 275 11965 11984
+)
+"pre/pre.ml" 279 12192 12209 "pre/pre.ml" 279 12192 12255
+call(
+  stack
+)
+type(
+  Global.t
+)
+"pre/pre.ml" 281 12260 12266 "pre/pre.ml" 281 12260 12282
+type(
+  bool -> unit -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_newline
+)
+"pre/pre.ml" 281 12260 12283 "pre/pre.ml" 281 12260 12289
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 274 11895 11930 "pre/pre.ml" 274 11895 11936
+)
+"pre/pre.ml" 281 12260 12290 "pre/pre.ml" 281 12260 12292
+type(
+  unit
+)
+"pre/pre.ml" 281 12260 12266 "pre/pre.ml" 281 12260 12292
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 282 12294 12300 "pre/pre.ml" 282 12294 12316
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 282 12294 12317 "pre/pre.ml" 282 12294 12323
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 274 11895 11930 "pre/pre.ml" 274 11895 11936
+)
+"pre/pre.ml" 282 12294 12325 "pre/pre.ml" 282 12294 12344
+type(
+  string
+)
+"pre/pre.ml" 282 12294 12345 "pre/pre.ml" 282 12294 12346
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pre/pre.ml" 282 12294 12347 "pre/pre.ml" 282 12294 12360
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"pre/pre.ml" 282 12294 12362 "pre/pre.ml" 282 12294 12377
+type(
+  InterCfg.pid BatSet.t -> int
+)
+ident(
+  ext_ref BatSet.cardinal
+)
+"pre/pre.ml" 282 12294 12378 "pre/pre.ml" 282 12294 12386
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref pids_all "pre/pre.ml" 276 11990 11998 "pre/pre.ml" 276 11990 12006
+)
+"pre/pre.ml" 282 12294 12361 "pre/pre.ml" 282 12294 12387
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 282 12294 12347 "pre/pre.ml" 282 12294 12387
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 282 12294 12324 "pre/pre.ml" 282 12294 12388
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 282 12294 12300 "pre/pre.ml" 282 12294 12388
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 283 12390 12396 "pre/pre.ml" 283 12390 12412
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 283 12390 12413 "pre/pre.ml" 283 12390 12419
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 274 11895 11930 "pre/pre.ml" 274 11895 11936
+)
+"pre/pre.ml" 283 12390 12421 "pre/pre.ml" 283 12390 12440
+type(
+  string
+)
+"pre/pre.ml" 283 12390 12441 "pre/pre.ml" 283 12390 12442
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pre/pre.ml" 283 12390 12443 "pre/pre.ml" 283 12390 12456
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"pre/pre.ml" 283 12390 12458 "pre/pre.ml" 283 12390 12473
+type(
+  InterCfg.pid BatSet.t -> int
+)
+ident(
+  ext_ref BatSet.cardinal
+)
+"pre/pre.ml" 283 12390 12474 "pre/pre.ml" 283 12390 12485
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref unreachable "pre/pre.ml" 278 12136 12144 "pre/pre.ml" 278 12136 12155
+)
+"pre/pre.ml" 283 12390 12457 "pre/pre.ml" 283 12390 12486
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 283 12390 12443 "pre/pre.ml" 283 12390 12486
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 283 12390 12420 "pre/pre.ml" 283 12390 12487
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 283 12390 12396 "pre/pre.ml" 283 12390 12487
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 284 12489 12495 "pre/pre.ml" 284 12489 12510
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_string
+)
+"pre/pre.ml" 284 12489 12511 "pre/pre.ml" 284 12489 12517
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 274 11895 11930 "pre/pre.ml" 274 11895 11936
+)
+"pre/pre.ml" 284 12489 12518 "pre/pre.ml" 284 12489 12544
+type(
+  string
+)
+"pre/pre.ml" 284 12489 12495 "pre/pre.ml" 284 12489 12544
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 285 12546 12552 "pre/pre.ml" 285 12546 12568
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 285 12546 12569 "pre/pre.ml" 285 12546 12575
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 274 11895 11930 "pre/pre.ml" 274 11895 11936
+)
+"pre/pre.ml" 285 12546 12577 "pre/pre.ml" 285 12546 12590
+type(
+  ?first:string ->
+  ?last:string ->
+  ?sep:string ->
+  (InterCfg.pid -> InterCfg.pid) -> InterCfg.pid BatSet.t -> string
+)
+ident(
+  ext_ref Vocab.string_of_set
+)
+"pre/pre.ml" 285 12546 12591 "pre/pre.ml" 285 12546 12593
+type(
+  InterCfg.pid -> InterCfg.pid
+)
+ident(
+  ext_ref Vocab.id
+)
+"pre/pre.ml" 285 12546 12594 "pre/pre.ml" 285 12546 12605
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref unreachable "pre/pre.ml" 278 12136 12144 "pre/pre.ml" 278 12136 12155
+)
+"pre/pre.ml" 285 12546 12576 "pre/pre.ml" 285 12546 12606
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 285 12546 12552 "pre/pre.ml" 285 12546 12606
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 286 12608 12614 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 279 12192 12200 "pre/pre.ml" 279 12192 12206
+)
+"pre/pre.ml" 285 12546 12552 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 284 12489 12495 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 283 12390 12396 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 282 12294 12300 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 281 12260 12266 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 279 12192 12196 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 278 12136 12140 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 277 12051 12055 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 276 11990 11994 "pre/pre.ml" 286 12608 12620
+type(
+  Global.t
+)
+"pre/pre.ml" 275 11965 11968 "pre/pre.ml" 286 12608 12620
+type(
+  t * Global.t -> Global.t
+)
+type(
+  t * Global.t -> Global.t
+)
+"pre/pre.ml" 288 12622 12628 "pre/pre.ml" 288 12622 12652
+type(
+  bool -> Global.t -> Global.t
+)
+ident(
+  def remove_unreachable_nodes "pre/pre.ml" 303 13276 13278 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 288 12622 12653 "pre/pre.ml" 288 12622 12659
+type(
+  bool
+)
+ident(
+  def silent "pre/pre.ml" 288 12622 12660 "pre/pre.ml" 301 13264 13274
+)
+"pre/pre.ml" 289 12683 12690 "pre/pre.ml" 289 12683 12696
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 290 12700 12704 "pre/pre.ml" 301 13264 13274
+)
+"pre/pre.ml" 290 12700 12708 "pre/pre.ml" 290 12700 12717
+type(
+  InterCfg.Node.t list
+)
+ident(
+  def nodes_all "pre/pre.ml" 291 12752 12756 "pre/pre.ml" 301 13264 13274
+)
+"pre/pre.ml" 290 12700 12720 "pre/pre.ml" 290 12700 12736
+type(
+  InterCfg.t -> InterCfg.Node.t list
+)
+ident(
+  ext_ref InterCfg.nodesof
+)
+"pre/pre.ml" 290 12700 12737 "pre/pre.ml" 290 12700 12743
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 289 12683 12690 "pre/pre.ml" 289 12683 12696
+)
+"pre/pre.ml" 290 12700 12737 "pre/pre.ml" 290 12700 12748
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 290 12700 12720 "pre/pre.ml" 290 12700 12748
+call(
+  stack
+)
+type(
+  InterCfg.Node.t list
+)
+"pre/pre.ml" 291 12752 12760 "pre/pre.ml" 291 12752 12771
+type(
+  InterCfg.node BatSet.t
+)
+ident(
+  def unreachable "pre/pre.ml" 292 12815 12819 "pre/pre.ml" 301 13264 13274
+)
+"pre/pre.ml" 291 12752 12774 "pre/pre.ml" 291 12752 12799
+type(
+  InterCfg.t -> InterCfg.node BatSet.t
+)
+ident(
+  ext_ref InterCfg.unreachable_node
+)
+"pre/pre.ml" 291 12752 12800 "pre/pre.ml" 291 12752 12806
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 289 12683 12690 "pre/pre.ml" 289 12683 12696
+)
+"pre/pre.ml" 291 12752 12800 "pre/pre.ml" 291 12752 12811
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 291 12752 12774 "pre/pre.ml" 291 12752 12811
+call(
+  stack
+)
+type(
+  InterCfg.node BatSet.t
+)
+"pre/pre.ml" 292 12815 12823 "pre/pre.ml" 292 12815 12829
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 294 12879 12883 "pre/pre.ml" 301 13264 13274
+)
+"pre/pre.ml" 292 12815 12832 "pre/pre.ml" 292 12815 12843
+type(
+  (InterCfg.node -> Global.t -> Global.t) ->
+  InterCfg.node BatSet.t -> Global.t -> Global.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pre/pre.ml" 292 12815 12844 "pre/pre.ml" 292 12815 12855
+type(
+  InterCfg.node -> Global.t -> Global.t
+)
+ident(
+  ext_ref Global.remove_node
+)
+"pre/pre.ml" 292 12815 12856 "pre/pre.ml" 292 12815 12867
+type(
+  InterCfg.node BatSet.t
+)
+ident(
+  int_ref unreachable "pre/pre.ml" 291 12752 12760 "pre/pre.ml" 291 12752 12771
+)
+"pre/pre.ml" 292 12815 12868 "pre/pre.ml" 292 12815 12874
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 289 12683 12690 "pre/pre.ml" 289 12683 12696
+)
+"pre/pre.ml" 292 12815 12832 "pre/pre.ml" 292 12815 12874
+call(
+  stack
+)
+type(
+  Global.t
+)
+"pre/pre.ml" 294 12879 12883 "pre/pre.ml" 294 12879 12899
+type(
+  bool -> unit -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_newline
+)
+"pre/pre.ml" 294 12879 12900 "pre/pre.ml" 294 12879 12906
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 288 12622 12653 "pre/pre.ml" 288 12622 12659
+)
+"pre/pre.ml" 294 12879 12907 "pre/pre.ml" 294 12879 12909
+type(
+  unit
+)
+"pre/pre.ml" 294 12879 12883 "pre/pre.ml" 294 12879 12909
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 295 12911 12915 "pre/pre.ml" 295 12911 12930
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_string
+)
+"pre/pre.ml" 295 12911 12931 "pre/pre.ml" 295 12911 12937
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 288 12622 12653 "pre/pre.ml" 288 12622 12659
+)
+"pre/pre.ml" 295 12911 12938 "pre/pre.ml" 295 12911 12955
+type(
+  string
+)
+"pre/pre.ml" 295 12911 12915 "pre/pre.ml" 295 12911 12955
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 296 12957 12961 "pre/pre.ml" 296 12957 12977
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 296 12957 12978 "pre/pre.ml" 296 12957 12984
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 288 12622 12653 "pre/pre.ml" 288 12622 12659
+)
+"pre/pre.ml" 296 12957 12986 "pre/pre.ml" 296 12957 12999
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"pre/pre.ml" 296 12957 13001 "pre/pre.ml" 296 12957 13012
+type(
+  InterCfg.Node.t list -> int
+)
+ident(
+  ext_ref List.length
+)
+"pre/pre.ml" 296 12957 13013 "pre/pre.ml" 296 12957 13022
+type(
+  InterCfg.Node.t list
+)
+ident(
+  int_ref nodes_all "pre/pre.ml" 290 12700 12708 "pre/pre.ml" 290 12700 12717
+)
+"pre/pre.ml" 296 12957 13000 "pre/pre.ml" 296 12957 13023
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 296 12957 12985 "pre/pre.ml" 296 12957 13024
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 296 12957 12961 "pre/pre.ml" 296 12957 13024
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 297 13026 13030 "pre/pre.ml" 297 13026 13045
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_string
+)
+"pre/pre.ml" 297 13026 13046 "pre/pre.ml" 297 13026 13052
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 288 12622 12653 "pre/pre.ml" 288 12622 12659
+)
+"pre/pre.ml" 297 13026 13053 "pre/pre.ml" 297 13026 13070
+type(
+  string
+)
+"pre/pre.ml" 297 13026 13030 "pre/pre.ml" 297 13026 13070
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 298 13072 13076 "pre/pre.ml" 298 13072 13092
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 298 13072 13093 "pre/pre.ml" 298 13072 13099
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 288 12622 12653 "pre/pre.ml" 288 12622 12659
+)
+"pre/pre.ml" 298 13072 13101 "pre/pre.ml" 298 13072 13114
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"pre/pre.ml" 298 13072 13116 "pre/pre.ml" 298 13072 13131
+type(
+  InterCfg.node BatSet.t -> int
+)
+ident(
+  ext_ref BatSet.cardinal
+)
+"pre/pre.ml" 298 13072 13132 "pre/pre.ml" 298 13072 13143
+type(
+  InterCfg.node BatSet.t
+)
+ident(
+  int_ref unreachable "pre/pre.ml" 291 12752 12760 "pre/pre.ml" 291 12752 12771
+)
+"pre/pre.ml" 298 13072 13115 "pre/pre.ml" 298 13072 13144
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 298 13072 13100 "pre/pre.ml" 298 13072 13145
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 298 13072 13076 "pre/pre.ml" 298 13072 13145
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 301 13264 13268 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 292 12815 12823 "pre/pre.ml" 292 12815 12829
+)
+"pre/pre.ml" 298 13072 13076 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 297 13026 13030 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 296 12957 12961 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 295 12911 12915 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 294 12879 12883 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 292 12815 12819 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 291 12752 12756 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 290 12700 12704 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t
+)
+"pre/pre.ml" 289 12683 12686 "pre/pre.ml" 301 13264 13274
+type(
+  Global.t -> Global.t
+)
+type(
+  Global.t -> Global.t
+)
+"pre/pre.ml" 303 13276 13282 "pre/pre.ml" 303 13276 13297
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+ident(
+  def get_single_defs "pre/pre.ml" 309 13512 13514 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 304 13366 13373 "pre/pre.ml" 304 13366 13380
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def defs_of "pre/pre.ml" 305 13385 13389 "pre/pre.ml" 307 13484 13510
+)
+"pre/pre.ml" 305 13385 13389 "pre/pre.ml" 305 13385 13401
+type(
+  (Access.Loc.t ->
+   AbsDom.Node.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t) ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t ->
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pre/pre.ml" 305 13385 13407 "pre/pre.ml" 305 13385 13410
+type(
+  Access.Loc.t
+)
+ident(
+  def loc "pre/pre.ml" 305 13385 13411 "pre/pre.ml" 306 13421 13483
+)
+"pre/pre.ml" 305 13385 13411 "pre/pre.ml" 305 13385 13416
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  def nodes "pre/pre.ml" 306 13421 13427 "pre/pre.ml" 306 13421 13483
+)
+"pre/pre.ml" 306 13421 13430 "pre/pre.ml" 306 13421 13445
+type(
+  AbsDom.Node.t BatSet.t -> int
+)
+ident(
+  ext_ref BatSet.cardinal
+)
+"pre/pre.ml" 306 13421 13446 "pre/pre.ml" 306 13421 13451
+type(
+  AbsDom.Node.t BatSet.t
+)
+ident(
+  int_ref nodes "pre/pre.ml" 305 13385 13411 "pre/pre.ml" 305 13385 13416
+)
+"pre/pre.ml" 306 13421 13430 "pre/pre.ml" 306 13421 13451
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 306 13421 13452 "pre/pre.ml" 306 13421 13453
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"pre/pre.ml" 306 13421 13454 "pre/pre.ml" 306 13421 13455
+type(
+  int
+)
+"pre/pre.ml" 306 13421 13430 "pre/pre.ml" 306 13421 13455
+type(
+  bool
+)
+"pre/pre.ml" 306 13421 13461 "pre/pre.ml" 306 13421 13471
+type(
+  Access.Loc.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"pre/pre.ml" 306 13421 13472 "pre/pre.ml" 306 13421 13475
+type(
+  Access.Loc.t
+)
+ident(
+  int_ref loc "pre/pre.ml" 305 13385 13407 "pre/pre.ml" 305 13385 13410
+)
+"pre/pre.ml" 306 13421 13461 "pre/pre.ml" 306 13421 13475
+call(
+  tail
+)
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 306 13421 13481 "pre/pre.ml" 306 13421 13483
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref Vocab.id
+)
+"pre/pre.ml" 306 13421 13427 "pre/pre.ml" 306 13421 13483
+type(
+  Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 305 13385 13402 "pre/pre.ml" 307 13484 13489
+type(
+  Access.Loc.t ->
+  AbsDom.Node.t BatSet.t -> Access.Loc.t BatSet.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 307 13484 13490 "pre/pre.ml" 307 13484 13497
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref defs_of "pre/pre.ml" 304 13366 13373 "pre/pre.ml" 304 13366 13380
+)
+"pre/pre.ml" 307 13484 13498 "pre/pre.ml" 307 13484 13510
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pre/pre.ml" 305 13385 13389 "pre/pre.ml" 307 13484 13510
+call(
+  tail
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 304 13366 13369 "pre/pre.ml" 307 13484 13510
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 309 13512 13518 "pre/pre.ml" 309 13512 13532
+type(
+  ?locset:AccessSem.Access.Loc.t BatSet.t ->
+  ?silent:bool -> Global.t -> t * Global.t
+)
+ident(
+  def do_preanalysis "pre/pre.ml" 341 15214 15232 "pre/pre.ml" 342 15233 15236
+)
+"pre/pre.ml" 309 13512 13535 "pre/pre.ml" 309 13512 13541
+type(
+  AccessSem.Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 309 13512 13544 "pre/pre.ml" 309 13512 13556
+type(
+  AccessSem.Access.Loc.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+type(
+  AccessSem.Access.Loc.t BatSet.t
+)
+ident(
+  int_ref *sth* "pre/pre.ml" 309 13512 13544 "pre/pre.ml" 309 13512 13556
+)
+type(
+  AccessSem.Access.Loc.t BatSet.t option
+)
+type(
+  AccessSem.Access.Loc.t BatSet.t option
+)
+type(
+  AccessSem.Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 309 13512 13560 "pre/pre.ml" 309 13512 13566
+type(
+  bool
+)
+"pre/pre.ml" 309 13512 13567 "pre/pre.ml" 309 13512 13572
+type(
+  bool
+)
+type(
+  bool
+)
+ident(
+  int_ref *sth* "pre/pre.ml" 309 13512 13567 "pre/pre.ml" 309 13512 13572
+)
+type(
+  bool option
+)
+type(
+  bool option
+)
+type(
+  bool
+)
+"pre/pre.ml" 310 13600 13607 "pre/pre.ml" 310 13600 13613
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 311 13617 13621 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 311 13617 13625 "pre/pre.ml" 311 13617 13631
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 312 13676 13680 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 311 13617 13634 "pre/pre.ml" 311 13617 13658
+type(
+  bool -> Global.t -> Global.t
+)
+ident(
+  int_ref remove_unreachable_nodes "pre/pre.ml" 288 12622 12628 "pre/pre.ml" 288 12622 12652
+)
+"pre/pre.ml" 311 13617 13659 "pre/pre.ml" 311 13617 13665
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 309 13512 13560 "pre/pre.ml" 309 13512 13566
+)
+"pre/pre.ml" 311 13617 13666 "pre/pre.ml" 311 13617 13672
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 310 13600 13607 "pre/pre.ml" 310 13600 13613
+)
+"pre/pre.ml" 311 13617 13634 "pre/pre.ml" 311 13617 13672
+call(
+  stack
+)
+type(
+  Global.t
+)
+"pre/pre.ml" 312 13676 13684 "pre/pre.ml" 312 13676 13689
+type(
+  InterCfg.Node.t list
+)
+ident(
+  def nodes "pre/pre.ml" 313 13730 13734 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 312 13676 13692 "pre/pre.ml" 312 13676 13708
+type(
+  InterCfg.t -> InterCfg.Node.t list
+)
+ident(
+  ext_ref InterCfg.nodesof
+)
+"pre/pre.ml" 312 13676 13710 "pre/pre.ml" 312 13676 13718
+type(
+  Global.t -> InterCfg.t
+)
+ident(
+  ext_ref Global.get_icfg
+)
+"pre/pre.ml" 312 13676 13719 "pre/pre.ml" 312 13676 13725
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 311 13617 13625 "pre/pre.ml" 311 13617 13631
+)
+"pre/pre.ml" 312 13676 13709 "pre/pre.ml" 312 13676 13726
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 312 13676 13692 "pre/pre.ml" 312 13676 13726
+call(
+  stack
+)
+type(
+  InterCfg.Node.t list
+)
+"pre/pre.ml" 313 13730 13738 "pre/pre.ml" 313 13730 13742
+type(
+  InterCfg.pid list
+)
+ident(
+  def pids "pre/pre.ml" 314 13782 13786 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 313 13730 13745 "pre/pre.ml" 313 13730 13760
+type(
+  InterCfg.t -> InterCfg.pid list
+)
+ident(
+  ext_ref InterCfg.pidsof
+)
+"pre/pre.ml" 313 13730 13762 "pre/pre.ml" 313 13730 13770
+type(
+  Global.t -> InterCfg.t
+)
+ident(
+  ext_ref Global.get_icfg
+)
+"pre/pre.ml" 313 13730 13771 "pre/pre.ml" 313 13730 13777
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 311 13617 13625 "pre/pre.ml" 311 13617 13631
+)
+"pre/pre.ml" 313 13730 13761 "pre/pre.ml" 313 13730 13778
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pre/pre.ml" 313 13730 13745 "pre/pre.ml" 313 13730 13778
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"pre/pre.ml" 314 13782 13791 "pre/pre.ml" 314 13782 13794
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "pre/pre.ml" 315 13846 13850 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 314 13782 13795 "pre/pre.ml" 314 13782 13801
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 315 13846 13850 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 314 13782 13790 "pre/pre.ml" 314 13782 13802
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 314 13782 13805 "pre/pre.ml" 314 13782 13810
+type(
+  bool ->
+  AbsDom.Node.t list ->
+  int -> ItvDom.Mem.t * Global.t -> ItvDom.Mem.t * Global.t
+)
+ident(
+  int_ref fixpt "pre/pre.ml" 230 9758 9768 "pre/pre.ml" 230 9758 9773
+)
+"pre/pre.ml" 314 13782 13811 "pre/pre.ml" 314 13782 13817
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 309 13512 13560 "pre/pre.ml" 309 13512 13566
+)
+"pre/pre.ml" 314 13782 13818 "pre/pre.ml" 314 13782 13823
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 312 13676 13684 "pre/pre.ml" 312 13676 13689
+)
+"pre/pre.ml" 314 13782 13824 "pre/pre.ml" 314 13782 13825
+type(
+  int
+)
+"pre/pre.ml" 314 13782 13827 "pre/pre.ml" 314 13782 13834
+type(
+  ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.bot
+)
+"pre/pre.ml" 314 13782 13835 "pre/pre.ml" 314 13782 13841
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 311 13617 13625 "pre/pre.ml" 311 13617 13631
+)
+"pre/pre.ml" 314 13782 13826 "pre/pre.ml" 314 13782 13842
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 314 13782 13805 "pre/pre.ml" 314 13782 13842
+call(
+  stack
+)
+type(
+  ItvDom.Mem.t * Global.t
+)
+"pre/pre.ml" 315 13846 13854 "pre/pre.ml" 315 13846 13855
+type(
+  unit
+)
+"pre/pre.ml" 315 13846 13858 "pre/pre.ml" 315 13846 13874
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 315 13846 13875 "pre/pre.ml" 315 13846 13881
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 309 13512 13560 "pre/pre.ml" 309 13512 13566
+)
+"pre/pre.ml" 315 13846 13883 "pre/pre.ml" 315 13846 13896
+type(
+  string
+)
+"pre/pre.ml" 315 13846 13897 "pre/pre.ml" 315 13846 13898
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pre/pre.ml" 315 13846 13899 "pre/pre.ml" 315 13846 13902
+type(
+  int -> string
+)
+ident(
+  ext_ref Vocab.i2s
+)
+"pre/pre.ml" 315 13846 13903 "pre/pre.ml" 315 13846 13911
+type(
+  (ItvDom.Mem.B.t -> int -> int) -> ItvDom.Mem.t -> int -> int
+)
+ident(
+  ext_ref ItvDom.Mem.fold
+)
+"pre/pre.ml" 315 13846 13917 "pre/pre.ml" 315 13846 13918
+type(
+  ItvDom.Mem.B.t
+)
+"pre/pre.ml" 315 13846 13919 "pre/pre.ml" 315 13846 13920
+type(
+  int
+)
+ident(
+  def c "pre/pre.ml" 315 13846 13924 "pre/pre.ml" 315 13846 13927
+)
+"pre/pre.ml" 315 13846 13924 "pre/pre.ml" 315 13846 13925
+type(
+  int
+)
+ident(
+  int_ref c "pre/pre.ml" 315 13846 13919 "pre/pre.ml" 315 13846 13920
+)
+"pre/pre.ml" 315 13846 13925 "pre/pre.ml" 315 13846 13926
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"pre/pre.ml" 315 13846 13926 "pre/pre.ml" 315 13846 13927
+type(
+  int
+)
+"pre/pre.ml" 315 13846 13924 "pre/pre.ml" 315 13846 13927
+type(
+  int
+)
+"pre/pre.ml" 315 13846 13912 "pre/pre.ml" 315 13846 13928
+type(
+  ItvDom.Mem.B.t -> int -> int
+)
+"pre/pre.ml" 315 13846 13929 "pre/pre.ml" 315 13846 13932
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 314 13782 13791 "pre/pre.ml" 314 13782 13794
+)
+"pre/pre.ml" 315 13846 13933 "pre/pre.ml" 315 13846 13934
+type(
+  int
+)
+"pre/pre.ml" 315 13846 13902 "pre/pre.ml" 315 13846 13935
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 315 13846 13899 "pre/pre.ml" 315 13846 13935
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 315 13846 13882 "pre/pre.ml" 315 13846 13936
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 315 13846 13858 "pre/pre.ml" 315 13846 13936
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 316 13940 13948 "pre/pre.ml" 316 13940 13949
+type(
+  unit
+)
+"pre/pre.ml" 316 13940 13955 "pre/pre.ml" 316 13940 13956
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"pre/pre.ml" 316 13940 13956 "pre/pre.ml" 316 13940 13973
+type(
+  bool ref
+)
+ident(
+  ext_ref Options.opt_debug
+)
+"pre/pre.ml" 316 13940 13955 "pre/pre.ml" 316 13940 13973
+type(
+  bool
+)
+"pre/pre.ml" 317 13980 13994 "pre/pre.ml" 317 13980 14005
+type(
+  (ItvDom.Mem.A.t -> unit) -> ItvDom.Mem.A.t BatSet.t -> unit
+)
+ident(
+  ext_ref BatSet.iter
+)
+"pre/pre.ml" 317 13980 14011 "pre/pre.ml" 317 13980 14014
+type(
+  ItvDom.Mem.A.t
+)
+ident(
+  def loc "pre/pre.ml" 318 14018 14034 "pre/pre.ml" 318 14018 14076
+)
+"pre/pre.ml" 318 14018 14034 "pre/pre.ml" 318 14018 14047
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"pre/pre.ml" 318 14018 14049 "pre/pre.ml" 318 14018 14071
+type(
+  ItvDom.Mem.A.t -> string
+)
+ident(
+  ext_ref ItvDom.Mem.A.to_string
+)
+"pre/pre.ml" 318 14018 14072 "pre/pre.ml" 318 14018 14075
+type(
+  ItvDom.Mem.A.t
+)
+ident(
+  int_ref loc "pre/pre.ml" 317 13980 14011 "pre/pre.ml" 317 13980 14014
+)
+"pre/pre.ml" 318 14018 14048 "pre/pre.ml" 318 14018 14076
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 318 14018 14034 "pre/pre.ml" 318 14018 14076
+call(
+  tail
+)
+type(
+  unit
+)
+"pre/pre.ml" 317 13980 14006 "pre/pre.ml" 319 14077 14092
+type(
+  ItvDom.Mem.A.t -> unit
+)
+"pre/pre.ml" 319 14077 14094 "pre/pre.ml" 319 14077 14102
+type(
+  ItvDom.Mem.t -> ItvDom.Mem.A.t BatSet.t
+)
+ident(
+  ext_ref ItvDom.Mem.keys
+)
+"pre/pre.ml" 319 14077 14103 "pre/pre.ml" 319 14077 14106
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 314 13782 13791 "pre/pre.ml" 314 13782 13794
+)
+"pre/pre.ml" 319 14077 14093 "pre/pre.ml" 319 14077 14107
+call(
+  stack
+)
+type(
+  ItvDom.Mem.A.t BatSet.t
+)
+"pre/pre.ml" 317 13980 13994 "pre/pre.ml" 319 14077 14107
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 320 14109 14126 "pre/pre.ml" 320 14109 14128
+type(
+  unit
+)
+"pre/pre.ml" 316 13940 13952 "pre/pre.ml" 320 14109 14128
+type(
+  unit
+)
+"pre/pre.ml" 321 14132 14140 "pre/pre.ml" 321 14132 14146
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 322 14184 14188 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 321 14132 14149 "pre/pre.ml" 321 14132 14163
+type(
+  AbsDom.Node.t list -> Global.t -> ItvDom.Mem.t -> Global.t
+)
+ident(
+  int_ref init_callgraph "pre/pre.ml" 264 11388 11394 "pre/pre.ml" 264 11388 11408
+)
+"pre/pre.ml" 321 14132 14164 "pre/pre.ml" 321 14132 14169
+type(
+  AbsDom.Node.t list
+)
+ident(
+  int_ref nodes "pre/pre.ml" 312 13676 13684 "pre/pre.ml" 312 13676 13689
+)
+"pre/pre.ml" 321 14132 14170 "pre/pre.ml" 321 14132 14176
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 314 13782 13795 "pre/pre.ml" 314 13782 13801
+)
+"pre/pre.ml" 321 14132 14177 "pre/pre.ml" 321 14132 14180
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 314 13782 13791 "pre/pre.ml" 314 13782 13794
+)
+"pre/pre.ml" 321 14132 14149 "pre/pre.ml" 321 14132 14180
+call(
+  stack
+)
+type(
+  Global.t
+)
+"pre/pre.ml" 322 14184 14193 "pre/pre.ml" 322 14184 14206
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def total_abslocs "pre/pre.ml" 323 14259 14263 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 322 14184 14208 "pre/pre.ml" 322 14184 14214
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  def access "pre/pre.ml" 323 14259 14263 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 322 14184 14192 "pre/pre.ml" 322 14184 14215
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 322 14184 14218 "pre/pre.ml" 322 14184 14229
+type(
+  ?locset:AccessSem.Access.Loc.t BatSet.t ->
+  Global.t ->
+  ItvDom.Mem.t -> Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref init_access "pre/pre.ml" 118 4520 4526 "pre/pre.ml" 118 4520 4537
+)
+"pre/pre.ml" 322 14184 14238 "pre/pre.ml" 322 14184 14244
+type(
+  AccessSem.Access.Loc.t BatSet.t
+)
+ident(
+  int_ref locset "pre/pre.ml" 309 13512 13535 "pre/pre.ml" 309 13512 13541
+)
+"pre/pre.ml" 322 14184 14245 "pre/pre.ml" 322 14184 14251
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 321 14132 14140 "pre/pre.ml" 321 14132 14146
+)
+"pre/pre.ml" 322 14184 14252 "pre/pre.ml" 322 14184 14255
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 314 13782 13791 "pre/pre.ml" 314 13782 13794
+)
+"pre/pre.ml" 322 14184 14218 "pre/pre.ml" 322 14184 14255
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t * (AbsDom.Node.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 323 14259 14267 "pre/pre.ml" 323 14259 14268
+type(
+  unit
+)
+"pre/pre.ml" 323 14259 14271 "pre/pre.ml" 323 14259 14287
+type(
+  bool -> string -> unit
+)
+ident(
+  ext_ref Vocab.my_prerr_endline
+)
+"pre/pre.ml" 323 14259 14288 "pre/pre.ml" 323 14259 14294
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 309 13512 13560 "pre/pre.ml" 309 13512 13566
+)
+"pre/pre.ml" 323 14259 14296 "pre/pre.ml" 323 14259 14327
+type(
+  string
+)
+"pre/pre.ml" 323 14259 14328 "pre/pre.ml" 323 14259 14329
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pre/pre.ml" 323 14259 14330 "pre/pre.ml" 323 14259 14343
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"pre/pre.ml" 323 14259 14345 "pre/pre.ml" 323 14259 14360
+type(
+  Access.Loc.t BatSet.t -> int
+)
+ident(
+  ext_ref BatSet.cardinal
+)
+"pre/pre.ml" 323 14259 14361 "pre/pre.ml" 323 14259 14374
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref total_abslocs "pre/pre.ml" 322 14184 14193 "pre/pre.ml" 322 14184 14206
+)
+"pre/pre.ml" 323 14259 14344 "pre/pre.ml" 323 14259 14375
+call(
+  stack
+)
+type(
+  int
+)
+"pre/pre.ml" 323 14259 14330 "pre/pre.ml" 323 14259 14375
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 323 14259 14295 "pre/pre.ml" 323 14259 14376
+call(
+  stack
+)
+type(
+  string
+)
+"pre/pre.ml" 323 14259 14271 "pre/pre.ml" 323 14259 14376
+call(
+  stack
+)
+type(
+  unit
+)
+"pre/pre.ml" 324 14380 14388 "pre/pre.ml" 324 14380 14395
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def defs_of "pre/pre.ml" 325 14421 14425 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 324 14380 14398 "pre/pre.ml" 324 14380 14410
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref init_defs_of "pre/pre.ml" 206 8720 8726 "pre/pre.ml" 206 8720 8738
+)
+"pre/pre.ml" 324 14380 14411 "pre/pre.ml" 324 14380 14417
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access "pre/pre.ml" 322 14184 14208 "pre/pre.ml" 322 14184 14214
+)
+"pre/pre.ml" 324 14380 14398 "pre/pre.ml" 324 14380 14417
+call(
+  stack
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 325 14421 14429 "pre/pre.ml" 325 14421 14436
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  def uses_of "pre/pre.ml" 326 14462 14466 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 325 14421 14439 "pre/pre.ml" 325 14421 14451
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t ->
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref init_uses_of "pre/pre.ml" 215 9124 9130 "pre/pre.ml" 215 9124 9142
+)
+"pre/pre.ml" 325 14421 14452 "pre/pre.ml" 325 14421 14458
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access "pre/pre.ml" 322 14184 14208 "pre/pre.ml" 322 14184 14214
+)
+"pre/pre.ml" 325 14421 14439 "pre/pre.ml" 325 14421 14458
+call(
+  stack
+)
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 326 14462 14470 "pre/pre.ml" 326 14462 14481
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  def access_proc "pre/pre.ml" 327 14511 14515 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 326 14462 14484 "pre/pre.ml" 326 14462 14500
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref init_access_proc "pre/pre.ml" 135 5170 5176 "pre/pre.ml" 135 5170 5192
+)
+"pre/pre.ml" 326 14462 14501 "pre/pre.ml" 326 14462 14507
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access "pre/pre.ml" 322 14184 14208 "pre/pre.ml" 322 14184 14214
+)
+"pre/pre.ml" 326 14462 14484 "pre/pre.ml" 326 14462 14507
+call(
+  stack
+)
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 327 14511 14519 "pre/pre.ml" 327 14511 14531
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  def access_reach "pre/pre.ml" 328 14589 14593 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 327 14511 14534 "pre/pre.ml" 327 14511 14551
+type(
+  InterCfg.pid list ->
+  Global.Callgraph.t ->
+  (AbsDom.Proc.t, Access.t) BatMap.t -> (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref init_access_reach "pre/pre.ml" 166 6698 6704 "pre/pre.ml" 166 6698 6721
+)
+"pre/pre.ml" 327 14511 14552 "pre/pre.ml" 327 14511 14556
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref pids "pre/pre.ml" 313 13730 13738 "pre/pre.ml" 313 13730 13742
+)
+"pre/pre.ml" 327 14511 14557 "pre/pre.ml" 327 14511 14563
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 321 14132 14140 "pre/pre.ml" 321 14132 14146
+)
+"pre/pre.ml" 327 14511 14557 "pre/pre.ml" 327 14511 14573
+type(
+  Global.Callgraph.t
+)
+"pre/pre.ml" 327 14511 14574 "pre/pre.ml" 327 14511 14585
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 326 14462 14470 "pre/pre.ml" 326 14462 14481
+)
+"pre/pre.ml" 327 14511 14534 "pre/pre.ml" 327 14511 14585
+call(
+  stack
+)
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+"pre/pre.ml" 328 14589 14597 "pre/pre.ml" 328 14589 14614
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  def access_local_proc "pre/pre.ml" 329 14655 14659 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 328 14589 14617 "pre/pre.ml" 328 14589 14639
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t ->
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref init_access_local_proc "pre/pre.ml" 182 7545 7551 "pre/pre.ml" 182 7545 7573
+)
+"pre/pre.ml" 328 14589 14640 "pre/pre.ml" 328 14589 14651
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 326 14462 14470 "pre/pre.ml" 326 14462 14481
+)
+"pre/pre.ml" 328 14589 14617 "pre/pre.ml" 328 14589 14651
+call(
+  stack
+)
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+"pre/pre.ml" 329 14655 14663 "pre/pre.ml" 329 14655 14683
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  def access_local_program "pre/pre.ml" 330 14733 14737 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 329 14655 14686 "pre/pre.ml" 329 14655 14711
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t -> Access.Loc.t BatSet.t
+)
+ident(
+  int_ref init_access_local_program "pre/pre.ml" 202 8502 8508 "pre/pre.ml" 202 8502 8533
+)
+"pre/pre.ml" 329 14655 14712 "pre/pre.ml" 329 14655 14729
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref access_local_proc "pre/pre.ml" 328 14589 14597 "pre/pre.ml" 328 14589 14614
+)
+"pre/pre.ml" 329 14655 14686 "pre/pre.ml" 329 14655 14729
+call(
+  stack
+)
+type(
+  Access.Loc.t BatSet.t
+)
+"pre/pre.ml" 330 14733 14741 "pre/pre.ml" 330 14733 14745
+type(
+  t
+)
+ident(
+  def info "pre/pre.ml" 340 15144 15148 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 330 14733 14756 "pre/pre.ml" 330 14733 14759
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "pre/pre.ml" 314 13782 13791 "pre/pre.ml" 314 13782 13794
+)
+"pre/pre.ml" 331 14761 14794 "pre/pre.ml" 331 14761 14807
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref total_abslocs "pre/pre.ml" 322 14184 14193 "pre/pre.ml" 322 14184 14206
+)
+"pre/pre.ml" 332 14809 14835 "pre/pre.ml" 332 14809 14841
+type(
+  (AbsDom.Node.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access "pre/pre.ml" 322 14184 14208 "pre/pre.ml" 322 14184 14214
+)
+"pre/pre.ml" 333 14843 14874 "pre/pre.ml" 333 14843 14885
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_proc "pre/pre.ml" 326 14462 14470 "pre/pre.ml" 326 14462 14481
+)
+"pre/pre.ml" 334 14887 14919 "pre/pre.ml" 334 14887 14931
+type(
+  (AbsDom.Proc.t, Access.t) BatMap.t
+)
+ident(
+  int_ref access_reach "pre/pre.ml" 327 14511 14519 "pre/pre.ml" 327 14511 14531
+)
+"pre/pre.ml" 335 14933 14970 "pre/pre.ml" 335 14933 14987
+type(
+  (AbsDom.Proc.t, Access.Loc.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref access_local_proc "pre/pre.ml" 328 14589 14597 "pre/pre.ml" 328 14589 14614
+)
+"pre/pre.ml" 336 14989 15029 "pre/pre.ml" 336 14989 15049
+type(
+  Access.Loc.t BatSet.t
+)
+ident(
+  int_ref access_local_program "pre/pre.ml" 329 14655 14663 "pre/pre.ml" 329 14655 14683
+)
+"pre/pre.ml" 337 15051 15078 "pre/pre.ml" 337 15051 15085
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref defs_of "pre/pre.ml" 324 14380 14388 "pre/pre.ml" 324 14380 14395
+)
+"pre/pre.ml" 338 15087 15114 "pre/pre.ml" 338 15087 15121
+type(
+  (Access.Loc.t, AbsDom.Node.t BatSet.t) BatMap.t
+)
+ident(
+  int_ref uses_of "pre/pre.ml" 325 14421 14429 "pre/pre.ml" 325 14421 14436
+)
+"pre/pre.ml" 330 14733 14748 "pre/pre.ml" 339 15122 15140
+type(
+  t
+)
+"pre/pre.ml" 340 15144 15152 "pre/pre.ml" 340 15144 15158
+type(
+  Global.t
+)
+ident(
+  def global "pre/pre.ml" 341 15214 15218 "pre/pre.ml" 341 15214 15232
+)
+"pre/pre.ml" 340 15144 15161 "pre/pre.ml" 340 15144 15189
+type(
+  bool -> t * Global.t -> Global.t
+)
+ident(
+  int_ref remove_unreachable_functions "pre/pre.ml" 274 11895 11901 "pre/pre.ml" 274 11895 11929
+)
+"pre/pre.ml" 340 15144 15190 "pre/pre.ml" 340 15144 15196
+type(
+  bool
+)
+ident(
+  int_ref silent "pre/pre.ml" 309 13512 13560 "pre/pre.ml" 309 13512 13566
+)
+"pre/pre.ml" 340 15144 15198 "pre/pre.ml" 340 15144 15202
+type(
+  t
+)
+ident(
+  int_ref info "pre/pre.ml" 330 14733 14741 "pre/pre.ml" 330 14733 14745
+)
+"pre/pre.ml" 340 15144 15203 "pre/pre.ml" 340 15144 15209
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 321 14132 14140 "pre/pre.ml" 321 14132 14146
+)
+"pre/pre.ml" 340 15144 15197 "pre/pre.ml" 340 15144 15210
+type(
+  t * Global.t
+)
+"pre/pre.ml" 340 15144 15161 "pre/pre.ml" 340 15144 15210
+call(
+  stack
+)
+type(
+  Global.t
+)
+"pre/pre.ml" 341 15214 15219 "pre/pre.ml" 341 15214 15223
+type(
+  t
+)
+ident(
+  int_ref info "pre/pre.ml" 330 14733 14741 "pre/pre.ml" 330 14733 14745
+)
+"pre/pre.ml" 341 15214 15225 "pre/pre.ml" 341 15214 15231
+type(
+  Global.t
+)
+ident(
+  int_ref global "pre/pre.ml" 340 15144 15152 "pre/pre.ml" 340 15144 15158
+)
+"pre/pre.ml" 341 15214 15218 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 340 15144 15148 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 330 14733 14737 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 329 14655 14659 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 328 14589 14593 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 327 14511 14515 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 326 14462 14466 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 325 14421 14425 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 324 14380 14384 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 323 14259 14263 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 322 14184 14188 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 321 14132 14136 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 316 13940 13944 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 315 13846 13850 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 314 13782 13786 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 313 13730 13734 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 312 13676 13680 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 311 13617 13621 "pre/pre.ml" 341 15214 15232
+type(
+  t * Global.t
+)
+"pre/pre.ml" 310 13600 13603 "pre/pre.ml" 341 15214 15232
+type(
+  Global.t -> t * Global.t
+)
+type(
+  Global.t -> t * Global.t
+)

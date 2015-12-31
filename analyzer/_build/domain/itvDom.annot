@@ -1,0 +1,2184 @@
+"domain/itvDom.ml" 13 128 141 "domain/itvDom.ml" 13 128 182
+call(
+  stack
+)
+"domain/itvDom.ml" 16 205 215 "domain/itvDom.ml" 16 205 231
+call(
+  stack
+)
+"domain/itvDom.ml" 18 233 239 "domain/itvDom.ml" 18 233 243
+type(
+  string
+)
+ident(
+  def name "domain/itvDom.ml" 19 252 254 "domain/itvDom.ml" 36 1004 1007
+)
+"domain/itvDom.ml" 18 233 246 "domain/itvDom.ml" 18 233 251
+type(
+  string
+)
+"domain/itvDom.ml" 19 252 258 "domain/itvDom.ml" 19 252 267
+type(
+  t -> string
+)
+ident(
+  def to_string "domain/itvDom.ml" 23 391 393 "domain/itvDom.ml" 36 1004 1007
+)
+"domain/itvDom.ml" 19 252 288 "domain/itvDom.ml" 19 252 289
+type(
+  t
+)
+ident(
+  def x "domain/itvDom.ml" 20 293 297 "domain/itvDom.ml" 21 340 389
+)
+"domain/itvDom.ml" 20 293 300 "domain/itvDom.ml" 20 293 315
+type(
+  t -> bool
+)
+ident(
+  ext_ref BatMap.is_empty
+)
+"domain/itvDom.ml" 20 293 316 "domain/itvDom.ml" 20 293 317
+type(
+  t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 19 252 288 "domain/itvDom.ml" 19 252 289
+)
+"domain/itvDom.ml" 20 293 300 "domain/itvDom.ml" 20 293 317
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/itvDom.ml" 20 293 323 "domain/itvDom.ml" 20 293 327
+type(
+  string
+)
+ident(
+  int_ref name "domain/itvDom.ml" 18 233 239 "domain/itvDom.ml" 18 233 243
+)
+"domain/itvDom.ml" 20 293 327 "domain/itvDom.ml" 20 293 328
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"domain/itvDom.ml" 20 293 328 "domain/itvDom.ml" 20 293 334
+type(
+  string
+)
+"domain/itvDom.ml" 20 293 323 "domain/itvDom.ml" 20 293 334
+call(
+  tail
+)
+type(
+  string
+)
+"domain/itvDom.ml" 21 340 346 "domain/itvDom.ml" 21 340 359
+type(
+  ?first:string ->
+  ?last:string ->
+  ?sep:string -> (A.t -> string) -> (B.t -> string) -> t -> string
+)
+ident(
+  ext_ref Vocab.string_of_map
+)
+"domain/itvDom.ml" 21 340 360 "domain/itvDom.ml" 21 340 373
+type(
+  A.t -> string
+)
+ident(
+  ext_ref AbsDom.Loc.to_string
+)
+"domain/itvDom.ml" 21 340 374 "domain/itvDom.ml" 21 340 387
+type(
+  B.t -> string
+)
+ident(
+  ext_ref Val.to_string
+)
+"domain/itvDom.ml" 21 340 388 "domain/itvDom.ml" 21 340 389
+type(
+  t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 19 252 288 "domain/itvDom.ml" 19 252 289
+)
+"domain/itvDom.ml" 21 340 346 "domain/itvDom.ml" 21 340 389
+call(
+  tail
+)
+type(
+  string
+)
+"domain/itvDom.ml" 20 293 297 "domain/itvDom.ml" 21 340 389
+type(
+  string
+)
+"domain/itvDom.ml" 19 252 284 "domain/itvDom.ml" 21 340 389
+type(
+  t -> string
+)
+type(
+  t -> string
+)
+"domain/itvDom.ml" 23 391 397 "domain/itvDom.ml" 23 391 403
+type(
+  AbsDom.PowLoc.t -> t -> Val.t
+)
+ident(
+  def lookup "domain/itvDom.ml" 28 586 588 "domain/itvDom.ml" 36 1004 1007
+)
+"domain/itvDom.ml" 23 391 435 "domain/itvDom.ml" 23 391 439
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def locs "domain/itvDom.ml" 23 391 440 "domain/itvDom.ml" 26 544 584
+)
+"domain/itvDom.ml" 23 391 440 "domain/itvDom.ml" 23 391 443
+type(
+  t
+)
+ident(
+  def mem "domain/itvDom.ml" 24 447 451 "domain/itvDom.ml" 26 544 584
+)
+"domain/itvDom.ml" 24 447 454 "domain/itvDom.ml" 24 447 456
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref eq
+)
+"domain/itvDom.ml" 24 447 457 "domain/itvDom.ml" 24 447 460
+type(
+  t
+)
+ident(
+  int_ref mem "domain/itvDom.ml" 23 391 440 "domain/itvDom.ml" 23 391 443
+)
+"domain/itvDom.ml" 24 447 461 "domain/itvDom.ml" 24 447 464
+type(
+  t
+)
+ident(
+  ext_ref bot
+)
+"domain/itvDom.ml" 24 447 454 "domain/itvDom.ml" 24 447 464
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/itvDom.ml" 24 447 470 "domain/itvDom.ml" 24 447 477
+type(
+  Val.t
+)
+ident(
+  ext_ref Val.bot
+)
+"domain/itvDom.ml" 25 483 493 "domain/itvDom.ml" 25 483 502
+type(
+  A.t ->
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t ->
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+ident(
+  def find_join "domain/itvDom.ml" 26 544 550 "domain/itvDom.ml" 26 544 584
+)
+"domain/itvDom.ml" 25 483 503 "domain/itvDom.ml" 25 483 506
+type(
+  A.t
+)
+ident(
+  def loc "domain/itvDom.ml" 25 483 507 "domain/itvDom.ml" 25 483 540
+)
+"domain/itvDom.ml" 25 483 507 "domain/itvDom.ml" 25 483 510
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+ident(
+  def acc "domain/itvDom.ml" 25 483 513 "domain/itvDom.ml" 25 483 540
+)
+"domain/itvDom.ml" 25 483 513 "domain/itvDom.ml" 25 483 521
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t ->
+  B.t -> Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+ident(
+  ext_ref Val.join
+)
+"domain/itvDom.ml" 25 483 522 "domain/itvDom.ml" 25 483 525
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+ident(
+  int_ref acc "domain/itvDom.ml" 25 483 507 "domain/itvDom.ml" 25 483 510
+)
+"domain/itvDom.ml" 25 483 527 "domain/itvDom.ml" 25 483 531
+type(
+  A.t -> t -> B.t
+)
+ident(
+  ext_ref find
+)
+"domain/itvDom.ml" 25 483 532 "domain/itvDom.ml" 25 483 535
+type(
+  A.t
+)
+ident(
+  int_ref loc "domain/itvDom.ml" 25 483 503 "domain/itvDom.ml" 25 483 506
+)
+"domain/itvDom.ml" 25 483 536 "domain/itvDom.ml" 25 483 539
+type(
+  t
+)
+ident(
+  int_ref mem "domain/itvDom.ml" 23 391 440 "domain/itvDom.ml" 23 391 443
+)
+"domain/itvDom.ml" 25 483 526 "domain/itvDom.ml" 25 483 540
+call(
+  stack
+)
+type(
+  B.t
+)
+"domain/itvDom.ml" 25 483 513 "domain/itvDom.ml" 25 483 540
+call(
+  tail
+)
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 26 544 550 "domain/itvDom.ml" 26 544 561
+type(
+  (AbsDom.Loc.t -> Val.t -> Val.t) -> AbsDom.PowLoc.t -> Val.t -> Val.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.fold
+)
+"domain/itvDom.ml" 26 544 562 "domain/itvDom.ml" 26 544 571
+type(
+  AbsDom.Loc.t -> Val.t -> Val.t
+)
+ident(
+  int_ref find_join "domain/itvDom.ml" 25 483 493 "domain/itvDom.ml" 25 483 502
+)
+"domain/itvDom.ml" 26 544 572 "domain/itvDom.ml" 26 544 576
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref locs "domain/itvDom.ml" 23 391 435 "domain/itvDom.ml" 23 391 439
+)
+"domain/itvDom.ml" 26 544 577 "domain/itvDom.ml" 26 544 584
+type(
+  Val.t
+)
+ident(
+  ext_ref Val.bot
+)
+"domain/itvDom.ml" 26 544 550 "domain/itvDom.ml" 26 544 584
+call(
+  tail
+)
+type(
+  Val.t
+)
+"domain/itvDom.ml" 25 483 489 "domain/itvDom.ml" 26 544 584
+type(
+  Val.t
+)
+"domain/itvDom.ml" 24 447 451 "domain/itvDom.ml" 26 544 584
+type(
+  Val.t
+)
+"domain/itvDom.ml" 23 391 431 "domain/itvDom.ml" 26 544 584
+type(
+  AbsDom.PowLoc.t -> t -> Val.t
+)
+type(
+  AbsDom.PowLoc.t -> t -> Val.t
+)
+"domain/itvDom.ml" 28 586 592 "domain/itvDom.ml" 28 586 598
+type(
+  AbsDom.update_mode -> Global.t -> AbsDom.PowLoc.t -> Val.t -> t -> t
+)
+ident(
+  def update "domain/itvDom.ml" 35 963 1003 "domain/itvDom.ml" 36 1004 1007
+)
+"domain/itvDom.ml" 29 656 664 "domain/itvDom.ml" 29 656 668
+type(
+  AbsDom.update_mode
+)
+ident(
+  def mode "domain/itvDom.ml" 29 656 669 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 29 656 669 "domain/itvDom.ml" 29 656 675
+type(
+  Global.t
+)
+ident(
+  def global "domain/itvDom.ml" 29 656 676 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 29 656 676 "domain/itvDom.ml" 29 656 680
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def locs "domain/itvDom.ml" 29 656 681 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 29 656 681 "domain/itvDom.ml" 29 656 682
+type(
+  Val.t
+)
+ident(
+  def v "domain/itvDom.ml" 29 656 683 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 29 656 683 "domain/itvDom.ml" 29 656 686
+type(
+  t
+)
+ident(
+  def mem "domain/itvDom.ml" 30 690 694 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 30 690 698 "domain/itvDom.ml" 30 690 710
+type(
+  A.t -> t -> t
+)
+ident(
+  def strong_add_v "domain/itvDom.ml" 31 732 736 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 30 690 711 "domain/itvDom.ml" 30 690 713
+type(
+  A.t
+)
+ident(
+  def lv "domain/itvDom.ml" 30 690 714 "domain/itvDom.ml" 30 690 728
+)
+"domain/itvDom.ml" 30 690 714 "domain/itvDom.ml" 30 690 715
+type(
+  t
+)
+ident(
+  def m "domain/itvDom.ml" 30 690 718 "domain/itvDom.ml" 30 690 728
+)
+"domain/itvDom.ml" 30 690 718 "domain/itvDom.ml" 30 690 721
+type(
+  A.t -> B.t -> t -> t
+)
+ident(
+  ext_ref add
+)
+"domain/itvDom.ml" 30 690 722 "domain/itvDom.ml" 30 690 724
+type(
+  A.t
+)
+ident(
+  int_ref lv "domain/itvDom.ml" 30 690 711 "domain/itvDom.ml" 30 690 713
+)
+"domain/itvDom.ml" 30 690 725 "domain/itvDom.ml" 30 690 726
+type(
+  Val.t
+)
+ident(
+  int_ref v "domain/itvDom.ml" 29 656 681 "domain/itvDom.ml" 29 656 682
+)
+"domain/itvDom.ml" 30 690 727 "domain/itvDom.ml" 30 690 728
+type(
+  t
+)
+ident(
+  int_ref m "domain/itvDom.ml" 30 690 714 "domain/itvDom.ml" 30 690 715
+)
+"domain/itvDom.ml" 30 690 718 "domain/itvDom.ml" 30 690 728
+call(
+  tail
+)
+type(
+  t
+)
+"domain/itvDom.ml" 31 732 740 "domain/itvDom.ml" 31 732 750
+type(
+  A.t -> t -> t
+)
+ident(
+  def weak_add_v "domain/itvDom.ml" 34 859 863 "domain/itvDom.ml" 35 963 1003
+)
+"domain/itvDom.ml" 31 732 751 "domain/itvDom.ml" 31 732 753
+type(
+  A.t
+)
+ident(
+  def lv "domain/itvDom.ml" 31 732 754 "domain/itvDom.ml" 33 790 855
+)
+"domain/itvDom.ml" 31 732 754 "domain/itvDom.ml" 31 732 755
+type(
+  t
+)
+ident(
+  def m "domain/itvDom.ml" 32 758 764 "domain/itvDom.ml" 33 790 855
+)
+"domain/itvDom.ml" 32 758 768 "domain/itvDom.ml" 32 758 774
+type(
+  B.t
+)
+ident(
+  def orig_v "domain/itvDom.ml" 33 790 796 "domain/itvDom.ml" 33 790 855
+)
+"domain/itvDom.ml" 32 758 777 "domain/itvDom.ml" 32 758 781
+type(
+  A.t -> t -> B.t
+)
+ident(
+  ext_ref find
+)
+"domain/itvDom.ml" 32 758 782 "domain/itvDom.ml" 32 758 784
+type(
+  A.t
+)
+ident(
+  int_ref lv "domain/itvDom.ml" 31 732 751 "domain/itvDom.ml" 31 732 753
+)
+"domain/itvDom.ml" 32 758 785 "domain/itvDom.ml" 32 758 786
+type(
+  t
+)
+ident(
+  int_ref m "domain/itvDom.ml" 31 732 754 "domain/itvDom.ml" 31 732 755
+)
+"domain/itvDom.ml" 32 758 777 "domain/itvDom.ml" 32 758 786
+call(
+  stack
+)
+type(
+  B.t
+)
+"domain/itvDom.ml" 33 790 799 "domain/itvDom.ml" 33 790 805
+type(
+  Val.t -> B.t -> bool
+)
+ident(
+  ext_ref Val.le
+)
+"domain/itvDom.ml" 33 790 806 "domain/itvDom.ml" 33 790 807
+type(
+  Val.t
+)
+ident(
+  int_ref v "domain/itvDom.ml" 29 656 681 "domain/itvDom.ml" 29 656 682
+)
+"domain/itvDom.ml" 33 790 808 "domain/itvDom.ml" 33 790 814
+type(
+  B.t
+)
+ident(
+  int_ref orig_v "domain/itvDom.ml" 32 758 768 "domain/itvDom.ml" 32 758 774
+)
+"domain/itvDom.ml" 33 790 799 "domain/itvDom.ml" 33 790 814
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/itvDom.ml" 33 790 820 "domain/itvDom.ml" 33 790 821
+type(
+  t
+)
+ident(
+  int_ref m "domain/itvDom.ml" 31 732 754 "domain/itvDom.ml" 31 732 755
+)
+"domain/itvDom.ml" 33 790 827 "domain/itvDom.ml" 33 790 830
+type(
+  A.t -> B.t -> t -> t
+)
+ident(
+  ext_ref add
+)
+"domain/itvDom.ml" 33 790 831 "domain/itvDom.ml" 33 790 833
+type(
+  A.t
+)
+ident(
+  int_ref lv "domain/itvDom.ml" 31 732 751 "domain/itvDom.ml" 31 732 753
+)
+"domain/itvDom.ml" 33 790 835 "domain/itvDom.ml" 33 790 843
+type(
+  B.t -> Val.t -> B.t
+)
+ident(
+  ext_ref Val.join
+)
+"domain/itvDom.ml" 33 790 844 "domain/itvDom.ml" 33 790 850
+type(
+  B.t
+)
+ident(
+  int_ref orig_v "domain/itvDom.ml" 32 758 768 "domain/itvDom.ml" 32 758 774
+)
+"domain/itvDom.ml" 33 790 851 "domain/itvDom.ml" 33 790 852
+type(
+  Val.t
+)
+ident(
+  int_ref v "domain/itvDom.ml" 29 656 681 "domain/itvDom.ml" 29 656 682
+)
+"domain/itvDom.ml" 33 790 834 "domain/itvDom.ml" 33 790 853
+call(
+  stack
+)
+type(
+  B.t
+)
+"domain/itvDom.ml" 33 790 854 "domain/itvDom.ml" 33 790 855
+type(
+  t
+)
+ident(
+  int_ref m "domain/itvDom.ml" 31 732 754 "domain/itvDom.ml" 31 732 755
+)
+"domain/itvDom.ml" 33 790 827 "domain/itvDom.ml" 33 790 855
+call(
+  tail
+)
+type(
+  t
+)
+"domain/itvDom.ml" 33 790 796 "domain/itvDom.ml" 33 790 855
+type(
+  t
+)
+"domain/itvDom.ml" 32 758 764 "domain/itvDom.ml" 33 790 855
+type(
+  t
+)
+"domain/itvDom.ml" 34 859 866 "domain/itvDom.ml" 34 859 890
+type(
+  AbsDom.update_mode -> (AbsDom.Proc.t -> bool) -> AbsDom.PowLoc.t -> bool
+)
+ident(
+  ext_ref AbsDom.PowLoc.can_strong_update
+)
+"domain/itvDom.ml" 34 859 891 "domain/itvDom.ml" 34 859 895
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "domain/itvDom.ml" 29 656 664 "domain/itvDom.ml" 29 656 668
+)
+"domain/itvDom.ml" 34 859 897 "domain/itvDom.ml" 34 859 910
+type(
+  Global.t -> AbsDom.Proc.t -> bool
+)
+ident(
+  ext_ref Global.is_rec
+)
+"domain/itvDom.ml" 34 859 911 "domain/itvDom.ml" 34 859 917
+type(
+  Global.t
+)
+ident(
+  int_ref global "domain/itvDom.ml" 29 656 669 "domain/itvDom.ml" 29 656 675
+)
+"domain/itvDom.ml" 34 859 896 "domain/itvDom.ml" 34 859 918
+call(
+  stack
+)
+type(
+  AbsDom.Proc.t -> bool
+)
+"domain/itvDom.ml" 34 859 919 "domain/itvDom.ml" 34 859 923
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref locs "domain/itvDom.ml" 29 656 676 "domain/itvDom.ml" 29 656 680
+)
+"domain/itvDom.ml" 34 859 866 "domain/itvDom.ml" 34 859 923
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/itvDom.ml" 34 859 929 "domain/itvDom.ml" 34 859 940
+type(
+  (AbsDom.Loc.t -> t -> t) -> AbsDom.PowLoc.t -> t -> t
+)
+ident(
+  ext_ref AbsDom.PowLoc.fold
+)
+"domain/itvDom.ml" 34 859 941 "domain/itvDom.ml" 34 859 953
+type(
+  AbsDom.Loc.t -> t -> t
+)
+ident(
+  int_ref strong_add_v "domain/itvDom.ml" 30 690 698 "domain/itvDom.ml" 30 690 710
+)
+"domain/itvDom.ml" 34 859 954 "domain/itvDom.ml" 34 859 958
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref locs "domain/itvDom.ml" 29 656 676 "domain/itvDom.ml" 29 656 680
+)
+"domain/itvDom.ml" 34 859 959 "domain/itvDom.ml" 34 859 962
+type(
+  t
+)
+ident(
+  int_ref mem "domain/itvDom.ml" 29 656 683 "domain/itvDom.ml" 29 656 686
+)
+"domain/itvDom.ml" 34 859 929 "domain/itvDom.ml" 34 859 962
+call(
+  tail
+)
+type(
+  t
+)
+"domain/itvDom.ml" 35 963 972 "domain/itvDom.ml" 35 963 983
+type(
+  (AbsDom.Loc.t -> t -> t) -> AbsDom.PowLoc.t -> t -> t
+)
+ident(
+  ext_ref AbsDom.PowLoc.fold
+)
+"domain/itvDom.ml" 35 963 984 "domain/itvDom.ml" 35 963 994
+type(
+  AbsDom.Loc.t -> t -> t
+)
+ident(
+  int_ref weak_add_v "domain/itvDom.ml" 31 732 740 "domain/itvDom.ml" 31 732 750
+)
+"domain/itvDom.ml" 35 963 995 "domain/itvDom.ml" 35 963 999
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref locs "domain/itvDom.ml" 29 656 676 "domain/itvDom.ml" 29 656 680
+)
+"domain/itvDom.ml" 35 963 1000 "domain/itvDom.ml" 35 963 1003
+type(
+  t
+)
+ident(
+  int_ref mem "domain/itvDom.ml" 29 656 683 "domain/itvDom.ml" 29 656 686
+)
+"domain/itvDom.ml" 35 963 972 "domain/itvDom.ml" 35 963 1003
+call(
+  tail
+)
+type(
+  t
+)
+"domain/itvDom.ml" 34 859 863 "domain/itvDom.ml" 35 963 1003
+type(
+  t
+)
+"domain/itvDom.ml" 31 732 736 "domain/itvDom.ml" 35 963 1003
+type(
+  t
+)
+"domain/itvDom.ml" 30 690 694 "domain/itvDom.ml" 35 963 1003
+type(
+  t
+)
+"domain/itvDom.ml" 29 656 660 "domain/itvDom.ml" 35 963 1003
+type(
+  AbsDom.update_mode -> Global.t -> AbsDom.PowLoc.t -> Val.t -> t -> t
+)
+type(
+  AbsDom.update_mode -> Global.t -> AbsDom.PowLoc.t -> Val.t -> t -> t
+)
+"domain/itvDom.ml" 40 1031 1041 "domain/itvDom.ml" 40 1031 1059
+call(
+  stack
+)
+"domain/itvDom.ml" 42 1061 1067 "domain/itvDom.ml" 42 1061 1070
+type(
+  'a -> B.t -> ('a, B.t) BatMap.t -> ('a, B.t) BatMap.t
+)
+ident(
+  def add "domain/itvDom.ml" 43 1117 1119 "domain/itvDom.ml" 50 1471 1474
+)
+"domain/itvDom.ml" 42 1061 1071 "domain/itvDom.ml" 42 1061 1074
+type(
+  'a
+)
+ident(
+  def idx "domain/itvDom.ml" 42 1061 1075 "domain/itvDom.ml" 42 1061 1116
+)
+"domain/itvDom.ml" 42 1061 1075 "domain/itvDom.ml" 42 1061 1076
+type(
+  B.t
+)
+ident(
+  def m "domain/itvDom.ml" 42 1061 1077 "domain/itvDom.ml" 42 1061 1116
+)
+"domain/itvDom.ml" 42 1061 1077 "domain/itvDom.ml" 42 1061 1080
+type(
+  ('a, B.t) BatMap.t
+)
+ident(
+  def tbl "domain/itvDom.ml" 42 1061 1083 "domain/itvDom.ml" 42 1061 1116
+)
+"domain/itvDom.ml" 42 1061 1083 "domain/itvDom.ml" 42 1061 1093
+type(
+  'a -> B.t -> ('a, B.t) BatMap.t -> ('a, B.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"domain/itvDom.ml" 42 1061 1094 "domain/itvDom.ml" 42 1061 1097
+type(
+  'a
+)
+ident(
+  int_ref idx "domain/itvDom.ml" 42 1061 1071 "domain/itvDom.ml" 42 1061 1074
+)
+"domain/itvDom.ml" 42 1061 1099 "domain/itvDom.ml" 42 1061 1109
+type(
+  B.t -> B.t
+)
+ident(
+  ext_ref b_hashcons
+)
+"domain/itvDom.ml" 42 1061 1110 "domain/itvDom.ml" 42 1061 1111
+type(
+  B.t
+)
+ident(
+  int_ref m "domain/itvDom.ml" 42 1061 1075 "domain/itvDom.ml" 42 1061 1076
+)
+"domain/itvDom.ml" 42 1061 1098 "domain/itvDom.ml" 42 1061 1112
+call(
+  stack
+)
+type(
+  B.t
+)
+"domain/itvDom.ml" 42 1061 1113 "domain/itvDom.ml" 42 1061 1116
+type(
+  ('a, B.t) BatMap.t
+)
+ident(
+  int_ref tbl "domain/itvDom.ml" 42 1061 1077 "domain/itvDom.ml" 42 1061 1080
+)
+"domain/itvDom.ml" 42 1061 1083 "domain/itvDom.ml" 42 1061 1116
+call(
+  tail
+)
+type(
+  ('a, B.t) BatMap.t
+)
+"domain/itvDom.ml" 43 1117 1123 "domain/itvDom.ml" 43 1117 1127
+type(
+  'b -> ('b, Mem.t) BatMap.t -> Mem.t
+)
+ident(
+  def find "domain/itvDom.ml" 45 1185 1187 "domain/itvDom.ml" 50 1471 1474
+)
+"domain/itvDom.ml" 43 1117 1128 "domain/itvDom.ml" 43 1117 1131
+type(
+  'b
+)
+ident(
+  def idx "domain/itvDom.ml" 43 1117 1132 "domain/itvDom.ml" 43 1117 1183
+)
+"domain/itvDom.ml" 43 1117 1132 "domain/itvDom.ml" 43 1117 1133
+type(
+  ('b, Mem.t) BatMap.t
+)
+ident(
+  def m "domain/itvDom.ml" 43 1117 1136 "domain/itvDom.ml" 43 1117 1183
+)
+"domain/itvDom.ml" 43 1117 1140 "domain/itvDom.ml" 43 1117 1151
+type(
+  'b -> ('b, Mem.t) BatMap.t -> Mem.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"domain/itvDom.ml" 43 1117 1152 "domain/itvDom.ml" 43 1117 1155
+type(
+  'b
+)
+ident(
+  int_ref idx "domain/itvDom.ml" 43 1117 1128 "domain/itvDom.ml" 43 1117 1131
+)
+"domain/itvDom.ml" 43 1117 1156 "domain/itvDom.ml" 43 1117 1157
+type(
+  ('b, Mem.t) BatMap.t
+)
+ident(
+  int_ref m "domain/itvDom.ml" 43 1117 1132 "domain/itvDom.ml" 43 1117 1133
+)
+"domain/itvDom.ml" 43 1117 1140 "domain/itvDom.ml" 43 1117 1157
+call(
+  stack
+)
+type(
+  Mem.t
+)
+"domain/itvDom.ml" 43 1117 1163 "domain/itvDom.ml" 43 1117 1172
+type(
+  exn
+)
+"domain/itvDom.ml" 43 1117 1176 "domain/itvDom.ml" 43 1117 1183
+type(
+  Mem.t
+)
+ident(
+  ext_ref Mem.bot
+)
+"domain/itvDom.ml" 43 1117 1136 "domain/itvDom.ml" 43 1117 1183
+type(
+  Mem.t
+)
+"domain/itvDom.ml" 45 1185 1191 "domain/itvDom.ml" 45 1185 1201
+type(
+  AbsDom.Proc.t BatSet.t -> t -> string
+)
+ident(
+  def to_string2 "domain/itvDom.ml" 49 1420 1470 "domain/itvDom.ml" 50 1471 1474
+)
+"domain/itvDom.ml" 45 1185 1241 "domain/itvDom.ml" 45 1185 1246
+type(
+  AbsDom.Proc.t BatSet.t
+)
+ident(
+  def funcs "domain/itvDom.ml" 45 1185 1247 "domain/itvDom.ml" 49 1420 1470
+)
+"domain/itvDom.ml" 45 1185 1247 "domain/itvDom.ml" 45 1185 1248
+type(
+  t
+)
+ident(
+  def x "domain/itvDom.ml" 46 1252 1256 "domain/itvDom.ml" 49 1420 1470
+)
+"domain/itvDom.ml" 46 1252 1260 "domain/itvDom.ml" 46 1252 1271
+type(
+  AbsDom.Proc.t * 'c -> 'd -> bool
+)
+ident(
+  def is_in_funcs "domain/itvDom.ml" 47 1330 1334 "domain/itvDom.ml" 49 1420 1470
+)
+"domain/itvDom.ml" 46 1252 1272 "domain/itvDom.ml" 46 1252 1276
+type(
+  AbsDom.Proc.t * 'c
+)
+ident(
+  def node "domain/itvDom.ml" 46 1252 1277 "domain/itvDom.ml" 46 1252 1326
+)
+"domain/itvDom.ml" 46 1252 1277 "domain/itvDom.ml" 46 1252 1278
+type(
+  'd
+)
+"domain/itvDom.ml" 46 1252 1281 "domain/itvDom.ml" 46 1252 1291
+type(
+  AbsDom.Proc.t -> AbsDom.Proc.t BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"domain/itvDom.ml" 46 1252 1293 "domain/itvDom.ml" 46 1252 1314
+type(
+  AbsDom.Proc.t * 'c -> AbsDom.Proc.t
+)
+ident(
+  ext_ref InterCfg.Node.get_pid
+)
+"domain/itvDom.ml" 46 1252 1315 "domain/itvDom.ml" 46 1252 1319
+type(
+  AbsDom.Proc.t * 'c
+)
+ident(
+  int_ref node "domain/itvDom.ml" 46 1252 1272 "domain/itvDom.ml" 46 1252 1276
+)
+"domain/itvDom.ml" 46 1252 1292 "domain/itvDom.ml" 46 1252 1320
+call(
+  stack
+)
+type(
+  AbsDom.Proc.t
+)
+"domain/itvDom.ml" 46 1252 1321 "domain/itvDom.ml" 46 1252 1326
+type(
+  AbsDom.Proc.t BatSet.t
+)
+ident(
+  int_ref funcs "domain/itvDom.ml" 45 1185 1241 "domain/itvDom.ml" 45 1185 1246
+)
+"domain/itvDom.ml" 46 1252 1281 "domain/itvDom.ml" 46 1252 1326
+call(
+  tail
+)
+type(
+  bool
+)
+"domain/itvDom.ml" 47 1330 1338 "domain/itvDom.ml" 47 1330 1339
+type(
+  (A.t, B.t) BatMap.t
+)
+ident(
+  def x "domain/itvDom.ml" 48 1373 1377 "domain/itvDom.ml" 49 1420 1470
+)
+"domain/itvDom.ml" 47 1330 1342 "domain/itvDom.ml" 47 1330 1355
+type(
+  (A.t -> B.t -> bool) -> t -> (A.t, B.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.filter
+)
+"domain/itvDom.ml" 47 1330 1356 "domain/itvDom.ml" 47 1330 1367
+type(
+  A.t -> B.t -> bool
+)
+ident(
+  int_ref is_in_funcs "domain/itvDom.ml" 46 1252 1260 "domain/itvDom.ml" 46 1252 1271
+)
+"domain/itvDom.ml" 47 1330 1368 "domain/itvDom.ml" 47 1330 1369
+type(
+  t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 45 1185 1247 "domain/itvDom.ml" 45 1185 1248
+)
+"domain/itvDom.ml" 47 1330 1342 "domain/itvDom.ml" 47 1330 1369
+call(
+  stack
+)
+type(
+  (A.t, B.t) BatMap.t
+)
+"domain/itvDom.ml" 48 1373 1380 "domain/itvDom.ml" 48 1373 1395
+type(
+  (A.t, B.t) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.is_empty
+)
+"domain/itvDom.ml" 48 1373 1396 "domain/itvDom.ml" 48 1373 1397
+type(
+  (A.t, B.t) BatMap.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 47 1330 1338 "domain/itvDom.ml" 47 1330 1339
+)
+"domain/itvDom.ml" 48 1373 1380 "domain/itvDom.ml" 48 1373 1397
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/itvDom.ml" 48 1373 1403 "domain/itvDom.ml" 48 1373 1407
+type(
+  string
+)
+ident(
+  ext_ref name
+)
+"domain/itvDom.ml" 48 1373 1407 "domain/itvDom.ml" 48 1373 1408
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"domain/itvDom.ml" 48 1373 1408 "domain/itvDom.ml" 48 1373 1414
+type(
+  string
+)
+"domain/itvDom.ml" 48 1373 1403 "domain/itvDom.ml" 48 1373 1414
+call(
+  tail
+)
+type(
+  string
+)
+"domain/itvDom.ml" 49 1420 1426 "domain/itvDom.ml" 49 1420 1439
+type(
+  ?first:string ->
+  ?last:string ->
+  ?sep:string ->
+  (A.t -> string) -> (Mem.t -> string) -> (A.t, Mem.t) BatMap.t -> string
+)
+ident(
+  ext_ref Vocab.string_of_map
+)
+"domain/itvDom.ml" 49 1420 1440 "domain/itvDom.ml" 49 1420 1454
+type(
+  A.t -> string
+)
+ident(
+  ext_ref AbsDom.Node.to_string
+)
+"domain/itvDom.ml" 49 1420 1455 "domain/itvDom.ml" 49 1420 1468
+type(
+  Mem.t -> string
+)
+ident(
+  int_ref Mem.to_string "domain/itvDom.ml" 19 252 258 "domain/itvDom.ml" 19 252 267
+)
+"domain/itvDom.ml" 49 1420 1469 "domain/itvDom.ml" 49 1420 1470
+type(
+  (A.t, Mem.t) BatMap.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 47 1330 1338 "domain/itvDom.ml" 47 1330 1339
+)
+"domain/itvDom.ml" 49 1420 1426 "domain/itvDom.ml" 49 1420 1470
+call(
+  tail
+)
+type(
+  string
+)
+"domain/itvDom.ml" 48 1373 1377 "domain/itvDom.ml" 49 1420 1470
+type(
+  string
+)
+"domain/itvDom.ml" 47 1330 1334 "domain/itvDom.ml" 49 1420 1470
+type(
+  string
+)
+"domain/itvDom.ml" 46 1252 1256 "domain/itvDom.ml" 49 1420 1470
+type(
+  string
+)
+"domain/itvDom.ml" 45 1185 1237 "domain/itvDom.ml" 49 1420 1470
+type(
+  AbsDom.Proc.t BatSet.t -> t -> string
+)
+type(
+  AbsDom.Proc.t BatSet.t -> t -> string
+)
+"domain/itvDom.ml" 53 1506 1510 "domain/itvDom.ml" 53 1506 1520
+type(
+  Val.t -> Itv.t
+)
+ident(
+  def itv_of_val "domain/itvDom.ml" 54 1548 1548 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 53 1506 1540 "domain/itvDom.ml" 53 1506 1547
+type(
+  Val.t -> Itv.t
+)
+type(
+  Val.t -> Itv.t
+)
+ident(
+  ext_ref Val.fst
+)
+"domain/itvDom.ml" 54 1548 1552 "domain/itvDom.ml" 54 1548 1566
+type(
+  Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  def pow_loc_of_val "domain/itvDom.ml" 55 1597 1597 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 54 1548 1589 "domain/itvDom.ml" 54 1548 1596
+type(
+  Val.t -> AbsDom.PowLoc.t
+)
+type(
+  Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref Val.snd
+)
+"domain/itvDom.ml" 55 1597 1601 "domain/itvDom.ml" 55 1597 1613
+type(
+  Val.t -> ArrayBlk.t
+)
+ident(
+  def array_of_val "domain/itvDom.ml" 56 1646 1646 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 55 1597 1638 "domain/itvDom.ml" 55 1597 1645
+type(
+  Val.t -> ArrayBlk.t
+)
+type(
+  Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref Val.trd
+)
+"domain/itvDom.ml" 56 1646 1650 "domain/itvDom.ml" 56 1646 1665
+type(
+  Val.t -> AbsDom.PowProc.t
+)
+ident(
+  def pow_proc_of_val "domain/itvDom.ml" 57 1698 1698 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 56 1646 1689 "domain/itvDom.ml" 56 1646 1697
+type(
+  Val.t -> AbsDom.PowProc.t
+)
+type(
+  Val.t -> AbsDom.PowProc.t
+)
+ident(
+  ext_ref Val.frth
+)
+"domain/itvDom.ml" 57 1698 1702 "domain/itvDom.ml" 57 1698 1712
+type(
+  Itv.t -> Val.t
+)
+ident(
+  def val_of_itv "domain/itvDom.ml" 59 1786 1786 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 57 1698 1736 "domain/itvDom.ml" 57 1698 1737
+type(
+  Itv.t
+)
+ident(
+  def x "domain/itvDom.ml" 58 1741 1743 "domain/itvDom.ml" 58 1741 1785
+)
+"domain/itvDom.ml" 58 1741 1744 "domain/itvDom.ml" 58 1741 1745
+type(
+  Itv.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 57 1698 1736 "domain/itvDom.ml" 57 1698 1737
+)
+"domain/itvDom.ml" 58 1741 1747 "domain/itvDom.ml" 58 1741 1757
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.bot
+)
+"domain/itvDom.ml" 58 1741 1759 "domain/itvDom.ml" 58 1741 1771
+type(
+  ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.bot
+)
+"domain/itvDom.ml" 58 1741 1773 "domain/itvDom.ml" 58 1741 1784
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"domain/itvDom.ml" 58 1741 1743 "domain/itvDom.ml" 58 1741 1785
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 57 1698 1732 "domain/itvDom.ml" 58 1741 1785
+type(
+  Itv.t -> Val.t
+)
+type(
+  Itv.t -> Val.t
+)
+"domain/itvDom.ml" 59 1786 1790 "domain/itvDom.ml" 59 1786 1804
+type(
+  AbsDom.PowLoc.t -> Val.t
+)
+ident(
+  def val_of_pow_loc "domain/itvDom.ml" 61 1878 1878 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 59 1786 1831 "domain/itvDom.ml" 59 1786 1832
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def x "domain/itvDom.ml" 60 1836 1838 "domain/itvDom.ml" 60 1836 1877
+)
+"domain/itvDom.ml" 60 1836 1839 "domain/itvDom.ml" 60 1836 1846
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.bot
+)
+"domain/itvDom.ml" 60 1836 1848 "domain/itvDom.ml" 60 1836 1849
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 59 1786 1831 "domain/itvDom.ml" 59 1786 1832
+)
+"domain/itvDom.ml" 60 1836 1851 "domain/itvDom.ml" 60 1836 1863
+type(
+  ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.bot
+)
+"domain/itvDom.ml" 60 1836 1865 "domain/itvDom.ml" 60 1836 1876
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"domain/itvDom.ml" 60 1836 1838 "domain/itvDom.ml" 60 1836 1877
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 59 1786 1827 "domain/itvDom.ml" 60 1836 1877
+type(
+  AbsDom.PowLoc.t -> Val.t
+)
+type(
+  AbsDom.PowLoc.t -> Val.t
+)
+"domain/itvDom.ml" 61 1878 1882 "domain/itvDom.ml" 61 1878 1894
+type(
+  ArrayBlk.t -> Val.t
+)
+ident(
+  def val_of_array "domain/itvDom.ml" 63 1967 1967 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 61 1878 1923 "domain/itvDom.ml" 61 1878 1924
+type(
+  ArrayBlk.t
+)
+ident(
+  def x "domain/itvDom.ml" 62 1928 1930 "domain/itvDom.ml" 62 1928 1966
+)
+"domain/itvDom.ml" 62 1928 1931 "domain/itvDom.ml" 62 1928 1938
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.bot
+)
+"domain/itvDom.ml" 62 1928 1940 "domain/itvDom.ml" 62 1928 1950
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.bot
+)
+"domain/itvDom.ml" 62 1928 1952 "domain/itvDom.ml" 62 1928 1953
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 61 1878 1923 "domain/itvDom.ml" 61 1878 1924
+)
+"domain/itvDom.ml" 62 1928 1954 "domain/itvDom.ml" 62 1928 1965
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"domain/itvDom.ml" 62 1928 1930 "domain/itvDom.ml" 62 1928 1966
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 61 1878 1919 "domain/itvDom.ml" 62 1928 1966
+type(
+  ArrayBlk.t -> Val.t
+)
+type(
+  ArrayBlk.t -> Val.t
+)
+"domain/itvDom.ml" 63 1967 1971 "domain/itvDom.ml" 63 1967 1986
+type(
+  AbsDom.PowProc.t -> Val.t
+)
+ident(
+  def val_of_pow_proc "domain/itvDom.ml" 65 2060 2060 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 63 1967 2014 "domain/itvDom.ml" 63 1967 2015
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  def x "domain/itvDom.ml" 64 2019 2021 "domain/itvDom.ml" 64 2019 2059
+)
+"domain/itvDom.ml" 64 2019 2022 "domain/itvDom.ml" 64 2019 2029
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.bot
+)
+"domain/itvDom.ml" 64 2019 2031 "domain/itvDom.ml" 64 2019 2041
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.bot
+)
+"domain/itvDom.ml" 64 2019 2043 "domain/itvDom.ml" 64 2019 2055
+type(
+  ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.bot
+)
+"domain/itvDom.ml" 64 2019 2057 "domain/itvDom.ml" 64 2019 2058
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 63 1967 2014 "domain/itvDom.ml" 63 1967 2015
+)
+"domain/itvDom.ml" 64 2019 2021 "domain/itvDom.ml" 64 2019 2059
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 63 1967 2010 "domain/itvDom.ml" 64 2019 2059
+type(
+  AbsDom.PowProc.t -> Val.t
+)
+type(
+  AbsDom.PowProc.t -> Val.t
+)
+"domain/itvDom.ml" 65 2060 2064 "domain/itvDom.ml" 65 2060 2074
+type(
+  int -> Itv.t
+)
+ident(
+  def itv_of_int "domain/itvDom.ml" 66 2130 2130 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 65 2060 2096 "domain/itvDom.ml" 65 2060 2097
+type(
+  int
+)
+ident(
+  def i "domain/itvDom.ml" 65 2060 2101 "domain/itvDom.ml" 65 2060 2129
+)
+"domain/itvDom.ml" 65 2060 2116 "domain/itvDom.ml" 65 2060 2117
+type(
+  int
+)
+ident(
+  int_ref i "domain/itvDom.ml" 65 2060 2096 "domain/itvDom.ml" 65 2060 2097
+)
+"domain/itvDom.ml" 65 2060 2108 "domain/itvDom.ml" 65 2060 2117
+type(
+  Itv.t'
+)
+"domain/itvDom.ml" 65 2060 2127 "domain/itvDom.ml" 65 2060 2128
+type(
+  int
+)
+ident(
+  int_ref i "domain/itvDom.ml" 65 2060 2096 "domain/itvDom.ml" 65 2060 2097
+)
+"domain/itvDom.ml" 65 2060 2119 "domain/itvDom.ml" 65 2060 2128
+type(
+  Itv.t'
+)
+"domain/itvDom.ml" 65 2060 2101 "domain/itvDom.ml" 65 2060 2129
+type(
+  Itv.t
+)
+"domain/itvDom.ml" 65 2060 2092 "domain/itvDom.ml" 65 2060 2129
+type(
+  int -> Itv.t
+)
+type(
+  int -> Itv.t
+)
+"domain/itvDom.ml" 66 2130 2134 "domain/itvDom.ml" 66 2130 2145
+type(
+  int -> int -> Itv.t
+)
+ident(
+  def itv_of_ints "domain/itvDom.ml" 69 2217 2217 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 66 2130 2174 "domain/itvDom.ml" 66 2130 2176
+type(
+  int
+)
+ident(
+  def lb "domain/itvDom.ml" 66 2130 2177 "domain/itvDom.ml" 67 2183 2215
+)
+"domain/itvDom.ml" 66 2130 2177 "domain/itvDom.ml" 66 2130 2179
+type(
+  int
+)
+ident(
+  def ub "domain/itvDom.ml" 67 2183 2185 "domain/itvDom.ml" 67 2183 2215
+)
+"domain/itvDom.ml" 67 2183 2200 "domain/itvDom.ml" 67 2183 2202
+type(
+  int
+)
+ident(
+  int_ref lb "domain/itvDom.ml" 66 2130 2174 "domain/itvDom.ml" 66 2130 2176
+)
+"domain/itvDom.ml" 67 2183 2192 "domain/itvDom.ml" 67 2183 2202
+type(
+  Itv.t'
+)
+"domain/itvDom.ml" 67 2183 2212 "domain/itvDom.ml" 67 2183 2214
+type(
+  int
+)
+ident(
+  int_ref ub "domain/itvDom.ml" 66 2130 2177 "domain/itvDom.ml" 66 2130 2179
+)
+"domain/itvDom.ml" 67 2183 2204 "domain/itvDom.ml" 67 2183 2214
+type(
+  Itv.t'
+)
+"domain/itvDom.ml" 67 2183 2185 "domain/itvDom.ml" 67 2183 2215
+type(
+  Itv.t
+)
+"domain/itvDom.ml" 66 2130 2170 "domain/itvDom.ml" 67 2183 2215
+type(
+  int -> int -> Itv.t
+)
+type(
+  int -> int -> Itv.t
+)
+"domain/itvDom.ml" 69 2217 2221 "domain/itvDom.ml" 69 2217 2231
+type(
+  Val.t -> Itv.t -> Val.t
+)
+ident(
+  def modify_itv "domain/itvDom.ml" 72 2331 2331 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 69 2217 2264 "domain/itvDom.ml" 69 2217 2265
+type(
+  Val.t
+)
+ident(
+  def x "domain/itvDom.ml" 69 2217 2266 "domain/itvDom.ml" 70 2271 2329
+)
+"domain/itvDom.ml" 69 2217 2266 "domain/itvDom.ml" 69 2217 2267
+type(
+  Itv.t
+)
+ident(
+  def i "domain/itvDom.ml" 70 2271 2273 "domain/itvDom.ml" 70 2271 2329
+)
+"domain/itvDom.ml" 70 2271 2274 "domain/itvDom.ml" 70 2271 2275
+type(
+  Itv.t
+)
+ident(
+  int_ref i "domain/itvDom.ml" 69 2217 2266 "domain/itvDom.ml" 69 2217 2267
+)
+"domain/itvDom.ml" 70 2271 2277 "domain/itvDom.ml" 70 2271 2291
+type(
+  Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc_of_val "domain/itvDom.ml" 54 1548 1552 "domain/itvDom.ml" 54 1548 1566
+)
+"domain/itvDom.ml" 70 2271 2292 "domain/itvDom.ml" 70 2271 2293
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 69 2217 2264 "domain/itvDom.ml" 69 2217 2265
+)
+"domain/itvDom.ml" 70 2271 2277 "domain/itvDom.ml" 70 2271 2293
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"domain/itvDom.ml" 70 2271 2295 "domain/itvDom.ml" 70 2271 2307
+type(
+  Val.t -> ArrayBlk.t
+)
+ident(
+  int_ref array_of_val "domain/itvDom.ml" 55 1597 1601 "domain/itvDom.ml" 55 1597 1613
+)
+"domain/itvDom.ml" 70 2271 2308 "domain/itvDom.ml" 70 2271 2309
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 69 2217 2264 "domain/itvDom.ml" 69 2217 2265
+)
+"domain/itvDom.ml" 70 2271 2295 "domain/itvDom.ml" 70 2271 2309
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"domain/itvDom.ml" 70 2271 2311 "domain/itvDom.ml" 70 2271 2326
+type(
+  Val.t -> AbsDom.PowProc.t
+)
+ident(
+  int_ref pow_proc_of_val "domain/itvDom.ml" 56 1646 1650 "domain/itvDom.ml" 56 1646 1665
+)
+"domain/itvDom.ml" 70 2271 2327 "domain/itvDom.ml" 70 2271 2328
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 69 2217 2264 "domain/itvDom.ml" 69 2217 2265
+)
+"domain/itvDom.ml" 70 2271 2311 "domain/itvDom.ml" 70 2271 2328
+call(
+  stack
+)
+type(
+  AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 70 2271 2273 "domain/itvDom.ml" 70 2271 2329
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 69 2217 2260 "domain/itvDom.ml" 70 2271 2329
+type(
+  Val.t -> Itv.t -> Val.t
+)
+type(
+  Val.t -> Itv.t -> Val.t
+)
+"domain/itvDom.ml" 72 2331 2335 "domain/itvDom.ml" 72 2331 2348
+type(
+  Val.t -> AbsDom.PowLoc.t -> Val.t
+)
+ident(
+  def modify_powloc "domain/itvDom.ml" 75 2447 2447 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 72 2331 2384 "domain/itvDom.ml" 72 2331 2385
+type(
+  Val.t
+)
+ident(
+  def x "domain/itvDom.ml" 72 2331 2386 "domain/itvDom.ml" 73 2391 2445
+)
+"domain/itvDom.ml" 72 2331 2386 "domain/itvDom.ml" 72 2331 2387
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def p "domain/itvDom.ml" 73 2391 2393 "domain/itvDom.ml" 73 2391 2445
+)
+"domain/itvDom.ml" 73 2391 2394 "domain/itvDom.ml" 73 2391 2404
+type(
+  Val.t -> Itv.t
+)
+ident(
+  int_ref itv_of_val "domain/itvDom.ml" 53 1506 1510 "domain/itvDom.ml" 53 1506 1520
+)
+"domain/itvDom.ml" 73 2391 2405 "domain/itvDom.ml" 73 2391 2406
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 72 2331 2384 "domain/itvDom.ml" 72 2331 2385
+)
+"domain/itvDom.ml" 73 2391 2394 "domain/itvDom.ml" 73 2391 2406
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"domain/itvDom.ml" 73 2391 2408 "domain/itvDom.ml" 73 2391 2409
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref p "domain/itvDom.ml" 72 2331 2386 "domain/itvDom.ml" 72 2331 2387
+)
+"domain/itvDom.ml" 73 2391 2411 "domain/itvDom.ml" 73 2391 2423
+type(
+  Val.t -> ArrayBlk.t
+)
+ident(
+  int_ref array_of_val "domain/itvDom.ml" 55 1597 1601 "domain/itvDom.ml" 55 1597 1613
+)
+"domain/itvDom.ml" 73 2391 2424 "domain/itvDom.ml" 73 2391 2425
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 72 2331 2384 "domain/itvDom.ml" 72 2331 2385
+)
+"domain/itvDom.ml" 73 2391 2411 "domain/itvDom.ml" 73 2391 2425
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"domain/itvDom.ml" 73 2391 2427 "domain/itvDom.ml" 73 2391 2442
+type(
+  Val.t -> AbsDom.PowProc.t
+)
+ident(
+  int_ref pow_proc_of_val "domain/itvDom.ml" 56 1646 1650 "domain/itvDom.ml" 56 1646 1665
+)
+"domain/itvDom.ml" 73 2391 2443 "domain/itvDom.ml" 73 2391 2444
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 72 2331 2384 "domain/itvDom.ml" 72 2331 2385
+)
+"domain/itvDom.ml" 73 2391 2427 "domain/itvDom.ml" 73 2391 2444
+call(
+  stack
+)
+type(
+  AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 73 2391 2393 "domain/itvDom.ml" 73 2391 2445
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 72 2331 2380 "domain/itvDom.ml" 73 2391 2445
+type(
+  Val.t -> AbsDom.PowLoc.t -> Val.t
+)
+type(
+  Val.t -> AbsDom.PowLoc.t -> Val.t
+)
+"domain/itvDom.ml" 75 2447 2451 "domain/itvDom.ml" 75 2447 2463
+type(
+  Val.t -> ArrayBlk.t -> Val.t
+)
+ident(
+  def modify_array "domain/itvDom.ml" 78 2566 2566 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 75 2447 2501 "domain/itvDom.ml" 75 2447 2502
+type(
+  Val.t
+)
+ident(
+  def x "domain/itvDom.ml" 75 2447 2503 "domain/itvDom.ml" 76 2508 2564
+)
+"domain/itvDom.ml" 75 2447 2503 "domain/itvDom.ml" 75 2447 2504
+type(
+  ArrayBlk.t
+)
+ident(
+  def a "domain/itvDom.ml" 76 2508 2510 "domain/itvDom.ml" 76 2508 2564
+)
+"domain/itvDom.ml" 76 2508 2511 "domain/itvDom.ml" 76 2508 2521
+type(
+  Val.t -> Itv.t
+)
+ident(
+  int_ref itv_of_val "domain/itvDom.ml" 53 1506 1510 "domain/itvDom.ml" 53 1506 1520
+)
+"domain/itvDom.ml" 76 2508 2522 "domain/itvDom.ml" 76 2508 2523
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 75 2447 2501 "domain/itvDom.ml" 75 2447 2502
+)
+"domain/itvDom.ml" 76 2508 2511 "domain/itvDom.ml" 76 2508 2523
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"domain/itvDom.ml" 76 2508 2525 "domain/itvDom.ml" 76 2508 2539
+type(
+  Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc_of_val "domain/itvDom.ml" 54 1548 1552 "domain/itvDom.ml" 54 1548 1566
+)
+"domain/itvDom.ml" 76 2508 2540 "domain/itvDom.ml" 76 2508 2541
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 75 2447 2501 "domain/itvDom.ml" 75 2447 2502
+)
+"domain/itvDom.ml" 76 2508 2525 "domain/itvDom.ml" 76 2508 2541
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"domain/itvDom.ml" 76 2508 2543 "domain/itvDom.ml" 76 2508 2544
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref a "domain/itvDom.ml" 75 2447 2503 "domain/itvDom.ml" 75 2447 2504
+)
+"domain/itvDom.ml" 76 2508 2546 "domain/itvDom.ml" 76 2508 2561
+type(
+  Val.t -> AbsDom.PowProc.t
+)
+ident(
+  int_ref pow_proc_of_val "domain/itvDom.ml" 56 1646 1650 "domain/itvDom.ml" 56 1646 1665
+)
+"domain/itvDom.ml" 76 2508 2562 "domain/itvDom.ml" 76 2508 2563
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 75 2447 2501 "domain/itvDom.ml" 75 2447 2502
+)
+"domain/itvDom.ml" 76 2508 2546 "domain/itvDom.ml" 76 2508 2563
+call(
+  stack
+)
+type(
+  AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 76 2508 2510 "domain/itvDom.ml" 76 2508 2564
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 75 2447 2497 "domain/itvDom.ml" 76 2508 2564
+type(
+  Val.t -> ArrayBlk.t -> Val.t
+)
+type(
+  Val.t -> ArrayBlk.t -> Val.t
+)
+"domain/itvDom.ml" 78 2566 2570 "domain/itvDom.ml" 78 2566 2584
+type(
+  Val.t -> AbsDom.PowProc.t -> Val.t
+)
+ident(
+  def modify_powproc "domain/itvDom.ml" 82 2684 2684 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 78 2566 2621 "domain/itvDom.ml" 78 2566 2622
+type(
+  Val.t
+)
+ident(
+  def x "domain/itvDom.ml" 78 2566 2623 "domain/itvDom.ml" 79 2628 2681
+)
+"domain/itvDom.ml" 78 2566 2623 "domain/itvDom.ml" 78 2566 2624
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  def p "domain/itvDom.ml" 79 2628 2630 "domain/itvDom.ml" 79 2628 2681
+)
+"domain/itvDom.ml" 79 2628 2631 "domain/itvDom.ml" 79 2628 2641
+type(
+  Val.t -> Itv.t
+)
+ident(
+  int_ref itv_of_val "domain/itvDom.ml" 53 1506 1510 "domain/itvDom.ml" 53 1506 1520
+)
+"domain/itvDom.ml" 79 2628 2642 "domain/itvDom.ml" 79 2628 2643
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 78 2566 2621 "domain/itvDom.ml" 78 2566 2622
+)
+"domain/itvDom.ml" 79 2628 2631 "domain/itvDom.ml" 79 2628 2643
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"domain/itvDom.ml" 79 2628 2645 "domain/itvDom.ml" 79 2628 2659
+type(
+  Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc_of_val "domain/itvDom.ml" 54 1548 1552 "domain/itvDom.ml" 54 1548 1566
+)
+"domain/itvDom.ml" 79 2628 2660 "domain/itvDom.ml" 79 2628 2661
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 78 2566 2621 "domain/itvDom.ml" 78 2566 2622
+)
+"domain/itvDom.ml" 79 2628 2645 "domain/itvDom.ml" 79 2628 2661
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"domain/itvDom.ml" 79 2628 2663 "domain/itvDom.ml" 79 2628 2675
+type(
+  Val.t -> ArrayBlk.t
+)
+ident(
+  int_ref array_of_val "domain/itvDom.ml" 55 1597 1601 "domain/itvDom.ml" 55 1597 1613
+)
+"domain/itvDom.ml" 79 2628 2676 "domain/itvDom.ml" 79 2628 2677
+type(
+  Val.t
+)
+ident(
+  int_ref x "domain/itvDom.ml" 78 2566 2621 "domain/itvDom.ml" 78 2566 2622
+)
+"domain/itvDom.ml" 79 2628 2663 "domain/itvDom.ml" 79 2628 2677
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"domain/itvDom.ml" 79 2628 2679 "domain/itvDom.ml" 79 2628 2680
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  int_ref p "domain/itvDom.ml" 78 2566 2623 "domain/itvDom.ml" 78 2566 2624
+)
+"domain/itvDom.ml" 79 2628 2630 "domain/itvDom.ml" 79 2628 2681
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 78 2566 2617 "domain/itvDom.ml" 79 2628 2681
+type(
+  Val.t -> AbsDom.PowProc.t -> Val.t
+)
+type(
+  Val.t -> AbsDom.PowProc.t -> Val.t
+)
+"domain/itvDom.ml" 82 2684 2688 "domain/itvDom.ml" 82 2684 2702
+type(
+  AbsDom.Allocsite.t -> Val.t
+)
+ident(
+  def external_value "domain/itvDom.ml" 88 2916 2916 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 82 2684 2732 "domain/itvDom.ml" 82 2684 2741
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  def allocsite "domain/itvDom.ml" 83 2745 2747 "domain/itvDom.ml" 86 2874 2914
+)
+"domain/itvDom.ml" 83 2745 2751 "domain/itvDom.ml" 83 2745 2754
+type(
+  AbsDom.Loc.t
+)
+ident(
+  def loc "domain/itvDom.ml" 84 2791 2793 "domain/itvDom.ml" 86 2874 2914
+)
+"domain/itvDom.ml" 83 2745 2757 "domain/itvDom.ml" 83 2745 2777
+type(
+  AbsDom.Allocsite.t -> AbsDom.Loc.t
+)
+ident(
+  ext_ref AbsDom.Loc.loc_of_allocsite
+)
+"domain/itvDom.ml" 83 2745 2778 "domain/itvDom.ml" 83 2745 2787
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "domain/itvDom.ml" 82 2684 2732 "domain/itvDom.ml" 82 2684 2741
+)
+"domain/itvDom.ml" 83 2745 2757 "domain/itvDom.ml" 83 2745 2787
+call(
+  stack
+)
+type(
+  AbsDom.Loc.t
+)
+"domain/itvDom.ml" 84 2791 2797 "domain/itvDom.ml" 84 2791 2804
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def pow_loc "domain/itvDom.ml" 85 2831 2833 "domain/itvDom.ml" 86 2874 2914
+)
+"domain/itvDom.ml" 84 2791 2807 "domain/itvDom.ml" 84 2791 2823
+type(
+  AbsDom.Loc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.singleton
+)
+"domain/itvDom.ml" 84 2791 2824 "domain/itvDom.ml" 84 2791 2827
+type(
+  AbsDom.Loc.t
+)
+ident(
+  int_ref loc "domain/itvDom.ml" 83 2745 2751 "domain/itvDom.ml" 83 2745 2754
+)
+"domain/itvDom.ml" 84 2791 2807 "domain/itvDom.ml" 84 2791 2827
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"domain/itvDom.ml" 85 2831 2837 "domain/itvDom.ml" 85 2831 2842
+type(
+  ArrayBlk.t
+)
+ident(
+  def array "domain/itvDom.ml" 86 2874 2876 "domain/itvDom.ml" 86 2874 2914
+)
+"domain/itvDom.ml" 85 2831 2845 "domain/itvDom.ml" 85 2831 2860
+type(
+  ArrayBlk.A.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.extern
+)
+"domain/itvDom.ml" 85 2831 2861 "domain/itvDom.ml" 85 2831 2870
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "domain/itvDom.ml" 82 2684 2732 "domain/itvDom.ml" 82 2684 2741
+)
+"domain/itvDom.ml" 85 2831 2845 "domain/itvDom.ml" 85 2831 2870
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"domain/itvDom.ml" 86 2874 2877 "domain/itvDom.ml" 86 2874 2884
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"domain/itvDom.ml" 86 2874 2886 "domain/itvDom.ml" 86 2874 2893
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc "domain/itvDom.ml" 84 2791 2797 "domain/itvDom.ml" 84 2791 2804
+)
+"domain/itvDom.ml" 86 2874 2895 "domain/itvDom.ml" 86 2874 2900
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref array "domain/itvDom.ml" 85 2831 2837 "domain/itvDom.ml" 85 2831 2842
+)
+"domain/itvDom.ml" 86 2874 2902 "domain/itvDom.ml" 86 2874 2913
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"domain/itvDom.ml" 86 2874 2876 "domain/itvDom.ml" 86 2874 2914
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 85 2831 2833 "domain/itvDom.ml" 86 2874 2914
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 84 2791 2793 "domain/itvDom.ml" 86 2874 2914
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 83 2745 2747 "domain/itvDom.ml" 86 2874 2914
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 82 2684 2728 "domain/itvDom.ml" 86 2874 2914
+type(
+  AbsDom.Allocsite.t -> Val.t
+)
+type(
+  AbsDom.Allocsite.t -> Val.t
+)
+"domain/itvDom.ml" 88 2916 2920 "domain/itvDom.ml" 88 2916 2937
+type(
+  Itv.t -> Val.t
+)
+ident(
+  def make_eraser_value "domain/itvDom.ml" 94 3156 3192 "domain/itvDom.ml" 1 0 -1
+)
+"domain/itvDom.ml" 89 2956 2961 "domain/itvDom.ml" 89 2956 2964
+type(
+  Itv.t
+)
+ident(
+  def itv "domain/itvDom.ml" 90 2969 2971 "domain/itvDom.ml" 94 3156 3192
+)
+"domain/itvDom.ml" 90 2969 2975 "domain/itvDom.ml" 90 2969 2984
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  def allocsite "domain/itvDom.ml" 91 3022 3024 "domain/itvDom.ml" 94 3156 3192
+)
+"domain/itvDom.ml" 90 2969 2987 "domain/itvDom.ml" 90 2969 3013
+type(
+  string option -> AbsDom.Allocsite.t
+)
+ident(
+  ext_ref AbsDom.Allocsite.allocsite_of_ext
+)
+"domain/itvDom.ml" 90 2969 3014 "domain/itvDom.ml" 90 2969 3018
+type(
+  string option
+)
+"domain/itvDom.ml" 90 2969 2987 "domain/itvDom.ml" 90 2969 3018
+call(
+  stack
+)
+type(
+  AbsDom.Allocsite.t
+)
+"domain/itvDom.ml" 91 3022 3028 "domain/itvDom.ml" 91 3022 3031
+type(
+  AbsDom.Loc.t
+)
+ident(
+  def loc "domain/itvDom.ml" 92 3068 3070 "domain/itvDom.ml" 94 3156 3192
+)
+"domain/itvDom.ml" 91 3022 3034 "domain/itvDom.ml" 91 3022 3054
+type(
+  AbsDom.Allocsite.t -> AbsDom.Loc.t
+)
+ident(
+  ext_ref AbsDom.Loc.loc_of_allocsite
+)
+"domain/itvDom.ml" 91 3022 3055 "domain/itvDom.ml" 91 3022 3064
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "domain/itvDom.ml" 90 2969 2975 "domain/itvDom.ml" 90 2969 2984
+)
+"domain/itvDom.ml" 91 3022 3034 "domain/itvDom.ml" 91 3022 3064
+call(
+  stack
+)
+type(
+  AbsDom.Loc.t
+)
+"domain/itvDom.ml" 92 3068 3074 "domain/itvDom.ml" 92 3068 3081
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def pow_loc "domain/itvDom.ml" 93 3109 3111 "domain/itvDom.ml" 94 3156 3192
+)
+"domain/itvDom.ml" 92 3068 3084 "domain/itvDom.ml" 92 3068 3100
+type(
+  AbsDom.Loc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.singleton
+)
+"domain/itvDom.ml" 92 3068 3101 "domain/itvDom.ml" 92 3068 3104
+type(
+  AbsDom.Loc.t
+)
+ident(
+  int_ref loc "domain/itvDom.ml" 91 3022 3028 "domain/itvDom.ml" 91 3022 3031
+)
+"domain/itvDom.ml" 92 3068 3084 "domain/itvDom.ml" 92 3068 3104
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"domain/itvDom.ml" 93 3109 3115 "domain/itvDom.ml" 93 3109 3120
+type(
+  ArrayBlk.t
+)
+ident(
+  def array "domain/itvDom.ml" 94 3156 3158 "domain/itvDom.ml" 94 3156 3192
+)
+"domain/itvDom.ml" 93 3109 3123 "domain/itvDom.ml" 93 3109 3138
+type(
+  Itv.t -> ArrayBlk.A.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.eraser
+)
+"domain/itvDom.ml" 93 3109 3139 "domain/itvDom.ml" 93 3109 3142
+type(
+  Itv.t
+)
+ident(
+  int_ref itv "domain/itvDom.ml" 89 2956 2961 "domain/itvDom.ml" 89 2956 2964
+)
+"domain/itvDom.ml" 93 3109 3143 "domain/itvDom.ml" 93 3109 3152
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "domain/itvDom.ml" 90 2969 2975 "domain/itvDom.ml" 90 2969 2984
+)
+"domain/itvDom.ml" 93 3109 3123 "domain/itvDom.ml" 93 3109 3152
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"domain/itvDom.ml" 94 3156 3159 "domain/itvDom.ml" 94 3156 3162
+type(
+  Itv.t
+)
+ident(
+  int_ref itv "domain/itvDom.ml" 89 2956 2961 "domain/itvDom.ml" 89 2956 2964
+)
+"domain/itvDom.ml" 94 3156 3164 "domain/itvDom.ml" 94 3156 3171
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc "domain/itvDom.ml" 92 3068 3074 "domain/itvDom.ml" 92 3068 3081
+)
+"domain/itvDom.ml" 94 3156 3173 "domain/itvDom.ml" 94 3156 3178
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref array "domain/itvDom.ml" 93 3109 3115 "domain/itvDom.ml" 93 3109 3120
+)
+"domain/itvDom.ml" 94 3156 3180 "domain/itvDom.ml" 94 3156 3191
+type(
+  AbsDom.PowProc.t
+)
+ident(
+  ext_ref AbsDom.PowProc.bot
+)
+"domain/itvDom.ml" 94 3156 3158 "domain/itvDom.ml" 94 3156 3192
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 93 3109 3111 "domain/itvDom.ml" 94 3156 3192
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 92 3068 3070 "domain/itvDom.ml" 94 3156 3192
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 91 3022 3024 "domain/itvDom.ml" 94 3156 3192
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 90 2969 2971 "domain/itvDom.ml" 94 3156 3192
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+"domain/itvDom.ml" 89 2956 2957 "domain/itvDom.ml" 94 3156 3192
+type(
+  Itv.t -> Val.t
+)
+type(
+  Itv.t -> Val.t
+)

@@ -12,6 +12,7 @@ open Report
 
 open Classify
 open Training
+open Feature
 
 let _ = Random.self_init ()
 

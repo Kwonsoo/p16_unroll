@@ -1,0 +1,649 @@
+"research/learning/flang.ml" 3 36 40 "research/learning/flang.ml" 3 36 50
+type(
+  Cil.stmt -> t
+)
+ident(
+  def trans_stmt "research/learning/flang.ml" 6 104 104 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 4 68 74 "research/learning/flang.ml" 4 68 79
+type(
+  Cil.stmt
+)
+ident(
+  def cstmt "research/learning/flang.ml" 4 68 83 "research/learning/flang.ml" 4 68 90
+)
+"research/learning/flang.ml" 4 68 84 "research/learning/flang.ml" 4 68 89
+type(
+  Cil.stmt
+)
+ident(
+  int_ref cstmt "research/learning/flang.ml" 4 68 74 "research/learning/flang.ml" 4 68 79
+)
+"research/learning/flang.ml" 4 68 83 "research/learning/flang.ml" 4 68 90
+type(
+  t
+)
+"research/learning/flang.ml" 4 68 70 "research/learning/flang.ml" 4 68 90
+type(
+  Cil.stmt -> t
+)
+type(
+  Cil.stmt -> t
+)
+"research/learning/flang.ml" 6 104 108 "research/learning/flang.ml" 6 104 127
+type(
+  t BatSet.t list -> t BatSet.t
+)
+ident(
+  def union_over_set_list "research/learning/flang.ml" 11 263 263 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 7 160 166 "research/learning/flang.ml" 7 160 174
+type(
+  t BatSet.t list
+)
+ident(
+  def set_list "research/learning/flang.ml" 8 179 180 "research/learning/flang.ml" 9 218 261
+)
+"research/learning/flang.ml" 8 179 184 "research/learning/flang.ml" 8 179 188
+type(
+  t BatSet.t BatSet.t
+)
+ident(
+  def sets "research/learning/flang.ml" 9 218 219 "research/learning/flang.ml" 9 218 261
+)
+"research/learning/flang.ml" 8 179 191 "research/learning/flang.ml" 8 179 205
+type(
+  t BatSet.t list -> t BatSet.t BatSet.t
+)
+ident(
+  ext_ref BatSet.of_list
+)
+"research/learning/flang.ml" 8 179 206 "research/learning/flang.ml" 8 179 214
+type(
+  t BatSet.t list
+)
+ident(
+  int_ref set_list "research/learning/flang.ml" 7 160 166 "research/learning/flang.ml" 7 160 174
+)
+"research/learning/flang.ml" 8 179 191 "research/learning/flang.ml" 8 179 214
+call(
+  stack
+)
+type(
+  t BatSet.t BatSet.t
+)
+"research/learning/flang.ml" 9 218 219 "research/learning/flang.ml" 9 218 230
+type(
+  (t BatSet.t -> t BatSet.t -> t BatSet.t) ->
+  t BatSet.t BatSet.t -> t BatSet.t -> t BatSet.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"research/learning/flang.ml" 9 218 231 "research/learning/flang.ml" 9 218 243
+type(
+  t BatSet.t -> t BatSet.t -> t BatSet.t
+)
+ident(
+  ext_ref BatSet.union
+)
+"research/learning/flang.ml" 9 218 244 "research/learning/flang.ml" 9 218 248
+type(
+  t BatSet.t BatSet.t
+)
+ident(
+  int_ref sets "research/learning/flang.ml" 8 179 184 "research/learning/flang.ml" 8 179 188
+)
+"research/learning/flang.ml" 9 218 249 "research/learning/flang.ml" 9 218 261
+type(
+  t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"research/learning/flang.ml" 9 218 219 "research/learning/flang.ml" 9 218 261
+call(
+  tail
+)
+type(
+  t BatSet.t
+)
+"research/learning/flang.ml" 8 179 180 "research/learning/flang.ml" 9 218 261
+type(
+  t BatSet.t
+)
+"research/learning/flang.ml" 7 160 162 "research/learning/flang.ml" 9 218 261
+type(
+  t BatSet.t list -> t BatSet.t
+)
+type(
+  t BatSet.t list -> t BatSet.t
+)
+"research/learning/flang.ml" 11 263 267 "research/learning/flang.ml" 11 263 276
+type(
+  t -> t -> t
+)
+ident(
+  def append_fl "research/learning/flang.ml" 14 315 315 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 12 291 297 "research/learning/flang.ml" 12 291 299
+type(
+  t
+)
+ident(
+  def f1 "research/learning/flang.ml" 12 291 300 "research/learning/flang.ml" 12 291 313
+)
+"research/learning/flang.ml" 12 291 300 "research/learning/flang.ml" 12 291 302
+type(
+  t
+)
+ident(
+  def f2 "research/learning/flang.ml" 12 291 306 "research/learning/flang.ml" 12 291 313
+)
+"research/learning/flang.ml" 12 291 306 "research/learning/flang.ml" 12 291 308
+type(
+  t
+)
+ident(
+  int_ref f1 "research/learning/flang.ml" 12 291 297 "research/learning/flang.ml" 12 291 299
+)
+"research/learning/flang.ml" 12 291 309 "research/learning/flang.ml" 12 291 310
+type(
+  t -> t -> t
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"research/learning/flang.ml" 12 291 311 "research/learning/flang.ml" 12 291 313
+type(
+  t
+)
+ident(
+  int_ref f2 "research/learning/flang.ml" 12 291 300 "research/learning/flang.ml" 12 291 302
+)
+"research/learning/flang.ml" 12 291 306 "research/learning/flang.ml" 12 291 313
+call(
+  tail
+)
+type(
+  t
+)
+"research/learning/flang.ml" 12 291 293 "research/learning/flang.ml" 12 291 313
+type(
+  t -> t -> t
+)
+type(
+  t -> t -> t
+)
+"research/learning/flang.ml" 14 315 319 "research/learning/flang.ml" 14 315 333
+type(
+  Cil.instr -> string
+)
+ident(
+  def get_instr_name "research/learning/flang.ml" 21 461 461 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 15 356 362 "research/learning/flang.ml" 15 356 363
+type(
+  Cil.instr
+)
+ident(
+  def i "research/learning/flang.ml" 16 367 368 "research/learning/flang.ml" 19 419 459
+)
+"research/learning/flang.ml" 16 367 374 "research/learning/flang.ml" 16 367 375
+type(
+  Cil.instr
+)
+ident(
+  int_ref i "research/learning/flang.ml" 15 356 362 "research/learning/flang.ml" 15 356 363
+)
+"research/learning/flang.ml" 17 381 388 "research/learning/flang.ml" 17 381 389
+type(
+  Cil.location
+)
+type(
+  Cil.exp
+)
+type(
+  Cil.lval
+)
+"research/learning/flang.ml" 17 381 384 "research/learning/flang.ml" 17 381 389
+type(
+  Cil.instr
+)
+"research/learning/flang.ml" 17 381 393 "research/learning/flang.ml" 17 381 398
+type(
+  string
+)
+"research/learning/flang.ml" 18 399 407 "research/learning/flang.ml" 18 399 408
+type(
+  Cil.location
+)
+type(
+  Cil.exp list
+)
+type(
+  Cil.exp
+)
+type(
+  Cil.lval option
+)
+"research/learning/flang.ml" 18 399 402 "research/learning/flang.ml" 18 399 408
+type(
+  Cil.instr
+)
+"research/learning/flang.ml" 18 399 412 "research/learning/flang.ml" 18 399 418
+type(
+  string
+)
+"research/learning/flang.ml" 19 419 422 "research/learning/flang.ml" 19 419 423
+type(
+  Cil.instr
+)
+"research/learning/flang.ml" 19 419 427 "research/learning/flang.ml" 19 419 432
+type(
+  exn -> string
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"research/learning/flang.ml" 19 419 442 "research/learning/flang.ml" 19 419 458
+type(
+  string
+)
+"research/learning/flang.ml" 19 419 433 "research/learning/flang.ml" 19 419 459
+type(
+  exn
+)
+"research/learning/flang.ml" 19 419 427 "research/learning/flang.ml" 19 419 459
+type(
+  string
+)
+"research/learning/flang.ml" 16 367 368 "research/learning/flang.ml" 19 419 459
+type(
+  string
+)
+"research/learning/flang.ml" 15 356 358 "research/learning/flang.ml" 19 419 459
+type(
+  Cil.instr -> string
+)
+type(
+  Cil.instr -> string
+)
+"research/learning/flang.ml" 21 461 465 "research/learning/flang.ml" 21 461 478
+type(
+  Cil.stmt -> string
+)
+ident(
+  def get_stmt_name "research/learning/flang.ml" 34 790 790 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 22 500 506 "research/learning/flang.ml" 22 500 507
+type(
+  Cil.stmt
+)
+ident(
+  def s "research/learning/flang.ml" 23 511 512 "research/learning/flang.ml" 32 742 788
+)
+"research/learning/flang.ml" 23 511 518 "research/learning/flang.ml" 23 511 519
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "research/learning/flang.ml" 22 500 506 "research/learning/flang.ml" 22 500 507
+)
+"research/learning/flang.ml" 23 511 518 "research/learning/flang.ml" 23 511 525
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 24 531 540 "research/learning/flang.ml" 24 531 542
+type(
+  Cil.instr list
+)
+ident(
+  def il "research/learning/flang.ml" 24 531 546 "research/learning/flang.ml" 24 531 593
+)
+"research/learning/flang.ml" 24 531 534 "research/learning/flang.ml" 24 531 542
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 24 531 546 "research/learning/flang.ml" 24 531 559
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"research/learning/flang.ml" 24 531 560 "research/learning/flang.ml" 24 531 564
+type(
+  string
+)
+"research/learning/flang.ml" 24 531 566 "research/learning/flang.ml" 24 531 574
+type(
+  (Cil.instr -> string) -> Cil.instr list -> string list
+)
+ident(
+  ext_ref List.map
+)
+"research/learning/flang.ml" 24 531 575 "research/learning/flang.ml" 24 531 589
+type(
+  Cil.instr -> string
+)
+ident(
+  int_ref get_instr_name "research/learning/flang.ml" 14 315 319 "research/learning/flang.ml" 14 315 333
+)
+"research/learning/flang.ml" 24 531 590 "research/learning/flang.ml" 24 531 592
+type(
+  Cil.instr list
+)
+ident(
+  int_ref il "research/learning/flang.ml" 24 531 540 "research/learning/flang.ml" 24 531 542
+)
+"research/learning/flang.ml" 24 531 565 "research/learning/flang.ml" 24 531 593
+call(
+  stack
+)
+type(
+  string list
+)
+"research/learning/flang.ml" 24 531 546 "research/learning/flang.ml" 24 531 593
+call(
+  tail
+)
+type(
+  string
+)
+"research/learning/flang.ml" 25 594 604 "research/learning/flang.ml" 25 594 605
+type(
+  Cil.location
+)
+type(
+  Cil.exp option
+)
+"research/learning/flang.ml" 25 594 597 "research/learning/flang.ml" 25 594 605
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 25 594 609 "research/learning/flang.ml" 25 594 617
+type(
+  string
+)
+"research/learning/flang.ml" 26 618 626 "research/learning/flang.ml" 26 618 627
+type(
+  Cil.location
+)
+type(
+  Cil.stmt ref
+)
+"research/learning/flang.ml" 26 618 621 "research/learning/flang.ml" 26 618 627
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 26 618 631 "research/learning/flang.ml" 26 618 637
+type(
+  string
+)
+"research/learning/flang.ml" 27 638 647 "research/learning/flang.ml" 27 638 648
+type(
+  Cil.location
+)
+"research/learning/flang.ml" 27 638 641 "research/learning/flang.ml" 27 638 648
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 27 638 652 "research/learning/flang.ml" 27 638 659
+type(
+  string
+)
+"research/learning/flang.ml" 28 660 666 "research/learning/flang.ml" 28 660 667
+type(
+  Cil.location
+)
+type(
+  Cil.block
+)
+type(
+  Cil.block
+)
+type(
+  Cil.exp
+)
+"research/learning/flang.ml" 28 660 663 "research/learning/flang.ml" 28 660 667
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 28 660 671 "research/learning/flang.ml" 28 660 675
+type(
+  string
+)
+"research/learning/flang.ml" 29 676 686 "research/learning/flang.ml" 29 676 687
+type(
+  Cil.location
+)
+type(
+  Cil.stmt list
+)
+type(
+  Cil.block
+)
+type(
+  Cil.exp
+)
+"research/learning/flang.ml" 29 676 679 "research/learning/flang.ml" 29 676 687
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 29 676 691 "research/learning/flang.ml" 29 676 699
+type(
+  string
+)
+"research/learning/flang.ml" 30 700 708 "research/learning/flang.ml" 30 700 709
+type(
+  Cil.stmt option
+)
+type(
+  Cil.stmt option
+)
+type(
+  Cil.location
+)
+type(
+  Cil.block
+)
+"research/learning/flang.ml" 30 700 703 "research/learning/flang.ml" 30 700 709
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 30 700 713 "research/learning/flang.ml" 30 700 719
+type(
+  string
+)
+"research/learning/flang.ml" 31 720 729 "research/learning/flang.ml" 31 720 730
+type(
+  Cil.block
+)
+"research/learning/flang.ml" 31 720 723 "research/learning/flang.ml" 31 720 730
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 31 720 734 "research/learning/flang.ml" 31 720 741
+type(
+  string
+)
+"research/learning/flang.ml" 32 742 745 "research/learning/flang.ml" 32 742 746
+type(
+  Cil.stmtkind
+)
+"research/learning/flang.ml" 32 742 750 "research/learning/flang.ml" 32 742 755
+type(
+  exn -> string
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"research/learning/flang.ml" 32 742 765 "research/learning/flang.ml" 32 742 787
+type(
+  string
+)
+"research/learning/flang.ml" 32 742 756 "research/learning/flang.ml" 32 742 788
+type(
+  exn
+)
+"research/learning/flang.ml" 32 742 750 "research/learning/flang.ml" 32 742 788
+type(
+  string
+)
+"research/learning/flang.ml" 23 511 512 "research/learning/flang.ml" 32 742 788
+type(
+  string
+)
+"research/learning/flang.ml" 22 500 502 "research/learning/flang.ml" 32 742 788
+type(
+  Cil.stmt -> string
+)
+type(
+  Cil.stmt -> string
+)
+"research/learning/flang.ml" 34 790 794 "research/learning/flang.ml" 34 790 807
+type(
+  t -> string
+)
+ident(
+  def flang_to_strs "research/learning/flang.ml" 37 882 882 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 35 822 828 "research/learning/flang.ml" 35 822 830
+type(
+  t
+)
+ident(
+  def fl "research/learning/flang.ml" 35 822 834 "research/learning/flang.ml" 35 822 880
+)
+"research/learning/flang.ml" 35 822 834 "research/learning/flang.ml" 35 822 847
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"research/learning/flang.ml" 35 822 848 "research/learning/flang.ml" 35 822 852
+type(
+  string
+)
+"research/learning/flang.ml" 35 822 854 "research/learning/flang.ml" 35 822 862
+type(
+  (Cil.stmt -> string) -> t -> string list
+)
+ident(
+  ext_ref List.map
+)
+"research/learning/flang.ml" 35 822 863 "research/learning/flang.ml" 35 822 876
+type(
+  Cil.stmt -> string
+)
+ident(
+  int_ref get_stmt_name "research/learning/flang.ml" 21 461 465 "research/learning/flang.ml" 21 461 478
+)
+"research/learning/flang.ml" 35 822 877 "research/learning/flang.ml" 35 822 879
+type(
+  t
+)
+ident(
+  int_ref fl "research/learning/flang.ml" 35 822 828 "research/learning/flang.ml" 35 822 830
+)
+"research/learning/flang.ml" 35 822 853 "research/learning/flang.ml" 35 822 880
+call(
+  stack
+)
+type(
+  string list
+)
+"research/learning/flang.ml" 35 822 834 "research/learning/flang.ml" 35 822 880
+call(
+  tail
+)
+type(
+  string
+)
+"research/learning/flang.ml" 35 822 824 "research/learning/flang.ml" 35 822 880
+type(
+  t -> string
+)
+type(
+  t -> string
+)
+"research/learning/flang.ml" 37 882 886 "research/learning/flang.ml" 37 882 897
+type(
+  t -> unit
+)
+ident(
+  def print_flang "research/learning/flang.ml" 40 949 982 "research/learning/flang.ml" 1 0 -1
+)
+"research/learning/flang.ml" 38 910 916 "research/learning/flang.ml" 38 910 918
+type(
+  t
+)
+ident(
+  def fl "research/learning/flang.ml" 39 923 924 "research/learning/flang.ml" 40 949 982
+)
+"research/learning/flang.ml" 39 923 924 "research/learning/flang.ml" 39 923 937
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"research/learning/flang.ml" 39 923 938 "research/learning/flang.ml" 39 923 947
+type(
+  string
+)
+"research/learning/flang.ml" 39 923 924 "research/learning/flang.ml" 39 923 947
+call(
+  stack
+)
+type(
+  unit
+)
+"research/learning/flang.ml" 40 949 950 "research/learning/flang.ml" 40 949 963
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"research/learning/flang.ml" 40 949 965 "research/learning/flang.ml" 40 949 978
+type(
+  t -> string
+)
+ident(
+  int_ref flang_to_strs "research/learning/flang.ml" 34 790 794 "research/learning/flang.ml" 34 790 807
+)
+"research/learning/flang.ml" 40 949 979 "research/learning/flang.ml" 40 949 981
+type(
+  t
+)
+ident(
+  int_ref fl "research/learning/flang.ml" 38 910 916 "research/learning/flang.ml" 38 910 918
+)
+"research/learning/flang.ml" 40 949 964 "research/learning/flang.ml" 40 949 982
+call(
+  stack
+)
+type(
+  string
+)
+"research/learning/flang.ml" 40 949 950 "research/learning/flang.ml" 40 949 982
+call(
+  tail
+)
+type(
+  unit
+)
+"research/learning/flang.ml" 39 923 924 "research/learning/flang.ml" 40 949 982
+type(
+  unit
+)
+"research/learning/flang.ml" 38 910 912 "research/learning/flang.ml" 40 949 982
+type(
+  t -> unit
+)
+type(
+  t -> unit
+)

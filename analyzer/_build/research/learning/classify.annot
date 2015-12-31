@@ -1,0 +1,44 @@
+"research/learning/classify.ml" 11 245 250 "research/learning/classify.ml" 11 245 255
+type(
+  'a -> unit
+)
+ident(
+  def learn "research/learning/classify.ml" 13 292 293 "research/learning/classify.ml" 15 340 343
+)
+"research/learning/classify.ml" 11 245 262 "research/learning/classify.ml" 11 245 271
+type(
+  'a
+)
+ident(
+  def tdata_set "research/learning/classify.ml" 11 245 275 "research/learning/classify.ml" 11 245 277
+)
+"research/learning/classify.ml" 11 245 275 "research/learning/classify.ml" 11 245 277
+type(
+  unit
+)
+"research/learning/classify.ml" 11 245 258 "research/learning/classify.ml" 11 245 277
+type(
+  'a -> unit
+)
+"research/learning/classify.ml" 13 292 297 "research/learning/classify.ml" 13 292 305
+type(
+  'b -> bool
+)
+ident(
+  def classify "research/learning/classify.ml" 13 292 327 "research/learning/classify.ml" 15 340 343
+)
+"research/learning/classify.ml" 13 292 312 "research/learning/classify.ml" 13 292 319
+type(
+  'b
+)
+ident(
+  def newprog "research/learning/classify.ml" 13 292 323 "research/learning/classify.ml" 13 292 327
+)
+"research/learning/classify.ml" 13 292 323 "research/learning/classify.ml" 13 292 327
+type(
+  bool
+)
+"research/learning/classify.ml" 13 292 308 "research/learning/classify.ml" 13 292 327
+type(
+  'b -> bool
+)

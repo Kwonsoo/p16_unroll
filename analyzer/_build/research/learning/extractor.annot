@@ -1,0 +1,1260 @@
+"research/learning/extractor.ml" 1 0 4 "research/learning/extractor.ml" 1 0 14
+type(
+  Cil.stmt -> int
+)
+ident(
+  def card_succs "research/learning/extractor.ml" 4 65 65 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 2 33 39 "research/learning/extractor.ml" 2 33 40
+type(
+  Cil.stmt
+)
+ident(
+  def s "research/learning/extractor.ml" 2 33 44 "research/learning/extractor.ml" 2 33 63
+)
+"research/learning/extractor.ml" 2 33 44 "research/learning/extractor.ml" 2 33 55
+type(
+  Cil.stmt list -> int
+)
+ident(
+  ext_ref List.length
+)
+"research/learning/extractor.ml" 2 33 56 "research/learning/extractor.ml" 2 33 57
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "research/learning/extractor.ml" 2 33 39 "research/learning/extractor.ml" 2 33 40
+)
+"research/learning/extractor.ml" 2 33 56 "research/learning/extractor.ml" 2 33 63
+type(
+  Cil.stmt list
+)
+"research/learning/extractor.ml" 2 33 44 "research/learning/extractor.ml" 2 33 63
+call(
+  tail
+)
+type(
+  int
+)
+"research/learning/extractor.ml" 2 33 35 "research/learning/extractor.ml" 2 33 63
+type(
+  Cil.stmt -> int
+)
+type(
+  Cil.stmt -> int
+)
+"research/learning/extractor.ml" 4 65 69 "research/learning/extractor.ml" 4 65 79
+type(
+  Cil.stmt -> int
+)
+ident(
+  def card_preds "research/learning/extractor.ml" 7 131 131 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 5 99 105 "research/learning/extractor.ml" 5 99 106
+type(
+  Cil.stmt
+)
+ident(
+  def s "research/learning/extractor.ml" 5 99 110 "research/learning/extractor.ml" 5 99 129
+)
+"research/learning/extractor.ml" 5 99 110 "research/learning/extractor.ml" 5 99 121
+type(
+  Cil.stmt list -> int
+)
+ident(
+  ext_ref List.length
+)
+"research/learning/extractor.ml" 5 99 122 "research/learning/extractor.ml" 5 99 123
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "research/learning/extractor.ml" 5 99 105 "research/learning/extractor.ml" 5 99 106
+)
+"research/learning/extractor.ml" 5 99 122 "research/learning/extractor.ml" 5 99 129
+type(
+  Cil.stmt list
+)
+"research/learning/extractor.ml" 5 99 110 "research/learning/extractor.ml" 5 99 129
+call(
+  tail
+)
+type(
+  int
+)
+"research/learning/extractor.ml" 5 99 101 "research/learning/extractor.ml" 5 99 129
+type(
+  Cil.stmt -> int
+)
+type(
+  Cil.stmt -> int
+)
+"research/learning/extractor.ml" 7 131 135 "research/learning/extractor.ml" 7 131 144
+type(
+  Cil.stmt -> bool
+)
+ident(
+  def is_branch "research/learning/extractor.ml" 10 219 219 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 8 164 170 "research/learning/extractor.ml" 8 164 171
+type(
+  Cil.stmt
+)
+ident(
+  def s "research/learning/extractor.ml" 8 164 175 "research/learning/extractor.ml" 8 164 217
+)
+"research/learning/extractor.ml" 8 164 179 "research/learning/extractor.ml" 8 164 189
+type(
+  Cil.stmt -> int
+)
+ident(
+  int_ref card_succs "research/learning/extractor.ml" 1 0 4 "research/learning/extractor.ml" 1 0 14
+)
+"research/learning/extractor.ml" 8 164 190 "research/learning/extractor.ml" 8 164 191
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "research/learning/extractor.ml" 8 164 170 "research/learning/extractor.ml" 8 164 171
+)
+"research/learning/extractor.ml" 8 164 178 "research/learning/extractor.ml" 8 164 192
+call(
+  stack
+)
+type(
+  int
+)
+"research/learning/extractor.ml" 8 164 193 "research/learning/extractor.ml" 8 164 194
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"research/learning/extractor.ml" 8 164 195 "research/learning/extractor.ml" 8 164 196
+type(
+  int
+)
+"research/learning/extractor.ml" 8 164 178 "research/learning/extractor.ml" 8 164 196
+type(
+  bool
+)
+"research/learning/extractor.ml" 8 164 202 "research/learning/extractor.ml" 8 164 206
+type(
+  bool
+)
+"research/learning/extractor.ml" 8 164 212 "research/learning/extractor.ml" 8 164 217
+type(
+  bool
+)
+"research/learning/extractor.ml" 8 164 175 "research/learning/extractor.ml" 8 164 217
+type(
+  bool
+)
+"research/learning/extractor.ml" 8 164 166 "research/learning/extractor.ml" 8 164 217
+type(
+  Cil.stmt -> bool
+)
+type(
+  Cil.stmt -> bool
+)
+"research/learning/extractor.ml" 10 219 223 "research/learning/extractor.ml" 10 219 235
+type(
+  Cil.stmt -> Cil.stmt
+)
+ident(
+  def get_the_succ "research/learning/extractor.ml" 13 287 287 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 11 259 265 "research/learning/extractor.ml" 11 259 266
+type(
+  Cil.stmt
+)
+ident(
+  def s "research/learning/extractor.ml" 11 259 270 "research/learning/extractor.ml" 11 259 285
+)
+"research/learning/extractor.ml" 11 259 270 "research/learning/extractor.ml" 11 259 277
+type(
+  Cil.stmt list -> Cil.stmt
+)
+ident(
+  ext_ref List.hd
+)
+"research/learning/extractor.ml" 11 259 278 "research/learning/extractor.ml" 11 259 279
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "research/learning/extractor.ml" 11 259 265 "research/learning/extractor.ml" 11 259 266
+)
+"research/learning/extractor.ml" 11 259 278 "research/learning/extractor.ml" 11 259 285
+type(
+  Cil.stmt list
+)
+"research/learning/extractor.ml" 11 259 270 "research/learning/extractor.ml" 11 259 285
+call(
+  tail
+)
+type(
+  Cil.stmt
+)
+"research/learning/extractor.ml" 11 259 261 "research/learning/extractor.ml" 11 259 285
+type(
+  Cil.stmt -> Cil.stmt
+)
+type(
+  Cil.stmt -> Cil.stmt
+)
+"research/learning/extractor.ml" 13 287 291 "research/learning/extractor.ml" 13 287 300
+type(
+  Cil.stmt -> Cil.stmt list
+)
+ident(
+  def get_succs "research/learning/extractor.ml" 16 349 349 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 14 329 335 "research/learning/extractor.ml" 14 329 336
+type(
+  Cil.stmt
+)
+ident(
+  def s "research/learning/extractor.ml" 14 329 340 "research/learning/extractor.ml" 14 329 347
+)
+"research/learning/extractor.ml" 14 329 340 "research/learning/extractor.ml" 14 329 341
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "research/learning/extractor.ml" 14 329 335 "research/learning/extractor.ml" 14 329 336
+)
+"research/learning/extractor.ml" 14 329 340 "research/learning/extractor.ml" 14 329 347
+type(
+  Cil.stmt list
+)
+"research/learning/extractor.ml" 14 329 331 "research/learning/extractor.ml" 14 329 347
+type(
+  Cil.stmt -> Cil.stmt list
+)
+type(
+  Cil.stmt -> Cil.stmt list
+)
+"research/learning/extractor.ml" 16 349 353 "research/learning/extractor.ml" 16 349 364
+type(
+  Cil.stmt * Cil.stmt -> bool
+)
+ident(
+  def is_backward "research/learning/extractor.ml" 19 438 438 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 17 395 402 "research/learning/extractor.ml" 17 395 406
+type(
+  Cil.stmt
+)
+ident(
+  def this "research/learning/extractor.ml" 17 395 417 "research/learning/extractor.ml" 17 395 436
+)
+"research/learning/extractor.ml" 17 395 408 "research/learning/extractor.ml" 17 395 412
+type(
+  Cil.stmt
+)
+ident(
+  def succ "research/learning/extractor.ml" 17 395 417 "research/learning/extractor.ml" 17 395 436
+)
+"research/learning/extractor.ml" 17 395 401 "research/learning/extractor.ml" 17 395 413
+type(
+  Cil.stmt * Cil.stmt
+)
+"research/learning/extractor.ml" 17 395 417 "research/learning/extractor.ml" 17 395 421
+type(
+  Cil.stmt
+)
+ident(
+  int_ref this "research/learning/extractor.ml" 17 395 402 "research/learning/extractor.ml" 17 395 406
+)
+"research/learning/extractor.ml" 17 395 417 "research/learning/extractor.ml" 17 395 425
+type(
+  int
+)
+"research/learning/extractor.ml" 17 395 426 "research/learning/extractor.ml" 17 395 427
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"research/learning/extractor.ml" 17 395 428 "research/learning/extractor.ml" 17 395 432
+type(
+  Cil.stmt
+)
+ident(
+  int_ref succ "research/learning/extractor.ml" 17 395 408 "research/learning/extractor.ml" 17 395 412
+)
+"research/learning/extractor.ml" 17 395 428 "research/learning/extractor.ml" 17 395 436
+type(
+  int
+)
+"research/learning/extractor.ml" 17 395 417 "research/learning/extractor.ml" 17 395 436
+type(
+  bool
+)
+"research/learning/extractor.ml" 17 395 397 "research/learning/extractor.ml" 17 395 436
+type(
+  Cil.stmt * Cil.stmt -> bool
+)
+type(
+  Cil.stmt * Cil.stmt -> bool
+)
+"research/learning/extractor.ml" 19 438 442 "research/learning/extractor.ml" 19 438 456
+type(
+  Cil.fundec -> Cil.stmt
+)
+ident(
+  def get_begin_stmt "research/learning/extractor.ml" 24 545 545 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 20 482 488 "research/learning/extractor.ml" 20 482 490
+type(
+  Cil.fundec
+)
+ident(
+  def fd "research/learning/extractor.ml" 21 494 495 "research/learning/extractor.ml" 22 526 543
+)
+"research/learning/extractor.ml" 21 494 499 "research/learning/extractor.ml" 21 494 507
+type(
+  Cil.stmt list
+)
+ident(
+  def allStmts "research/learning/extractor.ml" 22 526 527 "research/learning/extractor.ml" 22 526 543
+)
+"research/learning/extractor.ml" 21 494 510 "research/learning/extractor.ml" 21 494 512
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "research/learning/extractor.ml" 20 482 488 "research/learning/extractor.ml" 20 482 490
+)
+"research/learning/extractor.ml" 21 494 510 "research/learning/extractor.ml" 21 494 522
+type(
+  Cil.stmt list
+)
+"research/learning/extractor.ml" 22 526 527 "research/learning/extractor.ml" 22 526 534
+type(
+  Cil.stmt list -> Cil.stmt
+)
+ident(
+  ext_ref List.hd
+)
+"research/learning/extractor.ml" 22 526 535 "research/learning/extractor.ml" 22 526 543
+type(
+  Cil.stmt list
+)
+ident(
+  int_ref allStmts "research/learning/extractor.ml" 21 494 499 "research/learning/extractor.ml" 21 494 507
+)
+"research/learning/extractor.ml" 22 526 527 "research/learning/extractor.ml" 22 526 543
+call(
+  tail
+)
+type(
+  Cil.stmt
+)
+"research/learning/extractor.ml" 21 494 495 "research/learning/extractor.ml" 22 526 543
+type(
+  Cil.stmt
+)
+"research/learning/extractor.ml" 20 482 484 "research/learning/extractor.ml" 22 526 543
+type(
+  Cil.fundec -> Cil.stmt
+)
+type(
+  Cil.fundec -> Cil.stmt
+)
+"research/learning/extractor.ml" 24 545 549 "research/learning/extractor.ml" 24 545 565
+type(
+  Cil.stmt -> Flang.t -> Flang.t
+)
+ident(
+  def process_one_stmt "research/learning/extractor.ml" 29 687 687 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 25 599 605 "research/learning/extractor.ml" 25 599 609
+type(
+  Cil.stmt
+)
+ident(
+  def stmt "research/learning/extractor.ml" 25 599 610 "research/learning/extractor.ml" 27 657 685
+)
+"research/learning/extractor.ml" 25 599 610 "research/learning/extractor.ml" 25 599 615
+type(
+  Flang.t
+)
+ident(
+  def accum "research/learning/extractor.ml" 26 619 620 "research/learning/extractor.ml" 27 657 685
+)
+"research/learning/extractor.ml" 26 619 624 "research/learning/extractor.ml" 26 619 629
+type(
+  Flang.t
+)
+ident(
+  def trans "research/learning/extractor.ml" 27 657 658 "research/learning/extractor.ml" 27 657 685
+)
+"research/learning/extractor.ml" 26 619 632 "research/learning/extractor.ml" 26 619 648
+type(
+  Cil.stmt -> Flang.t
+)
+ident(
+  ext_ref Flang.trans_stmt
+)
+"research/learning/extractor.ml" 26 619 649 "research/learning/extractor.ml" 26 619 653
+type(
+  Cil.stmt
+)
+ident(
+  int_ref stmt "research/learning/extractor.ml" 25 599 605 "research/learning/extractor.ml" 25 599 609
+)
+"research/learning/extractor.ml" 26 619 632 "research/learning/extractor.ml" 26 619 653
+call(
+  stack
+)
+type(
+  Flang.t
+)
+"research/learning/extractor.ml" 27 657 658 "research/learning/extractor.ml" 27 657 673
+type(
+  Flang.t -> Flang.t -> Flang.t
+)
+ident(
+  ext_ref Flang.append_fl
+)
+"research/learning/extractor.ml" 27 657 674 "research/learning/extractor.ml" 27 657 679
+type(
+  Flang.t
+)
+ident(
+  int_ref accum "research/learning/extractor.ml" 25 599 610 "research/learning/extractor.ml" 25 599 615
+)
+"research/learning/extractor.ml" 27 657 680 "research/learning/extractor.ml" 27 657 685
+type(
+  Flang.t
+)
+ident(
+  int_ref trans "research/learning/extractor.ml" 26 619 624 "research/learning/extractor.ml" 26 619 629
+)
+"research/learning/extractor.ml" 27 657 658 "research/learning/extractor.ml" 27 657 685
+call(
+  tail
+)
+type(
+  Flang.t
+)
+"research/learning/extractor.ml" 26 619 620 "research/learning/extractor.ml" 27 657 685
+type(
+  Flang.t
+)
+"research/learning/extractor.ml" 25 599 601 "research/learning/extractor.ml" 27 657 685
+type(
+  Cil.stmt -> Flang.t -> Flang.t
+)
+type(
+  Cil.stmt -> Flang.t -> Flang.t
+)
+"research/learning/extractor.ml" 29 687 691 "research/learning/extractor.ml" 29 687 704
+type(
+  Cil.fundec -> (int, Flang.t) Hashtbl.t
+)
+ident(
+  def build_featTbl "research/learning/extractor.ml" 51 1326 1326 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 30 746 752 "research/learning/extractor.ml" 30 746 754
+type(
+  Cil.fundec
+)
+ident(
+  def fd "research/learning/extractor.ml" 31 758 759 "research/learning/extractor.ml" 49 1286 1324
+)
+"research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+type(
+  int ref
+)
+ident(
+  def idx "research/learning/extractor.ml" 32 778 779 "research/learning/extractor.ml" 49 1286 1324
+)
+"research/learning/extractor.ml" 31 758 769 "research/learning/extractor.ml" 31 758 772
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"research/learning/extractor.ml" 31 758 773 "research/learning/extractor.ml" 31 758 774
+type(
+  int
+)
+"research/learning/extractor.ml" 31 758 769 "research/learning/extractor.ml" 31 758 774
+type(
+  int ref
+)
+"research/learning/extractor.ml" 32 778 783 "research/learning/extractor.ml" 32 778 790
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  def featTbl "research/learning/extractor.ml" 33 815 816 "research/learning/extractor.ml" 49 1286 1324
+)
+"research/learning/extractor.ml" 32 778 793 "research/learning/extractor.ml" 32 778 807
+type(
+  ?random:bool -> int -> (int, Flang.t) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"research/learning/extractor.ml" 32 778 808 "research/learning/extractor.ml" 32 778 811
+type(
+  int
+)
+"research/learning/extractor.ml" 32 778 793 "research/learning/extractor.ml" 32 778 811
+call(
+  stack
+)
+type(
+  (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 33 815 820 "research/learning/extractor.ml" 33 815 830
+type(
+  Cil.stmt
+)
+ident(
+  def begin_stmt "research/learning/extractor.ml" 35 855 856 "research/learning/extractor.ml" 49 1286 1324
+)
+"research/learning/extractor.ml" 33 815 833 "research/learning/extractor.ml" 33 815 847
+type(
+  Cil.fundec -> Cil.stmt
+)
+ident(
+  int_ref get_begin_stmt "research/learning/extractor.ml" 19 438 442 "research/learning/extractor.ml" 19 438 456
+)
+"research/learning/extractor.ml" 33 815 848 "research/learning/extractor.ml" 33 815 850
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "research/learning/extractor.ml" 30 746 752 "research/learning/extractor.ml" 30 746 754
+)
+"research/learning/extractor.ml" 33 815 833 "research/learning/extractor.ml" 33 815 850
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"research/learning/extractor.ml" 35 855 865 "research/learning/extractor.ml" 35 855 874
+type(
+  Cil.stmt -> Flang.t -> unit
+)
+ident(
+  def add_paths "research/learning/extractor.ml" 35 855 856 "research/learning/extractor.ml" 49 1286 1315
+)
+"research/learning/extractor.ml" 36 905 912 "research/learning/extractor.ml" 36 905 916
+type(
+  Cil.stmt
+)
+ident(
+  def stmt "research/learning/extractor.ml" 36 905 917 "research/learning/extractor.ml" 48 1275 1285
+)
+"research/learning/extractor.ml" 36 905 917 "research/learning/extractor.ml" 36 905 922
+type(
+  Flang.t
+)
+ident(
+  def accum "research/learning/extractor.ml" 37 926 928 "research/learning/extractor.ml" 48 1275 1285
+)
+"research/learning/extractor.ml" 37 926 932 "research/learning/extractor.ml" 37 926 940
+type(
+  Flang.t
+)
+ident(
+  def appended "research/learning/extractor.ml" 38 974 976 "research/learning/extractor.ml" 48 1275 1285
+)
+"research/learning/extractor.ml" 37 926 943 "research/learning/extractor.ml" 37 926 959
+type(
+  Cil.stmt -> Flang.t -> Flang.t
+)
+ident(
+  int_ref process_one_stmt "research/learning/extractor.ml" 24 545 549 "research/learning/extractor.ml" 24 545 565
+)
+"research/learning/extractor.ml" 37 926 960 "research/learning/extractor.ml" 37 926 964
+type(
+  Cil.stmt
+)
+ident(
+  int_ref stmt "research/learning/extractor.ml" 36 905 912 "research/learning/extractor.ml" 36 905 916
+)
+"research/learning/extractor.ml" 37 926 965 "research/learning/extractor.ml" 37 926 970
+type(
+  Flang.t
+)
+ident(
+  int_ref accum "research/learning/extractor.ml" 36 905 917 "research/learning/extractor.ml" 36 905 922
+)
+"research/learning/extractor.ml" 37 926 943 "research/learning/extractor.ml" 37 926 970
+call(
+  stack
+)
+type(
+  Flang.t
+)
+"research/learning/extractor.ml" 38 974 983 "research/learning/extractor.ml" 38 974 993
+type(
+  Cil.stmt -> int
+)
+ident(
+  int_ref card_succs "research/learning/extractor.ml" 1 0 4 "research/learning/extractor.ml" 1 0 14
+)
+"research/learning/extractor.ml" 38 974 994 "research/learning/extractor.ml" 38 974 998
+type(
+  Cil.stmt
+)
+ident(
+  int_ref stmt "research/learning/extractor.ml" 36 905 912 "research/learning/extractor.ml" 36 905 916
+)
+"research/learning/extractor.ml" 38 974 982 "research/learning/extractor.ml" 38 974 999
+call(
+  stack
+)
+type(
+  int
+)
+"research/learning/extractor.ml" 39 1005 1009 "research/learning/extractor.ml" 39 1005 1010
+type(
+  int
+)
+"research/learning/extractor.ml" 39 1005 1015 "research/learning/extractor.ml" 39 1005 1026
+type(
+  (int, Flang.t) Hashtbl.t -> int -> Flang.t -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"research/learning/extractor.ml" 39 1005 1027 "research/learning/extractor.ml" 39 1005 1034
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  int_ref featTbl "research/learning/extractor.ml" 32 778 783 "research/learning/extractor.ml" 32 778 790
+)
+"research/learning/extractor.ml" 39 1005 1035 "research/learning/extractor.ml" 39 1005 1036
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"research/learning/extractor.ml" 39 1005 1036 "research/learning/extractor.ml" 39 1005 1039
+type(
+  int ref
+)
+ident(
+  int_ref idx "research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+)
+"research/learning/extractor.ml" 39 1005 1035 "research/learning/extractor.ml" 39 1005 1039
+type(
+  int
+)
+"research/learning/extractor.ml" 39 1005 1040 "research/learning/extractor.ml" 39 1005 1048
+type(
+  Flang.t
+)
+ident(
+  int_ref appended "research/learning/extractor.ml" 37 926 932 "research/learning/extractor.ml" 37 926 940
+)
+"research/learning/extractor.ml" 39 1005 1014 "research/learning/extractor.ml" 39 1005 1049
+call(
+  stack
+)
+type(
+  unit
+)
+"research/learning/extractor.ml" 39 1005 1051 "research/learning/extractor.ml" 39 1005 1054
+type(
+  int ref
+)
+ident(
+  int_ref idx "research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+)
+"research/learning/extractor.ml" 39 1005 1055 "research/learning/extractor.ml" 39 1005 1057
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"research/learning/extractor.ml" 39 1005 1058 "research/learning/extractor.ml" 39 1005 1059
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"research/learning/extractor.ml" 39 1005 1059 "research/learning/extractor.ml" 39 1005 1062
+type(
+  int ref
+)
+ident(
+  int_ref idx "research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+)
+"research/learning/extractor.ml" 39 1005 1058 "research/learning/extractor.ml" 39 1005 1062
+type(
+  int
+)
+"research/learning/extractor.ml" 39 1005 1063 "research/learning/extractor.ml" 39 1005 1064
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"research/learning/extractor.ml" 39 1005 1065 "research/learning/extractor.ml" 39 1005 1066
+type(
+  int
+)
+"research/learning/extractor.ml" 39 1005 1058 "research/learning/extractor.ml" 39 1005 1066
+type(
+  int
+)
+"research/learning/extractor.ml" 39 1005 1051 "research/learning/extractor.ml" 39 1005 1066
+type(
+  unit
+)
+"research/learning/extractor.ml" 39 1005 1014 "research/learning/extractor.ml" 39 1005 1066
+type(
+  unit
+)
+"research/learning/extractor.ml" 40 1067 1071 "research/learning/extractor.ml" 40 1067 1072
+type(
+  int
+)
+"research/learning/extractor.ml" 41 1077 1084 "research/learning/extractor.ml" 41 1077 1089
+type(
+  Cil.stmt list
+)
+ident(
+  def succs "research/learning/extractor.ml" 42 1110 1113 "research/learning/extractor.ml" 48 1275 1285
+)
+"research/learning/extractor.ml" 41 1077 1092 "research/learning/extractor.ml" 41 1077 1101
+type(
+  Cil.stmt -> Cil.stmt list
+)
+ident(
+  int_ref get_succs "research/learning/extractor.ml" 13 287 291 "research/learning/extractor.ml" 13 287 300
+)
+"research/learning/extractor.ml" 41 1077 1102 "research/learning/extractor.ml" 41 1077 1106
+type(
+  Cil.stmt
+)
+ident(
+  int_ref stmt "research/learning/extractor.ml" 36 905 912 "research/learning/extractor.ml" 36 905 916
+)
+"research/learning/extractor.ml" 41 1077 1092 "research/learning/extractor.ml" 41 1077 1106
+call(
+  stack
+)
+type(
+  Cil.stmt list
+)
+"research/learning/extractor.ml" 42 1110 1113 "research/learning/extractor.ml" 42 1110 1122
+type(
+  (Cil.stmt -> unit) -> Cil.stmt list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"research/learning/extractor.ml" 42 1110 1128 "research/learning/extractor.ml" 42 1110 1132
+type(
+  Cil.stmt
+)
+ident(
+  def succ "research/learning/extractor.ml" 43 1136 1140 "research/learning/extractor.ml" 47 1246 1274
+)
+"research/learning/extractor.ml" 43 1136 1143 "research/learning/extractor.ml" 43 1136 1154
+type(
+  Cil.stmt * Cil.stmt -> bool
+)
+ident(
+  int_ref is_backward "research/learning/extractor.ml" 16 349 353 "research/learning/extractor.ml" 16 349 364
+)
+"research/learning/extractor.ml" 43 1136 1156 "research/learning/extractor.ml" 43 1136 1160
+type(
+  Cil.stmt
+)
+ident(
+  int_ref stmt "research/learning/extractor.ml" 36 905 912 "research/learning/extractor.ml" 36 905 916
+)
+"research/learning/extractor.ml" 43 1136 1162 "research/learning/extractor.ml" 43 1136 1166
+type(
+  Cil.stmt
+)
+ident(
+  int_ref succ "research/learning/extractor.ml" 42 1110 1128 "research/learning/extractor.ml" 42 1110 1132
+)
+"research/learning/extractor.ml" 43 1136 1155 "research/learning/extractor.ml" 43 1136 1167
+type(
+  Cil.stmt * Cil.stmt
+)
+"research/learning/extractor.ml" 43 1136 1143 "research/learning/extractor.ml" 43 1136 1167
+call(
+  stack
+)
+type(
+  bool
+)
+"research/learning/extractor.ml" 45 1177 1184 "research/learning/extractor.ml" 45 1177 1195
+type(
+  (int, Flang.t) Hashtbl.t -> int -> Flang.t -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"research/learning/extractor.ml" 45 1177 1196 "research/learning/extractor.ml" 45 1177 1203
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  int_ref featTbl "research/learning/extractor.ml" 32 778 783 "research/learning/extractor.ml" 32 778 790
+)
+"research/learning/extractor.ml" 45 1177 1204 "research/learning/extractor.ml" 45 1177 1205
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"research/learning/extractor.ml" 45 1177 1205 "research/learning/extractor.ml" 45 1177 1208
+type(
+  int ref
+)
+ident(
+  int_ref idx "research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+)
+"research/learning/extractor.ml" 45 1177 1204 "research/learning/extractor.ml" 45 1177 1208
+type(
+  int
+)
+"research/learning/extractor.ml" 45 1177 1209 "research/learning/extractor.ml" 45 1177 1217
+type(
+  Flang.t
+)
+ident(
+  int_ref appended "research/learning/extractor.ml" 37 926 932 "research/learning/extractor.ml" 37 926 940
+)
+"research/learning/extractor.ml" 45 1177 1183 "research/learning/extractor.ml" 45 1177 1218
+call(
+  stack
+)
+type(
+  unit
+)
+"research/learning/extractor.ml" 45 1177 1220 "research/learning/extractor.ml" 45 1177 1223
+type(
+  int ref
+)
+ident(
+  int_ref idx "research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+)
+"research/learning/extractor.ml" 45 1177 1224 "research/learning/extractor.ml" 45 1177 1226
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"research/learning/extractor.ml" 45 1177 1227 "research/learning/extractor.ml" 45 1177 1228
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"research/learning/extractor.ml" 45 1177 1228 "research/learning/extractor.ml" 45 1177 1231
+type(
+  int ref
+)
+ident(
+  int_ref idx "research/learning/extractor.ml" 31 758 763 "research/learning/extractor.ml" 31 758 766
+)
+"research/learning/extractor.ml" 45 1177 1227 "research/learning/extractor.ml" 45 1177 1231
+type(
+  int
+)
+"research/learning/extractor.ml" 45 1177 1232 "research/learning/extractor.ml" 45 1177 1233
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"research/learning/extractor.ml" 45 1177 1234 "research/learning/extractor.ml" 45 1177 1235
+type(
+  int
+)
+"research/learning/extractor.ml" 45 1177 1227 "research/learning/extractor.ml" 45 1177 1235
+type(
+  int
+)
+"research/learning/extractor.ml" 45 1177 1220 "research/learning/extractor.ml" 45 1177 1235
+type(
+  unit
+)
+"research/learning/extractor.ml" 45 1177 1182 "research/learning/extractor.ml" 45 1177 1236
+type(
+  unit
+)
+"research/learning/extractor.ml" 47 1246 1251 "research/learning/extractor.ml" 47 1246 1260
+type(
+  Cil.stmt -> Flang.t -> unit
+)
+ident(
+  int_ref add_paths "research/learning/extractor.ml" 35 855 865 "research/learning/extractor.ml" 35 855 874
+)
+"research/learning/extractor.ml" 47 1246 1261 "research/learning/extractor.ml" 47 1246 1265
+type(
+  Cil.stmt
+)
+ident(
+  int_ref succ "research/learning/extractor.ml" 42 1110 1128 "research/learning/extractor.ml" 42 1110 1132
+)
+"research/learning/extractor.ml" 47 1246 1266 "research/learning/extractor.ml" 47 1246 1274
+type(
+  Flang.t
+)
+ident(
+  int_ref appended "research/learning/extractor.ml" 37 926 932 "research/learning/extractor.ml" 37 926 940
+)
+"research/learning/extractor.ml" 47 1246 1251 "research/learning/extractor.ml" 47 1246 1274
+call(
+  tail
+)
+type(
+  unit
+)
+"research/learning/extractor.ml" 43 1136 1140 "research/learning/extractor.ml" 47 1246 1274
+type(
+  unit
+)
+"research/learning/extractor.ml" 42 1110 1123 "research/learning/extractor.ml" 48 1275 1279
+type(
+  Cil.stmt -> unit
+)
+"research/learning/extractor.ml" 48 1275 1280 "research/learning/extractor.ml" 48 1275 1285
+type(
+  Cil.stmt list
+)
+ident(
+  int_ref succs "research/learning/extractor.ml" 41 1077 1084 "research/learning/extractor.ml" 41 1077 1089
+)
+"research/learning/extractor.ml" 42 1110 1113 "research/learning/extractor.ml" 48 1275 1285
+call(
+  tail
+)
+type(
+  unit
+)
+"research/learning/extractor.ml" 41 1077 1080 "research/learning/extractor.ml" 48 1275 1285
+type(
+  unit
+)
+"research/learning/extractor.ml" 38 974 976 "research/learning/extractor.ml" 48 1275 1285
+type(
+  unit
+)
+"research/learning/extractor.ml" 37 926 928 "research/learning/extractor.ml" 48 1275 1285
+type(
+  unit
+)
+"research/learning/extractor.ml" 36 905 908 "research/learning/extractor.ml" 48 1275 1285
+type(
+  Cil.stmt -> Flang.t -> unit
+)
+type(
+  Cil.stmt -> Flang.t -> unit
+)
+"research/learning/extractor.ml" 49 1286 1291 "research/learning/extractor.ml" 49 1286 1300
+type(
+  Cil.stmt -> Flang.t -> unit
+)
+ident(
+  int_ref add_paths "research/learning/extractor.ml" 35 855 865 "research/learning/extractor.ml" 35 855 874
+)
+"research/learning/extractor.ml" 49 1286 1301 "research/learning/extractor.ml" 49 1286 1311
+type(
+  Cil.stmt
+)
+ident(
+  int_ref begin_stmt "research/learning/extractor.ml" 33 815 820 "research/learning/extractor.ml" 33 815 830
+)
+"research/learning/extractor.ml" 49 1286 1312 "research/learning/extractor.ml" 49 1286 1314
+type(
+  Flang.t
+)
+"research/learning/extractor.ml" 49 1286 1291 "research/learning/extractor.ml" 49 1286 1314
+call(
+  stack
+)
+type(
+  unit
+)
+"research/learning/extractor.ml" 35 855 856 "research/learning/extractor.ml" 49 1286 1315
+type(
+  unit
+)
+"research/learning/extractor.ml" 49 1286 1317 "research/learning/extractor.ml" 49 1286 1324
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  int_ref featTbl "research/learning/extractor.ml" 32 778 783 "research/learning/extractor.ml" 32 778 790
+)
+"research/learning/extractor.ml" 35 855 856 "research/learning/extractor.ml" 49 1286 1324
+type(
+  (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 33 815 816 "research/learning/extractor.ml" 49 1286 1324
+type(
+  (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 32 778 779 "research/learning/extractor.ml" 49 1286 1324
+type(
+  (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 31 758 759 "research/learning/extractor.ml" 49 1286 1324
+type(
+  (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 30 746 748 "research/learning/extractor.ml" 49 1286 1324
+type(
+  Cil.fundec -> (int, Flang.t) Hashtbl.t
+)
+type(
+  Cil.fundec -> (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 51 1326 1330 "research/learning/extractor.ml" 51 1326 1340
+type(
+  (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
+)
+ident(
+  def tbl_to_set "research/learning/extractor.ml" 57 1498 1498 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 52 1388 1394 "research/learning/extractor.ml" 52 1388 1397
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  def tbl "research/learning/extractor.ml" 53 1401 1402 "research/learning/extractor.ml" 55 1456 1496
+)
+"research/learning/extractor.ml" 53 1401 1406 "research/learning/extractor.ml" 53 1401 1412
+type(
+  'a -> 'b -> 'b BatSet.t -> 'b BatSet.t
+)
+ident(
+  def fold_f "research/learning/extractor.ml" 55 1456 1460 "research/learning/extractor.ml" 55 1456 1496
+)
+"research/learning/extractor.ml" 53 1401 1413 "research/learning/extractor.ml" 53 1401 1416
+type(
+  'a
+)
+ident(
+  def key "research/learning/extractor.ml" 53 1401 1417 "research/learning/extractor.ml" 54 1431 1455
+)
+"research/learning/extractor.ml" 53 1401 1417 "research/learning/extractor.ml" 53 1401 1422
+type(
+  'b
+)
+ident(
+  def value "research/learning/extractor.ml" 53 1401 1423 "research/learning/extractor.ml" 54 1431 1455
+)
+"research/learning/extractor.ml" 53 1401 1423 "research/learning/extractor.ml" 53 1401 1428
+type(
+  'b BatSet.t
+)
+ident(
+  def accum "research/learning/extractor.ml" 54 1431 1433 "research/learning/extractor.ml" 54 1431 1455
+)
+"research/learning/extractor.ml" 54 1431 1433 "research/learning/extractor.ml" 54 1431 1443
+type(
+  'b -> 'b BatSet.t -> 'b BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"research/learning/extractor.ml" 54 1431 1444 "research/learning/extractor.ml" 54 1431 1449
+type(
+  'b
+)
+ident(
+  int_ref value "research/learning/extractor.ml" 53 1401 1417 "research/learning/extractor.ml" 53 1401 1422
+)
+"research/learning/extractor.ml" 54 1431 1450 "research/learning/extractor.ml" 54 1431 1455
+type(
+  'b BatSet.t
+)
+ident(
+  int_ref accum "research/learning/extractor.ml" 53 1401 1423 "research/learning/extractor.ml" 53 1401 1428
+)
+"research/learning/extractor.ml" 54 1431 1433 "research/learning/extractor.ml" 54 1431 1455
+call(
+  tail
+)
+type(
+  'b BatSet.t
+)
+"research/learning/extractor.ml" 55 1456 1460 "research/learning/extractor.ml" 55 1456 1472
+type(
+  (int -> Flang.t -> Flang.t BatSet.t -> Flang.t BatSet.t) ->
+  (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t -> Flang.t BatSet.t
+)
+ident(
+  ext_ref Hashtbl.fold
+)
+"research/learning/extractor.ml" 55 1456 1473 "research/learning/extractor.ml" 55 1456 1479
+type(
+  int -> Flang.t -> Flang.t BatSet.t -> Flang.t BatSet.t
+)
+ident(
+  int_ref fold_f "research/learning/extractor.ml" 53 1401 1406 "research/learning/extractor.ml" 53 1401 1412
+)
+"research/learning/extractor.ml" 55 1456 1480 "research/learning/extractor.ml" 55 1456 1483
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  int_ref tbl "research/learning/extractor.ml" 52 1388 1394 "research/learning/extractor.ml" 52 1388 1397
+)
+"research/learning/extractor.ml" 55 1456 1484 "research/learning/extractor.ml" 55 1456 1496
+type(
+  Flang.t BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"research/learning/extractor.ml" 55 1456 1460 "research/learning/extractor.ml" 55 1456 1496
+call(
+  tail
+)
+type(
+  Flang.t BatSet.t
+)
+"research/learning/extractor.ml" 53 1401 1402 "research/learning/extractor.ml" 55 1456 1496
+type(
+  Flang.t BatSet.t
+)
+"research/learning/extractor.ml" 52 1388 1390 "research/learning/extractor.ml" 55 1456 1496
+type(
+  (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
+)
+type(
+  (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
+)
+"research/learning/extractor.ml" 57 1498 1502 "research/learning/extractor.ml" 57 1498 1513
+type(
+  Cil.fundec -> Flang.t BatSet.t
+)
+ident(
+  def get_featSet "research/learning/extractor.ml" 62 1615 1615 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 58 1547 1553 "research/learning/extractor.ml" 58 1547 1555
+type(
+  Cil.fundec
+)
+ident(
+  def fd "research/learning/extractor.ml" 59 1559 1560 "research/learning/extractor.ml" 60 1594 1613
+)
+"research/learning/extractor.ml" 59 1559 1564 "research/learning/extractor.ml" 59 1559 1571
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  def featTbl "research/learning/extractor.ml" 60 1594 1595 "research/learning/extractor.ml" 60 1594 1613
+)
+"research/learning/extractor.ml" 59 1559 1574 "research/learning/extractor.ml" 59 1559 1587
+type(
+  Cil.fundec -> (int, Flang.t) Hashtbl.t
+)
+ident(
+  int_ref build_featTbl "research/learning/extractor.ml" 29 687 691 "research/learning/extractor.ml" 29 687 704
+)
+"research/learning/extractor.ml" 59 1559 1588 "research/learning/extractor.ml" 59 1559 1590
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "research/learning/extractor.ml" 58 1547 1553 "research/learning/extractor.ml" 58 1547 1555
+)
+"research/learning/extractor.ml" 59 1559 1574 "research/learning/extractor.ml" 59 1559 1590
+call(
+  stack
+)
+type(
+  (int, Flang.t) Hashtbl.t
+)
+"research/learning/extractor.ml" 60 1594 1595 "research/learning/extractor.ml" 60 1594 1605
+type(
+  (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
+)
+ident(
+  int_ref tbl_to_set "research/learning/extractor.ml" 51 1326 1330 "research/learning/extractor.ml" 51 1326 1340
+)
+"research/learning/extractor.ml" 60 1594 1606 "research/learning/extractor.ml" 60 1594 1613
+type(
+  (int, Flang.t) Hashtbl.t
+)
+ident(
+  int_ref featTbl "research/learning/extractor.ml" 59 1559 1564 "research/learning/extractor.ml" 59 1559 1571
+)
+"research/learning/extractor.ml" 60 1594 1595 "research/learning/extractor.ml" 60 1594 1613
+call(
+  tail
+)
+type(
+  Flang.t BatSet.t
+)
+"research/learning/extractor.ml" 59 1559 1560 "research/learning/extractor.ml" 60 1594 1613
+type(
+  Flang.t BatSet.t
+)
+"research/learning/extractor.ml" 58 1547 1549 "research/learning/extractor.ml" 60 1594 1613
+type(
+  Cil.fundec -> Flang.t BatSet.t
+)
+type(
+  Cil.fundec -> Flang.t BatSet.t
+)
+"research/learning/extractor.ml" 62 1615 1619 "research/learning/extractor.ml" 62 1615 1630
+type(
+  Cil.stmt list -> int -> Cil.stmt list
+)
+ident(
+  def unroll_loop "research/learning/extractor.ml" 63 1671 1696 "research/learning/extractor.ml" 1 0 -1
+)
+"research/learning/extractor.ml" 63 1671 1677 "research/learning/extractor.ml" 63 1671 1681
+type(
+  Cil.stmt list
+)
+ident(
+  def orgs "research/learning/extractor.ml" 63 1671 1682 "research/learning/extractor.ml" 63 1671 1696
+)
+"research/learning/extractor.ml" 63 1671 1682 "research/learning/extractor.ml" 63 1671 1688
+type(
+  int
+)
+ident(
+  def factor "research/learning/extractor.ml" 63 1671 1692 "research/learning/extractor.ml" 63 1671 1696
+)
+"research/learning/extractor.ml" 63 1671 1692 "research/learning/extractor.ml" 63 1671 1696
+type(
+  Cil.stmt list
+)
+ident(
+  int_ref orgs "research/learning/extractor.ml" 63 1671 1677 "research/learning/extractor.ml" 63 1671 1681
+)
+"research/learning/extractor.ml" 63 1671 1673 "research/learning/extractor.ml" 63 1671 1696
+type(
+  Cil.stmt list -> int -> Cil.stmt list
+)
+type(
+  Cil.stmt list -> int -> Cil.stmt list
+)

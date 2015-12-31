@@ -1,0 +1,1170 @@
+"domain/pow.ml" 12 137 143 "domain/pow.ml" 12 137 147
+type(
+  string
+)
+ident(
+  def name "domain/pow.ml" 15 184 186 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 12 137 159 "domain/pow.ml" 12 137 166
+type(
+  string
+)
+"domain/pow.ml" 12 137 167 "domain/pow.ml" 12 137 168
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"domain/pow.ml" 12 137 169 "domain/pow.ml" 12 137 175
+type(
+  string
+)
+ident(
+  ext_ref A.name
+)
+"domain/pow.ml" 12 137 176 "domain/pow.ml" 12 137 177
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"domain/pow.ml" 12 137 178 "domain/pow.ml" 12 137 181
+type(
+  string
+)
+"domain/pow.ml" 12 137 169 "domain/pow.ml" 12 137 181
+call(
+  stack
+)
+type(
+  string
+)
+"domain/pow.ml" 12 137 159 "domain/pow.ml" 12 137 181
+call(
+  stack
+)
+type(
+  string
+)
+type(
+  string
+)
+"domain/pow.ml" 15 184 190 "domain/pow.ml" 15 184 199
+type(
+  t -> string
+)
+ident(
+  def to_string "domain/pow.ml" 20 302 304 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 15 184 220 "domain/pow.ml" 15 184 221
+type(
+  t
+)
+ident(
+  def x "domain/pow.ml" 16 225 229 "domain/pow.ml" 17 266 299
+)
+"domain/pow.ml" 16 225 232 "domain/pow.ml" 16 225 247
+type(
+  t -> bool
+)
+ident(
+  ext_ref BatSet.is_empty
+)
+"domain/pow.ml" 16 225 248 "domain/pow.ml" 16 225 249
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 15 184 220 "domain/pow.ml" 15 184 221
+)
+"domain/pow.ml" 16 225 232 "domain/pow.ml" 16 225 249
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/pow.ml" 16 225 255 "domain/pow.ml" 16 225 260
+type(
+  string
+)
+"domain/pow.ml" 17 266 272 "domain/pow.ml" 17 266 285
+type(
+  ?first:string ->
+  ?last:string -> ?sep:string -> (A.t -> string) -> t -> string
+)
+ident(
+  ext_ref Vocab.string_of_set
+)
+"domain/pow.ml" 17 266 286 "domain/pow.ml" 17 266 297
+type(
+  A.t -> string
+)
+ident(
+  ext_ref A.to_string
+)
+"domain/pow.ml" 17 266 298 "domain/pow.ml" 17 266 299
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 15 184 220 "domain/pow.ml" 15 184 221
+)
+"domain/pow.ml" 17 266 272 "domain/pow.ml" 17 266 299
+call(
+  tail
+)
+type(
+  string
+)
+"domain/pow.ml" 16 225 229 "domain/pow.ml" 17 266 299
+type(
+  string
+)
+"domain/pow.ml" 15 184 216 "domain/pow.ml" 17 266 299
+type(
+  t -> string
+)
+type(
+  t -> string
+)
+"domain/pow.ml" 20 302 308 "domain/pow.ml" 20 302 313
+type(
+  (t, t) Hashtbl.t
+)
+ident(
+  def table "domain/pow.ml" 21 335 337 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 20 302 316 "domain/pow.ml" 20 302 330
+type(
+  ?random:bool -> int -> (t, t) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"domain/pow.ml" 20 302 331 "domain/pow.ml" 20 302 334
+type(
+  int
+)
+"domain/pow.ml" 20 302 316 "domain/pow.ml" 20 302 334
+call(
+  stack
+)
+type(
+  (t, t) Hashtbl.t
+)
+"domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+type(
+  t -> t
+)
+ident(
+  def hashcons "domain/pow.ml" 25 433 435 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 21 335 350 "domain/pow.ml" 21 335 351
+type(
+  t
+)
+ident(
+  def x "domain/pow.ml" 22 354 358 "domain/pow.ml" 23 388 431
+)
+"domain/pow.ml" 22 354 362 "domain/pow.ml" 22 354 374
+type(
+  (t, t) Hashtbl.t -> t -> t
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"domain/pow.ml" 22 354 375 "domain/pow.ml" 22 354 380
+type(
+  (t, t) Hashtbl.t
+)
+ident(
+  int_ref table "domain/pow.ml" 20 302 308 "domain/pow.ml" 20 302 313
+)
+"domain/pow.ml" 22 354 381 "domain/pow.ml" 22 354 382
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 21 335 350 "domain/pow.ml" 21 335 351
+)
+"domain/pow.ml" 22 354 362 "domain/pow.ml" 22 354 382
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 23 388 394 "domain/pow.ml" 23 388 403
+type(
+  exn
+)
+"domain/pow.ml" 23 388 407 "domain/pow.ml" 23 388 418
+type(
+  (t, t) Hashtbl.t -> t -> t -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"domain/pow.ml" 23 388 419 "domain/pow.ml" 23 388 424
+type(
+  (t, t) Hashtbl.t
+)
+ident(
+  int_ref table "domain/pow.ml" 20 302 308 "domain/pow.ml" 20 302 313
+)
+"domain/pow.ml" 23 388 425 "domain/pow.ml" 23 388 426
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 21 335 350 "domain/pow.ml" 21 335 351
+)
+"domain/pow.ml" 23 388 427 "domain/pow.ml" 23 388 428
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 21 335 350 "domain/pow.ml" 21 335 351
+)
+"domain/pow.ml" 23 388 407 "domain/pow.ml" 23 388 428
+call(
+  stack
+)
+type(
+  unit
+)
+"domain/pow.ml" 23 388 430 "domain/pow.ml" 23 388 431
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 21 335 350 "domain/pow.ml" 21 335 351
+)
+"domain/pow.ml" 23 388 407 "domain/pow.ml" 23 388 431
+type(
+  t
+)
+"domain/pow.ml" 22 354 358 "domain/pow.ml" 23 388 431
+type(
+  t
+)
+"domain/pow.ml" 25 433 439 "domain/pow.ml" 25 433 441
+type(
+  t -> t -> bool
+)
+ident(
+  def le "domain/pow.ml" 27 476 478 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 25 433 461 "domain/pow.ml" 25 433 474
+type(
+  t -> t -> bool
+)
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref BatSet.subset
+)
+"domain/pow.ml" 27 476 482 "domain/pow.ml" 27 476 484
+type(
+  t -> t -> bool
+)
+ident(
+  def eq "domain/pow.ml" 29 518 520 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 27 476 504 "domain/pow.ml" 27 476 516
+type(
+  t -> t -> bool
+)
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref BatSet.equal
+)
+"domain/pow.ml" 29 518 524 "domain/pow.ml" 29 518 527
+type(
+  t
+)
+ident(
+  def bot "domain/pow.ml" 32 549 551 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 29 518 534 "domain/pow.ml" 29 518 546
+type(
+  t
+)
+type(
+  t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"domain/pow.ml" 32 549 555 "domain/pow.ml" 32 549 559
+type(
+  t -> t -> t
+)
+ident(
+  def join "domain/pow.ml" 37 674 676 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 32 549 580 "domain/pow.ml" 32 549 581
+type(
+  t
+)
+ident(
+  def x "domain/pow.ml" 32 549 582 "domain/pow.ml" 35 639 672
+)
+"domain/pow.ml" 32 549 582 "domain/pow.ml" 32 549 583
+type(
+  t
+)
+ident(
+  def y "domain/pow.ml" 33 587 591 "domain/pow.ml" 35 639 672
+)
+"domain/pow.ml" 33 587 594 "domain/pow.ml" 33 587 596
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref le "domain/pow.ml" 25 433 439 "domain/pow.ml" 25 433 441
+)
+"domain/pow.ml" 33 587 597 "domain/pow.ml" 33 587 598
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 32 549 580 "domain/pow.ml" 32 549 581
+)
+"domain/pow.ml" 33 587 599 "domain/pow.ml" 33 587 600
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 32 549 582 "domain/pow.ml" 32 549 583
+)
+"domain/pow.ml" 33 587 594 "domain/pow.ml" 33 587 600
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/pow.ml" 33 587 606 "domain/pow.ml" 33 587 607
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 32 549 582 "domain/pow.ml" 32 549 583
+)
+"domain/pow.ml" 34 613 620 "domain/pow.ml" 34 613 622
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref le "domain/pow.ml" 25 433 439 "domain/pow.ml" 25 433 441
+)
+"domain/pow.ml" 34 613 623 "domain/pow.ml" 34 613 624
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 32 549 582 "domain/pow.ml" 32 549 583
+)
+"domain/pow.ml" 34 613 625 "domain/pow.ml" 34 613 626
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 32 549 580 "domain/pow.ml" 32 549 581
+)
+"domain/pow.ml" 34 613 620 "domain/pow.ml" 34 613 626
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/pow.ml" 34 613 632 "domain/pow.ml" 34 613 633
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 32 549 580 "domain/pow.ml" 32 549 581
+)
+"domain/pow.ml" 35 639 645 "domain/pow.ml" 35 639 653
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 35 639 655 "domain/pow.ml" 35 639 667
+type(
+  t -> t -> t
+)
+ident(
+  ext_ref BatSet.union
+)
+"domain/pow.ml" 35 639 668 "domain/pow.ml" 35 639 669
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 32 549 580 "domain/pow.ml" 32 549 581
+)
+"domain/pow.ml" 35 639 670 "domain/pow.ml" 35 639 671
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 32 549 582 "domain/pow.ml" 32 549 583
+)
+"domain/pow.ml" 35 639 654 "domain/pow.ml" 35 639 672
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 35 639 645 "domain/pow.ml" 35 639 672
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 34 613 617 "domain/pow.ml" 35 639 672
+type(
+  t
+)
+"domain/pow.ml" 33 587 591 "domain/pow.ml" 35 639 672
+type(
+  t
+)
+"domain/pow.ml" 32 549 576 "domain/pow.ml" 35 639 672
+type(
+  t -> t -> t
+)
+type(
+  t -> t -> t
+)
+"domain/pow.ml" 37 674 680 "domain/pow.ml" 37 674 684
+type(
+  t -> t -> t
+)
+ident(
+  def meet "domain/pow.ml" 45 929 931 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 37 674 705 "domain/pow.ml" 37 674 706
+type(
+  t
+)
+ident(
+  def x "domain/pow.ml" 37 674 707 "domain/pow.ml" 40 764 801
+)
+"domain/pow.ml" 37 674 707 "domain/pow.ml" 37 674 708
+type(
+  t
+)
+ident(
+  def y "domain/pow.ml" 38 712 716 "domain/pow.ml" 40 764 801
+)
+"domain/pow.ml" 38 712 719 "domain/pow.ml" 38 712 721
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref le "domain/pow.ml" 25 433 439 "domain/pow.ml" 25 433 441
+)
+"domain/pow.ml" 38 712 722 "domain/pow.ml" 38 712 723
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 37 674 705 "domain/pow.ml" 37 674 706
+)
+"domain/pow.ml" 38 712 724 "domain/pow.ml" 38 712 725
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 37 674 707 "domain/pow.ml" 37 674 708
+)
+"domain/pow.ml" 38 712 719 "domain/pow.ml" 38 712 725
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/pow.ml" 38 712 731 "domain/pow.ml" 38 712 732
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 37 674 705 "domain/pow.ml" 37 674 706
+)
+"domain/pow.ml" 39 738 745 "domain/pow.ml" 39 738 747
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref le "domain/pow.ml" 25 433 439 "domain/pow.ml" 25 433 441
+)
+"domain/pow.ml" 39 738 748 "domain/pow.ml" 39 738 749
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 37 674 707 "domain/pow.ml" 37 674 708
+)
+"domain/pow.ml" 39 738 750 "domain/pow.ml" 39 738 751
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 37 674 705 "domain/pow.ml" 37 674 706
+)
+"domain/pow.ml" 39 738 745 "domain/pow.ml" 39 738 751
+call(
+  stack
+)
+type(
+  bool
+)
+"domain/pow.ml" 39 738 757 "domain/pow.ml" 39 738 758
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 37 674 707 "domain/pow.ml" 37 674 708
+)
+"domain/pow.ml" 40 764 770 "domain/pow.ml" 40 764 778
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 40 764 780 "domain/pow.ml" 40 764 796
+type(
+  t -> t -> t
+)
+ident(
+  ext_ref BatSet.intersect
+)
+"domain/pow.ml" 40 764 797 "domain/pow.ml" 40 764 798
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 37 674 705 "domain/pow.ml" 37 674 706
+)
+"domain/pow.ml" 40 764 799 "domain/pow.ml" 40 764 800
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 37 674 707 "domain/pow.ml" 37 674 708
+)
+"domain/pow.ml" 40 764 779 "domain/pow.ml" 40 764 801
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 40 764 770 "domain/pow.ml" 40 764 801
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 39 738 742 "domain/pow.ml" 40 764 801
+type(
+  t
+)
+"domain/pow.ml" 38 712 716 "domain/pow.ml" 40 764 801
+type(
+  t
+)
+"domain/pow.ml" 37 674 701 "domain/pow.ml" 40 764 801
+type(
+  t -> t -> t
+)
+type(
+  t -> t -> t
+)
+"domain/pow.ml" 45 929 935 "domain/pow.ml" 45 929 940
+type(
+  t -> t -> t
+)
+ident(
+  def widen "domain/pow.ml" 49 1028 1030 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 45 929 961 "domain/pow.ml" 45 929 962
+type(
+  t
+)
+ident(
+  def x "domain/pow.ml" 45 929 963 "domain/pow.ml" 47 993 1026
+)
+"domain/pow.ml" 45 929 963 "domain/pow.ml" 45 929 964
+type(
+  t
+)
+ident(
+  def y "domain/pow.ml" 46 968 972 "domain/pow.ml" 47 993 1026
+)
+"domain/pow.ml" 46 968 975 "domain/pow.ml" 46 968 976
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 45 929 961 "domain/pow.ml" 45 929 962
+)
+"domain/pow.ml" 46 968 977 "domain/pow.ml" 46 968 978
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"domain/pow.ml" 46 968 979 "domain/pow.ml" 46 968 980
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 45 929 963 "domain/pow.ml" 45 929 964
+)
+"domain/pow.ml" 46 968 975 "domain/pow.ml" 46 968 980
+type(
+  bool
+)
+"domain/pow.ml" 46 968 986 "domain/pow.ml" 46 968 987
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 45 929 961 "domain/pow.ml" 45 929 962
+)
+"domain/pow.ml" 47 993 999 "domain/pow.ml" 47 993 1007
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 47 993 1009 "domain/pow.ml" 47 993 1021
+type(
+  t -> t -> t
+)
+ident(
+  ext_ref BatSet.union
+)
+"domain/pow.ml" 47 993 1022 "domain/pow.ml" 47 993 1023
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 45 929 961 "domain/pow.ml" 45 929 962
+)
+"domain/pow.ml" 47 993 1024 "domain/pow.ml" 47 993 1025
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 45 929 963 "domain/pow.ml" 45 929 964
+)
+"domain/pow.ml" 47 993 1008 "domain/pow.ml" 47 993 1026
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 47 993 999 "domain/pow.ml" 47 993 1026
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 46 968 972 "domain/pow.ml" 47 993 1026
+type(
+  t
+)
+"domain/pow.ml" 45 929 957 "domain/pow.ml" 47 993 1026
+type(
+  t -> t -> t
+)
+type(
+  t -> t -> t
+)
+"domain/pow.ml" 49 1028 1034 "domain/pow.ml" 49 1028 1040
+type(
+  t -> t -> t
+)
+ident(
+  def narrow "domain/pow.ml" 54 1133 1135 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 49 1028 1061 "domain/pow.ml" 49 1028 1062
+type(
+  t
+)
+ident(
+  def x "domain/pow.ml" 49 1028 1063 "domain/pow.ml" 51 1093 1130
+)
+"domain/pow.ml" 49 1028 1063 "domain/pow.ml" 49 1028 1064
+type(
+  t
+)
+ident(
+  def y "domain/pow.ml" 50 1068 1072 "domain/pow.ml" 51 1093 1130
+)
+"domain/pow.ml" 50 1068 1075 "domain/pow.ml" 50 1068 1076
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 49 1028 1061 "domain/pow.ml" 49 1028 1062
+)
+"domain/pow.ml" 50 1068 1077 "domain/pow.ml" 50 1068 1078
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"domain/pow.ml" 50 1068 1079 "domain/pow.ml" 50 1068 1080
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 49 1028 1063 "domain/pow.ml" 49 1028 1064
+)
+"domain/pow.ml" 50 1068 1075 "domain/pow.ml" 50 1068 1080
+type(
+  bool
+)
+"domain/pow.ml" 50 1068 1086 "domain/pow.ml" 50 1068 1087
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 49 1028 1061 "domain/pow.ml" 49 1028 1062
+)
+"domain/pow.ml" 51 1093 1099 "domain/pow.ml" 51 1093 1107
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 51 1093 1109 "domain/pow.ml" 51 1093 1125
+type(
+  t -> t -> t
+)
+ident(
+  ext_ref BatSet.intersect
+)
+"domain/pow.ml" 51 1093 1126 "domain/pow.ml" 51 1093 1127
+type(
+  t
+)
+ident(
+  int_ref x "domain/pow.ml" 49 1028 1061 "domain/pow.ml" 49 1028 1062
+)
+"domain/pow.ml" 51 1093 1128 "domain/pow.ml" 51 1093 1129
+type(
+  t
+)
+ident(
+  int_ref y "domain/pow.ml" 49 1028 1063 "domain/pow.ml" 49 1028 1064
+)
+"domain/pow.ml" 51 1093 1108 "domain/pow.ml" 51 1093 1130
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 51 1093 1099 "domain/pow.ml" 51 1093 1130
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 50 1068 1072 "domain/pow.ml" 51 1093 1130
+type(
+  t
+)
+"domain/pow.ml" 49 1028 1057 "domain/pow.ml" 51 1093 1130
+type(
+  t -> t -> t
+)
+type(
+  t -> t -> t
+)
+"domain/pow.ml" 54 1133 1139 "domain/pow.ml" 54 1133 1145
+type(
+  (A.t -> bool) -> t -> t
+)
+ident(
+  def filter "domain/pow.ml" 57 1219 1221 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 54 1133 1178 "domain/pow.ml" 54 1133 1179
+type(
+  A.t -> bool
+)
+ident(
+  def f "domain/pow.ml" 54 1133 1180 "domain/pow.ml" 55 1185 1217
+)
+"domain/pow.ml" 54 1133 1180 "domain/pow.ml" 54 1133 1181
+type(
+  t
+)
+ident(
+  def s "domain/pow.ml" 55 1185 1189 "domain/pow.ml" 55 1185 1217
+)
+"domain/pow.ml" 55 1185 1189 "domain/pow.ml" 55 1185 1197
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 55 1185 1199 "domain/pow.ml" 55 1185 1212
+type(
+  (A.t -> bool) -> t -> t
+)
+ident(
+  ext_ref BatSet.filter
+)
+"domain/pow.ml" 55 1185 1213 "domain/pow.ml" 55 1185 1214
+type(
+  A.t -> bool
+)
+ident(
+  int_ref f "domain/pow.ml" 54 1133 1178 "domain/pow.ml" 54 1133 1179
+)
+"domain/pow.ml" 55 1185 1215 "domain/pow.ml" 55 1185 1216
+type(
+  t
+)
+ident(
+  int_ref s "domain/pow.ml" 54 1133 1180 "domain/pow.ml" 54 1133 1181
+)
+"domain/pow.ml" 55 1185 1198 "domain/pow.ml" 55 1185 1217
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 55 1185 1189 "domain/pow.ml" 55 1185 1217
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 54 1133 1174 "domain/pow.ml" 55 1185 1217
+type(
+  (A.t -> bool) -> t -> t
+)
+type(
+  (A.t -> bool) -> t -> t
+)
+"domain/pow.ml" 57 1219 1225 "domain/pow.ml" 57 1219 1229
+type(
+  (A.t -> 'a -> 'a) -> t -> 'a -> 'a
+)
+ident(
+  def fold "domain/pow.ml" 59 1282 1284 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 57 1219 1269 "domain/pow.ml" 57 1219 1280
+type(
+  (A.t -> 'a -> 'a) -> t -> 'a -> 'a
+)
+type(
+  (A.t -> 'a -> 'a) -> t -> 'a -> 'a
+)
+ident(
+  ext_ref BatSet.fold
+)
+"domain/pow.ml" 59 1282 1288 "domain/pow.ml" 59 1282 1291
+type(
+  ('b -> 'c) -> 'b BatSet.t -> 'c BatSet.t
+)
+ident(
+  def map "domain/pow.ml" 61 1306 1308 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 59 1282 1294 "domain/pow.ml" 59 1282 1304
+type(
+  ('b -> 'c) -> 'b BatSet.t -> 'c BatSet.t
+)
+ident(
+  ext_ref BatSet.map
+)
+"domain/pow.ml" 61 1306 1312 "domain/pow.ml" 61 1306 1316
+type(
+  (A.t -> unit) -> t -> unit
+)
+ident(
+  def iter "domain/pow.ml" 63 1361 1363 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 61 1306 1348 "domain/pow.ml" 61 1306 1359
+type(
+  (A.t -> unit) -> t -> unit
+)
+type(
+  (A.t -> unit) -> t -> unit
+)
+ident(
+  ext_ref BatSet.iter
+)
+"domain/pow.ml" 63 1361 1367 "domain/pow.ml" 63 1361 1376
+type(
+  A.t -> t
+)
+ident(
+  def singleton "domain/pow.ml" 66 1434 1436 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 63 1361 1394 "domain/pow.ml" 63 1361 1395
+type(
+  A.t
+)
+ident(
+  def e "domain/pow.ml" 64 1399 1403 "domain/pow.ml" 64 1399 1432
+)
+"domain/pow.ml" 64 1399 1403 "domain/pow.ml" 64 1399 1411
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 64 1399 1413 "domain/pow.ml" 64 1399 1429
+type(
+  A.t -> t
+)
+ident(
+  ext_ref BatSet.singleton
+)
+"domain/pow.ml" 64 1399 1430 "domain/pow.ml" 64 1399 1431
+type(
+  A.t
+)
+ident(
+  int_ref e "domain/pow.ml" 63 1361 1394 "domain/pow.ml" 63 1361 1395
+)
+"domain/pow.ml" 64 1399 1412 "domain/pow.ml" 64 1399 1432
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 64 1399 1403 "domain/pow.ml" 64 1399 1432
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 63 1361 1390 "domain/pow.ml" 64 1399 1432
+type(
+  A.t -> t
+)
+type(
+  A.t -> t
+)
+"domain/pow.ml" 66 1434 1440 "domain/pow.ml" 66 1434 1446
+type(
+  A.t BatSet.t -> t -> bool
+)
+ident(
+  def subset "domain/pow.ml" 68 1492 1494 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 66 1434 1477 "domain/pow.ml" 66 1434 1490
+type(
+  A.t BatSet.t -> t -> bool
+)
+type(
+  A.t BatSet.t -> t -> bool
+)
+ident(
+  ext_ref BatSet.subset
+)
+"domain/pow.ml" 68 1492 1498 "domain/pow.ml" 68 1492 1506
+type(
+  t -> int
+)
+ident(
+  def cardinal "domain/pow.ml" 70 1537 1539 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 68 1492 1520 "domain/pow.ml" 68 1492 1535
+type(
+  t -> int
+)
+type(
+  t -> int
+)
+ident(
+  ext_ref BatSet.cardinal
+)
+"domain/pow.ml" 70 1537 1543 "domain/pow.ml" 70 1537 1546
+type(
+  A.t -> t -> bool
+)
+ident(
+  def mem "domain/pow.ml" 72 1580 1582 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 70 1537 1568 "domain/pow.ml" 70 1537 1578
+type(
+  A.t -> t -> bool
+)
+type(
+  A.t -> t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"domain/pow.ml" 72 1580 1586 "domain/pow.ml" 72 1580 1589
+type(
+  A.t -> A.t BatSet.t -> t
+)
+ident(
+  def add "domain/pow.ml" 74 1623 1625 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 72 1580 1590 "domain/pow.ml" 72 1580 1591
+type(
+  A.t
+)
+ident(
+  def e "domain/pow.ml" 72 1580 1592 "domain/pow.ml" 72 1580 1621
+)
+"domain/pow.ml" 72 1580 1592 "domain/pow.ml" 72 1580 1593
+type(
+  A.t BatSet.t
+)
+ident(
+  def s "domain/pow.ml" 72 1580 1596 "domain/pow.ml" 72 1580 1621
+)
+"domain/pow.ml" 72 1580 1596 "domain/pow.ml" 72 1580 1604
+type(
+  t -> t
+)
+ident(
+  int_ref hashcons "domain/pow.ml" 21 335 341 "domain/pow.ml" 21 335 349
+)
+"domain/pow.ml" 72 1580 1606 "domain/pow.ml" 72 1580 1616
+type(
+  A.t -> A.t BatSet.t -> t
+)
+ident(
+  ext_ref BatSet.add
+)
+"domain/pow.ml" 72 1580 1617 "domain/pow.ml" 72 1580 1618
+type(
+  A.t
+)
+ident(
+  int_ref e "domain/pow.ml" 72 1580 1590 "domain/pow.ml" 72 1580 1591
+)
+"domain/pow.ml" 72 1580 1619 "domain/pow.ml" 72 1580 1620
+type(
+  A.t BatSet.t
+)
+ident(
+  int_ref s "domain/pow.ml" 72 1580 1592 "domain/pow.ml" 72 1580 1593
+)
+"domain/pow.ml" 72 1580 1605 "domain/pow.ml" 72 1580 1621
+call(
+  stack
+)
+type(
+  t
+)
+"domain/pow.ml" 72 1580 1596 "domain/pow.ml" 72 1580 1621
+call(
+  tail
+)
+type(
+  t
+)
+"domain/pow.ml" 74 1623 1629 "domain/pow.ml" 74 1623 1635
+type(
+  'd BatSet.t -> 'd
+)
+ident(
+  def choose "domain/pow.ml" 76 1653 1655 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 74 1623 1638 "domain/pow.ml" 74 1623 1651
+type(
+  'd BatSet.t -> 'd
+)
+ident(
+  ext_ref BatSet.choose
+)
+"domain/pow.ml" 76 1653 1659 "domain/pow.ml" 76 1653 1665
+type(
+  'e -> 'e BatSet.t -> 'e BatSet.t
+)
+ident(
+  def remove "domain/pow.ml" 78 1683 1685 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 76 1653 1668 "domain/pow.ml" 76 1653 1681
+type(
+  'e -> 'e BatSet.t -> 'e BatSet.t
+)
+ident(
+  ext_ref BatSet.remove
+)
+"domain/pow.ml" 78 1683 1689 "domain/pow.ml" 78 1683 1697
+type(
+  'f BatSet.t -> bool
+)
+ident(
+  def is_empty "domain/pow.ml" 80 1717 1719 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 78 1683 1700 "domain/pow.ml" 78 1683 1715
+type(
+  'f BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.is_empty
+)
+"domain/pow.ml" 80 1717 1723 "domain/pow.ml" 80 1717 1730
+type(
+  ('g -> bool) -> 'g BatSet.t -> bool
+)
+ident(
+  def for_all "domain/pow.ml" 81 1748 1750 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 80 1717 1733 "domain/pow.ml" 80 1717 1747
+type(
+  ('g -> bool) -> 'g BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.for_all
+)
+"domain/pow.ml" 81 1748 1754 "domain/pow.ml" 81 1748 1760
+type(
+  ('h -> bool) -> 'h BatSet.t -> bool
+)
+ident(
+  def exists "domain/pow.ml" 81 1748 1776 "domain/pow.ml" 92 1966 1969
+)
+"domain/pow.ml" 81 1748 1763 "domain/pow.ml" 81 1748 1776
+type(
+  ('h -> bool) -> 'h BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.exists
+)
