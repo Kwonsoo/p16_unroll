@@ -1,0 +1,4666 @@
+"sparse/worklist.ml" 9 107 115 "sparse/worklist.ml" 9 107 122
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "sparse/worklist.ml" 10 133 137 "sparse/worklist.ml" 12 183 188
+)
+"sparse/worklist.ml" 9 107 125 "sparse/worklist.ml" 9 107 132
+type(
+  'a -> 'a -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"sparse/worklist.ml" 10 133 141 "sparse/worklist.ml" 10 133 145
+type(
+  'b -> int
+)
+ident(
+  def hash "sparse/worklist.ml" 11 161 165 "sparse/worklist.ml" 12 183 188
+)
+"sparse/worklist.ml" 10 133 148 "sparse/worklist.ml" 10 133 160
+type(
+  'b -> int
+)
+ident(
+  ext_ref Hashtbl.hash
+)
+"sparse/worklist.ml" 11 161 169 "sparse/worklist.ml" 11 161 174
+type(
+  'c -> 'c -> bool
+)
+ident(
+  def equal "sparse/worklist.ml" 11 161 182 "sparse/worklist.ml" 12 183 188
+)
+"sparse/worklist.ml" 11 161 177 "sparse/worklist.ml" 11 161 182
+type(
+  'c -> 'c -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"sparse/worklist.ml" 14 190 203 "sparse/worklist.ml" 14 190 245
+call(
+  stack
+)
+"sparse/worklist.ml" 16 258 268 "sparse/worklist.ml" 16 258 293
+call(
+  stack
+)
+"sparse/worklist.ml" 30 550 554 "sparse/worklist.ml" 30 550 559
+type(
+  t
+)
+ident(
+  def empty "sparse/worklist.ml" 36 646 646 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 31 564 574 "sparse/worklist.ml" 31 564 586
+type(
+  (DUGraph.vertex, int * bool) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 32 588 602 "sparse/worklist.ml" 32 588 614
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 33 616 630 "sparse/worklist.ml" 33 616 642
+type(
+  DUGraph.vertex BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"sparse/worklist.ml" 30 550 562 "sparse/worklist.ml" 34 643 644
+type(
+  t
+)
+"sparse/worklist.ml" 36 646 650 "sparse/worklist.ml" 36 646 654
+type(
+  DUGraph.t -> NGraph.t * (int, DUGraph.vertex) BatMap.t
+)
+ident(
+  def make "sparse/worklist.ml" 52 1255 1255 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 37 712 718 "sparse/worklist.ml" 37 712 719
+type(
+  DUGraph.t
+)
+ident(
+  def g "sparse/worklist.ml" 38 723 725 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 38 723 729 "sparse/worklist.ml" 38 723 730
+type(
+  NGraph.vertex ref
+)
+ident(
+  def i "sparse/worklist.ml" 39 742 744 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 38 723 733 "sparse/worklist.ml" 38 723 736
+type(
+  NGraph.vertex -> NGraph.vertex ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"sparse/worklist.ml" 38 723 737 "sparse/worklist.ml" 38 723 738
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 38 723 733 "sparse/worklist.ml" 38 723 738
+type(
+  NGraph.vertex ref
+)
+"sparse/worklist.ml" 39 742 748 "sparse/worklist.ml" 39 742 753
+type(
+  unit -> NGraph.vertex
+)
+ident(
+  def new_i "sparse/worklist.ml" 40 791 793 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 39 742 754 "sparse/worklist.ml" 39 742 756
+type(
+  unit
+)
+"sparse/worklist.ml" 39 742 763 "sparse/worklist.ml" 39 742 764
+type(
+  NGraph.vertex
+)
+ident(
+  def v "sparse/worklist.ml" 39 742 773 "sparse/worklist.ml" 39 742 787
+)
+"sparse/worklist.ml" 39 742 767 "sparse/worklist.ml" 39 742 768
+type(
+  NGraph.vertex ref -> NGraph.vertex
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"sparse/worklist.ml" 39 742 768 "sparse/worklist.ml" 39 742 769
+type(
+  NGraph.vertex ref
+)
+ident(
+  int_ref i "sparse/worklist.ml" 38 723 729 "sparse/worklist.ml" 38 723 730
+)
+"sparse/worklist.ml" 39 742 767 "sparse/worklist.ml" 39 742 769
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 39 742 773 "sparse/worklist.ml" 39 742 774
+type(
+  NGraph.vertex ref
+)
+ident(
+  int_ref i "sparse/worklist.ml" 38 723 729 "sparse/worklist.ml" 38 723 730
+)
+"sparse/worklist.ml" 39 742 775 "sparse/worklist.ml" 39 742 777
+type(
+  NGraph.vertex ref -> NGraph.vertex -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"sparse/worklist.ml" 39 742 778 "sparse/worklist.ml" 39 742 779
+type(
+  NGraph.vertex ref -> NGraph.vertex
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"sparse/worklist.ml" 39 742 779 "sparse/worklist.ml" 39 742 780
+type(
+  NGraph.vertex ref
+)
+ident(
+  int_ref i "sparse/worklist.ml" 38 723 729 "sparse/worklist.ml" 38 723 730
+)
+"sparse/worklist.ml" 39 742 778 "sparse/worklist.ml" 39 742 780
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 39 742 781 "sparse/worklist.ml" 39 742 782
+type(
+  NGraph.vertex -> int -> NGraph.vertex
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"sparse/worklist.ml" 39 742 783 "sparse/worklist.ml" 39 742 784
+type(
+  int
+)
+"sparse/worklist.ml" 39 742 778 "sparse/worklist.ml" 39 742 784
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 39 742 773 "sparse/worklist.ml" 39 742 784
+type(
+  unit
+)
+"sparse/worklist.ml" 39 742 786 "sparse/worklist.ml" 39 742 787
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref v "sparse/worklist.ml" 39 742 763 "sparse/worklist.ml" 39 742 764
+)
+"sparse/worklist.ml" 39 742 773 "sparse/worklist.ml" 39 742 787
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 39 742 759 "sparse/worklist.ml" 39 742 787
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 40 791 797 "sparse/worklist.ml" 40 791 803
+type(
+  'a ->
+  (NGraph.vertex, 'a) BatMap.t ->
+  ('a, NGraph.vertex) BatMap.t ->
+  NGraph.vertex * (NGraph.vertex, 'a) BatMap.t * ('a, NGraph.vertex) BatMap.t
+)
+ident(
+  def create "sparse/worklist.ml" 44 951 953 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 40 791 804 "sparse/worklist.ml" 40 791 805
+type(
+  'a
+)
+ident(
+  def n "sparse/worklist.ml" 40 791 806 "sparse/worklist.ml" 43 898 947
+)
+"sparse/worklist.ml" 40 791 806 "sparse/worklist.ml" 40 791 809
+type(
+  (NGraph.vertex, 'a) BatMap.t
+)
+ident(
+  def i2n "sparse/worklist.ml" 40 791 810 "sparse/worklist.ml" 43 898 947
+)
+"sparse/worklist.ml" 40 791 810 "sparse/worklist.ml" 40 791 813
+type(
+  ('a, NGraph.vertex) BatMap.t
+)
+ident(
+  def n2i "sparse/worklist.ml" 41 816 820 "sparse/worklist.ml" 43 898 947
+)
+"sparse/worklist.ml" 41 816 825 "sparse/worklist.ml" 41 816 836
+type(
+  'a -> ('a, NGraph.vertex) BatMap.t -> NGraph.vertex
+)
+ident(
+  ext_ref BatMap.find
+)
+"sparse/worklist.ml" 41 816 837 "sparse/worklist.ml" 41 816 838
+type(
+  'a
+)
+ident(
+  int_ref n "sparse/worklist.ml" 40 791 804 "sparse/worklist.ml" 40 791 805
+)
+"sparse/worklist.ml" 41 816 839 "sparse/worklist.ml" 41 816 842
+type(
+  ('a, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref n2i "sparse/worklist.ml" 40 791 810 "sparse/worklist.ml" 40 791 813
+)
+"sparse/worklist.ml" 41 816 825 "sparse/worklist.ml" 41 816 842
+call(
+  stack
+)
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 41 816 844 "sparse/worklist.ml" 41 816 847
+type(
+  (NGraph.vertex, 'a) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 40 791 806 "sparse/worklist.ml" 40 791 809
+)
+"sparse/worklist.ml" 41 816 849 "sparse/worklist.ml" 41 816 852
+type(
+  ('a, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref n2i "sparse/worklist.ml" 40 791 810 "sparse/worklist.ml" 40 791 813
+)
+"sparse/worklist.ml" 41 816 824 "sparse/worklist.ml" 41 816 853
+type(
+  NGraph.vertex * (NGraph.vertex, 'a) BatMap.t * ('a, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 41 816 859 "sparse/worklist.ml" 41 816 868
+type(
+  exn
+)
+"sparse/worklist.ml" 42 872 882 "sparse/worklist.ml" 42 872 883
+type(
+  NGraph.vertex
+)
+ident(
+  def i "sparse/worklist.ml" 43 898 904 "sparse/worklist.ml" 43 898 947
+)
+"sparse/worklist.ml" 42 872 886 "sparse/worklist.ml" 42 872 891
+type(
+  unit -> NGraph.vertex
+)
+ident(
+  int_ref new_i "sparse/worklist.ml" 39 742 748 "sparse/worklist.ml" 39 742 753
+)
+"sparse/worklist.ml" 42 872 892 "sparse/worklist.ml" 42 872 894
+type(
+  unit
+)
+"sparse/worklist.ml" 42 872 886 "sparse/worklist.ml" 42 872 894
+call(
+  stack
+)
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 43 898 905 "sparse/worklist.ml" 43 898 906
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref i "sparse/worklist.ml" 42 872 882 "sparse/worklist.ml" 42 872 883
+)
+"sparse/worklist.ml" 43 898 908 "sparse/worklist.ml" 43 898 918
+type(
+  NGraph.vertex ->
+  'a -> (NGraph.vertex, 'a) BatMap.t -> (NGraph.vertex, 'a) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"sparse/worklist.ml" 43 898 919 "sparse/worklist.ml" 43 898 920
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref i "sparse/worklist.ml" 42 872 882 "sparse/worklist.ml" 42 872 883
+)
+"sparse/worklist.ml" 43 898 921 "sparse/worklist.ml" 43 898 922
+type(
+  'a
+)
+ident(
+  int_ref n "sparse/worklist.ml" 40 791 804 "sparse/worklist.ml" 40 791 805
+)
+"sparse/worklist.ml" 43 898 923 "sparse/worklist.ml" 43 898 926
+type(
+  (NGraph.vertex, 'a) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 40 791 806 "sparse/worklist.ml" 40 791 809
+)
+"sparse/worklist.ml" 43 898 908 "sparse/worklist.ml" 43 898 926
+call(
+  stack
+)
+type(
+  (NGraph.vertex, 'a) BatMap.t
+)
+"sparse/worklist.ml" 43 898 928 "sparse/worklist.ml" 43 898 938
+type(
+  'a ->
+  NGraph.vertex ->
+  ('a, NGraph.vertex) BatMap.t -> ('a, NGraph.vertex) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"sparse/worklist.ml" 43 898 939 "sparse/worklist.ml" 43 898 940
+type(
+  'a
+)
+ident(
+  int_ref n "sparse/worklist.ml" 40 791 804 "sparse/worklist.ml" 40 791 805
+)
+"sparse/worklist.ml" 43 898 941 "sparse/worklist.ml" 43 898 942
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref i "sparse/worklist.ml" 42 872 882 "sparse/worklist.ml" 42 872 883
+)
+"sparse/worklist.ml" 43 898 943 "sparse/worklist.ml" 43 898 946
+type(
+  ('a, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref n2i "sparse/worklist.ml" 40 791 810 "sparse/worklist.ml" 40 791 813
+)
+"sparse/worklist.ml" 43 898 928 "sparse/worklist.ml" 43 898 946
+call(
+  stack
+)
+type(
+  ('a, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 43 898 904 "sparse/worklist.ml" 43 898 947
+type(
+  NGraph.vertex * (NGraph.vertex, 'a) BatMap.t * ('a, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 42 872 878 "sparse/worklist.ml" 43 898 947
+type(
+  NGraph.vertex * (NGraph.vertex, 'a) BatMap.t * ('a, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 41 816 820 "sparse/worklist.ml" 43 898 947
+type(
+  NGraph.vertex * (NGraph.vertex, 'a) BatMap.t * ('a, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 44 951 957 "sparse/worklist.ml" 44 951 965
+type(
+  'b ->
+  'b ->
+  NGraph.t * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t ->
+  NGraph.t * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  def add_edge "sparse/worklist.ml" 48 1141 1143 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 44 951 966 "sparse/worklist.ml" 44 951 969
+type(
+  'b
+)
+ident(
+  def src "sparse/worklist.ml" 44 951 970 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 44 951 970 "sparse/worklist.ml" 44 951 973
+type(
+  'b
+)
+ident(
+  def dst "sparse/worklist.ml" 44 951 974 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 44 951 975 "sparse/worklist.ml" 44 951 977
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 45 991 995 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 44 951 979 "sparse/worklist.ml" 44 951 982
+type(
+  (NGraph.vertex, 'b) BatMap.t
+)
+ident(
+  def i2n "sparse/worklist.ml" 45 991 995 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 44 951 984 "sparse/worklist.ml" 44 951 987
+type(
+  ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  def n2i "sparse/worklist.ml" 45 991 995 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 44 951 974 "sparse/worklist.ml" 44 951 988
+type(
+  NGraph.t * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 45 991 1000 "sparse/worklist.ml" 45 991 1005
+type(
+  NGraph.vertex
+)
+ident(
+  def i_src "sparse/worklist.ml" 46 1041 1045 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 45 991 1007 "sparse/worklist.ml" 45 991 1010
+type(
+  (NGraph.vertex, 'b) BatMap.t
+)
+ident(
+  def i2n "sparse/worklist.ml" 46 1041 1045 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 45 991 1012 "sparse/worklist.ml" 45 991 1015
+type(
+  ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  def n2i "sparse/worklist.ml" 46 1041 1045 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 45 991 999 "sparse/worklist.ml" 45 991 1016
+type(
+  NGraph.vertex * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 45 991 1019 "sparse/worklist.ml" 45 991 1025
+type(
+  'b ->
+  (NGraph.vertex, 'b) BatMap.t ->
+  ('b, NGraph.vertex) BatMap.t ->
+  NGraph.vertex * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref create "sparse/worklist.ml" 40 791 797 "sparse/worklist.ml" 40 791 803
+)
+"sparse/worklist.ml" 45 991 1026 "sparse/worklist.ml" 45 991 1029
+type(
+  'b
+)
+ident(
+  int_ref src "sparse/worklist.ml" 44 951 966 "sparse/worklist.ml" 44 951 969
+)
+"sparse/worklist.ml" 45 991 1030 "sparse/worklist.ml" 45 991 1033
+type(
+  (NGraph.vertex, 'b) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 44 951 979 "sparse/worklist.ml" 44 951 982
+)
+"sparse/worklist.ml" 45 991 1034 "sparse/worklist.ml" 45 991 1037
+type(
+  ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref n2i "sparse/worklist.ml" 44 951 984 "sparse/worklist.ml" 44 951 987
+)
+"sparse/worklist.ml" 45 991 1019 "sparse/worklist.ml" 45 991 1037
+call(
+  stack
+)
+type(
+  NGraph.vertex * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 46 1041 1050 "sparse/worklist.ml" 46 1041 1055
+type(
+  NGraph.vertex
+)
+ident(
+  def i_dst "sparse/worklist.ml" 47 1091 1095 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 46 1041 1057 "sparse/worklist.ml" 46 1041 1060
+type(
+  (NGraph.vertex, 'b) BatMap.t
+)
+ident(
+  def i2n "sparse/worklist.ml" 47 1091 1095 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 46 1041 1062 "sparse/worklist.ml" 46 1041 1065
+type(
+  ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  def n2i "sparse/worklist.ml" 47 1091 1095 "sparse/worklist.ml" 47 1091 1137
+)
+"sparse/worklist.ml" 46 1041 1049 "sparse/worklist.ml" 46 1041 1066
+type(
+  NGraph.vertex * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 46 1041 1069 "sparse/worklist.ml" 46 1041 1075
+type(
+  'b ->
+  (NGraph.vertex, 'b) BatMap.t ->
+  ('b, NGraph.vertex) BatMap.t ->
+  NGraph.vertex * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref create "sparse/worklist.ml" 40 791 797 "sparse/worklist.ml" 40 791 803
+)
+"sparse/worklist.ml" 46 1041 1076 "sparse/worklist.ml" 46 1041 1079
+type(
+  'b
+)
+ident(
+  int_ref dst "sparse/worklist.ml" 44 951 970 "sparse/worklist.ml" 44 951 973
+)
+"sparse/worklist.ml" 46 1041 1080 "sparse/worklist.ml" 46 1041 1083
+type(
+  (NGraph.vertex, 'b) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 45 991 1007 "sparse/worklist.ml" 45 991 1010
+)
+"sparse/worklist.ml" 46 1041 1084 "sparse/worklist.ml" 46 1041 1087
+type(
+  ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref n2i "sparse/worklist.ml" 45 991 1012 "sparse/worklist.ml" 45 991 1015
+)
+"sparse/worklist.ml" 46 1041 1069 "sparse/worklist.ml" 46 1041 1087
+call(
+  stack
+)
+type(
+  NGraph.vertex * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 47 1091 1096 "sparse/worklist.ml" 47 1091 1111
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.vertex -> NGraph.t
+)
+ident(
+  ext_ref NGraph.add_edge
+)
+"sparse/worklist.ml" 47 1091 1112 "sparse/worklist.ml" 47 1091 1114
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 44 951 975 "sparse/worklist.ml" 44 951 977
+)
+"sparse/worklist.ml" 47 1091 1115 "sparse/worklist.ml" 47 1091 1120
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref i_src "sparse/worklist.ml" 45 991 1000 "sparse/worklist.ml" 45 991 1005
+)
+"sparse/worklist.ml" 47 1091 1121 "sparse/worklist.ml" 47 1091 1126
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref i_dst "sparse/worklist.ml" 46 1041 1050 "sparse/worklist.ml" 46 1041 1055
+)
+"sparse/worklist.ml" 47 1091 1096 "sparse/worklist.ml" 47 1091 1126
+call(
+  stack
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 47 1091 1128 "sparse/worklist.ml" 47 1091 1131
+type(
+  (NGraph.vertex, 'b) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 46 1041 1057 "sparse/worklist.ml" 46 1041 1060
+)
+"sparse/worklist.ml" 47 1091 1133 "sparse/worklist.ml" 47 1091 1136
+type(
+  ('b, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref n2i "sparse/worklist.ml" 46 1041 1062 "sparse/worklist.ml" 46 1041 1065
+)
+"sparse/worklist.ml" 47 1091 1095 "sparse/worklist.ml" 47 1091 1137
+type(
+  NGraph.t * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 46 1041 1045 "sparse/worklist.ml" 47 1091 1137
+type(
+  NGraph.t * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 45 991 995 "sparse/worklist.ml" 47 1091 1137
+type(
+  NGraph.t * (NGraph.vertex, 'b) BatMap.t * ('b, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 48 1141 1148 "sparse/worklist.ml" 48 1141 1150
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 50 1242 1244 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 48 1141 1152 "sparse/worklist.ml" 48 1141 1155
+type(
+  (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  def i2n "sparse/worklist.ml" 50 1242 1244 "sparse/worklist.ml" 50 1242 1253
+)
+"sparse/worklist.ml" 48 1141 1157 "sparse/worklist.ml" 48 1141 1158
+type(
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 48 1141 1147 "sparse/worklist.ml" 48 1141 1159
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 49 1162 1166 "sparse/worklist.ml" 49 1162 1184
+type(
+  (DUGraph.vertex ->
+   DUGraph.vertex ->
+   NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+   (DUGraph.vertex, NGraph.vertex) BatMap.t ->
+   NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+   (DUGraph.vertex, NGraph.vertex) BatMap.t) ->
+  DUGraph.t ->
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t ->
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+ident(
+  ext_ref DUGraph.fold_edges
+)
+"sparse/worklist.ml" 49 1162 1185 "sparse/worklist.ml" 49 1162 1193
+type(
+  DUGraph.vertex ->
+  DUGraph.vertex ->
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t ->
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+ident(
+  int_ref add_edge "sparse/worklist.ml" 44 951 957 "sparse/worklist.ml" 44 951 965
+)
+"sparse/worklist.ml" 49 1162 1194 "sparse/worklist.ml" 49 1162 1195
+type(
+  DUGraph.t
+)
+ident(
+  int_ref g "sparse/worklist.ml" 37 712 718 "sparse/worklist.ml" 37 712 719
+)
+"sparse/worklist.ml" 49 1162 1197 "sparse/worklist.ml" 49 1162 1209
+type(
+  NGraph.t
+)
+ident(
+  ext_ref NGraph.empty
+)
+"sparse/worklist.ml" 49 1162 1211 "sparse/worklist.ml" 49 1162 1223
+type(
+  (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 49 1162 1225 "sparse/worklist.ml" 49 1162 1237
+type(
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 49 1162 1196 "sparse/worklist.ml" 49 1162 1238
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 49 1162 1166 "sparse/worklist.ml" 49 1162 1238
+call(
+  stack
+)
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t *
+  (DUGraph.vertex, NGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 50 1242 1245 "sparse/worklist.ml" 50 1242 1247
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 48 1141 1148 "sparse/worklist.ml" 48 1141 1150
+)
+"sparse/worklist.ml" 50 1242 1249 "sparse/worklist.ml" 50 1242 1252
+type(
+  (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 48 1141 1152 "sparse/worklist.ml" 48 1141 1155
+)
+"sparse/worklist.ml" 50 1242 1244 "sparse/worklist.ml" 50 1242 1253
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 48 1141 1143 "sparse/worklist.ml" 50 1242 1253
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 44 951 953 "sparse/worklist.ml" 50 1242 1253
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 40 791 793 "sparse/worklist.ml" 50 1242 1253
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 39 742 744 "sparse/worklist.ml" 50 1242 1253
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 38 723 725 "sparse/worklist.ml" 50 1242 1253
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 37 712 714 "sparse/worklist.ml" 50 1242 1253
+type(
+  DUGraph.t -> NGraph.t * (int, DUGraph.vertex) BatMap.t
+)
+type(
+  DUGraph.t -> NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 52 1255 1259 "sparse/worklist.ml" 52 1255 1269
+type(
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.t
+)
+ident(
+  def projection "sparse/worklist.ml" 60 1576 1576 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 53 1319 1325 "sparse/worklist.ml" 53 1319 1328
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def scc "sparse/worklist.ml" 53 1319 1329 "sparse/worklist.ml" 58 1530 1574
+)
+"sparse/worklist.ml" 53 1319 1329 "sparse/worklist.ml" 53 1319 1331
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 54 1335 1337 "sparse/worklist.ml" 58 1530 1574
+)
+"sparse/worklist.ml" 54 1335 1341 "sparse/worklist.ml" 54 1335 1354
+type(
+  NGraph.vertex -> NGraph.t -> NGraph.t
+)
+ident(
+  def add_back_edge "sparse/worklist.ml" 58 1530 1532 "sparse/worklist.ml" 58 1530 1574
+)
+"sparse/worklist.ml" 54 1335 1355 "sparse/worklist.ml" 54 1335 1356
+type(
+  NGraph.vertex
+)
+ident(
+  def e "sparse/worklist.ml" 54 1335 1357 "sparse/worklist.ml" 57 1462 1526
+)
+"sparse/worklist.ml" 54 1335 1357 "sparse/worklist.ml" 54 1335 1361
+type(
+  NGraph.t
+)
+ident(
+  def newg "sparse/worklist.ml" 55 1364 1368 "sparse/worklist.ml" 57 1462 1526
+)
+"sparse/worklist.ml" 55 1364 1372 "sparse/worklist.ml" 55 1364 1376
+type(
+  NGraph.vertex list
+)
+ident(
+  def succ "sparse/worklist.ml" 56 1399 1403 "sparse/worklist.ml" 57 1462 1526
+)
+"sparse/worklist.ml" 55 1364 1379 "sparse/worklist.ml" 55 1364 1390
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.vertex list
+)
+ident(
+  ext_ref NGraph.succ
+)
+"sparse/worklist.ml" 55 1364 1391 "sparse/worklist.ml" 55 1364 1393
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 53 1319 1329 "sparse/worklist.ml" 53 1319 1331
+)
+"sparse/worklist.ml" 55 1364 1394 "sparse/worklist.ml" 55 1364 1395
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref e "sparse/worklist.ml" 54 1335 1355 "sparse/worklist.ml" 54 1335 1356
+)
+"sparse/worklist.ml" 55 1364 1379 "sparse/worklist.ml" 55 1364 1395
+call(
+  stack
+)
+type(
+  NGraph.vertex list
+)
+"sparse/worklist.ml" 56 1399 1407 "sparse/worklist.ml" 56 1399 1411
+type(
+  NGraph.vertex list
+)
+ident(
+  def succ "sparse/worklist.ml" 57 1462 1466 "sparse/worklist.ml" 57 1462 1526
+)
+"sparse/worklist.ml" 56 1399 1414 "sparse/worklist.ml" 56 1399 1425
+type(
+  (NGraph.vertex -> bool) -> NGraph.vertex list -> NGraph.vertex list
+)
+ident(
+  ext_ref List.filter
+)
+"sparse/worklist.ml" 56 1399 1431 "sparse/worklist.ml" 56 1399 1432
+type(
+  NGraph.vertex
+)
+ident(
+  def x "sparse/worklist.ml" 56 1399 1436 "sparse/worklist.ml" 56 1399 1452
+)
+"sparse/worklist.ml" 56 1399 1436 "sparse/worklist.ml" 56 1399 1446
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"sparse/worklist.ml" 56 1399 1447 "sparse/worklist.ml" 56 1399 1448
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref x "sparse/worklist.ml" 56 1399 1431 "sparse/worklist.ml" 56 1399 1432
+)
+"sparse/worklist.ml" 56 1399 1449 "sparse/worklist.ml" 56 1399 1452
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 53 1319 1325 "sparse/worklist.ml" 53 1319 1328
+)
+"sparse/worklist.ml" 56 1399 1436 "sparse/worklist.ml" 56 1399 1452
+call(
+  tail
+)
+type(
+  bool
+)
+"sparse/worklist.ml" 56 1399 1426 "sparse/worklist.ml" 56 1399 1453
+type(
+  NGraph.vertex -> bool
+)
+"sparse/worklist.ml" 56 1399 1454 "sparse/worklist.ml" 56 1399 1458
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref succ "sparse/worklist.ml" 55 1364 1372 "sparse/worklist.ml" 55 1364 1376
+)
+"sparse/worklist.ml" 56 1399 1414 "sparse/worklist.ml" 56 1399 1458
+call(
+  stack
+)
+type(
+  NGraph.vertex list
+)
+"sparse/worklist.ml" 57 1462 1466 "sparse/worklist.ml" 57 1462 1475
+type(
+  (NGraph.vertex -> NGraph.t -> NGraph.t) ->
+  NGraph.vertex list -> NGraph.t -> NGraph.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"sparse/worklist.ml" 57 1462 1481 "sparse/worklist.ml" 57 1462 1482
+type(
+  NGraph.vertex
+)
+ident(
+  def s "sparse/worklist.ml" 57 1462 1483 "sparse/worklist.ml" 57 1462 1515
+)
+"sparse/worklist.ml" 57 1462 1483 "sparse/worklist.ml" 57 1462 1487
+type(
+  NGraph.t
+)
+ident(
+  def newg "sparse/worklist.ml" 57 1462 1491 "sparse/worklist.ml" 57 1462 1515
+)
+"sparse/worklist.ml" 57 1462 1491 "sparse/worklist.ml" 57 1462 1506
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.vertex -> NGraph.t
+)
+ident(
+  ext_ref NGraph.add_edge
+)
+"sparse/worklist.ml" 57 1462 1507 "sparse/worklist.ml" 57 1462 1511
+type(
+  NGraph.t
+)
+ident(
+  int_ref newg "sparse/worklist.ml" 57 1462 1483 "sparse/worklist.ml" 57 1462 1487
+)
+"sparse/worklist.ml" 57 1462 1512 "sparse/worklist.ml" 57 1462 1513
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref e "sparse/worklist.ml" 54 1335 1355 "sparse/worklist.ml" 54 1335 1356
+)
+"sparse/worklist.ml" 57 1462 1514 "sparse/worklist.ml" 57 1462 1515
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref s "sparse/worklist.ml" 57 1462 1481 "sparse/worklist.ml" 57 1462 1482
+)
+"sparse/worklist.ml" 57 1462 1491 "sparse/worklist.ml" 57 1462 1515
+call(
+  tail
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 57 1462 1476 "sparse/worklist.ml" 57 1462 1516
+type(
+  NGraph.vertex -> NGraph.t -> NGraph.t
+)
+"sparse/worklist.ml" 57 1462 1517 "sparse/worklist.ml" 57 1462 1521
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref succ "sparse/worklist.ml" 56 1399 1407 "sparse/worklist.ml" 56 1399 1411
+)
+"sparse/worklist.ml" 57 1462 1522 "sparse/worklist.ml" 57 1462 1526
+type(
+  NGraph.t
+)
+ident(
+  int_ref newg "sparse/worklist.ml" 54 1335 1357 "sparse/worklist.ml" 54 1335 1361
+)
+"sparse/worklist.ml" 57 1462 1466 "sparse/worklist.ml" 57 1462 1526
+call(
+  tail
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 56 1399 1403 "sparse/worklist.ml" 57 1462 1526
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 55 1364 1368 "sparse/worklist.ml" 57 1462 1526
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 58 1530 1532 "sparse/worklist.ml" 58 1530 1543
+type(
+  (NGraph.vertex -> NGraph.t -> NGraph.t) ->
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"sparse/worklist.ml" 58 1530 1544 "sparse/worklist.ml" 58 1530 1557
+type(
+  NGraph.vertex -> NGraph.t -> NGraph.t
+)
+ident(
+  int_ref add_back_edge "sparse/worklist.ml" 54 1335 1341 "sparse/worklist.ml" 54 1335 1354
+)
+"sparse/worklist.ml" 58 1530 1558 "sparse/worklist.ml" 58 1530 1561
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 53 1319 1325 "sparse/worklist.ml" 53 1319 1328
+)
+"sparse/worklist.ml" 58 1530 1562 "sparse/worklist.ml" 58 1530 1574
+type(
+  NGraph.t
+)
+ident(
+  ext_ref NGraph.empty
+)
+"sparse/worklist.ml" 58 1530 1532 "sparse/worklist.ml" 58 1530 1574
+call(
+  tail
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 54 1335 1337 "sparse/worklist.ml" 58 1530 1574
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 53 1319 1321 "sparse/worklist.ml" 58 1530 1574
+type(
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.t
+)
+type(
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.t
+)
+"sparse/worklist.ml" 60 1576 1580 "sparse/worklist.ml" 60 1576 1591
+type(
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.vertex
+)
+ident(
+  def loophead_of "sparse/worklist.ml" 74 2144 2144 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 60 1576 1592 "sparse/worklist.ml" 60 1576 1595
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def scc "sparse/worklist.ml" 60 1576 1596 "sparse/worklist.ml" 72 2078 2142
+)
+"sparse/worklist.ml" 60 1576 1596 "sparse/worklist.ml" 60 1576 1598
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 61 1601 1603 "sparse/worklist.ml" 72 2078 2142
+)
+"sparse/worklist.ml" 61 1601 1607 "sparse/worklist.ml" 61 1601 1616
+type(
+  NGraph.vertex ->
+  NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  def add_entry "sparse/worklist.ml" 64 1725 1727 "sparse/worklist.ml" 72 2078 2142
+)
+"sparse/worklist.ml" 61 1601 1617 "sparse/worklist.ml" 61 1601 1620
+type(
+  NGraph.vertex
+)
+ident(
+  def src "sparse/worklist.ml" 61 1601 1621 "sparse/worklist.ml" 63 1709 1721
+)
+"sparse/worklist.ml" 61 1601 1621 "sparse/worklist.ml" 61 1601 1624
+type(
+  NGraph.vertex
+)
+ident(
+  def dst "sparse/worklist.ml" 61 1601 1625 "sparse/worklist.ml" 63 1709 1721
+)
+"sparse/worklist.ml" 61 1601 1625 "sparse/worklist.ml" 61 1601 1628
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def acc "sparse/worklist.ml" 62 1631 1635 "sparse/worklist.ml" 63 1709 1721
+)
+"sparse/worklist.ml" 62 1631 1638 "sparse/worklist.ml" 62 1631 1641
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"sparse/worklist.ml" 62 1631 1643 "sparse/worklist.ml" 62 1631 1653
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"sparse/worklist.ml" 62 1631 1654 "sparse/worklist.ml" 62 1631 1657
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref src "sparse/worklist.ml" 61 1601 1617 "sparse/worklist.ml" 61 1601 1620
+)
+"sparse/worklist.ml" 62 1631 1658 "sparse/worklist.ml" 62 1631 1661
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 60 1576 1592 "sparse/worklist.ml" 60 1576 1595
+)
+"sparse/worklist.ml" 62 1631 1642 "sparse/worklist.ml" 62 1631 1662
+call(
+  stack
+)
+type(
+  bool
+)
+"sparse/worklist.ml" 62 1631 1638 "sparse/worklist.ml" 62 1631 1662
+type(
+  bool
+)
+"sparse/worklist.ml" 62 1631 1663 "sparse/worklist.ml" 62 1631 1665
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"sparse/worklist.ml" 62 1631 1666 "sparse/worklist.ml" 62 1631 1676
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"sparse/worklist.ml" 62 1631 1677 "sparse/worklist.ml" 62 1631 1680
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref dst "sparse/worklist.ml" 61 1601 1621 "sparse/worklist.ml" 61 1601 1624
+)
+"sparse/worklist.ml" 62 1631 1681 "sparse/worklist.ml" 62 1631 1684
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 60 1576 1592 "sparse/worklist.ml" 60 1576 1595
+)
+"sparse/worklist.ml" 62 1631 1666 "sparse/worklist.ml" 62 1631 1684
+call(
+  stack
+)
+type(
+  bool
+)
+"sparse/worklist.ml" 62 1631 1638 "sparse/worklist.ml" 62 1631 1684
+type(
+  bool
+)
+"sparse/worklist.ml" 62 1631 1690 "sparse/worklist.ml" 62 1631 1700
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"sparse/worklist.ml" 62 1631 1701 "sparse/worklist.ml" 62 1631 1704
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref dst "sparse/worklist.ml" 61 1601 1621 "sparse/worklist.ml" 61 1601 1624
+)
+"sparse/worklist.ml" 62 1631 1705 "sparse/worklist.ml" 62 1631 1708
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref acc "sparse/worklist.ml" 61 1601 1625 "sparse/worklist.ml" 61 1601 1628
+)
+"sparse/worklist.ml" 62 1631 1690 "sparse/worklist.ml" 62 1631 1708
+call(
+  tail
+)
+type(
+  NGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 63 1709 1718 "sparse/worklist.ml" 63 1709 1721
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref acc "sparse/worklist.ml" 61 1601 1625 "sparse/worklist.ml" 61 1601 1628
+)
+"sparse/worklist.ml" 62 1631 1635 "sparse/worklist.ml" 63 1709 1721
+type(
+  NGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 64 1725 1731 "sparse/worklist.ml" 64 1725 1738
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def entries "sparse/worklist.ml" 65 1788 1790 "sparse/worklist.ml" 72 2078 2142
+)
+"sparse/worklist.ml" 64 1725 1741 "sparse/worklist.ml" 64 1725 1758
+type(
+  (NGraph.vertex ->
+   NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t) ->
+  NGraph.t -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref NGraph.fold_edges
+)
+"sparse/worklist.ml" 64 1725 1759 "sparse/worklist.ml" 64 1725 1768
+type(
+  NGraph.vertex ->
+  NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  int_ref add_entry "sparse/worklist.ml" 61 1601 1607 "sparse/worklist.ml" 61 1601 1616
+)
+"sparse/worklist.ml" 64 1725 1769 "sparse/worklist.ml" 64 1725 1771
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 60 1576 1596 "sparse/worklist.ml" 60 1576 1598
+)
+"sparse/worklist.ml" 64 1725 1772 "sparse/worklist.ml" 64 1725 1784
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"sparse/worklist.ml" 64 1725 1741 "sparse/worklist.ml" 64 1725 1784
+call(
+  stack
+)
+type(
+  NGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 65 1788 1794 "sparse/worklist.ml" 65 1788 1803
+type(
+  NGraph.vertex -> int
+)
+ident(
+  def get_score "sparse/worklist.ml" 69 1934 1936 "sparse/worklist.ml" 72 2078 2142
+)
+"sparse/worklist.ml" 65 1788 1804 "sparse/worklist.ml" 65 1788 1805
+type(
+  NGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 66 1808 1812 "sparse/worklist.ml" 68 1909 1930
+)
+"sparse/worklist.ml" 66 1808 1816 "sparse/worklist.ml" 66 1808 1821
+type(
+  NGraph.vertex list
+)
+ident(
+  def preds "sparse/worklist.ml" 67 1844 1848 "sparse/worklist.ml" 68 1909 1930
+)
+"sparse/worklist.ml" 66 1808 1824 "sparse/worklist.ml" 66 1808 1835
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.vertex list
+)
+ident(
+  ext_ref NGraph.pred
+)
+"sparse/worklist.ml" 66 1808 1836 "sparse/worklist.ml" 66 1808 1838
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 60 1576 1596 "sparse/worklist.ml" 60 1576 1598
+)
+"sparse/worklist.ml" 66 1808 1839 "sparse/worklist.ml" 66 1808 1840
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 65 1788 1804 "sparse/worklist.ml" 65 1788 1805
+)
+"sparse/worklist.ml" 66 1808 1824 "sparse/worklist.ml" 66 1808 1840
+call(
+  stack
+)
+type(
+  NGraph.vertex list
+)
+"sparse/worklist.ml" 67 1844 1852 "sparse/worklist.ml" 67 1844 1857
+type(
+  NGraph.vertex list
+)
+ident(
+  def preds "sparse/worklist.ml" 68 1909 1913 "sparse/worklist.ml" 68 1909 1930
+)
+"sparse/worklist.ml" 67 1844 1860 "sparse/worklist.ml" 67 1844 1871
+type(
+  (NGraph.vertex -> bool) -> NGraph.vertex list -> NGraph.vertex list
+)
+ident(
+  ext_ref List.filter
+)
+"sparse/worklist.ml" 67 1844 1877 "sparse/worklist.ml" 67 1844 1878
+type(
+  NGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 67 1844 1882 "sparse/worklist.ml" 67 1844 1898
+)
+"sparse/worklist.ml" 67 1844 1882 "sparse/worklist.ml" 67 1844 1892
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"sparse/worklist.ml" 67 1844 1893 "sparse/worklist.ml" 67 1844 1894
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 67 1844 1877 "sparse/worklist.ml" 67 1844 1878
+)
+"sparse/worklist.ml" 67 1844 1895 "sparse/worklist.ml" 67 1844 1898
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 60 1576 1592 "sparse/worklist.ml" 60 1576 1595
+)
+"sparse/worklist.ml" 67 1844 1882 "sparse/worklist.ml" 67 1844 1898
+call(
+  tail
+)
+type(
+  bool
+)
+"sparse/worklist.ml" 67 1844 1872 "sparse/worklist.ml" 67 1844 1899
+type(
+  NGraph.vertex -> bool
+)
+"sparse/worklist.ml" 67 1844 1900 "sparse/worklist.ml" 67 1844 1905
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref preds "sparse/worklist.ml" 66 1808 1816 "sparse/worklist.ml" 66 1808 1821
+)
+"sparse/worklist.ml" 67 1844 1860 "sparse/worklist.ml" 67 1844 1905
+call(
+  stack
+)
+type(
+  NGraph.vertex list
+)
+"sparse/worklist.ml" 68 1909 1913 "sparse/worklist.ml" 68 1909 1924
+type(
+  NGraph.vertex list -> int
+)
+ident(
+  ext_ref List.length
+)
+"sparse/worklist.ml" 68 1909 1925 "sparse/worklist.ml" 68 1909 1930
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref preds "sparse/worklist.ml" 67 1844 1852 "sparse/worklist.ml" 67 1844 1857
+)
+"sparse/worklist.ml" 68 1909 1913 "sparse/worklist.ml" 68 1909 1930
+call(
+  tail
+)
+type(
+  int
+)
+"sparse/worklist.ml" 67 1844 1848 "sparse/worklist.ml" 68 1909 1930
+type(
+  int
+)
+"sparse/worklist.ml" 66 1808 1812 "sparse/worklist.ml" 68 1909 1930
+type(
+  int
+)
+"sparse/worklist.ml" 69 1934 1940 "sparse/worklist.ml" 69 1934 1953
+type(
+  NGraph.vertex -> NGraph.vertex * int -> NGraph.vertex * int
+)
+ident(
+  def compare_score "sparse/worklist.ml" 72 2078 2080 "sparse/worklist.ml" 72 2078 2142
+)
+"sparse/worklist.ml" 69 1934 1954 "sparse/worklist.ml" 69 1934 1955
+type(
+  NGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 69 1934 1956 "sparse/worklist.ml" 71 2010 2074
+)
+"sparse/worklist.ml" 69 1934 1957 "sparse/worklist.ml" 69 1934 1966
+type(
+  NGraph.vertex
+)
+ident(
+  def candidate "sparse/worklist.ml" 70 1977 1981 "sparse/worklist.ml" 71 2010 2074
+)
+"sparse/worklist.ml" 69 1934 1968 "sparse/worklist.ml" 69 1934 1973
+type(
+  int
+)
+ident(
+  def score "sparse/worklist.ml" 70 1977 1981 "sparse/worklist.ml" 71 2010 2074
+)
+"sparse/worklist.ml" 69 1934 1956 "sparse/worklist.ml" 69 1934 1974
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 70 1977 1985 "sparse/worklist.ml" 70 1977 1992
+type(
+  int
+)
+ident(
+  def score_n "sparse/worklist.ml" 71 2010 2014 "sparse/worklist.ml" 71 2010 2074
+)
+"sparse/worklist.ml" 70 1977 1995 "sparse/worklist.ml" 70 1977 2004
+type(
+  NGraph.vertex -> int
+)
+ident(
+  int_ref get_score "sparse/worklist.ml" 65 1788 1794 "sparse/worklist.ml" 65 1788 1803
+)
+"sparse/worklist.ml" 70 1977 2005 "sparse/worklist.ml" 70 1977 2006
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 69 1934 1954 "sparse/worklist.ml" 69 1934 1955
+)
+"sparse/worklist.ml" 70 1977 1995 "sparse/worklist.ml" 70 1977 2006
+call(
+  stack
+)
+type(
+  int
+)
+"sparse/worklist.ml" 71 2010 2017 "sparse/worklist.ml" 71 2010 2024
+type(
+  int
+)
+ident(
+  int_ref score_n "sparse/worklist.ml" 70 1977 1985 "sparse/worklist.ml" 70 1977 1992
+)
+"sparse/worklist.ml" 71 2010 2025 "sparse/worklist.ml" 71 2010 2026
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"sparse/worklist.ml" 71 2010 2027 "sparse/worklist.ml" 71 2010 2032
+type(
+  int
+)
+ident(
+  int_ref score "sparse/worklist.ml" 69 1934 1968 "sparse/worklist.ml" 69 1934 1973
+)
+"sparse/worklist.ml" 71 2010 2017 "sparse/worklist.ml" 71 2010 2032
+type(
+  bool
+)
+"sparse/worklist.ml" 71 2010 2039 "sparse/worklist.ml" 71 2010 2040
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 69 1934 1954 "sparse/worklist.ml" 69 1934 1955
+)
+"sparse/worklist.ml" 71 2010 2042 "sparse/worklist.ml" 71 2010 2049
+type(
+  int
+)
+ident(
+  int_ref score_n "sparse/worklist.ml" 70 1977 1985 "sparse/worklist.ml" 70 1977 1992
+)
+"sparse/worklist.ml" 71 2010 2038 "sparse/worklist.ml" 71 2010 2050
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 71 2010 2057 "sparse/worklist.ml" 71 2010 2066
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref candidate "sparse/worklist.ml" 69 1934 1957 "sparse/worklist.ml" 69 1934 1966
+)
+"sparse/worklist.ml" 71 2010 2068 "sparse/worklist.ml" 71 2010 2073
+type(
+  int
+)
+ident(
+  int_ref score "sparse/worklist.ml" 69 1934 1968 "sparse/worklist.ml" 69 1934 1973
+)
+"sparse/worklist.ml" 71 2010 2056 "sparse/worklist.ml" 71 2010 2074
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 71 2010 2014 "sparse/worklist.ml" 71 2010 2074
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 70 1977 1981 "sparse/worklist.ml" 71 2010 2074
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 72 2078 2080 "sparse/worklist.ml" 72 2078 2083
+type(
+  NGraph.vertex * int -> NGraph.vertex
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"sparse/worklist.ml" 72 2078 2085 "sparse/worklist.ml" 72 2078 2096
+type(
+  (NGraph.vertex -> NGraph.vertex * int -> NGraph.vertex * int) ->
+  NGraph.vertex BatSet.t -> NGraph.vertex * int -> NGraph.vertex * int
+)
+ident(
+  ext_ref BatSet.fold
+)
+"sparse/worklist.ml" 72 2078 2097 "sparse/worklist.ml" 72 2078 2110
+type(
+  NGraph.vertex -> NGraph.vertex * int -> NGraph.vertex * int
+)
+ident(
+  int_ref compare_score "sparse/worklist.ml" 69 1934 1940 "sparse/worklist.ml" 69 1934 1953
+)
+"sparse/worklist.ml" 72 2078 2111 "sparse/worklist.ml" 72 2078 2118
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref entries "sparse/worklist.ml" 64 1725 1731 "sparse/worklist.ml" 64 1725 1738
+)
+"sparse/worklist.ml" 72 2078 2120 "sparse/worklist.ml" 72 2078 2133
+type(
+  NGraph.vertex BatSet.t -> NGraph.vertex
+)
+ident(
+  ext_ref BatSet.choose
+)
+"sparse/worklist.ml" 72 2078 2134 "sparse/worklist.ml" 72 2078 2137
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 60 1576 1592 "sparse/worklist.ml" 60 1576 1595
+)
+"sparse/worklist.ml" 72 2078 2120 "sparse/worklist.ml" 72 2078 2137
+call(
+  stack
+)
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 72 2078 2139 "sparse/worklist.ml" 72 2078 2140
+type(
+  int
+)
+"sparse/worklist.ml" 72 2078 2119 "sparse/worklist.ml" 72 2078 2141
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 72 2078 2084 "sparse/worklist.ml" 72 2078 2142
+call(
+  stack
+)
+type(
+  NGraph.vertex * int
+)
+"sparse/worklist.ml" 72 2078 2080 "sparse/worklist.ml" 72 2078 2142
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 69 1934 1936 "sparse/worklist.ml" 72 2078 2142
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 65 1788 1790 "sparse/worklist.ml" 72 2078 2142
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 64 1725 1727 "sparse/worklist.ml" 72 2078 2142
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 61 1601 1603 "sparse/worklist.ml" 72 2078 2142
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 74 2144 2148 "sparse/worklist.ml" 74 2144 2161
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.t
+)
+ident(
+  def cut_backedges "sparse/worklist.ml" 79 2303 2303 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 74 2144 2162 "sparse/worklist.ml" 74 2144 2164
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 74 2144 2165 "sparse/worklist.ml" 77 2272 2301
+)
+"sparse/worklist.ml" 74 2144 2165 "sparse/worklist.ml" 74 2144 2170
+type(
+  NGraph.vertex
+)
+ident(
+  def entry "sparse/worklist.ml" 75 2173 2175 "sparse/worklist.ml" 77 2272 2301
+)
+"sparse/worklist.ml" 75 2173 2179 "sparse/worklist.ml" 75 2173 2184
+type(
+  NGraph.vertex list
+)
+ident(
+  def preds "sparse/worklist.ml" 76 2211 2213 "sparse/worklist.ml" 77 2272 2301
+)
+"sparse/worklist.ml" 75 2173 2187 "sparse/worklist.ml" 75 2173 2198
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.vertex list
+)
+ident(
+  ext_ref NGraph.pred
+)
+"sparse/worklist.ml" 75 2173 2199 "sparse/worklist.ml" 75 2173 2201
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 74 2144 2162 "sparse/worklist.ml" 74 2144 2164
+)
+"sparse/worklist.ml" 75 2173 2202 "sparse/worklist.ml" 75 2173 2207
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref entry "sparse/worklist.ml" 74 2144 2165 "sparse/worklist.ml" 74 2144 2170
+)
+"sparse/worklist.ml" 75 2173 2187 "sparse/worklist.ml" 75 2173 2207
+call(
+  stack
+)
+type(
+  NGraph.vertex list
+)
+"sparse/worklist.ml" 76 2211 2217 "sparse/worklist.ml" 76 2211 2225
+type(
+  NGraph.vertex -> NGraph.t -> NGraph.t
+)
+ident(
+  def cut_edge "sparse/worklist.ml" 77 2272 2274 "sparse/worklist.ml" 77 2272 2301
+)
+"sparse/worklist.ml" 76 2211 2226 "sparse/worklist.ml" 76 2211 2230
+type(
+  NGraph.vertex
+)
+ident(
+  def pred "sparse/worklist.ml" 76 2211 2231 "sparse/worklist.ml" 76 2211 2268
+)
+"sparse/worklist.ml" 76 2211 2231 "sparse/worklist.ml" 76 2211 2233
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 76 2211 2236 "sparse/worklist.ml" 76 2211 2268
+)
+"sparse/worklist.ml" 76 2211 2236 "sparse/worklist.ml" 76 2211 2254
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.vertex -> NGraph.t
+)
+ident(
+  ext_ref NGraph.remove_edge
+)
+"sparse/worklist.ml" 76 2211 2255 "sparse/worklist.ml" 76 2211 2257
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 76 2211 2231 "sparse/worklist.ml" 76 2211 2233
+)
+"sparse/worklist.ml" 76 2211 2258 "sparse/worklist.ml" 76 2211 2262
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref pred "sparse/worklist.ml" 76 2211 2226 "sparse/worklist.ml" 76 2211 2230
+)
+"sparse/worklist.ml" 76 2211 2263 "sparse/worklist.ml" 76 2211 2268
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref entry "sparse/worklist.ml" 74 2144 2165 "sparse/worklist.ml" 74 2144 2170
+)
+"sparse/worklist.ml" 76 2211 2236 "sparse/worklist.ml" 76 2211 2268
+call(
+  tail
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 77 2272 2274 "sparse/worklist.ml" 77 2272 2283
+type(
+  (NGraph.vertex -> NGraph.t -> NGraph.t) ->
+  NGraph.vertex list -> NGraph.t -> NGraph.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"sparse/worklist.ml" 77 2272 2284 "sparse/worklist.ml" 77 2272 2292
+type(
+  NGraph.vertex -> NGraph.t -> NGraph.t
+)
+ident(
+  int_ref cut_edge "sparse/worklist.ml" 76 2211 2217 "sparse/worklist.ml" 76 2211 2225
+)
+"sparse/worklist.ml" 77 2272 2293 "sparse/worklist.ml" 77 2272 2298
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref preds "sparse/worklist.ml" 75 2173 2179 "sparse/worklist.ml" 75 2173 2184
+)
+"sparse/worklist.ml" 77 2272 2299 "sparse/worklist.ml" 77 2272 2301
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 74 2144 2162 "sparse/worklist.ml" 74 2144 2164
+)
+"sparse/worklist.ml" 77 2272 2274 "sparse/worklist.ml" 77 2272 2301
+call(
+  tail
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 76 2211 2213 "sparse/worklist.ml" 77 2272 2301
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 75 2173 2175 "sparse/worklist.ml" 77 2272 2301
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 79 2303 2311 "sparse/worklist.ml" 79 2303 2320
+type(
+  NGraph.vertex list list ->
+  NGraph.t ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t ->
+  int ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+ident(
+  def get_order "sparse/worklist.ml" 79 2303 2303 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 79 2303 2321 "sparse/worklist.ml" 79 2303 2325
+type(
+  NGraph.vertex list list
+)
+ident(
+  def sccs "sparse/worklist.ml" 79 2303 2326 "sparse/worklist.ml" 95 2987 3017
+)
+"sparse/worklist.ml" 79 2303 2326 "sparse/worklist.ml" 79 2303 2328
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 79 2303 2329 "sparse/worklist.ml" 95 2987 3017
+)
+"sparse/worklist.ml" 79 2303 2330 "sparse/worklist.ml" 79 2303 2332
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def wo "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 95 2987 3017
+)
+"sparse/worklist.ml" 79 2303 2334 "sparse/worklist.ml" 79 2303 2337
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def lhs "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 95 2987 3017
+)
+"sparse/worklist.ml" 79 2303 2339 "sparse/worklist.ml" 79 2303 2341
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def ho "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 95 2987 3017
+)
+"sparse/worklist.ml" 79 2303 2329 "sparse/worklist.ml" 79 2303 2342
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 79 2303 2348
+type(
+  int
+)
+ident(
+  def order "sparse/worklist.ml" 80 2351 2353 "sparse/worklist.ml" 95 2987 3017
+)
+"sparse/worklist.ml" 80 2351 2359 "sparse/worklist.ml" 80 2351 2363
+type(
+  NGraph.vertex list list
+)
+ident(
+  int_ref sccs "sparse/worklist.ml" 79 2303 2321 "sparse/worklist.ml" 79 2303 2325
+)
+"sparse/worklist.ml" 81 2369 2373 "sparse/worklist.ml" 81 2369 2376
+type(
+  NGraph.vertex list
+)
+ident(
+  def scc "sparse/worklist.ml" 82 2385 2389 "sparse/worklist.ml" 94 2921 2986
+)
+"sparse/worklist.ml" 81 2369 2380 "sparse/worklist.ml" 81 2369 2381
+type(
+  NGraph.vertex list list
+)
+ident(
+  def t "sparse/worklist.ml" 82 2385 2389 "sparse/worklist.ml" 94 2921 2986
+)
+"sparse/worklist.ml" 81 2369 2373 "sparse/worklist.ml" 81 2369 2381
+type(
+  NGraph.vertex list list
+)
+"sparse/worklist.ml" 82 2385 2392 "sparse/worklist.ml" 82 2385 2403
+type(
+  NGraph.vertex list -> int
+)
+ident(
+  ext_ref List.length
+)
+"sparse/worklist.ml" 82 2385 2404 "sparse/worklist.ml" 82 2385 2407
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 81 2369 2373 "sparse/worklist.ml" 81 2369 2376
+)
+"sparse/worklist.ml" 82 2385 2392 "sparse/worklist.ml" 82 2385 2407
+call(
+  stack
+)
+type(
+  int
+)
+"sparse/worklist.ml" 82 2385 2408 "sparse/worklist.ml" 82 2385 2409
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"sparse/worklist.ml" 82 2385 2410 "sparse/worklist.ml" 82 2385 2411
+type(
+  int
+)
+"sparse/worklist.ml" 82 2385 2392 "sparse/worklist.ml" 82 2385 2411
+type(
+  bool
+)
+"sparse/worklist.ml" 83 2417 2427 "sparse/worklist.ml" 83 2417 2436
+type(
+  int
+)
+ident(
+  def headorder "sparse/worklist.ml" 84 2472 2478 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 83 2417 2439 "sparse/worklist.ml" 83 2417 2444
+type(
+  int
+)
+ident(
+  int_ref order "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 79 2303 2348
+)
+"sparse/worklist.ml" 83 2417 2445 "sparse/worklist.ml" 83 2417 2446
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"sparse/worklist.ml" 83 2417 2447 "sparse/worklist.ml" 83 2417 2448
+type(
+  int
+)
+"sparse/worklist.ml" 83 2417 2449 "sparse/worklist.ml" 83 2417 2450
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"sparse/worklist.ml" 83 2417 2452 "sparse/worklist.ml" 83 2417 2463
+type(
+  NGraph.vertex list -> int
+)
+ident(
+  ext_ref List.length
+)
+"sparse/worklist.ml" 83 2417 2464 "sparse/worklist.ml" 83 2417 2467
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 81 2369 2373 "sparse/worklist.ml" 81 2369 2376
+)
+"sparse/worklist.ml" 83 2417 2451 "sparse/worklist.ml" 83 2417 2468
+call(
+  stack
+)
+type(
+  int
+)
+"sparse/worklist.ml" 83 2417 2447 "sparse/worklist.ml" 83 2417 2468
+type(
+  int
+)
+"sparse/worklist.ml" 83 2417 2439 "sparse/worklist.ml" 83 2417 2468
+type(
+  int
+)
+"sparse/worklist.ml" 84 2472 2482 "sparse/worklist.ml" 84 2472 2485
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def scc "sparse/worklist.ml" 85 2504 2510 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 84 2472 2488 "sparse/worklist.ml" 84 2472 2496
+type(
+  NGraph.vertex list -> NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref Vocab.list2set
+)
+"sparse/worklist.ml" 84 2472 2497 "sparse/worklist.ml" 84 2472 2500
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 81 2369 2373 "sparse/worklist.ml" 81 2369 2376
+)
+"sparse/worklist.ml" 84 2472 2488 "sparse/worklist.ml" 84 2472 2500
+call(
+  stack
+)
+type(
+  NGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 85 2504 2514 "sparse/worklist.ml" 85 2504 2517
+type(
+  NGraph.t
+)
+ident(
+  def ng' "sparse/worklist.ml" 86 2541 2547 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 85 2504 2520 "sparse/worklist.ml" 85 2504 2530
+type(
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.t
+)
+ident(
+  int_ref projection "sparse/worklist.ml" 52 1255 1259 "sparse/worklist.ml" 52 1255 1269
+)
+"sparse/worklist.ml" 85 2504 2531 "sparse/worklist.ml" 85 2504 2534
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 84 2472 2482 "sparse/worklist.ml" 84 2472 2485
+)
+"sparse/worklist.ml" 85 2504 2535 "sparse/worklist.ml" 85 2504 2537
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 79 2303 2326 "sparse/worklist.ml" 79 2303 2328
+)
+"sparse/worklist.ml" 85 2504 2520 "sparse/worklist.ml" 85 2504 2537
+call(
+  stack
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 86 2541 2551 "sparse/worklist.ml" 86 2541 2553
+type(
+  NGraph.vertex
+)
+ident(
+  def lh "sparse/worklist.ml" 87 2578 2584 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 86 2541 2556 "sparse/worklist.ml" 86 2541 2567
+type(
+  NGraph.vertex BatSet.t -> NGraph.t -> NGraph.vertex
+)
+ident(
+  int_ref loophead_of "sparse/worklist.ml" 60 1576 1580 "sparse/worklist.ml" 60 1576 1591
+)
+"sparse/worklist.ml" 86 2541 2568 "sparse/worklist.ml" 86 2541 2571
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 84 2472 2482 "sparse/worklist.ml" 84 2472 2485
+)
+"sparse/worklist.ml" 86 2541 2572 "sparse/worklist.ml" 86 2541 2574
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 79 2303 2326 "sparse/worklist.ml" 79 2303 2328
+)
+"sparse/worklist.ml" 86 2541 2556 "sparse/worklist.ml" 86 2541 2574
+call(
+  stack
+)
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 87 2578 2589 "sparse/worklist.ml" 87 2578 2592
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def lhs "sparse/worklist.ml" 88 2651 2657 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 87 2578 2594 "sparse/worklist.ml" 87 2578 2596
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def ho "sparse/worklist.ml" 88 2651 2657 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 87 2578 2588 "sparse/worklist.ml" 87 2578 2597
+type(
+  NGraph.vertex BatSet.t * (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 87 2578 2601 "sparse/worklist.ml" 87 2578 2611
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"sparse/worklist.ml" 87 2578 2612 "sparse/worklist.ml" 87 2578 2614
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref lh "sparse/worklist.ml" 86 2541 2551 "sparse/worklist.ml" 86 2541 2553
+)
+"sparse/worklist.ml" 87 2578 2615 "sparse/worklist.ml" 87 2578 2618
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 79 2303 2334 "sparse/worklist.ml" 79 2303 2337
+)
+"sparse/worklist.ml" 87 2578 2601 "sparse/worklist.ml" 87 2578 2618
+call(
+  stack
+)
+type(
+  NGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 87 2578 2620 "sparse/worklist.ml" 87 2578 2630
+type(
+  NGraph.vertex ->
+  int -> (NGraph.vertex, int) BatMap.t -> (NGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"sparse/worklist.ml" 87 2578 2631 "sparse/worklist.ml" 87 2578 2633
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref lh "sparse/worklist.ml" 86 2541 2551 "sparse/worklist.ml" 86 2541 2553
+)
+"sparse/worklist.ml" 87 2578 2634 "sparse/worklist.ml" 87 2578 2643
+type(
+  int
+)
+ident(
+  int_ref headorder "sparse/worklist.ml" 83 2417 2427 "sparse/worklist.ml" 83 2417 2436
+)
+"sparse/worklist.ml" 87 2578 2644 "sparse/worklist.ml" 87 2578 2646
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 79 2303 2339 "sparse/worklist.ml" 79 2303 2341
+)
+"sparse/worklist.ml" 87 2578 2620 "sparse/worklist.ml" 87 2578 2646
+call(
+  stack
+)
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 87 2578 2600 "sparse/worklist.ml" 87 2578 2647
+type(
+  NGraph.vertex BatSet.t * (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 88 2651 2662 "sparse/worklist.ml" 88 2651 2664
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def wo "sparse/worklist.ml" 89 2728 2734 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 88 2651 2666 "sparse/worklist.ml" 88 2651 2669
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def lhs "sparse/worklist.ml" 89 2728 2734 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 88 2651 2671 "sparse/worklist.ml" 88 2651 2673
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def ho "sparse/worklist.ml" 89 2728 2734 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 88 2651 2675 "sparse/worklist.ml" 88 2651 2676
+type(
+  int
+)
+"sparse/worklist.ml" 88 2651 2661 "sparse/worklist.ml" 88 2651 2677
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 88 2651 2680 "sparse/worklist.ml" 88 2651 2689
+type(
+  NGraph.vertex list list ->
+  NGraph.t ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t ->
+  int ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+ident(
+  int_ref get_order "sparse/worklist.ml" 79 2303 2311 "sparse/worklist.ml" 79 2303 2320
+)
+"sparse/worklist.ml" 88 2651 2690 "sparse/worklist.ml" 88 2651 2691
+type(
+  NGraph.vertex list list
+)
+ident(
+  int_ref t "sparse/worklist.ml" 81 2369 2380 "sparse/worklist.ml" 81 2369 2381
+)
+"sparse/worklist.ml" 88 2651 2692 "sparse/worklist.ml" 88 2651 2694
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 79 2303 2326 "sparse/worklist.ml" 79 2303 2328
+)
+"sparse/worklist.ml" 88 2651 2696 "sparse/worklist.ml" 88 2651 2698
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 79 2303 2330 "sparse/worklist.ml" 79 2303 2332
+)
+"sparse/worklist.ml" 88 2651 2700 "sparse/worklist.ml" 88 2651 2703
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 87 2578 2589 "sparse/worklist.ml" 87 2578 2592
+)
+"sparse/worklist.ml" 88 2651 2705 "sparse/worklist.ml" 88 2651 2707
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 87 2578 2594 "sparse/worklist.ml" 87 2578 2596
+)
+"sparse/worklist.ml" 88 2651 2695 "sparse/worklist.ml" 88 2651 2708
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 88 2651 2710 "sparse/worklist.ml" 88 2651 2719
+type(
+  int
+)
+ident(
+  int_ref headorder "sparse/worklist.ml" 83 2417 2427 "sparse/worklist.ml" 83 2417 2436
+)
+"sparse/worklist.ml" 88 2651 2720 "sparse/worklist.ml" 88 2651 2721
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"sparse/worklist.ml" 88 2651 2722 "sparse/worklist.ml" 88 2651 2723
+type(
+  int
+)
+"sparse/worklist.ml" 88 2651 2709 "sparse/worklist.ml" 88 2651 2724
+type(
+  int
+)
+"sparse/worklist.ml" 88 2651 2680 "sparse/worklist.ml" 88 2651 2724
+call(
+  stack
+)
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 89 2728 2738 "sparse/worklist.ml" 89 2728 2741
+type(
+  NGraph.t
+)
+ident(
+  def ng' "sparse/worklist.ml" 90 2768 2774 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 89 2728 2744 "sparse/worklist.ml" 89 2728 2757
+type(
+  NGraph.t -> NGraph.vertex -> NGraph.t
+)
+ident(
+  int_ref cut_backedges "sparse/worklist.ml" 74 2144 2148 "sparse/worklist.ml" 74 2144 2161
+)
+"sparse/worklist.ml" 89 2728 2758 "sparse/worklist.ml" 89 2728 2761
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng' "sparse/worklist.ml" 85 2504 2514 "sparse/worklist.ml" 85 2504 2517
+)
+"sparse/worklist.ml" 89 2728 2762 "sparse/worklist.ml" 89 2728 2764
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref lh "sparse/worklist.ml" 86 2541 2551 "sparse/worklist.ml" 86 2541 2553
+)
+"sparse/worklist.ml" 89 2728 2744 "sparse/worklist.ml" 89 2728 2764
+call(
+  stack
+)
+type(
+  NGraph.t
+)
+"sparse/worklist.ml" 90 2768 2778 "sparse/worklist.ml" 90 2768 2783
+type(
+  NGraph.G.V.t list list
+)
+ident(
+  def sccs' "sparse/worklist.ml" 91 2837 2843 "sparse/worklist.ml" 91 2837 2882
+)
+"sparse/worklist.ml" 90 2768 2786 "sparse/worklist.ml" 90 2768 2794
+type(
+  NGraph.G.V.t list list -> NGraph.G.V.t list list
+)
+ident(
+  ext_ref List.rev
+)
+"sparse/worklist.ml" 90 2768 2796 "sparse/worklist.ml" 90 2768 2809
+type(
+  NGraph.G.V.t list array -> NGraph.G.V.t list list
+)
+ident(
+  ext_ref Array.to_list
+)
+"sparse/worklist.ml" 90 2768 2811 "sparse/worklist.ml" 90 2768 2827
+type(
+  NGraph.G.t -> NGraph.G.V.t list array
+)
+ident(
+  ext_ref NGraph.scc_array
+)
+"sparse/worklist.ml" 90 2768 2828 "sparse/worklist.ml" 90 2768 2831
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng' "sparse/worklist.ml" 89 2728 2738 "sparse/worklist.ml" 89 2728 2741
+)
+"sparse/worklist.ml" 90 2768 2810 "sparse/worklist.ml" 90 2768 2832
+call(
+  stack
+)
+type(
+  NGraph.G.V.t list array
+)
+"sparse/worklist.ml" 90 2768 2795 "sparse/worklist.ml" 90 2768 2833
+call(
+  stack
+)
+type(
+  NGraph.G.V.t list list
+)
+"sparse/worklist.ml" 90 2768 2786 "sparse/worklist.ml" 90 2768 2833
+call(
+  stack
+)
+type(
+  NGraph.G.V.t list list
+)
+"sparse/worklist.ml" 91 2837 2843 "sparse/worklist.ml" 91 2837 2852
+type(
+  NGraph.vertex list list ->
+  NGraph.t ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t ->
+  int ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+ident(
+  int_ref get_order "sparse/worklist.ml" 79 2303 2311 "sparse/worklist.ml" 79 2303 2320
+)
+"sparse/worklist.ml" 91 2837 2853 "sparse/worklist.ml" 91 2837 2858
+type(
+  NGraph.vertex list list
+)
+ident(
+  int_ref sccs' "sparse/worklist.ml" 90 2768 2778 "sparse/worklist.ml" 90 2768 2783
+)
+"sparse/worklist.ml" 91 2837 2859 "sparse/worklist.ml" 91 2837 2862
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng' "sparse/worklist.ml" 89 2728 2738 "sparse/worklist.ml" 89 2728 2741
+)
+"sparse/worklist.ml" 91 2837 2864 "sparse/worklist.ml" 91 2837 2866
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 88 2651 2662 "sparse/worklist.ml" 88 2651 2664
+)
+"sparse/worklist.ml" 91 2837 2868 "sparse/worklist.ml" 91 2837 2871
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 88 2651 2666 "sparse/worklist.ml" 88 2651 2669
+)
+"sparse/worklist.ml" 91 2837 2873 "sparse/worklist.ml" 91 2837 2875
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 88 2651 2671 "sparse/worklist.ml" 88 2651 2673
+)
+"sparse/worklist.ml" 91 2837 2863 "sparse/worklist.ml" 91 2837 2876
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 91 2837 2877 "sparse/worklist.ml" 91 2837 2882
+type(
+  int
+)
+ident(
+  int_ref order "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 79 2303 2348
+)
+"sparse/worklist.ml" 91 2837 2843 "sparse/worklist.ml" 91 2837 2882
+call(
+  tail
+)
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 90 2768 2774 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 89 2728 2734 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 88 2651 2657 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 87 2578 2584 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 86 2541 2547 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 85 2504 2510 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 84 2472 2478 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 83 2417 2423 "sparse/worklist.ml" 91 2837 2882
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 93 2892 2902 "sparse/worklist.ml" 93 2892 2903
+type(
+  NGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 94 2921 2927 "sparse/worklist.ml" 94 2921 2986
+)
+"sparse/worklist.ml" 93 2892 2906 "sparse/worklist.ml" 93 2892 2913
+type(
+  NGraph.vertex list -> NGraph.vertex
+)
+ident(
+  ext_ref List.hd
+)
+"sparse/worklist.ml" 93 2892 2914 "sparse/worklist.ml" 93 2892 2917
+type(
+  NGraph.vertex list
+)
+ident(
+  int_ref scc "sparse/worklist.ml" 81 2369 2373 "sparse/worklist.ml" 81 2369 2376
+)
+"sparse/worklist.ml" 93 2892 2906 "sparse/worklist.ml" 93 2892 2917
+call(
+  stack
+)
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 94 2921 2927 "sparse/worklist.ml" 94 2921 2936
+type(
+  NGraph.vertex list list ->
+  NGraph.t ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t ->
+  int ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+ident(
+  int_ref get_order "sparse/worklist.ml" 79 2303 2311 "sparse/worklist.ml" 79 2303 2320
+)
+"sparse/worklist.ml" 94 2921 2937 "sparse/worklist.ml" 94 2921 2938
+type(
+  NGraph.vertex list list
+)
+ident(
+  int_ref t "sparse/worklist.ml" 81 2369 2380 "sparse/worklist.ml" 81 2369 2381
+)
+"sparse/worklist.ml" 94 2921 2939 "sparse/worklist.ml" 94 2921 2941
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 79 2303 2326 "sparse/worklist.ml" 79 2303 2328
+)
+"sparse/worklist.ml" 94 2921 2943 "sparse/worklist.ml" 94 2921 2953
+type(
+  NGraph.vertex ->
+  int -> (NGraph.vertex, int) BatMap.t -> (NGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"sparse/worklist.ml" 94 2921 2954 "sparse/worklist.ml" 94 2921 2955
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 93 2892 2902 "sparse/worklist.ml" 93 2892 2903
+)
+"sparse/worklist.ml" 94 2921 2956 "sparse/worklist.ml" 94 2921 2961
+type(
+  int
+)
+ident(
+  int_ref order "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 79 2303 2348
+)
+"sparse/worklist.ml" 94 2921 2962 "sparse/worklist.ml" 94 2921 2964
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 79 2303 2330 "sparse/worklist.ml" 79 2303 2332
+)
+"sparse/worklist.ml" 94 2921 2943 "sparse/worklist.ml" 94 2921 2964
+call(
+  stack
+)
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 94 2921 2966 "sparse/worklist.ml" 94 2921 2969
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 79 2303 2334 "sparse/worklist.ml" 79 2303 2337
+)
+"sparse/worklist.ml" 94 2921 2971 "sparse/worklist.ml" 94 2921 2973
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 79 2303 2339 "sparse/worklist.ml" 79 2303 2341
+)
+"sparse/worklist.ml" 94 2921 2942 "sparse/worklist.ml" 94 2921 2974
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 94 2921 2976 "sparse/worklist.ml" 94 2921 2981
+type(
+  int
+)
+ident(
+  int_ref order "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 79 2303 2348
+)
+"sparse/worklist.ml" 94 2921 2982 "sparse/worklist.ml" 94 2921 2983
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"sparse/worklist.ml" 94 2921 2984 "sparse/worklist.ml" 94 2921 2985
+type(
+  int
+)
+"sparse/worklist.ml" 94 2921 2975 "sparse/worklist.ml" 94 2921 2986
+type(
+  int
+)
+"sparse/worklist.ml" 94 2921 2927 "sparse/worklist.ml" 94 2921 2986
+call(
+  tail
+)
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 93 2892 2898 "sparse/worklist.ml" 94 2921 2986
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 82 2385 2389 "sparse/worklist.ml" 94 2921 2986
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 95 2987 2991 "sparse/worklist.ml" 95 2987 2993
+type(
+  NGraph.vertex list list
+)
+"sparse/worklist.ml" 95 2987 2998 "sparse/worklist.ml" 95 2987 3000
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 79 2303 2330 "sparse/worklist.ml" 79 2303 2332
+)
+"sparse/worklist.ml" 95 2987 3002 "sparse/worklist.ml" 95 2987 3005
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 79 2303 2334 "sparse/worklist.ml" 79 2303 2337
+)
+"sparse/worklist.ml" 95 2987 3007 "sparse/worklist.ml" 95 2987 3009
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 79 2303 2339 "sparse/worklist.ml" 79 2303 2341
+)
+"sparse/worklist.ml" 95 2987 3011 "sparse/worklist.ml" 95 2987 3016
+type(
+  int
+)
+ident(
+  int_ref order "sparse/worklist.ml" 79 2303 2343 "sparse/worklist.ml" 79 2303 2348
+)
+"sparse/worklist.ml" 95 2987 2997 "sparse/worklist.ml" 95 2987 3017
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 80 2351 2353 "sparse/worklist.ml" 95 2987 3017
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 97 3019 3023 "sparse/worklist.ml" 97 3019 3036
+type(
+  DUGraph.vertex -> t -> bool
+)
+ident(
+  def is_loopheader "sparse/worklist.ml" 99 3081 3081 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 97 3019 3037 "sparse/worklist.ml" 97 3019 3041
+type(
+  DUGraph.vertex
+)
+ident(
+  def here "sparse/worklist.ml" 97 3019 3042 "sparse/worklist.ml" 97 3019 3079
+)
+"sparse/worklist.ml" 97 3019 3042 "sparse/worklist.ml" 97 3019 3046
+type(
+  t
+)
+ident(
+  def info "sparse/worklist.ml" 97 3019 3049 "sparse/worklist.ml" 97 3019 3079
+)
+"sparse/worklist.ml" 97 3019 3049 "sparse/worklist.ml" 97 3019 3059
+type(
+  DUGraph.vertex -> DUGraph.vertex BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"sparse/worklist.ml" 97 3019 3060 "sparse/worklist.ml" 97 3019 3064
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref here "sparse/worklist.ml" 97 3019 3037 "sparse/worklist.ml" 97 3019 3041
+)
+"sparse/worklist.ml" 97 3019 3065 "sparse/worklist.ml" 97 3019 3069
+type(
+  t
+)
+ident(
+  int_ref info "sparse/worklist.ml" 97 3019 3042 "sparse/worklist.ml" 97 3019 3046
+)
+"sparse/worklist.ml" 97 3019 3065 "sparse/worklist.ml" 97 3019 3079
+type(
+  DUGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 97 3019 3049 "sparse/worklist.ml" 97 3019 3079
+call(
+  tail
+)
+type(
+  bool
+)
+"sparse/worklist.ml" 99 3081 3089 "sparse/worklist.ml" 99 3081 3096
+type(
+  DUGraph.t -> t
+)
+ident(
+  def perform "sparse/worklist.ml" 99 3081 3081 "sparse/worklist.ml" 123 3974 3977
+)
+"sparse/worklist.ml" 99 3081 3097 "sparse/worklist.ml" 99 3081 3098
+type(
+  DUGraph.t
+)
+ident(
+  def g "sparse/worklist.ml" 100 3101 3103 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 100 3101 3108 "sparse/worklist.ml" 100 3101 3110
+type(
+  NGraph.t
+)
+ident(
+  def ng "sparse/worklist.ml" 101 3129 3131 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 100 3101 3112 "sparse/worklist.ml" 100 3101 3115
+type(
+  (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  def i2n "sparse/worklist.ml" 101 3129 3131 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 100 3101 3107 "sparse/worklist.ml" 100 3101 3116
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 100 3101 3119 "sparse/worklist.ml" 100 3101 3123
+type(
+  DUGraph.t -> NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  int_ref make "sparse/worklist.ml" 36 646 650 "sparse/worklist.ml" 36 646 654
+)
+"sparse/worklist.ml" 100 3101 3124 "sparse/worklist.ml" 100 3101 3125
+type(
+  DUGraph.t
+)
+ident(
+  int_ref g "sparse/worklist.ml" 99 3081 3097 "sparse/worklist.ml" 99 3081 3098
+)
+"sparse/worklist.ml" 100 3101 3119 "sparse/worklist.ml" 100 3101 3125
+call(
+  stack
+)
+type(
+  NGraph.t * (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+"sparse/worklist.ml" 101 3129 3135 "sparse/worklist.ml" 101 3129 3139
+type(
+  NGraph.G.V.t list list
+)
+ident(
+  def sccs "sparse/worklist.ml" 102 3192 3194 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 101 3129 3142 "sparse/worklist.ml" 101 3129 3150
+type(
+  NGraph.G.V.t list list -> NGraph.G.V.t list list
+)
+ident(
+  ext_ref List.rev
+)
+"sparse/worklist.ml" 101 3129 3152 "sparse/worklist.ml" 101 3129 3165
+type(
+  NGraph.G.V.t list array -> NGraph.G.V.t list list
+)
+ident(
+  ext_ref Array.to_list
+)
+"sparse/worklist.ml" 101 3129 3167 "sparse/worklist.ml" 101 3129 3183
+type(
+  NGraph.G.t -> NGraph.G.V.t list array
+)
+ident(
+  ext_ref NGraph.scc_array
+)
+"sparse/worklist.ml" 101 3129 3184 "sparse/worklist.ml" 101 3129 3186
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 100 3101 3108 "sparse/worklist.ml" 100 3101 3110
+)
+"sparse/worklist.ml" 101 3129 3166 "sparse/worklist.ml" 101 3129 3187
+call(
+  stack
+)
+type(
+  NGraph.G.V.t list array
+)
+"sparse/worklist.ml" 101 3129 3151 "sparse/worklist.ml" 101 3129 3188
+call(
+  stack
+)
+type(
+  NGraph.G.V.t list list
+)
+"sparse/worklist.ml" 101 3129 3142 "sparse/worklist.ml" 101 3129 3188
+call(
+  stack
+)
+type(
+  NGraph.G.V.t list list
+)
+"sparse/worklist.ml" 102 3192 3199 "sparse/worklist.ml" 102 3192 3201
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def wo "sparse/worklist.ml" 105 3288 3290 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 102 3192 3203 "sparse/worklist.ml" 102 3192 3206
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def lhs "sparse/worklist.ml" 105 3288 3290 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 102 3192 3208 "sparse/worklist.ml" 102 3192 3210
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  def ho "sparse/worklist.ml" 105 3288 3290 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 102 3192 3212 "sparse/worklist.ml" 102 3192 3213
+type(
+  int
+)
+"sparse/worklist.ml" 102 3192 3198 "sparse/worklist.ml" 102 3192 3214
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 103 3217 3221 "sparse/worklist.ml" 103 3217 3230
+type(
+  NGraph.vertex list list ->
+  NGraph.t ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t ->
+  int ->
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+ident(
+  int_ref get_order "sparse/worklist.ml" 79 2303 2311 "sparse/worklist.ml" 79 2303 2320
+)
+"sparse/worklist.ml" 103 3217 3231 "sparse/worklist.ml" 103 3217 3235
+type(
+  NGraph.vertex list list
+)
+ident(
+  int_ref sccs "sparse/worklist.ml" 101 3129 3135 "sparse/worklist.ml" 101 3129 3139
+)
+"sparse/worklist.ml" 103 3217 3236 "sparse/worklist.ml" 103 3217 3238
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 100 3101 3108 "sparse/worklist.ml" 100 3101 3110
+)
+"sparse/worklist.ml" 103 3217 3240 "sparse/worklist.ml" 103 3217 3252
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 103 3217 3254 "sparse/worklist.ml" 103 3217 3266
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"sparse/worklist.ml" 103 3217 3268 "sparse/worklist.ml" 103 3217 3280
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 103 3217 3239 "sparse/worklist.ml" 103 3217 3281
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 103 3217 3282 "sparse/worklist.ml" 103 3217 3283
+type(
+  int
+)
+"sparse/worklist.ml" 103 3217 3221 "sparse/worklist.ml" 103 3217 3283
+call(
+  stack
+)
+type(
+  (NGraph.vertex, int) BatMap.t * NGraph.vertex BatSet.t *
+  (NGraph.vertex, int) BatMap.t * int
+)
+"sparse/worklist.ml" 105 3288 3294 "sparse/worklist.ml" 105 3288 3306
+type(
+  'c -> 'c -> 'c BatSet.t -> 'c BatSet.t
+)
+ident(
+  def add_rec_node "sparse/worklist.ml" 107 3401 3403 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 105 3288 3307 "sparse/worklist.ml" 105 3288 3310
+type(
+  'c
+)
+ident(
+  def src "sparse/worklist.ml" 105 3288 3311 "sparse/worklist.ml" 106 3323 3397
+)
+"sparse/worklist.ml" 105 3288 3311 "sparse/worklist.ml" 105 3288 3314
+type(
+  'c
+)
+ident(
+  def dst "sparse/worklist.ml" 105 3288 3315 "sparse/worklist.ml" 106 3323 3397
+)
+"sparse/worklist.ml" 105 3288 3315 "sparse/worklist.ml" 105 3288 3320
+type(
+  'c BatSet.t
+)
+ident(
+  def nodes "sparse/worklist.ml" 106 3323 3327 "sparse/worklist.ml" 106 3323 3397
+)
+"sparse/worklist.ml" 106 3323 3330 "sparse/worklist.ml" 106 3323 3348
+type(
+  'c -> 'c -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"sparse/worklist.ml" 106 3323 3349 "sparse/worklist.ml" 106 3323 3352
+type(
+  'c
+)
+ident(
+  int_ref src "sparse/worklist.ml" 105 3288 3307 "sparse/worklist.ml" 105 3288 3310
+)
+"sparse/worklist.ml" 106 3323 3353 "sparse/worklist.ml" 106 3323 3356
+type(
+  'c
+)
+ident(
+  int_ref dst "sparse/worklist.ml" 105 3288 3311 "sparse/worklist.ml" 105 3288 3314
+)
+"sparse/worklist.ml" 106 3323 3330 "sparse/worklist.ml" 106 3323 3356
+type(
+  int
+)
+"sparse/worklist.ml" 106 3323 3357 "sparse/worklist.ml" 106 3323 3358
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"sparse/worklist.ml" 106 3323 3359 "sparse/worklist.ml" 106 3323 3360
+type(
+  int
+)
+"sparse/worklist.ml" 106 3323 3330 "sparse/worklist.ml" 106 3323 3360
+type(
+  bool
+)
+"sparse/worklist.ml" 106 3323 3366 "sparse/worklist.ml" 106 3323 3376
+type(
+  'c -> 'c BatSet.t -> 'c BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"sparse/worklist.ml" 106 3323 3377 "sparse/worklist.ml" 106 3323 3380
+type(
+  'c
+)
+ident(
+  int_ref src "sparse/worklist.ml" 105 3288 3307 "sparse/worklist.ml" 105 3288 3310
+)
+"sparse/worklist.ml" 106 3323 3381 "sparse/worklist.ml" 106 3323 3386
+type(
+  'c BatSet.t
+)
+ident(
+  int_ref nodes "sparse/worklist.ml" 105 3288 3315 "sparse/worklist.ml" 105 3288 3320
+)
+"sparse/worklist.ml" 106 3323 3366 "sparse/worklist.ml" 106 3323 3386
+call(
+  tail
+)
+type(
+  'c BatSet.t
+)
+"sparse/worklist.ml" 106 3323 3392 "sparse/worklist.ml" 106 3323 3397
+type(
+  'c BatSet.t
+)
+ident(
+  int_ref nodes "sparse/worklist.ml" 105 3288 3315 "sparse/worklist.ml" 105 3288 3320
+)
+"sparse/worklist.ml" 106 3323 3327 "sparse/worklist.ml" 106 3323 3397
+type(
+  'c BatSet.t
+)
+"sparse/worklist.ml" 107 3401 3407 "sparse/worklist.ml" 107 3401 3410
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  def lhs "sparse/worklist.ml" 109 3455 3457 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 107 3401 3413 "sparse/worklist.ml" 107 3401 3430
+type(
+  (NGraph.vertex ->
+   NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t) ->
+  NGraph.t -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  ext_ref NGraph.fold_edges
+)
+"sparse/worklist.ml" 107 3401 3431 "sparse/worklist.ml" 107 3401 3443
+type(
+  NGraph.vertex ->
+  NGraph.vertex -> NGraph.vertex BatSet.t -> NGraph.vertex BatSet.t
+)
+ident(
+  int_ref add_rec_node "sparse/worklist.ml" 105 3288 3294 "sparse/worklist.ml" 105 3288 3306
+)
+"sparse/worklist.ml" 107 3401 3444 "sparse/worklist.ml" 107 3401 3446
+type(
+  NGraph.t
+)
+ident(
+  int_ref ng "sparse/worklist.ml" 100 3101 3108 "sparse/worklist.ml" 100 3101 3110
+)
+"sparse/worklist.ml" 107 3401 3447 "sparse/worklist.ml" 107 3401 3450
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 102 3192 3203 "sparse/worklist.ml" 102 3192 3206
+)
+"sparse/worklist.ml" 107 3401 3413 "sparse/worklist.ml" 107 3401 3450
+call(
+  stack
+)
+type(
+  NGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 109 3455 3461 "sparse/worklist.ml" 109 3455 3470
+type(
+  ('d -> 'e) -> ('d -> 'f -> 'g) -> ('d, 'f) BatMap.t -> ('e, 'g) BatMap.t
+)
+ident(
+  def trans_map "sparse/worklist.ml" 112 3592 3594 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 109 3455 3471 "sparse/worklist.ml" 109 3455 3478
+type(
+  'd -> 'e
+)
+ident(
+  def trans_k "sparse/worklist.ml" 109 3455 3479 "sparse/worklist.ml" 111 3551 3588
+)
+"sparse/worklist.ml" 109 3455 3479 "sparse/worklist.ml" 109 3455 3486
+type(
+  'd -> 'f -> 'g
+)
+ident(
+  def trans_v "sparse/worklist.ml" 109 3455 3487 "sparse/worklist.ml" 111 3551 3588
+)
+"sparse/worklist.ml" 109 3455 3487 "sparse/worklist.ml" 109 3455 3488
+type(
+  ('d, 'f) BatMap.t
+)
+ident(
+  def m "sparse/worklist.ml" 110 3491 3495 "sparse/worklist.ml" 111 3551 3588
+)
+"sparse/worklist.ml" 110 3491 3499 "sparse/worklist.ml" 110 3491 3504
+type(
+  'd -> 'f -> ('e, 'g) BatMap.t -> ('e, 'g) BatMap.t
+)
+ident(
+  def add_1 "sparse/worklist.ml" 111 3551 3555 "sparse/worklist.ml" 111 3551 3588
+)
+"sparse/worklist.ml" 110 3491 3505 "sparse/worklist.ml" 110 3491 3506
+type(
+  'd
+)
+ident(
+  def k "sparse/worklist.ml" 110 3491 3507 "sparse/worklist.ml" 110 3491 3547
+)
+"sparse/worklist.ml" 110 3491 3507 "sparse/worklist.ml" 110 3491 3508
+type(
+  'f
+)
+ident(
+  def v "sparse/worklist.ml" 110 3491 3511 "sparse/worklist.ml" 110 3491 3547
+)
+"sparse/worklist.ml" 110 3491 3511 "sparse/worklist.ml" 110 3491 3521
+type(
+  'e -> 'g -> ('e, 'g) BatMap.t -> ('e, 'g) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"sparse/worklist.ml" 110 3491 3523 "sparse/worklist.ml" 110 3491 3530
+type(
+  'd -> 'e
+)
+ident(
+  int_ref trans_k "sparse/worklist.ml" 109 3455 3471 "sparse/worklist.ml" 109 3455 3478
+)
+"sparse/worklist.ml" 110 3491 3531 "sparse/worklist.ml" 110 3491 3532
+type(
+  'd
+)
+ident(
+  int_ref k "sparse/worklist.ml" 110 3491 3505 "sparse/worklist.ml" 110 3491 3506
+)
+"sparse/worklist.ml" 110 3491 3522 "sparse/worklist.ml" 110 3491 3533
+call(
+  stack
+)
+type(
+  'e
+)
+"sparse/worklist.ml" 110 3491 3535 "sparse/worklist.ml" 110 3491 3542
+type(
+  'd -> 'f -> 'g
+)
+ident(
+  int_ref trans_v "sparse/worklist.ml" 109 3455 3479 "sparse/worklist.ml" 109 3455 3486
+)
+"sparse/worklist.ml" 110 3491 3543 "sparse/worklist.ml" 110 3491 3544
+type(
+  'd
+)
+ident(
+  int_ref k "sparse/worklist.ml" 110 3491 3505 "sparse/worklist.ml" 110 3491 3506
+)
+"sparse/worklist.ml" 110 3491 3545 "sparse/worklist.ml" 110 3491 3546
+type(
+  'f
+)
+ident(
+  int_ref v "sparse/worklist.ml" 110 3491 3507 "sparse/worklist.ml" 110 3491 3508
+)
+"sparse/worklist.ml" 110 3491 3534 "sparse/worklist.ml" 110 3491 3547
+call(
+  stack
+)
+type(
+  'g
+)
+"sparse/worklist.ml" 110 3491 3511 "sparse/worklist.ml" 110 3491 3547
+call(
+  tail
+)
+type(
+  ('e, 'g) BatMap.t -> ('e, 'g) BatMap.t
+)
+"sparse/worklist.ml" 111 3551 3555 "sparse/worklist.ml" 111 3551 3567
+type(
+  ('d -> 'f -> ('e, 'g) BatMap.t -> ('e, 'g) BatMap.t) ->
+  ('d, 'f) BatMap.t -> ('e, 'g) BatMap.t -> ('e, 'g) BatMap.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"sparse/worklist.ml" 111 3551 3568 "sparse/worklist.ml" 111 3551 3573
+type(
+  'd -> 'f -> ('e, 'g) BatMap.t -> ('e, 'g) BatMap.t
+)
+ident(
+  int_ref add_1 "sparse/worklist.ml" 110 3491 3499 "sparse/worklist.ml" 110 3491 3504
+)
+"sparse/worklist.ml" 111 3551 3574 "sparse/worklist.ml" 111 3551 3575
+type(
+  ('d, 'f) BatMap.t
+)
+ident(
+  int_ref m "sparse/worklist.ml" 109 3455 3487 "sparse/worklist.ml" 109 3455 3488
+)
+"sparse/worklist.ml" 111 3551 3576 "sparse/worklist.ml" 111 3551 3588
+type(
+  ('e, 'g) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 111 3551 3555 "sparse/worklist.ml" 111 3551 3588
+call(
+  tail
+)
+type(
+  ('e, 'g) BatMap.t
+)
+"sparse/worklist.ml" 110 3491 3495 "sparse/worklist.ml" 111 3551 3588
+type(
+  ('e, 'g) BatMap.t
+)
+"sparse/worklist.ml" 112 3592 3598 "sparse/worklist.ml" 112 3592 3607
+type(
+  ('h -> 'i) -> 'h BatSet.t -> 'i BatSet.t
+)
+ident(
+  def trans_set "sparse/worklist.ml" 115 3704 3706 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 112 3592 3608 "sparse/worklist.ml" 112 3592 3615
+type(
+  'h -> 'i
+)
+ident(
+  def trans_v "sparse/worklist.ml" 112 3592 3616 "sparse/worklist.ml" 114 3664 3700
+)
+"sparse/worklist.ml" 112 3592 3616 "sparse/worklist.ml" 112 3592 3617
+type(
+  'h BatSet.t
+)
+ident(
+  def s "sparse/worklist.ml" 113 3620 3624 "sparse/worklist.ml" 114 3664 3700
+)
+"sparse/worklist.ml" 113 3620 3628 "sparse/worklist.ml" 113 3620 3633
+type(
+  'h -> 'i BatSet.t -> 'i BatSet.t
+)
+ident(
+  def add_1 "sparse/worklist.ml" 114 3664 3668 "sparse/worklist.ml" 114 3664 3700
+)
+"sparse/worklist.ml" 113 3620 3634 "sparse/worklist.ml" 113 3620 3635
+type(
+  'h
+)
+ident(
+  def v "sparse/worklist.ml" 113 3620 3638 "sparse/worklist.ml" 113 3620 3660
+)
+"sparse/worklist.ml" 113 3620 3638 "sparse/worklist.ml" 113 3620 3648
+type(
+  'i -> 'i BatSet.t -> 'i BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"sparse/worklist.ml" 113 3620 3650 "sparse/worklist.ml" 113 3620 3657
+type(
+  'h -> 'i
+)
+ident(
+  int_ref trans_v "sparse/worklist.ml" 112 3592 3608 "sparse/worklist.ml" 112 3592 3615
+)
+"sparse/worklist.ml" 113 3620 3658 "sparse/worklist.ml" 113 3620 3659
+type(
+  'h
+)
+ident(
+  int_ref v "sparse/worklist.ml" 113 3620 3634 "sparse/worklist.ml" 113 3620 3635
+)
+"sparse/worklist.ml" 113 3620 3649 "sparse/worklist.ml" 113 3620 3660
+call(
+  stack
+)
+type(
+  'i
+)
+"sparse/worklist.ml" 113 3620 3638 "sparse/worklist.ml" 113 3620 3660
+call(
+  tail
+)
+type(
+  'i BatSet.t -> 'i BatSet.t
+)
+"sparse/worklist.ml" 114 3664 3668 "sparse/worklist.ml" 114 3664 3679
+type(
+  ('h -> 'i BatSet.t -> 'i BatSet.t) ->
+  'h BatSet.t -> 'i BatSet.t -> 'i BatSet.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"sparse/worklist.ml" 114 3664 3680 "sparse/worklist.ml" 114 3664 3685
+type(
+  'h -> 'i BatSet.t -> 'i BatSet.t
+)
+ident(
+  int_ref add_1 "sparse/worklist.ml" 113 3620 3628 "sparse/worklist.ml" 113 3620 3633
+)
+"sparse/worklist.ml" 114 3664 3686 "sparse/worklist.ml" 114 3664 3687
+type(
+  'h BatSet.t
+)
+ident(
+  int_ref s "sparse/worklist.ml" 112 3592 3616 "sparse/worklist.ml" 112 3592 3617
+)
+"sparse/worklist.ml" 114 3664 3688 "sparse/worklist.ml" 114 3664 3700
+type(
+  'i BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"sparse/worklist.ml" 114 3664 3668 "sparse/worklist.ml" 114 3664 3700
+call(
+  tail
+)
+type(
+  'i BatSet.t
+)
+"sparse/worklist.ml" 113 3620 3624 "sparse/worklist.ml" 114 3664 3700
+type(
+  'i BatSet.t
+)
+"sparse/worklist.ml" 115 3704 3710 "sparse/worklist.ml" 115 3704 3717
+type(
+  NGraph.vertex -> DUGraph.vertex
+)
+ident(
+  def trans_k "sparse/worklist.ml" 117 3744 3746 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 115 3704 3718 "sparse/worklist.ml" 115 3704 3719
+type(
+  NGraph.vertex
+)
+ident(
+  def k "sparse/worklist.ml" 115 3704 3722 "sparse/worklist.ml" 115 3704 3739
+)
+"sparse/worklist.ml" 115 3704 3722 "sparse/worklist.ml" 115 3704 3733
+type(
+  NGraph.vertex -> (NGraph.vertex, DUGraph.vertex) BatMap.t -> DUGraph.vertex
+)
+ident(
+  ext_ref BatMap.find
+)
+"sparse/worklist.ml" 115 3704 3734 "sparse/worklist.ml" 115 3704 3735
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref k "sparse/worklist.ml" 115 3704 3718 "sparse/worklist.ml" 115 3704 3719
+)
+"sparse/worklist.ml" 115 3704 3736 "sparse/worklist.ml" 115 3704 3739
+type(
+  (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 100 3101 3112 "sparse/worklist.ml" 100 3101 3115
+)
+"sparse/worklist.ml" 115 3704 3722 "sparse/worklist.ml" 115 3704 3739
+call(
+  tail
+)
+type(
+  DUGraph.vertex
+)
+"sparse/worklist.ml" 117 3744 3750 "sparse/worklist.ml" 117 3744 3752
+type(
+  (DUGraph.vertex, int * bool) BatMap.t
+)
+ident(
+  def wo "sparse/worklist.ml" 118 3814 3816 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 117 3744 3755 "sparse/worklist.ml" 117 3744 3764
+type(
+  (NGraph.vertex -> DUGraph.vertex) ->
+  (NGraph.vertex -> int -> int * bool) ->
+  (NGraph.vertex, int) BatMap.t -> (DUGraph.vertex, int * bool) BatMap.t
+)
+ident(
+  int_ref trans_map "sparse/worklist.ml" 109 3455 3461 "sparse/worklist.ml" 109 3455 3470
+)
+"sparse/worklist.ml" 117 3744 3765 "sparse/worklist.ml" 117 3744 3772
+type(
+  NGraph.vertex -> DUGraph.vertex
+)
+ident(
+  int_ref trans_k "sparse/worklist.ml" 115 3704 3710 "sparse/worklist.ml" 115 3704 3717
+)
+"sparse/worklist.ml" 117 3744 3778 "sparse/worklist.ml" 117 3744 3779
+type(
+  NGraph.vertex
+)
+ident(
+  def k "sparse/worklist.ml" 117 3744 3780 "sparse/worklist.ml" 117 3744 3806
+)
+"sparse/worklist.ml" 117 3744 3780 "sparse/worklist.ml" 117 3744 3781
+type(
+  int
+)
+ident(
+  def v "sparse/worklist.ml" 117 3744 3785 "sparse/worklist.ml" 117 3744 3806
+)
+"sparse/worklist.ml" 117 3744 3786 "sparse/worklist.ml" 117 3744 3787
+type(
+  int
+)
+ident(
+  int_ref v "sparse/worklist.ml" 117 3744 3780 "sparse/worklist.ml" 117 3744 3781
+)
+"sparse/worklist.ml" 117 3744 3789 "sparse/worklist.ml" 117 3744 3799
+type(
+  NGraph.vertex -> NGraph.vertex BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"sparse/worklist.ml" 117 3744 3800 "sparse/worklist.ml" 117 3744 3801
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref k "sparse/worklist.ml" 117 3744 3778 "sparse/worklist.ml" 117 3744 3779
+)
+"sparse/worklist.ml" 117 3744 3802 "sparse/worklist.ml" 117 3744 3805
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 107 3401 3407 "sparse/worklist.ml" 107 3401 3410
+)
+"sparse/worklist.ml" 117 3744 3789 "sparse/worklist.ml" 117 3744 3805
+call(
+  stack
+)
+type(
+  bool
+)
+"sparse/worklist.ml" 117 3744 3785 "sparse/worklist.ml" 117 3744 3806
+type(
+  int * bool
+)
+"sparse/worklist.ml" 117 3744 3773 "sparse/worklist.ml" 117 3744 3807
+type(
+  NGraph.vertex -> int -> int * bool
+)
+"sparse/worklist.ml" 117 3744 3808 "sparse/worklist.ml" 117 3744 3810
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 102 3192 3199 "sparse/worklist.ml" 102 3192 3201
+)
+"sparse/worklist.ml" 117 3744 3755 "sparse/worklist.ml" 117 3744 3810
+call(
+  stack
+)
+type(
+  (DUGraph.vertex, int * bool) BatMap.t
+)
+"sparse/worklist.ml" 118 3814 3820 "sparse/worklist.ml" 118 3814 3823
+type(
+  DUGraph.vertex BatSet.t
+)
+ident(
+  def lhs "sparse/worklist.ml" 119 3872 3874 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 118 3814 3826 "sparse/worklist.ml" 118 3814 3835
+type(
+  (NGraph.vertex -> DUGraph.vertex) ->
+  NGraph.vertex BatSet.t -> DUGraph.vertex BatSet.t
+)
+ident(
+  int_ref trans_set "sparse/worklist.ml" 112 3592 3598 "sparse/worklist.ml" 112 3592 3607
+)
+"sparse/worklist.ml" 118 3814 3841 "sparse/worklist.ml" 118 3814 3842
+type(
+  NGraph.vertex
+)
+ident(
+  def v "sparse/worklist.ml" 118 3814 3846 "sparse/worklist.ml" 118 3814 3863
+)
+"sparse/worklist.ml" 118 3814 3846 "sparse/worklist.ml" 118 3814 3857
+type(
+  NGraph.vertex -> (NGraph.vertex, DUGraph.vertex) BatMap.t -> DUGraph.vertex
+)
+ident(
+  ext_ref BatMap.find
+)
+"sparse/worklist.ml" 118 3814 3858 "sparse/worklist.ml" 118 3814 3859
+type(
+  NGraph.vertex
+)
+ident(
+  int_ref v "sparse/worklist.ml" 118 3814 3841 "sparse/worklist.ml" 118 3814 3842
+)
+"sparse/worklist.ml" 118 3814 3860 "sparse/worklist.ml" 118 3814 3863
+type(
+  (NGraph.vertex, DUGraph.vertex) BatMap.t
+)
+ident(
+  int_ref i2n "sparse/worklist.ml" 100 3101 3112 "sparse/worklist.ml" 100 3101 3115
+)
+"sparse/worklist.ml" 118 3814 3846 "sparse/worklist.ml" 118 3814 3863
+call(
+  tail
+)
+type(
+  DUGraph.vertex
+)
+"sparse/worklist.ml" 118 3814 3836 "sparse/worklist.ml" 118 3814 3864
+type(
+  NGraph.vertex -> DUGraph.vertex
+)
+"sparse/worklist.ml" 118 3814 3865 "sparse/worklist.ml" 118 3814 3868
+type(
+  NGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 107 3401 3407 "sparse/worklist.ml" 107 3401 3410
+)
+"sparse/worklist.ml" 118 3814 3826 "sparse/worklist.ml" 118 3814 3868
+call(
+  stack
+)
+type(
+  DUGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 119 3872 3878 "sparse/worklist.ml" 119 3872 3880
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  def ho "sparse/worklist.ml" 121 3923 3925 "sparse/worklist.ml" 121 3923 3972
+)
+"sparse/worklist.ml" 119 3872 3883 "sparse/worklist.ml" 119 3872 3892
+type(
+  (NGraph.vertex -> DUGraph.vertex) ->
+  (NGraph.vertex -> int -> int) ->
+  (NGraph.vertex, int) BatMap.t -> (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref trans_map "sparse/worklist.ml" 109 3455 3461 "sparse/worklist.ml" 109 3455 3470
+)
+"sparse/worklist.ml" 119 3872 3893 "sparse/worklist.ml" 119 3872 3900
+type(
+  NGraph.vertex -> DUGraph.vertex
+)
+ident(
+  int_ref trans_k "sparse/worklist.ml" 115 3704 3710 "sparse/worklist.ml" 115 3704 3717
+)
+"sparse/worklist.ml" 119 3872 3906 "sparse/worklist.ml" 119 3872 3907
+type(
+  NGraph.vertex
+)
+"sparse/worklist.ml" 119 3872 3908 "sparse/worklist.ml" 119 3872 3909
+type(
+  int
+)
+ident(
+  def v "sparse/worklist.ml" 119 3872 3913 "sparse/worklist.ml" 119 3872 3914
+)
+"sparse/worklist.ml" 119 3872 3913 "sparse/worklist.ml" 119 3872 3914
+type(
+  int
+)
+ident(
+  int_ref v "sparse/worklist.ml" 119 3872 3908 "sparse/worklist.ml" 119 3872 3909
+)
+"sparse/worklist.ml" 119 3872 3901 "sparse/worklist.ml" 119 3872 3915
+type(
+  NGraph.vertex -> int -> int
+)
+"sparse/worklist.ml" 119 3872 3916 "sparse/worklist.ml" 119 3872 3918
+type(
+  (NGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 102 3192 3208 "sparse/worklist.ml" 102 3192 3210
+)
+"sparse/worklist.ml" 119 3872 3883 "sparse/worklist.ml" 119 3872 3918
+call(
+  stack
+)
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+"sparse/worklist.ml" 121 3923 3935 "sparse/worklist.ml" 121 3923 3937
+type(
+  (DUGraph.vertex, int * bool) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 117 3744 3750 "sparse/worklist.ml" 117 3744 3752
+)
+"sparse/worklist.ml" 121 3923 3951 "sparse/worklist.ml" 121 3923 3953
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 119 3872 3878 "sparse/worklist.ml" 119 3872 3880
+)
+"sparse/worklist.ml" 121 3923 3967 "sparse/worklist.ml" 121 3923 3970
+type(
+  DUGraph.vertex BatSet.t
+)
+ident(
+  int_ref lhs "sparse/worklist.ml" 118 3814 3820 "sparse/worklist.ml" 118 3814 3823
+)
+"sparse/worklist.ml" 121 3923 3925 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 119 3872 3874 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 118 3814 3816 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 117 3744 3746 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 115 3704 3706 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 112 3592 3594 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 109 3455 3457 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 107 3401 3403 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 105 3288 3290 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 102 3192 3194 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 101 3129 3131 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 100 3101 3103 "sparse/worklist.ml" 121 3923 3972
+type(
+  t
+)
+"sparse/worklist.ml" 132 4098 4106 "sparse/worklist.ml" 132 4098 4113
+type(
+  (int * 'j) * 'k -> (int * 'l) * 'k -> int
+)
+ident(
+  def compare "sparse/worklist.ml" 135 4219 4259 "sparse/worklist.ml" 136 4260 4265
+)
+"sparse/worklist.ml" 132 4098 4116 "sparse/worklist.ml" 132 4098 4118
+type(
+  int
+)
+ident(
+  def o1 "sparse/worklist.ml" 132 4098 4128 "sparse/worklist.ml" 135 4219 4259
+)
+"sparse/worklist.ml" 132 4098 4120 "sparse/worklist.ml" 132 4098 4121
+type(
+  'j
+)
+"sparse/worklist.ml" 132 4098 4115 "sparse/worklist.ml" 132 4098 4122
+type(
+  int * 'j
+)
+"sparse/worklist.ml" 132 4098 4124 "sparse/worklist.ml" 132 4098 4126
+type(
+  'k
+)
+ident(
+  def v1 "sparse/worklist.ml" 132 4098 4128 "sparse/worklist.ml" 135 4219 4259
+)
+"sparse/worklist.ml" 132 4098 4114 "sparse/worklist.ml" 132 4098 4127
+type(
+  (int * 'j) * 'k
+)
+"sparse/worklist.ml" 132 4098 4130 "sparse/worklist.ml" 132 4098 4132
+type(
+  int
+)
+ident(
+  def o2 "sparse/worklist.ml" 133 4144 4150 "sparse/worklist.ml" 135 4219 4259
+)
+"sparse/worklist.ml" 132 4098 4134 "sparse/worklist.ml" 132 4098 4135
+type(
+  'l
+)
+"sparse/worklist.ml" 132 4098 4129 "sparse/worklist.ml" 132 4098 4136
+type(
+  int * 'l
+)
+"sparse/worklist.ml" 132 4098 4138 "sparse/worklist.ml" 132 4098 4140
+type(
+  'k
+)
+ident(
+  def v2 "sparse/worklist.ml" 133 4144 4150 "sparse/worklist.ml" 135 4219 4259
+)
+"sparse/worklist.ml" 132 4098 4128 "sparse/worklist.ml" 132 4098 4141
+type(
+  (int * 'l) * 'k
+)
+"sparse/worklist.ml" 133 4144 4154 "sparse/worklist.ml" 133 4144 4159
+type(
+  int
+)
+ident(
+  def cmp_o "sparse/worklist.ml" 134 4173 4179 "sparse/worklist.ml" 135 4219 4259
+)
+"sparse/worklist.ml" 133 4144 4162 "sparse/worklist.ml" 133 4144 4164
+type(
+  int
+)
+ident(
+  int_ref o1 "sparse/worklist.ml" 132 4098 4116 "sparse/worklist.ml" 132 4098 4118
+)
+"sparse/worklist.ml" 133 4144 4165 "sparse/worklist.ml" 133 4144 4166
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"sparse/worklist.ml" 133 4144 4167 "sparse/worklist.ml" 133 4144 4169
+type(
+  int
+)
+ident(
+  int_ref o2 "sparse/worklist.ml" 132 4098 4130 "sparse/worklist.ml" 132 4098 4132
+)
+"sparse/worklist.ml" 133 4144 4162 "sparse/worklist.ml" 133 4144 4169
+type(
+  int
+)
+"sparse/worklist.ml" 134 4173 4183 "sparse/worklist.ml" 134 4173 4188
+type(
+  int
+)
+ident(
+  def cmp_v "sparse/worklist.ml" 135 4219 4225 "sparse/worklist.ml" 135 4219 4259
+)
+"sparse/worklist.ml" 134 4173 4191 "sparse/worklist.ml" 134 4173 4209
+type(
+  'k -> 'k -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"sparse/worklist.ml" 134 4173 4210 "sparse/worklist.ml" 134 4173 4212
+type(
+  'k
+)
+ident(
+  int_ref v1 "sparse/worklist.ml" 132 4098 4124 "sparse/worklist.ml" 132 4098 4126
+)
+"sparse/worklist.ml" 134 4173 4213 "sparse/worklist.ml" 134 4173 4215
+type(
+  'k
+)
+ident(
+  int_ref v2 "sparse/worklist.ml" 132 4098 4138 "sparse/worklist.ml" 132 4098 4140
+)
+"sparse/worklist.ml" 134 4173 4191 "sparse/worklist.ml" 134 4173 4215
+type(
+  int
+)
+"sparse/worklist.ml" 135 4219 4228 "sparse/worklist.ml" 135 4219 4233
+type(
+  int
+)
+ident(
+  int_ref cmp_o "sparse/worklist.ml" 133 4144 4154 "sparse/worklist.ml" 133 4144 4159
+)
+"sparse/worklist.ml" 135 4219 4234 "sparse/worklist.ml" 135 4219 4235
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"sparse/worklist.ml" 135 4219 4236 "sparse/worklist.ml" 135 4219 4237
+type(
+  int
+)
+"sparse/worklist.ml" 135 4219 4228 "sparse/worklist.ml" 135 4219 4237
+type(
+  bool
+)
+"sparse/worklist.ml" 135 4219 4243 "sparse/worklist.ml" 135 4219 4248
+type(
+  int
+)
+ident(
+  int_ref cmp_v "sparse/worklist.ml" 134 4173 4183 "sparse/worklist.ml" 134 4173 4188
+)
+"sparse/worklist.ml" 135 4219 4254 "sparse/worklist.ml" 135 4219 4259
+type(
+  int
+)
+ident(
+  int_ref cmp_o "sparse/worklist.ml" 133 4144 4154 "sparse/worklist.ml" 133 4144 4159
+)
+"sparse/worklist.ml" 135 4219 4225 "sparse/worklist.ml" 135 4219 4259
+type(
+  int
+)
+"sparse/worklist.ml" 134 4173 4179 "sparse/worklist.ml" 135 4219 4259
+type(
+  int
+)
+"sparse/worklist.ml" 133 4144 4150 "sparse/worklist.ml" 135 4219 4259
+type(
+  int
+)
+"sparse/worklist.ml" 138 4267 4277 "sparse/worklist.ml" 138 4267 4291
+call(
+  stack
+)
+"sparse/worklist.ml" 142 4316 4320 "sparse/worklist.ml" 142 4316 4325
+type(
+  WorkSet.t
+)
+ident(
+  def empty "sparse/worklist.ml" 143 4342 4342 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 142 4316 4328 "sparse/worklist.ml" 142 4316 4341
+type(
+  WorkSet.t
+)
+ident(
+  ext_ref WorkSet.empty
+)
+"sparse/worklist.ml" 143 4342 4346 "sparse/worklist.ml" 143 4342 4354
+type(
+  WorkSet.t -> int
+)
+ident(
+  def cardinal "sparse/worklist.ml" 144 4374 4374 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 143 4342 4357 "sparse/worklist.ml" 143 4342 4373
+type(
+  WorkSet.t -> int
+)
+ident(
+  ext_ref WorkSet.cardinal
+)
+"sparse/worklist.ml" 144 4374 4378 "sparse/worklist.ml" 144 4374 4381
+type(
+  WorkSet.elt -> WorkSet.t -> bool
+)
+ident(
+  def mem "sparse/worklist.ml" 145 4396 4396 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 144 4374 4384 "sparse/worklist.ml" 144 4374 4395
+type(
+  WorkSet.elt -> WorkSet.t -> bool
+)
+ident(
+  ext_ref WorkSet.mem
+)
+"sparse/worklist.ml" 145 4396 4400 "sparse/worklist.ml" 145 4396 4413
+type(
+  (int * 'm) * 'n -> (int * 'o) * 'n -> bool
+)
+ident(
+  def compare_order "sparse/worklist.ml" 147 4450 4450 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 145 4396 4414 "sparse/worklist.ml" 145 4396 4415
+type(
+  (int * 'm) * 'n
+)
+ident(
+  def x "sparse/worklist.ml" 145 4396 4416 "sparse/worklist.ml" 145 4396 4448
+)
+"sparse/worklist.ml" 145 4396 4416 "sparse/worklist.ml" 145 4396 4417
+type(
+  (int * 'o) * 'n
+)
+ident(
+  def y "sparse/worklist.ml" 145 4396 4420 "sparse/worklist.ml" 145 4396 4448
+)
+"sparse/worklist.ml" 145 4396 4420 "sparse/worklist.ml" 145 4396 4439
+type(
+  (int * 'm) * 'n -> (int * 'o) * 'n -> int
+)
+ident(
+  int_ref WorkSet.Ord.compare "sparse/worklist.ml" 132 4098 4106 "sparse/worklist.ml" 132 4098 4113
+)
+"sparse/worklist.ml" 145 4396 4440 "sparse/worklist.ml" 145 4396 4441
+type(
+  (int * 'm) * 'n
+)
+ident(
+  int_ref x "sparse/worklist.ml" 145 4396 4414 "sparse/worklist.ml" 145 4396 4415
+)
+"sparse/worklist.ml" 145 4396 4442 "sparse/worklist.ml" 145 4396 4443
+type(
+  (int * 'o) * 'n
+)
+ident(
+  int_ref y "sparse/worklist.ml" 145 4396 4416 "sparse/worklist.ml" 145 4396 4417
+)
+"sparse/worklist.ml" 145 4396 4420 "sparse/worklist.ml" 145 4396 4443
+call(
+  stack
+)
+type(
+  int
+)
+"sparse/worklist.ml" 145 4396 4444 "sparse/worklist.ml" 145 4396 4446
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"sparse/worklist.ml" 145 4396 4447 "sparse/worklist.ml" 145 4396 4448
+type(
+  int
+)
+"sparse/worklist.ml" 145 4396 4420 "sparse/worklist.ml" 145 4396 4448
+type(
+  bool
+)
+"sparse/worklist.ml" 147 4450 4454 "sparse/worklist.ml" 147 4450 4459
+type(
+  bool ->
+  (DUGraph.vertex, int) BatMap.t ->
+  DUGraph.vertex -> WorkSet.workorder -> WorkSet.t -> WorkSet.t
+)
+ident(
+  def queue "sparse/worklist.ml" 160 4866 4866 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 147 4450 4460 "sparse/worklist.ml" 147 4450 4472
+type(
+  bool
+)
+ident(
+  def is_inneredge "sparse/worklist.ml" 147 4450 4473 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 147 4450 4473 "sparse/worklist.ml" 147 4450 4475
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  def ho "sparse/worklist.ml" 147 4450 4476 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 147 4450 4476 "sparse/worklist.ml" 147 4450 4477
+type(
+  DUGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 147 4450 4478 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 147 4450 4478 "sparse/worklist.ml" 147 4450 4479
+type(
+  WorkSet.workorder
+)
+ident(
+  def o "sparse/worklist.ml" 147 4450 4480 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 147 4450 4480 "sparse/worklist.ml" 147 4450 4482
+type(
+  WorkSet.t
+)
+ident(
+  def ws "sparse/worklist.ml" 152 4601 4603 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 152 4601 4611 "sparse/worklist.ml" 152 4601 4623
+type(
+  DUGraph.vertex -> int * bool -> bool -> int * bool
+)
+ident(
+  def change_order "sparse/worklist.ml" 152 4601 4603 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 152 4601 4624 "sparse/worklist.ml" 152 4601 4625
+type(
+  DUGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 152 4601 4626 "sparse/worklist.ml" 156 4776 4786
+)
+"sparse/worklist.ml" 152 4601 4626 "sparse/worklist.ml" 152 4601 4627
+type(
+  int * bool
+)
+ident(
+  def o "sparse/worklist.ml" 152 4601 4628 "sparse/worklist.ml" 156 4776 4786
+)
+"sparse/worklist.ml" 152 4601 4628 "sparse/worklist.ml" 152 4601 4640
+type(
+  bool
+)
+ident(
+  def is_inneredge "sparse/worklist.ml" 153 4643 4647 "sparse/worklist.ml" 156 4776 4786
+)
+"sparse/worklist.ml" 153 4643 4651 "sparse/worklist.ml" 153 4643 4662
+type(
+  bool
+)
+ident(
+  def is_loophead "sparse/worklist.ml" 154 4674 4678 "sparse/worklist.ml" 156 4776 4786
+)
+"sparse/worklist.ml" 153 4643 4665 "sparse/worklist.ml" 153 4643 4668
+type(
+  int * bool -> bool
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"sparse/worklist.ml" 153 4643 4669 "sparse/worklist.ml" 153 4643 4670
+type(
+  int * bool
+)
+ident(
+  int_ref o "sparse/worklist.ml" 152 4601 4626 "sparse/worklist.ml" 152 4601 4627
+)
+"sparse/worklist.ml" 153 4643 4665 "sparse/worklist.ml" 153 4643 4670
+type(
+  bool
+)
+"sparse/worklist.ml" 154 4674 4681 "sparse/worklist.ml" 154 4674 4693
+type(
+  bool
+)
+ident(
+  int_ref is_inneredge "sparse/worklist.ml" 152 4601 4628 "sparse/worklist.ml" 152 4601 4640
+)
+"sparse/worklist.ml" 154 4674 4694 "sparse/worklist.ml" 154 4674 4696
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"sparse/worklist.ml" 154 4674 4697 "sparse/worklist.ml" 154 4674 4708
+type(
+  bool
+)
+ident(
+  int_ref is_loophead "sparse/worklist.ml" 153 4643 4651 "sparse/worklist.ml" 153 4643 4662
+)
+"sparse/worklist.ml" 154 4674 4681 "sparse/worklist.ml" 154 4674 4708
+type(
+  bool
+)
+"sparse/worklist.ml" 155 4714 4725 "sparse/worklist.ml" 155 4714 4736
+type(
+  DUGraph.vertex -> (DUGraph.vertex, int) BatMap.t -> int
+)
+ident(
+  ext_ref BatMap.find
+)
+"sparse/worklist.ml" 155 4714 4737 "sparse/worklist.ml" 155 4714 4738
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 152 4601 4624 "sparse/worklist.ml" 152 4601 4625
+)
+"sparse/worklist.ml" 155 4714 4739 "sparse/worklist.ml" 155 4714 4741
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  int_ref ho "sparse/worklist.ml" 147 4450 4473 "sparse/worklist.ml" 147 4450 4475
+)
+"sparse/worklist.ml" 155 4714 4725 "sparse/worklist.ml" 155 4714 4741
+call(
+  stack
+)
+type(
+  int
+)
+"sparse/worklist.ml" 155 4714 4743 "sparse/worklist.ml" 155 4714 4754
+type(
+  bool
+)
+ident(
+  int_ref is_loophead "sparse/worklist.ml" 153 4643 4651 "sparse/worklist.ml" 153 4643 4662
+)
+"sparse/worklist.ml" 155 4714 4724 "sparse/worklist.ml" 155 4714 4755
+type(
+  int * bool
+)
+"sparse/worklist.ml" 155 4714 4761 "sparse/worklist.ml" 155 4714 4770
+type(
+  exn
+)
+"sparse/worklist.ml" 155 4714 4774 "sparse/worklist.ml" 155 4714 4775
+type(
+  int * bool
+)
+ident(
+  int_ref o "sparse/worklist.ml" 152 4601 4626 "sparse/worklist.ml" 152 4601 4627
+)
+"sparse/worklist.ml" 155 4714 4720 "sparse/worklist.ml" 155 4714 4775
+type(
+  int * bool
+)
+"sparse/worklist.ml" 156 4776 4785 "sparse/worklist.ml" 156 4776 4786
+type(
+  int * bool
+)
+ident(
+  int_ref o "sparse/worklist.ml" 152 4601 4626 "sparse/worklist.ml" 152 4601 4627
+)
+"sparse/worklist.ml" 154 4674 4678 "sparse/worklist.ml" 156 4776 4786
+type(
+  int * bool
+)
+"sparse/worklist.ml" 153 4643 4647 "sparse/worklist.ml" 156 4776 4786
+type(
+  int * bool
+)
+"sparse/worklist.ml" 157 4790 4796 "sparse/worklist.ml" 157 4790 4801
+type(
+  WorkSet.workorder
+)
+ident(
+  def new_o "sparse/worklist.ml" 158 4837 4839 "sparse/worklist.ml" 158 4837 4864
+)
+"sparse/worklist.ml" 157 4790 4804 "sparse/worklist.ml" 157 4790 4816
+type(
+  DUGraph.vertex -> WorkSet.workorder -> bool -> WorkSet.workorder
+)
+ident(
+  int_ref change_order "sparse/worklist.ml" 152 4601 4611 "sparse/worklist.ml" 152 4601 4623
+)
+"sparse/worklist.ml" 157 4790 4817 "sparse/worklist.ml" 157 4790 4818
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 147 4450 4476 "sparse/worklist.ml" 147 4450 4477
+)
+"sparse/worklist.ml" 157 4790 4819 "sparse/worklist.ml" 157 4790 4820
+type(
+  WorkSet.workorder
+)
+ident(
+  int_ref o "sparse/worklist.ml" 147 4450 4478 "sparse/worklist.ml" 147 4450 4479
+)
+"sparse/worklist.ml" 157 4790 4821 "sparse/worklist.ml" 157 4790 4833
+type(
+  bool
+)
+ident(
+  int_ref is_inneredge "sparse/worklist.ml" 147 4450 4460 "sparse/worklist.ml" 147 4450 4472
+)
+"sparse/worklist.ml" 157 4790 4804 "sparse/worklist.ml" 157 4790 4833
+call(
+  stack
+)
+type(
+  WorkSet.workorder
+)
+"sparse/worklist.ml" 158 4837 4839 "sparse/worklist.ml" 158 4837 4850
+type(
+  WorkSet.elt -> WorkSet.t -> WorkSet.t
+)
+ident(
+  ext_ref WorkSet.add
+)
+"sparse/worklist.ml" 158 4837 4852 "sparse/worklist.ml" 158 4837 4857
+type(
+  WorkSet.workorder
+)
+ident(
+  int_ref new_o "sparse/worklist.ml" 157 4790 4796 "sparse/worklist.ml" 157 4790 4801
+)
+"sparse/worklist.ml" 158 4837 4859 "sparse/worklist.ml" 158 4837 4860
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 147 4450 4476 "sparse/worklist.ml" 147 4450 4477
+)
+"sparse/worklist.ml" 158 4837 4851 "sparse/worklist.ml" 158 4837 4861
+type(
+  WorkSet.elt
+)
+"sparse/worklist.ml" 158 4837 4862 "sparse/worklist.ml" 158 4837 4864
+type(
+  WorkSet.t
+)
+ident(
+  int_ref ws "sparse/worklist.ml" 147 4450 4480 "sparse/worklist.ml" 147 4450 4482
+)
+"sparse/worklist.ml" 158 4837 4839 "sparse/worklist.ml" 158 4837 4864
+call(
+  tail
+)
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 157 4790 4792 "sparse/worklist.ml" 158 4837 4864
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 152 4601 4603 "sparse/worklist.ml" 158 4837 4864
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 160 4866 4870 "sparse/worklist.ml" 160 4866 4880
+type(
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t ->
+  DUGraph.vertex BatSet.t -> WorkSet.t
+)
+ident(
+  def init_nodes "sparse/worklist.ml" 164 5000 5000 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 160 4866 4881 "sparse/worklist.ml" 160 4866 4883
+type(
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t
+)
+ident(
+  def wo "sparse/worklist.ml" 160 4866 4884 "sparse/worklist.ml" 162 4958 4998
+)
+"sparse/worklist.ml" 160 4866 4884 "sparse/worklist.ml" 160 4866 4889
+type(
+  DUGraph.vertex BatSet.t
+)
+ident(
+  def nodes "sparse/worklist.ml" 161 4892 4894 "sparse/worklist.ml" 162 4958 4998
+)
+"sparse/worklist.ml" 161 4892 4898 "sparse/worklist.ml" 161 4892 4904
+type(
+  DUGraph.vertex -> WorkSet.t -> WorkSet.t
+)
+ident(
+  def init_v "sparse/worklist.ml" 162 4958 4960 "sparse/worklist.ml" 162 4958 4998
+)
+"sparse/worklist.ml" 161 4892 4905 "sparse/worklist.ml" 161 4892 4906
+type(
+  DUGraph.vertex
+)
+ident(
+  def v "sparse/worklist.ml" 161 4892 4909 "sparse/worklist.ml" 161 4892 4954
+)
+"sparse/worklist.ml" 161 4892 4909 "sparse/worklist.ml" 161 4892 4914
+type(
+  bool ->
+  (DUGraph.vertex, int) BatMap.t ->
+  DUGraph.vertex -> WorkSet.workorder -> WorkSet.t -> WorkSet.t
+)
+ident(
+  int_ref queue "sparse/worklist.ml" 147 4450 4454 "sparse/worklist.ml" 147 4450 4459
+)
+"sparse/worklist.ml" 161 4892 4915 "sparse/worklist.ml" 161 4892 4920
+type(
+  bool
+)
+"sparse/worklist.ml" 161 4892 4921 "sparse/worklist.ml" 161 4892 4933
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 161 4892 4934 "sparse/worklist.ml" 161 4892 4935
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref v "sparse/worklist.ml" 161 4892 4905 "sparse/worklist.ml" 161 4892 4906
+)
+"sparse/worklist.ml" 161 4892 4937 "sparse/worklist.ml" 161 4892 4948
+type(
+  DUGraph.vertex ->
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t -> WorkSet.workorder
+)
+ident(
+  ext_ref BatMap.find
+)
+"sparse/worklist.ml" 161 4892 4949 "sparse/worklist.ml" 161 4892 4950
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref v "sparse/worklist.ml" 161 4892 4905 "sparse/worklist.ml" 161 4892 4906
+)
+"sparse/worklist.ml" 161 4892 4951 "sparse/worklist.ml" 161 4892 4953
+type(
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 160 4866 4881 "sparse/worklist.ml" 160 4866 4883
+)
+"sparse/worklist.ml" 161 4892 4936 "sparse/worklist.ml" 161 4892 4954
+call(
+  stack
+)
+type(
+  WorkSet.workorder
+)
+"sparse/worklist.ml" 161 4892 4909 "sparse/worklist.ml" 161 4892 4954
+call(
+  tail
+)
+type(
+  WorkSet.t -> WorkSet.t
+)
+"sparse/worklist.ml" 162 4958 4960 "sparse/worklist.ml" 162 4958 4971
+type(
+  (DUGraph.vertex -> WorkSet.t -> WorkSet.t) ->
+  DUGraph.vertex BatSet.t -> WorkSet.t -> WorkSet.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"sparse/worklist.ml" 162 4958 4972 "sparse/worklist.ml" 162 4958 4978
+type(
+  DUGraph.vertex -> WorkSet.t -> WorkSet.t
+)
+ident(
+  int_ref init_v "sparse/worklist.ml" 161 4892 4898 "sparse/worklist.ml" 161 4892 4904
+)
+"sparse/worklist.ml" 162 4958 4979 "sparse/worklist.ml" 162 4958 4984
+type(
+  DUGraph.vertex BatSet.t
+)
+ident(
+  int_ref nodes "sparse/worklist.ml" 160 4866 4884 "sparse/worklist.ml" 160 4866 4889
+)
+"sparse/worklist.ml" 162 4958 4985 "sparse/worklist.ml" 162 4958 4998
+type(
+  WorkSet.t
+)
+ident(
+  ext_ref WorkSet.empty
+)
+"sparse/worklist.ml" 162 4958 4960 "sparse/worklist.ml" 162 4958 4998
+call(
+  tail
+)
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 161 4892 4894 "sparse/worklist.ml" 162 4958 4998
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 164 5000 5004 "sparse/worklist.ml" 164 5000 5008
+type(
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t -> DUGraph.t -> WorkSet.t
+)
+ident(
+  def init "sparse/worklist.ml" 168 5142 5142 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 164 5000 5009 "sparse/worklist.ml" 164 5000 5011
+type(
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t
+)
+ident(
+  def wo "sparse/worklist.ml" 164 5000 5012 "sparse/worklist.ml" 166 5084 5140
+)
+"sparse/worklist.ml" 164 5000 5012 "sparse/worklist.ml" 164 5000 5015
+type(
+  DUGraph.t
+)
+ident(
+  def dug "sparse/worklist.ml" 165 5018 5020 "sparse/worklist.ml" 166 5084 5140
+)
+"sparse/worklist.ml" 165 5018 5024 "sparse/worklist.ml" 165 5018 5030
+type(
+  DUGraph.vertex -> WorkSet.t -> WorkSet.t
+)
+ident(
+  def init_v "sparse/worklist.ml" 166 5084 5086 "sparse/worklist.ml" 166 5084 5140
+)
+"sparse/worklist.ml" 165 5018 5031 "sparse/worklist.ml" 165 5018 5032
+type(
+  DUGraph.vertex
+)
+ident(
+  def v "sparse/worklist.ml" 165 5018 5035 "sparse/worklist.ml" 165 5018 5080
+)
+"sparse/worklist.ml" 165 5018 5035 "sparse/worklist.ml" 165 5018 5040
+type(
+  bool ->
+  (DUGraph.vertex, int) BatMap.t ->
+  DUGraph.vertex -> WorkSet.workorder -> WorkSet.t -> WorkSet.t
+)
+ident(
+  int_ref queue "sparse/worklist.ml" 147 4450 4454 "sparse/worklist.ml" 147 4450 4459
+)
+"sparse/worklist.ml" 165 5018 5041 "sparse/worklist.ml" 165 5018 5046
+type(
+  bool
+)
+"sparse/worklist.ml" 165 5018 5047 "sparse/worklist.ml" 165 5018 5059
+type(
+  (DUGraph.vertex, int) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"sparse/worklist.ml" 165 5018 5060 "sparse/worklist.ml" 165 5018 5061
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref v "sparse/worklist.ml" 165 5018 5031 "sparse/worklist.ml" 165 5018 5032
+)
+"sparse/worklist.ml" 165 5018 5063 "sparse/worklist.ml" 165 5018 5074
+type(
+  DUGraph.vertex ->
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t -> WorkSet.workorder
+)
+ident(
+  ext_ref BatMap.find
+)
+"sparse/worklist.ml" 165 5018 5075 "sparse/worklist.ml" 165 5018 5076
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref v "sparse/worklist.ml" 165 5018 5031 "sparse/worklist.ml" 165 5018 5032
+)
+"sparse/worklist.ml" 165 5018 5077 "sparse/worklist.ml" 165 5018 5079
+type(
+  (DUGraph.vertex, WorkSet.workorder) BatMap.t
+)
+ident(
+  int_ref wo "sparse/worklist.ml" 164 5000 5009 "sparse/worklist.ml" 164 5000 5011
+)
+"sparse/worklist.ml" 165 5018 5062 "sparse/worklist.ml" 165 5018 5080
+call(
+  stack
+)
+type(
+  WorkSet.workorder
+)
+"sparse/worklist.ml" 165 5018 5035 "sparse/worklist.ml" 165 5018 5080
+call(
+  tail
+)
+type(
+  WorkSet.t -> WorkSet.t
+)
+"sparse/worklist.ml" 166 5084 5086 "sparse/worklist.ml" 166 5084 5097
+type(
+  (DUGraph.vertex -> WorkSet.t -> WorkSet.t) ->
+  DUGraph.vertex BatSet.t -> WorkSet.t -> WorkSet.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"sparse/worklist.ml" 166 5084 5098 "sparse/worklist.ml" 166 5084 5104
+type(
+  DUGraph.vertex -> WorkSet.t -> WorkSet.t
+)
+ident(
+  int_ref init_v "sparse/worklist.ml" 165 5018 5024 "sparse/worklist.ml" 165 5018 5030
+)
+"sparse/worklist.ml" 166 5084 5106 "sparse/worklist.ml" 166 5084 5121
+type(
+  DUGraph.t -> DUGraph.vertex BatSet.t
+)
+ident(
+  ext_ref DUGraph.nodesof
+)
+"sparse/worklist.ml" 166 5084 5122 "sparse/worklist.ml" 166 5084 5125
+type(
+  DUGraph.t
+)
+ident(
+  int_ref dug "sparse/worklist.ml" 164 5000 5012 "sparse/worklist.ml" 164 5000 5015
+)
+"sparse/worklist.ml" 166 5084 5105 "sparse/worklist.ml" 166 5084 5126
+call(
+  stack
+)
+type(
+  DUGraph.vertex BatSet.t
+)
+"sparse/worklist.ml" 166 5084 5127 "sparse/worklist.ml" 166 5084 5140
+type(
+  WorkSet.t
+)
+ident(
+  ext_ref WorkSet.empty
+)
+"sparse/worklist.ml" 166 5084 5086 "sparse/worklist.ml" 166 5084 5140
+call(
+  tail
+)
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 165 5018 5020 "sparse/worklist.ml" 166 5084 5140
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 168 5142 5146 "sparse/worklist.ml" 168 5142 5150
+type(
+  WorkSet.t -> (DUGraph.vertex * WorkSet.t) option
+)
+ident(
+  def pick "sparse/worklist.ml" 173 5259 5283 "sparse/worklist.ml" 175 5285 5288
+)
+"sparse/worklist.ml" 168 5142 5151 "sparse/worklist.ml" 168 5142 5153
+type(
+  WorkSet.t
+)
+ident(
+  def ws "sparse/worklist.ml" 169 5156 5158 "sparse/worklist.ml" 173 5259 5283
+)
+"sparse/worklist.ml" 170 5162 5171 "sparse/worklist.ml" 170 5162 5172
+type(
+  WorkSet.workorder
+)
+ident(
+  def o "sparse/worklist.ml" 171 5201 5205 "sparse/worklist.ml" 172 5242 5258
+)
+"sparse/worklist.ml" 170 5162 5174 "sparse/worklist.ml" 170 5162 5175
+type(
+  DUGraph.vertex
+)
+ident(
+  def n "sparse/worklist.ml" 171 5201 5205 "sparse/worklist.ml" 172 5242 5258
+)
+"sparse/worklist.ml" 170 5162 5170 "sparse/worklist.ml" 170 5162 5176
+type(
+  WorkSet.elt
+)
+"sparse/worklist.ml" 170 5162 5179 "sparse/worklist.ml" 170 5162 5194
+type(
+  WorkSet.t -> WorkSet.elt
+)
+ident(
+  ext_ref WorkSet.min_elt
+)
+"sparse/worklist.ml" 170 5162 5195 "sparse/worklist.ml" 170 5162 5197
+type(
+  WorkSet.t
+)
+ident(
+  int_ref ws "sparse/worklist.ml" 168 5142 5151 "sparse/worklist.ml" 168 5142 5153
+)
+"sparse/worklist.ml" 170 5162 5179 "sparse/worklist.ml" 170 5162 5197
+call(
+  stack
+)
+type(
+  WorkSet.elt
+)
+"sparse/worklist.ml" 171 5201 5209 "sparse/worklist.ml" 171 5201 5211
+type(
+  WorkSet.t
+)
+ident(
+  def ws "sparse/worklist.ml" 172 5242 5246 "sparse/worklist.ml" 172 5242 5258
+)
+"sparse/worklist.ml" 171 5201 5214 "sparse/worklist.ml" 171 5201 5228
+type(
+  WorkSet.elt -> WorkSet.t -> WorkSet.t
+)
+ident(
+  ext_ref WorkSet.remove
+)
+"sparse/worklist.ml" 171 5201 5230 "sparse/worklist.ml" 171 5201 5231
+type(
+  WorkSet.workorder
+)
+ident(
+  int_ref o "sparse/worklist.ml" 170 5162 5171 "sparse/worklist.ml" 170 5162 5172
+)
+"sparse/worklist.ml" 171 5201 5233 "sparse/worklist.ml" 171 5201 5234
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 170 5162 5174 "sparse/worklist.ml" 170 5162 5175
+)
+"sparse/worklist.ml" 171 5201 5229 "sparse/worklist.ml" 171 5201 5235
+type(
+  WorkSet.elt
+)
+"sparse/worklist.ml" 171 5201 5236 "sparse/worklist.ml" 171 5201 5238
+type(
+  WorkSet.t
+)
+ident(
+  int_ref ws "sparse/worklist.ml" 168 5142 5151 "sparse/worklist.ml" 168 5142 5153
+)
+"sparse/worklist.ml" 171 5201 5214 "sparse/worklist.ml" 171 5201 5238
+call(
+  stack
+)
+type(
+  WorkSet.t
+)
+"sparse/worklist.ml" 172 5242 5252 "sparse/worklist.ml" 172 5242 5253
+type(
+  DUGraph.vertex
+)
+ident(
+  int_ref n "sparse/worklist.ml" 170 5162 5174 "sparse/worklist.ml" 170 5162 5175
+)
+"sparse/worklist.ml" 172 5242 5255 "sparse/worklist.ml" 172 5242 5257
+type(
+  WorkSet.t
+)
+ident(
+  int_ref ws "sparse/worklist.ml" 171 5201 5209 "sparse/worklist.ml" 171 5201 5211
+)
+"sparse/worklist.ml" 172 5242 5251 "sparse/worklist.ml" 172 5242 5258
+type(
+  DUGraph.vertex * WorkSet.t
+)
+"sparse/worklist.ml" 172 5242 5246 "sparse/worklist.ml" 172 5242 5258
+type(
+  (DUGraph.vertex * WorkSet.t) option
+)
+"sparse/worklist.ml" 171 5201 5205 "sparse/worklist.ml" 172 5242 5258
+type(
+  (DUGraph.vertex * WorkSet.t) option
+)
+"sparse/worklist.ml" 170 5162 5166 "sparse/worklist.ml" 172 5242 5258
+type(
+  (DUGraph.vertex * WorkSet.t) option
+)
+"sparse/worklist.ml" 173 5259 5266 "sparse/worklist.ml" 173 5259 5275
+type(
+  exn
+)
+"sparse/worklist.ml" 173 5259 5279 "sparse/worklist.ml" 173 5259 5283
+type(
+  (DUGraph.vertex * WorkSet.t) option
+)
+"sparse/worklist.ml" 169 5156 5158 "sparse/worklist.ml" 173 5259 5283
+type(
+  (DUGraph.vertex * WorkSet.t) option
+)

@@ -1,0 +1,5714 @@
+"cilext/inline.ml" 57 2168 2172 "cilext/inline.ml" 57 2168 2180
+type(
+  bool ref
+)
+ident(
+  def doInline "cilext/inline.ml" 58 2194 2194 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 57 2168 2183 "cilext/inline.ml" 57 2168 2186
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 57 2168 2187 "cilext/inline.ml" 57 2168 2192
+type(
+  bool
+)
+"cilext/inline.ml" 57 2168 2183 "cilext/inline.ml" 57 2168 2192
+type(
+  bool ref
+)
+"cilext/inline.ml" 58 2194 2198 "cilext/inline.ml" 58 2194 2203
+type(
+  bool
+)
+ident(
+  def debug "cilext/inline.ml" 60 2215 2215 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 58 2194 2206 "cilext/inline.ml" 58 2194 2211
+type(
+  bool
+)
+"cilext/inline.ml" 64 2407 2434 "cilext/inline.ml" 64 2407 2438
+type(
+  Cil.fundec
+)
+"cilext/inline.ml" 66 2557 2584 "cilext/inline.ml" 66 2557 2592
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 68 2704 2731 "cilext/inline.ml" 68 2704 2738
+type(
+  Cil.varinfo -> Cil.varinfo
+)
+"cilext/inline.ml" 72 3008 3035 "cilext/inline.ml" 72 3008 3042
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 74 3165 3192 "cilext/inline.ml" 74 3165 3201
+type(
+  string -> string
+)
+"cilext/inline.ml" 77 3369 3396 "cilext/inline.ml" 77 3369 3402
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 79 3518 3553 "cilext/inline.ml" 79 3518 3559
+type(
+  < queueInstr : Cil.instr list -> unit;
+    unqueueInstr : unit -> Cil.instr list;
+    vattr : Cil.attribute -> Cil.attribute list Cil.visitAction;
+    vattrparam : Cil.attrparam -> Cil.attrparam Cil.visitAction;
+    vblock : Cil.block -> Cil.block Cil.visitAction;
+    vexpr : Cil.exp -> Cil.exp Cil.visitAction;
+    vfunc : Cil.fundec -> Cil.fundec Cil.visitAction;
+    vglob : Cil.global -> Cil.global list Cil.visitAction;
+    vinit : Cil.varinfo -> Cil.offset -> Cil.init -> Cil.init Cil.visitAction;
+    vinitoffs : Cil.offset -> Cil.offset Cil.visitAction;
+    vinst : Cil.instr -> Cil.instr list Cil.visitAction;
+    vlval : Cil.lval -> Cil.lval Cil.visitAction;
+    voffs : Cil.offset -> Cil.offset Cil.visitAction;
+    vstmt : Cil.stmt -> Cil.stmt Cil.visitAction;
+    vtype : Cil.typ -> Cil.typ Cil.visitAction;
+    vvdec : Cil.varinfo -> Cil.varinfo Cil.visitAction;
+    vvrbl : Cil.varinfo -> Cil.varinfo Cil.visitAction; .. >
+)
+"cilext/inline.ml" 84 3693 3721 "cilext/inline.ml" 84 3693 3730
+type(
+  int -> Cil.stmt IH.t
+)
+ident(
+  ext_ref IH.create
+)
+"cilext/inline.ml" 84 3693 3731 "cilext/inline.ml" 84 3693 3734
+type(
+  int
+)
+"cilext/inline.ml" 84 3693 3721 "cilext/inline.ml" 84 3693 3734
+call(
+  stack
+)
+type(
+  Cil.stmt IH.t
+)
+type(
+  Cil.stmt IH.t
+)
+"cilext/inline.ml" 87 3796 3828 "cilext/inline.ml" 87 3796 3831
+type(
+  Cil.stmt list -> Cil.stmt list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 87 3796 3832 "cilext/inline.ml" 87 3796 3834
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 87 3796 3828 "cilext/inline.ml" 87 3796 3834
+type(
+  Cil.stmt list ref
+)
+type(
+  Cil.stmt list ref
+)
+"cilext/inline.ml" 89 3838 3852 "cilext/inline.ml" 89 3838 3855
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 89 3838 3856 "cilext/inline.ml" 89 3838 3857
+type(
+  int
+)
+"cilext/inline.ml" 89 3838 3852 "cilext/inline.ml" 89 3838 3857
+type(
+  int ref
+)
+"cilext/inline.ml" 92 3898 3914 "cilext/inline.ml" 92 3898 3915
+type(
+  Cil.fundec
+)
+ident(
+  def f "cilext/inline.ml" 92 3898 3925 "cilext/inline.ml" 117 4762 4805
+)
+"cilext/inline.ml" 93 3950 3958 "cilext/inline.ml" 93 3950 3971
+type(
+  Cil.fundec -> Cil.fundec
+)
+ident(
+  def patchfunction "cilext/inline.ml" 115 4719 4723 "cilext/inline.ml" 117 4762 4805
+)
+"cilext/inline.ml" 93 3950 3973 "cilext/inline.ml" 93 3950 3975
+type(
+  Cil.fundec
+)
+ident(
+  def f' "cilext/inline.ml" 94 3990 3996 "cilext/inline.ml" 113 4701 4709
+)
+"cilext/inline.ml" 94 3990 4000 "cilext/inline.ml" 94 3990 4008
+type(
+  int -> Cil.stmt
+)
+ident(
+  def findStmt "cilext/inline.ml" 99 4176 4182 "cilext/inline.ml" 113 4701 4709
+)
+"cilext/inline.ml" 94 3990 4010 "cilext/inline.ml" 94 3990 4011
+type(
+  int
+)
+ident(
+  def i "cilext/inline.ml" 95 4022 4030 "cilext/inline.ml" 96 4054 4125
+)
+"cilext/inline.ml" 95 4022 4034 "cilext/inline.ml" 95 4022 4041
+type(
+  Cil.stmt IH.t -> int -> Cil.stmt
+)
+ident(
+  ext_ref IH.find
+)
+"cilext/inline.ml" 95 4022 4042 "cilext/inline.ml" 95 4022 4049
+type(
+  Cil.stmt IH.t
+)
+ident(
+  ext_ref stmtmap
+)
+"cilext/inline.ml" 95 4022 4050 "cilext/inline.ml" 95 4022 4051
+type(
+  int
+)
+ident(
+  int_ref i "cilext/inline.ml" 94 3990 4010 "cilext/inline.ml" 94 3990 4011
+)
+"cilext/inline.ml" 95 4022 4034 "cilext/inline.ml" 95 4022 4051
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 96 4054 4067 "cilext/inline.ml" 96 4054 4076
+type(
+  exn
+)
+"cilext/inline.ml" 96 4054 4080 "cilext/inline.ml" 96 4054 4083
+type(
+  Pretty.doc -> Cil.stmt
+)
+ident(
+  ext_ref E.s
+)
+"cilext/inline.ml" 96 4054 4085 "cilext/inline.ml" 96 4054 4088
+type(
+  (int -> Pretty.doc, unit, Pretty.doc) format -> int -> Pretty.doc
+)
+ident(
+  ext_ref Cil.bug
+)
+"cilext/inline.ml" 96 4054 4089 "cilext/inline.ml" 96 4054 4122
+type(
+  (int -> Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 96 4054 4123 "cilext/inline.ml" 96 4054 4124
+type(
+  int
+)
+ident(
+  int_ref i "cilext/inline.ml" 94 3990 4010 "cilext/inline.ml" 94 3990 4011
+)
+"cilext/inline.ml" 96 4054 4084 "cilext/inline.ml" 96 4054 4125
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 96 4054 4080 "cilext/inline.ml" 96 4054 4125
+call(
+  tail
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 95 4022 4030 "cilext/inline.ml" 96 4054 4125
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 99 4176 4186 "cilext/inline.ml" 99 4176 4195
+type(
+  Cil.stmt -> unit
+)
+ident(
+  def patchstmt "cilext/inline.ml" 112 4664 4670 "cilext/inline.ml" 113 4701 4709
+)
+"cilext/inline.ml" 99 4176 4197 "cilext/inline.ml" 99 4176 4198
+type(
+  Cil.stmt
+)
+ident(
+  def s "cilext/inline.ml" 100 4210 4218 "cilext/inline.ml" 110 4635 4652
+)
+"cilext/inline.ml" 100 4210 4224 "cilext/inline.ml" 100 4210 4225
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 99 4176 4197 "cilext/inline.ml" 99 4176 4198
+)
+"cilext/inline.ml" 100 4210 4224 "cilext/inline.ml" 100 4210 4231
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 101 4238 4254 "cilext/inline.ml" 101 4238 4256
+type(
+  Cil.stmt ref
+)
+ident(
+  def sr "cilext/inline.ml" 102 4266 4278 "cilext/inline.ml" 106 4430 4465
+)
+"cilext/inline.ml" 101 4238 4258 "cilext/inline.ml" 101 4238 4259
+type(
+  Cil.location
+)
+ident(
+  def l "cilext/inline.ml" 102 4266 4278 "cilext/inline.ml" 106 4430 4465
+)
+"cilext/inline.ml" 101 4238 4248 "cilext/inline.ml" 101 4238 4260
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 102 4266 4281 "cilext/inline.ml" 102 4266 4286
+type(
+  bool
+)
+ident(
+  int_ref debug "cilext/inline.ml" 58 2194 2198 "cilext/inline.ml" 58 2194 2203
+)
+"cilext/inline.ml" 103 4293 4307 "cilext/inline.ml" 103 4293 4312
+type(
+  (unit, unit, Pretty.doc, unit) format4 -> unit
+)
+ident(
+  ext_ref E.log
+)
+"cilext/inline.ml" 103 4293 4313 "cilext/inline.ml" 103 4293 4330
+type(
+  (unit, unit, Pretty.doc, unit) format4
+)
+"cilext/inline.ml" 103 4293 4307 "cilext/inline.ml" 103 4293 4330
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 102 4266 4278 "cilext/inline.ml" 103 4293 4330
+type(
+  unit
+)
+"cilext/inline.ml" 105 4381 4397 "cilext/inline.ml" 105 4381 4400
+type(
+  Cil.stmt ref
+)
+ident(
+  def sr' "cilext/inline.ml" 106 4430 4442 "cilext/inline.ml" 106 4430 4465
+)
+"cilext/inline.ml" 105 4381 4403 "cilext/inline.ml" 105 4381 4406
+type(
+  Cil.stmt -> Cil.stmt ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 105 4381 4408 "cilext/inline.ml" 105 4381 4416
+type(
+  int -> Cil.stmt
+)
+ident(
+  int_ref findStmt "cilext/inline.ml" 94 3990 4000 "cilext/inline.ml" 94 3990 4008
+)
+"cilext/inline.ml" 105 4381 4417 "cilext/inline.ml" 105 4381 4418
+type(
+  Cil.stmt ref -> Cil.stmt
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 105 4381 4418 "cilext/inline.ml" 105 4381 4420
+type(
+  Cil.stmt ref
+)
+ident(
+  int_ref sr "cilext/inline.ml" 101 4238 4254 "cilext/inline.ml" 101 4238 4256
+)
+"cilext/inline.ml" 105 4381 4417 "cilext/inline.ml" 105 4381 4420
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 105 4381 4417 "cilext/inline.ml" 105 4381 4424
+type(
+  int
+)
+"cilext/inline.ml" 105 4381 4407 "cilext/inline.ml" 105 4381 4425
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 105 4381 4403 "cilext/inline.ml" 105 4381 4425
+type(
+  Cil.stmt ref
+)
+"cilext/inline.ml" 106 4430 4442 "cilext/inline.ml" 106 4430 4443
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 99 4176 4197 "cilext/inline.ml" 99 4176 4198
+)
+"cilext/inline.ml" 106 4430 4459 "cilext/inline.ml" 106 4430 4462
+type(
+  Cil.stmt ref
+)
+ident(
+  int_ref sr' "cilext/inline.ml" 105 4381 4397 "cilext/inline.ml" 105 4381 4400
+)
+"cilext/inline.ml" 106 4430 4463 "cilext/inline.ml" 106 4430 4464
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 101 4238 4258 "cilext/inline.ml" 101 4238 4259
+)
+"cilext/inline.ml" 106 4430 4453 "cilext/inline.ml" 106 4430 4465
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 106 4430 4442 "cilext/inline.ml" 106 4430 4465
+type(
+  unit
+)
+"cilext/inline.ml" 105 4381 4393 "cilext/inline.ml" 106 4430 4465
+type(
+  unit
+)
+"cilext/inline.ml" 102 4266 4278 "cilext/inline.ml" 106 4430 4465
+type(
+  unit
+)
+"cilext/inline.ml" 107 4467 4485 "cilext/inline.ml" 107 4467 4486
+type(
+  Cil.exp
+)
+ident(
+  def e "cilext/inline.ml" 108 4509 4521 "cilext/inline.ml" 109 4551 4633
+)
+"cilext/inline.ml" 107 4467 4488 "cilext/inline.ml" 107 4467 4492
+type(
+  Cil.block
+)
+ident(
+  def body "cilext/inline.ml" 108 4509 4521 "cilext/inline.ml" 109 4551 4633
+)
+"cilext/inline.ml" 107 4467 4494 "cilext/inline.ml" 107 4467 4499
+type(
+  Cil.stmt list
+)
+ident(
+  def cases "cilext/inline.ml" 108 4509 4521 "cilext/inline.ml" 109 4551 4633
+)
+"cilext/inline.ml" 107 4467 4501 "cilext/inline.ml" 107 4467 4502
+type(
+  Cil.location
+)
+ident(
+  def l "cilext/inline.ml" 108 4509 4521 "cilext/inline.ml" 109 4551 4633
+)
+"cilext/inline.ml" 107 4467 4477 "cilext/inline.ml" 107 4467 4503
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 108 4509 4521 "cilext/inline.ml" 108 4509 4522
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 99 4176 4197 "cilext/inline.ml" 99 4176 4198
+)
+"cilext/inline.ml" 108 4509 4540 "cilext/inline.ml" 108 4509 4541
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "cilext/inline.ml" 107 4467 4485 "cilext/inline.ml" 107 4467 4486
+)
+"cilext/inline.ml" 108 4509 4543 "cilext/inline.ml" 108 4509 4547
+type(
+  Cil.block
+)
+ident(
+  int_ref body "cilext/inline.ml" 107 4467 4488 "cilext/inline.ml" 107 4467 4492
+)
+"cilext/inline.ml" 109 4551 4582 "cilext/inline.ml" 109 4551 4595
+type(
+  (Cil.stmt -> Cil.stmt) -> Cil.stmt list -> Cil.stmt list
+)
+ident(
+  ext_ref Util.list_map
+)
+"cilext/inline.ml" 109 4551 4601 "cilext/inline.ml" 109 4551 4603
+type(
+  Cil.stmt
+)
+ident(
+  def cs "cilext/inline.ml" 109 4551 4607 "cilext/inline.ml" 109 4551 4622
+)
+"cilext/inline.ml" 109 4551 4607 "cilext/inline.ml" 109 4551 4615
+type(
+  int -> Cil.stmt
+)
+ident(
+  int_ref findStmt "cilext/inline.ml" 94 3990 4000 "cilext/inline.ml" 94 3990 4008
+)
+"cilext/inline.ml" 109 4551 4616 "cilext/inline.ml" 109 4551 4618
+type(
+  Cil.stmt
+)
+ident(
+  int_ref cs "cilext/inline.ml" 109 4551 4601 "cilext/inline.ml" 109 4551 4603
+)
+"cilext/inline.ml" 109 4551 4616 "cilext/inline.ml" 109 4551 4622
+type(
+  int
+)
+"cilext/inline.ml" 109 4551 4607 "cilext/inline.ml" 109 4551 4622
+call(
+  tail
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 109 4551 4596 "cilext/inline.ml" 109 4551 4623
+type(
+  Cil.stmt -> Cil.stmt
+)
+"cilext/inline.ml" 109 4551 4624 "cilext/inline.ml" 109 4551 4629
+type(
+  Cil.stmt list
+)
+ident(
+  int_ref cases "cilext/inline.ml" 107 4467 4494 "cilext/inline.ml" 107 4467 4499
+)
+"cilext/inline.ml" 109 4551 4582 "cilext/inline.ml" 109 4551 4629
+call(
+  stack
+)
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 109 4551 4631 "cilext/inline.ml" 109 4551 4632
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 107 4467 4501 "cilext/inline.ml" 107 4467 4502
+)
+"cilext/inline.ml" 108 4509 4532 "cilext/inline.ml" 109 4551 4633
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 108 4509 4521 "cilext/inline.ml" 109 4551 4633
+type(
+  unit
+)
+"cilext/inline.ml" 110 4635 4645 "cilext/inline.ml" 110 4635 4646
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 110 4635 4650 "cilext/inline.ml" 110 4635 4652
+type(
+  unit
+)
+"cilext/inline.ml" 100 4210 4218 "cilext/inline.ml" 110 4635 4652
+type(
+  unit
+)
+"cilext/inline.ml" 112 4664 4670 "cilext/inline.ml" 112 4664 4679
+type(
+  (Cil.stmt -> unit) -> Cil.stmt list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cilext/inline.ml" 112 4664 4680 "cilext/inline.ml" 112 4664 4689
+type(
+  Cil.stmt -> unit
+)
+ident(
+  int_ref patchstmt "cilext/inline.ml" 99 4176 4186 "cilext/inline.ml" 99 4176 4195
+)
+"cilext/inline.ml" 112 4664 4690 "cilext/inline.ml" 112 4664 4691
+type(
+  Cil.stmt list ref -> Cil.stmt list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 112 4664 4691 "cilext/inline.ml" 112 4664 4698
+type(
+  Cil.stmt list ref
+)
+ident(
+  ext_ref patches
+)
+"cilext/inline.ml" 112 4664 4690 "cilext/inline.ml" 112 4664 4698
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 112 4664 4670 "cilext/inline.ml" 112 4664 4698
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 113 4701 4707 "cilext/inline.ml" 113 4701 4709
+type(
+  Cil.fundec
+)
+ident(
+  int_ref f' "cilext/inline.ml" 93 3950 3973 "cilext/inline.ml" 93 3950 3975
+)
+"cilext/inline.ml" 112 4664 4670 "cilext/inline.ml" 113 4701 4709
+type(
+  Cil.fundec
+)
+"cilext/inline.ml" 99 4176 4182 "cilext/inline.ml" 113 4701 4709
+type(
+  Cil.fundec
+)
+"cilext/inline.ml" 94 3990 3996 "cilext/inline.ml" 113 4701 4709
+type(
+  Cil.fundec
+)
+"cilext/inline.ml" 115 4719 4723 "cilext/inline.ml" 115 4719 4730
+type(
+  Cil.stmt list ref
+)
+ident(
+  ext_ref patches
+)
+"cilext/inline.ml" 115 4719 4731 "cilext/inline.ml" 115 4719 4733
+type(
+  Cil.stmt list ref -> Cil.stmt list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 115 4719 4734 "cilext/inline.ml" 115 4719 4736
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 115 4719 4723 "cilext/inline.ml" 115 4719 4736
+type(
+  unit
+)
+"cilext/inline.ml" 116 4739 4743 "cilext/inline.ml" 116 4739 4751
+type(
+  Cil.stmt IH.t -> unit
+)
+ident(
+  ext_ref IH.clear
+)
+"cilext/inline.ml" 116 4739 4752 "cilext/inline.ml" 116 4739 4759
+type(
+  Cil.stmt IH.t
+)
+ident(
+  ext_ref stmtmap
+)
+"cilext/inline.ml" 116 4739 4743 "cilext/inline.ml" 116 4739 4759
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 117 4762 4788 "cilext/inline.ml" 117 4762 4789
+type(
+  Cil.fundec
+)
+ident(
+  int_ref f "cilext/inline.ml" 92 3898 3914 "cilext/inline.ml" 92 3898 3915
+)
+"cilext/inline.ml" 117 4762 4791 "cilext/inline.ml" 117 4762 4804
+type(
+  Cil.fundec -> Cil.fundec
+)
+ident(
+  int_ref patchfunction "cilext/inline.ml" 93 3950 3958 "cilext/inline.ml" 93 3950 3971
+)
+"cilext/inline.ml" 117 4762 4766 "cilext/inline.ml" 117 4762 4805
+type(
+  Cil.fundec Cil.visitAction
+)
+"cilext/inline.ml" 116 4739 4743 "cilext/inline.ml" 117 4762 4805
+type(
+  Cil.fundec Cil.visitAction
+)
+"cilext/inline.ml" 115 4719 4723 "cilext/inline.ml" 117 4762 4805
+type(
+  Cil.fundec Cil.visitAction
+)
+"cilext/inline.ml" 93 3950 3954 "cilext/inline.ml" 117 4762 4805
+type(
+  Cil.fundec Cil.visitAction
+)
+type(
+  Cil.fundec Cil.visitAction
+)
+"cilext/inline.ml" 120 4872 4888 "cilext/inline.ml" 120 4872 4889
+type(
+  Cil.varinfo
+)
+ident(
+  def v "cilext/inline.ml" 121 4904 4908 "cilext/inline.ml" 128 5046 5065
+)
+"cilext/inline.ml" 121 4904 4911 "cilext/inline.ml" 121 4904 4912
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref v "cilext/inline.ml" 120 4872 4888 "cilext/inline.ml" 120 4872 4889
+)
+"cilext/inline.ml" 121 4904 4911 "cilext/inline.ml" 121 4904 4918
+type(
+  bool
+)
+"cilext/inline.ml" 122 4926 4932 "cilext/inline.ml" 122 4926 4944
+type(
+  Cil.varinfo Cil.visitAction
+)
+"cilext/inline.ml" 124 4958 4968 "cilext/inline.ml" 124 4958 4970
+type(
+  Cil.varinfo
+)
+ident(
+  def v' "cilext/inline.ml" 125 4988 4994 "cilext/inline.ml" 128 5046 5065
+)
+"cilext/inline.ml" 124 4958 4973 "cilext/inline.ml" 124 4958 4980
+type(
+  Cil.varinfo -> Cil.varinfo
+)
+ident(
+  int_ref replVar "cilext/inline.ml" 68 2704 2731 "cilext/inline.ml" 68 2704 2738
+)
+"cilext/inline.ml" 124 4958 4981 "cilext/inline.ml" 124 4958 4982
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref v "cilext/inline.ml" 120 4872 4888 "cilext/inline.ml" 120 4872 4889
+)
+"cilext/inline.ml" 124 4958 4973 "cilext/inline.ml" 124 4958 4982
+call(
+  stack
+)
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 125 4988 4997 "cilext/inline.ml" 125 4988 4998
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref v "cilext/inline.ml" 120 4872 4888 "cilext/inline.ml" 120 4872 4889
+)
+"cilext/inline.ml" 125 4988 4999 "cilext/inline.ml" 125 4988 5001
+type(
+  Cil.varinfo -> Cil.varinfo -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"cilext/inline.ml" 125 4988 5002 "cilext/inline.ml" 125 4988 5004
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref v' "cilext/inline.ml" 124 4958 4968 "cilext/inline.ml" 124 4958 4970
+)
+"cilext/inline.ml" 125 4988 4997 "cilext/inline.ml" 125 4988 5004
+type(
+  bool
+)
+"cilext/inline.ml" 126 5012 5020 "cilext/inline.ml" 126 5012 5032
+type(
+  Cil.varinfo Cil.visitAction
+)
+"cilext/inline.ml" 128 5046 5063 "cilext/inline.ml" 128 5046 5065
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref v' "cilext/inline.ml" 124 4958 4968 "cilext/inline.ml" 124 4958 4970
+)
+"cilext/inline.ml" 128 5046 5054 "cilext/inline.ml" 128 5046 5065
+type(
+  Cil.varinfo Cil.visitAction
+)
+"cilext/inline.ml" 125 4988 4994 "cilext/inline.ml" 128 5046 5065
+type(
+  Cil.varinfo Cil.visitAction
+)
+"cilext/inline.ml" 124 4958 4964 "cilext/inline.ml" 128 5046 5065
+type(
+  Cil.varinfo Cil.visitAction
+)
+"cilext/inline.ml" 121 4904 4908 "cilext/inline.ml" 128 5046 5065
+type(
+  Cil.varinfo Cil.visitAction
+)
+"cilext/inline.ml" 131 5071 5087 "cilext/inline.ml" 131 5071 5088
+type(
+  Cil.instr
+)
+ident(
+  def i "cilext/inline.ml" 132 5101 5105 "cilext/inline.ml" 136 5219 5240
+)
+"cilext/inline.ml" 132 5101 5111 "cilext/inline.ml" 132 5101 5112
+type(
+  Cil.instr
+)
+ident(
+  int_ref i "cilext/inline.ml" 131 5071 5087 "cilext/inline.ml" 131 5071 5088
+)
+"cilext/inline.ml" 133 5120 5132 "cilext/inline.ml" 133 5120 5133
+type(
+  Cil.lval option
+)
+"cilext/inline.ml" 133 5120 5145 "cilext/inline.ml" 133 5120 5147
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "cilext/inline.ml" 133 5120 5164 "cilext/inline.ml" 134 5192 5215
+)
+"cilext/inline.ml" 133 5120 5141 "cilext/inline.ml" 133 5120 5147
+type(
+  Cil.lhost
+)
+"cilext/inline.ml" 133 5120 5149 "cilext/inline.ml" 133 5120 5150
+type(
+  Cil.offset
+)
+"cilext/inline.ml" 133 5120 5140 "cilext/inline.ml" 133 5120 5151
+type(
+  Cil.lval
+)
+"cilext/inline.ml" 133 5120 5135 "cilext/inline.ml" 133 5120 5151
+type(
+  Cil.exp
+)
+"cilext/inline.ml" 133 5120 5153 "cilext/inline.ml" 133 5120 5154
+type(
+  Cil.exp list
+)
+"cilext/inline.ml" 133 5120 5156 "cilext/inline.ml" 133 5120 5157
+type(
+  Cil.location
+)
+"cilext/inline.ml" 133 5120 5126 "cilext/inline.ml" 133 5120 5158
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 133 5120 5164 "cilext/inline.ml" 133 5120 5166
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "cilext/inline.ml" 133 5120 5145 "cilext/inline.ml" 133 5120 5147
+)
+"cilext/inline.ml" 133 5120 5164 "cilext/inline.ml" 133 5120 5170
+type(
+  int
+)
+"cilext/inline.ml" 133 5120 5171 "cilext/inline.ml" 133 5120 5173
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"cilext/inline.ml" 133 5120 5174 "cilext/inline.ml" 133 5120 5182
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref inlining "cilext/inline.ml" 66 2557 2584 "cilext/inline.ml" 66 2557 2592
+)
+"cilext/inline.ml" 133 5120 5174 "cilext/inline.ml" 133 5120 5186
+type(
+  int
+)
+"cilext/inline.ml" 133 5120 5164 "cilext/inline.ml" 133 5120 5186
+type(
+  bool
+)
+"cilext/inline.ml" 134 5192 5200 "cilext/inline.ml" 134 5192 5205
+type(
+  exn -> Cil.instr list Cil.visitAction
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"cilext/inline.ml" 134 5192 5206 "cilext/inline.ml" 134 5192 5215
+type(
+  exn
+)
+"cilext/inline.ml" 134 5192 5200 "cilext/inline.ml" 134 5192 5215
+type(
+  Cil.instr list Cil.visitAction
+)
+"cilext/inline.ml" 136 5219 5225 "cilext/inline.ml" 136 5219 5226
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 136 5219 5230 "cilext/inline.ml" 136 5219 5240
+type(
+  Cil.instr list Cil.visitAction
+)
+"cilext/inline.ml" 132 5101 5105 "cilext/inline.ml" 136 5219 5240
+type(
+  Cil.instr list Cil.visitAction
+)
+"cilext/inline.ml" 139 5279 5295 "cilext/inline.ml" 139 5279 5296
+type(
+  Cil.stmt
+)
+ident(
+  def s "cilext/inline.ml" 139 5279 5304 "cilext/inline.ml" 190 7142 7181
+)
+"cilext/inline.ml" 143 5509 5520 "cilext/inline.ml" 143 5509 5524
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 64 2407 2434 "cilext/inline.ml" 64 2407 2438
+)
+"cilext/inline.ml" 143 5509 5520 "cilext/inline.ml" 143 5509 5535
+type(
+  int option
+)
+"cilext/inline.ml" 144 5543 5554 "cilext/inline.ml" 144 5543 5556
+type(
+  int
+)
+ident(
+  def id "cilext/inline.ml" 145 5561 5569 "cilext/inline.ml" 145 5561 5584
+)
+"cilext/inline.ml" 144 5543 5549 "cilext/inline.ml" 144 5543 5556
+type(
+  int option
+)
+"cilext/inline.ml" 145 5561 5569 "cilext/inline.ml" 145 5561 5570
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 139 5279 5295 "cilext/inline.ml" 139 5279 5296
+)
+"cilext/inline.ml" 145 5561 5578 "cilext/inline.ml" 145 5561 5579
+type(
+  int
+)
+"cilext/inline.ml" 145 5561 5580 "cilext/inline.ml" 145 5561 5581
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cilext/inline.ml" 145 5561 5582 "cilext/inline.ml" 145 5561 5584
+type(
+  int
+)
+ident(
+  int_ref id "cilext/inline.ml" 144 5543 5554 "cilext/inline.ml" 144 5543 5556
+)
+"cilext/inline.ml" 145 5561 5578 "cilext/inline.ml" 145 5561 5584
+type(
+  int
+)
+"cilext/inline.ml" 145 5561 5569 "cilext/inline.ml" 145 5561 5584
+type(
+  unit
+)
+"cilext/inline.ml" 146 5586 5592 "cilext/inline.ml" 146 5586 5596
+type(
+  int option
+)
+"cilext/inline.ml" 147 5602 5610 "cilext/inline.ml" 147 5602 5611
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 139 5279 5295 "cilext/inline.ml" 139 5279 5296
+)
+"cilext/inline.ml" 147 5602 5619 "cilext/inline.ml" 147 5602 5620
+type(
+  int
+)
+"cilext/inline.ml" 147 5602 5610 "cilext/inline.ml" 147 5602 5620
+type(
+  unit
+)
+"cilext/inline.ml" 143 5509 5513 "cilext/inline.ml" 147 5602 5621
+type(
+  unit
+)
+"cilext/inline.ml" 149 5654 5662 "cilext/inline.ml" 149 5654 5664
+type(
+  Cil.stmt
+)
+ident(
+  def s' "cilext/inline.ml" 150 5692 5696 "cilext/inline.ml" 190 7142 7181
+)
+"cilext/inline.ml" 149 5654 5668 "cilext/inline.ml" 149 5654 5669
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 139 5279 5295 "cilext/inline.ml" 139 5279 5296
+)
+"cilext/inline.ml" 149 5654 5681 "cilext/inline.ml" 149 5654 5682
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 139 5279 5295 "cilext/inline.ml" 139 5279 5296
+)
+"cilext/inline.ml" 149 5654 5681 "cilext/inline.ml" 149 5654 5686
+type(
+  int
+)
+"cilext/inline.ml" 149 5654 5667 "cilext/inline.ml" 149 5654 5687
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 150 5692 5696 "cilext/inline.ml" 150 5692 5700
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 64 2407 2434 "cilext/inline.ml" 64 2407 2438
+)
+"cilext/inline.ml" 150 5692 5720 "cilext/inline.ml" 150 5692 5722
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 149 5654 5662 "cilext/inline.ml" 149 5654 5664
+)
+"cilext/inline.ml" 150 5692 5720 "cilext/inline.ml" 150 5692 5726
+type(
+  int
+)
+"cilext/inline.ml" 150 5692 5715 "cilext/inline.ml" 150 5692 5726
+type(
+  int option
+)
+"cilext/inline.ml" 150 5692 5696 "cilext/inline.ml" 150 5692 5726
+type(
+  unit
+)
+"cilext/inline.ml" 152 5731 5735 "cilext/inline.ml" 152 5731 5741
+type(
+  Cil.stmt IH.t -> int -> Cil.stmt -> unit
+)
+ident(
+  ext_ref IH.add
+)
+"cilext/inline.ml" 152 5731 5742 "cilext/inline.ml" 152 5731 5749
+type(
+  Cil.stmt IH.t
+)
+ident(
+  ext_ref stmtmap
+)
+"cilext/inline.ml" 152 5731 5750 "cilext/inline.ml" 152 5731 5751
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 139 5279 5295 "cilext/inline.ml" 139 5279 5296
+)
+"cilext/inline.ml" 152 5731 5750 "cilext/inline.ml" 152 5731 5755
+type(
+  int
+)
+"cilext/inline.ml" 152 5731 5756 "cilext/inline.ml" 152 5731 5758
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 149 5654 5662 "cilext/inline.ml" 149 5654 5664
+)
+"cilext/inline.ml" 152 5731 5735 "cilext/inline.ml" 152 5731 5758
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 154 5878 5889 "cilext/inline.ml" 154 5878 5891
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 149 5654 5662 "cilext/inline.ml" 149 5654 5664
+)
+"cilext/inline.ml" 154 5878 5889 "cilext/inline.ml" 154 5878 5897
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 155 5904 5916 "cilext/inline.ml" 155 5904 5917
+type(
+  Cil.location
+)
+type(
+  Cil.stmt ref
+)
+"cilext/inline.ml" 155 5904 5911 "cilext/inline.ml" 155 5904 5917
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 155 5904 5927 "cilext/inline.ml" 155 5904 5928
+type(
+  Cil.location
+)
+type(
+  Cil.stmt list
+)
+type(
+  Cil.block
+)
+type(
+  Cil.exp
+)
+"cilext/inline.ml" 155 5904 5920 "cilext/inline.ml" 155 5904 5928
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 155 5904 5910 "cilext/inline.ml" 155 5904 5929
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 157 5972 5980 "cilext/inline.ml" 157 5972 5987
+type(
+  Cil.stmt list ref
+)
+ident(
+  ext_ref patches
+)
+"cilext/inline.ml" 157 5972 5988 "cilext/inline.ml" 157 5972 5990
+type(
+  Cil.stmt list ref -> Cil.stmt list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 157 5972 5991 "cilext/inline.ml" 157 5972 5993
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 149 5654 5662 "cilext/inline.ml" 149 5654 5664
+)
+"cilext/inline.ml" 157 5972 5997 "cilext/inline.ml" 157 5972 5998
+type(
+  Cil.stmt list ref -> Cil.stmt list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 157 5972 5998 "cilext/inline.ml" 157 5972 6005
+type(
+  Cil.stmt list ref
+)
+ident(
+  ext_ref patches
+)
+"cilext/inline.ml" 157 5972 5997 "cilext/inline.ml" 157 5972 6005
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 157 5972 5991 "cilext/inline.ml" 157 5972 6005
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 157 5972 5980 "cilext/inline.ml" 157 5972 6005
+type(
+  unit
+)
+"cilext/inline.ml" 158 6007 6013 "cilext/inline.ml" 158 6007 6014
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 158 6007 6018 "cilext/inline.ml" 158 6007 6020
+type(
+  unit
+)
+"cilext/inline.ml" 154 5878 5882 "cilext/inline.ml" 158 6007 6021
+type(
+  unit
+)
+"cilext/inline.ml" 161 6060 6068 "cilext/inline.ml" 161 6060 6076
+type(
+  Cil.stmt -> Cil.stmt
+)
+ident(
+  def postProc "cilext/inline.ml" 190 7142 7146 "cilext/inline.ml" 190 7142 7181
+)
+"cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+type(
+  Cil.stmt
+)
+ident(
+  def s' "cilext/inline.ml" 161 6060 6088 "cilext/inline.ml" 187 7072 7080
+)
+"cilext/inline.ml" 163 6143 6149 "cilext/inline.ml" 163 6143 6151
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 164 6164 6172 "cilext/inline.ml" 164 6164 6185
+type(
+  (Cil.label -> Cil.label) -> Cil.label list -> Cil.label list
+)
+ident(
+  ext_ref Util.list_map
+)
+"cilext/inline.ml" 164 6164 6191 "cilext/inline.ml" 164 6164 6193
+type(
+  Cil.label
+)
+ident(
+  def lb "cilext/inline.ml" 165 6199 6209 "cilext/inline.ml" 167 6293 6312
+)
+"cilext/inline.ml" 165 6199 6215 "cilext/inline.ml" 165 6199 6217
+type(
+  Cil.label
+)
+ident(
+  int_ref lb "cilext/inline.ml" 164 6164 6191 "cilext/inline.ml" 164 6164 6193
+)
+"cilext/inline.ml" 166 6224 6243 "cilext/inline.ml" 166 6224 6244
+type(
+  string
+)
+ident(
+  def n "cilext/inline.ml" 166 6224 6261 "cilext/inline.ml" 166 6224 6291
+)
+"cilext/inline.ml" 166 6224 6246 "cilext/inline.ml" 166 6224 6247
+type(
+  Cil.location
+)
+ident(
+  def l "cilext/inline.ml" 166 6224 6261 "cilext/inline.ml" 166 6224 6291
+)
+"cilext/inline.ml" 166 6224 6249 "cilext/inline.ml" 166 6224 6256
+type(
+  bool
+)
+ident(
+  def fromsrc "cilext/inline.ml" 166 6224 6261 "cilext/inline.ml" 166 6224 6291
+)
+"cilext/inline.ml" 166 6224 6236 "cilext/inline.ml" 166 6224 6257
+type(
+  Cil.label
+)
+"cilext/inline.ml" 166 6224 6267 "cilext/inline.ml" 166 6224 6276
+type(
+  string -> string
+)
+ident(
+  int_ref replLabel "cilext/inline.ml" 74 3165 3192 "cilext/inline.ml" 74 3165 3201
+)
+"cilext/inline.ml" 166 6224 6277 "cilext/inline.ml" 166 6224 6278
+type(
+  string
+)
+ident(
+  int_ref n "cilext/inline.ml" 166 6224 6243 "cilext/inline.ml" 166 6224 6244
+)
+"cilext/inline.ml" 166 6224 6267 "cilext/inline.ml" 166 6224 6278
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 166 6224 6280 "cilext/inline.ml" 166 6224 6281
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 166 6224 6246 "cilext/inline.ml" 166 6224 6247
+)
+"cilext/inline.ml" 166 6224 6283 "cilext/inline.ml" 166 6224 6290
+type(
+  bool
+)
+ident(
+  int_ref fromsrc "cilext/inline.ml" 166 6224 6249 "cilext/inline.ml" 166 6224 6256
+)
+"cilext/inline.ml" 166 6224 6261 "cilext/inline.ml" 166 6224 6291
+type(
+  Cil.label
+)
+"cilext/inline.ml" 167 6293 6305 "cilext/inline.ml" 167 6293 6306
+type(
+  Cil.label
+)
+"cilext/inline.ml" 167 6293 6310 "cilext/inline.ml" 167 6293 6312
+type(
+  Cil.label
+)
+ident(
+  int_ref lb "cilext/inline.ml" 164 6164 6191 "cilext/inline.ml" 164 6164 6193
+)
+"cilext/inline.ml" 165 6199 6209 "cilext/inline.ml" 167 6293 6312
+type(
+  Cil.label
+)
+"cilext/inline.ml" 164 6164 6186 "cilext/inline.ml" 167 6293 6313
+type(
+  Cil.label -> Cil.label
+)
+"cilext/inline.ml" 167 6293 6314 "cilext/inline.ml" 167 6293 6316
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 167 6293 6314 "cilext/inline.ml" 167 6293 6323
+type(
+  Cil.label list
+)
+"cilext/inline.ml" 164 6164 6172 "cilext/inline.ml" 167 6293 6323
+call(
+  stack
+)
+type(
+  Cil.label list
+)
+"cilext/inline.ml" 163 6143 6149 "cilext/inline.ml" 167 6293 6323
+type(
+  unit
+)
+"cilext/inline.ml" 170 6367 6380 "cilext/inline.ml" 170 6367 6382
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 170 6367 6380 "cilext/inline.ml" 170 6367 6388
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 171 6396 6412 "cilext/inline.ml" 171 6396 6414
+type(
+  Cil.exp option
+)
+ident(
+  def ro "cilext/inline.ml" 171 6396 6422 "cilext/inline.ml" 185 7042 7051
+)
+"cilext/inline.ml" 171 6396 6416 "cilext/inline.ml" 171 6396 6417
+type(
+  Cil.location
+)
+ident(
+  def l "cilext/inline.ml" 171 6396 6422 "cilext/inline.ml" 185 7042 7051
+)
+"cilext/inline.ml" 171 6396 6404 "cilext/inline.ml" 171 6396 6418
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 173 6496 6512 "cilext/inline.ml" 173 6496 6514
+type(
+  Cil.exp option
+)
+ident(
+  int_ref ro "cilext/inline.ml" 171 6396 6412 "cilext/inline.ml" 171 6396 6414
+)
+"cilext/inline.ml" 173 6496 6516 "cilext/inline.ml" 173 6496 6523
+type(
+  Cil.varinfo option
+)
+ident(
+  int_ref retlval "cilext/inline.ml" 72 3008 3035 "cilext/inline.ml" 72 3008 3042
+)
+"cilext/inline.ml" 173 6496 6512 "cilext/inline.ml" 173 6496 6523
+type(
+  Cil.exp option * Cil.varinfo option
+)
+"cilext/inline.ml" 174 6531 6543 "cilext/inline.ml" 174 6531 6544
+type(
+  Cil.exp option
+)
+"cilext/inline.ml" 174 6531 6546 "cilext/inline.ml" 174 6531 6550
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 174 6531 6543 "cilext/inline.ml" 174 6531 6550
+type(
+  Cil.exp option * Cil.varinfo option
+)
+"cilext/inline.ml" 175 6597 6611 "cilext/inline.ml" 175 6597 6613
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 175 6597 6629 "cilext/inline.ml" 175 6597 6632
+type(
+  Cil.stmt -> Cil.stmt ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 175 6597 6633 "cilext/inline.ml" 175 6597 6639
+type(
+  Cil.stmt
+)
+ident(
+  int_ref retlab "cilext/inline.ml" 77 3369 3396 "cilext/inline.ml" 77 3369 3402
+)
+"cilext/inline.ml" 175 6597 6629 "cilext/inline.ml" 175 6597 6639
+type(
+  Cil.stmt ref
+)
+"cilext/inline.ml" 175 6597 6641 "cilext/inline.ml" 175 6597 6642
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 171 6396 6416 "cilext/inline.ml" 171 6396 6417
+)
+"cilext/inline.ml" 175 6597 6623 "cilext/inline.ml" 175 6597 6643
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 175 6597 6611 "cilext/inline.ml" 175 6597 6643
+type(
+  unit
+)
+"cilext/inline.ml" 177 6663 6675 "cilext/inline.ml" 177 6663 6679
+type(
+  Cil.exp option
+)
+"cilext/inline.ml" 177 6663 6681 "cilext/inline.ml" 177 6663 6682
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 177 6663 6675 "cilext/inline.ml" 177 6663 6682
+type(
+  Cil.exp option * Cil.varinfo option
+)
+"cilext/inline.ml" 178 6688 6702 "cilext/inline.ml" 178 6688 6708
+type(
+  Pretty.doc -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 178 6688 6710 "cilext/inline.ml" 178 6688 6714
+type(
+  (Pretty.doc, unit, Pretty.doc) format -> Pretty.doc
+)
+ident(
+  ext_ref Cil.warn
+)
+"cilext/inline.ml" 178 6688 6715 "cilext/inline.ml" 178 6688 6763
+type(
+  (Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 178 6688 6709 "cilext/inline.ml" 178 6688 6764
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 178 6688 6702 "cilext/inline.ml" 178 6688 6764
+type(
+  unit
+)
+"cilext/inline.ml" 179 6767 6781 "cilext/inline.ml" 179 6767 6783
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 179 6767 6799 "cilext/inline.ml" 179 6767 6802
+type(
+  Cil.stmt -> Cil.stmt ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 179 6767 6803 "cilext/inline.ml" 179 6767 6809
+type(
+  Cil.stmt
+)
+ident(
+  int_ref retlab "cilext/inline.ml" 77 3369 3396 "cilext/inline.ml" 77 3369 3402
+)
+"cilext/inline.ml" 179 6767 6799 "cilext/inline.ml" 179 6767 6809
+type(
+  Cil.stmt ref
+)
+"cilext/inline.ml" 179 6767 6811 "cilext/inline.ml" 179 6767 6812
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 171 6396 6416 "cilext/inline.ml" 171 6396 6417
+)
+"cilext/inline.ml" 179 6767 6793 "cilext/inline.ml" 179 6767 6813
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 179 6767 6781 "cilext/inline.ml" 179 6767 6813
+type(
+  unit
+)
+"cilext/inline.ml" 178 6688 6702 "cilext/inline.ml" 179 6767 6813
+type(
+  unit
+)
+"cilext/inline.ml" 181 6833 6850 "cilext/inline.ml" 181 6833 6852
+type(
+  Cil.exp
+)
+ident(
+  def rv "cilext/inline.ml" 182 6870 6884 "cilext/inline.ml" 184 6975 7040
+)
+"cilext/inline.ml" 181 6833 6845 "cilext/inline.ml" 181 6833 6852
+type(
+  Cil.exp option
+)
+"cilext/inline.ml" 181 6833 6859 "cilext/inline.ml" 181 6833 6865
+type(
+  Cil.varinfo
+)
+ident(
+  def retvar "cilext/inline.ml" 182 6870 6884 "cilext/inline.ml" 184 6975 7040
+)
+"cilext/inline.ml" 181 6833 6854 "cilext/inline.ml" 181 6833 6865
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 181 6833 6845 "cilext/inline.ml" 181 6833 6865
+type(
+  Cil.exp option * Cil.varinfo option
+)
+"cilext/inline.ml" 182 6870 6884 "cilext/inline.ml" 182 6870 6886
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 183 6897 6920 "cilext/inline.ml" 183 6897 6927
+type(
+  Cil.stmt list -> Cil.block
+)
+ident(
+  ext_ref Cil.mkBlock
+)
+"cilext/inline.ml" 183 6897 6930 "cilext/inline.ml" 183 6897 6936
+type(
+  Cil.stmtkind -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmt
+)
+"cilext/inline.ml" 183 6897 6951 "cilext/inline.ml" 183 6897 6954
+type(
+  Cil.varinfo -> Cil.lval
+)
+ident(
+  ext_ref Cil.var
+)
+"cilext/inline.ml" 183 6897 6955 "cilext/inline.ml" 183 6897 6961
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref retvar "cilext/inline.ml" 181 6833 6859 "cilext/inline.ml" 181 6833 6865
+)
+"cilext/inline.ml" 183 6897 6951 "cilext/inline.ml" 183 6897 6961
+call(
+  stack
+)
+type(
+  Cil.lval
+)
+"cilext/inline.ml" 183 6897 6963 "cilext/inline.ml" 183 6897 6965
+type(
+  Cil.exp
+)
+ident(
+  int_ref rv "cilext/inline.ml" 181 6833 6850 "cilext/inline.ml" 181 6833 6852
+)
+"cilext/inline.ml" 183 6897 6967 "cilext/inline.ml" 183 6897 6968
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 171 6396 6416 "cilext/inline.ml" 171 6396 6417
+)
+"cilext/inline.ml" 183 6897 6945 "cilext/inline.ml" 183 6897 6970
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 183 6897 6944 "cilext/inline.ml" 183 6897 6971
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 183 6897 6937 "cilext/inline.ml" 183 6897 6972
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 183 6897 6930 "cilext/inline.ml" 183 6897 6972
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 184 6975 7008 "cilext/inline.ml" 184 6975 7014
+type(
+  Cil.stmtkind -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmt
+)
+"cilext/inline.ml" 184 6975 7022 "cilext/inline.ml" 184 6975 7025
+type(
+  Cil.stmt -> Cil.stmt ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 184 6975 7026 "cilext/inline.ml" 184 6975 7032
+type(
+  Cil.stmt
+)
+ident(
+  int_ref retlab "cilext/inline.ml" 77 3369 3396 "cilext/inline.ml" 77 3369 3402
+)
+"cilext/inline.ml" 184 6975 7022 "cilext/inline.ml" 184 6975 7032
+type(
+  Cil.stmt ref
+)
+"cilext/inline.ml" 184 6975 7034 "cilext/inline.ml" 184 6975 7035
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 171 6396 6416 "cilext/inline.ml" 171 6396 6417
+)
+"cilext/inline.ml" 184 6975 7015 "cilext/inline.ml" 184 6975 7037
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 184 6975 7008 "cilext/inline.ml" 184 6975 7037
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 183 6897 6928 "cilext/inline.ml" 184 6975 7039
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 183 6897 6919 "cilext/inline.ml" 184 6975 7040
+call(
+  stack
+)
+type(
+  Cil.block
+)
+"cilext/inline.ml" 183 6897 6913 "cilext/inline.ml" 184 6975 7040
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 182 6870 6884 "cilext/inline.ml" 184 6975 7040
+type(
+  unit
+)
+"cilext/inline.ml" 171 6396 6422 "cilext/inline.ml" 185 7042 7051
+type(
+  unit
+)
+"cilext/inline.ml" 186 7053 7061 "cilext/inline.ml" 186 7053 7062
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 186 7053 7066 "cilext/inline.ml" 186 7053 7068
+type(
+  unit
+)
+"cilext/inline.ml" 170 6367 6373 "cilext/inline.ml" 186 7053 7069
+type(
+  unit
+)
+"cilext/inline.ml" 187 7072 7078 "cilext/inline.ml" 187 7072 7080
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 161 6060 6078 "cilext/inline.ml" 161 6060 6080
+)
+"cilext/inline.ml" 170 6367 6373 "cilext/inline.ml" 187 7072 7080
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 163 6143 6149 "cilext/inline.ml" 187 7072 7080
+type(
+  Cil.stmt
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 190 7142 7168 "cilext/inline.ml" 190 7142 7170
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s' "cilext/inline.ml" 149 5654 5662 "cilext/inline.ml" 149 5654 5664
+)
+"cilext/inline.ml" 190 7142 7172 "cilext/inline.ml" 190 7142 7180
+type(
+  Cil.stmt -> Cil.stmt
+)
+ident(
+  int_ref postProc "cilext/inline.ml" 161 6060 6068 "cilext/inline.ml" 161 6060 6076
+)
+"cilext/inline.ml" 190 7142 7146 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 161 6060 6064 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 154 5878 5882 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 152 5731 5735 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 150 5692 5696 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 149 5654 5658 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 143 5509 5513 "cilext/inline.ml" 190 7142 7181
+type(
+  Cil.stmt Cil.visitAction
+)
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 193 7233 7250 "cilext/inline.ml" 193 7233 7251
+type(
+  Cil.block
+)
+ident(
+  def b "cilext/inline.ml" 194 7264 7268 "cilext/inline.ml" 194 7264 7329
+)
+"cilext/inline.ml" 194 7264 7291 "cilext/inline.ml" 194 7264 7292
+type(
+  Cil.block
+)
+ident(
+  int_ref b "cilext/inline.ml" 193 7233 7250 "cilext/inline.ml" 193 7233 7251
+)
+"cilext/inline.ml" 194 7264 7307 "cilext/inline.ml" 194 7264 7308
+type(
+  Cil.block
+)
+ident(
+  int_ref b "cilext/inline.ml" 193 7233 7250 "cilext/inline.ml" 193 7233 7251
+)
+"cilext/inline.ml" 194 7264 7307 "cilext/inline.ml" 194 7264 7315
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 194 7264 7290 "cilext/inline.ml" 194 7264 7316
+type(
+  Cil.block
+)
+"cilext/inline.ml" 194 7264 7322 "cilext/inline.ml" 194 7264 7323
+type(
+  Cil.block
+)
+ident(
+  def x "cilext/inline.ml" 194 7264 7327 "cilext/inline.ml" 194 7264 7328
+)
+"cilext/inline.ml" 194 7264 7327 "cilext/inline.ml" 194 7264 7328
+type(
+  Cil.block
+)
+ident(
+  int_ref x "cilext/inline.ml" 194 7264 7322 "cilext/inline.ml" 194 7264 7323
+)
+"cilext/inline.ml" 194 7264 7318 "cilext/inline.ml" 194 7264 7328
+type(
+  Cil.block -> Cil.block
+)
+"cilext/inline.ml" 194 7264 7268 "cilext/inline.ml" 194 7264 7329
+type(
+  Cil.block Cil.visitAction
+)
+"cilext/inline.ml" 197 7335 7350 "cilext/inline.ml" 197 7335 7351
+type(
+  Cil.global
+)
+"cilext/inline.ml" 197 7335 7354 "cilext/inline.ml" 197 7335 7357
+type(
+  Pretty.doc -> Cil.global list Cil.visitAction
+)
+ident(
+  ext_ref E.s
+)
+"cilext/inline.ml" 197 7335 7359 "cilext/inline.ml" 197 7335 7362
+type(
+  (Pretty.doc, unit, Pretty.doc) format -> Pretty.doc
+)
+ident(
+  ext_ref Cil.bug
+)
+"cilext/inline.ml" 197 7335 7363 "cilext/inline.ml" 197 7335 7407
+type(
+  (Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 197 7335 7358 "cilext/inline.ml" 197 7335 7408
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 197 7335 7354 "cilext/inline.ml" 197 7335 7408
+call(
+  tail
+)
+type(
+  Cil.global list Cil.visitAction
+)
+"cilext/inline.ml" 201 7473 7477 "cilext/inline.ml" 201 7473 7493
+type(
+  Cil.fundec ->
+  (Cil.varinfo -> Cil.fundec option) ->
+  (string -> string) -> bool ref -> Cil.stmt -> Cil.stmt
+)
+ident(
+  def replaceStatement "cilext/inline.ml" 342 13624 13624 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+type(
+  Cil.fundec
+)
+ident(
+  def host "cilext/inline.ml" 202 7549 7570 "cilext/inline.ml" 338 13530 13540
+)
+"cilext/inline.ml" 202 7549 7571 "cilext/inline.ml" 202 7549 7581
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  def inlineWhat "cilext/inline.ml" 203 7631 7652 "cilext/inline.ml" 338 13530 13540
+)
+"cilext/inline.ml" 203 7631 7653 "cilext/inline.ml" 203 7631 7662
+type(
+  string -> string
+)
+ident(
+  def replLabel "cilext/inline.ml" 205 7781 7802 "cilext/inline.ml" 338 13530 13540
+)
+"cilext/inline.ml" 205 7781 7803 "cilext/inline.ml" 205 7781 7814
+type(
+  bool ref
+)
+ident(
+  def anyInlining "cilext/inline.ml" 209 8088 8109 "cilext/inline.ml" 338 13530 13540
+)
+"cilext/inline.ml" 209 8088 8110 "cilext/inline.ml" 209 8088 8111
+type(
+  Cil.stmt
+)
+ident(
+  def s "cilext/inline.ml" 209 8088 8119 "cilext/inline.ml" 338 13530 13540
+)
+"cilext/inline.ml" 210 8130 8138 "cilext/inline.ml" 210 8130 8139
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 209 8088 8110 "cilext/inline.ml" 209 8088 8111
+)
+"cilext/inline.ml" 210 8130 8138 "cilext/inline.ml" 210 8130 8145
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 211 8153 8163 "cilext/inline.ml" 211 8153 8165
+type(
+  Cil.instr list
+)
+ident(
+  def il "cilext/inline.ml" 211 8153 8171 "cilext/inline.ml" 336 13519 13526
+)
+"cilext/inline.ml" 211 8153 8157 "cilext/inline.ml" 211 8153 8165
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 211 8153 8171 "cilext/inline.ml" 211 8153 8173
+type(
+  Cil.instr list
+)
+ident(
+  int_ref il "cilext/inline.ml" 211 8153 8163 "cilext/inline.ml" 211 8153 8165
+)
+"cilext/inline.ml" 211 8153 8174 "cilext/inline.ml" 211 8153 8176
+type(
+  Cil.instr list -> Cil.instr list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"cilext/inline.ml" 211 8153 8177 "cilext/inline.ml" 211 8153 8179
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 211 8153 8171 "cilext/inline.ml" 211 8153 8179
+type(
+  bool
+)
+"cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+type(
+  Cil.stmt list ref
+)
+ident(
+  def prevrstmts "cilext/inline.ml" 214 8330 8336 "cilext/inline.ml" 336 13519 13526
+)
+"cilext/inline.ml" 212 8185 8223 "cilext/inline.ml" 212 8185 8226
+type(
+  Cil.stmt list -> Cil.stmt list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 212 8185 8227 "cilext/inline.ml" 212 8185 8229
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 212 8185 8223 "cilext/inline.ml" 212 8185 8229
+type(
+  Cil.stmt list ref
+)
+type(
+  Cil.stmt list ref
+)
+"cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+type(
+  Cil.instr list ref
+)
+ident(
+  def prevrinstr "cilext/inline.ml" 217 8551 8557 "cilext/inline.ml" 336 13519 13526
+)
+"cilext/inline.ml" 214 8330 8369 "cilext/inline.ml" 214 8330 8372
+type(
+  Cil.instr list -> Cil.instr list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 214 8330 8373 "cilext/inline.ml" 214 8330 8375
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 214 8330 8369 "cilext/inline.ml" 214 8330 8375
+type(
+  Cil.instr list ref
+)
+type(
+  Cil.instr list ref
+)
+"cilext/inline.ml" 217 8551 8561 "cilext/inline.ml" 217 8551 8576
+type(
+  unit -> unit
+)
+ident(
+  def emptyPrevrinstr "cilext/inline.ml" 224 8765 8771 "cilext/inline.ml" 336 13519 13526
+)
+"cilext/inline.ml" 217 8551 8577 "cilext/inline.ml" 217 8551 8579
+type(
+  unit
+)
+"cilext/inline.ml" 218 8584 8595 "cilext/inline.ml" 218 8584 8596
+type(
+  Cil.instr list ref -> Cil.instr list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 218 8584 8596 "cilext/inline.ml" 218 8584 8606
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 218 8584 8595 "cilext/inline.ml" 218 8584 8606
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 218 8584 8607 "cilext/inline.ml" 218 8584 8609
+type(
+  Cil.instr list -> Cil.instr list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"cilext/inline.ml" 218 8584 8610 "cilext/inline.ml" 218 8584 8612
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 218 8584 8595 "cilext/inline.ml" 218 8584 8612
+type(
+  bool
+)
+"cilext/inline.ml" 219 8625 8635 "cilext/inline.ml" 219 8625 8645
+type(
+  Cil.stmt list ref
+)
+ident(
+  int_ref prevrstmts "cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+)
+"cilext/inline.ml" 219 8625 8646 "cilext/inline.ml" 219 8625 8648
+type(
+  Cil.stmt list ref -> Cil.stmt list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 219 8625 8649 "cilext/inline.ml" 219 8625 8655
+type(
+  Cil.stmtkind -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmt
+)
+"cilext/inline.ml" 219 8625 8664 "cilext/inline.ml" 219 8625 8672
+type(
+  Cil.instr list -> Cil.instr list
+)
+ident(
+  ext_ref List.rev
+)
+"cilext/inline.ml" 219 8625 8673 "cilext/inline.ml" 219 8625 8674
+type(
+  Cil.instr list ref -> Cil.instr list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 219 8625 8674 "cilext/inline.ml" 219 8625 8684
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 219 8625 8673 "cilext/inline.ml" 219 8625 8684
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 219 8625 8663 "cilext/inline.ml" 219 8625 8685
+call(
+  stack
+)
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 219 8625 8656 "cilext/inline.ml" 219 8625 8686
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 219 8625 8649 "cilext/inline.ml" 219 8625 8686
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 219 8625 8690 "cilext/inline.ml" 219 8625 8691
+type(
+  Cil.stmt list ref -> Cil.stmt list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 219 8625 8691 "cilext/inline.ml" 219 8625 8701
+type(
+  Cil.stmt list ref
+)
+ident(
+  int_ref prevrstmts "cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+)
+"cilext/inline.ml" 219 8625 8690 "cilext/inline.ml" 219 8625 8701
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 219 8625 8649 "cilext/inline.ml" 219 8625 8701
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 219 8625 8635 "cilext/inline.ml" 219 8625 8701
+type(
+  unit
+)
+"cilext/inline.ml" 220 8704 8714 "cilext/inline.ml" 220 8704 8724
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 220 8704 8725 "cilext/inline.ml" 220 8704 8727
+type(
+  Cil.instr list ref -> Cil.instr list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 220 8704 8728 "cilext/inline.ml" 220 8704 8730
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 220 8704 8714 "cilext/inline.ml" 220 8704 8730
+type(
+  unit
+)
+"cilext/inline.ml" 218 8584 8618 "cilext/inline.ml" 221 8732 8743
+type(
+  unit
+)
+"cilext/inline.ml" 218 8584 8592 "cilext/inline.ml" 221 8732 8743
+type(
+  unit
+)
+"cilext/inline.ml" 224 8765 8779 "cilext/inline.ml" 224 8765 8783
+type(
+  Cil.instr list -> unit
+)
+ident(
+  def loop "cilext/inline.ml" 224 8765 8771 "cilext/inline.ml" 336 13519 13526
+)
+"cilext/inline.ml" 224 8765 8785 "cilext/inline.ml" 224 8765 8789
+type(
+  Cil.instr list
+)
+ident(
+  def rest "cilext/inline.ml" 225 8838 8848 "cilext/inline.ml" 328 13334 13356
+)
+"cilext/inline.ml" 226 8859 8873 "cilext/inline.ml" 226 8859 8877
+type(
+  Cil.instr list
+)
+ident(
+  int_ref rest "cilext/inline.ml" 224 8765 8785 "cilext/inline.ml" 224 8765 8789
+)
+"cilext/inline.ml" 227 8885 8895 "cilext/inline.ml" 227 8885 8897
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 227 8885 8912 "cilext/inline.ml" 227 8885 8914
+type(
+  unit
+)
+"cilext/inline.ml" 229 8918 8935 "cilext/inline.ml" 229 8918 8938
+type(
+  Cil.lval option
+)
+ident(
+  def lvo "cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+)
+"cilext/inline.ml" 229 8918 8950 "cilext/inline.ml" 229 8918 8953
+type(
+  Cil.varinfo
+)
+ident(
+  def fvi "cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+)
+"cilext/inline.ml" 229 8918 8946 "cilext/inline.ml" 229 8918 8953
+type(
+  Cil.lhost
+)
+"cilext/inline.ml" 229 8918 8955 "cilext/inline.ml" 229 8918 8963
+type(
+  Cil.offset
+)
+"cilext/inline.ml" 229 8918 8945 "cilext/inline.ml" 229 8918 8964
+type(
+  Cil.lval
+)
+"cilext/inline.ml" 229 8918 8940 "cilext/inline.ml" 229 8918 8964
+type(
+  Cil.exp
+)
+"cilext/inline.ml" 229 8918 8966 "cilext/inline.ml" 229 8918 8970
+type(
+  Cil.exp list
+)
+ident(
+  def args "cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+)
+"cilext/inline.ml" 229 8918 8972 "cilext/inline.ml" 229 8918 8973
+type(
+  Cil.location
+)
+ident(
+  def l "cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+)
+"cilext/inline.ml" 229 8918 8929 "cilext/inline.ml" 229 8918 8974
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 229 8918 8978 "cilext/inline.ml" 229 8918 8979
+ident(
+  def i "cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+)
+"cilext/inline.ml" 229 8918 8928 "cilext/inline.ml" 229 8918 8980
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 229 8918 8984 "cilext/inline.ml" 229 8918 8989
+type(
+  Cil.instr list
+)
+ident(
+  def resti "cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+)
+"cilext/inline.ml" 229 8918 8928 "cilext/inline.ml" 229 8918 8989
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 230 9000 9015 "cilext/inline.ml" 230 9000 9020
+type(
+  bool
+)
+ident(
+  int_ref debug "cilext/inline.ml" 58 2194 2198 "cilext/inline.ml" 58 2194 2203
+)
+"cilext/inline.ml" 231 9028 9042 "cilext/inline.ml" 231 9028 9047
+type(
+  (string -> unit, unit, Pretty.doc, unit) format4 -> string -> unit
+)
+ident(
+  ext_ref E.log
+)
+"cilext/inline.ml" 231 9028 9048 "cilext/inline.ml" 231 9028 9081
+type(
+  (string -> unit, unit, Pretty.doc, unit) format4
+)
+"cilext/inline.ml" 231 9028 9082 "cilext/inline.ml" 231 9028 9085
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref fvi "cilext/inline.ml" 229 8918 8950 "cilext/inline.ml" 229 8918 8953
+)
+"cilext/inline.ml" 231 9028 9082 "cilext/inline.ml" 231 9028 9091
+type(
+  string
+)
+"cilext/inline.ml" 231 9028 9042 "cilext/inline.ml" 231 9028 9091
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 230 9000 9012 "cilext/inline.ml" 231 9028 9091
+type(
+  unit
+)
+"cilext/inline.ml" 232 9095 9111 "cilext/inline.ml" 232 9095 9116
+type(
+  Cil.fundec option
+)
+ident(
+  def replo "cilext/inline.ml" 243 9542 9553 "cilext/inline.ml" 324 13233 13247
+)
+"cilext/inline.ml" 233 9136 9156 "cilext/inline.ml" 233 9136 9166
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  int_ref inlineWhat "cilext/inline.ml" 202 7549 7571 "cilext/inline.ml" 202 7549 7581
+)
+"cilext/inline.ml" 233 9136 9167 "cilext/inline.ml" 233 9136 9170
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref fvi "cilext/inline.ml" 229 8918 8950 "cilext/inline.ml" 229 8918 8953
+)
+"cilext/inline.ml" 233 9136 9156 "cilext/inline.ml" 233 9136 9170
+call(
+  stack
+)
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 234 9178 9199 "cilext/inline.ml" 234 9178 9203
+type(
+  Cil.fundec
+)
+ident(
+  def repl "cilext/inline.ml" 235 9209 9227 "cilext/inline.ml" 240 9465 9494
+)
+"cilext/inline.ml" 234 9178 9194 "cilext/inline.ml" 234 9178 9203
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 235 9209 9230 "cilext/inline.ml" 235 9209 9234
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 234 9178 9199 "cilext/inline.ml" 234 9178 9203
+)
+"cilext/inline.ml" 235 9209 9230 "cilext/inline.ml" 235 9209 9239
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 235 9209 9230 "cilext/inline.ml" 235 9209 9243
+type(
+  int
+)
+"cilext/inline.ml" 235 9209 9244 "cilext/inline.ml" 235 9209 9245
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cilext/inline.ml" 235 9209 9246 "cilext/inline.ml" 235 9209 9250
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+)
+"cilext/inline.ml" 235 9209 9246 "cilext/inline.ml" 235 9209 9255
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 235 9209 9246 "cilext/inline.ml" 235 9209 9259
+type(
+  int
+)
+"cilext/inline.ml" 235 9209 9230 "cilext/inline.ml" 235 9209 9259
+type(
+  bool
+)
+"cilext/inline.ml" 236 9272 9292 "cilext/inline.ml" 236 9272 9298
+type(
+  Pretty.doc -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 236 9272 9300 "cilext/inline.ml" 236 9272 9304
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format -> string -> Pretty.doc
+)
+ident(
+  ext_ref Cil.warn
+)
+"cilext/inline.ml" 236 9272 9305 "cilext/inline.ml" 236 9272 9359
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 237 9362 9392 "cilext/inline.ml" 237 9362 9396
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+)
+"cilext/inline.ml" 237 9362 9392 "cilext/inline.ml" 237 9362 9401
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 237 9362 9392 "cilext/inline.ml" 237 9362 9407
+type(
+  string
+)
+"cilext/inline.ml" 236 9272 9299 "cilext/inline.ml" 237 9362 9408
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 236 9272 9292 "cilext/inline.ml" 237 9362 9408
+type(
+  unit
+)
+"cilext/inline.ml" 238 9411 9431 "cilext/inline.ml" 238 9411 9435
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 235 9209 9265 "cilext/inline.ml" 239 9437 9458
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 240 9465 9490 "cilext/inline.ml" 240 9465 9494
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 234 9178 9199 "cilext/inline.ml" 234 9178 9203
+)
+"cilext/inline.ml" 240 9465 9485 "cilext/inline.ml" 240 9465 9494
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 235 9209 9227 "cilext/inline.ml" 240 9465 9494
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 241 9496 9512 "cilext/inline.ml" 241 9496 9516
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 241 9496 9520 "cilext/inline.ml" 241 9496 9524
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 233 9136 9150 "cilext/inline.ml" 241 9496 9524
+type(
+  Cil.fundec option
+)
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 243 9542 9559 "cilext/inline.ml" 243 9542 9564
+type(
+  Cil.fundec option
+)
+ident(
+  int_ref replo "cilext/inline.ml" 232 9095 9111 "cilext/inline.ml" 232 9095 9116
+)
+"cilext/inline.ml" 244 9573 9586 "cilext/inline.ml" 244 9573 9590
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 244 9573 9594 "cilext/inline.ml" 244 9573 9604
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 244 9573 9605 "cilext/inline.ml" 244 9573 9607
+type(
+  Cil.instr list ref -> Cil.instr list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 244 9573 9608 "cilext/inline.ml" 244 9573 9609
+type(
+  Cil.instr
+)
+ident(
+  int_ref i "cilext/inline.ml" 229 8918 8928 "cilext/inline.ml" 229 8918 8980
+)
+"cilext/inline.ml" 244 9573 9613 "cilext/inline.ml" 244 9573 9614
+type(
+  Cil.instr list ref -> Cil.instr list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 244 9573 9614 "cilext/inline.ml" 244 9573 9624
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 244 9573 9613 "cilext/inline.ml" 244 9573 9624
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 244 9573 9608 "cilext/inline.ml" 244 9573 9624
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 244 9573 9594 "cilext/inline.ml" 244 9573 9624
+type(
+  unit
+)
+"cilext/inline.ml" 245 9627 9642 "cilext/inline.ml" 245 9627 9646
+type(
+  Cil.instr list -> unit
+)
+ident(
+  int_ref loop "cilext/inline.ml" 224 8765 8779 "cilext/inline.ml" 224 8765 8783
+)
+"cilext/inline.ml" 245 9627 9647 "cilext/inline.ml" 245 9627 9652
+type(
+  Cil.instr list
+)
+ident(
+  int_ref resti "cilext/inline.ml" 229 8918 8984 "cilext/inline.ml" 229 8918 8989
+)
+"cilext/inline.ml" 245 9627 9642 "cilext/inline.ml" 245 9627 9652
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 244 9573 9594 "cilext/inline.ml" 245 9627 9652
+type(
+  unit
+)
+"cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+type(
+  Cil.fundec
+)
+ident(
+  def repl "cilext/inline.ml" 247 9673 9699 "cilext/inline.ml" 324 13233 13247
+)
+"cilext/inline.ml" 247 9673 9686 "cilext/inline.ml" 247 9673 9695
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 248 9706 9721 "cilext/inline.ml" 248 9706 9732
+type(
+  bool ref
+)
+ident(
+  int_ref anyInlining "cilext/inline.ml" 205 7781 7803 "cilext/inline.ml" 205 7781 7814
+)
+"cilext/inline.ml" 248 9706 9733 "cilext/inline.ml" 248 9706 9735
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 248 9706 9736 "cilext/inline.ml" 248 9706 9740
+type(
+  bool
+)
+"cilext/inline.ml" 248 9706 9721 "cilext/inline.ml" 248 9706 9740
+type(
+  unit
+)
+"cilext/inline.ml" 249 9743 9758 "cilext/inline.ml" 249 9743 9771
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"cilext/inline.ml" 249 9743 9773 "cilext/inline.ml" 249 9743 9783
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9784 "cilext/inline.ml" 249 9743 9785
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cilext/inline.ml" 249 9743 9786 "cilext/inline.ml" 249 9743 9790
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 249 9743 9786 "cilext/inline.ml" 249 9743 9795
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 249 9743 9786 "cilext/inline.ml" 249 9743 9801
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9802 "cilext/inline.ml" 249 9743 9803
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cilext/inline.ml" 249 9743 9804 "cilext/inline.ml" 249 9743 9808
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9809 "cilext/inline.ml" 249 9743 9810
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cilext/inline.ml" 249 9743 9811 "cilext/inline.ml" 249 9743 9829
+type(
+  Cil.location -> string
+)
+ident(
+  ext_ref Cil2str.s_location
+)
+"cilext/inline.ml" 249 9743 9830 "cilext/inline.ml" 249 9743 9831
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 229 8918 8972 "cilext/inline.ml" 229 8918 8973
+)
+"cilext/inline.ml" 249 9743 9811 "cilext/inline.ml" 249 9743 9831
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9804 "cilext/inline.ml" 249 9743 9831
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9786 "cilext/inline.ml" 249 9743 9831
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9772 "cilext/inline.ml" 249 9743 9832
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 249 9743 9758 "cilext/inline.ml" 249 9743 9832
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 253 9935 9954 "cilext/inline.ml" 253 9935 9958
+type(
+  Cil.varinfo IH.t
+)
+ident(
+  def vmap "cilext/inline.ml" 254 9994 10009 "cilext/inline.ml" 323 13206 13231
+)
+"cilext/inline.ml" 253 9935 9976 "cilext/inline.ml" 253 9935 9985
+type(
+  int -> Cil.varinfo IH.t
+)
+ident(
+  ext_ref IH.create
+)
+"cilext/inline.ml" 253 9935 9986 "cilext/inline.ml" 253 9935 9988
+type(
+  int
+)
+"cilext/inline.ml" 253 9935 9976 "cilext/inline.ml" 253 9935 9988
+call(
+  stack
+)
+type(
+  Cil.varinfo IH.t
+)
+type(
+  Cil.varinfo IH.t
+)
+"cilext/inline.ml" 254 9994 10013 "cilext/inline.ml" 254 9994 10020
+type(
+  Cil.varinfo -> Cil.varinfo
+)
+ident(
+  def replVar "cilext/inline.ml" 264 10428 10443 "cilext/inline.ml" 323 13206 13231
+)
+"cilext/inline.ml" 254 9994 10022 "cilext/inline.ml" 254 9994 10024
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "cilext/inline.ml" 255 10039 10056 "cilext/inline.ml" 261 10308 10330
+)
+"cilext/inline.ml" 255 10039 10059 "cilext/inline.ml" 255 10039 10061
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "cilext/inline.ml" 254 9994 10022 "cilext/inline.ml" 254 9994 10024
+)
+"cilext/inline.ml" 255 10039 10059 "cilext/inline.ml" 255 10039 10067
+type(
+  bool
+)
+"cilext/inline.ml" 255 10039 10073 "cilext/inline.ml" 255 10039 10075
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "cilext/inline.ml" 254 9994 10022 "cilext/inline.ml" 254 9994 10024
+)
+"cilext/inline.ml" 257 10101 10124 "cilext/inline.ml" 257 10101 10131
+type(
+  Cil.varinfo IH.t -> int -> Cil.varinfo
+)
+ident(
+  ext_ref IH.find
+)
+"cilext/inline.ml" 257 10101 10132 "cilext/inline.ml" 257 10101 10136
+type(
+  Cil.varinfo IH.t
+)
+ident(
+  int_ref vmap "cilext/inline.ml" 253 9935 9954 "cilext/inline.ml" 253 9935 9958
+)
+"cilext/inline.ml" 257 10101 10137 "cilext/inline.ml" 257 10101 10139
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "cilext/inline.ml" 254 9994 10022 "cilext/inline.ml" 254 9994 10024
+)
+"cilext/inline.ml" 257 10101 10137 "cilext/inline.ml" 257 10101 10143
+type(
+  int
+)
+"cilext/inline.ml" 257 10101 10124 "cilext/inline.ml" 257 10101 10143
+call(
+  stack
+)
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 258 10145 10169 "cilext/inline.ml" 258 10145 10178
+type(
+  exn
+)
+"cilext/inline.ml" 259 10189 10210 "cilext/inline.ml" 259 10189 10213
+type(
+  Pretty.doc -> Cil.varinfo
+)
+ident(
+  ext_ref E.s
+)
+"cilext/inline.ml" 259 10189 10215 "cilext/inline.ml" 259 10189 10218
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format -> string -> Pretty.doc
+)
+ident(
+  ext_ref Cil.bug
+)
+"cilext/inline.ml" 259 10189 10219 "cilext/inline.ml" 259 10189 10266
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 260 10269 10297 "cilext/inline.ml" 260 10269 10299
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "cilext/inline.ml" 254 9994 10022 "cilext/inline.ml" 254 9994 10024
+)
+"cilext/inline.ml" 260 10269 10297 "cilext/inline.ml" 260 10269 10305
+type(
+  string
+)
+"cilext/inline.ml" 259 10189 10214 "cilext/inline.ml" 260 10269 10306
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 258 10145 10182 "cilext/inline.ml" 261 10308 10330
+call(
+  tail
+)
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 257 10101 10120 "cilext/inline.ml" 261 10308 10330
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 255 10039 10056 "cilext/inline.ml" 261 10308 10330
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 264 10428 10451 "cilext/inline.ml" 264 10428 10459
+type(
+  Cil.exp list -> Cil.varinfo list -> unit
+)
+ident(
+  def loopArgs "cilext/inline.ml" 264 10428 10443 "cilext/inline.ml" 323 13206 13231
+)
+"cilext/inline.ml" 264 10428 10461 "cilext/inline.ml" 264 10428 10465
+type(
+  Cil.exp list
+)
+ident(
+  def args "cilext/inline.ml" 264 10428 10477 "cilext/inline.ml" 277 11110 11172
+)
+"cilext/inline.ml" 264 10428 10478 "cilext/inline.ml" 264 10428 10485
+type(
+  Cil.varinfo list
+)
+ident(
+  def formals "cilext/inline.ml" 265 10505 10522 "cilext/inline.ml" 277 11110 11172
+)
+"cilext/inline.ml" 265 10505 10528 "cilext/inline.ml" 265 10505 10532
+type(
+  Cil.exp list
+)
+ident(
+  int_ref args "cilext/inline.ml" 264 10428 10461 "cilext/inline.ml" 264 10428 10465
+)
+"cilext/inline.ml" 265 10505 10534 "cilext/inline.ml" 265 10505 10541
+type(
+  Cil.varinfo list
+)
+ident(
+  int_ref formals "cilext/inline.ml" 264 10428 10478 "cilext/inline.ml" 264 10428 10485
+)
+"cilext/inline.ml" 265 10505 10528 "cilext/inline.ml" 265 10505 10541
+type(
+  Cil.exp list * Cil.varinfo list
+)
+"cilext/inline.ml" 266 10549 10568 "cilext/inline.ml" 266 10549 10570
+type(
+  Cil.exp list
+)
+"cilext/inline.ml" 266 10549 10572 "cilext/inline.ml" 266 10549 10574
+type(
+  Cil.varinfo list
+)
+"cilext/inline.ml" 266 10549 10568 "cilext/inline.ml" 266 10549 10574
+type(
+  Cil.exp list * Cil.varinfo list
+)
+"cilext/inline.ml" 266 10549 10578 "cilext/inline.ml" 266 10549 10580
+type(
+  unit
+)
+"cilext/inline.ml" 267 10582 10602 "cilext/inline.ml" 267 10582 10603
+type(
+  Cil.exp
+)
+ident(
+  def a "cilext/inline.ml" 267 10582 10634 "cilext/inline.ml" 276 11088 11108
+)
+"cilext/inline.ml" 267 10582 10607 "cilext/inline.ml" 267 10582 10612
+type(
+  Cil.exp list
+)
+ident(
+  def args' "cilext/inline.ml" 267 10582 10634 "cilext/inline.ml" 276 11088 11108
+)
+"cilext/inline.ml" 267 10582 10601 "cilext/inline.ml" 267 10582 10613
+type(
+  Cil.exp list
+)
+"cilext/inline.ml" 267 10582 10616 "cilext/inline.ml" 267 10582 10617
+type(
+  Cil.varinfo
+)
+ident(
+  def f "cilext/inline.ml" 267 10582 10634 "cilext/inline.ml" 276 11088 11108
+)
+"cilext/inline.ml" 267 10582 10621 "cilext/inline.ml" 267 10582 10629
+type(
+  Cil.varinfo list
+)
+ident(
+  def formals' "cilext/inline.ml" 267 10582 10634 "cilext/inline.ml" 276 11088 11108
+)
+"cilext/inline.ml" 267 10582 10615 "cilext/inline.ml" 267 10582 10630
+type(
+  Cil.varinfo list
+)
+"cilext/inline.ml" 267 10582 10601 "cilext/inline.ml" 267 10582 10630
+type(
+  Cil.exp list * Cil.varinfo list
+)
+"cilext/inline.ml" 271 10829 10854 "cilext/inline.ml" 271 10829 10856
+type(
+  Cil.varinfo
+)
+ident(
+  def f' "cilext/inline.ml" 272 10902 10923 "cilext/inline.ml" 275 11042 11086
+)
+"cilext/inline.ml" 271 10829 10859 "cilext/inline.ml" 271 10829 10870
+type(
+  Cil.fundec ->
+  ?insert:bool ->
+  ?name:string ->
+  ?descr:Pretty.doc -> ?descrpure:bool -> Cil.typ -> Cil.varinfo
+)
+ident(
+  ext_ref Cil.makeTempVar
+)
+"cilext/inline.ml" 271 10829 10871 "cilext/inline.ml" 271 10829 10875
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+)
+"cilext/inline.ml" 271 10829 10882 "cilext/inline.ml" 271 10829 10883
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref f "cilext/inline.ml" 267 10582 10616 "cilext/inline.ml" 267 10582 10617
+)
+"cilext/inline.ml" 271 10829 10882 "cilext/inline.ml" 271 10829 10889
+type(
+  string
+)
+"cilext/inline.ml" 271 10829 10890 "cilext/inline.ml" 271 10829 10891
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref f "cilext/inline.ml" 267 10582 10616 "cilext/inline.ml" 267 10582 10617
+)
+"cilext/inline.ml" 271 10829 10890 "cilext/inline.ml" 271 10829 10897
+type(
+  Cil.typ
+)
+"cilext/inline.ml" 271 10829 10859 "cilext/inline.ml" 271 10829 10897
+call(
+  stack
+)
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 272 10902 10923 "cilext/inline.ml" 272 10902 10933
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 272 10902 10934 "cilext/inline.ml" 272 10902 10936
+type(
+  Cil.instr list ref -> Cil.instr list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 272 10902 10943 "cilext/inline.ml" 272 10902 10946
+type(
+  Cil.varinfo -> Cil.lval
+)
+ident(
+  ext_ref Cil.var
+)
+"cilext/inline.ml" 272 10902 10947 "cilext/inline.ml" 272 10902 10949
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref f' "cilext/inline.ml" 271 10829 10854 "cilext/inline.ml" 271 10829 10856
+)
+"cilext/inline.ml" 272 10902 10943 "cilext/inline.ml" 272 10902 10949
+call(
+  stack
+)
+type(
+  Cil.lval
+)
+"cilext/inline.ml" 272 10902 10951 "cilext/inline.ml" 272 10902 10952
+type(
+  Cil.exp
+)
+ident(
+  int_ref a "cilext/inline.ml" 267 10582 10602 "cilext/inline.ml" 267 10582 10603
+)
+"cilext/inline.ml" 272 10902 10954 "cilext/inline.ml" 272 10902 10955
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 229 8918 8972 "cilext/inline.ml" 229 8918 8973
+)
+"cilext/inline.ml" 272 10902 10937 "cilext/inline.ml" 272 10902 10957
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 272 10902 10961 "cilext/inline.ml" 272 10902 10962
+type(
+  Cil.instr list ref -> Cil.instr list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 272 10902 10962 "cilext/inline.ml" 272 10902 10972
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 272 10902 10961 "cilext/inline.ml" 272 10902 10972
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 272 10902 10937 "cilext/inline.ml" 272 10902 10972
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 272 10902 10923 "cilext/inline.ml" 272 10902 10972
+type(
+  unit
+)
+"cilext/inline.ml" 273 10975 10996 "cilext/inline.ml" 273 10975 11002
+type(
+  Cil.varinfo IH.t -> int -> Cil.varinfo -> unit
+)
+ident(
+  ext_ref IH.add
+)
+"cilext/inline.ml" 273 10975 11003 "cilext/inline.ml" 273 10975 11007
+type(
+  Cil.varinfo IH.t
+)
+ident(
+  int_ref vmap "cilext/inline.ml" 253 9935 9954 "cilext/inline.ml" 253 9935 9958
+)
+"cilext/inline.ml" 273 10975 11008 "cilext/inline.ml" 273 10975 11009
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref f "cilext/inline.ml" 267 10582 10616 "cilext/inline.ml" 267 10582 10617
+)
+"cilext/inline.ml" 273 10975 11008 "cilext/inline.ml" 273 10975 11013
+type(
+  int
+)
+"cilext/inline.ml" 273 10975 11014 "cilext/inline.ml" 273 10975 11016
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref f' "cilext/inline.ml" 271 10829 10854 "cilext/inline.ml" 271 10829 10856
+)
+"cilext/inline.ml" 273 10975 10996 "cilext/inline.ml" 273 10975 11016
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 275 11042 11063 "cilext/inline.ml" 275 11042 11071
+type(
+  Cil.exp list -> Cil.varinfo list -> unit
+)
+ident(
+  int_ref loopArgs "cilext/inline.ml" 264 10428 10451 "cilext/inline.ml" 264 10428 10459
+)
+"cilext/inline.ml" 275 11042 11072 "cilext/inline.ml" 275 11042 11077
+type(
+  Cil.exp list
+)
+ident(
+  int_ref args' "cilext/inline.ml" 267 10582 10607 "cilext/inline.ml" 267 10582 10612
+)
+"cilext/inline.ml" 275 11042 11078 "cilext/inline.ml" 275 11042 11086
+type(
+  Cil.varinfo list
+)
+ident(
+  int_ref formals' "cilext/inline.ml" 267 10582 10621 "cilext/inline.ml" 267 10582 10629
+)
+"cilext/inline.ml" 275 11042 11063 "cilext/inline.ml" 275 11042 11086
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 273 10975 10996 "cilext/inline.ml" 275 11042 11086
+type(
+  unit
+)
+"cilext/inline.ml" 272 10902 10923 "cilext/inline.ml" 275 11042 11086
+type(
+  unit
+)
+"cilext/inline.ml" 267 10582 10634 "cilext/inline.ml" 276 11088 11108
+type(
+  unit
+)
+"cilext/inline.ml" 277 11110 11129 "cilext/inline.ml" 277 11110 11130
+type(
+  Cil.exp list
+)
+"cilext/inline.ml" 277 11110 11132 "cilext/inline.ml" 277 11110 11133
+type(
+  Cil.varinfo list
+)
+"cilext/inline.ml" 277 11110 11129 "cilext/inline.ml" 277 11110 11133
+type(
+  Cil.exp list * Cil.varinfo list
+)
+"cilext/inline.ml" 277 11110 11137 "cilext/inline.ml" 277 11110 11142
+type(
+  (unit, unit, Pretty.doc, unit) format4 -> unit
+)
+ident(
+  ext_ref E.bug
+)
+"cilext/inline.ml" 277 11110 11143 "cilext/inline.ml" 277 11110 11172
+type(
+  (unit, unit, Pretty.doc, unit) format4
+)
+"cilext/inline.ml" 277 11110 11137 "cilext/inline.ml" 277 11110 11172
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 265 10505 10522 "cilext/inline.ml" 277 11110 11172
+type(
+  unit
+)
+"cilext/inline.ml" 279 11193 11208 "cilext/inline.ml" 279 11193 11216
+type(
+  Cil.exp list -> Cil.varinfo list -> unit
+)
+ident(
+  int_ref loopArgs "cilext/inline.ml" 264 10428 10451 "cilext/inline.ml" 264 10428 10459
+)
+"cilext/inline.ml" 279 11193 11217 "cilext/inline.ml" 279 11193 11221
+type(
+  Cil.exp list
+)
+ident(
+  int_ref args "cilext/inline.ml" 229 8918 8966 "cilext/inline.ml" 229 8918 8970
+)
+"cilext/inline.ml" 279 11193 11222 "cilext/inline.ml" 279 11193 11226
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 279 11193 11222 "cilext/inline.ml" 279 11193 11235
+type(
+  Cil.varinfo list
+)
+"cilext/inline.ml" 279 11193 11208 "cilext/inline.ml" 279 11193 11235
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 282 11293 11308 "cilext/inline.ml" 282 11293 11317
+type(
+  (Cil.varinfo -> unit) -> Cil.varinfo list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cilext/inline.ml" 282 11293 11323 "cilext/inline.ml" 282 11293 11326
+type(
+  Cil.varinfo
+)
+ident(
+  def loc "cilext/inline.ml" 283 11332 11349 "cilext/inline.ml" 284 11408 11449
+)
+"cilext/inline.ml" 283 11332 11353 "cilext/inline.ml" 283 11332 11357
+type(
+  Cil.varinfo
+)
+ident(
+  def loc' "cilext/inline.ml" 284 11408 11425 "cilext/inline.ml" 284 11408 11449
+)
+"cilext/inline.ml" 283 11332 11360 "cilext/inline.ml" 283 11332 11371
+type(
+  Cil.fundec ->
+  ?insert:bool ->
+  ?name:string ->
+  ?descr:Pretty.doc -> ?descrpure:bool -> Cil.typ -> Cil.varinfo
+)
+ident(
+  ext_ref Cil.makeTempVar
+)
+"cilext/inline.ml" 283 11332 11372 "cilext/inline.ml" 283 11332 11376
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+)
+"cilext/inline.ml" 283 11332 11383 "cilext/inline.ml" 283 11332 11386
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref loc "cilext/inline.ml" 282 11293 11323 "cilext/inline.ml" 282 11293 11326
+)
+"cilext/inline.ml" 283 11332 11383 "cilext/inline.ml" 283 11332 11392
+type(
+  string
+)
+"cilext/inline.ml" 283 11332 11393 "cilext/inline.ml" 283 11332 11396
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref loc "cilext/inline.ml" 282 11293 11323 "cilext/inline.ml" 282 11293 11326
+)
+"cilext/inline.ml" 283 11332 11393 "cilext/inline.ml" 283 11332 11402
+type(
+  Cil.typ
+)
+"cilext/inline.ml" 283 11332 11360 "cilext/inline.ml" 283 11332 11402
+call(
+  stack
+)
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 284 11408 11425 "cilext/inline.ml" 284 11408 11431
+type(
+  Cil.varinfo IH.t -> int -> Cil.varinfo -> unit
+)
+ident(
+  ext_ref IH.add
+)
+"cilext/inline.ml" 284 11408 11432 "cilext/inline.ml" 284 11408 11436
+type(
+  Cil.varinfo IH.t
+)
+ident(
+  int_ref vmap "cilext/inline.ml" 253 9935 9954 "cilext/inline.ml" 253 9935 9958
+)
+"cilext/inline.ml" 284 11408 11437 "cilext/inline.ml" 284 11408 11440
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref loc "cilext/inline.ml" 282 11293 11323 "cilext/inline.ml" 282 11293 11326
+)
+"cilext/inline.ml" 284 11408 11437 "cilext/inline.ml" 284 11408 11444
+type(
+  int
+)
+"cilext/inline.ml" 284 11408 11445 "cilext/inline.ml" 284 11408 11449
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref loc' "cilext/inline.ml" 283 11332 11353 "cilext/inline.ml" 283 11332 11357
+)
+"cilext/inline.ml" 284 11408 11425 "cilext/inline.ml" 284 11408 11449
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 283 11332 11349 "cilext/inline.ml" 284 11408 11449
+type(
+  unit
+)
+"cilext/inline.ml" 282 11293 11318 "cilext/inline.ml" 284 11408 11450
+type(
+  Cil.varinfo -> unit
+)
+"cilext/inline.ml" 284 11408 11451 "cilext/inline.ml" 284 11408 11455
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 284 11408 11451 "cilext/inline.ml" 284 11408 11463
+type(
+  Cil.varinfo list
+)
+"cilext/inline.ml" 282 11293 11308 "cilext/inline.ml" 284 11408 11463
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 288 11548 11568 "cilext/inline.ml" 288 11548 11571
+type(
+  Cil.stmt
+)
+ident(
+  def ret "cilext/inline.ml" 302 12233 12248 "cilext/inline.ml" 323 13206 13231
+)
+"cilext/inline.ml" 288 11548 11582 "cilext/inline.ml" 288 11548 11588
+type(
+  Cil.varinfo option
+)
+ident(
+  def retvar "cilext/inline.ml" 302 12233 12248 "cilext/inline.ml" 323 13206 13231
+)
+"cilext/inline.ml" 288 11548 11567 "cilext/inline.ml" 288 11548 11605
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 289 11610 11631 "cilext/inline.ml" 289 11610 11633
+type(
+  Cil.typ
+)
+ident(
+  def rt "cilext/inline.ml" 290 11686 11703 "cilext/inline.ml" 300 12192 12212
+)
+"cilext/inline.ml" 289 11610 11635 "cilext/inline.ml" 289 11610 11636
+type(
+  (string * Cil.typ * Cil.attributes) list option
+)
+"cilext/inline.ml" 289 11610 11638 "cilext/inline.ml" 289 11610 11642
+type(
+  bool
+)
+ident(
+  def isva "cilext/inline.ml" 290 11686 11703 "cilext/inline.ml" 300 12192 12212
+)
+"cilext/inline.ml" 289 11610 11644 "cilext/inline.ml" 289 11610 11645
+type(
+  Cil.attributes
+)
+"cilext/inline.ml" 289 11610 11631 "cilext/inline.ml" 289 11610 11645
+type(
+  Cil.typ * (string * Cil.typ * Cil.attributes) list option * bool *
+  Cil.attributes
+)
+"cilext/inline.ml" 289 11610 11648 "cilext/inline.ml" 289 11610 11665
+type(
+  Cil.typ ->
+  Cil.typ * (string * Cil.typ * Cil.attributes) list option * bool *
+  Cil.attributes
+)
+ident(
+  ext_ref Cil.splitFunctionType
+)
+"cilext/inline.ml" 289 11610 11666 "cilext/inline.ml" 289 11610 11670
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 289 11610 11666 "cilext/inline.ml" 289 11610 11675
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 289 11610 11666 "cilext/inline.ml" 289 11610 11681
+type(
+  Cil.typ
+)
+"cilext/inline.ml" 289 11610 11648 "cilext/inline.ml" 289 11610 11681
+call(
+  stack
+)
+type(
+  Cil.typ * (string * Cil.typ * Cil.attributes) list option * bool *
+  Cil.attributes
+)
+"cilext/inline.ml" 290 11686 11709 "cilext/inline.ml" 290 11686 11711
+type(
+  Cil.typ
+)
+ident(
+  int_ref rt "cilext/inline.ml" 289 11610 11631 "cilext/inline.ml" 289 11610 11633
+)
+"cilext/inline.ml" 291 11719 11744 "cilext/inline.ml" 291 11719 11745
+type(
+  Cil.attributes
+)
+"cilext/inline.ml" 291 11719 11738 "cilext/inline.ml" 291 11719 11745
+type(
+  Cil.typ
+)
+"cilext/inline.ml" 291 11719 11750 "cilext/inline.ml" 291 11719 11756
+type(
+  Cil.stmtkind -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmt
+)
+"cilext/inline.ml" 291 11719 11764 "cilext/inline.ml" 291 11719 11766
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 291 11719 11757 "cilext/inline.ml" 291 11719 11767
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 291 11719 11750 "cilext/inline.ml" 291 11719 11767
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 291 11719 11769 "cilext/inline.ml" 291 11719 11773
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 291 11719 11750 "cilext/inline.ml" 291 11719 11773
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 292 11775 11794 "cilext/inline.ml" 292 11775 11795
+type(
+  Cil.typ
+)
+"cilext/inline.ml" 293 11806 11833 "cilext/inline.ml" 293 11806 11836
+type(
+  Cil.lval option
+)
+ident(
+  int_ref lvo "cilext/inline.ml" 229 8918 8935 "cilext/inline.ml" 229 8918 8938
+)
+"cilext/inline.ml" 294 11844 11867 "cilext/inline.ml" 294 11844 11871
+type(
+  Cil.lval option
+)
+"cilext/inline.ml" 294 11844 11875 "cilext/inline.ml" 294 11844 11881
+type(
+  Cil.stmtkind -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmt
+)
+"cilext/inline.ml" 294 11844 11889 "cilext/inline.ml" 294 11844 11891
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 294 11844 11882 "cilext/inline.ml" 294 11844 11892
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 294 11844 11875 "cilext/inline.ml" 294 11844 11892
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 294 11844 11894 "cilext/inline.ml" 294 11844 11898
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 294 11844 11875 "cilext/inline.ml" 294 11844 11898
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 295 11900 11928 "cilext/inline.ml" 295 11900 11930
+type(
+  Cil.lval
+)
+ident(
+  def lv "cilext/inline.ml" 297 11991 12016 "cilext/inline.ml" 299 12113 12190
+)
+"cilext/inline.ml" 295 11900 11923 "cilext/inline.ml" 295 11900 11930
+type(
+  Cil.lval option
+)
+"cilext/inline.ml" 297 11991 12020 "cilext/inline.ml" 297 11991 12022
+type(
+  Cil.varinfo
+)
+ident(
+  def rv "cilext/inline.ml" 299 12113 12138 "cilext/inline.ml" 299 12113 12190
+)
+"cilext/inline.ml" 297 11991 12025 "cilext/inline.ml" 297 11991 12036
+type(
+  Cil.fundec ->
+  ?insert:bool ->
+  ?name:string ->
+  ?descr:Pretty.doc -> ?descrpure:bool -> Cil.typ -> Cil.varinfo
+)
+ident(
+  ext_ref Cil.makeTempVar
+)
+"cilext/inline.ml" 298 12039 12068 "cilext/inline.ml" 298 12039 12072
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+)
+"cilext/inline.ml" 298 12039 12080 "cilext/inline.ml" 298 12039 12086
+type(
+  string
+)
+"cilext/inline.ml" 298 12039 12087 "cilext/inline.ml" 298 12039 12088
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cilext/inline.ml" 298 12039 12089 "cilext/inline.ml" 298 12039 12093
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 298 12039 12089 "cilext/inline.ml" 298 12039 12098
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 298 12039 12089 "cilext/inline.ml" 298 12039 12104
+type(
+  string
+)
+"cilext/inline.ml" 298 12039 12079 "cilext/inline.ml" 298 12039 12105
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 298 12039 12106 "cilext/inline.ml" 298 12039 12108
+type(
+  Cil.typ
+)
+ident(
+  int_ref rt "cilext/inline.ml" 289 11610 11631 "cilext/inline.ml" 289 11610 11633
+)
+"cilext/inline.ml" 297 11991 12025 "cilext/inline.ml" 298 12039 12108
+call(
+  stack
+)
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 299 12113 12138 "cilext/inline.ml" 299 12113 12152
+type(
+  Cil.instr -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmtOneInstr
+)
+"cilext/inline.ml" 299 12113 12159 "cilext/inline.ml" 299 12113 12161
+type(
+  Cil.lval
+)
+ident(
+  int_ref lv "cilext/inline.ml" 295 11900 11928 "cilext/inline.ml" 295 11900 11930
+)
+"cilext/inline.ml" 299 12113 12169 "cilext/inline.ml" 299 12113 12172
+type(
+  Cil.varinfo -> Cil.lval
+)
+ident(
+  ext_ref Cil.var
+)
+"cilext/inline.ml" 299 12113 12173 "cilext/inline.ml" 299 12113 12175
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref rv "cilext/inline.ml" 297 11991 12020 "cilext/inline.ml" 297 11991 12022
+)
+"cilext/inline.ml" 299 12113 12168 "cilext/inline.ml" 299 12113 12176
+call(
+  stack
+)
+type(
+  Cil.lval
+)
+"cilext/inline.ml" 299 12113 12163 "cilext/inline.ml" 299 12113 12176
+type(
+  Cil.exp
+)
+"cilext/inline.ml" 299 12113 12178 "cilext/inline.ml" 299 12113 12179
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 229 8918 8972 "cilext/inline.ml" 229 8918 8973
+)
+"cilext/inline.ml" 299 12113 12153 "cilext/inline.ml" 299 12113 12181
+type(
+  Cil.instr
+)
+"cilext/inline.ml" 299 12113 12138 "cilext/inline.ml" 299 12113 12181
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 299 12113 12188 "cilext/inline.ml" 299 12113 12190
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref rv "cilext/inline.ml" 297 11991 12020 "cilext/inline.ml" 297 11991 12022
+)
+"cilext/inline.ml" 299 12113 12183 "cilext/inline.ml" 299 12113 12190
+type(
+  Cil.varinfo option
+)
+"cilext/inline.ml" 299 12113 12138 "cilext/inline.ml" 299 12113 12190
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 297 11991 12016 "cilext/inline.ml" 299 12113 12190
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 292 11775 11799 "cilext/inline.ml" 300 12192 12212
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 290 11686 11703 "cilext/inline.ml" 300 12192 12212
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 289 11610 11627 "cilext/inline.ml" 300 12192 12212
+type(
+  Cil.stmt * Cil.varinfo option
+)
+"cilext/inline.ml" 302 12233 12248 "cilext/inline.ml" 302 12233 12251
+type(
+  Cil.stmt
+)
+ident(
+  int_ref ret "cilext/inline.ml" 288 11548 11568 "cilext/inline.ml" 288 11548 11571
+)
+"cilext/inline.ml" 302 12233 12270 "cilext/inline.ml" 302 12233 12279
+type(
+  string -> string
+)
+ident(
+  int_ref replLabel "cilext/inline.ml" 203 7631 7653 "cilext/inline.ml" 203 7631 7662
+)
+"cilext/inline.ml" 302 12233 12281 "cilext/inline.ml" 302 12233 12288
+type(
+  string
+)
+"cilext/inline.ml" 302 12233 12289 "cilext/inline.ml" 302 12233 12290
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cilext/inline.ml" 302 12233 12291 "cilext/inline.ml" 302 12233 12295
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 302 12233 12291 "cilext/inline.ml" 302 12233 12300
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 302 12233 12291 "cilext/inline.ml" 302 12233 12306
+type(
+  string
+)
+"cilext/inline.ml" 302 12233 12280 "cilext/inline.ml" 302 12233 12307
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 302 12233 12270 "cilext/inline.ml" 302 12233 12307
+call(
+  stack
+)
+type(
+  string
+)
+"cilext/inline.ml" 303 12310 12347 "cilext/inline.ml" 303 12310 12348
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 229 8918 8972 "cilext/inline.ml" 229 8918 8973
+)
+"cilext/inline.ml" 303 12310 12350 "cilext/inline.ml" 303 12310 12355
+type(
+  bool
+)
+"cilext/inline.ml" 302 12233 12263 "cilext/inline.ml" 303 12310 12356
+type(
+  Cil.label
+)
+"cilext/inline.ml" 302 12233 12262 "cilext/inline.ml" 303 12310 12357
+type(
+  Cil.label list
+)
+"cilext/inline.ml" 302 12233 12248 "cilext/inline.ml" 303 12310 12357
+type(
+  unit
+)
+"cilext/inline.ml" 304 12360 12379 "cilext/inline.ml" 304 12360 12386
+type(
+  Cil.block
+)
+ident(
+  def oldBody "cilext/inline.ml" 306 12448 12463 "cilext/inline.ml" 323 13206 13231
+)
+"cilext/inline.ml" 304 12360 12389 "cilext/inline.ml" 304 12360 12393
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 304 12360 12389 "cilext/inline.ml" 304 12360 12399
+type(
+  Cil.block
+)
+"cilext/inline.ml" 307 12469 12486 "cilext/inline.ml" 307 12469 12492
+type(
+  Cil.fundec -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 307 12469 12494 "cilext/inline.ml" 307 12469 12510
+type(
+  Cil.cilVisitor -> Cil.fundec -> Cil.fundec
+)
+ident(
+  ext_ref Cil.visitCilFunction
+)
+"cilext/inline.ml" 308 12513 12541 "cilext/inline.ml" 308 12513 12560
+type(
+  Cil.fundec ->
+  Cil.varinfo ->
+  (Cil.varinfo -> Cil.varinfo) ->
+  Cil.varinfo option -> (string -> string) -> Cil.stmt -> copyBodyVisitor
+)
+"cilext/inline.ml" 308 12513 12561 "cilext/inline.ml" 308 12513 12565
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 201 7473 7495 "cilext/inline.ml" 201 7473 7499
+)
+"cilext/inline.ml" 308 12513 12566 "cilext/inline.ml" 308 12513 12570
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 308 12513 12566 "cilext/inline.ml" 308 12513 12575
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 308 12513 12576 "cilext/inline.ml" 308 12513 12583
+type(
+  Cil.varinfo -> Cil.varinfo
+)
+ident(
+  int_ref replVar "cilext/inline.ml" 254 9994 10013 "cilext/inline.ml" 254 9994 10020
+)
+"cilext/inline.ml" 309 12586 12616 "cilext/inline.ml" 309 12586 12622
+type(
+  Cil.varinfo option
+)
+ident(
+  int_ref retvar "cilext/inline.ml" 288 11548 11582 "cilext/inline.ml" 288 11548 11588
+)
+"cilext/inline.ml" 309 12586 12623 "cilext/inline.ml" 309 12586 12632
+type(
+  string -> string
+)
+ident(
+  int_ref replLabel "cilext/inline.ml" 203 7631 7653 "cilext/inline.ml" 203 7631 7662
+)
+"cilext/inline.ml" 309 12586 12633 "cilext/inline.ml" 309 12586 12636
+type(
+  Cil.stmt
+)
+ident(
+  int_ref ret "cilext/inline.ml" 288 11548 11568 "cilext/inline.ml" 288 11548 11571
+)
+"cilext/inline.ml" 308 12513 12540 "cilext/inline.ml" 309 12586 12637
+call(
+  stack
+)
+type(
+  copyBodyVisitor
+)
+"cilext/inline.ml" 310 12640 12667 "cilext/inline.ml" 310 12640 12671
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 307 12469 12493 "cilext/inline.ml" 310 12640 12672
+call(
+  stack
+)
+type(
+  Cil.fundec
+)
+"cilext/inline.ml" 307 12469 12486 "cilext/inline.ml" 310 12640 12672
+type(
+  unit
+)
+"cilext/inline.ml" 311 12675 12692 "cilext/inline.ml" 311 12675 12702
+type(
+  Cil.location ref
+)
+ident(
+  ext_ref Cil.currentLoc
+)
+"cilext/inline.ml" 311 12675 12703 "cilext/inline.ml" 311 12675 12705
+type(
+  Cil.location ref -> Cil.location -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 311 12675 12706 "cilext/inline.ml" 311 12675 12707
+type(
+  Cil.location
+)
+ident(
+  int_ref l "cilext/inline.ml" 229 8918 8972 "cilext/inline.ml" 229 8918 8973
+)
+"cilext/inline.ml" 311 12675 12692 "cilext/inline.ml" 311 12675 12707
+type(
+  unit
+)
+"cilext/inline.ml" 312 12710 12731 "cilext/inline.ml" 312 12710 12736
+type(
+  Cil.block
+)
+ident(
+  def body' "cilext/inline.ml" 314 12826 12843 "cilext/inline.ml" 317 12924 12999
+)
+"cilext/inline.ml" 312 12710 12739 "cilext/inline.ml" 312 12710 12743
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 312 12710 12739 "cilext/inline.ml" 312 12710 12749
+type(
+  Cil.block
+)
+"cilext/inline.ml" 314 12826 12843 "cilext/inline.ml" 314 12826 12847
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 314 12826 12857 "cilext/inline.ml" 314 12826 12864
+type(
+  Cil.block
+)
+ident(
+  int_ref oldBody "cilext/inline.ml" 304 12360 12379 "cilext/inline.ml" 304 12360 12386
+)
+"cilext/inline.ml" 314 12826 12843 "cilext/inline.ml" 314 12826 12864
+type(
+  unit
+)
+"cilext/inline.ml" 316 12886 12903 "cilext/inline.ml" 316 12886 12918
+type(
+  unit -> unit
+)
+ident(
+  int_ref emptyPrevrinstr "cilext/inline.ml" 217 8551 8561 "cilext/inline.ml" 217 8551 8576
+)
+"cilext/inline.ml" 316 12886 12919 "cilext/inline.ml" 316 12886 12921
+type(
+  unit
+)
+"cilext/inline.ml" 316 12886 12903 "cilext/inline.ml" 316 12886 12921
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 317 12924 12941 "cilext/inline.ml" 317 12924 12951
+type(
+  Cil.stmt list ref
+)
+ident(
+  int_ref prevrstmts "cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+)
+"cilext/inline.ml" 317 12924 12952 "cilext/inline.ml" 317 12924 12954
+type(
+  Cil.stmt list ref -> Cil.stmt list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 317 12924 12955 "cilext/inline.ml" 317 12924 12958
+type(
+  Cil.stmt
+)
+ident(
+  int_ref ret "cilext/inline.ml" 288 11548 11568 "cilext/inline.ml" 288 11548 11571
+)
+"cilext/inline.ml" 317 12924 12963 "cilext/inline.ml" 317 12924 12969
+type(
+  Cil.stmtkind -> Cil.stmt
+)
+ident(
+  ext_ref Cil.mkStmt
+)
+"cilext/inline.ml" 317 12924 12977 "cilext/inline.ml" 317 12924 12982
+type(
+  Cil.block
+)
+ident(
+  int_ref body' "cilext/inline.ml" 312 12710 12731 "cilext/inline.ml" 312 12710 12736
+)
+"cilext/inline.ml" 317 12924 12970 "cilext/inline.ml" 317 12924 12983
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 317 12924 12962 "cilext/inline.ml" 317 12924 12984
+call(
+  stack
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 317 12924 12988 "cilext/inline.ml" 317 12924 12989
+type(
+  Cil.stmt list ref -> Cil.stmt list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 317 12924 12989 "cilext/inline.ml" 317 12924 12999
+type(
+  Cil.stmt list ref
+)
+ident(
+  int_ref prevrstmts "cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+)
+"cilext/inline.ml" 317 12924 12988 "cilext/inline.ml" 317 12924 12999
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 317 12924 12962 "cilext/inline.ml" 317 12924 12999
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 317 12924 12955 "cilext/inline.ml" 317 12924 12999
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 317 12924 12941 "cilext/inline.ml" 317 12924 12999
+type(
+  unit
+)
+"cilext/inline.ml" 316 12886 12903 "cilext/inline.ml" 317 12924 12999
+type(
+  unit
+)
+"cilext/inline.ml" 314 12826 12843 "cilext/inline.ml" 317 12924 12999
+type(
+  unit
+)
+"cilext/inline.ml" 312 12710 12727 "cilext/inline.ml" 317 12924 12999
+type(
+  unit
+)
+"cilext/inline.ml" 311 12675 12692 "cilext/inline.ml" 317 12924 12999
+type(
+  unit
+)
+"cilext/inline.ml" 307 12469 12486 "cilext/inline.ml" 317 12924 12999
+type(
+  unit
+)
+"cilext/inline.ml" 318 13001 13021 "cilext/inline.ml" 318 13001 13030
+type(
+  exn
+)
+"cilext/inline.ml" 319 13036 13053 "cilext/inline.ml" 319 13036 13059
+type(
+  Pretty.doc -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 319 13036 13061 "cilext/inline.ml" 319 13036 13065
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format -> string -> Pretty.doc
+)
+ident(
+  ext_ref Cil.warn
+)
+"cilext/inline.ml" 319 13036 13066 "cilext/inline.ml" 319 13036 13104
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 320 13107 13134 "cilext/inline.ml" 320 13107 13138
+type(
+  Cil.fundec
+)
+ident(
+  int_ref repl "cilext/inline.ml" 247 9673 9691 "cilext/inline.ml" 247 9673 9695
+)
+"cilext/inline.ml" 320 13107 13134 "cilext/inline.ml" 320 13107 13143
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 320 13107 13134 "cilext/inline.ml" 320 13107 13149
+type(
+  string
+)
+"cilext/inline.ml" 319 13036 13060 "cilext/inline.ml" 320 13107 13150
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 319 13036 13053 "cilext/inline.ml" 320 13107 13150
+type(
+  unit
+)
+"cilext/inline.ml" 321 13153 13170 "cilext/inline.ml" 321 13153 13180
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 321 13153 13181 "cilext/inline.ml" 321 13153 13183
+type(
+  Cil.instr list ref -> Cil.instr list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 321 13153 13184 "cilext/inline.ml" 321 13153 13185
+type(
+  Cil.instr
+)
+ident(
+  int_ref i "cilext/inline.ml" 229 8918 8928 "cilext/inline.ml" 229 8918 8980
+)
+"cilext/inline.ml" 321 13153 13189 "cilext/inline.ml" 321 13153 13190
+type(
+  Cil.instr list ref -> Cil.instr list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 321 13153 13190 "cilext/inline.ml" 321 13153 13200
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 321 13153 13189 "cilext/inline.ml" 321 13153 13200
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 321 13153 13184 "cilext/inline.ml" 321 13153 13200
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 321 13153 13170 "cilext/inline.ml" 321 13153 13200
+type(
+  unit
+)
+"cilext/inline.ml" 319 13036 13053 "cilext/inline.ml" 321 13153 13200
+type(
+  unit
+)
+"cilext/inline.ml" 306 12448 12463 "cilext/inline.ml" 321 13153 13201
+type(
+  unit
+)
+"cilext/inline.ml" 323 13206 13221 "cilext/inline.ml" 323 13206 13225
+type(
+  Cil.instr list -> unit
+)
+ident(
+  int_ref loop "cilext/inline.ml" 224 8765 8779 "cilext/inline.ml" 224 8765 8783
+)
+"cilext/inline.ml" 323 13206 13226 "cilext/inline.ml" 323 13206 13231
+type(
+  Cil.instr list
+)
+ident(
+  int_ref resti "cilext/inline.ml" 229 8918 8984 "cilext/inline.ml" 229 8918 8989
+)
+"cilext/inline.ml" 323 13206 13221 "cilext/inline.ml" 323 13206 13231
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 306 12448 12463 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 304 12360 12375 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 302 12233 12248 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 288 11548 11563 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 282 11293 11308 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 279 11193 11208 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 264 10428 10443 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 254 9994 10009 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 253 9935 9950 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 249 9743 9758 "cilext/inline.ml" 323 13206 13231
+type(
+  unit
+)
+"cilext/inline.ml" 247 9673 9699 "cilext/inline.ml" 324 13233 13247
+type(
+  unit
+)
+"cilext/inline.ml" 243 9542 9553 "cilext/inline.ml" 324 13233 13247
+type(
+  unit
+)
+"cilext/inline.ml" 232 9095 9107 "cilext/inline.ml" 324 13233 13247
+type(
+  unit
+)
+"cilext/inline.ml" 229 8918 8993 "cilext/inline.ml" 325 13249 13260
+type(
+  unit
+)
+"cilext/inline.ml" 326 13262 13272 "cilext/inline.ml" 326 13262 13273
+type(
+  Cil.instr
+)
+ident(
+  def i "cilext/inline.ml" 327 13288 13300 "cilext/inline.ml" 328 13334 13356
+)
+"cilext/inline.ml" 326 13262 13277 "cilext/inline.ml" 326 13262 13282
+type(
+  Cil.instr list
+)
+ident(
+  def resti "cilext/inline.ml" 327 13288 13300 "cilext/inline.ml" 328 13334 13356
+)
+"cilext/inline.ml" 326 13262 13272 "cilext/inline.ml" 326 13262 13282
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 327 13288 13300 "cilext/inline.ml" 327 13288 13310
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 327 13288 13311 "cilext/inline.ml" 327 13288 13313
+type(
+  Cil.instr list ref -> Cil.instr list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 327 13288 13314 "cilext/inline.ml" 327 13288 13315
+type(
+  Cil.instr
+)
+ident(
+  int_ref i "cilext/inline.ml" 326 13262 13272 "cilext/inline.ml" 326 13262 13273
+)
+"cilext/inline.ml" 327 13288 13319 "cilext/inline.ml" 327 13288 13320
+type(
+  Cil.instr list ref -> Cil.instr list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 327 13288 13320 "cilext/inline.ml" 327 13288 13330
+type(
+  Cil.instr list ref
+)
+ident(
+  int_ref prevrinstr "cilext/inline.ml" 214 8330 8340 "cilext/inline.ml" 214 8330 8350
+)
+"cilext/inline.ml" 327 13288 13319 "cilext/inline.ml" 327 13288 13330
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 327 13288 13314 "cilext/inline.ml" 327 13288 13330
+type(
+  Cil.instr list
+)
+"cilext/inline.ml" 327 13288 13300 "cilext/inline.ml" 327 13288 13330
+type(
+  unit
+)
+"cilext/inline.ml" 328 13334 13346 "cilext/inline.ml" 328 13334 13350
+type(
+  Cil.instr list -> unit
+)
+ident(
+  int_ref loop "cilext/inline.ml" 224 8765 8779 "cilext/inline.ml" 224 8765 8783
+)
+"cilext/inline.ml" 328 13334 13351 "cilext/inline.ml" 328 13334 13356
+type(
+  Cil.instr list
+)
+ident(
+  int_ref resti "cilext/inline.ml" 326 13262 13277 "cilext/inline.ml" 326 13262 13282
+)
+"cilext/inline.ml" 328 13334 13346 "cilext/inline.ml" 328 13334 13356
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 327 13288 13300 "cilext/inline.ml" 328 13334 13356
+type(
+  unit
+)
+"cilext/inline.ml" 226 8859 8867 "cilext/inline.ml" 328 13334 13356
+type(
+  unit
+)
+type(
+  unit
+)
+"cilext/inline.ml" 330 13368 13374 "cilext/inline.ml" 330 13368 13378
+type(
+  Cil.instr list -> unit
+)
+ident(
+  int_ref loop "cilext/inline.ml" 224 8765 8779 "cilext/inline.ml" 224 8765 8783
+)
+"cilext/inline.ml" 330 13368 13379 "cilext/inline.ml" 330 13368 13381
+type(
+  Cil.instr list
+)
+ident(
+  int_ref il "cilext/inline.ml" 211 8153 8163 "cilext/inline.ml" 211 8153 8165
+)
+"cilext/inline.ml" 330 13368 13374 "cilext/inline.ml" 330 13368 13381
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 332 13386 13392 "cilext/inline.ml" 332 13386 13407
+type(
+  unit -> unit
+)
+ident(
+  int_ref emptyPrevrinstr "cilext/inline.ml" 217 8551 8561 "cilext/inline.ml" 217 8551 8576
+)
+"cilext/inline.ml" 332 13386 13408 "cilext/inline.ml" 332 13386 13410
+type(
+  unit
+)
+"cilext/inline.ml" 332 13386 13392 "cilext/inline.ml" 332 13386 13410
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 333 13413 13422 "cilext/inline.ml" 333 13413 13433
+type(
+  Cil.stmt list -> int
+)
+ident(
+  ext_ref List.length
+)
+"cilext/inline.ml" 333 13413 13434 "cilext/inline.ml" 333 13413 13435
+type(
+  Cil.stmt list ref -> Cil.stmt list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 333 13413 13435 "cilext/inline.ml" 333 13413 13445
+type(
+  Cil.stmt list ref
+)
+ident(
+  int_ref prevrstmts "cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+)
+"cilext/inline.ml" 333 13413 13434 "cilext/inline.ml" 333 13413 13445
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 333 13413 13422 "cilext/inline.ml" 333 13413 13445
+call(
+  stack
+)
+type(
+  int
+)
+"cilext/inline.ml" 333 13413 13446 "cilext/inline.ml" 333 13413 13447
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"cilext/inline.ml" 333 13413 13448 "cilext/inline.ml" 333 13413 13449
+type(
+  int
+)
+"cilext/inline.ml" 333 13413 13422 "cilext/inline.ml" 333 13413 13449
+type(
+  bool
+)
+"cilext/inline.ml" 334 13457 13465 "cilext/inline.ml" 334 13457 13466
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 209 8088 8110 "cilext/inline.ml" 209 8088 8111
+)
+"cilext/inline.ml" 334 13457 13483 "cilext/inline.ml" 334 13457 13490
+type(
+  Cil.stmt list -> Cil.block
+)
+ident(
+  ext_ref Cil.mkBlock
+)
+"cilext/inline.ml" 334 13457 13492 "cilext/inline.ml" 334 13457 13500
+type(
+  Cil.stmt list -> Cil.stmt list
+)
+ident(
+  ext_ref List.rev
+)
+"cilext/inline.ml" 334 13457 13501 "cilext/inline.ml" 334 13457 13502
+type(
+  Cil.stmt list ref -> Cil.stmt list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 334 13457 13502 "cilext/inline.ml" 334 13457 13512
+type(
+  Cil.stmt list ref
+)
+ident(
+  int_ref prevrstmts "cilext/inline.ml" 212 8185 8195 "cilext/inline.ml" 212 8185 8205
+)
+"cilext/inline.ml" 334 13457 13501 "cilext/inline.ml" 334 13457 13512
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 334 13457 13491 "cilext/inline.ml" 334 13457 13513
+call(
+  stack
+)
+type(
+  Cil.stmt list
+)
+"cilext/inline.ml" 334 13457 13482 "cilext/inline.ml" 334 13457 13514
+call(
+  stack
+)
+type(
+  Cil.block
+)
+"cilext/inline.ml" 334 13457 13476 "cilext/inline.ml" 334 13457 13514
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 334 13457 13465 "cilext/inline.ml" 334 13457 13514
+type(
+  unit
+)
+"cilext/inline.ml" 333 13413 13419 "cilext/inline.ml" 334 13457 13514
+type(
+  unit
+)
+"cilext/inline.ml" 336 13519 13525 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 209 8088 8110 "cilext/inline.ml" 209 8088 8111
+)
+"cilext/inline.ml" 333 13413 13419 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 332 13386 13392 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 330 13368 13374 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 224 8765 8771 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 217 8551 8557 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 214 8330 8336 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 212 8185 8191 "cilext/inline.ml" 336 13519 13526
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 338 13530 13534 "cilext/inline.ml" 338 13530 13535
+type(
+  Cil.stmtkind
+)
+"cilext/inline.ml" 338 13530 13539 "cilext/inline.ml" 338 13530 13540
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 209 8088 8110 "cilext/inline.ml" 209 8088 8111
+)
+"cilext/inline.ml" 210 8130 8132 "cilext/inline.ml" 338 13530 13540
+type(
+  Cil.stmt
+)
+type(
+  Cil.stmt
+)
+"cilext/inline.ml" 342 13624 13628 "cilext/inline.ml" 342 13624 13638
+type(
+  Cil.fundec -> (Cil.varinfo -> Cil.fundec option) -> bool ref -> unit
+)
+ident(
+  def doFunction "cilext/inline.ml" 390 15646 15646 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 342 13624 13641 "cilext/inline.ml" 342 13624 13645
+type(
+  Cil.fundec
+)
+ident(
+  def host "cilext/inline.ml" 343 13696 13712 "cilext/inline.ml" 386 15597 15601
+)
+"cilext/inline.ml" 343 13696 13713 "cilext/inline.ml" 343 13696 13723
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  def inlineWhat "cilext/inline.ml" 348 14061 14077 "cilext/inline.ml" 386 15597 15601
+)
+"cilext/inline.ml" 348 14061 14078 "cilext/inline.ml" 348 14061 14089
+type(
+  bool ref
+)
+ident(
+  def anyInlining "cilext/inline.ml" 351 14290 14294 "cilext/inline.ml" 386 15597 15601
+)
+"cilext/inline.ml" 353 14385 14391 "cilext/inline.ml" 353 14385 14399
+type(
+  (string, unit A.alphaTableData ref) H.t
+)
+ident(
+  def labTable "cilext/inline.ml" 354 14458 14460 "cilext/inline.ml" 386 15597 15601
+)
+"cilext/inline.ml" 353 14385 14443 "cilext/inline.ml" 353 14385 14451
+type(
+  ?random:bool -> int -> (string, unit A.alphaTableData ref) H.t
+)
+ident(
+  ext_ref H.create
+)
+"cilext/inline.ml" 353 14385 14452 "cilext/inline.ml" 353 14385 14453
+type(
+  int
+)
+"cilext/inline.ml" 353 14385 14443 "cilext/inline.ml" 353 14385 14453
+call(
+  stack
+)
+type(
+  (string, unit A.alphaTableData ref) H.t
+)
+type(
+  (string, unit A.alphaTableData ref) H.t
+)
+"cilext/inline.ml" 354 14458 14460 "cilext/inline.ml" 354 14458 14466
+type(
+  Cil.block -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 354 14458 14468 "cilext/inline.ml" 354 14458 14481
+type(
+  Cil.cilVisitor -> Cil.block -> Cil.block
+)
+ident(
+  ext_ref Cil.visitCilBlock
+)
+"cilext/inline.ml" 357 14543 14571 "cilext/inline.ml" 357 14543 14572
+type(
+  Cil.stmt
+)
+ident(
+  def s "cilext/inline.ml" 358 14584 14600 "cilext/inline.ml" 366 14930 14956
+)
+"cilext/inline.ml" 358 14584 14600 "cilext/inline.ml" 358 14584 14609
+type(
+  (Cil.label -> unit) -> Cil.label list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cilext/inline.ml" 359 14612 14635 "cilext/inline.ml" 359 14612 14636
+type(
+  Cil.label
+)
+ident(
+  def l "cilext/inline.ml" 360 14641 14661 "cilext/inline.ml" 364 14869 14898
+)
+"cilext/inline.ml" 360 14641 14667 "cilext/inline.ml" 360 14641 14668
+type(
+  Cil.label
+)
+ident(
+  int_ref l "cilext/inline.ml" 359 14612 14635 "cilext/inline.ml" 359 14612 14636
+)
+"cilext/inline.ml" 361 14676 14704 "cilext/inline.ml" 361 14676 14706
+type(
+  string
+)
+ident(
+  def ln "cilext/inline.ml" 362 14719 14743 "cilext/inline.ml" 363 14794 14867
+)
+"cilext/inline.ml" 361 14676 14708 "cilext/inline.ml" 361 14676 14709
+type(
+  Cil.location
+)
+"cilext/inline.ml" 361 14676 14711 "cilext/inline.ml" 361 14676 14712
+type(
+  bool
+)
+"cilext/inline.ml" 361 14676 14698 "cilext/inline.ml" 361 14676 14713
+type(
+  Cil.label
+)
+"cilext/inline.ml" 362 14719 14743 "cilext/inline.ml" 362 14719 14749
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 362 14719 14751 "cilext/inline.ml" 362 14719 14770
+type(
+  alphaTable:(string, unit A.alphaTableData ref) H.t ->
+  undolist:unit A.undoAlphaElement list ref option ->
+  lookupname:string -> data:unit -> unit
+)
+ident(
+  ext_ref A.registerAlphaName
+)
+"cilext/inline.ml" 362 14719 14783 "cilext/inline.ml" 362 14719 14791
+type(
+  (string, unit A.alphaTableData ref) H.t
+)
+ident(
+  int_ref labTable "cilext/inline.ml" 353 14385 14391 "cilext/inline.ml" 353 14385 14399
+)
+"cilext/inline.ml" 363 14794 14838 "cilext/inline.ml" 363 14794 14842
+type(
+  unit A.undoAlphaElement list ref option
+)
+"cilext/inline.ml" 363 14794 14849 "cilext/inline.ml" 363 14794 14851
+type(
+  unit
+)
+"cilext/inline.ml" 363 14794 14864 "cilext/inline.ml" 363 14794 14866
+type(
+  string
+)
+ident(
+  int_ref ln "cilext/inline.ml" 361 14676 14704 "cilext/inline.ml" 361 14676 14706
+)
+"cilext/inline.ml" 362 14719 14750 "cilext/inline.ml" 363 14794 14867
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 362 14719 14743 "cilext/inline.ml" 363 14794 14867
+type(
+  unit
+)
+"cilext/inline.ml" 364 14869 14891 "cilext/inline.ml" 364 14869 14892
+type(
+  Cil.label
+)
+"cilext/inline.ml" 364 14869 14896 "cilext/inline.ml" 364 14869 14898
+type(
+  unit
+)
+"cilext/inline.ml" 360 14641 14661 "cilext/inline.ml" 364 14869 14898
+type(
+  unit
+)
+"cilext/inline.ml" 359 14612 14630 "cilext/inline.ml" 364 14869 14899
+type(
+  Cil.label -> unit
+)
+"cilext/inline.ml" 365 14901 14919 "cilext/inline.ml" 365 14901 14920
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 357 14543 14571 "cilext/inline.ml" 357 14543 14572
+)
+"cilext/inline.ml" 365 14901 14919 "cilext/inline.ml" 365 14901 14927
+type(
+  Cil.label list
+)
+"cilext/inline.ml" 358 14584 14600 "cilext/inline.ml" 365 14901 14927
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 366 14930 14946 "cilext/inline.ml" 366 14930 14956
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 358 14584 14600 "cilext/inline.ml" 366 14930 14956
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 355 14484 14496 "cilext/inline.ml" 368 14978 14994
+type(
+  Cil.cilVisitor
+)
+"cilext/inline.ml" 369 14996 15008 "cilext/inline.ml" 369 14996 15012
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 342 13624 13641 "cilext/inline.ml" 342 13624 13645
+)
+"cilext/inline.ml" 369 14996 15008 "cilext/inline.ml" 369 14996 15018
+type(
+  Cil.block
+)
+"cilext/inline.ml" 354 14458 14467 "cilext/inline.ml" 369 14996 15019
+call(
+  stack
+)
+type(
+  Cil.block
+)
+"cilext/inline.ml" 354 14458 14460 "cilext/inline.ml" 369 14996 15019
+type(
+  unit
+)
+"cilext/inline.ml" 371 15066 15072 "cilext/inline.ml" 371 15066 15081
+type(
+  string -> string
+)
+ident(
+  def replLabel "cilext/inline.ml" 377 15279 15281 "cilext/inline.ml" 386 15597 15601
+)
+"cilext/inline.ml" 371 15066 15083 "cilext/inline.ml" 371 15066 15085
+type(
+  string
+)
+ident(
+  def ln "cilext/inline.ml" 371 15066 15095 "cilext/inline.ml" 374 15214 15221
+)
+"cilext/inline.ml" 372 15108 15116 "cilext/inline.ml" 372 15108 15119
+type(
+  string
+)
+ident(
+  def ln' "cilext/inline.ml" 374 15214 15218 "cilext/inline.ml" 374 15214 15221
+)
+"cilext/inline.ml" 372 15108 15121 "cilext/inline.ml" 372 15108 15122
+type(
+  unit
+)
+"cilext/inline.ml" 372 15108 15116 "cilext/inline.ml" 372 15108 15122
+type(
+  string * unit
+)
+"cilext/inline.ml" 372 15108 15125 "cilext/inline.ml" 372 15108 15139
+type(
+  alphaTable:(string, unit A.alphaTableData ref) H.t ->
+  undolist:unit A.undoAlphaElement list ref option ->
+  lookupname:string -> data:unit -> string * unit
+)
+ident(
+  ext_ref A.newAlphaName
+)
+"cilext/inline.ml" 373 15142 15162 "cilext/inline.ml" 373 15142 15170
+type(
+  (string, unit A.alphaTableData ref) H.t
+)
+ident(
+  int_ref labTable "cilext/inline.ml" 353 14385 14391 "cilext/inline.ml" 353 14385 14399
+)
+"cilext/inline.ml" 373 15142 15181 "cilext/inline.ml" 373 15142 15185
+type(
+  unit A.undoAlphaElement list ref option
+)
+"cilext/inline.ml" 373 15142 15198 "cilext/inline.ml" 373 15142 15200
+type(
+  string
+)
+ident(
+  int_ref ln "cilext/inline.ml" 371 15066 15083 "cilext/inline.ml" 371 15066 15085
+)
+"cilext/inline.ml" 373 15142 15207 "cilext/inline.ml" 373 15142 15209
+type(
+  unit
+)
+"cilext/inline.ml" 372 15108 15125 "cilext/inline.ml" 373 15142 15209
+call(
+  stack
+)
+type(
+  string * unit
+)
+"cilext/inline.ml" 374 15214 15218 "cilext/inline.ml" 374 15214 15221
+type(
+  string
+)
+ident(
+  int_ref ln' "cilext/inline.ml" 372 15108 15116 "cilext/inline.ml" 372 15108 15119
+)
+"cilext/inline.ml" 372 15108 15112 "cilext/inline.ml" 374 15214 15221
+type(
+  string
+)
+type(
+  string
+)
+"cilext/inline.ml" 377 15279 15285 "cilext/inline.ml" 377 15279 15290
+type(
+  Cil.block
+)
+ident(
+  def body' "cilext/inline.ml" 385 15573 15575 "cilext/inline.ml" 386 15597 15601
+)
+"cilext/inline.ml" 378 15303 15307 "cilext/inline.ml" 378 15303 15320
+type(
+  Cil.cilVisitor -> Cil.block -> Cil.block
+)
+ident(
+  ext_ref Cil.visitCilBlock
+)
+"cilext/inline.ml" 380 15359 15379 "cilext/inline.ml" 380 15359 15380
+type(
+  Cil.stmt
+)
+ident(
+  def s "cilext/inline.ml" 381 15392 15400 "cilext/inline.ml" 383 15492 15546
+)
+"cilext/inline.ml" 381 15392 15422 "cilext/inline.ml" 381 15392 15423
+type(
+  Cil.stmt
+)
+ident(
+  int_ref s "cilext/inline.ml" 380 15359 15379 "cilext/inline.ml" 380 15359 15380
+)
+"cilext/inline.ml" 382 15427 15457 "cilext/inline.ml" 382 15427 15473
+type(
+  Cil.fundec ->
+  (Cil.varinfo -> Cil.fundec option) ->
+  (string -> string) -> bool ref -> Cil.stmt -> Cil.stmt
+)
+ident(
+  int_ref replaceStatement "cilext/inline.ml" 201 7473 7477 "cilext/inline.ml" 201 7473 7493
+)
+"cilext/inline.ml" 382 15427 15474 "cilext/inline.ml" 382 15427 15478
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 342 13624 13641 "cilext/inline.ml" 342 13624 13645
+)
+"cilext/inline.ml" 382 15427 15479 "cilext/inline.ml" 382 15427 15489
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  int_ref inlineWhat "cilext/inline.ml" 343 13696 13713 "cilext/inline.ml" 343 13696 13723
+)
+"cilext/inline.ml" 383 15492 15524 "cilext/inline.ml" 383 15492 15533
+type(
+  string -> string
+)
+ident(
+  int_ref replLabel "cilext/inline.ml" 371 15066 15072 "cilext/inline.ml" 371 15066 15081
+)
+"cilext/inline.ml" 383 15492 15534 "cilext/inline.ml" 383 15492 15545
+type(
+  bool ref
+)
+ident(
+  int_ref anyInlining "cilext/inline.ml" 348 14061 14078 "cilext/inline.ml" 348 14061 14089
+)
+"cilext/inline.ml" 382 15427 15457 "cilext/inline.ml" 383 15492 15545
+call(
+  stack
+)
+type(
+  Cil.stmt -> Cil.stmt
+)
+"cilext/inline.ml" 381 15392 15400 "cilext/inline.ml" 383 15492 15546
+type(
+  Cil.stmt Cil.visitAction
+)
+"cilext/inline.ml" 378 15303 15321 "cilext/inline.ml" 384 15548 15556
+type(
+  Cil.cilVisitor
+)
+"cilext/inline.ml" 384 15548 15557 "cilext/inline.ml" 384 15548 15561
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 342 13624 13641 "cilext/inline.ml" 342 13624 13645
+)
+"cilext/inline.ml" 384 15548 15557 "cilext/inline.ml" 384 15548 15567
+type(
+  Cil.block
+)
+"cilext/inline.ml" 378 15303 15307 "cilext/inline.ml" 384 15548 15567
+call(
+  stack
+)
+type(
+  Cil.block
+)
+type(
+  Cil.block
+)
+"cilext/inline.ml" 385 15573 15575 "cilext/inline.ml" 385 15573 15579
+type(
+  Cil.fundec
+)
+ident(
+  int_ref host "cilext/inline.ml" 342 13624 13641 "cilext/inline.ml" 342 13624 13645
+)
+"cilext/inline.ml" 385 15573 15589 "cilext/inline.ml" 385 15573 15594
+type(
+  Cil.block
+)
+ident(
+  int_ref body' "cilext/inline.ml" 377 15279 15285 "cilext/inline.ml" 377 15279 15290
+)
+"cilext/inline.ml" 385 15573 15575 "cilext/inline.ml" 385 15573 15594
+type(
+  unit
+)
+"cilext/inline.ml" 386 15597 15599 "cilext/inline.ml" 386 15597 15601
+type(
+  unit
+)
+"cilext/inline.ml" 385 15573 15575 "cilext/inline.ml" 386 15597 15601
+type(
+  unit
+)
+"cilext/inline.ml" 377 15279 15281 "cilext/inline.ml" 386 15597 15601
+type(
+  unit
+)
+"cilext/inline.ml" 371 15066 15068 "cilext/inline.ml" 386 15597 15601
+type(
+  unit
+)
+"cilext/inline.ml" 354 14458 14460 "cilext/inline.ml" 386 15597 15601
+type(
+  unit
+)
+"cilext/inline.ml" 353 14385 14387 "cilext/inline.ml" 386 15597 15601
+type(
+  unit
+)
+type(
+  unit
+)
+"cilext/inline.ml" 390 15646 15650 "cilext/inline.ml" 390 15646 15656
+type(
+  (Cil.varinfo -> Cil.fundec option) -> Cil.file -> unit
+)
+ident(
+  def doFile "cilext/inline.ml" 408 16277 16277 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 390 15646 15658 "cilext/inline.ml" 390 15646 15668
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  def inlineWhat "cilext/inline.ml" 392 15804 15815 "cilext/inline.ml" 404 16221 16235
+)
+"cilext/inline.ml" 392 15804 15816 "cilext/inline.ml" 392 15804 15818
+type(
+  Cil.file
+)
+ident(
+  def fl "cilext/inline.ml" 393 15830 15832 "cilext/inline.ml" 404 16221 16235
+)
+"cilext/inline.ml" 393 15830 15832 "cilext/inline.ml" 393 15830 15843
+type(
+  Cil.file -> (Cil.global -> unit) -> unit
+)
+ident(
+  ext_ref Cil.iterGlobals
+)
+"cilext/inline.ml" 393 15830 15844 "cilext/inline.ml" 393 15830 15846
+type(
+  Cil.file
+)
+ident(
+  int_ref fl "cilext/inline.ml" 392 15804 15816 "cilext/inline.ml" 392 15804 15818
+)
+"cilext/inline.ml" 393 15830 15852 "cilext/inline.ml" 393 15830 15853
+type(
+  Cil.global
+)
+ident(
+  def g "cilext/inline.ml" 394 15859 15863 "cilext/inline.ml" 404 16221 16234
+)
+"cilext/inline.ml" 394 15859 15869 "cilext/inline.ml" 394 15859 15870
+type(
+  Cil.global
+)
+ident(
+  int_ref g "cilext/inline.ml" 393 15830 15852 "cilext/inline.ml" 393 15830 15853
+)
+"cilext/inline.ml" 395 15878 15889 "cilext/inline.ml" 395 15878 15891
+type(
+  Cil.fundec
+)
+ident(
+  def fd "cilext/inline.ml" 398 16054 16062 "cilext/inline.ml" 402 16205 16217
+)
+"cilext/inline.ml" 395 15878 15893 "cilext/inline.ml" 395 15878 15894
+type(
+  Cil.location
+)
+ident(
+  def l "cilext/inline.ml" 398 16054 16062 "cilext/inline.ml" 402 16205 16217
+)
+"cilext/inline.ml" 395 15878 15884 "cilext/inline.ml" 395 15878 15895
+type(
+  Cil.global
+)
+"cilext/inline.ml" 398 16054 16066 "cilext/inline.ml" 398 16054 16077
+type(
+  bool ref
+)
+ident(
+  def anyInlining "cilext/inline.ml" 399 16093 16101 "cilext/inline.ml" 402 16205 16217
+)
+"cilext/inline.ml" 398 16054 16080 "cilext/inline.ml" 398 16054 16083
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 398 16054 16084 "cilext/inline.ml" 398 16054 16088
+type(
+  bool
+)
+"cilext/inline.ml" 398 16054 16080 "cilext/inline.ml" 398 16054 16088
+type(
+  bool ref
+)
+"cilext/inline.ml" 399 16093 16107 "cilext/inline.ml" 399 16093 16108
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 399 16093 16108 "cilext/inline.ml" 399 16093 16119
+type(
+  bool ref
+)
+ident(
+  int_ref anyInlining "cilext/inline.ml" 398 16054 16066 "cilext/inline.ml" 398 16054 16077
+)
+"cilext/inline.ml" 399 16093 16107 "cilext/inline.ml" 399 16093 16119
+type(
+  bool
+)
+"cilext/inline.ml" 400 16124 16134 "cilext/inline.ml" 400 16124 16145
+type(
+  bool ref
+)
+ident(
+  int_ref anyInlining "cilext/inline.ml" 398 16054 16066 "cilext/inline.ml" 398 16054 16077
+)
+"cilext/inline.ml" 400 16124 16146 "cilext/inline.ml" 400 16124 16148
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 400 16124 16149 "cilext/inline.ml" 400 16124 16154
+type(
+  bool
+)
+"cilext/inline.ml" 400 16124 16134 "cilext/inline.ml" 400 16124 16154
+type(
+  unit
+)
+"cilext/inline.ml" 401 16157 16167 "cilext/inline.ml" 401 16157 16177
+type(
+  Cil.fundec -> (Cil.varinfo -> Cil.fundec option) -> bool ref -> unit
+)
+ident(
+  int_ref doFunction "cilext/inline.ml" 342 13624 13628 "cilext/inline.ml" 342 13624 13638
+)
+"cilext/inline.ml" 401 16157 16178 "cilext/inline.ml" 401 16157 16180
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "cilext/inline.ml" 395 15878 15889 "cilext/inline.ml" 395 15878 15891
+)
+"cilext/inline.ml" 401 16157 16181 "cilext/inline.ml" 401 16157 16191
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  int_ref inlineWhat "cilext/inline.ml" 390 15646 15658 "cilext/inline.ml" 390 15646 15668
+)
+"cilext/inline.ml" 401 16157 16192 "cilext/inline.ml" 401 16157 16203
+type(
+  bool ref
+)
+ident(
+  int_ref anyInlining "cilext/inline.ml" 398 16054 16066 "cilext/inline.ml" 398 16054 16077
+)
+"cilext/inline.ml" 401 16157 16167 "cilext/inline.ml" 401 16157 16203
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 400 16124 16134 "cilext/inline.ml" 401 16157 16203
+type(
+  unit
+)
+"cilext/inline.ml" 399 16093 16101 "cilext/inline.ml" 402 16205 16217
+type(
+  unit
+)
+"cilext/inline.ml" 398 16054 16062 "cilext/inline.ml" 402 16205 16217
+type(
+  unit
+)
+"cilext/inline.ml" 404 16221 16227 "cilext/inline.ml" 404 16221 16228
+type(
+  Cil.global
+)
+"cilext/inline.ml" 404 16221 16232 "cilext/inline.ml" 404 16221 16234
+type(
+  unit
+)
+"cilext/inline.ml" 394 15859 15863 "cilext/inline.ml" 404 16221 16234
+type(
+  unit
+)
+"cilext/inline.ml" 393 15830 15847 "cilext/inline.ml" 404 16221 16235
+type(
+  Cil.global -> unit
+)
+"cilext/inline.ml" 393 15830 15832 "cilext/inline.ml" 404 16221 16235
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 408 16277 16281 "cilext/inline.ml" 408 16277 16289
+type(
+  string list ref
+)
+ident(
+  def toinline "cilext/inline.ml" 409 16317 16317 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 408 16277 16309 "cilext/inline.ml" 408 16277 16312
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"cilext/inline.ml" 408 16277 16313 "cilext/inline.ml" 408 16277 16315
+type(
+  string list
+)
+"cilext/inline.ml" 408 16277 16309 "cilext/inline.ml" 408 16277 16315
+type(
+  string list ref
+)
+type(
+  string list ref
+)
+"cilext/inline.ml" 409 16317 16321 "cilext/inline.ml" 409 16317 16325
+type(
+  Cil.file -> unit
+)
+ident(
+  def doit "cilext/inline.ml" 431 17063 17063 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 409 16317 16327 "cilext/inline.ml" 409 16317 16329
+type(
+  Cil.file
+)
+ident(
+  def fl "cilext/inline.ml" 411 16411 16413 "cilext/inline.ml" 429 17037 17059
+)
+"cilext/inline.ml" 411 16411 16417 "cilext/inline.ml" 411 16411 16428
+type(
+  (string, Cil.fundec) H.t
+)
+ident(
+  def inlineTable "cilext/inline.ml" 412 16469 16471 "cilext/inline.ml" 429 17037 17059
+)
+"cilext/inline.ml" 411 16411 16453 "cilext/inline.ml" 411 16411 16461
+type(
+  ?random:bool -> int -> (string, Cil.fundec) H.t
+)
+ident(
+  ext_ref H.create
+)
+"cilext/inline.ml" 411 16411 16462 "cilext/inline.ml" 411 16411 16463
+type(
+  int
+)
+"cilext/inline.ml" 411 16411 16453 "cilext/inline.ml" 411 16411 16463
+call(
+  stack
+)
+type(
+  (string, Cil.fundec) H.t
+)
+type(
+  (string, Cil.fundec) H.t
+)
+"cilext/inline.ml" 412 16469 16471 "cilext/inline.ml" 412 16469 16483
+type(
+  Cil.cilVisitor -> Cil.file -> unit
+)
+ident(
+  ext_ref Cil.visitCilFile
+)
+"cilext/inline.ml" 414 16520 16538 "cilext/inline.ml" 414 16520 16540
+type(
+  Cil.fundec
+)
+ident(
+  def fd "cilext/inline.ml" 415 16553 16559 "cilext/inline.ml" 417 16647 16665
+)
+"cilext/inline.ml" 415 16553 16562 "cilext/inline.ml" 415 16553 16570
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"cilext/inline.ml" 415 16553 16571 "cilext/inline.ml" 415 16553 16573
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "cilext/inline.ml" 414 16520 16538 "cilext/inline.ml" 414 16520 16540
+)
+"cilext/inline.ml" 415 16553 16571 "cilext/inline.ml" 415 16553 16578
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 415 16553 16571 "cilext/inline.ml" 415 16553 16584
+type(
+  string
+)
+"cilext/inline.ml" 415 16553 16585 "cilext/inline.ml" 415 16553 16586
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 415 16553 16586 "cilext/inline.ml" 415 16553 16594
+type(
+  string list ref
+)
+ident(
+  int_ref toinline "cilext/inline.ml" 408 16277 16281 "cilext/inline.ml" 408 16277 16289
+)
+"cilext/inline.ml" 415 16553 16585 "cilext/inline.ml" 415 16553 16594
+type(
+  string list
+)
+"cilext/inline.ml" 415 16553 16562 "cilext/inline.ml" 415 16553 16594
+call(
+  stack
+)
+type(
+  bool
+)
+"cilext/inline.ml" 416 16602 16610 "cilext/inline.ml" 416 16602 16615
+type(
+  (string, Cil.fundec) H.t -> string -> Cil.fundec -> unit
+)
+ident(
+  ext_ref H.add
+)
+"cilext/inline.ml" 416 16602 16616 "cilext/inline.ml" 416 16602 16627
+type(
+  (string, Cil.fundec) H.t
+)
+ident(
+  int_ref inlineTable "cilext/inline.ml" 411 16411 16417 "cilext/inline.ml" 411 16411 16428
+)
+"cilext/inline.ml" 416 16602 16628 "cilext/inline.ml" 416 16602 16630
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "cilext/inline.ml" 414 16520 16538 "cilext/inline.ml" 414 16520 16540
+)
+"cilext/inline.ml" 416 16602 16628 "cilext/inline.ml" 416 16602 16635
+type(
+  Cil.varinfo
+)
+"cilext/inline.ml" 416 16602 16628 "cilext/inline.ml" 416 16602 16641
+type(
+  string
+)
+"cilext/inline.ml" 416 16602 16642 "cilext/inline.ml" 416 16602 16644
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "cilext/inline.ml" 414 16520 16538 "cilext/inline.ml" 414 16520 16540
+)
+"cilext/inline.ml" 416 16602 16610 "cilext/inline.ml" 416 16602 16644
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 415 16553 16559 "cilext/inline.ml" 416 16602 16644
+type(
+  unit
+)
+"cilext/inline.ml" 417 16647 16653 "cilext/inline.ml" 417 16647 16665
+type(
+  Cil.fundec Cil.visitAction
+)
+"cilext/inline.ml" 415 16553 16559 "cilext/inline.ml" 417 16647 16665
+type(
+  Cil.fundec Cil.visitAction
+)
+"cilext/inline.ml" 412 16469 16484 "cilext/inline.ml" 418 16667 16673
+type(
+  Cil.cilVisitor
+)
+"cilext/inline.ml" 418 16667 16674 "cilext/inline.ml" 418 16667 16676
+type(
+  Cil.file
+)
+ident(
+  int_ref fl "cilext/inline.ml" 409 16317 16327 "cilext/inline.ml" 409 16317 16329
+)
+"cilext/inline.ml" 412 16469 16471 "cilext/inline.ml" 418 16667 16676
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 419 16679 16685 "cilext/inline.ml" 419 16679 16695
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  def inlineWhat "cilext/inline.ml" 424 16862 16864 "cilext/inline.ml" 429 17037 17059
+)
+"cilext/inline.ml" 419 16679 16697 "cilext/inline.ml" 419 16679 16699
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "cilext/inline.ml" 419 16679 16710 "cilext/inline.ml" 421 16774 16800
+)
+"cilext/inline.ml" 420 16730 16744 "cilext/inline.ml" 420 16730 16750
+type(
+  (string, Cil.fundec) H.t -> string -> Cil.fundec
+)
+ident(
+  ext_ref H.find
+)
+"cilext/inline.ml" 420 16730 16751 "cilext/inline.ml" 420 16730 16762
+type(
+  (string, Cil.fundec) H.t
+)
+ident(
+  int_ref inlineTable "cilext/inline.ml" 411 16411 16417 "cilext/inline.ml" 411 16411 16428
+)
+"cilext/inline.ml" 420 16730 16763 "cilext/inline.ml" 420 16730 16765
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "cilext/inline.ml" 419 16679 16697 "cilext/inline.ml" 419 16679 16699
+)
+"cilext/inline.ml" 420 16730 16763 "cilext/inline.ml" 420 16730 16771
+type(
+  string
+)
+"cilext/inline.ml" 420 16730 16743 "cilext/inline.ml" 420 16730 16772
+call(
+  stack
+)
+type(
+  Cil.fundec
+)
+"cilext/inline.ml" 420 16730 16738 "cilext/inline.ml" 420 16730 16772
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 421 16774 16783 "cilext/inline.ml" 421 16774 16792
+type(
+  exn
+)
+"cilext/inline.ml" 421 16774 16796 "cilext/inline.ml" 421 16774 16800
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 420 16730 16734 "cilext/inline.ml" 421 16774 16800
+type(
+  Cil.fundec option
+)
+type(
+  Cil.fundec option
+)
+"cilext/inline.ml" 424 16862 16864 "cilext/inline.ml" 424 16862 16873
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cilext/inline.ml" 424 16862 16879 "cilext/inline.ml" 424 16862 16881
+type(
+  string
+)
+ident(
+  def fn "cilext/inline.ml" 425 16887 16891 "cilext/inline.ml" 426 16928 17016
+)
+"cilext/inline.ml" 425 16887 16894 "cilext/inline.ml" 425 16887 16897
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"cilext/inline.ml" 425 16887 16899 "cilext/inline.ml" 425 16887 16904
+type(
+  (string, Cil.fundec) H.t -> string -> bool
+)
+ident(
+  ext_ref H.mem
+)
+"cilext/inline.ml" 425 16887 16905 "cilext/inline.ml" 425 16887 16916
+type(
+  (string, Cil.fundec) H.t
+)
+ident(
+  int_ref inlineTable "cilext/inline.ml" 411 16411 16417 "cilext/inline.ml" 411 16411 16428
+)
+"cilext/inline.ml" 425 16887 16917 "cilext/inline.ml" 425 16887 16919
+type(
+  string
+)
+ident(
+  int_ref fn "cilext/inline.ml" 424 16862 16879 "cilext/inline.ml" 424 16862 16881
+)
+"cilext/inline.ml" 425 16887 16898 "cilext/inline.ml" 425 16887 16920
+call(
+  stack
+)
+type(
+  bool
+)
+"cilext/inline.ml" 425 16887 16894 "cilext/inline.ml" 425 16887 16920
+type(
+  bool
+)
+"cilext/inline.ml" 426 16928 16934 "cilext/inline.ml" 426 16928 16940
+type(
+  Pretty.doc -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"cilext/inline.ml" 426 16928 16942 "cilext/inline.ml" 426 16928 16946
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format -> string -> Pretty.doc
+)
+ident(
+  ext_ref Cil.warn
+)
+"cilext/inline.ml" 426 16928 16947 "cilext/inline.ml" 426 16928 17012
+type(
+  (string -> Pretty.doc, unit, Pretty.doc) format
+)
+"cilext/inline.ml" 426 16928 17013 "cilext/inline.ml" 426 16928 17015
+type(
+  string
+)
+ident(
+  int_ref fn "cilext/inline.ml" 424 16862 16879 "cilext/inline.ml" 424 16862 16881
+)
+"cilext/inline.ml" 426 16928 16941 "cilext/inline.ml" 426 16928 17016
+call(
+  stack
+)
+type(
+  Pretty.doc
+)
+"cilext/inline.ml" 426 16928 16934 "cilext/inline.ml" 426 16928 17016
+type(
+  unit
+)
+"cilext/inline.ml" 425 16887 16891 "cilext/inline.ml" 426 16928 17016
+type(
+  unit
+)
+"cilext/inline.ml" 424 16862 16874 "cilext/inline.ml" 426 16928 17017
+type(
+  string -> unit
+)
+"cilext/inline.ml" 427 17019 17023 "cilext/inline.ml" 427 17019 17024
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 427 17019 17024 "cilext/inline.ml" 427 17019 17032
+type(
+  string list ref
+)
+ident(
+  int_ref toinline "cilext/inline.ml" 408 16277 16281 "cilext/inline.ml" 408 16277 16289
+)
+"cilext/inline.ml" 427 17019 17023 "cilext/inline.ml" 427 17019 17032
+type(
+  string list
+)
+"cilext/inline.ml" 424 16862 16864 "cilext/inline.ml" 427 17019 17032
+call(
+  stack
+)
+type(
+  unit
+)
+"cilext/inline.ml" 429 17037 17039 "cilext/inline.ml" 429 17037 17045
+type(
+  (Cil.varinfo -> Cil.fundec option) -> Cil.file -> unit
+)
+ident(
+  int_ref doFile "cilext/inline.ml" 390 15646 15650 "cilext/inline.ml" 390 15646 15656
+)
+"cilext/inline.ml" 429 17037 17046 "cilext/inline.ml" 429 17037 17056
+type(
+  Cil.varinfo -> Cil.fundec option
+)
+ident(
+  int_ref inlineWhat "cilext/inline.ml" 419 16679 16685 "cilext/inline.ml" 419 16679 16695
+)
+"cilext/inline.ml" 429 17037 17057 "cilext/inline.ml" 429 17037 17059
+type(
+  Cil.file
+)
+ident(
+  int_ref fl "cilext/inline.ml" 409 16317 16327 "cilext/inline.ml" 409 16317 16329
+)
+"cilext/inline.ml" 429 17037 17039 "cilext/inline.ml" 429 17037 17059
+call(
+  tail
+)
+type(
+  unit
+)
+"cilext/inline.ml" 424 16862 16864 "cilext/inline.ml" 429 17037 17059
+type(
+  unit
+)
+"cilext/inline.ml" 419 16679 16681 "cilext/inline.ml" 429 17037 17059
+type(
+  unit
+)
+"cilext/inline.ml" 412 16469 16471 "cilext/inline.ml" 429 17037 17059
+type(
+  unit
+)
+"cilext/inline.ml" 411 16411 16413 "cilext/inline.ml" 429 17037 17059
+type(
+  unit
+)
+"cilext/inline.ml" 431 17063 17067 "cilext/inline.ml" 431 17063 17074
+type(
+  Cil.featureDescr
+)
+ident(
+  def feature "cilext/inline.ml" 442 17444 17447 "cilext/inline.ml" 1 0 -1
+)
+"cilext/inline.ml" 432 17094 17108 "cilext/inline.ml" 432 17094 17117
+type(
+  string
+)
+"cilext/inline.ml" 433 17120 17137 "cilext/inline.ml" 433 17120 17145
+type(
+  bool ref
+)
+ident(
+  int_ref doInline "cilext/inline.ml" 57 2168 2172 "cilext/inline.ml" 57 2168 2180
+)
+"cilext/inline.ml" 434 17148 17169 "cilext/inline.ml" 434 17148 17192
+type(
+  string
+)
+"cilext/inline.ml" 436 17216 17220 "cilext/inline.ml" 436 17216 17230
+type(
+  string
+)
+"cilext/inline.ml" 436 17216 17248 "cilext/inline.ml" 436 17216 17249
+type(
+  string
+)
+ident(
+  def s "cilext/inline.ml" 436 17216 17253 "cilext/inline.ml" 437 17272 17335
+)
+"cilext/inline.ml" 436 17216 17253 "cilext/inline.ml" 436 17216 17261
+type(
+  bool ref
+)
+ident(
+  int_ref doInline "cilext/inline.ml" 57 2168 2172 "cilext/inline.ml" 57 2168 2180
+)
+"cilext/inline.ml" 436 17216 17262 "cilext/inline.ml" 436 17216 17264
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 436 17216 17265 "cilext/inline.ml" 436 17216 17269
+type(
+  bool
+)
+"cilext/inline.ml" 436 17216 17253 "cilext/inline.ml" 436 17216 17269
+type(
+  unit
+)
+"cilext/inline.ml" 437 17272 17309 "cilext/inline.ml" 437 17272 17317
+type(
+  string list ref
+)
+ident(
+  int_ref toinline "cilext/inline.ml" 408 16277 16281 "cilext/inline.ml" 408 16277 16289
+)
+"cilext/inline.ml" 437 17272 17318 "cilext/inline.ml" 437 17272 17320
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"cilext/inline.ml" 437 17272 17321 "cilext/inline.ml" 437 17272 17322
+type(
+  string
+)
+ident(
+  int_ref s "cilext/inline.ml" 436 17216 17248 "cilext/inline.ml" 436 17216 17249
+)
+"cilext/inline.ml" 437 17272 17326 "cilext/inline.ml" 437 17272 17327
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"cilext/inline.ml" 437 17272 17327 "cilext/inline.ml" 437 17272 17335
+type(
+  string list ref
+)
+ident(
+  int_ref toinline "cilext/inline.ml" 408 16277 16281 "cilext/inline.ml" 408 16277 16289
+)
+"cilext/inline.ml" 437 17272 17326 "cilext/inline.ml" 437 17272 17335
+type(
+  string list
+)
+"cilext/inline.ml" 437 17272 17321 "cilext/inline.ml" 437 17272 17335
+type(
+  string list
+)
+"cilext/inline.ml" 437 17272 17309 "cilext/inline.ml" 437 17272 17335
+type(
+  unit
+)
+"cilext/inline.ml" 436 17216 17253 "cilext/inline.ml" 437 17272 17335
+type(
+  unit
+)
+"cilext/inline.ml" 436 17216 17243 "cilext/inline.ml" 437 17272 17336
+type(
+  string -> unit
+)
+"cilext/inline.ml" 436 17216 17232 "cilext/inline.ml" 437 17272 17336
+type(
+  Arg.spec
+)
+"cilext/inline.ml" 438 17340 17356 "cilext/inline.ml" 438 17340 17385
+type(
+  string
+)
+"cilext/inline.ml" 436 17216 17220 "cilext/inline.ml" 438 17340 17385
+type(
+  string * Arg.spec * string
+)
+"cilext/inline.ml" 435 17195 17213 "cilext/inline.ml" 439 17388 17393
+type(
+  (string * Arg.spec * string) list
+)
+"cilext/inline.ml" 440 17396 17410 "cilext/inline.ml" 440 17396 17414
+type(
+  Cil.file -> unit
+)
+ident(
+  int_ref doit "cilext/inline.ml" 409 16317 16321 "cilext/inline.ml" 409 16317 16325
+)
+"cilext/inline.ml" 441 17417 17437 "cilext/inline.ml" 441 17417 17441
+type(
+  bool
+)
+"cilext/inline.ml" 432 17094 17096 "cilext/inline.ml" 442 17444 17447
+type(
+  Cil.featureDescr
+)
+type(
+  Cil.featureDescr
+)

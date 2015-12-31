@@ -1,0 +1,1702 @@
+"lib/options.ml" 3 10 14 "lib/options.ml" 3 10 28
+type(
+  bool ref
+)
+ident(
+  def opt_auto_learn "lib/options.ml" 4 41 41 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 3 10 31 "lib/options.ml" 3 10 34
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 3 10 35 "lib/options.ml" 3 10 40
+type(
+  bool
+)
+"lib/options.ml" 3 10 31 "lib/options.ml" 3 10 40
+type(
+  bool ref
+)
+"lib/options.ml" 4 41 45 "lib/options.ml" 4 41 59
+type(
+  bool ref
+)
+ident(
+  def opt_auto_apply "lib/options.ml" 6 73 73 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 4 41 62 "lib/options.ml" 4 41 65
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 4 41 66 "lib/options.ml" 4 41 71
+type(
+  bool
+)
+"lib/options.ml" 4 41 62 "lib/options.ml" 4 41 71
+type(
+  bool ref
+)
+"lib/options.ml" 6 73 77 "lib/options.ml" 6 73 83
+type(
+  bool ref
+)
+ident(
+  def opt_il "lib/options.ml" 7 96 96 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 6 73 86 "lib/options.ml" 6 73 89
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 6 73 90 "lib/options.ml" 6 73 95
+type(
+  bool
+)
+"lib/options.ml" 6 73 86 "lib/options.ml" 6 73 95
+type(
+  bool ref
+)
+"lib/options.ml" 7 96 100 "lib/options.ml" 7 96 107
+type(
+  bool ref
+)
+ident(
+  def opt_dug "lib/options.ml" 8 120 120 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 7 96 110 "lib/options.ml" 7 96 113
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 7 96 114 "lib/options.ml" 7 96 119
+type(
+  bool
+)
+"lib/options.ml" 7 96 110 "lib/options.ml" 7 96 119
+type(
+  bool ref
+)
+"lib/options.ml" 8 120 124 "lib/options.ml" 8 120 135
+type(
+  bool ref
+)
+ident(
+  def opt_noalarm "lib/options.ml" 9 148 148 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 8 120 138 "lib/options.ml" 8 120 141
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 8 120 142 "lib/options.ml" 8 120 147
+type(
+  bool
+)
+"lib/options.ml" 8 120 138 "lib/options.ml" 8 120 147
+type(
+  bool ref
+)
+"lib/options.ml" 9 148 152 "lib/options.ml" 9 148 162
+type(
+  string list ref
+)
+ident(
+  def opt_inline "lib/options.ml" 10 172 172 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 9 148 165 "lib/options.ml" 9 148 168
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 9 148 169 "lib/options.ml" 9 148 171
+type(
+  string list
+)
+"lib/options.ml" 9 148 165 "lib/options.ml" 9 148 171
+type(
+  string list ref
+)
+"lib/options.ml" 10 172 176 "lib/options.ml" 10 172 186
+type(
+  bool ref
+)
+ident(
+  def opt_narrow "lib/options.ml" 11 199 199 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 10 172 189 "lib/options.ml" 10 172 192
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 10 172 193 "lib/options.ml" 10 172 198
+type(
+  bool
+)
+"lib/options.ml" 10 172 189 "lib/options.ml" 10 172 198
+type(
+  bool ref
+)
+"lib/options.ml" 11 199 203 "lib/options.ml" 11 199 214
+type(
+  bool ref
+)
+ident(
+  def opt_profile "lib/options.ml" 12 227 227 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 11 199 217 "lib/options.ml" 11 199 220
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 11 199 221 "lib/options.ml" 11 199 226
+type(
+  bool
+)
+"lib/options.ml" 11 199 217 "lib/options.ml" 11 199 226
+type(
+  bool ref
+)
+"lib/options.ml" 12 227 231 "lib/options.ml" 12 227 240
+type(
+  bool ref
+)
+ident(
+  def opt_nobar "lib/options.ml" 13 253 253 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 12 227 243 "lib/options.ml" 12 227 246
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 12 227 247 "lib/options.ml" 12 227 252
+type(
+  bool
+)
+"lib/options.ml" 12 227 243 "lib/options.ml" 12 227 252
+type(
+  bool ref
+)
+"lib/options.ml" 13 253 257 "lib/options.ml" 13 253 266
+type(
+  bool ref
+)
+ident(
+  def opt_optil "lib/options.ml" 14 279 279 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 13 253 269 "lib/options.ml" 13 253 272
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 13 253 273 "lib/options.ml" 13 253 278
+type(
+  bool
+)
+"lib/options.ml" 13 253 269 "lib/options.ml" 13 253 278
+type(
+  bool ref
+)
+"lib/options.ml" 14 279 283 "lib/options.ml" 14 279 295
+type(
+  string ref
+)
+ident(
+  def opt_cfgs_dir "lib/options.ml" 15 305 305 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 14 279 298 "lib/options.ml" 14 279 301
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 14 279 302 "lib/options.ml" 14 279 304
+type(
+  string
+)
+"lib/options.ml" 14 279 298 "lib/options.ml" 14 279 304
+type(
+  string ref
+)
+"lib/options.ml" 15 305 309 "lib/options.ml" 15 305 320
+type(
+  string ref
+)
+ident(
+  def opt_weights "lib/options.ml" 16 330 330 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 15 305 323 "lib/options.ml" 15 305 326
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 15 305 327 "lib/options.ml" 15 305 329
+type(
+  string
+)
+"lib/options.ml" 15 305 323 "lib/options.ml" 15 305 329
+type(
+  string ref
+)
+"lib/options.ml" 16 330 334 "lib/options.ml" 16 330 354
+type(
+  string ref
+)
+ident(
+  def opt_widen_thresholds "lib/options.ml" 17 364 364 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 16 330 357 "lib/options.ml" 16 330 360
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 16 330 361 "lib/options.ml" 16 330 363
+type(
+  string
+)
+"lib/options.ml" 16 330 357 "lib/options.ml" 16 330 363
+type(
+  string ref
+)
+"lib/options.ml" 17 364 368 "lib/options.ml" 17 364 387
+type(
+  bool ref
+)
+ident(
+  def opt_auto_thresholds "lib/options.ml" 18 400 400 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 17 364 390 "lib/options.ml" 17 364 393
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 17 364 394 "lib/options.ml" 17 364 399
+type(
+  bool
+)
+"lib/options.ml" 17 364 390 "lib/options.ml" 17 364 399
+type(
+  bool ref
+)
+"lib/options.ml" 18 400 404 "lib/options.ml" 18 400 412
+type(
+  bool ref
+)
+ident(
+  def opt_cfgs "lib/options.ml" 19 425 425 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 18 400 415 "lib/options.ml" 18 400 418
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 18 400 419 "lib/options.ml" 18 400 424
+type(
+  bool
+)
+"lib/options.ml" 18 400 415 "lib/options.ml" 18 400 424
+type(
+  bool ref
+)
+"lib/options.ml" 19 425 429 "lib/options.ml" 19 425 436
+type(
+  int ref
+)
+ident(
+  def opt_pfs "lib/options.ml" 20 447 447 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 19 425 439 "lib/options.ml" 19 425 442
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 19 425 443 "lib/options.ml" 19 425 446
+type(
+  int
+)
+"lib/options.ml" 19 425 439 "lib/options.ml" 19 425 446
+type(
+  int ref
+)
+"lib/options.ml" 20 447 451 "lib/options.ml" 20 447 465
+type(
+  string ref
+)
+ident(
+  def opt_alarm_type "lib/options.ml" 21 477 477 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 20 447 468 "lib/options.ml" 20 447 471
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 20 447 472 "lib/options.ml" 20 447 476
+type(
+  string
+)
+"lib/options.ml" 20 447 468 "lib/options.ml" 20 447 476
+type(
+  string ref
+)
+"lib/options.ml" 21 477 481 "lib/options.ml" 21 477 493
+type(
+  bool ref
+)
+ident(
+  def opt_deadcode "lib/options.ml" 22 506 506 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 21 477 496 "lib/options.ml" 21 477 499
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 21 477 500 "lib/options.ml" 21 477 505
+type(
+  bool
+)
+"lib/options.ml" 21 477 496 "lib/options.ml" 21 477 505
+type(
+  bool ref
+)
+"lib/options.ml" 22 506 510 "lib/options.ml" 22 506 519
+type(
+  bool ref
+)
+ident(
+  def opt_debug "lib/options.ml" 23 532 532 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 22 506 522 "lib/options.ml" 22 506 525
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 22 506 526 "lib/options.ml" 22 506 531
+type(
+  bool
+)
+"lib/options.ml" 22 506 522 "lib/options.ml" 22 506 531
+type(
+  bool ref
+)
+"lib/options.ml" 23 532 536 "lib/options.ml" 23 532 542
+type(
+  bool ref
+)
+ident(
+  def opt_pf "lib/options.ml" 24 555 555 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 23 532 545 "lib/options.ml" 23 532 548
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 23 532 549 "lib/options.ml" 23 532 554
+type(
+  bool
+)
+"lib/options.ml" 23 532 545 "lib/options.ml" 23 532 554
+type(
+  bool ref
+)
+"lib/options.ml" 24 555 559 "lib/options.ml" 24 555 567
+type(
+  bool ref
+)
+ident(
+  def opt_diff "lib/options.ml" 25 580 580 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 24 555 570 "lib/options.ml" 24 555 573
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 24 555 574 "lib/options.ml" 24 555 579
+type(
+  bool
+)
+"lib/options.ml" 24 555 570 "lib/options.ml" 24 555 579
+type(
+  bool ref
+)
+"lib/options.ml" 25 580 584 "lib/options.ml" 25 580 596
+type(
+  int ref
+)
+ident(
+  def opt_dec_prec "lib/options.ml" 26 605 605 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 25 580 599 "lib/options.ml" 25 580 602
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 25 580 603 "lib/options.ml" 25 580 604
+type(
+  int
+)
+"lib/options.ml" 25 580 599 "lib/options.ml" 25 580 604
+type(
+  int ref
+)
+"lib/options.ml" 26 605 609 "lib/options.ml" 26 605 627
+type(
+  bool ref
+)
+ident(
+  def opt_insert_observe "lib/options.ml" 27 640 640 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 26 605 630 "lib/options.ml" 26 605 633
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 26 605 634 "lib/options.ml" 26 605 639
+type(
+  bool
+)
+"lib/options.ml" 26 605 630 "lib/options.ml" 26 605 639
+type(
+  bool ref
+)
+"lib/options.ml" 27 640 644 "lib/options.ml" 27 640 672
+type(
+  bool ref
+)
+ident(
+  def opt_insert_observe_save_diff "lib/options.ml" 28 685 685 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 27 640 675 "lib/options.ml" 27 640 678
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 27 640 679 "lib/options.ml" 27 640 684
+type(
+  bool
+)
+"lib/options.ml" 27 640 675 "lib/options.ml" 27 640 684
+type(
+  bool ref
+)
+"lib/options.ml" 28 685 689 "lib/options.ml" 28 685 700
+type(
+  bool ref
+)
+ident(
+  def opt_observe "lib/options.ml" 29 713 713 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 28 685 703 "lib/options.ml" 28 685 706
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 28 685 707 "lib/options.ml" 28 685 712
+type(
+  bool
+)
+"lib/options.ml" 28 685 703 "lib/options.ml" 28 685 712
+type(
+  bool ref
+)
+"lib/options.ml" 30 738 742 "lib/options.ml" 30 738 755
+type(
+  diff_type ref
+)
+ident(
+  def opt_diff_type "lib/options.ml" 31 765 765 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 30 738 758 "lib/options.ml" 30 738 761
+type(
+  diff_type -> diff_type ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 30 738 762 "lib/options.ml" 30 738 764
+type(
+  diff_type
+)
+"lib/options.ml" 30 738 758 "lib/options.ml" 30 738 764
+type(
+  diff_type ref
+)
+"lib/options.ml" 31 765 769 "lib/options.ml" 31 765 776
+type(
+  string ref
+)
+ident(
+  def opt_dir "lib/options.ml" 32 786 786 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 31 765 779 "lib/options.ml" 31 765 782
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 31 765 783 "lib/options.ml" 31 765 785
+type(
+  string
+)
+"lib/options.ml" 31 765 779 "lib/options.ml" 31 765 785
+type(
+  string ref
+)
+"lib/options.ml" 32 786 790 "lib/options.ml" 32 786 816
+type(
+  bool ref
+)
+ident(
+  def opt_inline_small_functions "lib/options.ml" 33 829 829 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 32 786 819 "lib/options.ml" 32 786 822
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/options.ml" 32 786 823 "lib/options.ml" 32 786 828
+type(
+  bool
+)
+"lib/options.ml" 32 786 819 "lib/options.ml" 32 786 828
+type(
+  bool ref
+)
+"lib/options.ml" 33 829 833 "lib/options.ml" 33 829 837
+type(
+  (string * Arg.spec * string) list
+)
+ident(
+  def opts "lib/options.ml" 78 3616 3619 "lib/options.ml" 1 0 -1
+)
+"lib/options.ml" 36 889 891 "lib/options.ml" 36 889 904
+type(
+  string
+)
+"lib/options.ml" 36 889 915 "lib/options.ml" 36 889 929
+type(
+  bool ref
+)
+ident(
+  int_ref opt_auto_learn "lib/options.ml" 3 10 14 "lib/options.ml" 3 10 28
+)
+"lib/options.ml" 36 889 906 "lib/options.ml" 36 889 930
+type(
+  Arg.spec
+)
+"lib/options.ml" 36 889 932 "lib/options.ml" 36 889 1037
+type(
+  string
+)
+"lib/options.ml" 36 889 890 "lib/options.ml" 36 889 1038
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 37 1040 1042 "lib/options.ml" 37 1040 1055
+type(
+  string
+)
+"lib/options.ml" 37 1040 1066 "lib/options.ml" 37 1040 1080
+type(
+  bool ref
+)
+ident(
+  int_ref opt_auto_apply "lib/options.ml" 4 41 45 "lib/options.ml" 4 41 59
+)
+"lib/options.ml" 37 1040 1057 "lib/options.ml" 37 1040 1081
+type(
+  Arg.spec
+)
+"lib/options.ml" 37 1040 1083 "lib/options.ml" 37 1040 1143
+type(
+  string
+)
+"lib/options.ml" 37 1040 1041 "lib/options.ml" 37 1040 1144
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 40 1191 1194 "lib/options.ml" 40 1191 1205
+type(
+  string
+)
+"lib/options.ml" 40 1191 1220 "lib/options.ml" 40 1191 1232
+type(
+  int ref
+)
+ident(
+  int_ref opt_dec_prec "lib/options.ml" 25 580 584 "lib/options.ml" 25 580 596
+)
+"lib/options.ml" 40 1191 1207 "lib/options.ml" 40 1191 1233
+type(
+  Arg.spec
+)
+"lib/options.ml" 40 1191 1235 "lib/options.ml" 40 1191 1317
+type(
+  string
+)
+"lib/options.ml" 40 1191 1193 "lib/options.ml" 40 1191 1318
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 41 1320 1323 "lib/options.ml" 41 1320 1340
+type(
+  string
+)
+"lib/options.ml" 41 1320 1351 "lib/options.ml" 41 1320 1369
+type(
+  bool ref
+)
+ident(
+  int_ref opt_insert_observe "lib/options.ml" 26 605 609 "lib/options.ml" 26 605 627
+)
+"lib/options.ml" 41 1320 1342 "lib/options.ml" 41 1320 1370
+type(
+  Arg.spec
+)
+"lib/options.ml" 41 1320 1372 "lib/options.ml" 41 1320 1429
+type(
+  string
+)
+"lib/options.ml" 41 1320 1322 "lib/options.ml" 41 1320 1430
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 42 1432 1435 "lib/options.ml" 42 1432 1462
+type(
+  string
+)
+"lib/options.ml" 42 1432 1473 "lib/options.ml" 42 1432 1501
+type(
+  bool ref
+)
+ident(
+  int_ref opt_insert_observe_save_diff "lib/options.ml" 27 640 644 "lib/options.ml" 27 640 672
+)
+"lib/options.ml" 42 1432 1464 "lib/options.ml" 42 1432 1502
+type(
+  Arg.spec
+)
+"lib/options.ml" 42 1432 1504 "lib/options.ml" 42 1432 1520
+type(
+  string
+)
+"lib/options.ml" 42 1432 1434 "lib/options.ml" 42 1432 1521
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 43 1523 1526 "lib/options.ml" 43 1523 1536
+type(
+  string
+)
+"lib/options.ml" 43 1523 1547 "lib/options.ml" 43 1523 1558
+type(
+  bool ref
+)
+ident(
+  int_ref opt_observe "lib/options.ml" 28 685 689 "lib/options.ml" 28 685 700
+)
+"lib/options.ml" 43 1523 1538 "lib/options.ml" 43 1523 1559
+type(
+  Arg.spec
+)
+"lib/options.ml" 43 1523 1561 "lib/options.ml" 43 1523 1570
+type(
+  string
+)
+"lib/options.ml" 43 1523 1525 "lib/options.ml" 43 1523 1571
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 44 1573 1576 "lib/options.ml" 44 1573 1587
+type(
+  string
+)
+"lib/options.ml" 44 1573 1606 "lib/options.ml" 44 1573 1607
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 45 1611 1617 "lib/options.ml" 48 1702 1766
+)
+"lib/options.ml" 45 1611 1623 "lib/options.ml" 45 1611 1624
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 44 1573 1606 "lib/options.ml" 44 1573 1607
+)
+"lib/options.ml" 46 1630 1638 "lib/options.ml" 46 1630 1642
+type(
+  string
+)
+"lib/options.ml" 46 1630 1646 "lib/options.ml" 46 1630 1659
+type(
+  diff_type ref
+)
+ident(
+  int_ref opt_diff_type "lib/options.ml" 30 738 742 "lib/options.ml" 30 738 755
+)
+"lib/options.ml" 46 1630 1660 "lib/options.ml" 46 1630 1662
+type(
+  diff_type ref -> diff_type -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 46 1630 1663 "lib/options.ml" 46 1630 1665
+type(
+  diff_type
+)
+"lib/options.ml" 46 1630 1646 "lib/options.ml" 46 1630 1665
+type(
+  unit
+)
+"lib/options.ml" 47 1666 1674 "lib/options.ml" 47 1666 1678
+type(
+  string
+)
+"lib/options.ml" 47 1666 1682 "lib/options.ml" 47 1666 1695
+type(
+  diff_type ref
+)
+ident(
+  int_ref opt_diff_type "lib/options.ml" 30 738 742 "lib/options.ml" 30 738 755
+)
+"lib/options.ml" 47 1666 1696 "lib/options.ml" 47 1666 1698
+type(
+  diff_type ref -> diff_type -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 47 1666 1699 "lib/options.ml" 47 1666 1701
+type(
+  diff_type
+)
+"lib/options.ml" 47 1666 1682 "lib/options.ml" 47 1666 1701
+type(
+  unit
+)
+"lib/options.ml" 48 1702 1710 "lib/options.ml" 48 1702 1711
+type(
+  string
+)
+"lib/options.ml" 48 1702 1715 "lib/options.ml" 48 1702 1720
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"lib/options.ml" 48 1702 1730 "lib/options.ml" 48 1702 1765
+type(
+  string
+)
+"lib/options.ml" 48 1702 1721 "lib/options.ml" 48 1702 1766
+type(
+  exn
+)
+"lib/options.ml" 48 1702 1715 "lib/options.ml" 48 1702 1766
+type(
+  unit
+)
+"lib/options.ml" 45 1611 1617 "lib/options.ml" 48 1702 1766
+type(
+  unit
+)
+"lib/options.ml" 44 1573 1601 "lib/options.ml" 49 1767 1770
+type(
+  string -> unit
+)
+"lib/options.ml" 44 1573 1589 "lib/options.ml" 49 1767 1771
+type(
+  Arg.spec
+)
+"lib/options.ml" 49 1767 1773 "lib/options.ml" 49 1767 1792
+type(
+  string
+)
+"lib/options.ml" 44 1573 1575 "lib/options.ml" 49 1767 1793
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 50 1795 1798 "lib/options.ml" 50 1795 1804
+type(
+  string
+)
+"lib/options.ml" 50 1795 1823 "lib/options.ml" 50 1795 1824
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 50 1795 1828 "lib/options.ml" 50 1795 1840
+)
+"lib/options.ml" 50 1795 1828 "lib/options.ml" 50 1795 1835
+type(
+  string ref
+)
+ident(
+  int_ref opt_dir "lib/options.ml" 31 765 769 "lib/options.ml" 31 765 776
+)
+"lib/options.ml" 50 1795 1836 "lib/options.ml" 50 1795 1838
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 50 1795 1839 "lib/options.ml" 50 1795 1840
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 50 1795 1823 "lib/options.ml" 50 1795 1824
+)
+"lib/options.ml" 50 1795 1828 "lib/options.ml" 50 1795 1840
+type(
+  unit
+)
+"lib/options.ml" 50 1795 1818 "lib/options.ml" 50 1795 1841
+type(
+  string -> unit
+)
+"lib/options.ml" 50 1795 1806 "lib/options.ml" 50 1795 1842
+type(
+  Arg.spec
+)
+"lib/options.ml" 50 1795 1844 "lib/options.ml" 50 1795 1866
+type(
+  string
+)
+"lib/options.ml" 50 1795 1797 "lib/options.ml" 50 1795 1867
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 51 1869 1872 "lib/options.ml" 51 1869 1879
+type(
+  string
+)
+"lib/options.ml" 51 1869 1890 "lib/options.ml" 51 1869 1898
+type(
+  bool ref
+)
+ident(
+  int_ref opt_diff "lib/options.ml" 24 555 559 "lib/options.ml" 24 555 567
+)
+"lib/options.ml" 51 1869 1881 "lib/options.ml" 51 1869 1899
+type(
+  Arg.spec
+)
+"lib/options.ml" 51 1869 1901 "lib/options.ml" 51 1869 1934
+type(
+  string
+)
+"lib/options.ml" 51 1869 1871 "lib/options.ml" 51 1869 1935
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 54 1978 1981 "lib/options.ml" 54 1978 1996
+type(
+  string
+)
+"lib/options.ml" 54 1978 2007 "lib/options.ml" 54 1978 2033
+type(
+  bool ref
+)
+ident(
+  int_ref opt_inline_small_functions "lib/options.ml" 32 786 790 "lib/options.ml" 32 786 816
+)
+"lib/options.ml" 54 1978 1998 "lib/options.ml" 54 1978 2034
+type(
+  Arg.spec
+)
+"lib/options.ml" 54 1978 2036 "lib/options.ml" 54 1978 2060
+type(
+  string
+)
+"lib/options.ml" 54 1978 1980 "lib/options.ml" 54 1978 2061
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 55 2063 2066 "lib/options.ml" 55 2063 2072
+type(
+  string
+)
+"lib/options.ml" 55 2063 2083 "lib/options.ml" 55 2063 2089
+type(
+  bool ref
+)
+ident(
+  int_ref opt_il "lib/options.ml" 6 73 77 "lib/options.ml" 6 73 83
+)
+"lib/options.ml" 55 2063 2074 "lib/options.ml" 55 2063 2090
+type(
+  Arg.spec
+)
+"lib/options.ml" 55 2063 2092 "lib/options.ml" 55 2063 2123
+type(
+  string
+)
+"lib/options.ml" 55 2063 2065 "lib/options.ml" 55 2063 2124
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 56 2126 2129 "lib/options.ml" 56 2126 2136
+type(
+  string
+)
+"lib/options.ml" 56 2126 2155 "lib/options.ml" 56 2126 2156
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 56 2126 2160 "lib/options.ml" 56 2126 2195
+)
+"lib/options.ml" 56 2126 2160 "lib/options.ml" 56 2126 2168
+type(
+  bool ref
+)
+ident(
+  int_ref opt_cfgs "lib/options.ml" 18 400 404 "lib/options.ml" 18 400 412
+)
+"lib/options.ml" 56 2126 2169 "lib/options.ml" 56 2126 2171
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 56 2126 2172 "lib/options.ml" 56 2126 2176
+type(
+  bool
+)
+"lib/options.ml" 56 2126 2160 "lib/options.ml" 56 2126 2176
+type(
+  unit
+)
+"lib/options.ml" 56 2126 2178 "lib/options.ml" 56 2126 2190
+type(
+  string ref
+)
+ident(
+  int_ref opt_cfgs_dir "lib/options.ml" 14 279 283 "lib/options.ml" 14 279 295
+)
+"lib/options.ml" 56 2126 2191 "lib/options.ml" 56 2126 2193
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 56 2126 2194 "lib/options.ml" 56 2126 2195
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 56 2126 2155 "lib/options.ml" 56 2126 2156
+)
+"lib/options.ml" 56 2126 2178 "lib/options.ml" 56 2126 2195
+type(
+  unit
+)
+"lib/options.ml" 56 2126 2160 "lib/options.ml" 56 2126 2195
+type(
+  unit
+)
+"lib/options.ml" 56 2126 2150 "lib/options.ml" 56 2126 2196
+type(
+  string -> unit
+)
+"lib/options.ml" 56 2126 2138 "lib/options.ml" 56 2126 2197
+type(
+  Arg.spec
+)
+"lib/options.ml" 56 2126 2199 "lib/options.ml" 56 2126 2247
+type(
+  string
+)
+"lib/options.ml" 56 2126 2128 "lib/options.ml" 56 2126 2248
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 57 2250 2253 "lib/options.ml" 57 2250 2259
+type(
+  string
+)
+"lib/options.ml" 57 2250 2270 "lib/options.ml" 57 2250 2277
+type(
+  bool ref
+)
+ident(
+  int_ref opt_dug "lib/options.ml" 7 96 100 "lib/options.ml" 7 96 107
+)
+"lib/options.ml" 57 2250 2261 "lib/options.ml" 57 2250 2278
+type(
+  Arg.spec
+)
+"lib/options.ml" 57 2250 2280 "lib/options.ml" 57 2250 2301
+type(
+  string
+)
+"lib/options.ml" 57 2250 2252 "lib/options.ml" 57 2250 2302
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 58 2304 2307 "lib/options.ml" 58 2304 2312
+type(
+  string
+)
+"lib/options.ml" 58 2304 2323 "lib/options.ml" 58 2304 2329
+type(
+  bool ref
+)
+ident(
+  int_ref opt_pf "lib/options.ml" 23 532 536 "lib/options.ml" 23 532 542
+)
+"lib/options.ml" 58 2304 2314 "lib/options.ml" 58 2304 2330
+type(
+  Arg.spec
+)
+"lib/options.ml" 58 2304 2332 "lib/options.ml" 58 2304 2351
+type(
+  string
+)
+"lib/options.ml" 58 2304 2306 "lib/options.ml" 58 2304 2352
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 59 2354 2357 "lib/options.ml" 59 2354 2367
+type(
+  string
+)
+"lib/options.ml" 59 2354 2378 "lib/options.ml" 59 2354 2389
+type(
+  bool ref
+)
+ident(
+  int_ref opt_noalarm "lib/options.ml" 8 120 124 "lib/options.ml" 8 120 135
+)
+"lib/options.ml" 59 2354 2369 "lib/options.ml" 59 2354 2390
+type(
+  Arg.spec
+)
+"lib/options.ml" 59 2354 2392 "lib/options.ml" 59 2354 2413
+type(
+  string
+)
+"lib/options.ml" 59 2354 2356 "lib/options.ml" 59 2354 2414
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 60 2416 2419 "lib/options.ml" 60 2416 2431
+type(
+  string
+)
+"lib/options.ml" 60 2416 2450 "lib/options.ml" 60 2416 2451
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 61 2456 2462 "lib/options.ml" 66 2637 2702
+)
+"lib/options.ml" 61 2456 2468 "lib/options.ml" 61 2456 2469
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 60 2416 2450 "lib/options.ml" 60 2416 2451
+)
+"lib/options.ml" 62 2475 2483 "lib/options.ml" 62 2475 2487
+type(
+  string
+)
+"lib/options.ml" 62 2475 2491 "lib/options.ml" 62 2475 2505
+type(
+  string ref
+)
+ident(
+  int_ref opt_alarm_type "lib/options.ml" 20 447 451 "lib/options.ml" 20 447 465
+)
+"lib/options.ml" 62 2475 2506 "lib/options.ml" 62 2475 2508
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 62 2475 2509 "lib/options.ml" 62 2475 2513
+type(
+  string
+)
+"lib/options.ml" 62 2475 2491 "lib/options.ml" 62 2475 2513
+type(
+  unit
+)
+"lib/options.ml" 63 2514 2522 "lib/options.ml" 63 2514 2526
+type(
+  string
+)
+"lib/options.ml" 63 2514 2530 "lib/options.ml" 63 2514 2544
+type(
+  string ref
+)
+ident(
+  int_ref opt_alarm_type "lib/options.ml" 20 447 451 "lib/options.ml" 20 447 465
+)
+"lib/options.ml" 63 2514 2545 "lib/options.ml" 63 2514 2547
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 63 2514 2548 "lib/options.ml" 63 2514 2552
+type(
+  string
+)
+"lib/options.ml" 63 2514 2530 "lib/options.ml" 63 2514 2552
+type(
+  unit
+)
+"lib/options.ml" 64 2553 2561 "lib/options.ml" 64 2553 2565
+type(
+  string
+)
+"lib/options.ml" 64 2553 2569 "lib/options.ml" 64 2553 2583
+type(
+  string ref
+)
+ident(
+  int_ref opt_alarm_type "lib/options.ml" 20 447 451 "lib/options.ml" 20 447 465
+)
+"lib/options.ml" 64 2553 2584 "lib/options.ml" 64 2553 2586
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 64 2553 2587 "lib/options.ml" 64 2553 2591
+type(
+  string
+)
+"lib/options.ml" 64 2553 2569 "lib/options.ml" 64 2553 2591
+type(
+  unit
+)
+"lib/options.ml" 65 2592 2600 "lib/options.ml" 65 2592 2607
+type(
+  string
+)
+"lib/options.ml" 65 2592 2611 "lib/options.ml" 65 2592 2625
+type(
+  string ref
+)
+ident(
+  int_ref opt_alarm_type "lib/options.ml" 20 447 451 "lib/options.ml" 20 447 465
+)
+"lib/options.ml" 65 2592 2626 "lib/options.ml" 65 2592 2628
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 65 2592 2629 "lib/options.ml" 65 2592 2636
+type(
+  string
+)
+"lib/options.ml" 65 2592 2611 "lib/options.ml" 65 2592 2636
+type(
+  unit
+)
+"lib/options.ml" 66 2637 2645 "lib/options.ml" 66 2637 2646
+type(
+  string
+)
+"lib/options.ml" 66 2637 2650 "lib/options.ml" 66 2637 2655
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"lib/options.ml" 66 2637 2665 "lib/options.ml" 66 2637 2701
+type(
+  string
+)
+"lib/options.ml" 66 2637 2656 "lib/options.ml" 66 2637 2702
+type(
+  exn
+)
+"lib/options.ml" 66 2637 2650 "lib/options.ml" 66 2637 2702
+type(
+  unit
+)
+"lib/options.ml" 61 2456 2462 "lib/options.ml" 66 2637 2702
+type(
+  unit
+)
+"lib/options.ml" 60 2416 2445 "lib/options.ml" 66 2637 2703
+type(
+  string -> unit
+)
+"lib/options.ml" 60 2416 2433 "lib/options.ml" 66 2637 2704
+type(
+  Arg.spec
+)
+"lib/options.ml" 66 2637 2706 "lib/options.ml" 66 2637 2737
+type(
+  string
+)
+"lib/options.ml" 60 2416 2418 "lib/options.ml" 66 2637 2738
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 67 2740 2743 "lib/options.ml" 67 2740 2752
+type(
+  string
+)
+"lib/options.ml" 67 2740 2771 "lib/options.ml" 67 2740 2772
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 67 2740 2776 "lib/options.ml" 67 2740 2806
+)
+"lib/options.ml" 67 2740 2776 "lib/options.ml" 67 2740 2786
+type(
+  string list ref
+)
+ident(
+  int_ref opt_inline "lib/options.ml" 9 148 152 "lib/options.ml" 9 148 162
+)
+"lib/options.ml" 67 2740 2787 "lib/options.ml" 67 2740 2789
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 67 2740 2790 "lib/options.ml" 67 2740 2791
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 67 2740 2771 "lib/options.ml" 67 2740 2772
+)
+"lib/options.ml" 67 2740 2794 "lib/options.ml" 67 2740 2795
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/options.ml" 67 2740 2795 "lib/options.ml" 67 2740 2805
+type(
+  string list ref
+)
+ident(
+  int_ref opt_inline "lib/options.ml" 9 148 152 "lib/options.ml" 9 148 162
+)
+"lib/options.ml" 67 2740 2793 "lib/options.ml" 67 2740 2806
+type(
+  string list
+)
+"lib/options.ml" 67 2740 2790 "lib/options.ml" 67 2740 2806
+type(
+  string list
+)
+"lib/options.ml" 67 2740 2776 "lib/options.ml" 67 2740 2806
+type(
+  unit
+)
+"lib/options.ml" 67 2740 2766 "lib/options.ml" 67 2740 2807
+type(
+  string -> unit
+)
+"lib/options.ml" 67 2740 2754 "lib/options.ml" 67 2740 2808
+type(
+  Arg.spec
+)
+"lib/options.ml" 67 2740 2810 "lib/options.ml" 67 2740 2836
+type(
+  string
+)
+"lib/options.ml" 67 2740 2742 "lib/options.ml" 67 2740 2837
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 68 2839 2842 "lib/options.ml" 68 2839 2853
+type(
+  string
+)
+"lib/options.ml" 68 2839 2864 "lib/options.ml" 68 2839 2876
+type(
+  bool ref
+)
+ident(
+  int_ref opt_deadcode "lib/options.ml" 21 477 481 "lib/options.ml" 21 477 493
+)
+"lib/options.ml" 68 2839 2855 "lib/options.ml" 68 2839 2877
+type(
+  Arg.spec
+)
+"lib/options.ml" 68 2839 2879 "lib/options.ml" 68 2839 2914
+type(
+  string
+)
+"lib/options.ml" 68 2839 2841 "lib/options.ml" 68 2839 2915
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 69 2917 2920 "lib/options.ml" 69 2917 2930
+type(
+  string
+)
+"lib/options.ml" 69 2917 2941 "lib/options.ml" 69 2917 2952
+type(
+  bool ref
+)
+ident(
+  int_ref opt_profile "lib/options.ml" 11 199 203 "lib/options.ml" 11 199 214
+)
+"lib/options.ml" 69 2917 2932 "lib/options.ml" 69 2917 2953
+type(
+  Arg.spec
+)
+"lib/options.ml" 69 2917 2955 "lib/options.ml" 69 2917 2965
+type(
+  string
+)
+"lib/options.ml" 69 2917 2919 "lib/options.ml" 69 2917 2966
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 70 2968 2971 "lib/options.ml" 70 2968 2980
+type(
+  string
+)
+"lib/options.ml" 70 2968 2991 "lib/options.ml" 70 2968 3001
+type(
+  bool ref
+)
+ident(
+  int_ref opt_narrow "lib/options.ml" 10 172 176 "lib/options.ml" 10 172 186
+)
+"lib/options.ml" 70 2968 2982 "lib/options.ml" 70 2968 3002
+type(
+  Arg.spec
+)
+"lib/options.ml" 70 2968 3004 "lib/options.ml" 70 2968 3018
+type(
+  string
+)
+"lib/options.ml" 70 2968 2970 "lib/options.ml" 70 2968 3019
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 71 3021 3024 "lib/options.ml" 71 3021 3030
+type(
+  string
+)
+"lib/options.ml" 71 3021 3046 "lib/options.ml" 71 3021 3047
+type(
+  int
+)
+ident(
+  def n "lib/options.ml" 71 3021 3051 "lib/options.ml" 71 3021 3063
+)
+"lib/options.ml" 71 3021 3051 "lib/options.ml" 71 3021 3058
+type(
+  int ref
+)
+ident(
+  int_ref opt_pfs "lib/options.ml" 19 425 429 "lib/options.ml" 19 425 436
+)
+"lib/options.ml" 71 3021 3059 "lib/options.ml" 71 3021 3061
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 71 3021 3062 "lib/options.ml" 71 3021 3063
+type(
+  int
+)
+ident(
+  int_ref n "lib/options.ml" 71 3021 3046 "lib/options.ml" 71 3021 3047
+)
+"lib/options.ml" 71 3021 3051 "lib/options.ml" 71 3021 3063
+type(
+  unit
+)
+"lib/options.ml" 71 3021 3041 "lib/options.ml" 71 3021 3064
+type(
+  int -> unit
+)
+"lib/options.ml" 71 3021 3032 "lib/options.ml" 71 3021 3065
+type(
+  Arg.spec
+)
+"lib/options.ml" 71 3021 3067 "lib/options.ml" 71 3021 3102
+type(
+  string
+)
+"lib/options.ml" 71 3021 3023 "lib/options.ml" 71 3021 3103
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 72 3105 3108 "lib/options.ml" 72 3105 3116
+type(
+  string
+)
+"lib/options.ml" 72 3105 3127 "lib/options.ml" 72 3105 3136
+type(
+  bool ref
+)
+ident(
+  int_ref opt_nobar "lib/options.ml" 12 227 231 "lib/options.ml" 12 227 240
+)
+"lib/options.ml" 72 3105 3118 "lib/options.ml" 72 3105 3137
+type(
+  Arg.spec
+)
+"lib/options.ml" 72 3105 3139 "lib/options.ml" 72 3105 3156
+type(
+  string
+)
+"lib/options.ml" 72 3105 3107 "lib/options.ml" 72 3105 3157
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 73 3159 3162 "lib/options.ml" 73 3159 3170
+type(
+  string
+)
+"lib/options.ml" 73 3159 3181 "lib/options.ml" 73 3159 3190
+type(
+  bool ref
+)
+ident(
+  int_ref opt_optil "lib/options.ml" 13 253 257 "lib/options.ml" 13 253 266
+)
+"lib/options.ml" 73 3159 3172 "lib/options.ml" 73 3159 3191
+type(
+  Arg.spec
+)
+"lib/options.ml" 73 3159 3193 "lib/options.ml" 73 3159 3206
+type(
+  string
+)
+"lib/options.ml" 73 3159 3161 "lib/options.ml" 73 3159 3207
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 74 3209 3212 "lib/options.ml" 74 3209 3220
+type(
+  string
+)
+"lib/options.ml" 74 3209 3231 "lib/options.ml" 74 3209 3240
+type(
+  bool ref
+)
+ident(
+  int_ref opt_debug "lib/options.ml" 22 506 510 "lib/options.ml" 22 506 519
+)
+"lib/options.ml" 74 3209 3222 "lib/options.ml" 74 3209 3241
+type(
+  Arg.spec
+)
+"lib/options.ml" 74 3209 3243 "lib/options.ml" 74 3209 3255
+type(
+  string
+)
+"lib/options.ml" 74 3209 3211 "lib/options.ml" 74 3209 3256
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 75 3258 3261 "lib/options.ml" 75 3258 3266
+type(
+  string
+)
+"lib/options.ml" 75 3258 3285 "lib/options.ml" 75 3258 3286
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 75 3258 3290 "lib/options.ml" 75 3258 3306
+)
+"lib/options.ml" 75 3258 3290 "lib/options.ml" 75 3258 3301
+type(
+  string ref
+)
+ident(
+  int_ref opt_weights "lib/options.ml" 15 305 309 "lib/options.ml" 15 305 320
+)
+"lib/options.ml" 75 3258 3302 "lib/options.ml" 75 3258 3304
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 75 3258 3305 "lib/options.ml" 75 3258 3306
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 75 3258 3285 "lib/options.ml" 75 3258 3286
+)
+"lib/options.ml" 75 3258 3290 "lib/options.ml" 75 3258 3306
+type(
+  unit
+)
+"lib/options.ml" 75 3258 3280 "lib/options.ml" 75 3258 3307
+type(
+  string -> unit
+)
+"lib/options.ml" 75 3258 3268 "lib/options.ml" 75 3258 3308
+type(
+  Arg.spec
+)
+"lib/options.ml" 75 3258 3310 "lib/options.ml" 75 3258 3402
+type(
+  string
+)
+"lib/options.ml" 75 3258 3260 "lib/options.ml" 75 3258 3403
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 76 3405 3408 "lib/options.ml" 76 3405 3421
+type(
+  string
+)
+"lib/options.ml" 76 3405 3440 "lib/options.ml" 76 3405 3441
+type(
+  string
+)
+ident(
+  def s "lib/options.ml" 76 3405 3445 "lib/options.ml" 76 3405 3470
+)
+"lib/options.ml" 76 3405 3445 "lib/options.ml" 76 3405 3465
+type(
+  string ref
+)
+ident(
+  int_ref opt_widen_thresholds "lib/options.ml" 16 330 334 "lib/options.ml" 16 330 354
+)
+"lib/options.ml" 76 3405 3466 "lib/options.ml" 76 3405 3468
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/options.ml" 76 3405 3469 "lib/options.ml" 76 3405 3470
+type(
+  string
+)
+ident(
+  int_ref s "lib/options.ml" 76 3405 3440 "lib/options.ml" 76 3405 3441
+)
+"lib/options.ml" 76 3405 3445 "lib/options.ml" 76 3405 3470
+type(
+  unit
+)
+"lib/options.ml" 76 3405 3435 "lib/options.ml" 76 3405 3471
+type(
+  string -> unit
+)
+"lib/options.ml" 76 3405 3423 "lib/options.ml" 76 3405 3472
+type(
+  Arg.spec
+)
+"lib/options.ml" 76 3405 3474 "lib/options.ml" 76 3405 3523
+type(
+  string
+)
+"lib/options.ml" 76 3405 3407 "lib/options.ml" 76 3405 3524
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 77 3526 3529 "lib/options.ml" 77 3526 3547
+type(
+  string
+)
+"lib/options.ml" 77 3526 3558 "lib/options.ml" 77 3526 3577
+type(
+  bool ref
+)
+ident(
+  int_ref opt_auto_thresholds "lib/options.ml" 17 364 368 "lib/options.ml" 17 364 387
+)
+"lib/options.ml" 77 3526 3549 "lib/options.ml" 77 3526 3578
+type(
+  Arg.spec
+)
+"lib/options.ml" 77 3526 3580 "lib/options.ml" 77 3526 3613
+type(
+  string
+)
+"lib/options.ml" 77 3526 3528 "lib/options.ml" 77 3526 3614
+type(
+  string * Arg.spec * string
+)
+"lib/options.ml" 34 840 842 "lib/options.ml" 78 3616 3619
+type(
+  (string * Arg.spec * string) list
+)

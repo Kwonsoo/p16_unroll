@@ -1,0 +1,1531 @@
+"pgm/optil.ml" 13 254 258 "pgm/optil.ml" 13 254 270
+type(
+  InterCfg.t -> string BatSet.t
+)
+ident(
+  def collect_strs "pgm/optil.ml" 21 471 471 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 14 304 309 "pgm/optil.ml" 14 304 313
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 15 317 319 "pgm/optil.ml" 19 429 469
+)
+"pgm/optil.ml" 15 317 319 "pgm/optil.ml" 15 317 328
+type(
+  (InterCfg.Node.t -> string BatSet.t -> string BatSet.t) ->
+  InterCfg.Node.t list -> string BatSet.t -> string BatSet.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"pgm/optil.ml" 15 317 334 "pgm/optil.ml" 15 317 335
+type(
+  InterCfg.Node.t
+)
+ident(
+  def n "pgm/optil.ml" 16 340 344 "pgm/optil.ml" 18 415 428
+)
+"pgm/optil.ml" 16 340 350 "pgm/optil.ml" 16 340 364
+type(
+  InterCfg.t -> InterCfg.Node.t -> IntraCfg.cmd
+)
+ident(
+  ext_ref InterCfg.cmdof
+)
+"pgm/optil.ml" 16 340 365 "pgm/optil.ml" 16 340 369
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 14 304 309 "pgm/optil.ml" 14 304 313
+)
+"pgm/optil.ml" 16 340 370 "pgm/optil.ml" 16 340 371
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref n "pgm/optil.ml" 15 317 334 "pgm/optil.ml" 15 317 335
+)
+"pgm/optil.ml" 16 340 350 "pgm/optil.ml" 16 340 371
+call(
+  stack
+)
+type(
+  IntraCfg.cmd
+)
+"pgm/optil.ml" 17 377 392 "pgm/optil.ml" 17 377 393
+type(
+  Cil.lval
+)
+"pgm/optil.ml" 17 377 394 "pgm/optil.ml" 17 377 395
+type(
+  string
+)
+ident(
+  def s "pgm/optil.ml" 17 377 402 "pgm/optil.ml" 17 377 414
+)
+"pgm/optil.ml" 17 377 396 "pgm/optil.ml" 17 377 397
+type(
+  Cil.location
+)
+"pgm/optil.ml" 17 377 383 "pgm/optil.ml" 17 377 398
+type(
+  IntraCfg.cmd
+)
+"pgm/optil.ml" 17 377 402 "pgm/optil.ml" 17 377 412
+type(
+  string -> string BatSet.t -> string BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"pgm/optil.ml" 17 377 413 "pgm/optil.ml" 17 377 414
+type(
+  string
+)
+ident(
+  int_ref s "pgm/optil.ml" 17 377 394 "pgm/optil.ml" 17 377 395
+)
+"pgm/optil.ml" 17 377 402 "pgm/optil.ml" 17 377 414
+call(
+  tail
+)
+type(
+  string BatSet.t -> string BatSet.t
+)
+"pgm/optil.ml" 18 415 421 "pgm/optil.ml" 18 415 422
+type(
+  IntraCfg.cmd
+)
+"pgm/optil.ml" 18 415 426 "pgm/optil.ml" 18 415 428
+type(
+  string BatSet.t -> string BatSet.t
+)
+ident(
+  ext_ref Vocab.id
+)
+"pgm/optil.ml" 16 340 344 "pgm/optil.ml" 18 415 428
+type(
+  string BatSet.t -> string BatSet.t
+)
+"pgm/optil.ml" 15 317 329 "pgm/optil.ml" 19 429 432
+type(
+  InterCfg.Node.t -> string BatSet.t -> string BatSet.t
+)
+"pgm/optil.ml" 19 429 434 "pgm/optil.ml" 19 429 450
+type(
+  InterCfg.t -> InterCfg.Node.t list
+)
+ident(
+  ext_ref InterCfg.nodesof
+)
+"pgm/optil.ml" 19 429 451 "pgm/optil.ml" 19 429 455
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 14 304 309 "pgm/optil.ml" 14 304 313
+)
+"pgm/optil.ml" 19 429 433 "pgm/optil.ml" 19 429 456
+call(
+  stack
+)
+type(
+  InterCfg.Node.t list
+)
+"pgm/optil.ml" 19 429 457 "pgm/optil.ml" 19 429 469
+type(
+  string BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pgm/optil.ml" 15 317 319 "pgm/optil.ml" 19 429 469
+call(
+  tail
+)
+type(
+  string BatSet.t
+)
+"pgm/optil.ml" 14 304 305 "pgm/optil.ml" 19 429 469
+type(
+  InterCfg.t -> string BatSet.t
+)
+type(
+  InterCfg.t -> string BatSet.t
+)
+"pgm/optil.ml" 21 471 475 "pgm/optil.ml" 21 471 484
+type(
+  int ref
+)
+ident(
+  def str_count "pgm/optil.ml" 22 493 493 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 21 471 487 "pgm/optil.ml" 21 471 490
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"pgm/optil.ml" 21 471 491 "pgm/optil.ml" 21 471 492
+type(
+  int
+)
+"pgm/optil.ml" 21 471 487 "pgm/optil.ml" 21 471 492
+type(
+  int ref
+)
+"pgm/optil.ml" 22 493 497 "pgm/optil.ml" 22 493 510
+type(
+  unit -> string
+)
+ident(
+  def get_cstr_name "pgm/optil.ml" 26 580 580 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 22 493 511 "pgm/optil.ml" 22 493 513
+type(
+  unit
+)
+"pgm/optil.ml" 23 516 518 "pgm/optil.ml" 23 516 527
+type(
+  int ref
+)
+ident(
+  int_ref str_count "pgm/optil.ml" 21 471 475 "pgm/optil.ml" 21 471 484
+)
+"pgm/optil.ml" 23 516 528 "pgm/optil.ml" 23 516 530
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"pgm/optil.ml" 23 516 531 "pgm/optil.ml" 23 516 532
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"pgm/optil.ml" 23 516 532 "pgm/optil.ml" 23 516 541
+type(
+  int ref
+)
+ident(
+  int_ref str_count "pgm/optil.ml" 21 471 475 "pgm/optil.ml" 21 471 484
+)
+"pgm/optil.ml" 23 516 531 "pgm/optil.ml" 23 516 541
+type(
+  int
+)
+"pgm/optil.ml" 23 516 542 "pgm/optil.ml" 23 516 543
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"pgm/optil.ml" 23 516 544 "pgm/optil.ml" 23 516 545
+type(
+  int
+)
+"pgm/optil.ml" 23 516 531 "pgm/optil.ml" 23 516 545
+type(
+  int
+)
+"pgm/optil.ml" 23 516 518 "pgm/optil.ml" 23 516 545
+type(
+  unit
+)
+"pgm/optil.ml" 24 547 549 "pgm/optil.ml" 24 547 561
+type(
+  string
+)
+"pgm/optil.ml" 24 547 562 "pgm/optil.ml" 24 547 563
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pgm/optil.ml" 24 547 564 "pgm/optil.ml" 24 547 567
+type(
+  int -> string
+)
+ident(
+  ext_ref Vocab.i2s
+)
+"pgm/optil.ml" 24 547 568 "pgm/optil.ml" 24 547 569
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"pgm/optil.ml" 24 547 569 "pgm/optil.ml" 24 547 578
+type(
+  int ref
+)
+ident(
+  int_ref str_count "pgm/optil.ml" 21 471 475 "pgm/optil.ml" 21 471 484
+)
+"pgm/optil.ml" 24 547 568 "pgm/optil.ml" 24 547 578
+type(
+  int
+)
+"pgm/optil.ml" 24 547 564 "pgm/optil.ml" 24 547 578
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/optil.ml" 24 547 549 "pgm/optil.ml" 24 547 578
+call(
+  tail
+)
+type(
+  string
+)
+"pgm/optil.ml" 23 516 518 "pgm/optil.ml" 24 547 578
+type(
+  string
+)
+"pgm/optil.ml" 26 580 584 "pgm/optil.ml" 26 580 596
+type(
+  string BatSet.t -> (string, Cil.lval) BatMap.t
+)
+ident(
+  def build_strmap "pgm/optil.ml" 34 844 844 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 27 642 647 "pgm/optil.ml" 27 642 651
+type(
+  string BatSet.t
+)
+ident(
+  def strs "pgm/optil.ml" 28 655 657 "pgm/optil.ml" 32 821 842
+)
+"pgm/optil.ml" 28 655 657 "pgm/optil.ml" 28 655 668
+type(
+  (string -> (string, Cil.lval) BatMap.t -> (string, Cil.lval) BatMap.t) ->
+  string BatSet.t ->
+  (string, Cil.lval) BatMap.t -> (string, Cil.lval) BatMap.t
+)
+ident(
+  ext_ref BatSet.fold
+)
+"pgm/optil.ml" 28 655 674 "pgm/optil.ml" 28 655 677
+type(
+  string
+)
+ident(
+  def str "pgm/optil.ml" 28 655 678 "pgm/optil.ml" 31 793 820
+)
+"pgm/optil.ml" 28 655 678 "pgm/optil.ml" 28 655 681
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  def map "pgm/optil.ml" 29 685 689 "pgm/optil.ml" 31 793 820
+)
+"pgm/optil.ml" 29 685 693 "pgm/optil.ml" 29 685 697
+type(
+  string
+)
+ident(
+  def name "pgm/optil.ml" 30 720 724 "pgm/optil.ml" 31 793 820
+)
+"pgm/optil.ml" 29 685 700 "pgm/optil.ml" 29 685 713
+type(
+  unit -> string
+)
+ident(
+  int_ref get_cstr_name "pgm/optil.ml" 22 493 497 "pgm/optil.ml" 22 493 510
+)
+"pgm/optil.ml" 29 685 714 "pgm/optil.ml" 29 685 716
+type(
+  unit
+)
+"pgm/optil.ml" 29 685 700 "pgm/optil.ml" 29 685 716
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/optil.ml" 30 720 728 "pgm/optil.ml" 30 720 730
+type(
+  Cil.lhost * Cil.offset
+)
+ident(
+  def lv "pgm/optil.ml" 31 793 799 "pgm/optil.ml" 31 793 820
+)
+"pgm/optil.ml" 30 720 739 "pgm/optil.ml" 30 720 756
+type(
+  string -> Cil.typ -> Cil.varinfo
+)
+ident(
+  ext_ref Cil.makeGlobalVar
+)
+"pgm/optil.ml" 30 720 757 "pgm/optil.ml" 30 720 761
+type(
+  string
+)
+ident(
+  int_ref name "pgm/optil.ml" 29 685 693 "pgm/optil.ml" 29 685 697
+)
+"pgm/optil.ml" 30 720 762 "pgm/optil.ml" 30 720 777
+type(
+  Cil.typ
+)
+ident(
+  ext_ref Cil.charPtrType
+)
+"pgm/optil.ml" 30 720 738 "pgm/optil.ml" 30 720 778
+call(
+  stack
+)
+type(
+  Cil.varinfo
+)
+"pgm/optil.ml" 30 720 734 "pgm/optil.ml" 30 720 778
+type(
+  Cil.lhost
+)
+"pgm/optil.ml" 30 720 780 "pgm/optil.ml" 30 720 788
+type(
+  Cil.offset
+)
+"pgm/optil.ml" 30 720 733 "pgm/optil.ml" 30 720 789
+type(
+  Cil.lhost * Cil.offset
+)
+"pgm/optil.ml" 31 793 799 "pgm/optil.ml" 31 793 809
+type(
+  string ->
+  Cil.lval -> (string, Cil.lval) BatMap.t -> (string, Cil.lval) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pgm/optil.ml" 31 793 810 "pgm/optil.ml" 31 793 813
+type(
+  string
+)
+ident(
+  int_ref str "pgm/optil.ml" 28 655 674 "pgm/optil.ml" 28 655 677
+)
+"pgm/optil.ml" 31 793 814 "pgm/optil.ml" 31 793 816
+type(
+  Cil.lval
+)
+ident(
+  int_ref lv "pgm/optil.ml" 30 720 728 "pgm/optil.ml" 30 720 730
+)
+"pgm/optil.ml" 31 793 817 "pgm/optil.ml" 31 793 820
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  int_ref map "pgm/optil.ml" 28 655 678 "pgm/optil.ml" 28 655 681
+)
+"pgm/optil.ml" 31 793 799 "pgm/optil.ml" 31 793 820
+call(
+  tail
+)
+type(
+  (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 30 720 724 "pgm/optil.ml" 31 793 820
+type(
+  (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 29 685 689 "pgm/optil.ml" 31 793 820
+type(
+  (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 28 655 669 "pgm/optil.ml" 32 821 824
+type(
+  string -> (string, Cil.lval) BatMap.t -> (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 32 821 825 "pgm/optil.ml" 32 821 829
+type(
+  string BatSet.t
+)
+ident(
+  int_ref strs "pgm/optil.ml" 27 642 647 "pgm/optil.ml" 27 642 651
+)
+"pgm/optil.ml" 32 821 830 "pgm/optil.ml" 32 821 842
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pgm/optil.ml" 28 655 657 "pgm/optil.ml" 32 821 842
+call(
+  tail
+)
+type(
+  (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 27 642 643 "pgm/optil.ml" 32 821 842
+type(
+  string BatSet.t -> (string, Cil.lval) BatMap.t
+)
+type(
+  string BatSet.t -> (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 34 844 848 "pgm/optil.ml" 34 844 862
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+ident(
+  def replace_salloc "pgm/optil.ml" 46 1242 1242 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 35 917 922 "pgm/optil.ml" 35 917 926
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 35 917 927 "pgm/optil.ml" 44 1224 1240
+)
+"pgm/optil.ml" 35 917 927 "pgm/optil.ml" 35 917 933
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  def strmap "pgm/optil.ml" 36 937 939 "pgm/optil.ml" 44 1224 1240
+)
+"pgm/optil.ml" 36 937 943 "pgm/optil.ml" 36 937 948
+type(
+  InterCfg.Node.t list
+)
+ident(
+  def nodes "pgm/optil.ml" 37 976 980 "pgm/optil.ml" 44 1224 1240
+)
+"pgm/optil.ml" 36 937 951 "pgm/optil.ml" 36 937 967
+type(
+  InterCfg.t -> InterCfg.Node.t list
+)
+ident(
+  ext_ref InterCfg.nodesof
+)
+"pgm/optil.ml" 36 937 968 "pgm/optil.ml" 36 937 972
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 35 917 922 "pgm/optil.ml" 35 917 926
+)
+"pgm/optil.ml" 36 937 951 "pgm/optil.ml" 36 937 972
+call(
+  stack
+)
+type(
+  InterCfg.Node.t list
+)
+"pgm/optil.ml" 37 976 980 "pgm/optil.ml" 37 976 989
+type(
+  (InterCfg.Node.t -> InterCfg.t -> InterCfg.t) ->
+  InterCfg.Node.t list -> InterCfg.t -> InterCfg.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"pgm/optil.ml" 37 976 995 "pgm/optil.ml" 37 976 996
+type(
+  InterCfg.Node.t
+)
+ident(
+  def n "pgm/optil.ml" 37 976 997 "pgm/optil.ml" 43 1209 1223
+)
+"pgm/optil.ml" 37 976 997 "pgm/optil.ml" 37 976 998
+type(
+  InterCfg.t
+)
+ident(
+  def g "pgm/optil.ml" 38 1003 1009 "pgm/optil.ml" 43 1209 1223
+)
+"pgm/optil.ml" 38 1003 1015 "pgm/optil.ml" 38 1003 1029
+type(
+  InterCfg.t -> InterCfg.Node.t -> IntraCfg.cmd
+)
+ident(
+  ext_ref InterCfg.cmdof
+)
+"pgm/optil.ml" 38 1003 1030 "pgm/optil.ml" 38 1003 1031
+type(
+  InterCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 37 976 997 "pgm/optil.ml" 37 976 998
+)
+"pgm/optil.ml" 38 1003 1032 "pgm/optil.ml" 38 1003 1033
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref n "pgm/optil.ml" 37 976 995 "pgm/optil.ml" 37 976 996
+)
+"pgm/optil.ml" 38 1003 1015 "pgm/optil.ml" 38 1003 1033
+call(
+  stack
+)
+type(
+  IntraCfg.cmd
+)
+"pgm/optil.ml" 39 1039 1056 "pgm/optil.ml" 39 1039 1059
+type(
+  Cil.lval
+)
+ident(
+  def lhs "pgm/optil.ml" 40 1078 1086 "pgm/optil.ml" 42 1174 1208
+)
+"pgm/optil.ml" 39 1039 1060 "pgm/optil.ml" 39 1039 1063
+type(
+  string
+)
+ident(
+  def str "pgm/optil.ml" 40 1078 1086 "pgm/optil.ml" 42 1174 1208
+)
+"pgm/optil.ml" 39 1039 1064 "pgm/optil.ml" 39 1039 1072
+type(
+  Cil.location
+)
+ident(
+  def location "pgm/optil.ml" 40 1078 1086 "pgm/optil.ml" 42 1174 1208
+)
+"pgm/optil.ml" 39 1039 1047 "pgm/optil.ml" 39 1039 1073
+type(
+  IntraCfg.cmd
+)
+"pgm/optil.ml" 40 1078 1090 "pgm/optil.ml" 40 1078 1093
+type(
+  Cil.exp
+)
+ident(
+  def rhs "pgm/optil.ml" 41 1129 1137 "pgm/optil.ml" 42 1174 1208
+)
+"pgm/optil.ml" 40 1078 1102 "pgm/optil.ml" 40 1078 1113
+type(
+  string -> (string, Cil.lval) BatMap.t -> Cil.lval
+)
+ident(
+  ext_ref BatMap.find
+)
+"pgm/optil.ml" 40 1078 1114 "pgm/optil.ml" 40 1078 1117
+type(
+  string
+)
+ident(
+  int_ref str "pgm/optil.ml" 39 1039 1060 "pgm/optil.ml" 39 1039 1063
+)
+"pgm/optil.ml" 40 1078 1118 "pgm/optil.ml" 40 1078 1124
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  int_ref strmap "pgm/optil.ml" 35 917 927 "pgm/optil.ml" 35 917 933
+)
+"pgm/optil.ml" 40 1078 1101 "pgm/optil.ml" 40 1078 1125
+call(
+  stack
+)
+type(
+  Cil.lval
+)
+"pgm/optil.ml" 40 1078 1096 "pgm/optil.ml" 40 1078 1125
+type(
+  Cil.exp
+)
+"pgm/optil.ml" 41 1129 1141 "pgm/optil.ml" 41 1129 1144
+type(
+  IntraCfg.Cmd.t
+)
+ident(
+  def cmd "pgm/optil.ml" 42 1174 1184 "pgm/optil.ml" 42 1174 1208
+)
+"pgm/optil.ml" 41 1129 1153 "pgm/optil.ml" 41 1129 1156
+type(
+  Cil.lval
+)
+ident(
+  int_ref lhs "pgm/optil.ml" 39 1039 1056 "pgm/optil.ml" 39 1039 1059
+)
+"pgm/optil.ml" 41 1129 1157 "pgm/optil.ml" 41 1129 1160
+type(
+  Cil.exp
+)
+ident(
+  int_ref rhs "pgm/optil.ml" 40 1078 1090 "pgm/optil.ml" 40 1078 1093
+)
+"pgm/optil.ml" 41 1129 1161 "pgm/optil.ml" 41 1129 1169
+type(
+  Cil.location
+)
+ident(
+  int_ref location "pgm/optil.ml" 39 1039 1064 "pgm/optil.ml" 39 1039 1072
+)
+"pgm/optil.ml" 41 1129 1147 "pgm/optil.ml" 41 1129 1170
+type(
+  IntraCfg.Cmd.t
+)
+"pgm/optil.ml" 42 1174 1184 "pgm/optil.ml" 42 1174 1200
+type(
+  InterCfg.t -> InterCfg.Node.t -> IntraCfg.cmd -> InterCfg.t
+)
+ident(
+  ext_ref InterCfg.add_cmd
+)
+"pgm/optil.ml" 42 1174 1201 "pgm/optil.ml" 42 1174 1202
+type(
+  InterCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 37 976 997 "pgm/optil.ml" 37 976 998
+)
+"pgm/optil.ml" 42 1174 1203 "pgm/optil.ml" 42 1174 1204
+type(
+  InterCfg.Node.t
+)
+ident(
+  int_ref n "pgm/optil.ml" 37 976 995 "pgm/optil.ml" 37 976 996
+)
+"pgm/optil.ml" 42 1174 1205 "pgm/optil.ml" 42 1174 1208
+type(
+  IntraCfg.cmd
+)
+ident(
+  int_ref cmd "pgm/optil.ml" 41 1129 1141 "pgm/optil.ml" 41 1129 1144
+)
+"pgm/optil.ml" 42 1174 1184 "pgm/optil.ml" 42 1174 1208
+call(
+  tail
+)
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 41 1129 1137 "pgm/optil.ml" 42 1174 1208
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 40 1078 1086 "pgm/optil.ml" 42 1174 1208
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 43 1209 1217 "pgm/optil.ml" 43 1209 1218
+type(
+  IntraCfg.cmd
+)
+"pgm/optil.ml" 43 1209 1222 "pgm/optil.ml" 43 1209 1223
+type(
+  InterCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 37 976 997 "pgm/optil.ml" 37 976 998
+)
+"pgm/optil.ml" 38 1003 1009 "pgm/optil.ml" 43 1209 1223
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 37 976 990 "pgm/optil.ml" 44 1224 1229
+type(
+  InterCfg.Node.t -> InterCfg.t -> InterCfg.t
+)
+"pgm/optil.ml" 44 1224 1230 "pgm/optil.ml" 44 1224 1235
+type(
+  InterCfg.Node.t list
+)
+ident(
+  int_ref nodes "pgm/optil.ml" 36 937 943 "pgm/optil.ml" 36 937 948
+)
+"pgm/optil.ml" 44 1224 1236 "pgm/optil.ml" 44 1224 1240
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 35 917 922 "pgm/optil.ml" 35 917 926
+)
+"pgm/optil.ml" 37 976 980 "pgm/optil.ml" 44 1224 1240
+call(
+  tail
+)
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 36 937 939 "pgm/optil.ml" 44 1224 1240
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 35 917 918 "pgm/optil.ml" 44 1224 1240
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+"pgm/optil.ml" 46 1242 1246 "pgm/optil.ml" 46 1242 1260
+type(
+  Cil.location
+)
+ident(
+  def dummy_location "pgm/optil.ml" 48 1298 1298 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 46 1242 1272 "pgm/optil.ml" 46 1242 1273
+type(
+  int
+)
+"pgm/optil.ml" 46 1242 1282 "pgm/optil.ml" 46 1242 1284
+type(
+  string
+)
+"pgm/optil.ml" 46 1242 1293 "pgm/optil.ml" 46 1242 1294
+type(
+  int
+)
+"pgm/optil.ml" 46 1242 1263 "pgm/optil.ml" 46 1242 1296
+type(
+  Cil.location
+)
+"pgm/optil.ml" 48 1298 1302 "pgm/optil.ml" 48 1298 1315
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+ident(
+  def insert_salloc "pgm/optil.ml" 61 1885 1885 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 49 1371 1376 "pgm/optil.ml" 49 1371 1380
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 49 1371 1381 "pgm/optil.ml" 59 1786 1883
+)
+"pgm/optil.ml" 49 1371 1381 "pgm/optil.ml" 49 1371 1387
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  def strmap "pgm/optil.ml" 50 1391 1393 "pgm/optil.ml" 59 1786 1883
+)
+"pgm/optil.ml" 50 1391 1397 "pgm/optil.ml" 50 1391 1400
+type(
+  IntraCfg.t
+)
+ident(
+  def _G_ "pgm/optil.ml" 51 1447 1448 "pgm/optil.ml" 59 1786 1883
+)
+"pgm/optil.ml" 50 1391 1403 "pgm/optil.ml" 50 1391 1417
+type(
+  InterCfg.t -> InterCfg.pid -> IntraCfg.t
+)
+ident(
+  ext_ref InterCfg.cfgof
+)
+"pgm/optil.ml" 50 1391 1418 "pgm/optil.ml" 50 1391 1422
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 49 1371 1376 "pgm/optil.ml" 49 1371 1380
+)
+"pgm/optil.ml" 50 1391 1423 "pgm/optil.ml" 50 1391 1443
+type(
+  InterCfg.pid
+)
+ident(
+  ext_ref InterCfg.global_proc
+)
+"pgm/optil.ml" 50 1391 1403 "pgm/optil.ml" 50 1391 1443
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 51 1447 1452 "pgm/optil.ml" 51 1447 1467
+type(
+  IntraCfg.t
+)
+ident(
+  def _G_with_sallocs "pgm/optil.ml" 59 1786 1788 "pgm/optil.ml" 59 1786 1883
+)
+"pgm/optil.ml" 52 1471 1475 "pgm/optil.ml" 52 1471 1487
+type(
+  (string -> Cil.lval -> IntraCfg.t -> IntraCfg.t) ->
+  (string, Cil.lval) BatMap.t -> IntraCfg.t -> IntraCfg.t
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pgm/optil.ml" 52 1471 1493 "pgm/optil.ml" 52 1471 1496
+type(
+  string
+)
+ident(
+  def str "pgm/optil.ml" 52 1471 1497 "pgm/optil.ml" 57 1719 1765
+)
+"pgm/optil.ml" 52 1471 1497 "pgm/optil.ml" 52 1471 1500
+type(
+  Cil.lval
+)
+ident(
+  def lhs "pgm/optil.ml" 52 1471 1501 "pgm/optil.ml" 57 1719 1765
+)
+"pgm/optil.ml" 52 1471 1501 "pgm/optil.ml" 52 1471 1502
+type(
+  IntraCfg.t
+)
+ident(
+  def g "pgm/optil.ml" 53 1506 1512 "pgm/optil.ml" 57 1719 1765
+)
+"pgm/optil.ml" 53 1506 1516 "pgm/optil.ml" 53 1506 1521
+type(
+  IntraCfg.Node.t
+)
+ident(
+  def entry "pgm/optil.ml" 54 1546 1552 "pgm/optil.ml" 57 1719 1765
+)
+"pgm/optil.ml" 53 1506 1524 "pgm/optil.ml" 53 1506 1540
+type(
+  IntraCfg.t -> IntraCfg.Node.t
+)
+ident(
+  ext_ref IntraCfg.entryof
+)
+"pgm/optil.ml" 53 1506 1541 "pgm/optil.ml" 53 1506 1542
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 52 1471 1501 "pgm/optil.ml" 52 1471 1502
+)
+"pgm/optil.ml" 53 1506 1524 "pgm/optil.ml" 53 1506 1542
+call(
+  stack
+)
+type(
+  IntraCfg.Node.t
+)
+"pgm/optil.ml" 54 1546 1556 "pgm/optil.ml" 54 1546 1557
+type(
+  unit
+)
+"pgm/optil.ml" 54 1546 1568 "pgm/optil.ml" 54 1546 1579
+type(
+  IntraCfg.node list -> int
+)
+ident(
+  ext_ref List.length
+)
+"pgm/optil.ml" 54 1546 1581 "pgm/optil.ml" 54 1546 1594
+type(
+  IntraCfg.node -> IntraCfg.t -> IntraCfg.node list
+)
+ident(
+  ext_ref IntraCfg.succ
+)
+"pgm/optil.ml" 54 1546 1595 "pgm/optil.ml" 54 1546 1600
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref entry "pgm/optil.ml" 53 1506 1516 "pgm/optil.ml" 53 1506 1521
+)
+"pgm/optil.ml" 54 1546 1601 "pgm/optil.ml" 54 1546 1602
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 52 1471 1501 "pgm/optil.ml" 52 1471 1502
+)
+"pgm/optil.ml" 54 1546 1580 "pgm/optil.ml" 54 1546 1603
+call(
+  stack
+)
+type(
+  IntraCfg.node list
+)
+"pgm/optil.ml" 54 1546 1568 "pgm/optil.ml" 54 1546 1603
+call(
+  stack
+)
+type(
+  int
+)
+"pgm/optil.ml" 54 1546 1604 "pgm/optil.ml" 54 1546 1605
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"pgm/optil.ml" 54 1546 1606 "pgm/optil.ml" 54 1546 1607
+type(
+  int
+)
+"pgm/optil.ml" 54 1546 1567 "pgm/optil.ml" 54 1546 1608
+type(
+  bool
+)
+"pgm/optil.ml" 54 1546 1560 "pgm/optil.ml" 54 1546 1608
+type(
+  unit
+)
+"pgm/optil.ml" 55 1612 1622 "pgm/optil.ml" 55 1612 1626
+type(
+  IntraCfg.node
+)
+ident(
+  def next "pgm/optil.ml" 56 1667 1673 "pgm/optil.ml" 57 1719 1765
+)
+"pgm/optil.ml" 55 1612 1629 "pgm/optil.ml" 55 1612 1637
+type(
+  IntraCfg.node list -> int -> IntraCfg.node
+)
+ident(
+  ext_ref List.nth
+)
+"pgm/optil.ml" 55 1612 1639 "pgm/optil.ml" 55 1612 1652
+type(
+  IntraCfg.node -> IntraCfg.t -> IntraCfg.node list
+)
+ident(
+  ext_ref IntraCfg.succ
+)
+"pgm/optil.ml" 55 1612 1653 "pgm/optil.ml" 55 1612 1658
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref entry "pgm/optil.ml" 53 1506 1516 "pgm/optil.ml" 53 1506 1521
+)
+"pgm/optil.ml" 55 1612 1659 "pgm/optil.ml" 55 1612 1660
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 52 1471 1501 "pgm/optil.ml" 52 1471 1502
+)
+"pgm/optil.ml" 55 1612 1638 "pgm/optil.ml" 55 1612 1661
+call(
+  stack
+)
+type(
+  IntraCfg.node list
+)
+"pgm/optil.ml" 55 1612 1662 "pgm/optil.ml" 55 1612 1663
+type(
+  int
+)
+"pgm/optil.ml" 55 1612 1629 "pgm/optil.ml" 55 1612 1663
+call(
+  stack
+)
+type(
+  IntraCfg.node
+)
+"pgm/optil.ml" 56 1667 1677 "pgm/optil.ml" 56 1667 1680
+type(
+  IntraCfg.Cmd.t
+)
+ident(
+  def cmd "pgm/optil.ml" 57 1719 1727 "pgm/optil.ml" 57 1719 1765
+)
+"pgm/optil.ml" 56 1667 1692 "pgm/optil.ml" 56 1667 1695
+type(
+  Cil.lval
+)
+ident(
+  int_ref lhs "pgm/optil.ml" 52 1471 1497 "pgm/optil.ml" 52 1471 1500
+)
+"pgm/optil.ml" 56 1667 1696 "pgm/optil.ml" 56 1667 1699
+type(
+  string
+)
+ident(
+  int_ref str "pgm/optil.ml" 52 1471 1493 "pgm/optil.ml" 52 1471 1496
+)
+"pgm/optil.ml" 56 1667 1700 "pgm/optil.ml" 56 1667 1714
+type(
+  Cil.location
+)
+ident(
+  int_ref dummy_location "pgm/optil.ml" 46 1242 1246 "pgm/optil.ml" 46 1242 1260
+)
+"pgm/optil.ml" 56 1667 1683 "pgm/optil.ml" 56 1667 1715
+type(
+  IntraCfg.Cmd.t
+)
+"pgm/optil.ml" 57 1719 1727 "pgm/optil.ml" 57 1719 1748
+type(
+  IntraCfg.node -> IntraCfg.cmd -> IntraCfg.node -> IntraCfg.t -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.add_new_node
+)
+"pgm/optil.ml" 57 1719 1749 "pgm/optil.ml" 57 1719 1754
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref entry "pgm/optil.ml" 53 1506 1516 "pgm/optil.ml" 53 1506 1521
+)
+"pgm/optil.ml" 57 1719 1755 "pgm/optil.ml" 57 1719 1758
+type(
+  IntraCfg.cmd
+)
+ident(
+  int_ref cmd "pgm/optil.ml" 56 1667 1677 "pgm/optil.ml" 56 1667 1680
+)
+"pgm/optil.ml" 57 1719 1759 "pgm/optil.ml" 57 1719 1763
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref next "pgm/optil.ml" 55 1612 1622 "pgm/optil.ml" 55 1612 1626
+)
+"pgm/optil.ml" 57 1719 1764 "pgm/optil.ml" 57 1719 1765
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref g "pgm/optil.ml" 52 1471 1501 "pgm/optil.ml" 52 1471 1502
+)
+"pgm/optil.ml" 57 1719 1727 "pgm/optil.ml" 57 1719 1765
+call(
+  tail
+)
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 56 1667 1673 "pgm/optil.ml" 57 1719 1765
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 55 1612 1618 "pgm/optil.ml" 57 1719 1765
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 54 1546 1552 "pgm/optil.ml" 57 1719 1765
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 53 1506 1512 "pgm/optil.ml" 57 1719 1765
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 52 1471 1488 "pgm/optil.ml" 58 1766 1771
+type(
+  string -> Cil.lval -> IntraCfg.t -> IntraCfg.t
+)
+"pgm/optil.ml" 58 1766 1772 "pgm/optil.ml" 58 1766 1778
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  int_ref strmap "pgm/optil.ml" 49 1371 1381 "pgm/optil.ml" 49 1371 1387
+)
+"pgm/optil.ml" 58 1766 1779 "pgm/optil.ml" 58 1766 1782
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref _G_ "pgm/optil.ml" 50 1391 1397 "pgm/optil.ml" 50 1391 1400
+)
+"pgm/optil.ml" 52 1471 1475 "pgm/optil.ml" 58 1766 1782
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/optil.ml" 59 1786 1790 "pgm/optil.ml" 59 1786 1794
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 49 1371 1376 "pgm/optil.ml" 49 1371 1380
+)
+"pgm/optil.ml" 59 1786 1816 "pgm/optil.ml" 59 1786 1826
+type(
+  InterCfg.pid ->
+  IntraCfg.t ->
+  (InterCfg.pid, IntraCfg.t) BatMap.t -> (InterCfg.pid, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pgm/optil.ml" 59 1786 1827 "pgm/optil.ml" 59 1786 1847
+type(
+  InterCfg.pid
+)
+ident(
+  ext_ref InterCfg.global_proc
+)
+"pgm/optil.ml" 59 1786 1848 "pgm/optil.ml" 59 1786 1863
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref _G_with_sallocs "pgm/optil.ml" 51 1447 1452 "pgm/optil.ml" 51 1447 1467
+)
+"pgm/optil.ml" 59 1786 1864 "pgm/optil.ml" 59 1786 1868
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 49 1371 1376 "pgm/optil.ml" 49 1371 1380
+)
+"pgm/optil.ml" 59 1786 1864 "pgm/optil.ml" 59 1786 1882
+type(
+  (InterCfg.pid, IntraCfg.t) BatMap.t
+)
+"pgm/optil.ml" 59 1786 1816 "pgm/optil.ml" 59 1786 1882
+call(
+  stack
+)
+type(
+  (InterCfg.pid, IntraCfg.t) BatMap.t
+)
+"pgm/optil.ml" 59 1786 1788 "pgm/optil.ml" 59 1786 1883
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 51 1447 1448 "pgm/optil.ml" 59 1786 1883
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 50 1391 1393 "pgm/optil.ml" 59 1786 1883
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 49 1371 1372 "pgm/optil.ml" 59 1786 1883
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+"pgm/optil.ml" 61 1885 1889 "pgm/optil.ml" 61 1885 1899
+type(
+  InterCfg.t -> InterCfg.t
+)
+ident(
+  def opt_salloc "pgm/optil.ml" 69 2106 2106 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 62 1927 1932 "pgm/optil.ml" 62 1927 1936
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 63 1941 1943 "pgm/optil.ml" 67 2096 2104
+)
+"pgm/optil.ml" 63 1941 1947 "pgm/optil.ml" 63 1941 1951
+type(
+  string BatSet.t
+)
+ident(
+  def strs "pgm/optil.ml" 64 1975 1977 "pgm/optil.ml" 67 2096 2104
+)
+"pgm/optil.ml" 63 1941 1954 "pgm/optil.ml" 63 1941 1966
+type(
+  InterCfg.t -> string BatSet.t
+)
+ident(
+  int_ref collect_strs "pgm/optil.ml" 13 254 258 "pgm/optil.ml" 13 254 270
+)
+"pgm/optil.ml" 63 1941 1967 "pgm/optil.ml" 63 1941 1971
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 62 1927 1932 "pgm/optil.ml" 62 1927 1936
+)
+"pgm/optil.ml" 63 1941 1954 "pgm/optil.ml" 63 1941 1971
+call(
+  stack
+)
+type(
+  string BatSet.t
+)
+"pgm/optil.ml" 64 1975 1981 "pgm/optil.ml" 64 1975 1987
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  def strmap "pgm/optil.ml" 65 2011 2013 "pgm/optil.ml" 67 2096 2104
+)
+"pgm/optil.ml" 64 1975 1990 "pgm/optil.ml" 64 1975 2002
+type(
+  string BatSet.t -> (string, Cil.lval) BatMap.t
+)
+ident(
+  int_ref build_strmap "pgm/optil.ml" 26 580 584 "pgm/optil.ml" 26 580 596
+)
+"pgm/optil.ml" 64 1975 2003 "pgm/optil.ml" 64 1975 2007
+type(
+  string BatSet.t
+)
+ident(
+  int_ref strs "pgm/optil.ml" 63 1941 1947 "pgm/optil.ml" 63 1941 1951
+)
+"pgm/optil.ml" 64 1975 1990 "pgm/optil.ml" 64 1975 2007
+call(
+  stack
+)
+type(
+  (string, Cil.lval) BatMap.t
+)
+"pgm/optil.ml" 65 2011 2017 "pgm/optil.ml" 65 2011 2021
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 66 2054 2056 "pgm/optil.ml" 67 2096 2104
+)
+"pgm/optil.ml" 65 2011 2024 "pgm/optil.ml" 65 2011 2038
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+ident(
+  int_ref replace_salloc "pgm/optil.ml" 34 844 848 "pgm/optil.ml" 34 844 862
+)
+"pgm/optil.ml" 65 2011 2039 "pgm/optil.ml" 65 2011 2043
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 62 1927 1932 "pgm/optil.ml" 62 1927 1936
+)
+"pgm/optil.ml" 65 2011 2044 "pgm/optil.ml" 65 2011 2050
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  int_ref strmap "pgm/optil.ml" 64 1975 1981 "pgm/optil.ml" 64 1975 1987
+)
+"pgm/optil.ml" 65 2011 2024 "pgm/optil.ml" 65 2011 2050
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 66 2054 2060 "pgm/optil.ml" 66 2054 2064
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 67 2096 2100 "pgm/optil.ml" 67 2096 2104
+)
+"pgm/optil.ml" 66 2054 2067 "pgm/optil.ml" 66 2054 2080
+type(
+  InterCfg.t -> (string, Cil.lval) BatMap.t -> InterCfg.t
+)
+ident(
+  int_ref insert_salloc "pgm/optil.ml" 48 1298 1302 "pgm/optil.ml" 48 1298 1315
+)
+"pgm/optil.ml" 66 2054 2081 "pgm/optil.ml" 66 2054 2085
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 65 2011 2017 "pgm/optil.ml" 65 2011 2021
+)
+"pgm/optil.ml" 66 2054 2086 "pgm/optil.ml" 66 2054 2092
+type(
+  (string, Cil.lval) BatMap.t
+)
+ident(
+  int_ref strmap "pgm/optil.ml" 64 1975 1981 "pgm/optil.ml" 64 1975 1987
+)
+"pgm/optil.ml" 66 2054 2067 "pgm/optil.ml" 66 2054 2092
+call(
+  tail
+)
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 67 2096 2100 "pgm/optil.ml" 67 2096 2104
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 66 2054 2060 "pgm/optil.ml" 66 2054 2064
+)
+"pgm/optil.ml" 66 2054 2056 "pgm/optil.ml" 67 2096 2104
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 65 2011 2013 "pgm/optil.ml" 67 2096 2104
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 64 1975 1977 "pgm/optil.ml" 67 2096 2104
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 63 1941 1943 "pgm/optil.ml" 67 2096 2104
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 62 1927 1928 "pgm/optil.ml" 67 2096 2104
+type(
+  InterCfg.t -> InterCfg.t
+)
+type(
+  InterCfg.t -> InterCfg.t
+)
+"pgm/optil.ml" 69 2106 2110 "pgm/optil.ml" 69 2106 2117
+type(
+  InterCfg.t -> InterCfg.t
+)
+ident(
+  def perform "pgm/optil.ml" 75 2231 2295 "pgm/optil.ml" 1 0 -1
+)
+"pgm/optil.ml" 70 2145 2150 "pgm/optil.ml" 70 2145 2154
+type(
+  InterCfg.t
+)
+ident(
+  def icfg "pgm/optil.ml" 71 2158 2158 "pgm/optil.ml" 75 2231 2295
+)
+"pgm/optil.ml" 72 2162 2164 "pgm/optil.ml" 72 2162 2168
+type(
+  InterCfg.t
+)
+ident(
+  int_ref icfg "pgm/optil.ml" 70 2145 2150 "pgm/optil.ml" 70 2145 2154
+)
+"pgm/optil.ml" 73 2170 2172 "pgm/optil.ml" 73 2170 2174
+type(
+  InterCfg.t -> (InterCfg.t -> InterCfg.t) -> InterCfg.t
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"pgm/optil.ml" 73 2170 2179 "pgm/optil.ml" 73 2170 2180
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"pgm/optil.ml" 73 2170 2180 "pgm/optil.ml" 73 2170 2197
+type(
+  bool ref
+)
+ident(
+  ext_ref Options.opt_optil
+)
+"pgm/optil.ml" 73 2170 2179 "pgm/optil.ml" 73 2170 2197
+type(
+  bool
+)
+"pgm/optil.ml" 73 2170 2203 "pgm/optil.ml" 73 2170 2213
+type(
+  InterCfg.t -> InterCfg.t
+)
+ident(
+  int_ref opt_salloc "pgm/optil.ml" 61 1885 1889 "pgm/optil.ml" 61 1885 1899
+)
+"pgm/optil.ml" 73 2170 2219 "pgm/optil.ml" 73 2170 2221
+type(
+  InterCfg.t -> InterCfg.t
+)
+ident(
+  ext_ref Vocab.id
+)
+"pgm/optil.ml" 73 2170 2175 "pgm/optil.ml" 73 2170 2222
+type(
+  InterCfg.t -> InterCfg.t
+)
+"pgm/optil.ml" 72 2162 2164 "pgm/optil.ml" 73 2170 2222
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 74 2223 2225 "pgm/optil.ml" 74 2223 2227
+type(
+  InterCfg.t -> (InterCfg.t -> InterCfg.t) -> InterCfg.t
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"pgm/optil.ml" 74 2223 2228 "pgm/optil.ml" 74 2223 2230
+type(
+  InterCfg.t -> InterCfg.t
+)
+ident(
+  ext_ref Vocab.id
+)
+"pgm/optil.ml" 72 2162 2164 "pgm/optil.ml" 74 2223 2230
+call(
+  stack
+)
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 75 2231 2236 "pgm/optil.ml" 75 2231 2237
+type(
+  exn
+)
+"pgm/optil.ml" 75 2231 2241 "pgm/optil.ml" 75 2231 2254
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"pgm/optil.ml" 75 2231 2255 "pgm/optil.ml" 75 2231 2270
+type(
+  string
+)
+"pgm/optil.ml" 75 2231 2241 "pgm/optil.ml" 75 2231 2270
+call(
+  stack
+)
+type(
+  unit
+)
+"pgm/optil.ml" 75 2231 2272 "pgm/optil.ml" 75 2231 2277
+type(
+  exn -> InterCfg.t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"pgm/optil.ml" 75 2231 2287 "pgm/optil.ml" 75 2231 2294
+type(
+  string
+)
+"pgm/optil.ml" 75 2231 2278 "pgm/optil.ml" 75 2231 2295
+type(
+  exn
+)
+"pgm/optil.ml" 75 2231 2272 "pgm/optil.ml" 75 2231 2295
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 75 2231 2241 "pgm/optil.ml" 75 2231 2295
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 71 2158 2158 "pgm/optil.ml" 75 2231 2295
+type(
+  InterCfg.t
+)
+"pgm/optil.ml" 70 2145 2146 "pgm/optil.ml" 75 2231 2295
+type(
+  InterCfg.t -> InterCfg.t
+)
+type(
+  InterCfg.t -> InterCfg.t
+)

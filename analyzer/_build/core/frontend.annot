@@ -1,0 +1,2055 @@
+"core/frontend.ml" 7 64 68 "core/frontend.ml" 7 64 73
+type(
+  string list ref
+)
+ident(
+  def files "core/frontend.ml" 8 85 85 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 7 64 76 "core/frontend.ml" 7 64 79
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"core/frontend.ml" 7 64 80 "core/frontend.ml" 7 64 82
+type(
+  string list
+)
+"core/frontend.ml" 7 64 76 "core/frontend.ml" 7 64 82
+type(
+  string list ref
+)
+"core/frontend.ml" 8 85 89 "core/frontend.ml" 8 85 101
+type(
+  string ref
+)
+ident(
+  def marshal_file "core/frontend.ml" 10 113 113 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 8 85 104 "core/frontend.ml" 8 85 107
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"core/frontend.ml" 8 85 108 "core/frontend.ml" 8 85 110
+type(
+  string
+)
+"core/frontend.ml" 8 85 104 "core/frontend.ml" 8 85 110
+type(
+  string ref
+)
+"core/frontend.ml" 10 113 117 "core/frontend.ml" 10 113 121
+type(
+  string -> unit
+)
+ident(
+  def args "core/frontend.ml" 20 366 366 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+type(
+  string
+)
+ident(
+  def f "core/frontend.ml" 11 126 128 "core/frontend.ml" 17 321 363
+)
+"core/frontend.ml" 11 126 131 "core/frontend.ml" 11 126 146
+type(
+  string -> bool
+)
+ident(
+  ext_ref Sys.file_exists
+)
+"core/frontend.ml" 11 126 147 "core/frontend.ml" 11 126 148
+type(
+  string
+)
+ident(
+  int_ref f "core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+)
+"core/frontend.ml" 11 126 131 "core/frontend.ml" 11 126 148
+type(
+  bool
+)
+"core/frontend.ml" 12 154 161 "core/frontend.ml" 12 154 182
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Filename.check_suffix
+)
+"core/frontend.ml" 12 154 183 "core/frontend.ml" 12 154 184
+type(
+  string
+)
+ident(
+  int_ref f "core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+)
+"core/frontend.ml" 12 154 185 "core/frontend.ml" 12 154 189
+type(
+  string
+)
+"core/frontend.ml" 12 154 161 "core/frontend.ml" 12 154 189
+call(
+  stack
+)
+type(
+  bool
+)
+"core/frontend.ml" 12 154 190 "core/frontend.ml" 12 154 192
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"core/frontend.ml" 13 193 197 "core/frontend.ml" 13 193 218
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Filename.check_suffix
+)
+"core/frontend.ml" 13 193 219 "core/frontend.ml" 13 193 220
+type(
+  string
+)
+ident(
+  int_ref f "core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+)
+"core/frontend.ml" 13 193 221 "core/frontend.ml" 13 193 225
+type(
+  string
+)
+"core/frontend.ml" 13 193 197 "core/frontend.ml" 13 193 225
+call(
+  stack
+)
+type(
+  bool
+)
+"core/frontend.ml" 12 154 161 "core/frontend.ml" 13 193 225
+type(
+  bool
+)
+"core/frontend.ml" 14 231 237 "core/frontend.ml" 14 231 242
+type(
+  string list ref
+)
+ident(
+  int_ref files "core/frontend.ml" 7 64 68 "core/frontend.ml" 7 64 73
+)
+"core/frontend.ml" 14 231 243 "core/frontend.ml" 14 231 245
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"core/frontend.ml" 14 231 246 "core/frontend.ml" 14 231 247
+type(
+  string
+)
+ident(
+  int_ref f "core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+)
+"core/frontend.ml" 14 231 251 "core/frontend.ml" 14 231 252
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"core/frontend.ml" 14 231 252 "core/frontend.ml" 14 231 257
+type(
+  string list ref
+)
+ident(
+  int_ref files "core/frontend.ml" 7 64 68 "core/frontend.ml" 7 64 73
+)
+"core/frontend.ml" 14 231 251 "core/frontend.ml" 14 231 257
+type(
+  string list
+)
+"core/frontend.ml" 14 231 246 "core/frontend.ml" 14 231 257
+type(
+  string list
+)
+"core/frontend.ml" 14 231 237 "core/frontend.ml" 14 231 257
+type(
+  unit
+)
+"core/frontend.ml" 15 258 267 "core/frontend.ml" 15 258 272
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"core/frontend.ml" 15 258 283 "core/frontend.ml" 15 258 284
+type(
+  string
+)
+ident(
+  int_ref f "core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+)
+"core/frontend.ml" 15 258 285 "core/frontend.ml" 15 258 286
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 15 258 287 "core/frontend.ml" 15 258 311
+type(
+  string
+)
+"core/frontend.ml" 15 258 282 "core/frontend.ml" 15 258 312
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 15 258 273 "core/frontend.ml" 15 258 313
+type(
+  exn
+)
+"core/frontend.ml" 15 258 267 "core/frontend.ml" 15 258 313
+type(
+  unit
+)
+"core/frontend.ml" 12 154 158 "core/frontend.ml" 15 258 313
+type(
+  unit
+)
+"core/frontend.ml" 17 321 325 "core/frontend.ml" 17 321 330
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"core/frontend.ml" 17 321 341 "core/frontend.ml" 17 321 342
+type(
+  string
+)
+ident(
+  int_ref f "core/frontend.ml" 10 113 122 "core/frontend.ml" 10 113 123
+)
+"core/frontend.ml" 17 321 343 "core/frontend.ml" 17 321 344
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 17 321 345 "core/frontend.ml" 17 321 361
+type(
+  string
+)
+"core/frontend.ml" 17 321 340 "core/frontend.ml" 17 321 362
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 17 321 331 "core/frontend.ml" 17 321 363
+type(
+  exn
+)
+"core/frontend.ml" 17 321 325 "core/frontend.ml" 17 321 363
+type(
+  unit
+)
+"core/frontend.ml" 11 126 128 "core/frontend.ml" 17 321 363
+type(
+  unit
+)
+"core/frontend.ml" 20 366 370 "core/frontend.ml" 20 366 382
+type(
+  string -> C.file
+)
+ident(
+  def parseOneFile "core/frontend.ml" 30 634 634 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 20 366 384 "core/frontend.ml" 20 366 389
+type(
+  string
+)
+ident(
+  def fname "core/frontend.ml" 20 366 399 "core/frontend.ml" 28 627 632
+)
+"core/frontend.ml" 22 443 448 "core/frontend.ml" 22 443 449
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"core/frontend.ml" 22 443 449 "core/frontend.ml" 22 443 468
+type(
+  bool ref
+)
+ident(
+  ext_ref Cilutil.printStages
+)
+"core/frontend.ml" 22 443 448 "core/frontend.ml" 22 443 468
+type(
+  bool
+)
+"core/frontend.ml" 22 443 474 "core/frontend.ml" 22 443 480
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"core/frontend.ml" 22 443 482 "core/frontend.ml" 22 443 487
+type(
+  (string -> unit, unit, Pretty.doc, unit) format4 -> string -> unit
+)
+ident(
+  ext_ref E.log
+)
+"core/frontend.ml" 22 443 488 "core/frontend.ml" 22 443 502
+type(
+  (string -> unit, unit, Pretty.doc, unit) format4
+)
+"core/frontend.ml" 22 443 503 "core/frontend.ml" 22 443 508
+type(
+  string
+)
+ident(
+  int_ref fname "core/frontend.ml" 20 366 384 "core/frontend.ml" 20 366 389
+)
+"core/frontend.ml" 22 443 481 "core/frontend.ml" 22 443 509
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 22 443 474 "core/frontend.ml" 22 443 509
+type(
+  unit
+)
+"core/frontend.ml" 22 443 445 "core/frontend.ml" 22 443 509
+type(
+  unit
+)
+"core/frontend.ml" 23 511 517 "core/frontend.ml" 23 511 520
+type(
+  Cil.file
+)
+ident(
+  def cil "core/frontend.ml" 25 546 548 "core/frontend.ml" 28 627 632
+)
+"core/frontend.ml" 23 511 523 "core/frontend.ml" 23 511 530
+type(
+  string -> unit -> Cil.file
+)
+ident(
+  ext_ref F.parse
+)
+"core/frontend.ml" 23 511 531 "core/frontend.ml" 23 511 536
+type(
+  string
+)
+ident(
+  int_ref fname "core/frontend.ml" 20 366 384 "core/frontend.ml" 20 366 389
+)
+"core/frontend.ml" 23 511 537 "core/frontend.ml" 23 511 539
+type(
+  unit
+)
+"core/frontend.ml" 23 511 523 "core/frontend.ml" 23 511 539
+call(
+  stack
+)
+type(
+  Cil.file
+)
+"core/frontend.ml" 25 546 552 "core/frontend.ml" 25 546 555
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"core/frontend.ml" 25 546 556 "core/frontend.ml" 25 546 557
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"core/frontend.ml" 25 546 557 "core/frontend.ml" 25 546 578
+type(
+  bool ref
+)
+ident(
+  ext_ref Epicenter.doEpicenter
+)
+"core/frontend.ml" 25 546 556 "core/frontend.ml" 25 546 578
+type(
+  bool
+)
+"core/frontend.ml" 25 546 551 "core/frontend.ml" 25 546 579
+type(
+  bool
+)
+"core/frontend.ml" 26 587 592 "core/frontend.ml" 26 587 616
+type(
+  ?isRoot:Rmtmps.rootsFilter -> Cil.file -> unit
+)
+ident(
+  ext_ref Rmtmps.removeUnusedTemps
+)
+"core/frontend.ml" 26 587 617 "core/frontend.ml" 26 587 620
+type(
+  Cil.file
+)
+ident(
+  int_ref cil "core/frontend.ml" 23 511 517 "core/frontend.ml" 23 511 520
+)
+"core/frontend.ml" 25 546 585 "core/frontend.ml" 27 622 625
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 25 546 548 "core/frontend.ml" 27 622 625
+type(
+  unit
+)
+"core/frontend.ml" 28 627 629 "core/frontend.ml" 28 627 632
+type(
+  C.file
+)
+ident(
+  int_ref cil "core/frontend.ml" 23 511 517 "core/frontend.ml" 23 511 520
+)
+"core/frontend.ml" 25 546 548 "core/frontend.ml" 28 627 632
+type(
+  C.file
+)
+"core/frontend.ml" 23 511 513 "core/frontend.ml" 28 627 632
+type(
+  C.file
+)
+"core/frontend.ml" 22 443 445 "core/frontend.ml" 28 627 632
+type(
+  C.file
+)
+type(
+  C.file
+)
+"core/frontend.ml" 30 634 638 "core/frontend.ml" 30 634 653
+type(
+  unit -> C.file
+)
+ident(
+  def parse_and_merge "core/frontend.ml" 42 1056 1056 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 30 634 654 "core/frontend.ml" 30 634 656
+type(
+  unit
+)
+"core/frontend.ml" 31 659 667 "core/frontend.ml" 31 659 675
+type(
+  (string -> C.file) -> string list -> C.file list
+)
+ident(
+  ext_ref List.map
+)
+"core/frontend.ml" 31 659 676 "core/frontend.ml" 31 659 688
+type(
+  string -> C.file
+)
+ident(
+  int_ref parseOneFile "core/frontend.ml" 20 366 370 "core/frontend.ml" 20 366 382
+)
+"core/frontend.ml" 31 659 689 "core/frontend.ml" 31 659 690
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"core/frontend.ml" 31 659 690 "core/frontend.ml" 31 659 695
+type(
+  string list ref
+)
+ident(
+  int_ref files "core/frontend.ml" 7 64 68 "core/frontend.ml" 7 64 73
+)
+"core/frontend.ml" 31 659 689 "core/frontend.ml" 31 659 695
+type(
+  string list
+)
+"core/frontend.ml" 31 659 667 "core/frontend.ml" 31 659 695
+call(
+  stack
+)
+type(
+  C.file list
+)
+"core/frontend.ml" 32 701 706 "core/frontend.ml" 32 701 709
+type(
+  C.file
+)
+ident(
+  def one "core/frontend.ml" 32 701 714 "core/frontend.ml" 32 701 717
+)
+"core/frontend.ml" 32 701 705 "core/frontend.ml" 32 701 710
+type(
+  C.file list
+)
+"core/frontend.ml" 32 701 714 "core/frontend.ml" 32 701 717
+type(
+  C.file
+)
+ident(
+  int_ref one "core/frontend.ml" 32 701 706 "core/frontend.ml" 32 701 709
+)
+"core/frontend.ml" 33 718 722 "core/frontend.ml" 33 718 724
+type(
+  C.file list
+)
+"core/frontend.ml" 33 718 728 "core/frontend.ml" 33 718 731
+type(
+  unit -> C.file
+)
+ident(
+  ext_ref E.s
+)
+"core/frontend.ml" 33 718 733 "core/frontend.ml" 33 718 740
+type(
+  (unit, unit, Pretty.doc, unit) format4 -> unit
+)
+ident(
+  ext_ref E.error
+)
+"core/frontend.ml" 33 718 741 "core/frontend.ml" 33 718 765
+type(
+  (unit, unit, Pretty.doc, unit) format4
+)
+"core/frontend.ml" 33 718 732 "core/frontend.ml" 33 718 766
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 33 718 728 "core/frontend.ml" 33 718 766
+call(
+  tail
+)
+type(
+  C.file
+)
+"core/frontend.ml" 34 767 771 "core/frontend.ml" 34 767 776
+type(
+  C.file list
+)
+ident(
+  def files "core/frontend.ml" 36 841 845 "core/frontend.ml" 40 1042 1054
+)
+"core/frontend.ml" 36 841 845 "core/frontend.ml" 36 841 876
+type(
+  bool ref
+)
+ident(
+  ext_ref Mergecil.ignore_merge_conflicts
+)
+"core/frontend.ml" 36 841 877 "core/frontend.ml" 36 841 879
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"core/frontend.ml" 36 841 880 "core/frontend.ml" 36 841 884
+type(
+  bool
+)
+"core/frontend.ml" 36 841 845 "core/frontend.ml" 36 841 884
+type(
+  unit
+)
+"core/frontend.ml" 37 886 894 "core/frontend.ml" 37 886 900
+type(
+  Cil.file
+)
+ident(
+  def merged "core/frontend.ml" 38 957 963 "core/frontend.ml" 40 1042 1054
+)
+"core/frontend.ml" 37 886 903 "core/frontend.ml" 37 886 913
+type(
+  string -> (string -> Cil.file) -> string -> Cil.file
+)
+ident(
+  ext_ref Stats.time
+)
+"core/frontend.ml" 37 886 914 "core/frontend.ml" 37 886 921
+type(
+  string
+)
+"core/frontend.ml" 37 886 923 "core/frontend.ml" 37 886 937
+type(
+  C.file list -> string -> Cil.file
+)
+ident(
+  ext_ref Mergecil.merge
+)
+"core/frontend.ml" 37 886 938 "core/frontend.ml" 37 886 943
+type(
+  C.file list
+)
+ident(
+  int_ref files "core/frontend.ml" 34 767 771 "core/frontend.ml" 34 767 776
+)
+"core/frontend.ml" 37 886 922 "core/frontend.ml" 37 886 944
+call(
+  stack
+)
+type(
+  string -> Cil.file
+)
+"core/frontend.ml" 37 886 945 "core/frontend.ml" 37 886 953
+type(
+  string
+)
+"core/frontend.ml" 37 886 903 "core/frontend.ml" 37 886 953
+call(
+  stack
+)
+type(
+  Cil.file
+)
+"core/frontend.ml" 38 957 966 "core/frontend.ml" 38 957 967
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"core/frontend.ml" 38 957 967 "core/frontend.ml" 38 957 978
+type(
+  bool ref
+)
+ident(
+  ext_ref E.hadErrors
+)
+"core/frontend.ml" 38 957 966 "core/frontend.ml" 38 957 978
+type(
+  bool
+)
+"core/frontend.ml" 39 984 992 "core/frontend.ml" 39 984 995
+type(
+  unit -> unit
+)
+ident(
+  ext_ref E.s
+)
+"core/frontend.ml" 39 984 997 "core/frontend.ml" 39 984 1004
+type(
+  (unit, unit, Pretty.doc, unit) format4 -> unit
+)
+ident(
+  ext_ref E.error
+)
+"core/frontend.ml" 39 984 1005 "core/frontend.ml" 39 984 1039
+type(
+  (unit, unit, Pretty.doc, unit) format4
+)
+"core/frontend.ml" 39 984 996 "core/frontend.ml" 39 984 1040
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 39 984 992 "core/frontend.ml" 39 984 1040
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 38 957 963 "core/frontend.ml" 39 984 1040
+type(
+  unit
+)
+"core/frontend.ml" 40 1042 1048 "core/frontend.ml" 40 1042 1054
+type(
+  C.file
+)
+ident(
+  int_ref merged "core/frontend.ml" 37 886 894 "core/frontend.ml" 37 886 900
+)
+"core/frontend.ml" 38 957 963 "core/frontend.ml" 40 1042 1054
+type(
+  C.file
+)
+"core/frontend.ml" 37 886 890 "core/frontend.ml" 40 1042 1054
+type(
+  C.file
+)
+"core/frontend.ml" 36 841 845 "core/frontend.ml" 40 1042 1054
+type(
+  C.file
+)
+"core/frontend.ml" 31 659 661 "core/frontend.ml" 40 1042 1054
+type(
+  C.file
+)
+"core/frontend.ml" 42 1056 1060 "core/frontend.ml" 42 1056 1071
+type(
+  Cil.file -> unit
+)
+ident(
+  def makeCFGinfo "core/frontend.ml" 55 1478 1478 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 43 1091 1096 "core/frontend.ml" 43 1091 1097
+type(
+  Cil.file
+)
+ident(
+  def f "core/frontend.ml" 44 1102 1104 "core/frontend.ml" 52 1396 1410
+)
+"core/frontend.ml" 44 1102 1104 "core/frontend.ml" 44 1102 1110
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"core/frontend.ml" 44 1102 1112 "core/frontend.ml" 44 1102 1142
+type(
+  Cil.file -> unit
+)
+ident(
+  ext_ref Partial.calls_end_basic_blocks
+)
+"core/frontend.ml" 44 1102 1143 "core/frontend.ml" 44 1102 1144
+type(
+  Cil.file
+)
+ident(
+  int_ref f "core/frontend.ml" 43 1091 1096 "core/frontend.ml" 43 1091 1097
+)
+"core/frontend.ml" 44 1102 1111 "core/frontend.ml" 44 1102 1145
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 44 1102 1104 "core/frontend.ml" 44 1102 1145
+type(
+  unit
+)
+"core/frontend.ml" 45 1149 1151 "core/frontend.ml" 45 1149 1157
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"core/frontend.ml" 45 1149 1159 "core/frontend.ml" 45 1149 1187
+type(
+  Cil.file -> unit
+)
+ident(
+  ext_ref Partial.globally_unique_vids
+)
+"core/frontend.ml" 45 1149 1188 "core/frontend.ml" 45 1149 1189
+type(
+  Cil.file
+)
+ident(
+  int_ref f "core/frontend.ml" 43 1091 1096 "core/frontend.ml" 43 1091 1097
+)
+"core/frontend.ml" 45 1149 1158 "core/frontend.ml" 45 1149 1190
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 45 1149 1151 "core/frontend.ml" 45 1149 1190
+type(
+  unit
+)
+"core/frontend.ml" 46 1194 1196 "core/frontend.ml" 46 1194 1211
+type(
+  Cil.file -> (Cil.global -> unit) -> unit
+)
+ident(
+  ext_ref Cil.iterGlobals
+)
+"core/frontend.ml" 46 1194 1212 "core/frontend.ml" 46 1194 1213
+type(
+  Cil.file
+)
+ident(
+  int_ref f "core/frontend.ml" 43 1091 1096 "core/frontend.ml" 43 1091 1097
+)
+"core/frontend.ml" 46 1194 1219 "core/frontend.ml" 46 1194 1223
+type(
+  Cil.global
+)
+ident(
+  def glob "core/frontend.ml" 47 1228 1232 "core/frontend.ml" 52 1396 1409
+)
+"core/frontend.ml" 47 1228 1238 "core/frontend.ml" 47 1228 1242
+type(
+  Cil.global
+)
+ident(
+  int_ref glob "core/frontend.ml" 46 1194 1219 "core/frontend.ml" 46 1194 1223
+)
+"core/frontend.ml" 48 1248 1261 "core/frontend.ml" 48 1248 1263
+type(
+  Cil.fundec
+)
+ident(
+  def fd "core/frontend.ml" 49 1271 1277 "core/frontend.ml" 51 1354 1395
+)
+"core/frontend.ml" 48 1248 1264 "core/frontend.ml" 48 1248 1265
+type(
+  Cil.location
+)
+"core/frontend.ml" 48 1248 1252 "core/frontend.ml" 48 1248 1266
+type(
+  Cil.global
+)
+"core/frontend.ml" 49 1271 1277 "core/frontend.ml" 49 1271 1291
+type(
+  Cil.fundec -> unit
+)
+ident(
+  ext_ref Cil.prepareCFG
+)
+"core/frontend.ml" 49 1271 1292 "core/frontend.ml" 49 1271 1294
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "core/frontend.ml" 48 1248 1261 "core/frontend.ml" 48 1248 1263
+)
+"core/frontend.ml" 49 1271 1277 "core/frontend.ml" 49 1271 1294
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 51 1354 1360 "core/frontend.ml" 51 1354 1366
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Pervasives.ignore
+)
+"core/frontend.ml" 51 1354 1368 "core/frontend.ml" 51 1354 1386
+type(
+  Cil.fundec -> bool -> unit
+)
+ident(
+  ext_ref Cil.computeCFGInfo
+)
+"core/frontend.ml" 51 1354 1387 "core/frontend.ml" 51 1354 1389
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "core/frontend.ml" 48 1248 1261 "core/frontend.ml" 48 1248 1263
+)
+"core/frontend.ml" 51 1354 1390 "core/frontend.ml" 51 1354 1394
+type(
+  bool
+)
+"core/frontend.ml" 51 1354 1367 "core/frontend.ml" 51 1354 1395
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 51 1354 1360 "core/frontend.ml" 51 1354 1395
+type(
+  unit
+)
+"core/frontend.ml" 49 1271 1277 "core/frontend.ml" 51 1354 1395
+type(
+  unit
+)
+"core/frontend.ml" 52 1396 1402 "core/frontend.ml" 52 1396 1403
+type(
+  Cil.global
+)
+"core/frontend.ml" 52 1396 1407 "core/frontend.ml" 52 1396 1409
+type(
+  unit
+)
+"core/frontend.ml" 47 1228 1232 "core/frontend.ml" 52 1396 1409
+type(
+  unit
+)
+"core/frontend.ml" 46 1194 1214 "core/frontend.ml" 52 1396 1410
+type(
+  Cil.global -> unit
+)
+"core/frontend.ml" 46 1194 1196 "core/frontend.ml" 52 1396 1410
+call(
+  tail
+)
+type(
+  unit
+)
+"core/frontend.ml" 45 1149 1151 "core/frontend.ml" 52 1396 1410
+type(
+  unit
+)
+"core/frontend.ml" 44 1102 1104 "core/frontend.ml" 52 1396 1410
+type(
+  unit
+)
+"core/frontend.ml" 43 1091 1092 "core/frontend.ml" 52 1396 1410
+type(
+  Cil.file -> unit
+)
+type(
+  Cil.file -> unit
+)
+"core/frontend.ml" 55 1478 1482 "core/frontend.ml" 55 1478 1492
+type(
+  string -> Cil.file -> bool
+)
+ident(
+  def is_varargs "core/frontend.ml" 66 1760 1760 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 56 1522 1527 "core/frontend.ml" 56 1522 1530
+type(
+  string
+)
+ident(
+  def fid "core/frontend.ml" 56 1522 1531 "core/frontend.ml" 64 1749 1758
+)
+"core/frontend.ml" 56 1522 1531 "core/frontend.ml" 56 1522 1535
+type(
+  Cil.file
+)
+ident(
+  def file "core/frontend.ml" 57 1539 1541 "core/frontend.ml" 64 1749 1758
+)
+"core/frontend.ml" 57 1539 1541 "core/frontend.ml" 57 1539 1556
+type(
+  Cil.file -> (bool -> Cil.global -> bool) -> bool -> bool
+)
+ident(
+  ext_ref Cil.foldGlobals
+)
+"core/frontend.ml" 57 1539 1557 "core/frontend.ml" 57 1539 1561
+type(
+  Cil.file
+)
+ident(
+  int_ref file "core/frontend.ml" 56 1522 1531 "core/frontend.ml" 56 1522 1535
+)
+"core/frontend.ml" 57 1539 1567 "core/frontend.ml" 57 1539 1568
+type(
+  bool
+)
+ident(
+  def b "core/frontend.ml" 57 1539 1569 "core/frontend.ml" 63 1736 1748
+)
+"core/frontend.ml" 57 1539 1569 "core/frontend.ml" 57 1539 1575
+type(
+  Cil.global
+)
+ident(
+  def global "core/frontend.ml" 58 1580 1584 "core/frontend.ml" 63 1736 1748
+)
+"core/frontend.ml" 58 1580 1590 "core/frontend.ml" 58 1580 1596
+type(
+  Cil.global
+)
+ident(
+  int_ref global "core/frontend.ml" 57 1539 1569 "core/frontend.ml" 57 1539 1575
+)
+"core/frontend.ml" 59 1602 1614 "core/frontend.ml" 59 1602 1616
+type(
+  Cil.fundec
+)
+ident(
+  def fd "core/frontend.ml" 59 1602 1625 "core/frontend.ml" 62 1718 1735
+)
+"core/frontend.ml" 59 1602 1617 "core/frontend.ml" 59 1602 1618
+type(
+  Cil.location
+)
+"core/frontend.ml" 59 1602 1608 "core/frontend.ml" 59 1602 1619
+type(
+  Cil.global
+)
+"core/frontend.ml" 59 1602 1625 "core/frontend.ml" 59 1602 1627
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "core/frontend.ml" 59 1602 1614 "core/frontend.ml" 59 1602 1616
+)
+"core/frontend.ml" 59 1602 1625 "core/frontend.ml" 59 1602 1632
+type(
+  Cil.varinfo
+)
+"core/frontend.ml" 59 1602 1625 "core/frontend.ml" 59 1602 1638
+type(
+  string
+)
+"core/frontend.ml" 59 1602 1639 "core/frontend.ml" 59 1602 1640
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"core/frontend.ml" 59 1602 1641 "core/frontend.ml" 59 1602 1644
+type(
+  string
+)
+ident(
+  int_ref fid "core/frontend.ml" 56 1522 1527 "core/frontend.ml" 56 1522 1530
+)
+"core/frontend.ml" 59 1602 1625 "core/frontend.ml" 59 1602 1644
+type(
+  bool
+)
+"core/frontend.ml" 60 1648 1663 "core/frontend.ml" 60 1648 1665
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "core/frontend.ml" 59 1602 1614 "core/frontend.ml" 59 1602 1616
+)
+"core/frontend.ml" 60 1648 1663 "core/frontend.ml" 60 1648 1670
+type(
+  Cil.varinfo
+)
+"core/frontend.ml" 60 1648 1663 "core/frontend.ml" 60 1648 1676
+type(
+  Cil.typ
+)
+"core/frontend.ml" 61 1682 1698 "core/frontend.ml" 61 1682 1699
+type(
+  Cil.typ
+)
+"core/frontend.ml" 61 1682 1700 "core/frontend.ml" 61 1682 1701
+type(
+  (string * Cil.typ * Cil.attributes) list option
+)
+"core/frontend.ml" 61 1682 1702 "core/frontend.ml" 61 1682 1706
+type(
+  bool
+)
+ident(
+  def b_va "core/frontend.ml" 61 1682 1713 "core/frontend.ml" 61 1682 1717
+)
+"core/frontend.ml" 61 1682 1707 "core/frontend.ml" 61 1682 1708
+type(
+  Cil.attributes
+)
+"core/frontend.ml" 61 1682 1692 "core/frontend.ml" 61 1682 1709
+type(
+  Cil.typ
+)
+"core/frontend.ml" 61 1682 1713 "core/frontend.ml" 61 1682 1717
+type(
+  bool
+)
+ident(
+  int_ref b_va "core/frontend.ml" 61 1682 1702 "core/frontend.ml" 61 1682 1706
+)
+"core/frontend.ml" 62 1718 1728 "core/frontend.ml" 62 1718 1729
+type(
+  Cil.typ
+)
+"core/frontend.ml" 62 1718 1733 "core/frontend.ml" 62 1718 1734
+type(
+  bool
+)
+ident(
+  int_ref b "core/frontend.ml" 57 1539 1567 "core/frontend.ml" 57 1539 1568
+)
+"core/frontend.ml" 60 1648 1656 "core/frontend.ml" 62 1718 1735
+type(
+  bool
+)
+"core/frontend.ml" 63 1736 1742 "core/frontend.ml" 63 1736 1743
+type(
+  Cil.global
+)
+"core/frontend.ml" 63 1736 1747 "core/frontend.ml" 63 1736 1748
+type(
+  bool
+)
+ident(
+  int_ref b "core/frontend.ml" 57 1539 1567 "core/frontend.ml" 57 1539 1568
+)
+"core/frontend.ml" 58 1580 1584 "core/frontend.ml" 63 1736 1748
+type(
+  bool
+)
+"core/frontend.ml" 57 1539 1562 "core/frontend.ml" 64 1749 1752
+type(
+  bool -> Cil.global -> bool
+)
+"core/frontend.ml" 64 1749 1753 "core/frontend.ml" 64 1749 1758
+type(
+  bool
+)
+"core/frontend.ml" 57 1539 1541 "core/frontend.ml" 64 1749 1758
+call(
+  tail
+)
+type(
+  bool
+)
+"core/frontend.ml" 56 1522 1523 "core/frontend.ml" 64 1749 1758
+type(
+  string -> Cil.file -> bool
+)
+type(
+  string -> Cil.file -> bool
+)
+"core/frontend.ml" 66 1760 1764 "core/frontend.ml" 66 1760 1770
+type(
+  string BatSet.t ->
+  string list -> Cil.file -> (InterCfg.pid -> bool) -> bool
+)
+ident(
+  def inline "core/frontend.ml" 85 2905 2934 "core/frontend.ml" 1 0 -1
+)
+"core/frontend.ml" 67 1850 1855 "core/frontend.ml" 67 1850 1865
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  def candidates "core/frontend.ml" 67 1850 1866 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 67 1850 1866 "core/frontend.ml" 67 1850 1871
+type(
+  string list
+)
+ident(
+  def slist "core/frontend.ml" 67 1850 1872 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 67 1850 1872 "core/frontend.ml" 67 1850 1873
+type(
+  Cil.file
+)
+ident(
+  def f "core/frontend.ml" 67 1850 1874 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 67 1850 1874 "core/frontend.ml" 67 1850 1886
+type(
+  InterCfg.pid -> bool
+)
+ident(
+  def is_recursive "core/frontend.ml" 68 1890 1892 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 68 1890 1896 "core/frontend.ml" 68 1890 1903
+type(
+  Str.regexp list
+)
+ident(
+  def regexps "core/frontend.ml" 69 1968 1970 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 68 1890 1906 "core/frontend.ml" 68 1890 1914
+type(
+  (string -> Str.regexp) -> string list -> Str.regexp list
+)
+ident(
+  ext_ref List.map
+)
+"core/frontend.ml" 68 1890 1920 "core/frontend.ml" 68 1890 1923
+type(
+  string
+)
+ident(
+  def str "core/frontend.ml" 68 1890 1927 "core/frontend.ml" 68 1890 1957
+)
+"core/frontend.ml" 68 1890 1927 "core/frontend.ml" 68 1890 1937
+type(
+  string -> Str.regexp
+)
+ident(
+  ext_ref Str.regexp
+)
+"core/frontend.ml" 68 1890 1939 "core/frontend.ml" 68 1890 1943
+type(
+  string
+)
+"core/frontend.ml" 68 1890 1944 "core/frontend.ml" 68 1890 1945
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 68 1890 1946 "core/frontend.ml" 68 1890 1949
+type(
+  string
+)
+ident(
+  int_ref str "core/frontend.ml" 68 1890 1920 "core/frontend.ml" 68 1890 1923
+)
+"core/frontend.ml" 68 1890 1950 "core/frontend.ml" 68 1890 1951
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 68 1890 1952 "core/frontend.ml" 68 1890 1956
+type(
+  string
+)
+"core/frontend.ml" 68 1890 1946 "core/frontend.ml" 68 1890 1956
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 68 1890 1938 "core/frontend.ml" 68 1890 1957
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 68 1890 1927 "core/frontend.ml" 68 1890 1957
+call(
+  tail
+)
+type(
+  Str.regexp
+)
+"core/frontend.ml" 68 1890 1915 "core/frontend.ml" 68 1890 1958
+type(
+  string -> Str.regexp
+)
+"core/frontend.ml" 68 1890 1959 "core/frontend.ml" 68 1890 1964
+type(
+  string list
+)
+ident(
+  int_ref slist "core/frontend.ml" 67 1850 1866 "core/frontend.ml" 67 1850 1871
+)
+"core/frontend.ml" 68 1890 1906 "core/frontend.ml" 68 1890 1964
+call(
+  stack
+)
+type(
+  Str.regexp list
+)
+"core/frontend.ml" 69 1968 1974 "core/frontend.ml" 69 1968 1983
+type(
+  string list
+)
+ident(
+  def to_inline "core/frontend.ml" 76 2241 2243 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 70 1987 1991 "core/frontend.ml" 70 1987 2006
+type(
+  (Cil.global -> string list -> string list) ->
+  Cil.global list -> string list -> string list
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"core/frontend.ml" 70 1987 2012 "core/frontend.ml" 70 1987 2018
+type(
+  Cil.global
+)
+ident(
+  def global "core/frontend.ml" 70 1987 2019 "core/frontend.ml" 74 2196 2218
+)
+"core/frontend.ml" 70 1987 2019 "core/frontend.ml" 70 1987 2028
+type(
+  string list
+)
+ident(
+  def to_inline "core/frontend.ml" 71 2032 2038 "core/frontend.ml" 74 2196 2218
+)
+"core/frontend.ml" 71 2032 2044 "core/frontend.ml" 71 2032 2050
+type(
+  Cil.global
+)
+ident(
+  int_ref global "core/frontend.ml" 70 1987 2012 "core/frontend.ml" 70 1987 2018
+)
+"core/frontend.ml" 72 2056 2070 "core/frontend.ml" 72 2056 2072
+type(
+  Cil.fundec
+)
+ident(
+  def fd "core/frontend.ml" 72 2056 2081 "core/frontend.ml" 73 2161 2195
+)
+"core/frontend.ml" 72 2056 2073 "core/frontend.ml" 72 2056 2074
+type(
+  Cil.location
+)
+"core/frontend.ml" 72 2056 2064 "core/frontend.ml" 72 2056 2075
+type(
+  Cil.global
+)
+"core/frontend.ml" 72 2056 2081 "core/frontend.ml" 72 2056 2092
+type(
+  (Str.regexp -> bool) -> Str.regexp list -> bool
+)
+ident(
+  ext_ref List.exists
+)
+"core/frontend.ml" 72 2056 2098 "core/frontend.ml" 72 2056 2104
+type(
+  Str.regexp
+)
+ident(
+  def regexp "core/frontend.ml" 72 2056 2108 "core/frontend.ml" 72 2056 2147
+)
+"core/frontend.ml" 72 2056 2108 "core/frontend.ml" 72 2056 2124
+type(
+  Str.regexp -> string -> int -> bool
+)
+ident(
+  ext_ref Str.string_match
+)
+"core/frontend.ml" 72 2056 2125 "core/frontend.ml" 72 2056 2131
+type(
+  Str.regexp
+)
+ident(
+  int_ref regexp "core/frontend.ml" 72 2056 2098 "core/frontend.ml" 72 2056 2104
+)
+"core/frontend.ml" 72 2056 2132 "core/frontend.ml" 72 2056 2134
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "core/frontend.ml" 72 2056 2070 "core/frontend.ml" 72 2056 2072
+)
+"core/frontend.ml" 72 2056 2132 "core/frontend.ml" 72 2056 2139
+type(
+  Cil.varinfo
+)
+"core/frontend.ml" 72 2056 2132 "core/frontend.ml" 72 2056 2145
+type(
+  string
+)
+"core/frontend.ml" 72 2056 2146 "core/frontend.ml" 72 2056 2147
+type(
+  int
+)
+"core/frontend.ml" 72 2056 2108 "core/frontend.ml" 72 2056 2147
+call(
+  tail
+)
+type(
+  bool
+)
+"core/frontend.ml" 72 2056 2093 "core/frontend.ml" 72 2056 2148
+type(
+  Str.regexp -> bool
+)
+"core/frontend.ml" 72 2056 2149 "core/frontend.ml" 72 2056 2156
+type(
+  Str.regexp list
+)
+ident(
+  int_ref regexps "core/frontend.ml" 68 1890 1896 "core/frontend.ml" 68 1890 1903
+)
+"core/frontend.ml" 72 2056 2081 "core/frontend.ml" 72 2056 2156
+call(
+  stack
+)
+type(
+  bool
+)
+"core/frontend.ml" 73 2161 2169 "core/frontend.ml" 73 2161 2171
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "core/frontend.ml" 72 2056 2070 "core/frontend.ml" 72 2056 2072
+)
+"core/frontend.ml" 73 2161 2169 "core/frontend.ml" 73 2161 2176
+type(
+  Cil.varinfo
+)
+"core/frontend.ml" 73 2161 2169 "core/frontend.ml" 73 2161 2182
+type(
+  string
+)
+"core/frontend.ml" 73 2161 2186 "core/frontend.ml" 73 2161 2195
+type(
+  string list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 70 1987 2019 "core/frontend.ml" 70 1987 2028
+)
+"core/frontend.ml" 73 2161 2169 "core/frontend.ml" 73 2161 2195
+type(
+  string list
+)
+"core/frontend.ml" 74 2196 2204 "core/frontend.ml" 74 2196 2205
+type(
+  Cil.global
+)
+"core/frontend.ml" 74 2196 2209 "core/frontend.ml" 74 2196 2218
+type(
+  string list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 70 1987 2019 "core/frontend.ml" 70 1987 2028
+)
+"core/frontend.ml" 71 2032 2038 "core/frontend.ml" 74 2196 2218
+type(
+  string list
+)
+"core/frontend.ml" 70 1987 2007 "core/frontend.ml" 75 2219 2224
+type(
+  Cil.global -> string list -> string list
+)
+"core/frontend.ml" 75 2219 2225 "core/frontend.ml" 75 2219 2226
+type(
+  Cil.file
+)
+ident(
+  int_ref f "core/frontend.ml" 67 1850 1872 "core/frontend.ml" 67 1850 1873
+)
+"core/frontend.ml" 75 2219 2225 "core/frontend.ml" 75 2219 2234
+type(
+  Cil.global list
+)
+"core/frontend.ml" 75 2219 2235 "core/frontend.ml" 75 2219 2237
+type(
+  string list
+)
+"core/frontend.ml" 70 1987 1991 "core/frontend.ml" 75 2219 2237
+call(
+  stack
+)
+type(
+  string list
+)
+"core/frontend.ml" 76 2241 2247 "core/frontend.ml" 76 2241 2256
+type(
+  InterCfg.pid list
+)
+ident(
+  def to_inline "core/frontend.ml" 77 2323 2325 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 76 2241 2259 "core/frontend.ml" 76 2241 2270
+type(
+  (InterCfg.pid -> bool) -> InterCfg.pid list -> InterCfg.pid list
+)
+ident(
+  ext_ref List.filter
+)
+"core/frontend.ml" 76 2241 2276 "core/frontend.ml" 76 2241 2279
+type(
+  InterCfg.pid
+)
+ident(
+  def pid "core/frontend.ml" 76 2241 2283 "core/frontend.ml" 76 2241 2308
+)
+"core/frontend.ml" 76 2241 2283 "core/frontend.ml" 76 2241 2293
+type(
+  InterCfg.pid -> InterCfg.pid BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.mem
+)
+"core/frontend.ml" 76 2241 2294 "core/frontend.ml" 76 2241 2297
+type(
+  InterCfg.pid
+)
+ident(
+  int_ref pid "core/frontend.ml" 76 2241 2276 "core/frontend.ml" 76 2241 2279
+)
+"core/frontend.ml" 76 2241 2298 "core/frontend.ml" 76 2241 2308
+type(
+  InterCfg.pid BatSet.t
+)
+ident(
+  int_ref candidates "core/frontend.ml" 67 1850 1855 "core/frontend.ml" 67 1850 1865
+)
+"core/frontend.ml" 76 2241 2283 "core/frontend.ml" 76 2241 2308
+call(
+  tail
+)
+type(
+  bool
+)
+"core/frontend.ml" 76 2241 2271 "core/frontend.ml" 76 2241 2309
+type(
+  InterCfg.pid -> bool
+)
+"core/frontend.ml" 76 2241 2310 "core/frontend.ml" 76 2241 2319
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 69 1968 1974 "core/frontend.ml" 69 1968 1983
+)
+"core/frontend.ml" 76 2241 2259 "core/frontend.ml" 76 2241 2319
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"core/frontend.ml" 77 2323 2329 "core/frontend.ml" 77 2323 2342
+type(
+  InterCfg.pid list
+)
+ident(
+  def varargs_procs "core/frontend.ml" 78 2400 2402 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 77 2323 2345 "core/frontend.ml" 77 2323 2356
+type(
+  (InterCfg.pid -> bool) -> InterCfg.pid list -> InterCfg.pid list
+)
+ident(
+  ext_ref List.filter
+)
+"core/frontend.ml" 77 2323 2362 "core/frontend.ml" 77 2323 2365
+type(
+  InterCfg.pid
+)
+ident(
+  def fid "core/frontend.ml" 77 2323 2369 "core/frontend.ml" 77 2323 2385
+)
+"core/frontend.ml" 77 2323 2369 "core/frontend.ml" 77 2323 2379
+type(
+  InterCfg.pid -> Cil.file -> bool
+)
+ident(
+  int_ref is_varargs "core/frontend.ml" 55 1478 1482 "core/frontend.ml" 55 1478 1492
+)
+"core/frontend.ml" 77 2323 2380 "core/frontend.ml" 77 2323 2383
+type(
+  InterCfg.pid
+)
+ident(
+  int_ref fid "core/frontend.ml" 77 2323 2362 "core/frontend.ml" 77 2323 2365
+)
+"core/frontend.ml" 77 2323 2384 "core/frontend.ml" 77 2323 2385
+type(
+  Cil.file
+)
+ident(
+  int_ref f "core/frontend.ml" 67 1850 1872 "core/frontend.ml" 67 1850 1873
+)
+"core/frontend.ml" 77 2323 2369 "core/frontend.ml" 77 2323 2385
+call(
+  tail
+)
+type(
+  bool
+)
+"core/frontend.ml" 77 2323 2357 "core/frontend.ml" 77 2323 2386
+type(
+  InterCfg.pid -> bool
+)
+"core/frontend.ml" 77 2323 2387 "core/frontend.ml" 77 2323 2396
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 76 2241 2247 "core/frontend.ml" 76 2241 2256
+)
+"core/frontend.ml" 77 2323 2345 "core/frontend.ml" 77 2323 2396
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"core/frontend.ml" 78 2400 2406 "core/frontend.ml" 78 2400 2421
+type(
+  InterCfg.pid list
+)
+ident(
+  def recursive_procs "core/frontend.ml" 79 2462 2464 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 78 2400 2424 "core/frontend.ml" 78 2400 2435
+type(
+  (InterCfg.pid -> bool) -> InterCfg.pid list -> InterCfg.pid list
+)
+ident(
+  ext_ref List.filter
+)
+"core/frontend.ml" 78 2400 2436 "core/frontend.ml" 78 2400 2448
+type(
+  InterCfg.pid -> bool
+)
+ident(
+  int_ref is_recursive "core/frontend.ml" 67 1850 1874 "core/frontend.ml" 67 1850 1886
+)
+"core/frontend.ml" 78 2400 2449 "core/frontend.ml" 78 2400 2458
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 76 2241 2247 "core/frontend.ml" 76 2241 2256
+)
+"core/frontend.ml" 78 2400 2424 "core/frontend.ml" 78 2400 2458
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"core/frontend.ml" 79 2462 2468 "core/frontend.ml" 79 2462 2478
+type(
+  InterCfg.pid list
+)
+ident(
+  def to_exclude "core/frontend.ml" 80 2516 2518 "core/frontend.ml" 85 2905 2934
+)
+"core/frontend.ml" 79 2462 2481 "core/frontend.ml" 79 2462 2494
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref varargs_procs "core/frontend.ml" 77 2323 2329 "core/frontend.ml" 77 2323 2342
+)
+"core/frontend.ml" 79 2462 2495 "core/frontend.ml" 79 2462 2496
+type(
+  InterCfg.pid list -> InterCfg.pid list -> InterCfg.pid list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"core/frontend.ml" 79 2462 2497 "core/frontend.ml" 79 2462 2512
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref recursive_procs "core/frontend.ml" 78 2400 2406 "core/frontend.ml" 78 2400 2421
+)
+"core/frontend.ml" 79 2462 2481 "core/frontend.ml" 79 2462 2512
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"core/frontend.ml" 80 2516 2518 "core/frontend.ml" 80 2516 2531
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"core/frontend.ml" 80 2516 2533 "core/frontend.ml" 80 2516 2547
+type(
+  string
+)
+"core/frontend.ml" 80 2516 2548 "core/frontend.ml" 80 2516 2549
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 80 2516 2550 "core/frontend.ml" 80 2516 2570
+type(
+  ?first:string ->
+  ?last:string ->
+  ?sep:string ->
+  (InterCfg.pid -> InterCfg.pid) -> InterCfg.pid list -> string
+)
+ident(
+  ext_ref Vocab.string_of_list
+)
+"core/frontend.ml" 80 2516 2571 "core/frontend.ml" 80 2516 2579
+type(
+  InterCfg.pid -> InterCfg.pid
+)
+ident(
+  ext_ref Vocab.id
+)
+"core/frontend.ml" 80 2516 2580 "core/frontend.ml" 80 2516 2589
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 76 2241 2247 "core/frontend.ml" 76 2241 2256
+)
+"core/frontend.ml" 80 2516 2550 "core/frontend.ml" 80 2516 2589
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 80 2516 2532 "core/frontend.ml" 80 2516 2590
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 80 2516 2518 "core/frontend.ml" 80 2516 2590
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 81 2592 2594 "core/frontend.ml" 81 2592 2607
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"core/frontend.ml" 81 2592 2609 "core/frontend.ml" 81 2592 2651
+type(
+  string
+)
+"core/frontend.ml" 81 2592 2652 "core/frontend.ml" 81 2592 2653
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 81 2592 2654 "core/frontend.ml" 81 2592 2674
+type(
+  ?first:string ->
+  ?last:string ->
+  ?sep:string ->
+  (InterCfg.pid -> InterCfg.pid) -> InterCfg.pid list -> string
+)
+ident(
+  ext_ref Vocab.string_of_list
+)
+"core/frontend.ml" 81 2592 2675 "core/frontend.ml" 81 2592 2683
+type(
+  InterCfg.pid -> InterCfg.pid
+)
+ident(
+  ext_ref Vocab.id
+)
+"core/frontend.ml" 81 2592 2684 "core/frontend.ml" 81 2592 2697
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref varargs_procs "core/frontend.ml" 77 2323 2329 "core/frontend.ml" 77 2323 2342
+)
+"core/frontend.ml" 81 2592 2654 "core/frontend.ml" 81 2592 2697
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 81 2592 2608 "core/frontend.ml" 81 2592 2698
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 81 2592 2594 "core/frontend.ml" 81 2592 2698
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 82 2700 2702 "core/frontend.ml" 82 2700 2715
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"core/frontend.ml" 82 2700 2717 "core/frontend.ml" 82 2700 2750
+type(
+  string
+)
+"core/frontend.ml" 82 2700 2751 "core/frontend.ml" 82 2700 2752
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"core/frontend.ml" 82 2700 2753 "core/frontend.ml" 82 2700 2773
+type(
+  ?first:string ->
+  ?last:string ->
+  ?sep:string ->
+  (InterCfg.pid -> InterCfg.pid) -> InterCfg.pid list -> string
+)
+ident(
+  ext_ref Vocab.string_of_list
+)
+"core/frontend.ml" 82 2700 2774 "core/frontend.ml" 82 2700 2782
+type(
+  InterCfg.pid -> InterCfg.pid
+)
+ident(
+  ext_ref Vocab.id
+)
+"core/frontend.ml" 82 2700 2783 "core/frontend.ml" 82 2700 2798
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref recursive_procs "core/frontend.ml" 78 2400 2406 "core/frontend.ml" 78 2400 2421
+)
+"core/frontend.ml" 82 2700 2753 "core/frontend.ml" 82 2700 2798
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 82 2700 2716 "core/frontend.ml" 82 2700 2799
+call(
+  stack
+)
+type(
+  string
+)
+"core/frontend.ml" 82 2700 2702 "core/frontend.ml" 82 2700 2799
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 83 2801 2803 "core/frontend.ml" 83 2801 2818
+type(
+  InterCfg.pid list ref
+)
+ident(
+  ext_ref Inline.toinline
+)
+"core/frontend.ml" 83 2801 2819 "core/frontend.ml" 83 2801 2821
+type(
+  InterCfg.pid list ref -> InterCfg.pid list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"core/frontend.ml" 83 2801 2822 "core/frontend.ml" 83 2801 2833
+type(
+  (InterCfg.pid -> bool) -> InterCfg.pid list -> InterCfg.pid list
+)
+ident(
+  ext_ref List.filter
+)
+"core/frontend.ml" 83 2801 2839 "core/frontend.ml" 83 2801 2842
+type(
+  InterCfg.pid
+)
+ident(
+  def fid "core/frontend.ml" 83 2801 2846 "core/frontend.ml" 83 2801 2875
+)
+"core/frontend.ml" 83 2801 2846 "core/frontend.ml" 83 2801 2849
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"core/frontend.ml" 83 2801 2851 "core/frontend.ml" 83 2801 2859
+type(
+  InterCfg.pid -> InterCfg.pid list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"core/frontend.ml" 83 2801 2860 "core/frontend.ml" 83 2801 2863
+type(
+  InterCfg.pid
+)
+ident(
+  int_ref fid "core/frontend.ml" 83 2801 2839 "core/frontend.ml" 83 2801 2842
+)
+"core/frontend.ml" 83 2801 2864 "core/frontend.ml" 83 2801 2874
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref to_exclude "core/frontend.ml" 79 2462 2468 "core/frontend.ml" 79 2462 2478
+)
+"core/frontend.ml" 83 2801 2850 "core/frontend.ml" 83 2801 2875
+call(
+  stack
+)
+type(
+  bool
+)
+"core/frontend.ml" 83 2801 2846 "core/frontend.ml" 83 2801 2875
+type(
+  bool
+)
+"core/frontend.ml" 83 2801 2834 "core/frontend.ml" 83 2801 2876
+type(
+  InterCfg.pid -> bool
+)
+"core/frontend.ml" 83 2801 2877 "core/frontend.ml" 83 2801 2886
+type(
+  InterCfg.pid list
+)
+ident(
+  int_ref to_inline "core/frontend.ml" 76 2241 2247 "core/frontend.ml" 76 2241 2256
+)
+"core/frontend.ml" 83 2801 2822 "core/frontend.ml" 83 2801 2886
+call(
+  stack
+)
+type(
+  InterCfg.pid list
+)
+"core/frontend.ml" 83 2801 2803 "core/frontend.ml" 83 2801 2886
+type(
+  unit
+)
+"core/frontend.ml" 84 2888 2890 "core/frontend.ml" 84 2888 2901
+type(
+  Cil.file -> unit
+)
+ident(
+  ext_ref Inline.doit
+)
+"core/frontend.ml" 84 2888 2902 "core/frontend.ml" 84 2888 2903
+type(
+  Cil.file
+)
+ident(
+  int_ref f "core/frontend.ml" 67 1850 1872 "core/frontend.ml" 67 1850 1873
+)
+"core/frontend.ml" 84 2888 2890 "core/frontend.ml" 84 2888 2903
+call(
+  stack
+)
+type(
+  unit
+)
+"core/frontend.ml" 85 2905 2907 "core/frontend.ml" 85 2905 2910
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"core/frontend.ml" 85 2905 2912 "core/frontend.ml" 85 2905 2913
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"core/frontend.ml" 85 2905 2913 "core/frontend.ml" 85 2905 2928
+type(
+  string list ref
+)
+ident(
+  ext_ref Inline.toinline
+)
+"core/frontend.ml" 85 2905 2912 "core/frontend.ml" 85 2905 2928
+type(
+  string list
+)
+"core/frontend.ml" 85 2905 2929 "core/frontend.ml" 85 2905 2930
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"core/frontend.ml" 85 2905 2931 "core/frontend.ml" 85 2905 2933
+type(
+  string list
+)
+"core/frontend.ml" 85 2905 2911 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 85 2905 2907 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 84 2888 2890 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 83 2801 2803 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 82 2700 2702 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 81 2592 2594 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 80 2516 2518 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 79 2462 2464 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 78 2400 2402 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 77 2323 2325 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 76 2241 2243 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 69 1968 1970 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 68 1890 1892 "core/frontend.ml" 85 2905 2934
+type(
+  bool
+)
+"core/frontend.ml" 67 1850 1851 "core/frontend.ml" 85 2905 2934
+type(
+  string BatSet.t ->
+  string list -> Cil.file -> (InterCfg.pid -> bool) -> bool
+)
+type(
+  InterCfg.pid BatSet.t ->
+  string list -> Cil.file -> (InterCfg.pid -> bool) -> bool
+)

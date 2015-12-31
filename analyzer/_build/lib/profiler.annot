@@ -1,0 +1,3141 @@
+"lib/profiler.ml" 2 40 44 "lib/profiler.ml" 2 40 68
+type(
+  bool
+)
+ident(
+  def record_calling_frequency "lib/profiler.ml" 3 78 78 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 2 40 71 "lib/profiler.ml" 2 40 76
+type(
+  bool
+)
+"lib/profiler.ml" 3 78 82 "lib/profiler.ml" 3 78 97
+type(
+  bool
+)
+ident(
+  def record_max_time "lib/profiler.ml" 5 109 109 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 3 78 100 "lib/profiler.ml" 3 78 105
+type(
+  bool
+)
+"lib/profiler.ml" 5 109 113 "lib/profiler.ml" 5 109 119
+type(
+  (string, float) BatMap.t ref
+)
+ident(
+  def events "lib/profiler.ml" 6 140 140 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 5 109 122 "lib/profiler.ml" 5 109 125
+type(
+  (string, float) BatMap.t -> (string, float) BatMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 5 109 126 "lib/profiler.ml" 5 109 138
+type(
+  (string, float) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 5 109 122 "lib/profiler.ml" 5 109 138
+type(
+  (string, float) BatMap.t ref
+)
+"lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  def log "lib/profiler.ml" 7 168 168 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 6 140 150 "lib/profiler.ml" 6 140 153
+type(
+  (string, float ref) BatMap.t -> (string, float ref) BatMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 6 140 154 "lib/profiler.ml" 6 140 166
+type(
+  (string, float ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 6 140 150 "lib/profiler.ml" 6 140 166
+type(
+  (string, float ref) BatMap.t ref
+)
+"lib/profiler.ml" 7 168 172 "lib/profiler.ml" 7 168 181
+type(
+  (string, int64 ref) BatMap.t ref
+)
+ident(
+  def count_log "lib/profiler.ml" 8 202 202 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 7 168 184 "lib/profiler.ml" 7 168 187
+type(
+  (string, int64 ref) BatMap.t -> (string, int64 ref) BatMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 7 168 188 "lib/profiler.ml" 7 168 200
+type(
+  (string, int64 ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 7 168 184 "lib/profiler.ml" 7 168 200
+type(
+  (string, int64 ref) BatMap.t ref
+)
+"lib/profiler.ml" 8 202 206 "lib/profiler.ml" 8 202 219
+type(
+  (string, int ref) BatMap.t ref
+)
+ident(
+  def recursive_log "lib/profiler.ml" 9 240 240 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 8 202 222 "lib/profiler.ml" 8 202 225
+type(
+  (string, int ref) BatMap.t -> (string, int ref) BatMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 8 202 226 "lib/profiler.ml" 8 202 238
+type(
+  (string, int ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 8 202 222 "lib/profiler.ml" 8 202 238
+type(
+  (string, int ref) BatMap.t ref
+)
+"lib/profiler.ml" 9 240 244 "lib/profiler.ml" 9 240 251
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  def max_log "lib/profiler.ml" 10 272 272 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 9 240 254 "lib/profiler.ml" 9 240 257
+type(
+  (string, float ref) BatMap.t -> (string, float ref) BatMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 9 240 258 "lib/profiler.ml" 9 240 270
+type(
+  (string, float ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 9 240 254 "lib/profiler.ml" 9 240 270
+type(
+  (string, float ref) BatMap.t ref
+)
+"lib/profiler.ml" 10 272 276 "lib/profiler.ml" 10 272 289
+type(
+  (string, string ref) BatMap.t ref
+)
+ident(
+  def arguments_log "lib/profiler.ml" 11 310 310 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 10 272 292 "lib/profiler.ml" 10 272 295
+type(
+  (string, string ref) BatMap.t -> (string, string ref) BatMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 10 272 296 "lib/profiler.ml" 10 272 308
+type(
+  (string, string ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 10 272 292 "lib/profiler.ml" 10 272 308
+type(
+  (string, string ref) BatMap.t ref
+)
+"lib/profiler.ml" 11 310 314 "lib/profiler.ml" 11 310 323
+type(
+  float ref
+)
+ident(
+  def log_start "lib/profiler.ml" 14 366 366 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 11 310 326 "lib/profiler.ml" 11 310 329
+type(
+  float -> float ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 11 310 330 "lib/profiler.ml" 11 310 333
+type(
+  float
+)
+"lib/profiler.ml" 11 310 326 "lib/profiler.ml" 11 310 333
+type(
+  float ref
+)
+"lib/profiler.ml" 14 366 370 "lib/profiler.ml" 14 366 384
+type(
+  string -> int
+)
+ident(
+  def incr_recursive "lib/profiler.ml" 28 705 705 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 15 404 410 "lib/profiler.ml" 15 404 414
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 16 419 423 "lib/profiler.ml" 25 664 672
+)
+"lib/profiler.ml" 16 419 427 "lib/profiler.ml" 16 419 428
+type(
+  int ref
+)
+ident(
+  def v "lib/profiler.ml" 24 644 650 "lib/profiler.ml" 25 664 672
+)
+"lib/profiler.ml" 17 432 442 "lib/profiler.ml" 17 432 452
+type(
+  string -> (string, int ref) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"lib/profiler.ml" 17 432 453 "lib/profiler.ml" 17 432 457
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 15 404 410 "lib/profiler.ml" 15 404 414
+)
+"lib/profiler.ml" 17 432 458 "lib/profiler.ml" 17 432 459
+type(
+  (string, int ref) BatMap.t ref -> (string, int ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 17 432 459 "lib/profiler.ml" 17 432 472
+type(
+  (string, int ref) BatMap.t ref
+)
+ident(
+  int_ref recursive_log "lib/profiler.ml" 8 202 206 "lib/profiler.ml" 8 202 219
+)
+"lib/profiler.ml" 17 432 458 "lib/profiler.ml" 17 432 472
+type(
+  (string, int ref) BatMap.t
+)
+"lib/profiler.ml" 17 432 441 "lib/profiler.ml" 17 432 473
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/profiler.ml" 18 480 489 "lib/profiler.ml" 18 480 500
+type(
+  string -> (string, int ref) BatMap.t -> int ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 18 480 501 "lib/profiler.ml" 18 480 505
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 15 404 410 "lib/profiler.ml" 15 404 414
+)
+"lib/profiler.ml" 18 480 506 "lib/profiler.ml" 18 480 507
+type(
+  (string, int ref) BatMap.t ref -> (string, int ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 18 480 507 "lib/profiler.ml" 18 480 520
+type(
+  (string, int ref) BatMap.t ref
+)
+ident(
+  int_ref recursive_log "lib/profiler.ml" 8 202 206 "lib/profiler.ml" 8 202 219
+)
+"lib/profiler.ml" 18 480 506 "lib/profiler.ml" 18 480 520
+type(
+  (string, int ref) BatMap.t
+)
+"lib/profiler.ml" 18 480 488 "lib/profiler.ml" 18 480 521
+call(
+  stack
+)
+type(
+  int ref
+)
+"lib/profiler.ml" 20 535 547 "lib/profiler.ml" 20 535 548
+type(
+  int ref
+)
+ident(
+  def v "lib/profiler.ml" 21 561 571 "lib/profiler.ml" 22 623 634
+)
+"lib/profiler.ml" 20 535 551 "lib/profiler.ml" 20 535 554
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 20 535 555 "lib/profiler.ml" 20 535 556
+type(
+  int
+)
+"lib/profiler.ml" 20 535 551 "lib/profiler.ml" 20 535 556
+type(
+  int ref
+)
+"lib/profiler.ml" 21 561 571 "lib/profiler.ml" 21 561 584
+type(
+  (string, int ref) BatMap.t ref
+)
+ident(
+  int_ref recursive_log "lib/profiler.ml" 8 202 206 "lib/profiler.ml" 8 202 219
+)
+"lib/profiler.ml" 21 561 585 "lib/profiler.ml" 21 561 587
+type(
+  (string, int ref) BatMap.t ref -> (string, int ref) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 21 561 588 "lib/profiler.ml" 21 561 598
+type(
+  string ->
+  int ref -> (string, int ref) BatMap.t -> (string, int ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"lib/profiler.ml" 21 561 599 "lib/profiler.ml" 21 561 603
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 15 404 410 "lib/profiler.ml" 15 404 414
+)
+"lib/profiler.ml" 21 561 604 "lib/profiler.ml" 21 561 605
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 20 535 547 "lib/profiler.ml" 20 535 548
+)
+"lib/profiler.ml" 21 561 606 "lib/profiler.ml" 21 561 607
+type(
+  (string, int ref) BatMap.t ref -> (string, int ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 21 561 607 "lib/profiler.ml" 21 561 620
+type(
+  (string, int ref) BatMap.t ref
+)
+ident(
+  int_ref recursive_log "lib/profiler.ml" 8 202 206 "lib/profiler.ml" 8 202 219
+)
+"lib/profiler.ml" 21 561 606 "lib/profiler.ml" 21 561 620
+type(
+  (string, int ref) BatMap.t
+)
+"lib/profiler.ml" 21 561 588 "lib/profiler.ml" 21 561 620
+call(
+  stack
+)
+type(
+  (string, int ref) BatMap.t
+)
+"lib/profiler.ml" 21 561 571 "lib/profiler.ml" 21 561 620
+type(
+  unit
+)
+"lib/profiler.ml" 22 623 633 "lib/profiler.ml" 22 623 634
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 20 535 547 "lib/profiler.ml" 20 535 548
+)
+"lib/profiler.ml" 21 561 571 "lib/profiler.ml" 22 623 634
+type(
+  int ref
+)
+"lib/profiler.ml" 20 535 543 "lib/profiler.ml" 22 623 634
+type(
+  int ref
+)
+"lib/profiler.ml" 17 432 438 "lib/profiler.ml" 22 623 634
+type(
+  int ref
+)
+"lib/profiler.ml" 24 644 650 "lib/profiler.ml" 24 644 651
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 16 419 427 "lib/profiler.ml" 16 419 428
+)
+"lib/profiler.ml" 24 644 652 "lib/profiler.ml" 24 644 654
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 24 644 655 "lib/profiler.ml" 24 644 656
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 24 644 656 "lib/profiler.ml" 24 644 657
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 16 419 427 "lib/profiler.ml" 16 419 428
+)
+"lib/profiler.ml" 24 644 655 "lib/profiler.ml" 24 644 657
+type(
+  int
+)
+"lib/profiler.ml" 24 644 658 "lib/profiler.ml" 24 644 659
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"lib/profiler.ml" 24 644 660 "lib/profiler.ml" 24 644 661
+type(
+  int
+)
+"lib/profiler.ml" 24 644 655 "lib/profiler.ml" 24 644 661
+type(
+  int
+)
+"lib/profiler.ml" 24 644 650 "lib/profiler.ml" 24 644 661
+type(
+  unit
+)
+"lib/profiler.ml" 25 664 670 "lib/profiler.ml" 25 664 671
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 25 664 671 "lib/profiler.ml" 25 664 672
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 16 419 427 "lib/profiler.ml" 16 419 428
+)
+"lib/profiler.ml" 25 664 670 "lib/profiler.ml" 25 664 672
+type(
+  int
+)
+"lib/profiler.ml" 24 644 650 "lib/profiler.ml" 25 664 672
+type(
+  int
+)
+"lib/profiler.ml" 16 419 423 "lib/profiler.ml" 25 664 672
+type(
+  int
+)
+"lib/profiler.ml" 15 404 406 "lib/profiler.ml" 25 664 672
+type(
+  string -> int
+)
+type(
+  string -> int
+)
+"lib/profiler.ml" 28 705 709 "lib/profiler.ml" 28 705 723
+type(
+  string -> int
+)
+ident(
+  def decr_recursive "lib/profiler.ml" 35 867 867 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 29 743 749 "lib/profiler.ml" 29 743 753
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 30 758 762 "lib/profiler.ml" 32 826 834
+)
+"lib/profiler.ml" 30 758 766 "lib/profiler.ml" 30 758 767
+type(
+  int ref
+)
+ident(
+  def v "lib/profiler.ml" 31 806 812 "lib/profiler.ml" 32 826 834
+)
+"lib/profiler.ml" 30 758 770 "lib/profiler.ml" 30 758 781
+type(
+  string -> (string, int ref) BatMap.t -> int ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 30 758 782 "lib/profiler.ml" 30 758 786
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 29 743 749 "lib/profiler.ml" 29 743 753
+)
+"lib/profiler.ml" 30 758 787 "lib/profiler.ml" 30 758 788
+type(
+  (string, int ref) BatMap.t ref -> (string, int ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 30 758 788 "lib/profiler.ml" 30 758 801
+type(
+  (string, int ref) BatMap.t ref
+)
+ident(
+  int_ref recursive_log "lib/profiler.ml" 8 202 206 "lib/profiler.ml" 8 202 219
+)
+"lib/profiler.ml" 30 758 787 "lib/profiler.ml" 30 758 801
+type(
+  (string, int ref) BatMap.t
+)
+"lib/profiler.ml" 30 758 770 "lib/profiler.ml" 30 758 801
+call(
+  stack
+)
+type(
+  int ref
+)
+"lib/profiler.ml" 31 806 812 "lib/profiler.ml" 31 806 813
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 30 758 766 "lib/profiler.ml" 30 758 767
+)
+"lib/profiler.ml" 31 806 814 "lib/profiler.ml" 31 806 816
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 31 806 817 "lib/profiler.ml" 31 806 818
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 31 806 818 "lib/profiler.ml" 31 806 819
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 30 758 766 "lib/profiler.ml" 30 758 767
+)
+"lib/profiler.ml" 31 806 817 "lib/profiler.ml" 31 806 819
+type(
+  int
+)
+"lib/profiler.ml" 31 806 820 "lib/profiler.ml" 31 806 821
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"lib/profiler.ml" 31 806 822 "lib/profiler.ml" 31 806 823
+type(
+  int
+)
+"lib/profiler.ml" 31 806 817 "lib/profiler.ml" 31 806 823
+type(
+  int
+)
+"lib/profiler.ml" 31 806 812 "lib/profiler.ml" 31 806 823
+type(
+  unit
+)
+"lib/profiler.ml" 32 826 832 "lib/profiler.ml" 32 826 833
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 32 826 833 "lib/profiler.ml" 32 826 834
+type(
+  int ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 30 758 766 "lib/profiler.ml" 30 758 767
+)
+"lib/profiler.ml" 32 826 832 "lib/profiler.ml" 32 826 834
+type(
+  int
+)
+"lib/profiler.ml" 31 806 812 "lib/profiler.ml" 32 826 834
+type(
+  int
+)
+"lib/profiler.ml" 30 758 762 "lib/profiler.ml" 32 826 834
+type(
+  int
+)
+"lib/profiler.ml" 29 743 745 "lib/profiler.ml" 32 826 834
+type(
+  string -> int
+)
+type(
+  string -> int
+)
+"lib/profiler.ml" 35 867 871 "lib/profiler.ml" 35 867 887
+type(
+  string -> 'a -> unit
+)
+ident(
+  def record_arguments "lib/profiler.ml" 47 1252 1252 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 36 914 920 "lib/profiler.ml" 36 914 924
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 36 914 925 "lib/profiler.ml" 44 1146 1219
+)
+"lib/profiler.ml" 36 914 925 "lib/profiler.ml" 36 914 929
+type(
+  'a
+)
+ident(
+  def args "lib/profiler.ml" 37 934 938 "lib/profiler.ml" 44 1146 1219
+)
+"lib/profiler.ml" 37 934 942 "lib/profiler.ml" 37 934 943
+type(
+  string ref
+)
+ident(
+  def v "lib/profiler.ml" 44 1146 1152 "lib/profiler.ml" 44 1146 1219
+)
+"lib/profiler.ml" 38 947 956 "lib/profiler.ml" 38 947 966
+type(
+  string -> (string, string ref) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"lib/profiler.ml" 38 947 967 "lib/profiler.ml" 38 947 971
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 36 914 920 "lib/profiler.ml" 36 914 924
+)
+"lib/profiler.ml" 38 947 972 "lib/profiler.ml" 38 947 973
+type(
+  (string, string ref) BatMap.t ref -> (string, string ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 38 947 973 "lib/profiler.ml" 38 947 986
+type(
+  (string, string ref) BatMap.t ref
+)
+ident(
+  int_ref arguments_log "lib/profiler.ml" 10 272 276 "lib/profiler.ml" 10 272 289
+)
+"lib/profiler.ml" 38 947 972 "lib/profiler.ml" 38 947 986
+type(
+  (string, string ref) BatMap.t
+)
+"lib/profiler.ml" 38 947 956 "lib/profiler.ml" 38 947 986
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/profiler.ml" 39 993 1001 "lib/profiler.ml" 39 993 1012
+type(
+  string -> (string, string ref) BatMap.t -> string ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 39 993 1013 "lib/profiler.ml" 39 993 1017
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 36 914 920 "lib/profiler.ml" 36 914 924
+)
+"lib/profiler.ml" 39 993 1018 "lib/profiler.ml" 39 993 1019
+type(
+  (string, string ref) BatMap.t ref -> (string, string ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 39 993 1019 "lib/profiler.ml" 39 993 1032
+type(
+  (string, string ref) BatMap.t ref
+)
+ident(
+  int_ref arguments_log "lib/profiler.ml" 10 272 276 "lib/profiler.ml" 10 272 289
+)
+"lib/profiler.ml" 39 993 1018 "lib/profiler.ml" 39 993 1032
+type(
+  (string, string ref) BatMap.t
+)
+"lib/profiler.ml" 39 993 1001 "lib/profiler.ml" 39 993 1032
+call(
+  stack
+)
+type(
+  string ref
+)
+"lib/profiler.ml" 41 1046 1058 "lib/profiler.ml" 41 1046 1059
+type(
+  string ref
+)
+ident(
+  def v "lib/profiler.ml" 42 1073 1083 "lib/profiler.ml" 42 1073 1136
+)
+"lib/profiler.ml" 41 1046 1062 "lib/profiler.ml" 41 1046 1065
+type(
+  string -> string ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 41 1046 1066 "lib/profiler.ml" 41 1046 1068
+type(
+  string
+)
+"lib/profiler.ml" 41 1046 1062 "lib/profiler.ml" 41 1046 1068
+type(
+  string ref
+)
+"lib/profiler.ml" 42 1073 1083 "lib/profiler.ml" 42 1073 1096
+type(
+  (string, string ref) BatMap.t ref
+)
+ident(
+  int_ref arguments_log "lib/profiler.ml" 10 272 276 "lib/profiler.ml" 10 272 289
+)
+"lib/profiler.ml" 42 1073 1097 "lib/profiler.ml" 42 1073 1099
+type(
+  (string, string ref) BatMap.t ref -> (string, string ref) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 42 1073 1101 "lib/profiler.ml" 42 1073 1111
+type(
+  string ->
+  string ref ->
+  (string, string ref) BatMap.t -> (string, string ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"lib/profiler.ml" 42 1073 1112 "lib/profiler.ml" 42 1073 1116
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 36 914 920 "lib/profiler.ml" 36 914 924
+)
+"lib/profiler.ml" 42 1073 1117 "lib/profiler.ml" 42 1073 1118
+type(
+  string ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 41 1046 1058 "lib/profiler.ml" 41 1046 1059
+)
+"lib/profiler.ml" 42 1073 1119 "lib/profiler.ml" 42 1073 1120
+type(
+  (string, string ref) BatMap.t ref -> (string, string ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 42 1073 1120 "lib/profiler.ml" 42 1073 1133
+type(
+  (string, string ref) BatMap.t ref
+)
+ident(
+  int_ref arguments_log "lib/profiler.ml" 10 272 276 "lib/profiler.ml" 10 272 289
+)
+"lib/profiler.ml" 42 1073 1119 "lib/profiler.ml" 42 1073 1133
+type(
+  (string, string ref) BatMap.t
+)
+"lib/profiler.ml" 42 1073 1100 "lib/profiler.ml" 42 1073 1134
+call(
+  stack
+)
+type(
+  (string, string ref) BatMap.t
+)
+"lib/profiler.ml" 42 1073 1083 "lib/profiler.ml" 42 1073 1134
+type(
+  unit
+)
+"lib/profiler.ml" 42 1073 1135 "lib/profiler.ml" 42 1073 1136
+type(
+  string ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 41 1046 1058 "lib/profiler.ml" 41 1046 1059
+)
+"lib/profiler.ml" 42 1073 1083 "lib/profiler.ml" 42 1073 1136
+type(
+  string ref
+)
+"lib/profiler.ml" 41 1046 1054 "lib/profiler.ml" 42 1073 1136
+type(
+  string ref
+)
+"lib/profiler.ml" 38 947 953 "lib/profiler.ml" 42 1073 1136
+type(
+  string ref
+)
+"lib/profiler.ml" 44 1146 1152 "lib/profiler.ml" 44 1146 1153
+type(
+  string ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 37 934 942 "lib/profiler.ml" 37 934 943
+)
+"lib/profiler.ml" 44 1146 1154 "lib/profiler.ml" 44 1146 1156
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 44 1146 1158 "lib/profiler.ml" 44 1146 1175
+type(
+  'a -> Marshal.extern_flags list -> string
+)
+ident(
+  ext_ref Marshal.to_string
+)
+"lib/profiler.ml" 44 1146 1176 "lib/profiler.ml" 44 1146 1180
+type(
+  'a
+)
+ident(
+  int_ref args "lib/profiler.ml" 36 914 925 "lib/profiler.ml" 36 914 929
+)
+"lib/profiler.ml" 44 1146 1182 "lib/profiler.ml" 44 1146 1200
+type(
+  Marshal.extern_flags
+)
+"lib/profiler.ml" 44 1146 1201 "lib/profiler.ml" 44 1146 1217
+type(
+  Marshal.extern_flags
+)
+"lib/profiler.ml" 44 1146 1181 "lib/profiler.ml" 44 1146 1218
+type(
+  Marshal.extern_flags list
+)
+"lib/profiler.ml" 44 1146 1157 "lib/profiler.ml" 44 1146 1219
+type(
+  string
+)
+"lib/profiler.ml" 44 1146 1152 "lib/profiler.ml" 44 1146 1219
+type(
+  unit
+)
+"lib/profiler.ml" 37 934 938 "lib/profiler.ml" 44 1146 1219
+type(
+  unit
+)
+"lib/profiler.ml" 36 914 916 "lib/profiler.ml" 44 1146 1219
+type(
+  string -> 'a -> unit
+)
+type(
+  string -> 'a -> unit
+)
+"lib/profiler.ml" 47 1252 1256 "lib/profiler.ml" 47 1252 1265
+type(
+  string -> float -> 'a -> unit
+)
+ident(
+  def max_check "lib/profiler.ml" 62 1635 1635 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 48 1301 1307 "lib/profiler.ml" 48 1301 1311
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 48 1301 1312 "lib/profiler.ml" 60 1614 1625
+)
+"lib/profiler.ml" 48 1301 1312 "lib/profiler.ml" 48 1301 1313
+type(
+  float
+)
+ident(
+  def t "lib/profiler.ml" 48 1301 1314 "lib/profiler.ml" 60 1614 1625
+)
+"lib/profiler.ml" 48 1301 1314 "lib/profiler.ml" 48 1301 1318
+type(
+  'a
+)
+ident(
+  def args "lib/profiler.ml" 49 1323 1327 "lib/profiler.ml" 60 1614 1625
+)
+"lib/profiler.ml" 49 1323 1331 "lib/profiler.ml" 49 1323 1332
+type(
+  float ref
+)
+ident(
+  def v "lib/profiler.ml" 56 1514 1520 "lib/profiler.ml" 60 1614 1625
+)
+"lib/profiler.ml" 50 1337 1347 "lib/profiler.ml" 50 1337 1357
+type(
+  string -> (string, float ref) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"lib/profiler.ml" 50 1337 1358 "lib/profiler.ml" 50 1337 1362
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 48 1301 1307 "lib/profiler.ml" 48 1301 1311
+)
+"lib/profiler.ml" 50 1337 1363 "lib/profiler.ml" 50 1337 1364
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 50 1337 1364 "lib/profiler.ml" 50 1337 1371
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref max_log "lib/profiler.ml" 9 240 244 "lib/profiler.ml" 9 240 251
+)
+"lib/profiler.ml" 50 1337 1363 "lib/profiler.ml" 50 1337 1371
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 50 1337 1346 "lib/profiler.ml" 50 1337 1372
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/profiler.ml" 51 1379 1388 "lib/profiler.ml" 51 1379 1399
+type(
+  string -> (string, float ref) BatMap.t -> float ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 51 1379 1400 "lib/profiler.ml" 51 1379 1404
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 48 1301 1307 "lib/profiler.ml" 48 1301 1311
+)
+"lib/profiler.ml" 51 1379 1405 "lib/profiler.ml" 51 1379 1406
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 51 1379 1406 "lib/profiler.ml" 51 1379 1413
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref max_log "lib/profiler.ml" 9 240 244 "lib/profiler.ml" 9 240 251
+)
+"lib/profiler.ml" 51 1379 1405 "lib/profiler.ml" 51 1379 1413
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 51 1379 1387 "lib/profiler.ml" 51 1379 1414
+call(
+  stack
+)
+type(
+  float ref
+)
+"lib/profiler.ml" 53 1428 1440 "lib/profiler.ml" 53 1428 1441
+type(
+  float ref
+)
+ident(
+  def v "lib/profiler.ml" 54 1455 1465 "lib/profiler.ml" 54 1455 1504
+)
+"lib/profiler.ml" 53 1428 1444 "lib/profiler.ml" 53 1428 1447
+type(
+  float -> float ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 53 1428 1448 "lib/profiler.ml" 53 1428 1450
+type(
+  float
+)
+"lib/profiler.ml" 53 1428 1444 "lib/profiler.ml" 53 1428 1450
+type(
+  float ref
+)
+"lib/profiler.ml" 54 1455 1465 "lib/profiler.ml" 54 1455 1472
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref max_log "lib/profiler.ml" 9 240 244 "lib/profiler.ml" 9 240 251
+)
+"lib/profiler.ml" 54 1455 1473 "lib/profiler.ml" 54 1455 1475
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 54 1455 1476 "lib/profiler.ml" 54 1455 1486
+type(
+  string ->
+  float ref -> (string, float ref) BatMap.t -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"lib/profiler.ml" 54 1455 1487 "lib/profiler.ml" 54 1455 1491
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 48 1301 1307 "lib/profiler.ml" 48 1301 1311
+)
+"lib/profiler.ml" 54 1455 1492 "lib/profiler.ml" 54 1455 1493
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 53 1428 1440 "lib/profiler.ml" 53 1428 1441
+)
+"lib/profiler.ml" 54 1455 1494 "lib/profiler.ml" 54 1455 1495
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 54 1455 1495 "lib/profiler.ml" 54 1455 1502
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref max_log "lib/profiler.ml" 9 240 244 "lib/profiler.ml" 9 240 251
+)
+"lib/profiler.ml" 54 1455 1494 "lib/profiler.ml" 54 1455 1502
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 54 1455 1476 "lib/profiler.ml" 54 1455 1502
+call(
+  stack
+)
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 54 1455 1465 "lib/profiler.ml" 54 1455 1502
+type(
+  unit
+)
+"lib/profiler.ml" 54 1455 1503 "lib/profiler.ml" 54 1455 1504
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 53 1428 1440 "lib/profiler.ml" 53 1428 1441
+)
+"lib/profiler.ml" 54 1455 1465 "lib/profiler.ml" 54 1455 1504
+type(
+  float ref
+)
+"lib/profiler.ml" 53 1428 1436 "lib/profiler.ml" 54 1455 1504
+type(
+  float ref
+)
+"lib/profiler.ml" 50 1337 1343 "lib/profiler.ml" 54 1455 1504
+type(
+  float ref
+)
+"lib/profiler.ml" 56 1514 1523 "lib/profiler.ml" 56 1514 1524
+type(
+  float ref -> float
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 56 1514 1524 "lib/profiler.ml" 56 1514 1525
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 49 1323 1331 "lib/profiler.ml" 49 1323 1332
+)
+"lib/profiler.ml" 56 1514 1523 "lib/profiler.ml" 56 1514 1525
+type(
+  float
+)
+"lib/profiler.ml" 56 1514 1526 "lib/profiler.ml" 56 1514 1527
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"lib/profiler.ml" 56 1514 1528 "lib/profiler.ml" 56 1514 1529
+type(
+  float
+)
+ident(
+  int_ref t "lib/profiler.ml" 48 1301 1312 "lib/profiler.ml" 48 1301 1313
+)
+"lib/profiler.ml" 56 1514 1523 "lib/profiler.ml" 56 1514 1529
+type(
+  bool
+)
+"lib/profiler.ml" 59 1596 1606 "lib/profiler.ml" 59 1596 1607
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 49 1323 1331 "lib/profiler.ml" 49 1323 1332
+)
+"lib/profiler.ml" 59 1596 1608 "lib/profiler.ml" 59 1596 1610
+type(
+  float ref -> float -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 59 1596 1611 "lib/profiler.ml" 59 1596 1612
+type(
+  float
+)
+ident(
+  int_ref t "lib/profiler.ml" 48 1301 1312 "lib/profiler.ml" 48 1301 1313
+)
+"lib/profiler.ml" 57 1536 1544 "lib/profiler.ml" 60 1614 1625
+type(
+  unit
+)
+"lib/profiler.ml" 56 1514 1520 "lib/profiler.ml" 60 1614 1625
+type(
+  unit
+)
+"lib/profiler.ml" 49 1323 1327 "lib/profiler.ml" 60 1614 1625
+type(
+  unit
+)
+"lib/profiler.ml" 48 1301 1303 "lib/profiler.ml" 60 1614 1625
+type(
+  string -> float -> 'a -> unit
+)
+type(
+  string -> float -> 'a -> unit
+)
+"lib/profiler.ml" 62 1635 1639 "lib/profiler.ml" 62 1635 1648
+type(
+  string -> float -> 'a -> unit
+)
+ident(
+  def max_check "lib/profiler.ml" 67 1746 1746 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 63 1652 1657 "lib/profiler.ml" 63 1652 1672
+type(
+  bool
+)
+ident(
+  int_ref record_max_time "lib/profiler.ml" 3 78 82 "lib/profiler.ml" 3 78 97
+)
+"lib/profiler.ml" 63 1652 1678 "lib/profiler.ml" 63 1652 1687
+type(
+  string -> float -> 'a -> unit
+)
+ident(
+  int_ref max_check "lib/profiler.ml" 47 1252 1256 "lib/profiler.ml" 47 1252 1265
+)
+"lib/profiler.ml" 64 1689 1701 "lib/profiler.ml" 64 1689 1702
+type(
+  string
+)
+"lib/profiler.ml" 64 1689 1703 "lib/profiler.ml" 64 1689 1704
+type(
+  float
+)
+"lib/profiler.ml" 64 1689 1705 "lib/profiler.ml" 64 1689 1706
+type(
+  'a
+)
+"lib/profiler.ml" 64 1689 1710 "lib/profiler.ml" 64 1689 1712
+type(
+  unit
+)
+"lib/profiler.ml" 64 1689 1696 "lib/profiler.ml" 64 1689 1713
+type(
+  string -> float -> 'a -> unit
+)
+"lib/profiler.ml" 63 1652 1654 "lib/profiler.ml" 64 1689 1713
+type(
+  string -> float -> 'a -> unit
+)
+"lib/profiler.ml" 67 1746 1750 "lib/profiler.ml" 67 1746 1759
+type(
+  string -> unit
+)
+ident(
+  def count_one "lib/profiler.ml" 74 1996 1996 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 68 1780 1786 "lib/profiler.ml" 68 1780 1790
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 69 1795 1799 "lib/profiler.ml" 72 1931 1992
+)
+"lib/profiler.ml" 69 1795 1803 "lib/profiler.ml" 69 1795 1813
+type(
+  string -> (string, int64 ref) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"lib/profiler.ml" 69 1795 1814 "lib/profiler.ml" 69 1795 1818
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 68 1780 1786 "lib/profiler.ml" 68 1780 1790
+)
+"lib/profiler.ml" 69 1795 1819 "lib/profiler.ml" 69 1795 1820
+type(
+  (string, int64 ref) BatMap.t ref -> (string, int64 ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 69 1795 1820 "lib/profiler.ml" 69 1795 1829
+type(
+  (string, int64 ref) BatMap.t ref
+)
+ident(
+  int_ref count_log "lib/profiler.ml" 7 168 172 "lib/profiler.ml" 7 168 181
+)
+"lib/profiler.ml" 69 1795 1819 "lib/profiler.ml" 69 1795 1829
+type(
+  (string, int64 ref) BatMap.t
+)
+"lib/profiler.ml" 69 1795 1802 "lib/profiler.ml" 69 1795 1830
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/profiler.ml" 70 1837 1844 "lib/profiler.ml" 70 1837 1855
+type(
+  string -> (string, int64 ref) BatMap.t -> int64 ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 70 1837 1856 "lib/profiler.ml" 70 1837 1860
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 68 1780 1786 "lib/profiler.ml" 68 1780 1790
+)
+"lib/profiler.ml" 70 1837 1861 "lib/profiler.ml" 70 1837 1862
+type(
+  (string, int64 ref) BatMap.t ref -> (string, int64 ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 70 1837 1862 "lib/profiler.ml" 70 1837 1871
+type(
+  (string, int64 ref) BatMap.t ref
+)
+ident(
+  int_ref count_log "lib/profiler.ml" 7 168 172 "lib/profiler.ml" 7 168 181
+)
+"lib/profiler.ml" 70 1837 1861 "lib/profiler.ml" 70 1837 1871
+type(
+  (string, int64 ref) BatMap.t
+)
+"lib/profiler.ml" 70 1837 1843 "lib/profiler.ml" 70 1837 1872
+call(
+  stack
+)
+type(
+  int64 ref
+)
+"lib/profiler.ml" 70 1837 1873 "lib/profiler.ml" 70 1837 1875
+type(
+  int64 ref -> int64 -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 70 1837 1877 "lib/profiler.ml" 70 1837 1887
+type(
+  int64 -> int64
+)
+ident(
+  ext_ref Int64.succ
+)
+"lib/profiler.ml" 70 1837 1888 "lib/profiler.ml" 70 1837 1889
+type(
+  int64 ref -> int64
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 70 1837 1890 "lib/profiler.ml" 70 1837 1901
+type(
+  string -> (string, int64 ref) BatMap.t -> int64 ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 70 1837 1902 "lib/profiler.ml" 70 1837 1906
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 68 1780 1786 "lib/profiler.ml" 68 1780 1790
+)
+"lib/profiler.ml" 70 1837 1907 "lib/profiler.ml" 70 1837 1908
+type(
+  (string, int64 ref) BatMap.t ref -> (string, int64 ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 70 1837 1908 "lib/profiler.ml" 70 1837 1917
+type(
+  (string, int64 ref) BatMap.t ref
+)
+ident(
+  int_ref count_log "lib/profiler.ml" 7 168 172 "lib/profiler.ml" 7 168 181
+)
+"lib/profiler.ml" 70 1837 1907 "lib/profiler.ml" 70 1837 1917
+type(
+  (string, int64 ref) BatMap.t
+)
+"lib/profiler.ml" 70 1837 1889 "lib/profiler.ml" 70 1837 1918
+call(
+  stack
+)
+type(
+  int64 ref
+)
+"lib/profiler.ml" 70 1837 1888 "lib/profiler.ml" 70 1837 1918
+type(
+  int64
+)
+"lib/profiler.ml" 70 1837 1876 "lib/profiler.ml" 70 1837 1919
+call(
+  stack
+)
+type(
+  int64
+)
+"lib/profiler.ml" 70 1837 1843 "lib/profiler.ml" 70 1837 1919
+type(
+  unit
+)
+"lib/profiler.ml" 72 1931 1937 "lib/profiler.ml" 72 1931 1946
+type(
+  (string, int64 ref) BatMap.t ref
+)
+ident(
+  int_ref count_log "lib/profiler.ml" 7 168 172 "lib/profiler.ml" 7 168 181
+)
+"lib/profiler.ml" 72 1931 1947 "lib/profiler.ml" 72 1931 1949
+type(
+  (string, int64 ref) BatMap.t ref -> (string, int64 ref) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 72 1931 1950 "lib/profiler.ml" 72 1931 1960
+type(
+  string ->
+  int64 ref -> (string, int64 ref) BatMap.t -> (string, int64 ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"lib/profiler.ml" 72 1931 1961 "lib/profiler.ml" 72 1931 1965
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 68 1780 1786 "lib/profiler.ml" 68 1780 1790
+)
+"lib/profiler.ml" 72 1931 1967 "lib/profiler.ml" 72 1931 1970
+type(
+  int64 -> int64 ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 72 1931 1971 "lib/profiler.ml" 72 1931 1980
+type(
+  int64
+)
+ident(
+  ext_ref Int64.one
+)
+"lib/profiler.ml" 72 1931 1966 "lib/profiler.ml" 72 1931 1981
+type(
+  int64 ref
+)
+"lib/profiler.ml" 72 1931 1982 "lib/profiler.ml" 72 1931 1983
+type(
+  (string, int64 ref) BatMap.t ref -> (string, int64 ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 72 1931 1983 "lib/profiler.ml" 72 1931 1992
+type(
+  (string, int64 ref) BatMap.t ref
+)
+ident(
+  int_ref count_log "lib/profiler.ml" 7 168 172 "lib/profiler.ml" 7 168 181
+)
+"lib/profiler.ml" 72 1931 1982 "lib/profiler.ml" 72 1931 1992
+type(
+  (string, int64 ref) BatMap.t
+)
+"lib/profiler.ml" 72 1931 1950 "lib/profiler.ml" 72 1931 1992
+call(
+  stack
+)
+type(
+  (string, int64 ref) BatMap.t
+)
+"lib/profiler.ml" 72 1931 1937 "lib/profiler.ml" 72 1931 1992
+type(
+  unit
+)
+"lib/profiler.ml" 69 1795 1799 "lib/profiler.ml" 72 1931 1992
+type(
+  unit
+)
+"lib/profiler.ml" 68 1780 1782 "lib/profiler.ml" 72 1931 1992
+type(
+  string -> unit
+)
+type(
+  string -> unit
+)
+"lib/profiler.ml" 74 1996 2000 "lib/profiler.ml" 74 1996 2009
+type(
+  string -> unit
+)
+ident(
+  def count_one "lib/profiler.ml" 79 2112 2112 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 75 2013 2018 "lib/profiler.ml" 75 2013 2042
+type(
+  bool
+)
+ident(
+  int_ref record_calling_frequency "lib/profiler.ml" 2 40 44 "lib/profiler.ml" 2 40 68
+)
+"lib/profiler.ml" 75 2013 2048 "lib/profiler.ml" 75 2013 2057
+type(
+  string -> unit
+)
+ident(
+  int_ref count_one "lib/profiler.ml" 67 1746 1750 "lib/profiler.ml" 67 1746 1759
+)
+"lib/profiler.ml" 76 2059 2071 "lib/profiler.ml" 76 2059 2072
+type(
+  string
+)
+"lib/profiler.ml" 76 2059 2076 "lib/profiler.ml" 76 2059 2078
+type(
+  unit
+)
+"lib/profiler.ml" 76 2059 2066 "lib/profiler.ml" 76 2059 2079
+type(
+  string -> unit
+)
+"lib/profiler.ml" 75 2013 2015 "lib/profiler.ml" 76 2059 2079
+type(
+  string -> unit
+)
+"lib/profiler.ml" 79 2112 2116 "lib/profiler.ml" 79 2112 2126
+type(
+  string -> float -> unit
+)
+ident(
+  def update_log "lib/profiler.ml" 90 2379 2379 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 80 2156 2162 "lib/profiler.ml" 80 2156 2166
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 80 2156 2167 "lib/profiler.ml" 88 2350 2375
+)
+"lib/profiler.ml" 80 2156 2167 "lib/profiler.ml" 80 2156 2175
+type(
+  float
+)
+ident(
+  def interval "lib/profiler.ml" 81 2180 2184 "lib/profiler.ml" 88 2350 2375
+)
+"lib/profiler.ml" 81 2180 2188 "lib/profiler.ml" 81 2180 2189
+type(
+  float ref
+)
+ident(
+  def v "lib/profiler.ml" 88 2350 2356 "lib/profiler.ml" 88 2350 2375
+)
+"lib/profiler.ml" 82 2193 2202 "lib/profiler.ml" 82 2193 2212
+type(
+  string -> (string, float ref) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"lib/profiler.ml" 82 2193 2213 "lib/profiler.ml" 82 2193 2217
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 80 2156 2162 "lib/profiler.ml" 80 2156 2166
+)
+"lib/profiler.ml" 82 2193 2218 "lib/profiler.ml" 82 2193 2219
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 82 2193 2219 "lib/profiler.ml" 82 2193 2222
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref log "lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+)
+"lib/profiler.ml" 82 2193 2218 "lib/profiler.ml" 82 2193 2222
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 82 2193 2202 "lib/profiler.ml" 82 2193 2222
+call(
+  stack
+)
+type(
+  bool
+)
+"lib/profiler.ml" 83 2229 2237 "lib/profiler.ml" 83 2229 2248
+type(
+  string -> (string, float ref) BatMap.t -> float ref
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 83 2229 2249 "lib/profiler.ml" 83 2229 2253
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 80 2156 2162 "lib/profiler.ml" 80 2156 2166
+)
+"lib/profiler.ml" 83 2229 2254 "lib/profiler.ml" 83 2229 2255
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 83 2229 2255 "lib/profiler.ml" 83 2229 2258
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref log "lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+)
+"lib/profiler.ml" 83 2229 2254 "lib/profiler.ml" 83 2229 2258
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 83 2229 2237 "lib/profiler.ml" 83 2229 2258
+call(
+  stack
+)
+type(
+  float ref
+)
+"lib/profiler.ml" 85 2272 2284 "lib/profiler.ml" 85 2272 2285
+type(
+  float ref
+)
+ident(
+  def v "lib/profiler.ml" 86 2299 2309 "lib/profiler.ml" 86 2299 2340
+)
+"lib/profiler.ml" 85 2272 2288 "lib/profiler.ml" 85 2272 2291
+type(
+  float -> float ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"lib/profiler.ml" 85 2272 2292 "lib/profiler.ml" 85 2272 2294
+type(
+  float
+)
+"lib/profiler.ml" 85 2272 2288 "lib/profiler.ml" 85 2272 2294
+type(
+  float ref
+)
+"lib/profiler.ml" 86 2299 2309 "lib/profiler.ml" 86 2299 2312
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref log "lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+)
+"lib/profiler.ml" 86 2299 2313 "lib/profiler.ml" 86 2299 2315
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 86 2299 2316 "lib/profiler.ml" 86 2299 2326
+type(
+  string ->
+  float ref -> (string, float ref) BatMap.t -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"lib/profiler.ml" 86 2299 2327 "lib/profiler.ml" 86 2299 2331
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 80 2156 2162 "lib/profiler.ml" 80 2156 2166
+)
+"lib/profiler.ml" 86 2299 2332 "lib/profiler.ml" 86 2299 2333
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 85 2272 2284 "lib/profiler.ml" 85 2272 2285
+)
+"lib/profiler.ml" 86 2299 2334 "lib/profiler.ml" 86 2299 2335
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 86 2299 2335 "lib/profiler.ml" 86 2299 2338
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref log "lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+)
+"lib/profiler.ml" 86 2299 2334 "lib/profiler.ml" 86 2299 2338
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 86 2299 2316 "lib/profiler.ml" 86 2299 2338
+call(
+  stack
+)
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 86 2299 2309 "lib/profiler.ml" 86 2299 2338
+type(
+  unit
+)
+"lib/profiler.ml" 86 2299 2339 "lib/profiler.ml" 86 2299 2340
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 85 2272 2284 "lib/profiler.ml" 85 2272 2285
+)
+"lib/profiler.ml" 86 2299 2309 "lib/profiler.ml" 86 2299 2340
+type(
+  float ref
+)
+"lib/profiler.ml" 85 2272 2280 "lib/profiler.ml" 86 2299 2340
+type(
+  float ref
+)
+"lib/profiler.ml" 82 2193 2199 "lib/profiler.ml" 86 2299 2340
+type(
+  float ref
+)
+"lib/profiler.ml" 88 2350 2356 "lib/profiler.ml" 88 2350 2357
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 81 2180 2188 "lib/profiler.ml" 81 2180 2189
+)
+"lib/profiler.ml" 88 2350 2358 "lib/profiler.ml" 88 2350 2360
+type(
+  float ref -> float -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 88 2350 2361 "lib/profiler.ml" 88 2350 2362
+type(
+  float ref -> float
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 88 2350 2362 "lib/profiler.ml" 88 2350 2363
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 81 2180 2188 "lib/profiler.ml" 81 2180 2189
+)
+"lib/profiler.ml" 88 2350 2361 "lib/profiler.ml" 88 2350 2363
+type(
+  float
+)
+"lib/profiler.ml" 88 2350 2364 "lib/profiler.ml" 88 2350 2366
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( +. )
+)
+"lib/profiler.ml" 88 2350 2367 "lib/profiler.ml" 88 2350 2375
+type(
+  float
+)
+ident(
+  int_ref interval "lib/profiler.ml" 80 2156 2167 "lib/profiler.ml" 80 2156 2175
+)
+"lib/profiler.ml" 88 2350 2361 "lib/profiler.ml" 88 2350 2375
+type(
+  float
+)
+"lib/profiler.ml" 88 2350 2356 "lib/profiler.ml" 88 2350 2375
+type(
+  unit
+)
+"lib/profiler.ml" 81 2180 2184 "lib/profiler.ml" 88 2350 2375
+type(
+  unit
+)
+"lib/profiler.ml" 80 2156 2158 "lib/profiler.ml" 88 2350 2375
+type(
+  string -> float -> unit
+)
+type(
+  string -> float -> unit
+)
+"lib/profiler.ml" 90 2379 2383 "lib/profiler.ml" 90 2379 2395
+type(
+  unit -> unit
+)
+ident(
+  def start_logger "lib/profiler.ml" 94 2459 2459 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 91 2414 2420 "lib/profiler.ml" 91 2414 2422
+type(
+  unit
+)
+"lib/profiler.ml" 92 2427 2431 "lib/profiler.ml" 92 2427 2440
+type(
+  float ref
+)
+ident(
+  int_ref log_start "lib/profiler.ml" 11 310 314 "lib/profiler.ml" 11 310 323
+)
+"lib/profiler.ml" 92 2427 2441 "lib/profiler.ml" 92 2427 2443
+type(
+  float ref -> float -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 92 2427 2444 "lib/profiler.ml" 92 2427 2452
+type(
+  unit -> float
+)
+ident(
+  ext_ref Sys.time
+)
+"lib/profiler.ml" 92 2427 2453 "lib/profiler.ml" 92 2427 2455
+type(
+  unit
+)
+"lib/profiler.ml" 92 2427 2444 "lib/profiler.ml" 92 2427 2455
+type(
+  float
+)
+"lib/profiler.ml" 92 2427 2431 "lib/profiler.ml" 92 2427 2455
+type(
+  unit
+)
+"lib/profiler.ml" 91 2414 2416 "lib/profiler.ml" 92 2427 2455
+type(
+  unit -> unit
+)
+type(
+  unit -> unit
+)
+"lib/profiler.ml" 94 2459 2463 "lib/profiler.ml" 94 2459 2474
+type(
+  string -> unit
+)
+ident(
+  def start_event "lib/profiler.ml" 105 2718 2718 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 95 2495 2501 "lib/profiler.ml" 95 2495 2505
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 96 2510 2514 "lib/profiler.ml" 103 2706 2714
+)
+"lib/profiler.ml" 96 2510 2517 "lib/profiler.ml" 96 2510 2518
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 96 2510 2518 "lib/profiler.ml" 96 2510 2537
+type(
+  bool ref
+)
+ident(
+  ext_ref Options.opt_profile
+)
+"lib/profiler.ml" 96 2510 2517 "lib/profiler.ml" 96 2510 2537
+type(
+  bool
+)
+"lib/profiler.ml" 98 2557 2569 "lib/profiler.ml" 98 2557 2571
+type(
+  float
+)
+ident(
+  def st "lib/profiler.ml" 99 2589 2599 "lib/profiler.ml" 100 2635 2683
+)
+"lib/profiler.ml" 98 2557 2574 "lib/profiler.ml" 98 2557 2582
+type(
+  unit -> float
+)
+ident(
+  ext_ref Sys.time
+)
+"lib/profiler.ml" 98 2557 2582 "lib/profiler.ml" 98 2557 2584
+type(
+  unit
+)
+"lib/profiler.ml" 98 2557 2574 "lib/profiler.ml" 98 2557 2584
+type(
+  float
+)
+"lib/profiler.ml" 99 2589 2603 "lib/profiler.ml" 99 2589 2617
+type(
+  string -> int
+)
+ident(
+  int_ref incr_recursive "lib/profiler.ml" 14 366 370 "lib/profiler.ml" 14 366 384
+)
+"lib/profiler.ml" 99 2589 2618 "lib/profiler.ml" 99 2589 2622
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 95 2495 2501 "lib/profiler.ml" 95 2495 2505
+)
+"lib/profiler.ml" 99 2589 2602 "lib/profiler.ml" 99 2589 2623
+call(
+  stack
+)
+type(
+  int
+)
+"lib/profiler.ml" 99 2589 2624 "lib/profiler.ml" 99 2589 2626
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"lib/profiler.ml" 99 2589 2627 "lib/profiler.ml" 99 2589 2628
+type(
+  int
+)
+"lib/profiler.ml" 99 2589 2602 "lib/profiler.ml" 99 2589 2628
+type(
+  bool
+)
+"lib/profiler.ml" 100 2635 2647 "lib/profiler.ml" 100 2635 2653
+type(
+  (string, float) BatMap.t ref
+)
+ident(
+  int_ref events "lib/profiler.ml" 5 109 113 "lib/profiler.ml" 5 109 119
+)
+"lib/profiler.ml" 100 2635 2654 "lib/profiler.ml" 100 2635 2656
+type(
+  (string, float) BatMap.t ref -> (string, float) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 100 2635 2657 "lib/profiler.ml" 100 2635 2667
+type(
+  string -> float -> (string, float) BatMap.t -> (string, float) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"lib/profiler.ml" 100 2635 2668 "lib/profiler.ml" 100 2635 2672
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 95 2495 2501 "lib/profiler.ml" 95 2495 2505
+)
+"lib/profiler.ml" 100 2635 2673 "lib/profiler.ml" 100 2635 2675
+type(
+  float
+)
+ident(
+  int_ref st "lib/profiler.ml" 98 2557 2569 "lib/profiler.ml" 98 2557 2571
+)
+"lib/profiler.ml" 100 2635 2676 "lib/profiler.ml" 100 2635 2677
+type(
+  (string, float) BatMap.t ref -> (string, float) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 100 2635 2677 "lib/profiler.ml" 100 2635 2683
+type(
+  (string, float) BatMap.t ref
+)
+ident(
+  int_ref events "lib/profiler.ml" 5 109 113 "lib/profiler.ml" 5 109 119
+)
+"lib/profiler.ml" 100 2635 2676 "lib/profiler.ml" 100 2635 2683
+type(
+  (string, float) BatMap.t
+)
+"lib/profiler.ml" 100 2635 2657 "lib/profiler.ml" 100 2635 2683
+call(
+  stack
+)
+type(
+  (string, float) BatMap.t
+)
+"lib/profiler.ml" 100 2635 2647 "lib/profiler.ml" 100 2635 2683
+type(
+  unit
+)
+"lib/profiler.ml" 99 2589 2599 "lib/profiler.ml" 100 2635 2683
+type(
+  unit
+)
+"lib/profiler.ml" 97 2544 2550 "lib/profiler.ml" 101 2685 2694
+type(
+  unit
+)
+"lib/profiler.ml" 103 2706 2712 "lib/profiler.ml" 103 2706 2714
+type(
+  unit
+)
+"lib/profiler.ml" 96 2510 2514 "lib/profiler.ml" 103 2706 2714
+type(
+  unit
+)
+"lib/profiler.ml" 95 2495 2497 "lib/profiler.ml" 103 2706 2714
+type(
+  string -> unit
+)
+type(
+  string -> unit
+)
+"lib/profiler.ml" 105 2718 2722 "lib/profiler.ml" 105 2718 2734
+type(
+  string -> unit
+)
+ident(
+  def finish_event "lib/profiler.ml" 121 3174 3174 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 106 2755 2761 "lib/profiler.ml" 106 2755 2765
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 107 2770 2774 "lib/profiler.ml" 119 3148 3156
+)
+"lib/profiler.ml" 107 2770 2777 "lib/profiler.ml" 107 2770 2778
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 107 2770 2778 "lib/profiler.ml" 107 2770 2797
+type(
+  bool ref
+)
+ident(
+  ext_ref Options.opt_profile
+)
+"lib/profiler.ml" 107 2770 2777 "lib/profiler.ml" 107 2770 2797
+type(
+  bool
+)
+"lib/profiler.ml" 109 2817 2829 "lib/profiler.ml" 109 2817 2831
+type(
+  float
+)
+ident(
+  def ft "lib/profiler.ml" 110 2849 2859 "lib/profiler.ml" 116 3091 3125
+)
+"lib/profiler.ml" 109 2817 2834 "lib/profiler.ml" 109 2817 2842
+type(
+  unit -> float
+)
+ident(
+  ext_ref Sys.time
+)
+"lib/profiler.ml" 109 2817 2842 "lib/profiler.ml" 109 2817 2844
+type(
+  unit
+)
+"lib/profiler.ml" 109 2817 2834 "lib/profiler.ml" 109 2817 2844
+type(
+  float
+)
+"lib/profiler.ml" 110 2849 2859 "lib/profiler.ml" 110 2849 2868
+type(
+  string -> unit
+)
+ident(
+  int_ref count_one "lib/profiler.ml" 74 1996 2000 "lib/profiler.ml" 74 1996 2009
+)
+"lib/profiler.ml" 110 2849 2869 "lib/profiler.ml" 110 2849 2873
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 106 2755 2761 "lib/profiler.ml" 106 2755 2765
+)
+"lib/profiler.ml" 110 2849 2859 "lib/profiler.ml" 110 2849 2873
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/profiler.ml" 111 2876 2890 "lib/profiler.ml" 111 2876 2891
+type(
+  int
+)
+ident(
+  def v "lib/profiler.ml" 112 2918 2930 "lib/profiler.ml" 116 3091 3125
+)
+"lib/profiler.ml" 111 2876 2894 "lib/profiler.ml" 111 2876 2908
+type(
+  string -> int
+)
+ident(
+  int_ref decr_recursive "lib/profiler.ml" 28 705 709 "lib/profiler.ml" 28 705 723
+)
+"lib/profiler.ml" 111 2876 2909 "lib/profiler.ml" 111 2876 2913
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 106 2755 2761 "lib/profiler.ml" 106 2755 2765
+)
+"lib/profiler.ml" 111 2876 2894 "lib/profiler.ml" 111 2876 2913
+call(
+  stack
+)
+type(
+  int
+)
+"lib/profiler.ml" 112 2918 2933 "lib/profiler.ml" 112 2918 2934
+type(
+  int
+)
+ident(
+  int_ref v "lib/profiler.ml" 111 2876 2890 "lib/profiler.ml" 111 2876 2891
+)
+"lib/profiler.ml" 112 2918 2935 "lib/profiler.ml" 112 2918 2937
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"lib/profiler.ml" 112 2918 2938 "lib/profiler.ml" 112 2918 2939
+type(
+  int
+)
+"lib/profiler.ml" 112 2918 2933 "lib/profiler.ml" 112 2918 2939
+type(
+  bool
+)
+"lib/profiler.ml" 113 2946 2964 "lib/profiler.ml" 113 2946 2966
+type(
+  float
+)
+ident(
+  def t0 "lib/profiler.ml" 114 2998 3012 "lib/profiler.ml" 116 3091 3125
+)
+"lib/profiler.ml" 113 2946 2969 "lib/profiler.ml" 113 2946 2980
+type(
+  string -> (string, float) BatMap.t -> float
+)
+ident(
+  ext_ref BatMap.find
+)
+"lib/profiler.ml" 113 2946 2981 "lib/profiler.ml" 113 2946 2985
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 106 2755 2761 "lib/profiler.ml" 106 2755 2765
+)
+"lib/profiler.ml" 113 2946 2986 "lib/profiler.ml" 113 2946 2987
+type(
+  (string, float) BatMap.t ref -> (string, float) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 113 2946 2987 "lib/profiler.ml" 113 2946 2993
+type(
+  (string, float) BatMap.t ref
+)
+ident(
+  int_ref events "lib/profiler.ml" 5 109 113 "lib/profiler.ml" 5 109 119
+)
+"lib/profiler.ml" 113 2946 2986 "lib/profiler.ml" 113 2946 2993
+type(
+  (string, float) BatMap.t
+)
+"lib/profiler.ml" 113 2946 2969 "lib/profiler.ml" 113 2946 2993
+call(
+  stack
+)
+type(
+  float
+)
+"lib/profiler.ml" 114 2998 3016 "lib/profiler.ml" 114 2998 3018
+type(
+  float
+)
+ident(
+  def el "lib/profiler.ml" 115 3036 3052 "lib/profiler.ml" 116 3091 3125
+)
+"lib/profiler.ml" 114 2998 3022 "lib/profiler.ml" 114 2998 3024
+type(
+  float
+)
+ident(
+  int_ref ft "lib/profiler.ml" 109 2817 2829 "lib/profiler.ml" 109 2817 2831
+)
+"lib/profiler.ml" 114 2998 3025 "lib/profiler.ml" 114 2998 3027
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( -. )
+)
+"lib/profiler.ml" 114 2998 3028 "lib/profiler.ml" 114 2998 3030
+type(
+  float
+)
+ident(
+  int_ref t0 "lib/profiler.ml" 113 2946 2964 "lib/profiler.ml" 113 2946 2966
+)
+"lib/profiler.ml" 114 2998 3021 "lib/profiler.ml" 114 2998 3031
+type(
+  float
+)
+"lib/profiler.ml" 115 3036 3052 "lib/profiler.ml" 115 3036 3058
+type(
+  (string, float) BatMap.t ref
+)
+ident(
+  int_ref events "lib/profiler.ml" 5 109 113 "lib/profiler.ml" 5 109 119
+)
+"lib/profiler.ml" 115 3036 3059 "lib/profiler.ml" 115 3036 3061
+type(
+  (string, float) BatMap.t ref -> (string, float) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 115 3036 3062 "lib/profiler.ml" 115 3036 3075
+type(
+  string -> (string, float) BatMap.t -> (string, float) BatMap.t
+)
+ident(
+  ext_ref BatMap.remove
+)
+"lib/profiler.ml" 115 3036 3076 "lib/profiler.ml" 115 3036 3080
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 106 2755 2761 "lib/profiler.ml" 106 2755 2765
+)
+"lib/profiler.ml" 115 3036 3081 "lib/profiler.ml" 115 3036 3082
+type(
+  (string, float) BatMap.t ref -> (string, float) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 115 3036 3082 "lib/profiler.ml" 115 3036 3088
+type(
+  (string, float) BatMap.t ref
+)
+ident(
+  int_ref events "lib/profiler.ml" 5 109 113 "lib/profiler.ml" 5 109 119
+)
+"lib/profiler.ml" 115 3036 3081 "lib/profiler.ml" 115 3036 3088
+type(
+  (string, float) BatMap.t
+)
+"lib/profiler.ml" 115 3036 3062 "lib/profiler.ml" 115 3036 3088
+call(
+  stack
+)
+type(
+  (string, float) BatMap.t
+)
+"lib/profiler.ml" 115 3036 3052 "lib/profiler.ml" 115 3036 3088
+type(
+  unit
+)
+"lib/profiler.ml" 116 3091 3107 "lib/profiler.ml" 116 3091 3117
+type(
+  string -> float -> unit
+)
+ident(
+  int_ref update_log "lib/profiler.ml" 79 2112 2116 "lib/profiler.ml" 79 2112 2126
+)
+"lib/profiler.ml" 116 3091 3118 "lib/profiler.ml" 116 3091 3122
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 106 2755 2761 "lib/profiler.ml" 106 2755 2765
+)
+"lib/profiler.ml" 116 3091 3123 "lib/profiler.ml" 116 3091 3125
+type(
+  float
+)
+ident(
+  int_ref el "lib/profiler.ml" 114 2998 3016 "lib/profiler.ml" 114 2998 3018
+)
+"lib/profiler.ml" 116 3091 3107 "lib/profiler.ml" 116 3091 3125
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/profiler.ml" 115 3036 3052 "lib/profiler.ml" 116 3091 3125
+type(
+  unit
+)
+"lib/profiler.ml" 114 2998 3012 "lib/profiler.ml" 116 3091 3125
+type(
+  unit
+)
+"lib/profiler.ml" 113 2946 2960 "lib/profiler.ml" 116 3091 3125
+type(
+  unit
+)
+"lib/profiler.ml" 112 2918 2930 "lib/profiler.ml" 116 3091 3125
+type(
+  unit
+)
+"lib/profiler.ml" 111 2876 2886 "lib/profiler.ml" 116 3091 3125
+type(
+  unit
+)
+"lib/profiler.ml" 110 2849 2859 "lib/profiler.ml" 116 3091 3125
+type(
+  unit
+)
+"lib/profiler.ml" 108 2804 2810 "lib/profiler.ml" 117 3127 3136
+type(
+  unit
+)
+"lib/profiler.ml" 119 3148 3154 "lib/profiler.ml" 119 3148 3156
+type(
+  unit
+)
+"lib/profiler.ml" 107 2770 2774 "lib/profiler.ml" 119 3148 3156
+type(
+  unit
+)
+"lib/profiler.ml" 106 2755 2757 "lib/profiler.ml" 119 3148 3156
+type(
+  string -> unit
+)
+type(
+  string -> unit
+)
+"lib/profiler.ml" 121 3174 3178 "lib/profiler.ml" 121 3174 3191
+type(
+  unit -> string
+)
+ident(
+  def make_filename "lib/profiler.ml" 133 3490 3490 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 122 3212 3218 "lib/profiler.ml" 122 3212 3220
+type(
+  unit
+)
+"lib/profiler.ml" 123 3225 3233 "lib/profiler.ml" 123 3225 3237
+type(
+  int -> string
+)
+ident(
+  def name "lib/profiler.ml" 126 3317 3321 "lib/profiler.ml" 131 3467 3486
+)
+"lib/profiler.ml" 124 3257 3267 "lib/profiler.ml" 124 3257 3268
+type(
+  int
+)
+ident(
+  def i "lib/profiler.ml" 124 3257 3272 "lib/profiler.ml" 124 3257 3307
+)
+"lib/profiler.ml" 124 3257 3272 "lib/profiler.ml" 124 3257 3282
+type(
+  string
+)
+"lib/profiler.ml" 124 3257 3282 "lib/profiler.ml" 124 3257 3283
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/profiler.ml" 124 3257 3284 "lib/profiler.ml" 124 3257 3297
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"lib/profiler.ml" 124 3257 3298 "lib/profiler.ml" 124 3257 3299
+type(
+  int
+)
+ident(
+  int_ref i "lib/profiler.ml" 124 3257 3267 "lib/profiler.ml" 124 3257 3268
+)
+"lib/profiler.ml" 124 3257 3283 "lib/profiler.ml" 124 3257 3300
+call(
+  stack
+)
+type(
+  string
+)
+"lib/profiler.ml" 124 3257 3300 "lib/profiler.ml" 124 3257 3301
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"lib/profiler.ml" 124 3257 3301 "lib/profiler.ml" 124 3257 3307
+type(
+  string
+)
+"lib/profiler.ml" 124 3257 3283 "lib/profiler.ml" 124 3257 3307
+call(
+  stack
+)
+type(
+  string
+)
+"lib/profiler.ml" 124 3257 3272 "lib/profiler.ml" 124 3257 3307
+call(
+  tail
+)
+type(
+  string
+)
+"lib/profiler.ml" 124 3257 3263 "lib/profiler.ml" 124 3257 3307
+type(
+  int -> string
+)
+type(
+  int -> string
+)
+"lib/profiler.ml" 126 3317 3329 "lib/profiler.ml" 126 3317 3340
+type(
+  int -> string
+)
+ident(
+  def make_file_i "lib/profiler.ml" 126 3317 3321 "lib/profiler.ml" 131 3467 3486
+)
+"lib/profiler.ml" 127 3360 3370 "lib/profiler.ml" 127 3360 3371
+type(
+  int
+)
+ident(
+  def i "lib/profiler.ml" 128 3376 3384 "lib/profiler.ml" 129 3436 3457
+)
+"lib/profiler.ml" 128 3376 3387 "lib/profiler.ml" 128 3376 3402
+type(
+  string -> bool
+)
+ident(
+  ext_ref Sys.file_exists
+)
+"lib/profiler.ml" 128 3376 3404 "lib/profiler.ml" 128 3376 3408
+type(
+  int -> string
+)
+ident(
+  int_ref name "lib/profiler.ml" 123 3225 3233 "lib/profiler.ml" 123 3225 3237
+)
+"lib/profiler.ml" 128 3376 3409 "lib/profiler.ml" 128 3376 3410
+type(
+  int
+)
+ident(
+  int_ref i "lib/profiler.ml" 127 3360 3370 "lib/profiler.ml" 127 3360 3371
+)
+"lib/profiler.ml" 128 3376 3403 "lib/profiler.ml" 128 3376 3411
+call(
+  stack
+)
+type(
+  string
+)
+"lib/profiler.ml" 128 3376 3387 "lib/profiler.ml" 128 3376 3411
+type(
+  bool
+)
+"lib/profiler.ml" 128 3376 3417 "lib/profiler.ml" 128 3376 3428
+type(
+  int -> string
+)
+ident(
+  int_ref make_file_i "lib/profiler.ml" 126 3317 3329 "lib/profiler.ml" 126 3317 3340
+)
+"lib/profiler.ml" 128 3376 3430 "lib/profiler.ml" 128 3376 3431
+type(
+  int
+)
+ident(
+  int_ref i "lib/profiler.ml" 127 3360 3370 "lib/profiler.ml" 127 3360 3371
+)
+"lib/profiler.ml" 128 3376 3431 "lib/profiler.ml" 128 3376 3432
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"lib/profiler.ml" 128 3376 3432 "lib/profiler.ml" 128 3376 3433
+type(
+  int
+)
+"lib/profiler.ml" 128 3376 3429 "lib/profiler.ml" 128 3376 3434
+type(
+  int
+)
+"lib/profiler.ml" 128 3376 3417 "lib/profiler.ml" 128 3376 3434
+call(
+  tail
+)
+type(
+  string
+)
+"lib/profiler.ml" 129 3436 3450 "lib/profiler.ml" 129 3436 3454
+type(
+  int -> string
+)
+ident(
+  int_ref name "lib/profiler.ml" 123 3225 3233 "lib/profiler.ml" 123 3225 3237
+)
+"lib/profiler.ml" 129 3436 3455 "lib/profiler.ml" 129 3436 3456
+type(
+  int
+)
+ident(
+  int_ref i "lib/profiler.ml" 127 3360 3370 "lib/profiler.ml" 127 3360 3371
+)
+"lib/profiler.ml" 129 3436 3449 "lib/profiler.ml" 129 3436 3457
+call(
+  tail
+)
+type(
+  string
+)
+"lib/profiler.ml" 128 3376 3384 "lib/profiler.ml" 129 3436 3457
+type(
+  string
+)
+"lib/profiler.ml" 127 3360 3366 "lib/profiler.ml" 129 3436 3457
+type(
+  int -> string
+)
+type(
+  int -> string
+)
+"lib/profiler.ml" 131 3467 3473 "lib/profiler.ml" 131 3467 3484
+type(
+  int -> string
+)
+ident(
+  int_ref make_file_i "lib/profiler.ml" 126 3317 3329 "lib/profiler.ml" 126 3317 3340
+)
+"lib/profiler.ml" 131 3467 3485 "lib/profiler.ml" 131 3467 3486
+type(
+  int
+)
+"lib/profiler.ml" 131 3467 3473 "lib/profiler.ml" 131 3467 3486
+call(
+  tail
+)
+type(
+  string
+)
+"lib/profiler.ml" 126 3317 3321 "lib/profiler.ml" 131 3467 3486
+type(
+  string
+)
+"lib/profiler.ml" 123 3225 3229 "lib/profiler.ml" 131 3467 3486
+type(
+  string
+)
+"lib/profiler.ml" 122 3212 3214 "lib/profiler.ml" 131 3467 3486
+type(
+  unit -> string
+)
+type(
+  unit -> string
+)
+"lib/profiler.ml" 133 3490 3494 "lib/profiler.ml" 133 3490 3503
+type(
+  string -> string
+)
+ident(
+  def make_file "lib/profiler.ml" 141 3690 3690 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 134 3526 3532 "lib/profiler.ml" 134 3526 3535
+type(
+  string
+)
+ident(
+  def txt "lib/profiler.ml" 135 3540 3544 "lib/profiler.ml" 139 3676 3686
+)
+"lib/profiler.ml" 135 3540 3548 "lib/profiler.ml" 135 3540 3552
+type(
+  string
+)
+ident(
+  def name "lib/profiler.ml" 136 3576 3580 "lib/profiler.ml" 139 3676 3686
+)
+"lib/profiler.ml" 135 3540 3555 "lib/profiler.ml" 135 3540 3568
+type(
+  unit -> string
+)
+ident(
+  int_ref make_filename "lib/profiler.ml" 121 3174 3178 "lib/profiler.ml" 121 3174 3191
+)
+"lib/profiler.ml" 135 3540 3569 "lib/profiler.ml" 135 3540 3571
+type(
+  unit
+)
+"lib/profiler.ml" 135 3540 3555 "lib/profiler.ml" 135 3540 3571
+call(
+  stack
+)
+type(
+  string
+)
+"lib/profiler.ml" 136 3576 3584 "lib/profiler.ml" 136 3576 3591
+type(
+  out_channel
+)
+ident(
+  def fileout "lib/profiler.ml" 137 3616 3622 "lib/profiler.ml" 139 3676 3686
+)
+"lib/profiler.ml" 136 3576 3594 "lib/profiler.ml" 136 3576 3606
+type(
+  string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out_bin
+)
+"lib/profiler.ml" 136 3576 3607 "lib/profiler.ml" 136 3576 3611
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 135 3540 3548 "lib/profiler.ml" 135 3540 3552
+)
+"lib/profiler.ml" 136 3576 3594 "lib/profiler.ml" 136 3576 3611
+call(
+  stack
+)
+type(
+  out_channel
+)
+"lib/profiler.ml" 137 3616 3622 "lib/profiler.ml" 137 3616 3635
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"lib/profiler.ml" 137 3616 3636 "lib/profiler.ml" 137 3616 3643
+type(
+  out_channel
+)
+ident(
+  int_ref fileout "lib/profiler.ml" 136 3576 3584 "lib/profiler.ml" 136 3576 3591
+)
+"lib/profiler.ml" 137 3616 3644 "lib/profiler.ml" 137 3616 3647
+type(
+  string
+)
+ident(
+  int_ref txt "lib/profiler.ml" 134 3526 3532 "lib/profiler.ml" 134 3526 3535
+)
+"lib/profiler.ml" 137 3616 3622 "lib/profiler.ml" 137 3616 3647
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/profiler.ml" 138 3650 3656 "lib/profiler.ml" 138 3650 3665
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_out
+)
+"lib/profiler.ml" 138 3650 3666 "lib/profiler.ml" 138 3650 3673
+type(
+  out_channel
+)
+ident(
+  int_ref fileout "lib/profiler.ml" 136 3576 3584 "lib/profiler.ml" 136 3576 3591
+)
+"lib/profiler.ml" 138 3650 3656 "lib/profiler.ml" 138 3650 3673
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/profiler.ml" 139 3676 3682 "lib/profiler.ml" 139 3676 3686
+type(
+  string
+)
+ident(
+  int_ref name "lib/profiler.ml" 135 3540 3548 "lib/profiler.ml" 135 3540 3552
+)
+"lib/profiler.ml" 138 3650 3656 "lib/profiler.ml" 139 3676 3686
+type(
+  string
+)
+"lib/profiler.ml" 137 3616 3622 "lib/profiler.ml" 139 3676 3686
+type(
+  string
+)
+"lib/profiler.ml" 136 3576 3580 "lib/profiler.ml" 139 3676 3686
+type(
+  string
+)
+"lib/profiler.ml" 135 3540 3544 "lib/profiler.ml" 139 3676 3686
+type(
+  string
+)
+"lib/profiler.ml" 134 3526 3528 "lib/profiler.ml" 139 3676 3686
+type(
+  string -> string
+)
+type(
+  string -> string
+)
+"lib/profiler.ml" 141 3690 3694 "lib/profiler.ml" 141 3690 3700
+type(
+  out_channel -> unit
+)
+ident(
+  def report "lib/profiler.ml" 167 4951 4951 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 142 3726 3732 "lib/profiler.ml" 142 3726 3733
+type(
+  out_channel
+)
+ident(
+  def c "lib/profiler.ml" 143 3738 3742 "lib/profiler.ml" 165 4937 4945
+)
+"lib/profiler.ml" 143 3738 3745 "lib/profiler.ml" 143 3738 3746
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 143 3738 3746 "lib/profiler.ml" 143 3738 3765
+type(
+  bool ref
+)
+ident(
+  ext_ref Options.opt_profile
+)
+"lib/profiler.ml" 143 3738 3745 "lib/profiler.ml" 143 3738 3765
+type(
+  bool
+)
+"lib/profiler.ml" 145 3785 3797 "lib/profiler.ml" 145 3785 3800
+type(
+  float
+)
+ident(
+  def tot "lib/profiler.ml" 146 3832 3842 "lib/profiler.ml" 162 4899 4914
+)
+"lib/profiler.ml" 145 3785 3803 "lib/profiler.ml" 145 3785 3811
+type(
+  unit -> float
+)
+ident(
+  ext_ref Sys.time
+)
+"lib/profiler.ml" 145 3785 3811 "lib/profiler.ml" 145 3785 3813
+type(
+  unit
+)
+"lib/profiler.ml" 145 3785 3803 "lib/profiler.ml" 145 3785 3813
+type(
+  float
+)
+"lib/profiler.ml" 145 3785 3814 "lib/profiler.ml" 145 3785 3816
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( -. )
+)
+"lib/profiler.ml" 145 3785 3817 "lib/profiler.ml" 145 3785 3818
+type(
+  float ref -> float
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 145 3785 3818 "lib/profiler.ml" 145 3785 3827
+type(
+  float ref
+)
+ident(
+  int_ref log_start "lib/profiler.ml" 11 310 314 "lib/profiler.ml" 11 310 323
+)
+"lib/profiler.ml" 145 3785 3817 "lib/profiler.ml" 145 3785 3827
+type(
+  float
+)
+"lib/profiler.ml" 145 3785 3803 "lib/profiler.ml" 145 3785 3827
+type(
+  float
+)
+"lib/profiler.ml" 148 3917 3929 "lib/profiler.ml" 148 3917 3943
+type(
+  out_channel -> (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"lib/profiler.ml" 148 3917 3944 "lib/profiler.ml" 148 3917 3945
+type(
+  out_channel
+)
+ident(
+  int_ref c "lib/profiler.ml" 142 3726 3732 "lib/profiler.ml" 142 3726 3733
+)
+"lib/profiler.ml" 148 3917 3946 "lib/profiler.ml" 148 3917 3961
+type(
+  (unit, out_channel, unit) format
+)
+"lib/profiler.ml" 148 3917 3929 "lib/profiler.ml" 148 3917 3961
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/profiler.ml" 149 3964 3976 "lib/profiler.ml" 149 3964 3990
+type(
+  out_channel -> (float -> unit, out_channel, unit) format -> float -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"lib/profiler.ml" 149 3964 3991 "lib/profiler.ml" 149 3964 3992
+type(
+  out_channel
+)
+ident(
+  int_ref c "lib/profiler.ml" 142 3726 3732 "lib/profiler.ml" 142 3726 3733
+)
+"lib/profiler.ml" 149 3964 3993 "lib/profiler.ml" 149 3964 4004
+type(
+  (float -> unit, out_channel, unit) format
+)
+"lib/profiler.ml" 149 3964 4005 "lib/profiler.ml" 149 3964 4008
+type(
+  float
+)
+ident(
+  int_ref tot "lib/profiler.ml" 145 3785 3797 "lib/profiler.ml" 145 3785 3800
+)
+"lib/profiler.ml" 149 3964 3976 "lib/profiler.ml" 149 3964 4008
+call(
+  stack
+)
+type(
+  unit
+)
+"lib/profiler.ml" 151 4063 4075 "lib/profiler.ml" 151 4063 4086
+type(
+  (string -> float ref -> unit) -> (string, float ref) BatMap.t -> unit
+)
+ident(
+  ext_ref BatMap.iter
+)
+"lib/profiler.ml" 151 4063 4092 "lib/profiler.ml" 151 4063 4093
+type(
+  string
+)
+ident(
+  def x "lib/profiler.ml" 151 4063 4094 "lib/profiler.ml" 151 4063 4166
+)
+"lib/profiler.ml" 151 4063 4094 "lib/profiler.ml" 151 4063 4095
+type(
+  float ref
+)
+ident(
+  def v "lib/profiler.ml" 151 4063 4099 "lib/profiler.ml" 151 4063 4166
+)
+"lib/profiler.ml" 151 4063 4099 "lib/profiler.ml" 151 4063 4113
+type(
+  out_channel ->
+  (string -> float -> float -> unit, out_channel, unit) format ->
+  string -> float -> float -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"lib/profiler.ml" 151 4063 4114 "lib/profiler.ml" 151 4063 4115
+type(
+  out_channel
+)
+ident(
+  int_ref c "lib/profiler.ml" 142 3726 3732 "lib/profiler.ml" 142 3726 3733
+)
+"lib/profiler.ml" 151 4063 4116 "lib/profiler.ml" 151 4063 4141
+type(
+  (string -> float -> float -> unit, out_channel, unit) format
+)
+"lib/profiler.ml" 151 4063 4142 "lib/profiler.ml" 151 4063 4143
+type(
+  string
+)
+ident(
+  int_ref x "lib/profiler.ml" 151 4063 4092 "lib/profiler.ml" 151 4063 4093
+)
+"lib/profiler.ml" 151 4063 4144 "lib/profiler.ml" 151 4063 4145
+type(
+  float ref -> float
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 151 4063 4145 "lib/profiler.ml" 151 4063 4146
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 151 4063 4094 "lib/profiler.ml" 151 4063 4095
+)
+"lib/profiler.ml" 151 4063 4144 "lib/profiler.ml" 151 4063 4146
+type(
+  float
+)
+"lib/profiler.ml" 151 4063 4148 "lib/profiler.ml" 151 4063 4149
+type(
+  float ref -> float
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 151 4063 4149 "lib/profiler.ml" 151 4063 4150
+type(
+  float ref
+)
+ident(
+  int_ref v "lib/profiler.ml" 151 4063 4094 "lib/profiler.ml" 151 4063 4095
+)
+"lib/profiler.ml" 151 4063 4148 "lib/profiler.ml" 151 4063 4150
+type(
+  float
+)
+"lib/profiler.ml" 151 4063 4151 "lib/profiler.ml" 151 4063 4153
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( /. )
+)
+"lib/profiler.ml" 151 4063 4154 "lib/profiler.ml" 151 4063 4157
+type(
+  float
+)
+ident(
+  int_ref tot "lib/profiler.ml" 145 3785 3797 "lib/profiler.ml" 145 3785 3800
+)
+"lib/profiler.ml" 151 4063 4148 "lib/profiler.ml" 151 4063 4157
+type(
+  float
+)
+"lib/profiler.ml" 151 4063 4158 "lib/profiler.ml" 151 4063 4160
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"lib/profiler.ml" 151 4063 4161 "lib/profiler.ml" 151 4063 4165
+type(
+  float
+)
+"lib/profiler.ml" 151 4063 4147 "lib/profiler.ml" 151 4063 4166
+type(
+  float
+)
+"lib/profiler.ml" 151 4063 4099 "lib/profiler.ml" 151 4063 4166
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/profiler.ml" 151 4063 4087 "lib/profiler.ml" 151 4063 4167
+type(
+  string -> float ref -> unit
+)
+"lib/profiler.ml" 151 4063 4168 "lib/profiler.ml" 151 4063 4169
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"lib/profiler.ml" 151 4063 4169 "lib/profiler.ml" 151 4063 4172
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref log "lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+)
+"lib/profiler.ml" 151 4063 4168 "lib/profiler.ml" 151 4063 4172
+type(
+  (string, float ref) BatMap.t
+)
+"lib/profiler.ml" 151 4063 4075 "lib/profiler.ml" 151 4063 4173
+call(
+  tail
+)
+type(
+  unit
+)
+"lib/profiler.ml" 149 3964 3976 "lib/profiler.ml" 151 4063 4173
+type(
+  unit
+)
+"lib/profiler.ml" 146 3832 3842 "lib/profiler.ml" 162 4899 4914
+type(
+  unit
+)
+"lib/profiler.ml" 144 3772 3778 "lib/profiler.ml" 163 4916 4925
+type(
+  unit
+)
+"lib/profiler.ml" 165 4937 4943 "lib/profiler.ml" 165 4937 4945
+type(
+  unit
+)
+"lib/profiler.ml" 143 3738 3742 "lib/profiler.ml" 165 4937 4945
+type(
+  unit
+)
+"lib/profiler.ml" 142 3726 3728 "lib/profiler.ml" 165 4937 4945
+type(
+  out_channel -> unit
+)
+type(
+  out_channel -> unit
+)
+"lib/profiler.ml" 167 4951 4955 "lib/profiler.ml" 167 4951 4960
+type(
+  unit -> unit
+)
+ident(
+  def reset "lib/profiler.ml" 167 4951 5010 "lib/profiler.ml" 1 0 -1
+)
+"lib/profiler.ml" 167 4951 4961 "lib/profiler.ml" 167 4951 4963
+type(
+  unit
+)
+"lib/profiler.ml" 167 4951 4966 "lib/profiler.ml" 167 4951 4969
+type(
+  (string, float ref) BatMap.t ref
+)
+ident(
+  int_ref log "lib/profiler.ml" 6 140 144 "lib/profiler.ml" 6 140 147
+)
+"lib/profiler.ml" 167 4951 4970 "lib/profiler.ml" 167 4951 4972
+type(
+  (string, float ref) BatMap.t ref -> (string, float ref) BatMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 167 4951 4973 "lib/profiler.ml" 167 4951 4985
+type(
+  (string, float ref) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"lib/profiler.ml" 167 4951 4966 "lib/profiler.ml" 167 4951 4985
+type(
+  unit
+)
+"lib/profiler.ml" 167 4951 4987 "lib/profiler.ml" 167 4951 4996
+type(
+  float ref
+)
+ident(
+  int_ref log_start "lib/profiler.ml" 11 310 314 "lib/profiler.ml" 11 310 323
+)
+"lib/profiler.ml" 167 4951 4997 "lib/profiler.ml" 167 4951 4999
+type(
+  float ref -> float -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"lib/profiler.ml" 167 4951 5000 "lib/profiler.ml" 167 4951 5008
+type(
+  unit -> float
+)
+ident(
+  ext_ref Sys.time
+)
+"lib/profiler.ml" 167 4951 5008 "lib/profiler.ml" 167 4951 5010
+type(
+  unit
+)
+"lib/profiler.ml" 167 4951 5000 "lib/profiler.ml" 167 4951 5010
+type(
+  float
+)
+"lib/profiler.ml" 167 4951 4987 "lib/profiler.ml" 167 4951 5010
+type(
+  unit
+)
+"lib/profiler.ml" 167 4951 4966 "lib/profiler.ml" 167 4951 5010
+type(
+  unit
+)

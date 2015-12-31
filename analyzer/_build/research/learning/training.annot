@@ -1,0 +1,120 @@
+"research/learning/training.ml" 6 76 80 "research/learning/training.ml" 6 76 90
+type(
+  Global.t -> fvector
+)
+ident(
+  def fvectorize "research/learning/training.ml" 9 147 147 "research/learning/training.ml" 1 0 -1
+)
+"research/learning/training.ml" 7 113 118 "research/learning/training.ml" 7 113 124
+type(
+  Global.t
+)
+ident(
+  def global "research/learning/training.ml" 7 113 128 "research/learning/training.ml" 7 113 134
+)
+"research/learning/training.ml" 7 113 129 "research/learning/training.ml" 7 113 133
+type(
+  bool
+)
+"research/learning/training.ml" 7 113 128 "research/learning/training.ml" 7 113 134
+type(
+  fvector
+)
+"research/learning/training.ml" 7 113 114 "research/learning/training.ml" 7 113 134
+type(
+  Global.t -> fvector
+)
+type(
+  Global.t -> fvector
+)
+"research/learning/training.ml" 9 147 151 "research/learning/training.ml" 9 147 163
+type(
+  Global.t -> tdata
+)
+ident(
+  def build_t_data "research/learning/training.ml" 13 228 228 "research/learning/training.ml" 1 0 -1
+)
+"research/learning/training.ml" 10 184 189 "research/learning/training.ml" 10 184 195
+type(
+  Global.t
+)
+ident(
+  def global "research/learning/training.ml" 10 184 199 "research/learning/training.ml" 10 184 213
+)
+"research/learning/training.ml" 10 184 201 "research/learning/training.ml" 10 184 205
+type(
+  bool
+)
+"research/learning/training.ml" 10 184 200 "research/learning/training.ml" 10 184 206
+type(
+  fvector
+)
+"research/learning/training.ml" 10 184 208 "research/learning/training.ml" 10 184 212
+type(
+  bool
+)
+"research/learning/training.ml" 10 184 199 "research/learning/training.ml" 10 184 213
+type(
+  fvector * bool
+)
+"research/learning/training.ml" 10 184 185 "research/learning/training.ml" 10 184 213
+type(
+  Global.t -> tdata
+)
+type(
+  Global.t -> tdata
+)
+"research/learning/training.ml" 22 483 488 "research/learning/training.ml" 22 483 497
+type(
+  'a -> 'b -> unit
+)
+ident(
+  def copy_pgms "research/learning/training.ml" 24 534 535 "research/learning/training.ml" 26 602 605
+)
+"research/learning/training.ml" 22 483 504 "research/learning/training.ml" 22 483 509
+type(
+  'a
+)
+ident(
+  def t2dir "research/learning/training.ml" 22 483 510 "research/learning/training.ml" 22 483 521
+)
+"research/learning/training.ml" 22 483 510 "research/learning/training.ml" 22 483 515
+type(
+  'b
+)
+ident(
+  def sqdir "research/learning/training.ml" 22 483 519 "research/learning/training.ml" 22 483 521
+)
+"research/learning/training.ml" 22 483 519 "research/learning/training.ml" 22 483 521
+type(
+  unit
+)
+"research/learning/training.ml" 22 483 500 "research/learning/training.ml" 22 483 521
+type(
+  'a -> 'b -> unit
+)
+"research/learning/training.ml" 24 534 539 "research/learning/training.ml" 24 534 561
+type(
+  'c -> 'd BatSet.t
+)
+ident(
+  def build_training_dataset "research/learning/training.ml" 24 534 589 "research/learning/training.ml" 26 602 605
+)
+"research/learning/training.ml" 24 534 568 "research/learning/training.ml" 24 534 573
+type(
+  'c
+)
+ident(
+  def sqdir "research/learning/training.ml" 24 534 577 "research/learning/training.ml" 24 534 589
+)
+"research/learning/training.ml" 24 534 577 "research/learning/training.ml" 24 534 589
+type(
+  'd BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"research/learning/training.ml" 24 534 564 "research/learning/training.ml" 24 534 589
+type(
+  'c -> 'd BatSet.t
+)

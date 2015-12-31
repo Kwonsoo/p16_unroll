@@ -1,0 +1,103 @@
+"domain/dList.ml" 10 103 109 "domain/dList.ml" 10 103 113
+type(
+  string
+)
+ident(
+  def name "domain/dList.ml" 12 150 152 "domain/dList.ml" 22 415 418
+)
+"domain/dList.ml" 10 103 125 "domain/dList.ml" 10 103 128
+type(
+  string
+)
+"domain/dList.ml" 10 103 129 "domain/dList.ml" 10 103 130
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"domain/dList.ml" 10 103 131 "domain/dList.ml" 10 103 137
+type(
+  string
+)
+ident(
+  ext_ref A.name
+)
+"domain/dList.ml" 10 103 138 "domain/dList.ml" 10 103 139
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"domain/dList.ml" 10 103 140 "domain/dList.ml" 10 103 148
+type(
+  string
+)
+"domain/dList.ml" 10 103 131 "domain/dList.ml" 10 103 148
+call(
+  stack
+)
+type(
+  string
+)
+"domain/dList.ml" 10 103 125 "domain/dList.ml" 10 103 148
+call(
+  stack
+)
+type(
+  string
+)
+type(
+  string
+)
+"domain/dList.ml" 12 150 156 "domain/dList.ml" 12 150 165
+type(
+  t -> string
+)
+ident(
+  def to_string "domain/dList.ml" 12 150 219 "domain/dList.ml" 22 415 418
+)
+"domain/dList.ml" 12 150 186 "domain/dList.ml" 12 150 187
+type(
+  t
+)
+ident(
+  def x "domain/dList.ml" 12 150 191 "domain/dList.ml" 12 150 219
+)
+"domain/dList.ml" 12 150 191 "domain/dList.ml" 12 150 205
+type(
+  ?first:string ->
+  ?last:string -> ?sep:string -> (A.t -> string) -> t -> string
+)
+ident(
+  ext_ref Vocab.string_of_list
+)
+"domain/dList.ml" 12 150 206 "domain/dList.ml" 12 150 217
+type(
+  A.t -> string
+)
+ident(
+  ext_ref A.to_string
+)
+"domain/dList.ml" 12 150 218 "domain/dList.ml" 12 150 219
+type(
+  t
+)
+ident(
+  int_ref x "domain/dList.ml" 12 150 186 "domain/dList.ml" 12 150 187
+)
+"domain/dList.ml" 12 150 191 "domain/dList.ml" 12 150 219
+call(
+  tail
+)
+type(
+  string
+)
+"domain/dList.ml" 12 150 182 "domain/dList.ml" 12 150 219
+type(
+  t -> string
+)
+type(
+  t -> string
+)

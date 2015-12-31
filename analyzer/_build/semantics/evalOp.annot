@@ -1,0 +1,6272 @@
+"semantics/evalOp.ml" 7 74 78 "semantics/evalOp.ml" 7 74 90
+type(
+  Itv.t ref
+)
+ident(
+  def eraser_value "semantics/evalOp.ml" 9 106 106 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 7 74 93 "semantics/evalOp.ml" 7 74 96
+type(
+  Itv.t -> Itv.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"semantics/evalOp.ml" 7 74 97 "semantics/evalOp.ml" 7 74 104
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"semantics/evalOp.ml" 7 74 93 "semantics/evalOp.ml" 7 74 104
+type(
+  Itv.t ref
+)
+"semantics/evalOp.ml" 9 106 110 "semantics/evalOp.ml" 9 106 120
+type(
+  Cil.constant -> ItvDom.Val.t
+)
+ident(
+  def eval_const "semantics/evalOp.ml" 30 968 968 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 9 106 151 "semantics/evalOp.ml" 9 106 154
+type(
+  Cil.constant
+)
+ident(
+  def cst "semantics/evalOp.ml" 10 158 160 "semantics/evalOp.ml" 27 928 965
+)
+"semantics/evalOp.ml" 10 158 166 "semantics/evalOp.ml" 10 158 169
+type(
+  Cil.constant
+)
+ident(
+  int_ref cst "semantics/evalOp.ml" 9 106 151 "semantics/evalOp.ml" 9 106 154
+)
+"semantics/evalOp.ml" 11 175 191 "semantics/evalOp.ml" 11 175 194
+type(
+  int64
+)
+ident(
+  def i64 "semantics/evalOp.ml" 12 205 209 "semantics/evalOp.ml" 15 387 407
+)
+"semantics/evalOp.ml" 11 175 196 "semantics/evalOp.ml" 11 175 197
+type(
+  Cil.ikind
+)
+"semantics/evalOp.ml" 11 175 199 "semantics/evalOp.ml" 11 175 200
+type(
+  string option
+)
+"semantics/evalOp.ml" 11 175 179 "semantics/evalOp.ml" 11 175 201
+type(
+  Cil.constant
+)
+"semantics/evalOp.ml" 12 205 212 "semantics/evalOp.ml" 12 205 226
+type(
+  int64 -> int
+)
+ident(
+  ext_ref Cil.i64_to_int
+)
+"semantics/evalOp.ml" 12 205 227 "semantics/evalOp.ml" 12 205 230
+type(
+  int64
+)
+ident(
+  int_ref i64 "semantics/evalOp.ml" 11 175 191 "semantics/evalOp.ml" 11 175 194
+)
+"semantics/evalOp.ml" 12 205 212 "semantics/evalOp.ml" 12 205 230
+call(
+  stack
+)
+type(
+  int
+)
+"semantics/evalOp.ml" 12 205 231 "semantics/evalOp.ml" 12 205 232
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/evalOp.ml" 12 205 233 "semantics/evalOp.ml" 12 205 239
+type(
+  int
+)
+"semantics/evalOp.ml" 12 205 212 "semantics/evalOp.ml" 12 205 239
+type(
+  bool
+)
+"semantics/evalOp.ml" 12 205 245 "semantics/evalOp.ml" 12 205 262
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.make_eraser_value
+)
+"semantics/evalOp.ml" 12 205 263 "semantics/evalOp.ml" 12 205 264
+type(
+  Itv.t ref -> Itv.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"semantics/evalOp.ml" 12 205 264 "semantics/evalOp.ml" 12 205 276
+type(
+  Itv.t ref
+)
+ident(
+  int_ref eraser_value "semantics/evalOp.ml" 7 74 78 "semantics/evalOp.ml" 7 74 90
+)
+"semantics/evalOp.ml" 12 205 263 "semantics/evalOp.ml" 12 205 276
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 12 205 245 "semantics/evalOp.ml" 12 205 276
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 14 314 324 "semantics/evalOp.ml" 14 314 327
+type(
+  Itv.t
+)
+ident(
+  def itv "semantics/evalOp.ml" 15 387 393 "semantics/evalOp.ml" 15 387 407
+)
+"semantics/evalOp.ml" 14 314 334 "semantics/evalOp.ml" 14 314 344
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 14 314 346 "semantics/evalOp.ml" 14 314 360
+type(
+  int64 -> int
+)
+ident(
+  ext_ref Cil.i64_to_int
+)
+"semantics/evalOp.ml" 14 314 361 "semantics/evalOp.ml" 14 314 364
+type(
+  int64
+)
+ident(
+  int_ref i64 "semantics/evalOp.ml" 11 175 191 "semantics/evalOp.ml" 11 175 194
+)
+"semantics/evalOp.ml" 14 314 345 "semantics/evalOp.ml" 14 314 365
+call(
+  stack
+)
+type(
+  int
+)
+"semantics/evalOp.ml" 14 314 334 "semantics/evalOp.ml" 14 314 365
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 14 314 371 "semantics/evalOp.ml" 14 314 372
+type(
+  exn
+)
+"semantics/evalOp.ml" 14 314 376 "semantics/evalOp.ml" 14 314 383
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"semantics/evalOp.ml" 14 314 330 "semantics/evalOp.ml" 14 314 383
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 15 387 393 "semantics/evalOp.ml" 15 387 403
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 15 387 404 "semantics/evalOp.ml" 15 387 407
+type(
+  Itv.t
+)
+ident(
+  int_ref itv "semantics/evalOp.ml" 14 314 324 "semantics/evalOp.ml" 14 314 327
+)
+"semantics/evalOp.ml" 15 387 393 "semantics/evalOp.ml" 15 387 407
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 14 314 320 "semantics/evalOp.ml" 15 387 407
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 12 205 209 "semantics/evalOp.ml" 15 387 407
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 16 408 421 "semantics/evalOp.ml" 16 408 422
+type(
+  string
+)
+ident(
+  def s "semantics/evalOp.ml" 16 408 426 "semantics/evalOp.ml" 16 408 473
+)
+"semantics/evalOp.ml" 16 408 412 "semantics/evalOp.ml" 16 408 422
+type(
+  Cil.constant
+)
+"semantics/evalOp.ml" 16 408 426 "semantics/evalOp.ml" 16 408 437
+type(
+  string -> ItvDom.Val.t
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"semantics/evalOp.ml" 16 408 439 "semantics/evalOp.ml" 16 408 470
+type(
+  string
+)
+"semantics/evalOp.ml" 16 408 470 "semantics/evalOp.ml" 16 408 471
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"semantics/evalOp.ml" 16 408 471 "semantics/evalOp.ml" 16 408 472
+type(
+  string
+)
+ident(
+  int_ref s "semantics/evalOp.ml" 16 408 421 "semantics/evalOp.ml" 16 408 422
+)
+"semantics/evalOp.ml" 16 408 438 "semantics/evalOp.ml" 16 408 473
+call(
+  stack
+)
+type(
+  string
+)
+"semantics/evalOp.ml" 16 408 426 "semantics/evalOp.ml" 16 408 473
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 17 474 488 "semantics/evalOp.ml" 17 474 489
+type(
+  int64 list
+)
+ident(
+  def s "semantics/evalOp.ml" 17 474 493 "semantics/evalOp.ml" 17 474 540
+)
+"semantics/evalOp.ml" 17 474 478 "semantics/evalOp.ml" 17 474 489
+type(
+  Cil.constant
+)
+"semantics/evalOp.ml" 17 474 493 "semantics/evalOp.ml" 17 474 504
+type(
+  string -> ItvDom.Val.t
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"semantics/evalOp.ml" 17 474 505 "semantics/evalOp.ml" 17 474 540
+type(
+  string
+)
+"semantics/evalOp.ml" 17 474 493 "semantics/evalOp.ml" 17 474 540
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 18 541 554 "semantics/evalOp.ml" 18 541 555
+type(
+  char
+)
+ident(
+  def c "semantics/evalOp.ml" 18 541 559 "semantics/evalOp.ml" 18 541 598
+)
+"semantics/evalOp.ml" 18 541 545 "semantics/evalOp.ml" 18 541 555
+type(
+  Cil.constant
+)
+"semantics/evalOp.ml" 18 541 559 "semantics/evalOp.ml" 18 541 569
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 18 541 571 "semantics/evalOp.ml" 18 541 581
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 18 541 583 "semantics/evalOp.ml" 18 541 594
+type(
+  char -> int
+)
+ident(
+  ext_ref Pervasives.int_of_char
+)
+"semantics/evalOp.ml" 18 541 595 "semantics/evalOp.ml" 18 541 596
+type(
+  char
+)
+ident(
+  int_ref c "semantics/evalOp.ml" 18 541 554 "semantics/evalOp.ml" 18 541 555
+)
+"semantics/evalOp.ml" 18 541 582 "semantics/evalOp.ml" 18 541 597
+type(
+  int
+)
+"semantics/evalOp.ml" 18 541 570 "semantics/evalOp.ml" 18 541 598
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 18 541 559 "semantics/evalOp.ml" 18 541 598
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 23 762 777 "semantics/evalOp.ml" 23 762 778
+type(
+  float
+)
+ident(
+  def f "semantics/evalOp.ml" 24 789 793 "semantics/evalOp.ml" 24 789 866
+)
+"semantics/evalOp.ml" 23 762 780 "semantics/evalOp.ml" 23 762 781
+type(
+  Cil.fkind
+)
+"semantics/evalOp.ml" 23 762 783 "semantics/evalOp.ml" 23 762 784
+type(
+  string option
+)
+"semantics/evalOp.ml" 23 762 766 "semantics/evalOp.ml" 23 762 785
+type(
+  Cil.constant
+)
+"semantics/evalOp.ml" 24 789 793 "semantics/evalOp.ml" 24 789 803
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 24 789 805 "semantics/evalOp.ml" 24 789 816
+type(
+  int -> int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_ints
+)
+"semantics/evalOp.ml" 24 789 818 "semantics/evalOp.ml" 24 789 830
+type(
+  float -> int
+)
+ident(
+  ext_ref Pervasives.int_of_float
+)
+"semantics/evalOp.ml" 24 789 832 "semantics/evalOp.ml" 24 789 837
+type(
+  float -> float
+)
+ident(
+  ext_ref Pervasives.floor
+)
+"semantics/evalOp.ml" 24 789 838 "semantics/evalOp.ml" 24 789 839
+type(
+  float
+)
+ident(
+  int_ref f "semantics/evalOp.ml" 23 762 777 "semantics/evalOp.ml" 23 762 778
+)
+"semantics/evalOp.ml" 24 789 831 "semantics/evalOp.ml" 24 789 840
+type(
+  float
+)
+"semantics/evalOp.ml" 24 789 817 "semantics/evalOp.ml" 24 789 841
+type(
+  int
+)
+"semantics/evalOp.ml" 24 789 843 "semantics/evalOp.ml" 24 789 855
+type(
+  float -> int
+)
+ident(
+  ext_ref Pervasives.int_of_float
+)
+"semantics/evalOp.ml" 24 789 857 "semantics/evalOp.ml" 24 789 861
+type(
+  float -> float
+)
+ident(
+  ext_ref Pervasives.ceil
+)
+"semantics/evalOp.ml" 24 789 862 "semantics/evalOp.ml" 24 789 863
+type(
+  float
+)
+ident(
+  int_ref f "semantics/evalOp.ml" 23 762 777 "semantics/evalOp.ml" 23 762 778
+)
+"semantics/evalOp.ml" 24 789 856 "semantics/evalOp.ml" 24 789 864
+type(
+  float
+)
+"semantics/evalOp.ml" 24 789 842 "semantics/evalOp.ml" 24 789 865
+type(
+  int
+)
+"semantics/evalOp.ml" 24 789 804 "semantics/evalOp.ml" 24 789 866
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 24 789 793 "semantics/evalOp.ml" 24 789 866
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 27 928 942 "semantics/evalOp.ml" 27 928 943
+type(
+  Cil.enuminfo
+)
+type(
+  string
+)
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 27 928 932 "semantics/evalOp.ml" 27 928 943
+type(
+  Cil.constant
+)
+"semantics/evalOp.ml" 27 928 947 "semantics/evalOp.ml" 27 928 957
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 27 928 958 "semantics/evalOp.ml" 27 928 965
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"semantics/evalOp.ml" 27 928 947 "semantics/evalOp.ml" 27 928 965
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 10 158 160 "semantics/evalOp.ml" 27 928 965
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 9 106 147 "semantics/evalOp.ml" 27 928 965
+type(
+  Cil.constant -> ItvDom.Val.t
+)
+type(
+  Cil.constant -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 30 968 972 "semantics/evalOp.ml" 30 968 980
+type(
+  Cil.unop -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  def eval_uop "semantics/evalOp.ml" 41 1274 1274 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 30 968 1016 "semantics/evalOp.ml" 30 968 1017
+type(
+  Cil.unop
+)
+ident(
+  def u "semantics/evalOp.ml" 30 968 1018 "semantics/evalOp.ml" 38 1252 1271
+)
+"semantics/evalOp.ml" 30 968 1018 "semantics/evalOp.ml" 30 968 1019
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/evalOp.ml" 31 1023 1025 "semantics/evalOp.ml" 38 1252 1271
+)
+"semantics/evalOp.ml" 31 1023 1028 "semantics/evalOp.ml" 31 1023 1034
+type(
+  ItvDom.Val.t ->
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t -> bool
+)
+ident(
+  ext_ref ItvDom.Val.eq
+)
+"semantics/evalOp.ml" 31 1023 1035 "semantics/evalOp.ml" 31 1023 1036
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 30 968 1018 "semantics/evalOp.ml" 30 968 1019
+)
+"semantics/evalOp.ml" 31 1023 1037 "semantics/evalOp.ml" 31 1023 1044
+type(
+  Itv.t * AbsDom.PowLoc.t * ArrayBlk.t * AbsDom.PowProc.t
+)
+ident(
+  ext_ref ItvDom.Val.bot
+)
+"semantics/evalOp.ml" 31 1023 1028 "semantics/evalOp.ml" 31 1023 1044
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/evalOp.ml" 31 1023 1050 "semantics/evalOp.ml" 31 1023 1057
+type(
+  ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.bot
+)
+"semantics/evalOp.ml" 32 1063 1071 "semantics/evalOp.ml" 32 1063 1074
+type(
+  Itv.t
+)
+ident(
+  def itv "semantics/evalOp.ml" 33 1093 1097 "semantics/evalOp.ml" 38 1252 1271
+)
+"semantics/evalOp.ml" 32 1063 1077 "semantics/evalOp.ml" 32 1063 1087
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 32 1063 1088 "semantics/evalOp.ml" 32 1063 1089
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 30 968 1018 "semantics/evalOp.ml" 30 968 1019
+)
+"semantics/evalOp.ml" 32 1063 1077 "semantics/evalOp.ml" 32 1063 1089
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 33 1093 1101 "semantics/evalOp.ml" 33 1093 1105
+type(
+  Itv.t
+)
+ident(
+  def itv' "semantics/evalOp.ml" 38 1252 1256 "semantics/evalOp.ml" 38 1252 1271
+)
+"semantics/evalOp.ml" 34 1108 1120 "semantics/evalOp.ml" 34 1108 1121
+type(
+  Cil.unop
+)
+ident(
+  int_ref u "semantics/evalOp.ml" 30 968 1016 "semantics/evalOp.ml" 30 968 1017
+)
+"semantics/evalOp.ml" 35 1127 1135 "semantics/evalOp.ml" 35 1127 1142
+type(
+  Cil.unop
+)
+"semantics/evalOp.ml" 35 1127 1146 "semantics/evalOp.ml" 35 1127 1155
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.minus
+)
+"semantics/evalOp.ml" 35 1127 1157 "semantics/evalOp.ml" 35 1127 1167
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 35 1127 1168 "semantics/evalOp.ml" 35 1127 1169
+type(
+  int
+)
+"semantics/evalOp.ml" 35 1127 1156 "semantics/evalOp.ml" 35 1127 1170
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 35 1127 1171 "semantics/evalOp.ml" 35 1127 1174
+type(
+  Itv.t
+)
+ident(
+  int_ref itv "semantics/evalOp.ml" 32 1063 1071 "semantics/evalOp.ml" 32 1063 1074
+)
+"semantics/evalOp.ml" 35 1127 1146 "semantics/evalOp.ml" 35 1127 1174
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 36 1175 1183 "semantics/evalOp.ml" 36 1175 1191
+type(
+  Cil.unop
+)
+"semantics/evalOp.ml" 36 1175 1195 "semantics/evalOp.ml" 36 1175 1208
+type(
+  Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.b_not_itv
+)
+"semantics/evalOp.ml" 36 1175 1209 "semantics/evalOp.ml" 36 1175 1212
+type(
+  Itv.t
+)
+ident(
+  int_ref itv "semantics/evalOp.ml" 32 1063 1071 "semantics/evalOp.ml" 32 1063 1074
+)
+"semantics/evalOp.ml" 36 1175 1195 "semantics/evalOp.ml" 36 1175 1212
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 37 1213 1221 "semantics/evalOp.ml" 37 1213 1229
+type(
+  Cil.unop
+)
+"semantics/evalOp.ml" 37 1213 1233 "semantics/evalOp.ml" 37 1213 1244
+type(
+  Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.not_itv
+)
+"semantics/evalOp.ml" 37 1213 1245 "semantics/evalOp.ml" 37 1213 1248
+type(
+  Itv.t
+)
+ident(
+  int_ref itv "semantics/evalOp.ml" 32 1063 1071 "semantics/evalOp.ml" 32 1063 1074
+)
+"semantics/evalOp.ml" 37 1213 1233 "semantics/evalOp.ml" 37 1213 1248
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 34 1108 1114 "semantics/evalOp.ml" 37 1213 1248
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 38 1252 1256 "semantics/evalOp.ml" 38 1252 1266
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 38 1252 1267 "semantics/evalOp.ml" 38 1252 1271
+type(
+  Itv.t
+)
+ident(
+  int_ref itv' "semantics/evalOp.ml" 33 1093 1101 "semantics/evalOp.ml" 33 1093 1105
+)
+"semantics/evalOp.ml" 38 1252 1256 "semantics/evalOp.ml" 38 1252 1271
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 33 1093 1097 "semantics/evalOp.ml" 38 1252 1271
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 32 1063 1067 "semantics/evalOp.ml" 38 1252 1271
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 31 1023 1025 "semantics/evalOp.ml" 38 1252 1271
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 30 968 1012 "semantics/evalOp.ml" 38 1252 1271
+type(
+  Cil.unop -> ItvDom.Val.t -> ItvDom.Val.t
+)
+type(
+  Cil.unop -> ItvDom.Val.t -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 41 1274 1278 "semantics/evalOp.ml" 41 1274 1286
+type(
+  Cil.binop -> ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  def eval_bop "semantics/evalOp.ml" 84 3324 3324 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 41 1274 1332 "semantics/evalOp.ml" 41 1274 1333
+type(
+  Cil.binop
+)
+ident(
+  def b "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 82 3252 3322
+)
+"semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v1 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 82 3252 3322
+)
+"semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v2 "semantics/evalOp.ml" 43 1344 1346 "semantics/evalOp.ml" 82 3252 3322
+)
+"semantics/evalOp.ml" 43 1344 1350 "semantics/evalOp.ml" 43 1344 1362
+type(
+  AbsDom.VarAllocsite.t * 'a -> bool
+)
+ident(
+  def is_array_loc "semantics/evalOp.ml" 47 1433 1435 "semantics/evalOp.ml" 82 3252 3322
+)
+"semantics/evalOp.ml" 44 1374 1398 "semantics/evalOp.ml" 44 1374 1399
+type(
+  AbsDom.Allocsite.t
+)
+"semantics/evalOp.ml" 44 1374 1381 "semantics/evalOp.ml" 44 1374 1399
+type(
+  AbsDom.VarAllocsite.t
+)
+"semantics/evalOp.ml" 44 1374 1401 "semantics/evalOp.ml" 44 1374 1402
+type(
+  'a
+)
+"semantics/evalOp.ml" 44 1374 1380 "semantics/evalOp.ml" 44 1374 1403
+type(
+  AbsDom.VarAllocsite.t * 'a
+)
+"semantics/evalOp.ml" 44 1374 1407 "semantics/evalOp.ml" 44 1374 1411
+type(
+  bool
+)
+"semantics/evalOp.ml" 45 1412 1418 "semantics/evalOp.ml" 45 1412 1419
+type(
+  AbsDom.VarAllocsite.t * 'a
+)
+"semantics/evalOp.ml" 45 1412 1423 "semantics/evalOp.ml" 45 1412 1428
+type(
+  bool
+)
+"semantics/evalOp.ml" 43 1344 1365 "semantics/evalOp.ml" 45 1412 1428
+type(
+  AbsDom.VarAllocsite.t * 'a -> bool
+)
+"semantics/evalOp.ml" 47 1433 1439 "semantics/evalOp.ml" 47 1433 1455
+type(
+  ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  def array_loc_of_val "semantics/evalOp.ml" 52 1563 1565 "semantics/evalOp.ml" 82 3252 3322
+)
+"semantics/evalOp.ml" 47 1433 1456 "semantics/evalOp.ml" 47 1433 1457
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/evalOp.ml" 48 1460 1464 "semantics/evalOp.ml" 50 1537 1558
+)
+"semantics/evalOp.ml" 48 1460 1468 "semantics/evalOp.ml" 48 1460 1469
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def l "semantics/evalOp.ml" 49 1492 1496 "semantics/evalOp.ml" 50 1537 1558
+)
+"semantics/evalOp.ml" 48 1460 1472 "semantics/evalOp.ml" 48 1460 1486
+type(
+  ItvDom.Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ItvDom.pow_loc_of_val
+)
+"semantics/evalOp.ml" 48 1460 1487 "semantics/evalOp.ml" 48 1460 1488
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 47 1433 1456 "semantics/evalOp.ml" 47 1433 1457
+)
+"semantics/evalOp.ml" 48 1460 1472 "semantics/evalOp.ml" 48 1460 1488
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 49 1492 1500 "semantics/evalOp.ml" 49 1492 1502
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def l' "semantics/evalOp.ml" 50 1537 1541 "semantics/evalOp.ml" 50 1537 1558
+)
+"semantics/evalOp.ml" 49 1492 1505 "semantics/evalOp.ml" 49 1492 1518
+type(
+  (AbsDom.Loc.t -> bool) -> AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.filter
+)
+"semantics/evalOp.ml" 49 1492 1519 "semantics/evalOp.ml" 49 1492 1531
+type(
+  AbsDom.Loc.t -> bool
+)
+ident(
+  int_ref is_array_loc "semantics/evalOp.ml" 43 1344 1350 "semantics/evalOp.ml" 43 1344 1362
+)
+"semantics/evalOp.ml" 49 1492 1532 "semantics/evalOp.ml" 49 1492 1533
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref l "semantics/evalOp.ml" 48 1460 1468 "semantics/evalOp.ml" 48 1460 1469
+)
+"semantics/evalOp.ml" 49 1492 1505 "semantics/evalOp.ml" 49 1492 1533
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 50 1537 1541 "semantics/evalOp.ml" 50 1537 1555
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 50 1537 1556 "semantics/evalOp.ml" 50 1537 1558
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref l' "semantics/evalOp.ml" 49 1492 1500 "semantics/evalOp.ml" 49 1492 1502
+)
+"semantics/evalOp.ml" 50 1537 1541 "semantics/evalOp.ml" 50 1537 1558
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 49 1492 1496 "semantics/evalOp.ml" 50 1537 1558
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 48 1460 1464 "semantics/evalOp.ml" 50 1537 1558
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 52 1563 1571 "semantics/evalOp.ml" 52 1563 1572
+type(
+  Cil.binop
+)
+ident(
+  int_ref b "semantics/evalOp.ml" 41 1274 1332 "semantics/evalOp.ml" 41 1274 1333
+)
+"semantics/evalOp.ml" 53 1578 1582 "semantics/evalOp.ml" 53 1578 1591
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 53 1578 1595 "semantics/evalOp.ml" 53 1578 1605
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 53 1578 1607 "semantics/evalOp.ml" 53 1578 1615
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.plus
+)
+"semantics/evalOp.ml" 53 1578 1617 "semantics/evalOp.ml" 53 1578 1627
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 53 1578 1628 "semantics/evalOp.ml" 53 1578 1630
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 53 1578 1616 "semantics/evalOp.ml" 53 1578 1631
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 53 1578 1633 "semantics/evalOp.ml" 53 1578 1643
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 53 1578 1644 "semantics/evalOp.ml" 53 1578 1646
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 53 1578 1632 "semantics/evalOp.ml" 53 1578 1647
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 53 1578 1606 "semantics/evalOp.ml" 53 1578 1648
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 53 1578 1595 "semantics/evalOp.ml" 53 1578 1648
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 54 1649 1653 "semantics/evalOp.ml" 54 1649 1663
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 55 1664 1668 "semantics/evalOp.ml" 55 1664 1679
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 54 1649 1653 "semantics/evalOp.ml" 55 1664 1679
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 56 1683 1691 "semantics/evalOp.ml" 56 1683 1695
+type(
+  ArrayBlk.t
+)
+ident(
+  def ablk "semantics/evalOp.ml" 57 1717 1721 "semantics/evalOp.ml" 59 1802 1856
+)
+"semantics/evalOp.ml" 56 1683 1698 "semantics/evalOp.ml" 56 1683 1710
+type(
+  ItvDom.Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ItvDom.array_of_val
+)
+"semantics/evalOp.ml" 56 1683 1711 "semantics/evalOp.ml" 56 1683 1713
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 56 1683 1698 "semantics/evalOp.ml" 56 1683 1713
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 57 1717 1725 "semantics/evalOp.ml" 57 1717 1731
+type(
+  Itv.t
+)
+ident(
+  def offset "semantics/evalOp.ml" 58 1751 1755 "semantics/evalOp.ml" 59 1802 1856
+)
+"semantics/evalOp.ml" 57 1717 1734 "semantics/evalOp.ml" 57 1717 1744
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 57 1717 1745 "semantics/evalOp.ml" 57 1717 1747
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 57 1717 1734 "semantics/evalOp.ml" 57 1717 1747
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 58 1751 1759 "semantics/evalOp.ml" 58 1751 1763
+type(
+  ArrayBlk.t
+)
+ident(
+  def ablk "semantics/evalOp.ml" 59 1802 1806 "semantics/evalOp.ml" 59 1802 1856
+)
+"semantics/evalOp.ml" 58 1751 1766 "semantics/evalOp.ml" 58 1751 1786
+type(
+  ArrayBlk.t -> Itv.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.plus_offset
+)
+"semantics/evalOp.ml" 58 1751 1787 "semantics/evalOp.ml" 58 1751 1791
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref ablk "semantics/evalOp.ml" 56 1683 1691 "semantics/evalOp.ml" 56 1683 1695
+)
+"semantics/evalOp.ml" 58 1751 1792 "semantics/evalOp.ml" 58 1751 1798
+type(
+  Itv.t
+)
+ident(
+  int_ref offset "semantics/evalOp.ml" 57 1717 1725 "semantics/evalOp.ml" 57 1717 1731
+)
+"semantics/evalOp.ml" 58 1751 1766 "semantics/evalOp.ml" 58 1751 1798
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 59 1802 1806 "semantics/evalOp.ml" 59 1802 1814
+type(
+  ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.join
+)
+"semantics/evalOp.ml" 59 1802 1816 "semantics/evalOp.ml" 59 1802 1832
+type(
+  ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  int_ref array_loc_of_val "semantics/evalOp.ml" 47 1433 1439 "semantics/evalOp.ml" 47 1433 1455
+)
+"semantics/evalOp.ml" 59 1802 1833 "semantics/evalOp.ml" 59 1802 1835
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 59 1802 1815 "semantics/evalOp.ml" 59 1802 1836
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 59 1802 1838 "semantics/evalOp.ml" 59 1802 1850
+type(
+  ArrayBlk.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_array
+)
+"semantics/evalOp.ml" 59 1802 1851 "semantics/evalOp.ml" 59 1802 1855
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref ablk "semantics/evalOp.ml" 58 1751 1759 "semantics/evalOp.ml" 58 1751 1763
+)
+"semantics/evalOp.ml" 59 1802 1837 "semantics/evalOp.ml" 59 1802 1856
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 59 1802 1806 "semantics/evalOp.ml" 59 1802 1856
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 58 1751 1755 "semantics/evalOp.ml" 59 1802 1856
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 57 1717 1721 "semantics/evalOp.ml" 59 1802 1856
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 56 1683 1687 "semantics/evalOp.ml" 59 1802 1856
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 60 1857 1861 "semantics/evalOp.ml" 60 1857 1871
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 60 1857 1875 "semantics/evalOp.ml" 60 1857 1885
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 60 1857 1887 "semantics/evalOp.ml" 60 1857 1896
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.minus
+)
+"semantics/evalOp.ml" 60 1857 1898 "semantics/evalOp.ml" 60 1857 1908
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 60 1857 1909 "semantics/evalOp.ml" 60 1857 1911
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 60 1857 1897 "semantics/evalOp.ml" 60 1857 1912
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 60 1857 1914 "semantics/evalOp.ml" 60 1857 1924
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 60 1857 1925 "semantics/evalOp.ml" 60 1857 1927
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 60 1857 1913 "semantics/evalOp.ml" 60 1857 1928
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 60 1857 1886 "semantics/evalOp.ml" 60 1857 1929
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 60 1857 1875 "semantics/evalOp.ml" 60 1857 1929
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 61 1930 1934 "semantics/evalOp.ml" 61 1930 1945
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 62 1949 1957 "semantics/evalOp.ml" 62 1949 1961
+type(
+  ArrayBlk.t
+)
+ident(
+  def ablk "semantics/evalOp.ml" 63 1983 1987 "semantics/evalOp.ml" 65 2069 2123
+)
+"semantics/evalOp.ml" 62 1949 1964 "semantics/evalOp.ml" 62 1949 1976
+type(
+  ItvDom.Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ItvDom.array_of_val
+)
+"semantics/evalOp.ml" 62 1949 1977 "semantics/evalOp.ml" 62 1949 1979
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 62 1949 1964 "semantics/evalOp.ml" 62 1949 1979
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 63 1983 1991 "semantics/evalOp.ml" 63 1983 1997
+type(
+  Itv.t
+)
+ident(
+  def offset "semantics/evalOp.ml" 64 2017 2021 "semantics/evalOp.ml" 65 2069 2123
+)
+"semantics/evalOp.ml" 63 1983 2000 "semantics/evalOp.ml" 63 1983 2010
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 63 1983 2011 "semantics/evalOp.ml" 63 1983 2013
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 63 1983 2000 "semantics/evalOp.ml" 63 1983 2013
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 64 2017 2025 "semantics/evalOp.ml" 64 2017 2029
+type(
+  ArrayBlk.t
+)
+ident(
+  def ablk "semantics/evalOp.ml" 65 2069 2073 "semantics/evalOp.ml" 65 2069 2123
+)
+"semantics/evalOp.ml" 64 2017 2032 "semantics/evalOp.ml" 64 2017 2053
+type(
+  ArrayBlk.t -> Itv.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.minus_offset
+)
+"semantics/evalOp.ml" 64 2017 2054 "semantics/evalOp.ml" 64 2017 2058
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref ablk "semantics/evalOp.ml" 62 1949 1957 "semantics/evalOp.ml" 62 1949 1961
+)
+"semantics/evalOp.ml" 64 2017 2059 "semantics/evalOp.ml" 64 2017 2065
+type(
+  Itv.t
+)
+ident(
+  int_ref offset "semantics/evalOp.ml" 63 1983 1991 "semantics/evalOp.ml" 63 1983 1997
+)
+"semantics/evalOp.ml" 64 2017 2032 "semantics/evalOp.ml" 64 2017 2065
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 65 2069 2073 "semantics/evalOp.ml" 65 2069 2081
+type(
+  ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.join
+)
+"semantics/evalOp.ml" 65 2069 2083 "semantics/evalOp.ml" 65 2069 2099
+type(
+  ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  int_ref array_loc_of_val "semantics/evalOp.ml" 47 1433 1439 "semantics/evalOp.ml" 47 1433 1455
+)
+"semantics/evalOp.ml" 65 2069 2100 "semantics/evalOp.ml" 65 2069 2102
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 65 2069 2082 "semantics/evalOp.ml" 65 2069 2103
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 65 2069 2105 "semantics/evalOp.ml" 65 2069 2117
+type(
+  ArrayBlk.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_array
+)
+"semantics/evalOp.ml" 65 2069 2118 "semantics/evalOp.ml" 65 2069 2122
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref ablk "semantics/evalOp.ml" 64 2017 2025 "semantics/evalOp.ml" 64 2017 2029
+)
+"semantics/evalOp.ml" 65 2069 2104 "semantics/evalOp.ml" 65 2069 2123
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 65 2069 2073 "semantics/evalOp.ml" 65 2069 2123
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 64 2017 2021 "semantics/evalOp.ml" 65 2069 2123
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 63 1983 1987 "semantics/evalOp.ml" 65 2069 2123
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 62 1949 1953 "semantics/evalOp.ml" 65 2069 2123
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 66 2124 2128 "semantics/evalOp.ml" 66 2124 2139
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 66 2124 2143 "semantics/evalOp.ml" 66 2124 2153
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 66 2124 2154 "semantics/evalOp.ml" 66 2124 2161
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"semantics/evalOp.ml" 66 2124 2143 "semantics/evalOp.ml" 66 2124 2161
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 67 2162 2166 "semantics/evalOp.ml" 67 2162 2174
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 67 2162 2178 "semantics/evalOp.ml" 67 2162 2188
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 67 2162 2190 "semantics/evalOp.ml" 67 2162 2199
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.times
+)
+"semantics/evalOp.ml" 67 2162 2201 "semantics/evalOp.ml" 67 2162 2211
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 67 2162 2212 "semantics/evalOp.ml" 67 2162 2214
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 67 2162 2200 "semantics/evalOp.ml" 67 2162 2215
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 67 2162 2217 "semantics/evalOp.ml" 67 2162 2227
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 67 2162 2228 "semantics/evalOp.ml" 67 2162 2230
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 67 2162 2216 "semantics/evalOp.ml" 67 2162 2231
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 67 2162 2189 "semantics/evalOp.ml" 67 2162 2232
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 67 2162 2178 "semantics/evalOp.ml" 67 2162 2232
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 68 2233 2237 "semantics/evalOp.ml" 68 2233 2244
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 68 2233 2248 "semantics/evalOp.ml" 68 2233 2258
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 68 2233 2260 "semantics/evalOp.ml" 68 2233 2270
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.divide
+)
+"semantics/evalOp.ml" 68 2233 2272 "semantics/evalOp.ml" 68 2233 2282
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 68 2233 2283 "semantics/evalOp.ml" 68 2233 2285
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 68 2233 2271 "semantics/evalOp.ml" 68 2233 2286
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 68 2233 2288 "semantics/evalOp.ml" 68 2233 2298
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 68 2233 2299 "semantics/evalOp.ml" 68 2233 2301
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 68 2233 2287 "semantics/evalOp.ml" 68 2233 2302
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 68 2233 2259 "semantics/evalOp.ml" 68 2233 2303
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 68 2233 2248 "semantics/evalOp.ml" 68 2233 2303
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 69 2304 2308 "semantics/evalOp.ml" 69 2304 2315
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 69 2304 2319 "semantics/evalOp.ml" 69 2304 2329
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 69 2304 2331 "semantics/evalOp.ml" 69 2304 2342
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.mod_itv
+)
+"semantics/evalOp.ml" 69 2304 2344 "semantics/evalOp.ml" 69 2304 2354
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 69 2304 2355 "semantics/evalOp.ml" 69 2304 2357
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 69 2304 2343 "semantics/evalOp.ml" 69 2304 2358
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 69 2304 2360 "semantics/evalOp.ml" 69 2304 2370
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 69 2304 2371 "semantics/evalOp.ml" 69 2304 2373
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 69 2304 2359 "semantics/evalOp.ml" 69 2304 2374
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 69 2304 2330 "semantics/evalOp.ml" 69 2304 2375
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 69 2304 2319 "semantics/evalOp.ml" 69 2304 2375
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 70 2376 2380 "semantics/evalOp.ml" 70 2376 2391
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 70 2376 2395 "semantics/evalOp.ml" 70 2376 2405
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 70 2376 2407 "semantics/evalOp.ml" 70 2376 2422
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.l_shift_itv
+)
+"semantics/evalOp.ml" 70 2376 2424 "semantics/evalOp.ml" 70 2376 2434
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 70 2376 2435 "semantics/evalOp.ml" 70 2376 2437
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 70 2376 2423 "semantics/evalOp.ml" 70 2376 2438
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 70 2376 2440 "semantics/evalOp.ml" 70 2376 2450
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 70 2376 2451 "semantics/evalOp.ml" 70 2376 2453
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 70 2376 2439 "semantics/evalOp.ml" 70 2376 2454
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 70 2376 2406 "semantics/evalOp.ml" 70 2376 2455
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 70 2376 2395 "semantics/evalOp.ml" 70 2376 2455
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 71 2456 2460 "semantics/evalOp.ml" 71 2456 2471
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 71 2456 2475 "semantics/evalOp.ml" 71 2456 2485
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 71 2456 2487 "semantics/evalOp.ml" 71 2456 2502
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.r_shift_itv
+)
+"semantics/evalOp.ml" 71 2456 2504 "semantics/evalOp.ml" 71 2456 2514
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 71 2456 2515 "semantics/evalOp.ml" 71 2456 2517
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 71 2456 2503 "semantics/evalOp.ml" 71 2456 2518
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 71 2456 2520 "semantics/evalOp.ml" 71 2456 2530
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 71 2456 2531 "semantics/evalOp.ml" 71 2456 2533
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 71 2456 2519 "semantics/evalOp.ml" 71 2456 2534
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 71 2456 2486 "semantics/evalOp.ml" 71 2456 2535
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 71 2456 2475 "semantics/evalOp.ml" 71 2456 2535
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 72 2536 2540 "semantics/evalOp.ml" 72 2536 2546
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 72 2536 2550 "semantics/evalOp.ml" 72 2536 2560
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 72 2536 2562 "semantics/evalOp.ml" 72 2536 2572
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.lt_itv
+)
+"semantics/evalOp.ml" 72 2536 2574 "semantics/evalOp.ml" 72 2536 2584
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 72 2536 2585 "semantics/evalOp.ml" 72 2536 2587
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 72 2536 2573 "semantics/evalOp.ml" 72 2536 2588
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 72 2536 2590 "semantics/evalOp.ml" 72 2536 2600
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 72 2536 2601 "semantics/evalOp.ml" 72 2536 2603
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 72 2536 2589 "semantics/evalOp.ml" 72 2536 2604
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 72 2536 2561 "semantics/evalOp.ml" 72 2536 2605
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 72 2536 2550 "semantics/evalOp.ml" 72 2536 2605
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 73 2606 2610 "semantics/evalOp.ml" 73 2606 2616
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 73 2606 2620 "semantics/evalOp.ml" 73 2606 2630
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 73 2606 2632 "semantics/evalOp.ml" 73 2606 2642
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.gt_itv
+)
+"semantics/evalOp.ml" 73 2606 2644 "semantics/evalOp.ml" 73 2606 2654
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 73 2606 2655 "semantics/evalOp.ml" 73 2606 2657
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 73 2606 2643 "semantics/evalOp.ml" 73 2606 2658
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 73 2606 2660 "semantics/evalOp.ml" 73 2606 2670
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 73 2606 2671 "semantics/evalOp.ml" 73 2606 2673
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 73 2606 2659 "semantics/evalOp.ml" 73 2606 2674
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 73 2606 2631 "semantics/evalOp.ml" 73 2606 2675
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 73 2606 2620 "semantics/evalOp.ml" 73 2606 2675
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 74 2676 2680 "semantics/evalOp.ml" 74 2676 2686
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 74 2676 2690 "semantics/evalOp.ml" 74 2676 2700
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 74 2676 2702 "semantics/evalOp.ml" 74 2676 2712
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.le_itv
+)
+"semantics/evalOp.ml" 74 2676 2714 "semantics/evalOp.ml" 74 2676 2724
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 74 2676 2725 "semantics/evalOp.ml" 74 2676 2727
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 74 2676 2713 "semantics/evalOp.ml" 74 2676 2728
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 74 2676 2730 "semantics/evalOp.ml" 74 2676 2740
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 74 2676 2741 "semantics/evalOp.ml" 74 2676 2743
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 74 2676 2729 "semantics/evalOp.ml" 74 2676 2744
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 74 2676 2701 "semantics/evalOp.ml" 74 2676 2745
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 74 2676 2690 "semantics/evalOp.ml" 74 2676 2745
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 75 2746 2750 "semantics/evalOp.ml" 75 2746 2756
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 75 2746 2760 "semantics/evalOp.ml" 75 2746 2770
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 75 2746 2772 "semantics/evalOp.ml" 75 2746 2782
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.ge_itv
+)
+"semantics/evalOp.ml" 75 2746 2784 "semantics/evalOp.ml" 75 2746 2794
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 75 2746 2795 "semantics/evalOp.ml" 75 2746 2797
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 75 2746 2783 "semantics/evalOp.ml" 75 2746 2798
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 75 2746 2800 "semantics/evalOp.ml" 75 2746 2810
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 75 2746 2811 "semantics/evalOp.ml" 75 2746 2813
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 75 2746 2799 "semantics/evalOp.ml" 75 2746 2814
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 75 2746 2771 "semantics/evalOp.ml" 75 2746 2815
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 75 2746 2760 "semantics/evalOp.ml" 75 2746 2815
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 76 2816 2820 "semantics/evalOp.ml" 76 2816 2826
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 76 2816 2830 "semantics/evalOp.ml" 76 2816 2840
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 76 2816 2842 "semantics/evalOp.ml" 76 2816 2852
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.eq_itv
+)
+"semantics/evalOp.ml" 76 2816 2854 "semantics/evalOp.ml" 76 2816 2864
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 76 2816 2865 "semantics/evalOp.ml" 76 2816 2867
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 76 2816 2853 "semantics/evalOp.ml" 76 2816 2868
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 76 2816 2870 "semantics/evalOp.ml" 76 2816 2880
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 76 2816 2881 "semantics/evalOp.ml" 76 2816 2883
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 76 2816 2869 "semantics/evalOp.ml" 76 2816 2884
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 76 2816 2841 "semantics/evalOp.ml" 76 2816 2885
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 76 2816 2830 "semantics/evalOp.ml" 76 2816 2885
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 77 2886 2890 "semantics/evalOp.ml" 77 2886 2896
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 77 2886 2900 "semantics/evalOp.ml" 77 2886 2910
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 77 2886 2912 "semantics/evalOp.ml" 77 2886 2922
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.ne_itv
+)
+"semantics/evalOp.ml" 77 2886 2924 "semantics/evalOp.ml" 77 2886 2934
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 77 2886 2935 "semantics/evalOp.ml" 77 2886 2937
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 77 2886 2923 "semantics/evalOp.ml" 77 2886 2938
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 77 2886 2940 "semantics/evalOp.ml" 77 2886 2950
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 77 2886 2951 "semantics/evalOp.ml" 77 2886 2953
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 77 2886 2939 "semantics/evalOp.ml" 77 2886 2954
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 77 2886 2911 "semantics/evalOp.ml" 77 2886 2955
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 77 2886 2900 "semantics/evalOp.ml" 77 2886 2955
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 78 2956 2960 "semantics/evalOp.ml" 78 2956 2968
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 78 2956 2972 "semantics/evalOp.ml" 78 2956 2982
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 78 2956 2984 "semantics/evalOp.ml" 78 2956 2997
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.b_and_itv
+)
+"semantics/evalOp.ml" 78 2956 2999 "semantics/evalOp.ml" 78 2956 3009
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 78 2956 3010 "semantics/evalOp.ml" 78 2956 3012
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 78 2956 2998 "semantics/evalOp.ml" 78 2956 3013
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 78 2956 3015 "semantics/evalOp.ml" 78 2956 3025
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 78 2956 3026 "semantics/evalOp.ml" 78 2956 3028
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 78 2956 3014 "semantics/evalOp.ml" 78 2956 3029
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 78 2956 2983 "semantics/evalOp.ml" 78 2956 3030
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 78 2956 2972 "semantics/evalOp.ml" 78 2956 3030
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 79 3031 3035 "semantics/evalOp.ml" 79 3031 3043
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 79 3031 3047 "semantics/evalOp.ml" 79 3031 3057
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 79 3031 3059 "semantics/evalOp.ml" 79 3031 3072
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.b_xor_itv
+)
+"semantics/evalOp.ml" 79 3031 3074 "semantics/evalOp.ml" 79 3031 3084
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 79 3031 3085 "semantics/evalOp.ml" 79 3031 3087
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 79 3031 3073 "semantics/evalOp.ml" 79 3031 3088
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 79 3031 3090 "semantics/evalOp.ml" 79 3031 3100
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 79 3031 3101 "semantics/evalOp.ml" 79 3031 3103
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 79 3031 3089 "semantics/evalOp.ml" 79 3031 3104
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 79 3031 3058 "semantics/evalOp.ml" 79 3031 3105
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 79 3031 3047 "semantics/evalOp.ml" 79 3031 3105
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 80 3106 3110 "semantics/evalOp.ml" 80 3106 3117
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 80 3106 3121 "semantics/evalOp.ml" 80 3106 3131
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 80 3106 3133 "semantics/evalOp.ml" 80 3106 3145
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.b_or_itv
+)
+"semantics/evalOp.ml" 80 3106 3147 "semantics/evalOp.ml" 80 3106 3157
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 80 3106 3158 "semantics/evalOp.ml" 80 3106 3160
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 80 3106 3146 "semantics/evalOp.ml" 80 3106 3161
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 80 3106 3163 "semantics/evalOp.ml" 80 3106 3173
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 80 3106 3174 "semantics/evalOp.ml" 80 3106 3176
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 80 3106 3162 "semantics/evalOp.ml" 80 3106 3177
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 80 3106 3132 "semantics/evalOp.ml" 80 3106 3178
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 80 3106 3121 "semantics/evalOp.ml" 80 3106 3178
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 81 3179 3183 "semantics/evalOp.ml" 81 3179 3191
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 81 3179 3195 "semantics/evalOp.ml" 81 3179 3205
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 81 3179 3207 "semantics/evalOp.ml" 81 3179 3218
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.and_itv
+)
+"semantics/evalOp.ml" 81 3179 3220 "semantics/evalOp.ml" 81 3179 3230
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 81 3179 3231 "semantics/evalOp.ml" 81 3179 3233
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 81 3179 3219 "semantics/evalOp.ml" 81 3179 3234
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 81 3179 3236 "semantics/evalOp.ml" 81 3179 3246
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 81 3179 3247 "semantics/evalOp.ml" 81 3179 3249
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 81 3179 3235 "semantics/evalOp.ml" 81 3179 3250
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 81 3179 3206 "semantics/evalOp.ml" 81 3179 3251
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 81 3179 3195 "semantics/evalOp.ml" 81 3179 3251
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 82 3252 3256 "semantics/evalOp.ml" 82 3252 3263
+type(
+  Cil.binop
+)
+"semantics/evalOp.ml" 82 3252 3267 "semantics/evalOp.ml" 82 3252 3277
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 82 3252 3279 "semantics/evalOp.ml" 82 3252 3289
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.or_itv
+)
+"semantics/evalOp.ml" 82 3252 3291 "semantics/evalOp.ml" 82 3252 3301
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 82 3252 3302 "semantics/evalOp.ml" 82 3252 3304
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v1 "semantics/evalOp.ml" 41 1274 1334 "semantics/evalOp.ml" 41 1274 1336
+)
+"semantics/evalOp.ml" 82 3252 3290 "semantics/evalOp.ml" 82 3252 3305
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 82 3252 3307 "semantics/evalOp.ml" 82 3252 3317
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 82 3252 3318 "semantics/evalOp.ml" 82 3252 3320
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v2 "semantics/evalOp.ml" 41 1274 1337 "semantics/evalOp.ml" 41 1274 1339
+)
+"semantics/evalOp.ml" 82 3252 3306 "semantics/evalOp.ml" 82 3252 3321
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 82 3252 3278 "semantics/evalOp.ml" 82 3252 3322
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 82 3252 3267 "semantics/evalOp.ml" 82 3252 3322
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 52 1563 1565 "semantics/evalOp.ml" 82 3252 3322
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 47 1433 1435 "semantics/evalOp.ml" 82 3252 3322
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 43 1344 1346 "semantics/evalOp.ml" 82 3252 3322
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 41 1274 1328 "semantics/evalOp.ml" 82 3252 3322
+type(
+  Cil.binop -> ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+type(
+  Cil.binop -> ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 84 3324 3328 "semantics/evalOp.ml" 84 3324 3339
+type(
+  Cil.typ -> Cil.typ option
+)
+ident(
+  def elem_typ_of "semantics/evalOp.ml" 89 3449 3449 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 85 3379 3393 "semantics/evalOp.ml" 85 3379 3394
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/evalOp.ml" 86 3399 3427 "semantics/evalOp.ml" 86 3399 3433
+)
+"semantics/evalOp.ml" 85 3379 3396 "semantics/evalOp.ml" 85 3379 3397
+type(
+  Cil.attributes
+)
+"semantics/evalOp.ml" 85 3379 3383 "semantics/evalOp.ml" 85 3379 3398
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 86 3399 3415 "semantics/evalOp.ml" 86 3399 3416
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/evalOp.ml" 86 3399 3427 "semantics/evalOp.ml" 86 3399 3433
+)
+"semantics/evalOp.ml" 86 3399 3418 "semantics/evalOp.ml" 86 3399 3419
+type(
+  Cil.exp option
+)
+"semantics/evalOp.ml" 86 3399 3421 "semantics/evalOp.ml" 86 3399 3422
+type(
+  Cil.attributes
+)
+"semantics/evalOp.ml" 86 3399 3403 "semantics/evalOp.ml" 86 3399 3423
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 85 3379 3383 "semantics/evalOp.ml" 86 3399 3423
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 86 3399 3432 "semantics/evalOp.ml" 86 3399 3433
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/evalOp.ml" 85 3379 3393 "semantics/evalOp.ml" 85 3379 3394
+)
+"semantics/evalOp.ml" 86 3399 3427 "semantics/evalOp.ml" 86 3399 3433
+type(
+  Cil.typ option
+)
+"semantics/evalOp.ml" 87 3434 3438 "semantics/evalOp.ml" 87 3434 3439
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 87 3434 3443 "semantics/evalOp.ml" 87 3434 3447
+type(
+  Cil.typ option
+)
+"semantics/evalOp.ml" 84 3324 3370 "semantics/evalOp.ml" 87 3434 3447
+type(
+  Cil.typ -> Cil.typ option
+)
+type(
+  Cil.typ -> Cil.typ option
+)
+"semantics/evalOp.ml" 89 3449 3453 "semantics/evalOp.ml" 89 3449 3464
+type(
+  Cil.typ -> bool
+)
+ident(
+  def is_char_ptr "semantics/evalOp.ml" 94 3547 3547 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 89 3449 3465 "semantics/evalOp.ml" 89 3449 3466
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/evalOp.ml" 90 3470 3472 "semantics/evalOp.ml" 92 3532 3545
+)
+"semantics/evalOp.ml" 90 3470 3478 "semantics/evalOp.ml" 90 3470 3479
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/evalOp.ml" 89 3449 3465 "semantics/evalOp.ml" 89 3449 3466
+)
+"semantics/evalOp.ml" 91 3485 3508 "semantics/evalOp.ml" 91 3485 3517
+type(
+  Cil.ikind
+)
+"semantics/evalOp.ml" 91 3485 3518 "semantics/evalOp.ml" 91 3485 3519
+type(
+  Cil.attributes
+)
+"semantics/evalOp.ml" 91 3485 3498 "semantics/evalOp.ml" 91 3485 3520
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 91 3485 3521 "semantics/evalOp.ml" 91 3485 3522
+type(
+  Cil.attributes
+)
+"semantics/evalOp.ml" 91 3485 3488 "semantics/evalOp.ml" 91 3485 3523
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 91 3485 3527 "semantics/evalOp.ml" 91 3485 3531
+type(
+  bool
+)
+"semantics/evalOp.ml" 92 3532 3535 "semantics/evalOp.ml" 92 3532 3536
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 92 3532 3540 "semantics/evalOp.ml" 92 3532 3545
+type(
+  bool
+)
+"semantics/evalOp.ml" 90 3470 3472 "semantics/evalOp.ml" 92 3532 3545
+type(
+  bool
+)
+"semantics/evalOp.ml" 94 3547 3555 "semantics/evalOp.ml" 94 3547 3569
+type(
+  AbsDom.Proc.t ->
+  ItvDom.Val.t -> Cil.offset -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  def resolve_offset "semantics/evalOp.ml" 94 3547 3547 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 95 3623 3629 "semantics/evalOp.ml" 95 3623 3632
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 95 3623 3634
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/evalOp.ml" 95 3623 3635 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 95 3623 3635 "semantics/evalOp.ml" 95 3623 3637
+type(
+  Cil.offset
+)
+ident(
+  def os "semantics/evalOp.ml" 95 3623 3638 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 95 3623 3638 "semantics/evalOp.ml" 95 3623 3641
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/evalOp.ml" 96 3645 3647 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 96 3645 3653 "semantics/evalOp.ml" 96 3645 3655
+type(
+  Cil.offset
+)
+ident(
+  int_ref os "semantics/evalOp.ml" 95 3623 3635 "semantics/evalOp.ml" 95 3623 3637
+)
+"semantics/evalOp.ml" 97 3661 3665 "semantics/evalOp.ml" 97 3661 3677
+type(
+  Cil.offset
+)
+"semantics/evalOp.ml" 98 3681 3689 "semantics/evalOp.ml" 98 3681 3691
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def p1 "semantics/evalOp.ml" 99 3714 3718 "semantics/evalOp.ml" 100 3773 3794
+)
+"semantics/evalOp.ml" 98 3681 3694 "semantics/evalOp.ml" 98 3681 3708
+type(
+  ItvDom.Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ItvDom.pow_loc_of_val
+)
+"semantics/evalOp.ml" 98 3681 3709 "semantics/evalOp.ml" 98 3681 3710
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 95 3623 3634
+)
+"semantics/evalOp.ml" 98 3681 3694 "semantics/evalOp.ml" 98 3681 3710
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 99 3714 3722 "semantics/evalOp.ml" 99 3714 3724
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def p2 "semantics/evalOp.ml" 100 3773 3777 "semantics/evalOp.ml" 100 3773 3794
+)
+"semantics/evalOp.ml" 99 3714 3727 "semantics/evalOp.ml" 99 3714 3752
+type(
+  ArrayBlk.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ArrayBlk.pow_loc_of_array
+)
+"semantics/evalOp.ml" 99 3714 3754 "semantics/evalOp.ml" 99 3714 3766
+type(
+  ItvDom.Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ItvDom.array_of_val
+)
+"semantics/evalOp.ml" 99 3714 3767 "semantics/evalOp.ml" 99 3714 3768
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 95 3623 3634
+)
+"semantics/evalOp.ml" 99 3714 3753 "semantics/evalOp.ml" 99 3714 3769
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 99 3714 3727 "semantics/evalOp.ml" 99 3714 3769
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 100 3773 3777 "semantics/evalOp.ml" 100 3773 3788
+type(
+  AbsDom.PowLoc.t -> AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.join
+)
+"semantics/evalOp.ml" 100 3773 3789 "semantics/evalOp.ml" 100 3773 3791
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref p1 "semantics/evalOp.ml" 98 3681 3689 "semantics/evalOp.ml" 98 3681 3691
+)
+"semantics/evalOp.ml" 100 3773 3792 "semantics/evalOp.ml" 100 3773 3794
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref p2 "semantics/evalOp.ml" 99 3714 3722 "semantics/evalOp.ml" 99 3714 3724
+)
+"semantics/evalOp.ml" 100 3773 3777 "semantics/evalOp.ml" 100 3773 3794
+call(
+  tail
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 99 3714 3718 "semantics/evalOp.ml" 100 3773 3794
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 98 3681 3685 "semantics/evalOp.ml" 100 3773 3794
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 102 3796 3811 "semantics/evalOp.ml" 102 3796 3812
+type(
+  Cil.fieldinfo
+)
+ident(
+  def f "semantics/evalOp.ml" 103 3822 3826 "semantics/evalOp.ml" 106 4011 4043
+)
+"semantics/evalOp.ml" 102 3796 3814 "semantics/evalOp.ml" 102 3796 3817
+type(
+  Cil.offset
+)
+ident(
+  def os' "semantics/evalOp.ml" 103 3822 3826 "semantics/evalOp.ml" 106 4011 4043
+)
+"semantics/evalOp.ml" 102 3796 3800 "semantics/evalOp.ml" 102 3796 3818
+type(
+  Cil.offset
+)
+"semantics/evalOp.ml" 103 3822 3830 "semantics/evalOp.ml" 103 3822 3832
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def l1 "semantics/evalOp.ml" 104 3890 3894 "semantics/evalOp.ml" 106 4011 4043
+)
+"semantics/evalOp.ml" 103 3822 3835 "semantics/evalOp.ml" 103 3822 3855
+type(
+  AbsDom.PowLoc.t -> AbsDom.Field.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.pow_loc_append_field
+)
+"semantics/evalOp.ml" 103 3822 3857 "semantics/evalOp.ml" 103 3822 3871
+type(
+  ItvDom.Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ItvDom.pow_loc_of_val
+)
+"semantics/evalOp.ml" 103 3822 3872 "semantics/evalOp.ml" 103 3822 3873
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 95 3623 3634
+)
+"semantics/evalOp.ml" 103 3822 3856 "semantics/evalOp.ml" 103 3822 3874
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 103 3822 3875 "semantics/evalOp.ml" 103 3822 3876
+type(
+  Cil.fieldinfo
+)
+ident(
+  int_ref f "semantics/evalOp.ml" 102 3796 3811 "semantics/evalOp.ml" 102 3796 3812
+)
+"semantics/evalOp.ml" 103 3822 3875 "semantics/evalOp.ml" 103 3822 3886
+type(
+  AbsDom.Field.t
+)
+"semantics/evalOp.ml" 103 3822 3835 "semantics/evalOp.ml" 103 3822 3886
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 104 3890 3898 "semantics/evalOp.ml" 104 3890 3900
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def l2 "semantics/evalOp.ml" 105 3961 3965 "semantics/evalOp.ml" 106 4011 4043
+)
+"semantics/evalOp.ml" 104 3890 3903 "semantics/evalOp.ml" 104 3890 3928
+type(
+  ArrayBlk.t -> AbsDom.Field.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ArrayBlk.pow_loc_of_struct_w_field
+)
+"semantics/evalOp.ml" 104 3890 3930 "semantics/evalOp.ml" 104 3890 3942
+type(
+  ItvDom.Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ItvDom.array_of_val
+)
+"semantics/evalOp.ml" 104 3890 3943 "semantics/evalOp.ml" 104 3890 3944
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 95 3623 3634
+)
+"semantics/evalOp.ml" 104 3890 3929 "semantics/evalOp.ml" 104 3890 3945
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 104 3890 3946 "semantics/evalOp.ml" 104 3890 3947
+type(
+  Cil.fieldinfo
+)
+ident(
+  int_ref f "semantics/evalOp.ml" 102 3796 3811 "semantics/evalOp.ml" 102 3796 3812
+)
+"semantics/evalOp.ml" 104 3890 3946 "semantics/evalOp.ml" 104 3890 3957
+type(
+  AbsDom.Field.t
+)
+"semantics/evalOp.ml" 104 3890 3903 "semantics/evalOp.ml" 104 3890 3957
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 105 3961 3969 "semantics/evalOp.ml" 105 3961 3970
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/evalOp.ml" 106 4011 4015 "semantics/evalOp.ml" 106 4011 4043
+)
+"semantics/evalOp.ml" 105 3961 3973 "semantics/evalOp.ml" 105 3961 3987
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 105 3961 3989 "semantics/evalOp.ml" 105 3961 4000
+type(
+  AbsDom.PowLoc.t -> AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.join
+)
+"semantics/evalOp.ml" 105 3961 4001 "semantics/evalOp.ml" 105 3961 4003
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref l1 "semantics/evalOp.ml" 103 3822 3830 "semantics/evalOp.ml" 103 3822 3832
+)
+"semantics/evalOp.ml" 105 3961 4004 "semantics/evalOp.ml" 105 3961 4006
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref l2 "semantics/evalOp.ml" 104 3890 3898 "semantics/evalOp.ml" 104 3890 3900
+)
+"semantics/evalOp.ml" 105 3961 3988 "semantics/evalOp.ml" 105 3961 4007
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 105 3961 3973 "semantics/evalOp.ml" 105 3961 4007
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 106 4011 4015 "semantics/evalOp.ml" 106 4011 4029
+type(
+  AbsDom.Proc.t ->
+  ItvDom.Val.t -> Cil.offset -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref resolve_offset "semantics/evalOp.ml" 94 3547 3555 "semantics/evalOp.ml" 94 3547 3569
+)
+"semantics/evalOp.ml" 106 4011 4030 "semantics/evalOp.ml" 106 4011 4033
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 95 3623 3629 "semantics/evalOp.ml" 95 3623 3632
+)
+"semantics/evalOp.ml" 106 4011 4034 "semantics/evalOp.ml" 106 4011 4035
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 105 3961 3969 "semantics/evalOp.ml" 105 3961 3970
+)
+"semantics/evalOp.ml" 106 4011 4036 "semantics/evalOp.ml" 106 4011 4039
+type(
+  Cil.offset
+)
+ident(
+  int_ref os' "semantics/evalOp.ml" 102 3796 3814 "semantics/evalOp.ml" 102 3796 3817
+)
+"semantics/evalOp.ml" 106 4011 4040 "semantics/evalOp.ml" 106 4011 4043
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 95 3623 3638 "semantics/evalOp.ml" 95 3623 3641
+)
+"semantics/evalOp.ml" 106 4011 4015 "semantics/evalOp.ml" 106 4011 4043
+call(
+  tail
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 105 3961 3965 "semantics/evalOp.ml" 106 4011 4043
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 104 3890 3894 "semantics/evalOp.ml" 106 4011 4043
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 103 3822 3826 "semantics/evalOp.ml" 106 4011 4043
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 108 4045 4060 "semantics/evalOp.ml" 108 4045 4061
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 109 4071 4075 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 108 4045 4063 "semantics/evalOp.ml" 108 4045 4066
+type(
+  Cil.offset
+)
+ident(
+  def os' "semantics/evalOp.ml" 109 4071 4075 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 108 4045 4049 "semantics/evalOp.ml" 108 4045 4067
+type(
+  Cil.offset
+)
+"semantics/evalOp.ml" 109 4071 4079 "semantics/evalOp.ml" 109 4071 4080
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 109 4071 4083 "semantics/evalOp.ml" 109 4071 4087
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 109 4071 4088 "semantics/evalOp.ml" 109 4071 4091
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 95 3623 3629 "semantics/evalOp.ml" 95 3623 3632
+)
+"semantics/evalOp.ml" 109 4071 4092 "semantics/evalOp.ml" 109 4071 4093
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 108 4045 4060 "semantics/evalOp.ml" 108 4045 4061
+)
+"semantics/evalOp.ml" 109 4071 4094 "semantics/evalOp.ml" 109 4071 4097
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 95 3623 3638 "semantics/evalOp.ml" 95 3623 3641
+)
+"semantics/evalOp.ml" 109 4071 4083 "semantics/evalOp.ml" 109 4071 4097
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 110 4142 4150 "semantics/evalOp.ml" 110 4142 4151
+type(
+  ArrayBlk.t
+)
+ident(
+  def a "semantics/evalOp.ml" 111 4206 4210 "semantics/evalOp.ml" 111 4206 4283
+)
+"semantics/evalOp.ml" 110 4142 4154 "semantics/evalOp.ml" 110 4142 4166
+type(
+  ItvDom.Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ItvDom.array_of_val
+)
+"semantics/evalOp.ml" 110 4142 4168 "semantics/evalOp.ml" 110 4142 4178
+type(
+  AbsDom.PowLoc.t -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Mem.lookup
+)
+"semantics/evalOp.ml" 110 4142 4180 "semantics/evalOp.ml" 110 4142 4194
+type(
+  ItvDom.Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ItvDom.pow_loc_of_val
+)
+"semantics/evalOp.ml" 110 4142 4195 "semantics/evalOp.ml" 110 4142 4196
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 95 3623 3633 "semantics/evalOp.ml" 95 3623 3634
+)
+"semantics/evalOp.ml" 110 4142 4179 "semantics/evalOp.ml" 110 4142 4197
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 110 4142 4198 "semantics/evalOp.ml" 110 4142 4201
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 95 3623 3638 "semantics/evalOp.ml" 95 3623 3641
+)
+"semantics/evalOp.ml" 110 4142 4167 "semantics/evalOp.ml" 110 4142 4202
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 110 4142 4154 "semantics/evalOp.ml" 110 4142 4202
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 111 4206 4210 "semantics/evalOp.ml" 111 4206 4224
+type(
+  AbsDom.Proc.t ->
+  ItvDom.Val.t -> Cil.offset -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref resolve_offset "semantics/evalOp.ml" 94 3547 3555 "semantics/evalOp.ml" 94 3547 3569
+)
+"semantics/evalOp.ml" 111 4206 4225 "semantics/evalOp.ml" 111 4206 4228
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 95 3623 3629 "semantics/evalOp.ml" 95 3623 3632
+)
+"semantics/evalOp.ml" 111 4206 4230 "semantics/evalOp.ml" 111 4206 4244
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 111 4206 4246 "semantics/evalOp.ml" 111 4206 4271
+type(
+  ArrayBlk.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ArrayBlk.pow_loc_of_array
+)
+"semantics/evalOp.ml" 111 4206 4272 "semantics/evalOp.ml" 111 4206 4273
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref a "semantics/evalOp.ml" 110 4142 4150 "semantics/evalOp.ml" 110 4142 4151
+)
+"semantics/evalOp.ml" 111 4206 4245 "semantics/evalOp.ml" 111 4206 4274
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 111 4206 4229 "semantics/evalOp.ml" 111 4206 4275
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 111 4206 4276 "semantics/evalOp.ml" 111 4206 4279
+type(
+  Cil.offset
+)
+ident(
+  int_ref os' "semantics/evalOp.ml" 108 4045 4063 "semantics/evalOp.ml" 108 4045 4066
+)
+"semantics/evalOp.ml" 111 4206 4280 "semantics/evalOp.ml" 111 4206 4283
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 95 3623 3638 "semantics/evalOp.ml" 95 3623 3641
+)
+"semantics/evalOp.ml" 111 4206 4210 "semantics/evalOp.ml" 111 4206 4283
+call(
+  tail
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 110 4142 4146 "semantics/evalOp.ml" 111 4206 4283
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 109 4071 4075 "semantics/evalOp.ml" 111 4206 4283
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 96 3645 3647 "semantics/evalOp.ml" 111 4206 4283
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 95 3623 3625 "semantics/evalOp.ml" 111 4206 4283
+type(
+  AbsDom.Proc.t ->
+  ItvDom.Val.t -> Cil.offset -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+type(
+  AbsDom.Proc.t ->
+  ItvDom.Val.t -> Cil.offset -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 116 4490 4494 "semantics/evalOp.ml" 116 4490 4511
+type(
+  Cil.typ -> Itv.t
+)
+ident(
+  def itv_of_byteSizeOf "semantics/evalOp.ml" 94 3547 3547 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 117 4531 4536 "semantics/evalOp.ml" 117 4531 4539
+type(
+  Cil.typ
+)
+ident(
+  def typ "semantics/evalOp.ml" 118 4545 4547 "semantics/evalOp.ml" 119 4590 4679
+)
+"semantics/evalOp.ml" 118 4545 4551 "semantics/evalOp.ml" 118 4545 4561
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 118 4545 4564 "semantics/evalOp.ml" 118 4545 4578
+type(
+  Cil.typ -> int
+)
+ident(
+  ext_ref Cil.bitsSizeOf
+)
+"semantics/evalOp.ml" 118 4545 4579 "semantics/evalOp.ml" 118 4545 4582
+type(
+  Cil.typ
+)
+ident(
+  int_ref typ "semantics/evalOp.ml" 117 4531 4536 "semantics/evalOp.ml" 117 4531 4539
+)
+"semantics/evalOp.ml" 118 4545 4563 "semantics/evalOp.ml" 118 4545 4583
+call(
+  stack
+)
+type(
+  int
+)
+"semantics/evalOp.ml" 118 4545 4584 "semantics/evalOp.ml" 118 4545 4585
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( / )
+)
+"semantics/evalOp.ml" 118 4545 4586 "semantics/evalOp.ml" 118 4545 4587
+type(
+  int
+)
+"semantics/evalOp.ml" 118 4545 4562 "semantics/evalOp.ml" 118 4545 4588
+type(
+  int
+)
+"semantics/evalOp.ml" 118 4545 4551 "semantics/evalOp.ml" 118 4545 4588
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 119 4590 4597 "semantics/evalOp.ml" 119 4590 4598
+type(
+  exn
+)
+"semantics/evalOp.ml" 119 4590 4602 "semantics/evalOp.ml" 119 4590 4615
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"semantics/evalOp.ml" 119 4590 4617 "semantics/evalOp.ml" 119 4590 4641
+type(
+  string
+)
+"semantics/evalOp.ml" 119 4590 4642 "semantics/evalOp.ml" 119 4590 4643
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"semantics/evalOp.ml" 119 4590 4644 "semantics/evalOp.ml" 119 4590 4658
+type(
+  Cil.typ -> string
+)
+ident(
+  ext_ref Cil2str.s_type
+)
+"semantics/evalOp.ml" 119 4590 4659 "semantics/evalOp.ml" 119 4590 4662
+type(
+  Cil.typ
+)
+ident(
+  int_ref typ "semantics/evalOp.ml" 117 4531 4536 "semantics/evalOp.ml" 117 4531 4539
+)
+"semantics/evalOp.ml" 119 4590 4644 "semantics/evalOp.ml" 119 4590 4662
+call(
+  stack
+)
+type(
+  string
+)
+"semantics/evalOp.ml" 119 4590 4663 "semantics/evalOp.ml" 119 4590 4664
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"semantics/evalOp.ml" 119 4590 4665 "semantics/evalOp.ml" 119 4590 4668
+type(
+  string
+)
+"semantics/evalOp.ml" 119 4590 4644 "semantics/evalOp.ml" 119 4590 4668
+call(
+  stack
+)
+type(
+  string
+)
+"semantics/evalOp.ml" 119 4590 4616 "semantics/evalOp.ml" 119 4590 4669
+call(
+  stack
+)
+type(
+  string
+)
+"semantics/evalOp.ml" 119 4590 4602 "semantics/evalOp.ml" 119 4590 4669
+call(
+  stack
+)
+type(
+  unit
+)
+"semantics/evalOp.ml" 119 4590 4672 "semantics/evalOp.ml" 119 4590 4679
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"semantics/evalOp.ml" 119 4590 4602 "semantics/evalOp.ml" 119 4590 4679
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 118 4545 4547 "semantics/evalOp.ml" 119 4590 4679
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 117 4531 4532 "semantics/evalOp.ml" 119 4590 4679
+type(
+  Cil.typ -> Itv.t
+)
+type(
+  Cil.typ -> Itv.t
+)
+"semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  def eval "semantics/evalOp.ml" 94 3547 3547 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/evalOp.ml" 122 4728 4738 "semantics/evalOp.ml" 166 6350 6405
+)
+"semantics/evalOp.ml" 122 4728 4738 "semantics/evalOp.ml" 122 4728 4739
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 166 6350 6405
+)
+"semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/evalOp.ml" 123 4747 4749 "semantics/evalOp.ml" 166 6350 6405
+)
+"semantics/evalOp.ml" 123 4747 4755 "semantics/evalOp.ml" 123 4747 4756
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 122 4728 4738 "semantics/evalOp.ml" 122 4728 4739
+)
+"semantics/evalOp.ml" 124 4762 4776 "semantics/evalOp.ml" 124 4762 4777
+type(
+  Cil.constant
+)
+ident(
+  def c "semantics/evalOp.ml" 124 4762 4781 "semantics/evalOp.ml" 124 4762 4793
+)
+"semantics/evalOp.ml" 124 4762 4766 "semantics/evalOp.ml" 124 4762 4777
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 124 4762 4781 "semantics/evalOp.ml" 124 4762 4791
+type(
+  Cil.constant -> ItvDom.Val.t
+)
+ident(
+  int_ref eval_const "semantics/evalOp.ml" 9 106 110 "semantics/evalOp.ml" 9 106 120
+)
+"semantics/evalOp.ml" 124 4762 4792 "semantics/evalOp.ml" 124 4762 4793
+type(
+  Cil.constant
+)
+ident(
+  int_ref c "semantics/evalOp.ml" 124 4762 4776 "semantics/evalOp.ml" 124 4762 4777
+)
+"semantics/evalOp.ml" 124 4762 4781 "semantics/evalOp.ml" 124 4762 4793
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 125 4795 4808 "semantics/evalOp.ml" 125 4795 4809
+type(
+  Cil.lval
+)
+ident(
+  def l "semantics/evalOp.ml" 125 4795 4813 "semantics/evalOp.ml" 125 4795 4847
+)
+"semantics/evalOp.ml" 125 4795 4799 "semantics/evalOp.ml" 125 4795 4809
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 125 4795 4813 "semantics/evalOp.ml" 125 4795 4823
+type(
+  AbsDom.PowLoc.t -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Mem.lookup
+)
+"semantics/evalOp.ml" 125 4795 4825 "semantics/evalOp.ml" 125 4795 4832
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref eval_lv "semantics/evalOp.ml" 171 6552 6556 "semantics/evalOp.ml" 171 6552 6563
+)
+"semantics/evalOp.ml" 125 4795 4833 "semantics/evalOp.ml" 125 4795 4836
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 125 4795 4837 "semantics/evalOp.ml" 125 4795 4838
+type(
+  Cil.lval
+)
+ident(
+  int_ref l "semantics/evalOp.ml" 125 4795 4808 "semantics/evalOp.ml" 125 4795 4809
+)
+"semantics/evalOp.ml" 125 4795 4839 "semantics/evalOp.ml" 125 4795 4842
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 125 4795 4824 "semantics/evalOp.ml" 125 4795 4843
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 125 4795 4844 "semantics/evalOp.ml" 125 4795 4847
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 125 4795 4813 "semantics/evalOp.ml" 125 4795 4847
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 126 4849 4864 "semantics/evalOp.ml" 126 4849 4865
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/evalOp.ml" 126 4849 4869 "semantics/evalOp.ml" 126 4849 4901
+)
+"semantics/evalOp.ml" 126 4849 4853 "semantics/evalOp.ml" 126 4849 4865
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 126 4849 4869 "semantics/evalOp.ml" 126 4849 4879
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 126 4849 4881 "semantics/evalOp.ml" 126 4849 4898
+type(
+  Cil.typ -> Itv.t
+)
+ident(
+  int_ref itv_of_byteSizeOf "semantics/evalOp.ml" 116 4490 4494 "semantics/evalOp.ml" 116 4490 4511
+)
+"semantics/evalOp.ml" 126 4849 4899 "semantics/evalOp.ml" 126 4849 4900
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/evalOp.ml" 126 4849 4864 "semantics/evalOp.ml" 126 4849 4865
+)
+"semantics/evalOp.ml" 126 4849 4880 "semantics/evalOp.ml" 126 4849 4901
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 126 4849 4869 "semantics/evalOp.ml" 126 4849 4901
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 127 4902 4918 "semantics/evalOp.ml" 127 4902 4919
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 127 4902 4923 "semantics/evalOp.ml" 127 4902 4968
+)
+"semantics/evalOp.ml" 127 4902 4906 "semantics/evalOp.ml" 127 4902 4919
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 127 4902 4923 "semantics/evalOp.ml" 127 4902 4933
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 127 4902 4935 "semantics/evalOp.ml" 127 4902 4952
+type(
+  Cil.typ -> Itv.t
+)
+ident(
+  int_ref itv_of_byteSizeOf "semantics/evalOp.ml" 116 4490 4494 "semantics/evalOp.ml" 116 4490 4511
+)
+"semantics/evalOp.ml" 127 4902 4954 "semantics/evalOp.ml" 127 4902 4964
+type(
+  Cil.exp -> Cil.typ
+)
+ident(
+  ext_ref Cil.typeOf
+)
+"semantics/evalOp.ml" 127 4902 4965 "semantics/evalOp.ml" 127 4902 4966
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 127 4902 4918 "semantics/evalOp.ml" 127 4902 4919
+)
+"semantics/evalOp.ml" 127 4902 4953 "semantics/evalOp.ml" 127 4902 4967
+call(
+  stack
+)
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 127 4902 4934 "semantics/evalOp.ml" 127 4902 4968
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 127 4902 4923 "semantics/evalOp.ml" 127 4902 4968
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 128 4969 4987 "semantics/evalOp.ml" 128 4969 4988
+type(
+  string
+)
+ident(
+  def s "semantics/evalOp.ml" 128 4969 4992 "semantics/evalOp.ml" 128 4969 5037
+)
+"semantics/evalOp.ml" 128 4969 4973 "semantics/evalOp.ml" 128 4969 4988
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 128 4969 4992 "semantics/evalOp.ml" 128 4969 5002
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 128 4969 5004 "semantics/evalOp.ml" 128 4969 5014
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 128 4969 5016 "semantics/evalOp.ml" 128 4969 5029
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"semantics/evalOp.ml" 128 4969 5030 "semantics/evalOp.ml" 128 4969 5031
+type(
+  string
+)
+ident(
+  int_ref s "semantics/evalOp.ml" 128 4969 4987 "semantics/evalOp.ml" 128 4969 4988
+)
+"semantics/evalOp.ml" 128 4969 5016 "semantics/evalOp.ml" 128 4969 5031
+type(
+  int
+)
+"semantics/evalOp.ml" 128 4969 5032 "semantics/evalOp.ml" 128 4969 5033
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"semantics/evalOp.ml" 128 4969 5034 "semantics/evalOp.ml" 128 4969 5035
+type(
+  int
+)
+"semantics/evalOp.ml" 128 4969 5015 "semantics/evalOp.ml" 128 4969 5036
+type(
+  int
+)
+"semantics/evalOp.ml" 128 4969 5003 "semantics/evalOp.ml" 128 4969 5037
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 128 4969 4992 "semantics/evalOp.ml" 128 4969 5037
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 129 5038 5054 "semantics/evalOp.ml" 129 5038 5055
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/evalOp.ml" 129 5038 5059 "semantics/evalOp.ml" 129 5038 5102
+)
+"semantics/evalOp.ml" 129 5038 5042 "semantics/evalOp.ml" 129 5038 5055
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 129 5038 5059 "semantics/evalOp.ml" 129 5038 5069
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 129 5038 5071 "semantics/evalOp.ml" 129 5038 5081
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 129 5038 5083 "semantics/evalOp.ml" 129 5038 5098
+type(
+  Cil.typ -> int
+)
+ident(
+  ext_ref Cil.alignOf_int
+)
+"semantics/evalOp.ml" 129 5038 5099 "semantics/evalOp.ml" 129 5038 5100
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/evalOp.ml" 129 5038 5054 "semantics/evalOp.ml" 129 5038 5055
+)
+"semantics/evalOp.ml" 129 5038 5082 "semantics/evalOp.ml" 129 5038 5101
+call(
+  stack
+)
+type(
+  int
+)
+"semantics/evalOp.ml" 129 5038 5070 "semantics/evalOp.ml" 129 5038 5102
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 129 5038 5059 "semantics/evalOp.ml" 129 5038 5102
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 131 5182 5199 "semantics/evalOp.ml" 131 5182 5200
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 131 5182 5186 "semantics/evalOp.ml" 131 5182 5200
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 131 5182 5204 "semantics/evalOp.ml" 131 5182 5214
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 131 5182 5215 "semantics/evalOp.ml" 131 5182 5222
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.top
+)
+"semantics/evalOp.ml" 131 5182 5204 "semantics/evalOp.ml" 131 5182 5222
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 132 5223 5237 "semantics/evalOp.ml" 132 5223 5238
+type(
+  Cil.unop
+)
+ident(
+  def u "semantics/evalOp.ml" 132 5223 5249 "semantics/evalOp.ml" 132 5223 5276
+)
+"semantics/evalOp.ml" 132 5223 5240 "semantics/evalOp.ml" 132 5223 5241
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 132 5223 5249 "semantics/evalOp.ml" 132 5223 5276
+)
+"semantics/evalOp.ml" 132 5223 5243 "semantics/evalOp.ml" 132 5223 5244
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 132 5223 5227 "semantics/evalOp.ml" 132 5223 5245
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 132 5223 5249 "semantics/evalOp.ml" 132 5223 5257
+type(
+  Cil.unop -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval_uop "semantics/evalOp.ml" 30 968 972 "semantics/evalOp.ml" 30 968 980
+)
+"semantics/evalOp.ml" 132 5223 5258 "semantics/evalOp.ml" 132 5223 5259
+type(
+  Cil.unop
+)
+ident(
+  int_ref u "semantics/evalOp.ml" 132 5223 5237 "semantics/evalOp.ml" 132 5223 5238
+)
+"semantics/evalOp.ml" 132 5223 5261 "semantics/evalOp.ml" 132 5223 5265
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 132 5223 5266 "semantics/evalOp.ml" 132 5223 5269
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 132 5223 5270 "semantics/evalOp.ml" 132 5223 5271
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 132 5223 5240 "semantics/evalOp.ml" 132 5223 5241
+)
+"semantics/evalOp.ml" 132 5223 5272 "semantics/evalOp.ml" 132 5223 5275
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 132 5223 5260 "semantics/evalOp.ml" 132 5223 5276
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 132 5223 5249 "semantics/evalOp.ml" 132 5223 5276
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 133 5277 5292 "semantics/evalOp.ml" 133 5277 5293
+type(
+  Cil.binop
+)
+ident(
+  def b "semantics/evalOp.ml" 134 5309 5313 "semantics/evalOp.ml" 134 5309 5359
+)
+"semantics/evalOp.ml" 133 5277 5295 "semantics/evalOp.ml" 133 5277 5297
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/evalOp.ml" 134 5309 5313 "semantics/evalOp.ml" 134 5309 5359
+)
+"semantics/evalOp.ml" 133 5277 5299 "semantics/evalOp.ml" 133 5277 5301
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/evalOp.ml" 134 5309 5313 "semantics/evalOp.ml" 134 5309 5359
+)
+"semantics/evalOp.ml" 133 5277 5303 "semantics/evalOp.ml" 133 5277 5304
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 133 5277 5281 "semantics/evalOp.ml" 133 5277 5305
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 134 5309 5313 "semantics/evalOp.ml" 134 5309 5321
+type(
+  Cil.binop -> ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval_bop "semantics/evalOp.ml" 41 1274 1278 "semantics/evalOp.ml" 41 1274 1286
+)
+"semantics/evalOp.ml" 134 5309 5322 "semantics/evalOp.ml" 134 5309 5323
+type(
+  Cil.binop
+)
+ident(
+  int_ref b "semantics/evalOp.ml" 133 5277 5292 "semantics/evalOp.ml" 133 5277 5293
+)
+"semantics/evalOp.ml" 134 5309 5325 "semantics/evalOp.ml" 134 5309 5329
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 134 5309 5330 "semantics/evalOp.ml" 134 5309 5333
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 134 5309 5334 "semantics/evalOp.ml" 134 5309 5336
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1 "semantics/evalOp.ml" 133 5277 5295 "semantics/evalOp.ml" 133 5277 5297
+)
+"semantics/evalOp.ml" 134 5309 5337 "semantics/evalOp.ml" 134 5309 5340
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 134 5309 5324 "semantics/evalOp.ml" 134 5309 5341
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 134 5309 5343 "semantics/evalOp.ml" 134 5309 5347
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 134 5309 5348 "semantics/evalOp.ml" 134 5309 5351
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 134 5309 5352 "semantics/evalOp.ml" 134 5309 5354
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/evalOp.ml" 133 5277 5299 "semantics/evalOp.ml" 133 5277 5301
+)
+"semantics/evalOp.ml" 134 5309 5355 "semantics/evalOp.ml" 134 5309 5358
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 134 5309 5342 "semantics/evalOp.ml" 134 5309 5359
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 134 5309 5313 "semantics/evalOp.ml" 134 5309 5359
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 136 5361 5379 "semantics/evalOp.ml" 136 5361 5381
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/evalOp.ml" 137 5398 5402 "semantics/evalOp.ml" 145 5627 5677
+)
+"semantics/evalOp.ml" 136 5361 5383 "semantics/evalOp.ml" 136 5361 5385
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/evalOp.ml" 137 5398 5402 "semantics/evalOp.ml" 145 5627 5677
+)
+"semantics/evalOp.ml" 136 5361 5387 "semantics/evalOp.ml" 136 5361 5389
+type(
+  Cil.exp
+)
+ident(
+  def e3 "semantics/evalOp.ml" 137 5398 5402 "semantics/evalOp.ml" 145 5627 5677
+)
+"semantics/evalOp.ml" 136 5361 5391 "semantics/evalOp.ml" 136 5361 5392
+type(
+  Cil.typ
+)
+"semantics/evalOp.ml" 136 5361 5365 "semantics/evalOp.ml" 136 5361 5393
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 137 5398 5406 "semantics/evalOp.ml" 137 5398 5408
+type(
+  Itv.t
+)
+ident(
+  def i1 "semantics/evalOp.ml" 138 5443 5447 "semantics/evalOp.ml" 145 5627 5677
+)
+"semantics/evalOp.ml" 137 5398 5411 "semantics/evalOp.ml" 137 5398 5421
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 137 5398 5423 "semantics/evalOp.ml" 137 5398 5427
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 137 5398 5428 "semantics/evalOp.ml" 137 5398 5431
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 137 5398 5432 "semantics/evalOp.ml" 137 5398 5434
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1 "semantics/evalOp.ml" 136 5361 5379 "semantics/evalOp.ml" 136 5361 5381
+)
+"semantics/evalOp.ml" 137 5398 5435 "semantics/evalOp.ml" 137 5398 5438
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 137 5398 5422 "semantics/evalOp.ml" 137 5398 5439
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 137 5398 5411 "semantics/evalOp.ml" 137 5398 5439
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 138 5443 5450 "semantics/evalOp.ml" 138 5443 5460
+type(
+  Itv.t -> bool
+)
+ident(
+  ext_ref Itv.is_bot
+)
+"semantics/evalOp.ml" 138 5443 5461 "semantics/evalOp.ml" 138 5443 5463
+type(
+  Itv.t
+)
+ident(
+  int_ref i1 "semantics/evalOp.ml" 137 5398 5406 "semantics/evalOp.ml" 137 5398 5408
+)
+"semantics/evalOp.ml" 138 5443 5450 "semantics/evalOp.ml" 138 5443 5463
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/evalOp.ml" 139 5469 5475 "semantics/evalOp.ml" 139 5469 5482
+type(
+  ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.bot
+)
+"semantics/evalOp.ml" 140 5483 5495 "semantics/evalOp.ml" 140 5483 5501
+type(
+  Itv.t -> Itv.t -> bool
+)
+ident(
+  ext_ref Itv.eq
+)
+"semantics/evalOp.ml" 140 5483 5503 "semantics/evalOp.ml" 140 5483 5513
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 140 5483 5514 "semantics/evalOp.ml" 140 5483 5515
+type(
+  int
+)
+"semantics/evalOp.ml" 140 5483 5502 "semantics/evalOp.ml" 140 5483 5516
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 140 5483 5517 "semantics/evalOp.ml" 140 5483 5519
+type(
+  Itv.t
+)
+ident(
+  int_ref i1 "semantics/evalOp.ml" 137 5398 5406 "semantics/evalOp.ml" 137 5398 5408
+)
+"semantics/evalOp.ml" 140 5483 5495 "semantics/evalOp.ml" 140 5483 5519
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/evalOp.ml" 141 5525 5531 "semantics/evalOp.ml" 141 5525 5535
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 141 5525 5536 "semantics/evalOp.ml" 141 5525 5539
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 141 5525 5540 "semantics/evalOp.ml" 141 5525 5542
+type(
+  Cil.exp
+)
+ident(
+  int_ref e3 "semantics/evalOp.ml" 136 5361 5387 "semantics/evalOp.ml" 136 5361 5389
+)
+"semantics/evalOp.ml" 141 5525 5543 "semantics/evalOp.ml" 141 5525 5546
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 141 5525 5531 "semantics/evalOp.ml" 141 5525 5546
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 142 5547 5559 "semantics/evalOp.ml" 142 5547 5562
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"semantics/evalOp.ml" 142 5547 5564 "semantics/evalOp.ml" 142 5547 5570
+type(
+  Itv.t -> Itv.t -> bool
+)
+ident(
+  ext_ref Itv.le
+)
+"semantics/evalOp.ml" 142 5547 5572 "semantics/evalOp.ml" 142 5547 5582
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 142 5547 5583 "semantics/evalOp.ml" 142 5547 5584
+type(
+  int
+)
+"semantics/evalOp.ml" 142 5547 5571 "semantics/evalOp.ml" 142 5547 5585
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 142 5547 5586 "semantics/evalOp.ml" 142 5547 5588
+type(
+  Itv.t
+)
+ident(
+  int_ref i1 "semantics/evalOp.ml" 137 5398 5406 "semantics/evalOp.ml" 137 5398 5408
+)
+"semantics/evalOp.ml" 142 5547 5563 "semantics/evalOp.ml" 142 5547 5589
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/evalOp.ml" 142 5547 5559 "semantics/evalOp.ml" 142 5547 5589
+type(
+  bool
+)
+"semantics/evalOp.ml" 143 5595 5601 "semantics/evalOp.ml" 143 5595 5605
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 143 5595 5606 "semantics/evalOp.ml" 143 5595 5609
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 143 5595 5610 "semantics/evalOp.ml" 143 5595 5612
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/evalOp.ml" 136 5361 5383 "semantics/evalOp.ml" 136 5361 5385
+)
+"semantics/evalOp.ml" 143 5595 5613 "semantics/evalOp.ml" 143 5595 5616
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 143 5595 5601 "semantics/evalOp.ml" 143 5595 5616
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 145 5627 5633 "semantics/evalOp.ml" 145 5627 5641
+type(
+  ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.join
+)
+"semantics/evalOp.ml" 145 5627 5643 "semantics/evalOp.ml" 145 5627 5647
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 145 5627 5648 "semantics/evalOp.ml" 145 5627 5651
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 145 5627 5652 "semantics/evalOp.ml" 145 5627 5654
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/evalOp.ml" 136 5361 5383 "semantics/evalOp.ml" 136 5361 5385
+)
+"semantics/evalOp.ml" 145 5627 5655 "semantics/evalOp.ml" 145 5627 5658
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 145 5627 5642 "semantics/evalOp.ml" 145 5627 5659
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 145 5627 5661 "semantics/evalOp.ml" 145 5627 5665
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 145 5627 5666 "semantics/evalOp.ml" 145 5627 5669
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 145 5627 5670 "semantics/evalOp.ml" 145 5627 5672
+type(
+  Cil.exp
+)
+ident(
+  int_ref e3 "semantics/evalOp.ml" 136 5361 5387 "semantics/evalOp.ml" 136 5361 5389
+)
+"semantics/evalOp.ml" 145 5627 5673 "semantics/evalOp.ml" 145 5627 5676
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 145 5627 5660 "semantics/evalOp.ml" 145 5627 5677
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 145 5627 5633 "semantics/evalOp.ml" 145 5627 5677
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 142 5547 5556 "semantics/evalOp.ml" 145 5627 5677
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 140 5483 5492 "semantics/evalOp.ml" 145 5627 5677
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 138 5443 5447 "semantics/evalOp.ml" 145 5627 5677
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 137 5398 5402 "semantics/evalOp.ml" 145 5627 5677
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 147 5679 5694 "semantics/evalOp.ml" 147 5679 5695
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/evalOp.ml" 148 5703 5707 "semantics/evalOp.ml" 160 6136 6160
+)
+"semantics/evalOp.ml" 147 5679 5697 "semantics/evalOp.ml" 147 5679 5698
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 148 5703 5707 "semantics/evalOp.ml" 160 6136 6160
+)
+"semantics/evalOp.ml" 147 5679 5683 "semantics/evalOp.ml" 147 5679 5699
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 148 5703 5711 "semantics/evalOp.ml" 148 5703 5712
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/evalOp.ml" 149 5733 5737 "semantics/evalOp.ml" 160 6136 6160
+)
+"semantics/evalOp.ml" 148 5703 5715 "semantics/evalOp.ml" 148 5703 5719
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 148 5703 5720 "semantics/evalOp.ml" 148 5703 5723
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 148 5703 5724 "semantics/evalOp.ml" 148 5703 5725
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 147 5679 5697 "semantics/evalOp.ml" 147 5679 5698
+)
+"semantics/evalOp.ml" 148 5703 5726 "semantics/evalOp.ml" 148 5703 5729
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 148 5703 5715 "semantics/evalOp.ml" 148 5703 5729
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 149 5733 5741 "semantics/evalOp.ml" 149 5733 5746
+type(
+  Itv.t
+)
+ident(
+  def v_itv "semantics/evalOp.ml" 150 5765 5769 "semantics/evalOp.ml" 160 6136 6160
+)
+"semantics/evalOp.ml" 149 5733 5749 "semantics/evalOp.ml" 149 5733 5759
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 149 5733 5760 "semantics/evalOp.ml" 149 5733 5761
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 148 5703 5711 "semantics/evalOp.ml" 148 5703 5712
+)
+"semantics/evalOp.ml" 149 5733 5749 "semantics/evalOp.ml" 149 5733 5761
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 150 5765 5773 "semantics/evalOp.ml" 150 5765 5775
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v' "semantics/evalOp.ml" 157 5999 6003 "semantics/evalOp.ml" 160 6136 6160
+)
+"semantics/evalOp.ml" 151 5779 5792 "semantics/evalOp.ml" 151 5779 5803
+type(
+  Cil.typ -> Cil.typ option
+)
+ident(
+  int_ref elem_typ_of "semantics/evalOp.ml" 84 3324 3328 "semantics/evalOp.ml" 84 3324 3339
+)
+"semantics/evalOp.ml" 151 5779 5804 "semantics/evalOp.ml" 151 5779 5805
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/evalOp.ml" 147 5679 5694 "semantics/evalOp.ml" 147 5679 5695
+)
+"semantics/evalOp.ml" 151 5779 5792 "semantics/evalOp.ml" 151 5779 5805
+call(
+  stack
+)
+type(
+  Cil.typ option
+)
+"semantics/evalOp.ml" 152 5811 5825 "semantics/evalOp.ml" 152 5811 5827
+type(
+  Cil.typ
+)
+ident(
+  def t' "semantics/evalOp.ml" 153 5831 5840 "semantics/evalOp.ml" 155 5944 5975
+)
+"semantics/evalOp.ml" 152 5811 5820 "semantics/evalOp.ml" 152 5811 5827
+type(
+  Cil.typ option
+)
+"semantics/evalOp.ml" 153 5831 5844 "semantics/evalOp.ml" 153 5831 5854
+type(
+  Itv.t
+)
+ident(
+  def new_stride "semantics/evalOp.ml" 154 5881 5890 "semantics/evalOp.ml" 155 5944 5975
+)
+"semantics/evalOp.ml" 153 5831 5857 "semantics/evalOp.ml" 153 5831 5874
+type(
+  Cil.typ -> Itv.t
+)
+ident(
+  int_ref itv_of_byteSizeOf "semantics/evalOp.ml" 116 4490 4494 "semantics/evalOp.ml" 116 4490 4511
+)
+"semantics/evalOp.ml" 153 5831 5875 "semantics/evalOp.ml" 153 5831 5877
+type(
+  Cil.typ
+)
+ident(
+  int_ref t' "semantics/evalOp.ml" 152 5811 5825 "semantics/evalOp.ml" 152 5811 5827
+)
+"semantics/evalOp.ml" 153 5831 5857 "semantics/evalOp.ml" 153 5831 5877
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 154 5881 5894 "semantics/evalOp.ml" 154 5881 5899
+type(
+  ArrayBlk.t
+)
+ident(
+  def array "semantics/evalOp.ml" 155 5944 5955 "semantics/evalOp.ml" 155 5944 5975
+)
+"semantics/evalOp.ml" 154 5881 5902 "semantics/evalOp.ml" 154 5881 5912
+type(
+  Itv.t -> ArrayBlk.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.cast_array
+)
+"semantics/evalOp.ml" 154 5881 5913 "semantics/evalOp.ml" 154 5881 5923
+type(
+  Itv.t
+)
+ident(
+  int_ref new_stride "semantics/evalOp.ml" 153 5831 5844 "semantics/evalOp.ml" 153 5831 5854
+)
+"semantics/evalOp.ml" 154 5881 5925 "semantics/evalOp.ml" 154 5881 5937
+type(
+  ItvDom.Val.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ItvDom.array_of_val
+)
+"semantics/evalOp.ml" 154 5881 5938 "semantics/evalOp.ml" 154 5881 5939
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 148 5703 5711 "semantics/evalOp.ml" 148 5703 5712
+)
+"semantics/evalOp.ml" 154 5881 5924 "semantics/evalOp.ml" 154 5881 5940
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 154 5881 5902 "semantics/evalOp.ml" 154 5881 5940
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 155 5944 5955 "semantics/evalOp.ml" 155 5944 5967
+type(
+  ItvDom.Val.t -> ArrayBlk.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.modify_array
+)
+"semantics/evalOp.ml" 155 5944 5968 "semantics/evalOp.ml" 155 5944 5969
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 148 5703 5711 "semantics/evalOp.ml" 148 5703 5712
+)
+"semantics/evalOp.ml" 155 5944 5970 "semantics/evalOp.ml" 155 5944 5975
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref array "semantics/evalOp.ml" 154 5881 5894 "semantics/evalOp.ml" 154 5881 5899
+)
+"semantics/evalOp.ml" 155 5944 5955 "semantics/evalOp.ml" 155 5944 5975
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 154 5881 5890 "semantics/evalOp.ml" 155 5944 5975
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 153 5831 5840 "semantics/evalOp.ml" 155 5944 5975
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 156 5976 5985 "semantics/evalOp.ml" 156 5976 5989
+type(
+  Cil.typ option
+)
+"semantics/evalOp.ml" 156 5976 5993 "semantics/evalOp.ml" 156 5976 5994
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 148 5703 5711 "semantics/evalOp.ml" 148 5703 5712
+)
+"semantics/evalOp.ml" 151 5779 5785 "semantics/evalOp.ml" 156 5976 5995
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 157 5999 6007 "semantics/evalOp.ml" 157 5999 6013
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v_null "semantics/evalOp.ml" 160 6136 6142 "semantics/evalOp.ml" 160 6136 6160
+)
+"semantics/evalOp.ml" 158 6017 6026 "semantics/evalOp.ml" 158 6017 6032
+type(
+  Itv.t -> Itv.t -> bool
+)
+ident(
+  ext_ref Itv.eq
+)
+"semantics/evalOp.ml" 158 6017 6033 "semantics/evalOp.ml" 158 6017 6041
+type(
+  Itv.t
+)
+ident(
+  ext_ref Itv.zero
+)
+"semantics/evalOp.ml" 158 6017 6042 "semantics/evalOp.ml" 158 6017 6047
+type(
+  Itv.t
+)
+ident(
+  int_ref v_itv "semantics/evalOp.ml" 149 5733 5741 "semantics/evalOp.ml" 149 5733 5746
+)
+"semantics/evalOp.ml" 158 6017 6026 "semantics/evalOp.ml" 158 6017 6047
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/evalOp.ml" 158 6017 6048 "semantics/evalOp.ml" 158 6017 6050
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"semantics/evalOp.ml" 158 6017 6051 "semantics/evalOp.ml" 158 6017 6062
+type(
+  Cil.typ -> bool
+)
+ident(
+  int_ref is_char_ptr "semantics/evalOp.ml" 89 3449 3453 "semantics/evalOp.ml" 89 3449 3464
+)
+"semantics/evalOp.ml" 158 6017 6063 "semantics/evalOp.ml" 158 6017 6064
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/evalOp.ml" 147 5679 5694 "semantics/evalOp.ml" 147 5679 5695
+)
+"semantics/evalOp.ml" 158 6017 6051 "semantics/evalOp.ml" 158 6017 6064
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/evalOp.ml" 158 6017 6026 "semantics/evalOp.ml" 158 6017 6064
+type(
+  bool
+)
+"semantics/evalOp.ml" 158 6017 6070 "semantics/evalOp.ml" 158 6017 6084
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 158 6017 6086 "semantics/evalOp.ml" 158 6017 6102
+type(
+  AbsDom.Loc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.singleton
+)
+"semantics/evalOp.ml" 158 6017 6103 "semantics/evalOp.ml" 158 6017 6111
+type(
+  AbsDom.Loc.t
+)
+ident(
+  ext_ref AbsDom.Loc.null
+)
+"semantics/evalOp.ml" 158 6017 6085 "semantics/evalOp.ml" 158 6017 6112
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 158 6017 6070 "semantics/evalOp.ml" 158 6017 6112
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 159 6114 6125 "semantics/evalOp.ml" 159 6114 6132
+type(
+  ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.bot
+)
+"semantics/evalOp.ml" 158 6017 6023 "semantics/evalOp.ml" 159 6114 6132
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 160 6136 6142 "semantics/evalOp.ml" 160 6136 6150
+type(
+  ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.join
+)
+"semantics/evalOp.ml" 160 6136 6151 "semantics/evalOp.ml" 160 6136 6153
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v' "semantics/evalOp.ml" 150 5765 5773 "semantics/evalOp.ml" 150 5765 5775
+)
+"semantics/evalOp.ml" 160 6136 6154 "semantics/evalOp.ml" 160 6136 6160
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v_null "semantics/evalOp.ml" 157 5999 6007 "semantics/evalOp.ml" 157 5999 6013
+)
+"semantics/evalOp.ml" 160 6136 6142 "semantics/evalOp.ml" 160 6136 6160
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 157 5999 6003 "semantics/evalOp.ml" 160 6136 6160
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 150 5765 5769 "semantics/evalOp.ml" 160 6136 6160
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 149 5733 5737 "semantics/evalOp.ml" 160 6136 6160
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 148 5703 5707 "semantics/evalOp.ml" 160 6136 6160
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 161 6161 6176 "semantics/evalOp.ml" 161 6161 6177
+type(
+  Cil.lval
+)
+ident(
+  def l "semantics/evalOp.ml" 161 6161 6181 "semantics/evalOp.ml" 161 6161 6215
+)
+"semantics/evalOp.ml" 161 6161 6165 "semantics/evalOp.ml" 161 6161 6177
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 161 6161 6181 "semantics/evalOp.ml" 161 6161 6195
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 161 6161 6197 "semantics/evalOp.ml" 161 6161 6204
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref eval_lv "semantics/evalOp.ml" 171 6552 6556 "semantics/evalOp.ml" 171 6552 6563
+)
+"semantics/evalOp.ml" 161 6161 6205 "semantics/evalOp.ml" 161 6161 6208
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 161 6161 6209 "semantics/evalOp.ml" 161 6161 6210
+type(
+  Cil.lval
+)
+ident(
+  int_ref l "semantics/evalOp.ml" 161 6161 6176 "semantics/evalOp.ml" 161 6161 6177
+)
+"semantics/evalOp.ml" 161 6161 6211 "semantics/evalOp.ml" 161 6161 6214
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 161 6161 6196 "semantics/evalOp.ml" 161 6161 6215
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 161 6161 6181 "semantics/evalOp.ml" 161 6161 6215
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 162 6216 6236 "semantics/evalOp.ml" 162 6216 6237
+type(
+  Cil.stmt ref
+)
+"semantics/evalOp.ml" 162 6216 6220 "semantics/evalOp.ml" 162 6216 6237
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 163 6241 6245 "semantics/evalOp.ml" 163 6241 6256
+type(
+  string -> ItvDom.Val.t
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"semantics/evalOp.ml" 163 6241 6257 "semantics/evalOp.ml" 164 6291 6348
+type(
+  string
+)
+"semantics/evalOp.ml" 163 6241 6245 "semantics/evalOp.ml" 164 6291 6348
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 166 6350 6366 "semantics/evalOp.ml" 166 6350 6367
+type(
+  Cil.lval
+)
+ident(
+  def l "semantics/evalOp.ml" 166 6350 6371 "semantics/evalOp.ml" 166 6350 6405
+)
+"semantics/evalOp.ml" 166 6350 6354 "semantics/evalOp.ml" 166 6350 6367
+type(
+  Cil.exp
+)
+"semantics/evalOp.ml" 166 6350 6371 "semantics/evalOp.ml" 166 6350 6381
+type(
+  AbsDom.PowLoc.t -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Mem.lookup
+)
+"semantics/evalOp.ml" 166 6350 6383 "semantics/evalOp.ml" 166 6350 6390
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref eval_lv "semantics/evalOp.ml" 171 6552 6556 "semantics/evalOp.ml" 171 6552 6563
+)
+"semantics/evalOp.ml" 166 6350 6391 "semantics/evalOp.ml" 166 6350 6394
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 122 4728 4734 "semantics/evalOp.ml" 122 4728 4737
+)
+"semantics/evalOp.ml" 166 6350 6395 "semantics/evalOp.ml" 166 6350 6396
+type(
+  Cil.lval
+)
+ident(
+  int_ref l "semantics/evalOp.ml" 166 6350 6366 "semantics/evalOp.ml" 166 6350 6367
+)
+"semantics/evalOp.ml" 166 6350 6397 "semantics/evalOp.ml" 166 6350 6400
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 166 6350 6382 "semantics/evalOp.ml" 166 6350 6401
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 166 6350 6402 "semantics/evalOp.ml" 166 6350 6405
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 122 4728 4740 "semantics/evalOp.ml" 122 4728 4743
+)
+"semantics/evalOp.ml" 166 6350 6371 "semantics/evalOp.ml" 166 6350 6405
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 123 4747 4749 "semantics/evalOp.ml" 166 6350 6405
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 122 4728 4730 "semantics/evalOp.ml" 166 6350 6405
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 171 6552 6556 "semantics/evalOp.ml" 171 6552 6563
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  def eval_lv "semantics/evalOp.ml" 94 3547 3547 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 172 6606 6612 "semantics/evalOp.ml" 172 6606 6615
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/evalOp.ml" 172 6606 6616 "semantics/evalOp.ml" 180 6818 6853
+)
+"semantics/evalOp.ml" 172 6606 6616 "semantics/evalOp.ml" 172 6606 6618
+type(
+  Cil.lval
+)
+ident(
+  def lv "semantics/evalOp.ml" 172 6606 6620 "semantics/evalOp.ml" 180 6818 6853
+)
+"semantics/evalOp.ml" 172 6606 6620 "semantics/evalOp.ml" 172 6606 6623
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/evalOp.ml" 173 6627 6629 "semantics/evalOp.ml" 180 6818 6853
+)
+"semantics/evalOp.ml" 173 6627 6633 "semantics/evalOp.ml" 173 6627 6634
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/evalOp.ml" 180 6818 6820 "semantics/evalOp.ml" 180 6818 6853
+)
+"semantics/evalOp.ml" 174 6637 6647 "semantics/evalOp.ml" 174 6637 6650
+type(
+  Cil.lval -> Cil.lhost
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"semantics/evalOp.ml" 174 6637 6651 "semantics/evalOp.ml" 174 6637 6653
+type(
+  Cil.lval
+)
+ident(
+  int_ref lv "semantics/evalOp.ml" 172 6606 6616 "semantics/evalOp.ml" 172 6606 6618
+)
+"semantics/evalOp.ml" 174 6637 6647 "semantics/evalOp.ml" 174 6637 6653
+type(
+  Cil.lhost
+)
+"semantics/evalOp.ml" 175 6659 6673 "semantics/evalOp.ml" 175 6659 6675
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "semantics/evalOp.ml" 176 6679 6685 "semantics/evalOp.ml" 177 6718 6778
+)
+"semantics/evalOp.ml" 175 6659 6665 "semantics/evalOp.ml" 175 6659 6675
+type(
+  Cil.lhost
+)
+"semantics/evalOp.ml" 176 6679 6689 "semantics/evalOp.ml" 176 6679 6690
+type(
+  AbsDom.Var.t
+)
+ident(
+  def x "semantics/evalOp.ml" 177 6718 6726 "semantics/evalOp.ml" 177 6718 6778
+)
+"semantics/evalOp.ml" 176 6679 6693 "semantics/evalOp.ml" 176 6679 6707
+type(
+  Cil.varinfo -> AbsDom.Proc.t -> AbsDom.Var.t
+)
+ident(
+  int_ref var_of_varinfo "semantics/evalOp.ml" 182 6855 6859 "semantics/evalOp.ml" 182 6855 6873
+)
+"semantics/evalOp.ml" 176 6679 6708 "semantics/evalOp.ml" 176 6679 6710
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "semantics/evalOp.ml" 175 6659 6673 "semantics/evalOp.ml" 175 6659 6675
+)
+"semantics/evalOp.ml" 176 6679 6711 "semantics/evalOp.ml" 176 6679 6714
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 172 6606 6612 "semantics/evalOp.ml" 172 6606 6615
+)
+"semantics/evalOp.ml" 176 6679 6693 "semantics/evalOp.ml" 176 6679 6714
+call(
+  stack
+)
+type(
+  AbsDom.Var.t
+)
+"semantics/evalOp.ml" 177 6718 6726 "semantics/evalOp.ml" 177 6718 6740
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 177 6718 6742 "semantics/evalOp.ml" 177 6718 6758
+type(
+  AbsDom.Loc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.singleton
+)
+"semantics/evalOp.ml" 177 6718 6760 "semantics/evalOp.ml" 177 6718 6774
+type(
+  AbsDom.Var.t -> AbsDom.Loc.t
+)
+ident(
+  ext_ref AbsDom.Loc.loc_of_var
+)
+"semantics/evalOp.ml" 177 6718 6775 "semantics/evalOp.ml" 177 6718 6776
+type(
+  AbsDom.Var.t
+)
+ident(
+  int_ref x "semantics/evalOp.ml" 176 6679 6689 "semantics/evalOp.ml" 176 6679 6690
+)
+"semantics/evalOp.ml" 177 6718 6759 "semantics/evalOp.ml" 177 6718 6777
+call(
+  stack
+)
+type(
+  AbsDom.Loc.t
+)
+"semantics/evalOp.ml" 177 6718 6741 "semantics/evalOp.ml" 177 6718 6778
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 177 6718 6726 "semantics/evalOp.ml" 177 6718 6778
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 176 6679 6685 "semantics/evalOp.ml" 177 6718 6778
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 178 6779 6793 "semantics/evalOp.ml" 178 6779 6794
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 178 6779 6798 "semantics/evalOp.ml" 178 6779 6812
+)
+"semantics/evalOp.ml" 178 6779 6785 "semantics/evalOp.ml" 178 6779 6794
+type(
+  Cil.lhost
+)
+"semantics/evalOp.ml" 178 6779 6798 "semantics/evalOp.ml" 178 6779 6802
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 178 6779 6803 "semantics/evalOp.ml" 178 6779 6806
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 172 6606 6612 "semantics/evalOp.ml" 172 6606 6615
+)
+"semantics/evalOp.ml" 178 6779 6807 "semantics/evalOp.ml" 178 6779 6808
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 178 6779 6793 "semantics/evalOp.ml" 178 6779 6794
+)
+"semantics/evalOp.ml" 178 6779 6809 "semantics/evalOp.ml" 178 6779 6812
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 172 6606 6620 "semantics/evalOp.ml" 172 6606 6623
+)
+"semantics/evalOp.ml" 178 6779 6798 "semantics/evalOp.ml" 178 6779 6812
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 174 6637 6641 "semantics/evalOp.ml" 178 6779 6812
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 180 6818 6820 "semantics/evalOp.ml" 180 6818 6834
+type(
+  AbsDom.Proc.t ->
+  ItvDom.Val.t -> Cil.offset -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  int_ref resolve_offset "semantics/evalOp.ml" 94 3547 3555 "semantics/evalOp.ml" 94 3547 3569
+)
+"semantics/evalOp.ml" 180 6818 6835 "semantics/evalOp.ml" 180 6818 6838
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 172 6606 6612 "semantics/evalOp.ml" 172 6606 6615
+)
+"semantics/evalOp.ml" 180 6818 6839 "semantics/evalOp.ml" 180 6818 6840
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/evalOp.ml" 173 6627 6633 "semantics/evalOp.ml" 173 6627 6634
+)
+"semantics/evalOp.ml" 180 6818 6842 "semantics/evalOp.ml" 180 6818 6845
+type(
+  Cil.lval -> Cil.offset
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"semantics/evalOp.ml" 180 6818 6846 "semantics/evalOp.ml" 180 6818 6848
+type(
+  Cil.lval
+)
+ident(
+  int_ref lv "semantics/evalOp.ml" 172 6606 6616 "semantics/evalOp.ml" 172 6606 6618
+)
+"semantics/evalOp.ml" 180 6818 6841 "semantics/evalOp.ml" 180 6818 6849
+type(
+  Cil.offset
+)
+"semantics/evalOp.ml" 180 6818 6850 "semantics/evalOp.ml" 180 6818 6853
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 172 6606 6620 "semantics/evalOp.ml" 172 6606 6623
+)
+"semantics/evalOp.ml" 180 6818 6820 "semantics/evalOp.ml" 180 6818 6853
+call(
+  tail
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 173 6627 6629 "semantics/evalOp.ml" 180 6818 6853
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 172 6606 6608 "semantics/evalOp.ml" 180 6818 6853
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 182 6855 6859 "semantics/evalOp.ml" 182 6855 6873
+type(
+  Cil.varinfo -> AbsDom.Proc.t -> AbsDom.Var.t
+)
+ident(
+  def var_of_varinfo "semantics/evalOp.ml" 94 3547 3547 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 182 6855 6874 "semantics/evalOp.ml" 182 6855 6876
+type(
+  Cil.varinfo
+)
+ident(
+  def vi "semantics/evalOp.ml" 182 6855 6877 "semantics/evalOp.ml" 184 6937 6979
+)
+"semantics/evalOp.ml" 182 6855 6877 "semantics/evalOp.ml" 182 6855 6880
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/evalOp.ml" 183 6884 6886 "semantics/evalOp.ml" 184 6937 6979
+)
+"semantics/evalOp.ml" 183 6884 6889 "semantics/evalOp.ml" 183 6884 6891
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "semantics/evalOp.ml" 182 6855 6874 "semantics/evalOp.ml" 182 6855 6876
+)
+"semantics/evalOp.ml" 183 6884 6889 "semantics/evalOp.ml" 183 6884 6901
+type(
+  bool
+)
+"semantics/evalOp.ml" 183 6884 6907 "semantics/evalOp.ml" 183 6884 6922
+type(
+  AbsDom.GVar.t -> AbsDom.Var.t
+)
+ident(
+  ext_ref AbsDom.Var.var_of_gvar
+)
+"semantics/evalOp.ml" 183 6884 6923 "semantics/evalOp.ml" 183 6884 6925
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "semantics/evalOp.ml" 182 6855 6874 "semantics/evalOp.ml" 182 6855 6876
+)
+"semantics/evalOp.ml" 183 6884 6923 "semantics/evalOp.ml" 183 6884 6935
+type(
+  AbsDom.GVar.t
+)
+"semantics/evalOp.ml" 183 6884 6907 "semantics/evalOp.ml" 183 6884 6935
+call(
+  tail
+)
+type(
+  AbsDom.Var.t
+)
+"semantics/evalOp.ml" 184 6937 6944 "semantics/evalOp.ml" 184 6937 6959
+type(
+  AbsDom.LVar.t -> AbsDom.Var.t
+)
+ident(
+  ext_ref AbsDom.Var.var_of_lvar
+)
+"semantics/evalOp.ml" 184 6937 6961 "semantics/evalOp.ml" 184 6937 6964
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 182 6855 6877 "semantics/evalOp.ml" 182 6855 6880
+)
+"semantics/evalOp.ml" 184 6937 6966 "semantics/evalOp.ml" 184 6937 6968
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vi "semantics/evalOp.ml" 182 6855 6874 "semantics/evalOp.ml" 182 6855 6876
+)
+"semantics/evalOp.ml" 184 6937 6966 "semantics/evalOp.ml" 184 6937 6978
+type(
+  DStr.t
+)
+"semantics/evalOp.ml" 184 6937 6960 "semantics/evalOp.ml" 184 6937 6979
+type(
+  AbsDom.LVar.t
+)
+"semantics/evalOp.ml" 184 6937 6944 "semantics/evalOp.ml" 184 6937 6979
+call(
+  tail
+)
+type(
+  AbsDom.Var.t
+)
+"semantics/evalOp.ml" 183 6884 6886 "semantics/evalOp.ml" 184 6937 6979
+type(
+  AbsDom.Var.t
+)
+"semantics/evalOp.ml" 186 6981 6985 "semantics/evalOp.ml" 186 6981 6994
+type(
+  AbsDom.Proc.t -> Cil.exp list -> ItvDom.Mem.t -> ItvDom.Val.t list
+)
+ident(
+  def eval_list "semantics/evalOp.ml" 190 7108 7108 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 187 7043 7049 "semantics/evalOp.ml" 187 7043 7052
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/evalOp.ml" 187 7043 7053 "semantics/evalOp.ml" 188 7065 7106
+)
+"semantics/evalOp.ml" 187 7043 7053 "semantics/evalOp.ml" 187 7043 7057
+type(
+  Cil.exp list
+)
+ident(
+  def exps "semantics/evalOp.ml" 187 7043 7058 "semantics/evalOp.ml" 188 7065 7106
+)
+"semantics/evalOp.ml" 187 7043 7058 "semantics/evalOp.ml" 187 7043 7061
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/evalOp.ml" 188 7065 7067 "semantics/evalOp.ml" 188 7065 7106
+)
+"semantics/evalOp.ml" 188 7065 7067 "semantics/evalOp.ml" 188 7065 7075
+type(
+  (Cil.exp -> ItvDom.Val.t) -> Cil.exp list -> ItvDom.Val.t list
+)
+ident(
+  ext_ref List.map
+)
+"semantics/evalOp.ml" 188 7065 7081 "semantics/evalOp.ml" 188 7065 7082
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 188 7065 7086 "semantics/evalOp.ml" 188 7065 7100
+)
+"semantics/evalOp.ml" 188 7065 7086 "semantics/evalOp.ml" 188 7065 7090
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 188 7065 7091 "semantics/evalOp.ml" 188 7065 7094
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 187 7043 7049 "semantics/evalOp.ml" 187 7043 7052
+)
+"semantics/evalOp.ml" 188 7065 7095 "semantics/evalOp.ml" 188 7065 7096
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 188 7065 7081 "semantics/evalOp.ml" 188 7065 7082
+)
+"semantics/evalOp.ml" 188 7065 7097 "semantics/evalOp.ml" 188 7065 7100
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 187 7043 7058 "semantics/evalOp.ml" 187 7043 7061
+)
+"semantics/evalOp.ml" 188 7065 7086 "semantics/evalOp.ml" 188 7065 7100
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 188 7065 7076 "semantics/evalOp.ml" 188 7065 7101
+type(
+  Cil.exp -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 188 7065 7102 "semantics/evalOp.ml" 188 7065 7106
+type(
+  Cil.exp list
+)
+ident(
+  int_ref exps "semantics/evalOp.ml" 187 7043 7053 "semantics/evalOp.ml" 187 7043 7057
+)
+"semantics/evalOp.ml" 188 7065 7067 "semantics/evalOp.ml" 188 7065 7106
+call(
+  tail
+)
+type(
+  ItvDom.Val.t list
+)
+"semantics/evalOp.ml" 187 7043 7045 "semantics/evalOp.ml" 188 7065 7106
+type(
+  AbsDom.Proc.t -> Cil.exp list -> ItvDom.Mem.t -> ItvDom.Val.t list
+)
+type(
+  AbsDom.Proc.t -> Cil.exp list -> ItvDom.Mem.t -> ItvDom.Val.t list
+)
+"semantics/evalOp.ml" 190 7108 7112 "semantics/evalOp.ml" 190 7108 7122
+type(
+  AbsDom.Node.t -> IntraCfg.Cmd.alloc -> bool -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  def eval_alloc "semantics/evalOp.ml" 204 7734 7734 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 191 7180 7186 "semantics/evalOp.ml" 191 7180 7190
+type(
+  AbsDom.Node.t
+)
+ident(
+  def node "semantics/evalOp.ml" 191 7180 7191 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 191 7180 7191 "semantics/evalOp.ml" 191 7180 7192
+type(
+  IntraCfg.Cmd.alloc
+)
+ident(
+  def a "semantics/evalOp.ml" 191 7180 7193 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 191 7180 7193 "semantics/evalOp.ml" 191 7180 7199
+type(
+  bool
+)
+ident(
+  def static "semantics/evalOp.ml" 191 7180 7200 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 191 7180 7200 "semantics/evalOp.ml" 191 7180 7203
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/evalOp.ml" 192 7207 7209 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 192 7207 7213 "semantics/evalOp.ml" 192 7207 7216
+type(
+  InterCfg.pid
+)
+ident(
+  def pid "semantics/evalOp.ml" 193 7240 7242 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 192 7207 7219 "semantics/evalOp.ml" 192 7207 7231
+type(
+  AbsDom.Node.t -> InterCfg.pid
+)
+ident(
+  ext_ref AbsDom.Node.get_pid
+)
+"semantics/evalOp.ml" 192 7207 7232 "semantics/evalOp.ml" 192 7207 7236
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "semantics/evalOp.ml" 191 7180 7186 "semantics/evalOp.ml" 191 7180 7190
+)
+"semantics/evalOp.ml" 192 7207 7219 "semantics/evalOp.ml" 192 7207 7236
+call(
+  stack
+)
+type(
+  InterCfg.pid
+)
+"semantics/evalOp.ml" 193 7240 7246 "semantics/evalOp.ml" 193 7240 7255
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  def allocsite "semantics/evalOp.ml" 194 7294 7296 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 193 7240 7258 "semantics/evalOp.ml" 193 7240 7285
+type(
+  AbsDom.Node.t -> AbsDom.Allocsite.t
+)
+ident(
+  ext_ref AbsDom.Allocsite.allocsite_of_node
+)
+"semantics/evalOp.ml" 193 7240 7286 "semantics/evalOp.ml" 193 7240 7290
+type(
+  AbsDom.Node.t
+)
+ident(
+  int_ref node "semantics/evalOp.ml" 191 7180 7186 "semantics/evalOp.ml" 191 7180 7190
+)
+"semantics/evalOp.ml" 193 7240 7258 "semantics/evalOp.ml" 193 7240 7290
+call(
+  stack
+)
+type(
+  AbsDom.Allocsite.t
+)
+"semantics/evalOp.ml" 194 7294 7302 "semantics/evalOp.ml" 194 7294 7303
+type(
+  IntraCfg.Cmd.alloc
+)
+ident(
+  int_ref a "semantics/evalOp.ml" 191 7180 7191 "semantics/evalOp.ml" 191 7180 7192
+)
+"semantics/evalOp.ml" 195 7309 7332 "semantics/evalOp.ml" 195 7309 7333
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/evalOp.ml" 196 7337 7341 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 195 7309 7313 "semantics/evalOp.ml" 195 7309 7333
+type(
+  IntraCfg.Cmd.alloc
+)
+"semantics/evalOp.ml" 196 7337 7345 "semantics/evalOp.ml" 196 7337 7346
+type(
+  Itv.t
+)
+ident(
+  def o "semantics/evalOp.ml" 197 7365 7369 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 196 7337 7349 "semantics/evalOp.ml" 196 7337 7359
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 196 7337 7360 "semantics/evalOp.ml" 196 7337 7361
+type(
+  int
+)
+"semantics/evalOp.ml" 196 7337 7349 "semantics/evalOp.ml" 196 7337 7361
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 197 7365 7373 "semantics/evalOp.ml" 197 7365 7375
+type(
+  Itv.t
+)
+ident(
+  def sz "semantics/evalOp.ml" 199 7470 7474 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 197 7365 7378 "semantics/evalOp.ml" 197 7365 7388
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/evalOp.ml" 197 7365 7390 "semantics/evalOp.ml" 197 7365 7394
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  int_ref eval "semantics/evalOp.ml" 121 4681 4685 "semantics/evalOp.ml" 121 4681 4689
+)
+"semantics/evalOp.ml" 197 7365 7395 "semantics/evalOp.ml" 197 7365 7398
+type(
+  InterCfg.pid
+)
+ident(
+  int_ref pid "semantics/evalOp.ml" 192 7207 7213 "semantics/evalOp.ml" 192 7207 7216
+)
+"semantics/evalOp.ml" 197 7365 7399 "semantics/evalOp.ml" 197 7365 7400
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/evalOp.ml" 195 7309 7332 "semantics/evalOp.ml" 195 7309 7333
+)
+"semantics/evalOp.ml" 197 7365 7401 "semantics/evalOp.ml" 197 7365 7404
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/evalOp.ml" 191 7180 7200 "semantics/evalOp.ml" 191 7180 7203
+)
+"semantics/evalOp.ml" 197 7365 7389 "semantics/evalOp.ml" 197 7365 7405
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 197 7365 7378 "semantics/evalOp.ml" 197 7365 7405
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 199 7470 7478 "semantics/evalOp.ml" 199 7470 7480
+type(
+  Itv.t
+)
+ident(
+  def st "semantics/evalOp.ml" 200 7499 7503 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 199 7470 7483 "semantics/evalOp.ml" 199 7470 7493
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 199 7470 7494 "semantics/evalOp.ml" 199 7470 7495
+type(
+  int
+)
+"semantics/evalOp.ml" 199 7470 7483 "semantics/evalOp.ml" 199 7470 7495
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 200 7499 7507 "semantics/evalOp.ml" 200 7499 7514
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def pow_loc "semantics/evalOp.ml" 201 7621 7625 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 200 7499 7521 "semantics/evalOp.ml" 200 7499 7524
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"semantics/evalOp.ml" 200 7499 7525 "semantics/evalOp.ml" 200 7499 7531
+type(
+  bool
+)
+ident(
+  int_ref static "semantics/evalOp.ml" 191 7180 7193 "semantics/evalOp.ml" 191 7180 7199
+)
+"semantics/evalOp.ml" 200 7499 7521 "semantics/evalOp.ml" 200 7499 7531
+type(
+  bool
+)
+"semantics/evalOp.ml" 200 7499 7537 "semantics/evalOp.ml" 200 7499 7547
+type(
+  AbsDom.Loc.t -> AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.add
+)
+"semantics/evalOp.ml" 200 7499 7548 "semantics/evalOp.ml" 200 7499 7556
+type(
+  AbsDom.Loc.t
+)
+ident(
+  ext_ref AbsDom.Loc.null
+)
+"semantics/evalOp.ml" 200 7499 7537 "semantics/evalOp.ml" 200 7499 7556
+type(
+  AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 200 7499 7562 "semantics/evalOp.ml" 200 7499 7564
+type(
+  AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref Vocab.id
+)
+"semantics/evalOp.ml" 200 7499 7517 "semantics/evalOp.ml" 200 7499 7565
+type(
+  AbsDom.PowLoc.t -> AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 200 7499 7567 "semantics/evalOp.ml" 200 7499 7583
+type(
+  AbsDom.Loc.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.singleton
+)
+"semantics/evalOp.ml" 200 7499 7585 "semantics/evalOp.ml" 200 7499 7605
+type(
+  AbsDom.Allocsite.t -> AbsDom.Loc.t
+)
+ident(
+  ext_ref AbsDom.Loc.loc_of_allocsite
+)
+"semantics/evalOp.ml" 200 7499 7606 "semantics/evalOp.ml" 200 7499 7615
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "semantics/evalOp.ml" 193 7240 7246 "semantics/evalOp.ml" 193 7240 7255
+)
+"semantics/evalOp.ml" 200 7499 7584 "semantics/evalOp.ml" 200 7499 7616
+call(
+  stack
+)
+type(
+  AbsDom.Loc.t
+)
+"semantics/evalOp.ml" 200 7499 7566 "semantics/evalOp.ml" 200 7499 7617
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 200 7499 7517 "semantics/evalOp.ml" 200 7499 7617
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/evalOp.ml" 201 7621 7629 "semantics/evalOp.ml" 201 7621 7634
+type(
+  ArrayBlk.t
+)
+ident(
+  def array "semantics/evalOp.ml" 202 7672 7678 "semantics/evalOp.ml" 202 7672 7732
+)
+"semantics/evalOp.ml" 201 7621 7637 "semantics/evalOp.ml" 201 7621 7650
+type(
+  AbsDom.Allocsite.t -> Itv.t -> Itv.t -> Itv.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.make
+)
+"semantics/evalOp.ml" 201 7621 7651 "semantics/evalOp.ml" 201 7621 7660
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "semantics/evalOp.ml" 193 7240 7246 "semantics/evalOp.ml" 193 7240 7255
+)
+"semantics/evalOp.ml" 201 7621 7661 "semantics/evalOp.ml" 201 7621 7662
+type(
+  Itv.t
+)
+ident(
+  int_ref o "semantics/evalOp.ml" 196 7337 7345 "semantics/evalOp.ml" 196 7337 7346
+)
+"semantics/evalOp.ml" 201 7621 7663 "semantics/evalOp.ml" 201 7621 7665
+type(
+  Itv.t
+)
+ident(
+  int_ref sz "semantics/evalOp.ml" 197 7365 7373 "semantics/evalOp.ml" 197 7365 7375
+)
+"semantics/evalOp.ml" 201 7621 7666 "semantics/evalOp.ml" 201 7621 7668
+type(
+  Itv.t
+)
+ident(
+  int_ref st "semantics/evalOp.ml" 199 7470 7478 "semantics/evalOp.ml" 199 7470 7480
+)
+"semantics/evalOp.ml" 201 7621 7637 "semantics/evalOp.ml" 201 7621 7668
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 202 7672 7678 "semantics/evalOp.ml" 202 7672 7686
+type(
+  ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.join
+)
+"semantics/evalOp.ml" 202 7672 7688 "semantics/evalOp.ml" 202 7672 7702
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 202 7672 7703 "semantics/evalOp.ml" 202 7672 7710
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc "semantics/evalOp.ml" 200 7499 7507 "semantics/evalOp.ml" 200 7499 7514
+)
+"semantics/evalOp.ml" 202 7672 7687 "semantics/evalOp.ml" 202 7672 7711
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 202 7672 7713 "semantics/evalOp.ml" 202 7672 7725
+type(
+  ArrayBlk.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_array
+)
+"semantics/evalOp.ml" 202 7672 7726 "semantics/evalOp.ml" 202 7672 7731
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref array "semantics/evalOp.ml" 201 7621 7629 "semantics/evalOp.ml" 201 7621 7634
+)
+"semantics/evalOp.ml" 202 7672 7712 "semantics/evalOp.ml" 202 7672 7732
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 202 7672 7678 "semantics/evalOp.ml" 202 7672 7732
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 201 7621 7625 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 200 7499 7503 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 199 7470 7474 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 197 7365 7369 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 196 7337 7341 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 194 7294 7296 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 193 7240 7242 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 192 7207 7209 "semantics/evalOp.ml" 202 7672 7732
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 191 7180 7182 "semantics/evalOp.ml" 202 7672 7732
+type(
+  AbsDom.Node.t -> IntraCfg.Cmd.alloc -> bool -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+type(
+  AbsDom.Node.t -> IntraCfg.Cmd.alloc -> bool -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 204 7734 7738 "semantics/evalOp.ml" 204 7734 7749
+type(
+  string -> ItvDom.Val.t
+)
+ident(
+  def eval_string "semantics/evalOp.ml" 207 7823 7823 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 204 7734 7774 "semantics/evalOp.ml" 204 7734 7775
+type(
+  string
+)
+ident(
+  def s "semantics/evalOp.ml" 205 7779 7781 "semantics/evalOp.ml" 205 7779 7821
+)
+"semantics/evalOp.ml" 205 7779 7781 "semantics/evalOp.ml" 205 7779 7791
+type(
+  Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_itv
+)
+"semantics/evalOp.ml" 205 7779 7808 "semantics/evalOp.ml" 205 7779 7809
+type(
+  int
+)
+"semantics/evalOp.ml" 205 7779 7800 "semantics/evalOp.ml" 205 7779 7809
+type(
+  Itv.t'
+)
+"semantics/evalOp.ml" 205 7779 7811 "semantics/evalOp.ml" 205 7779 7819
+type(
+  Itv.t'
+)
+"semantics/evalOp.ml" 205 7779 7792 "semantics/evalOp.ml" 205 7779 7821
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 205 7779 7781 "semantics/evalOp.ml" 205 7779 7821
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 204 7734 7770 "semantics/evalOp.ml" 205 7779 7821
+type(
+  string -> ItvDom.Val.t
+)
+type(
+  string -> ItvDom.Val.t
+)
+"semantics/evalOp.ml" 207 7823 7827 "semantics/evalOp.ml" 207 7823 7842
+type(
+  string -> AbsDom.Allocsite.t -> AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  def eval_string_loc "semantics/evalOp.ml" 213 8062 8118 "semantics/evalOp.ml" 1 0 -1
+)
+"semantics/evalOp.ml" 208 7888 7894 "semantics/evalOp.ml" 208 7888 7895
+type(
+  string
+)
+ident(
+  def s "semantics/evalOp.ml" 208 7888 7896 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 208 7888 7896 "semantics/evalOp.ml" 208 7888 7905
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  def allocsite "semantics/evalOp.ml" 208 7888 7906 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 208 7888 7906 "semantics/evalOp.ml" 208 7888 7913
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def pow_loc "semantics/evalOp.ml" 209 7917 7919 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 209 7917 7923 "semantics/evalOp.ml" 209 7917 7924
+type(
+  Itv.t
+)
+ident(
+  def o "semantics/evalOp.ml" 210 7943 7945 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 209 7917 7927 "semantics/evalOp.ml" 209 7917 7937
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 209 7917 7938 "semantics/evalOp.ml" 209 7917 7939
+type(
+  int
+)
+"semantics/evalOp.ml" 209 7917 7927 "semantics/evalOp.ml" 209 7917 7939
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 210 7943 7949 "semantics/evalOp.ml" 210 7943 7951
+type(
+  Itv.t
+)
+ident(
+  def sz "semantics/evalOp.ml" 211 7986 7988 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 210 7943 7954 "semantics/evalOp.ml" 210 7943 7964
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 210 7943 7966 "semantics/evalOp.ml" 210 7943 7979
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"semantics/evalOp.ml" 210 7943 7980 "semantics/evalOp.ml" 210 7943 7981
+type(
+  string
+)
+ident(
+  int_ref s "semantics/evalOp.ml" 208 7888 7894 "semantics/evalOp.ml" 208 7888 7895
+)
+"semantics/evalOp.ml" 210 7943 7965 "semantics/evalOp.ml" 210 7943 7982
+type(
+  int
+)
+"semantics/evalOp.ml" 210 7943 7954 "semantics/evalOp.ml" 210 7943 7982
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 211 7986 7992 "semantics/evalOp.ml" 211 7986 7994
+type(
+  Itv.t
+)
+ident(
+  def st "semantics/evalOp.ml" 212 8013 8015 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 211 7986 7997 "semantics/evalOp.ml" 211 7986 8007
+type(
+  int -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_int
+)
+"semantics/evalOp.ml" 211 7986 8008 "semantics/evalOp.ml" 211 7986 8009
+type(
+  int
+)
+"semantics/evalOp.ml" 211 7986 7997 "semantics/evalOp.ml" 211 7986 8009
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/evalOp.ml" 212 8013 8019 "semantics/evalOp.ml" 212 8013 8024
+type(
+  ArrayBlk.t
+)
+ident(
+  def array "semantics/evalOp.ml" 213 8062 8064 "semantics/evalOp.ml" 213 8062 8118
+)
+"semantics/evalOp.ml" 212 8013 8027 "semantics/evalOp.ml" 212 8013 8040
+type(
+  AbsDom.Allocsite.t -> Itv.t -> Itv.t -> Itv.t -> ArrayBlk.t
+)
+ident(
+  ext_ref ArrayBlk.make
+)
+"semantics/evalOp.ml" 212 8013 8041 "semantics/evalOp.ml" 212 8013 8050
+type(
+  AbsDom.Allocsite.t
+)
+ident(
+  int_ref allocsite "semantics/evalOp.ml" 208 7888 7896 "semantics/evalOp.ml" 208 7888 7905
+)
+"semantics/evalOp.ml" 212 8013 8051 "semantics/evalOp.ml" 212 8013 8052
+type(
+  Itv.t
+)
+ident(
+  int_ref o "semantics/evalOp.ml" 209 7917 7923 "semantics/evalOp.ml" 209 7917 7924
+)
+"semantics/evalOp.ml" 212 8013 8053 "semantics/evalOp.ml" 212 8013 8055
+type(
+  Itv.t
+)
+ident(
+  int_ref sz "semantics/evalOp.ml" 210 7943 7949 "semantics/evalOp.ml" 210 7943 7951
+)
+"semantics/evalOp.ml" 212 8013 8056 "semantics/evalOp.ml" 212 8013 8058
+type(
+  Itv.t
+)
+ident(
+  int_ref st "semantics/evalOp.ml" 211 7986 7992 "semantics/evalOp.ml" 211 7986 7994
+)
+"semantics/evalOp.ml" 212 8013 8027 "semantics/evalOp.ml" 212 8013 8058
+call(
+  stack
+)
+type(
+  ArrayBlk.t
+)
+"semantics/evalOp.ml" 213 8062 8064 "semantics/evalOp.ml" 213 8062 8072
+type(
+  ItvDom.Val.t -> ItvDom.Val.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Val.join
+)
+"semantics/evalOp.ml" 213 8062 8074 "semantics/evalOp.ml" 213 8062 8088
+type(
+  AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_pow_loc
+)
+"semantics/evalOp.ml" 213 8062 8089 "semantics/evalOp.ml" 213 8062 8096
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref pow_loc "semantics/evalOp.ml" 208 7888 7906 "semantics/evalOp.ml" 208 7888 7913
+)
+"semantics/evalOp.ml" 213 8062 8073 "semantics/evalOp.ml" 213 8062 8097
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 213 8062 8099 "semantics/evalOp.ml" 213 8062 8111
+type(
+  ArrayBlk.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.val_of_array
+)
+"semantics/evalOp.ml" 213 8062 8112 "semantics/evalOp.ml" 213 8062 8117
+type(
+  ArrayBlk.t
+)
+ident(
+  int_ref array "semantics/evalOp.ml" 212 8013 8019 "semantics/evalOp.ml" 212 8013 8024
+)
+"semantics/evalOp.ml" 213 8062 8098 "semantics/evalOp.ml" 213 8062 8118
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 213 8062 8064 "semantics/evalOp.ml" 213 8062 8118
+call(
+  tail
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 212 8013 8015 "semantics/evalOp.ml" 213 8062 8118
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 211 7986 7988 "semantics/evalOp.ml" 213 8062 8118
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 210 7943 7945 "semantics/evalOp.ml" 213 8062 8118
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 209 7917 7919 "semantics/evalOp.ml" 213 8062 8118
+type(
+  ItvDom.Val.t
+)
+"semantics/evalOp.ml" 208 7888 7890 "semantics/evalOp.ml" 213 8062 8118
+type(
+  string -> AbsDom.Allocsite.t -> AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+type(
+  string -> AbsDom.Allocsite.t -> AbsDom.PowLoc.t -> ItvDom.Val.t
+)

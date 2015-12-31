@@ -1,0 +1,333 @@
+"semantics/retOp.ml" 7 87 91 "semantics/retOp.ml" 7 87 99
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+ident(
+  def is_local "semantics/retOp.ml" 12 243 243 "semantics/retOp.ml" 1 0 -1
+)
+"semantics/retOp.ml" 7 87 141 "semantics/retOp.ml" 7 87 144
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/retOp.ml" 7 87 145 "semantics/retOp.ml" 10 227 241
+)
+"semantics/retOp.ml" 7 87 145 "semantics/retOp.ml" 7 87 146
+type(
+  AbsDom.Loc.t
+)
+ident(
+  def l "semantics/retOp.ml" 7 87 147 "semantics/retOp.ml" 10 227 241
+)
+"semantics/retOp.ml" 7 87 147 "semantics/retOp.ml" 7 87 148
+type(
+  ItvDom.Val.t
+)
+"semantics/retOp.ml" 8 152 160 "semantics/retOp.ml" 8 152 161
+type(
+  AbsDom.Loc.t
+)
+ident(
+  int_ref l "semantics/retOp.ml" 7 87 145 "semantics/retOp.ml" 7 87 146
+)
+"semantics/retOp.ml" 9 167 199 "semantics/retOp.ml" 9 167 203
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid' "semantics/retOp.ml" 9 167 216 "semantics/retOp.ml" 9 167 226
+)
+"semantics/retOp.ml" 9 167 205 "semantics/retOp.ml" 9 167 206
+type(
+  DStr.t
+)
+"semantics/retOp.ml" 9 167 198 "semantics/retOp.ml" 9 167 207
+type(
+  AbsDom.LVar.t
+)
+"semantics/retOp.ml" 9 167 189 "semantics/retOp.ml" 9 167 208
+type(
+  AbsDom.Var.t
+)
+"semantics/retOp.ml" 9 167 172 "semantics/retOp.ml" 9 167 208
+type(
+  AbsDom.VarAllocsite.t
+)
+"semantics/retOp.ml" 9 167 210 "semantics/retOp.ml" 9 167 211
+type(
+  AbsDom.Fields.t
+)
+"semantics/retOp.ml" 9 167 171 "semantics/retOp.ml" 9 167 212
+type(
+  AbsDom.Loc.t
+)
+"semantics/retOp.ml" 9 167 216 "semantics/retOp.ml" 9 167 220
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid' "semantics/retOp.ml" 9 167 199 "semantics/retOp.ml" 9 167 203
+)
+"semantics/retOp.ml" 9 167 221 "semantics/retOp.ml" 9 167 222
+type(
+  AbsDom.Proc.t -> AbsDom.Proc.t -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/retOp.ml" 9 167 223 "semantics/retOp.ml" 9 167 226
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/retOp.ml" 7 87 141 "semantics/retOp.ml" 7 87 144
+)
+"semantics/retOp.ml" 9 167 216 "semantics/retOp.ml" 9 167 226
+type(
+  bool
+)
+"semantics/retOp.ml" 10 227 231 "semantics/retOp.ml" 10 227 232
+type(
+  AbsDom.Loc.t
+)
+"semantics/retOp.ml" 10 227 236 "semantics/retOp.ml" 10 227 241
+type(
+  bool
+)
+"semantics/retOp.ml" 8 152 154 "semantics/retOp.ml" 10 227 241
+type(
+  bool
+)
+"semantics/retOp.ml" 7 87 137 "semantics/retOp.ml" 10 227 241
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+"semantics/retOp.ml" 12 243 247 "semantics/retOp.ml" 12 243 259
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+ident(
+  def is_not_local "semantics/retOp.ml" 15 338 338 "semantics/retOp.ml" 1 0 -1
+)
+"semantics/retOp.ml" 12 243 301 "semantics/retOp.ml" 12 243 304
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/retOp.ml" 12 243 305 "semantics/retOp.ml" 13 312 336
+)
+"semantics/retOp.ml" 12 243 305 "semantics/retOp.ml" 12 243 306
+type(
+  AbsDom.Loc.t
+)
+ident(
+  def l "semantics/retOp.ml" 12 243 307 "semantics/retOp.ml" 13 312 336
+)
+"semantics/retOp.ml" 12 243 307 "semantics/retOp.ml" 12 243 308
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/retOp.ml" 13 312 314 "semantics/retOp.ml" 13 312 336
+)
+"semantics/retOp.ml" 13 312 314 "semantics/retOp.ml" 13 312 317
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"semantics/retOp.ml" 13 312 319 "semantics/retOp.ml" 13 312 327
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+ident(
+  int_ref is_local "semantics/retOp.ml" 7 87 91 "semantics/retOp.ml" 7 87 99
+)
+"semantics/retOp.ml" 13 312 328 "semantics/retOp.ml" 13 312 331
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/retOp.ml" 12 243 301 "semantics/retOp.ml" 12 243 304
+)
+"semantics/retOp.ml" 13 312 332 "semantics/retOp.ml" 13 312 333
+type(
+  AbsDom.Loc.t
+)
+ident(
+  int_ref l "semantics/retOp.ml" 12 243 305 "semantics/retOp.ml" 12 243 306
+)
+"semantics/retOp.ml" 13 312 334 "semantics/retOp.ml" 13 312 335
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/retOp.ml" 12 243 307 "semantics/retOp.ml" 12 243 308
+)
+"semantics/retOp.ml" 13 312 318 "semantics/retOp.ml" 13 312 336
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/retOp.ml" 13 312 314 "semantics/retOp.ml" 13 312 336
+type(
+  bool
+)
+"semantics/retOp.ml" 12 243 297 "semantics/retOp.ml" 13 312 336
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+"semantics/retOp.ml" 15 338 342 "semantics/retOp.ml" 15 338 364
+type(
+  AbsDom.update_mode ->
+  (AbsDom.Proc.t -> bool) -> AbsDom.Proc.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  def remove_local_variables "semantics/retOp.ml" 21 543 582 "semantics/retOp.ml" 1 0 -1
+)
+"semantics/retOp.ml" 16 434 440 "semantics/retOp.ml" 16 434 444
+type(
+  AbsDom.update_mode
+)
+ident(
+  def mode "semantics/retOp.ml" 16 434 445 "semantics/retOp.ml" 21 543 582
+)
+"semantics/retOp.ml" 16 434 445 "semantics/retOp.ml" 16 434 451
+type(
+  AbsDom.Proc.t -> bool
+)
+ident(
+  def is_rec "semantics/retOp.ml" 16 434 452 "semantics/retOp.ml" 21 543 582
+)
+"semantics/retOp.ml" 16 434 452 "semantics/retOp.ml" 16 434 455
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/retOp.ml" 16 434 456 "semantics/retOp.ml" 21 543 582
+)
+"semantics/retOp.ml" 16 434 456 "semantics/retOp.ml" 16 434 459
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/retOp.ml" 17 463 465 "semantics/retOp.ml" 21 543 582
+)
+"semantics/retOp.ml" 17 463 471 "semantics/retOp.ml" 17 463 475
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/retOp.ml" 16 434 440 "semantics/retOp.ml" 16 434 444
+)
+"semantics/retOp.ml" 18 481 485 "semantics/retOp.ml" 18 481 489
+type(
+  AbsDom.update_mode
+)
+"semantics/retOp.ml" 18 481 493 "semantics/retOp.ml" 18 481 496
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/retOp.ml" 16 434 456 "semantics/retOp.ml" 16 434 459
+)
+"semantics/retOp.ml" 19 497 501 "semantics/retOp.ml" 19 497 507
+type(
+  AbsDom.update_mode
+)
+"semantics/retOp.ml" 20 511 518 "semantics/retOp.ml" 20 511 524
+type(
+  AbsDom.Proc.t -> bool
+)
+ident(
+  int_ref is_rec "semantics/retOp.ml" 16 434 445 "semantics/retOp.ml" 16 434 451
+)
+"semantics/retOp.ml" 20 511 525 "semantics/retOp.ml" 20 511 528
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/retOp.ml" 16 434 452 "semantics/retOp.ml" 16 434 455
+)
+"semantics/retOp.ml" 20 511 518 "semantics/retOp.ml" 20 511 528
+call(
+  stack
+)
+type(
+  bool
+)
+"semantics/retOp.ml" 20 511 534 "semantics/retOp.ml" 20 511 537
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/retOp.ml" 16 434 456 "semantics/retOp.ml" 16 434 459
+)
+"semantics/retOp.ml" 21 543 549 "semantics/retOp.ml" 21 543 559
+type(
+  (AbsDom.Loc.t -> ItvDom.Val.t -> bool) -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.filter
+)
+"semantics/retOp.ml" 21 543 561 "semantics/retOp.ml" 21 543 573
+type(
+  AbsDom.Proc.t -> AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+ident(
+  int_ref is_not_local "semantics/retOp.ml" 12 243 247 "semantics/retOp.ml" 12 243 259
+)
+"semantics/retOp.ml" 21 543 574 "semantics/retOp.ml" 21 543 577
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/retOp.ml" 16 434 452 "semantics/retOp.ml" 16 434 455
+)
+"semantics/retOp.ml" 21 543 560 "semantics/retOp.ml" 21 543 578
+call(
+  stack
+)
+type(
+  AbsDom.Loc.t -> ItvDom.Val.t -> bool
+)
+"semantics/retOp.ml" 21 543 579 "semantics/retOp.ml" 21 543 582
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/retOp.ml" 16 434 456 "semantics/retOp.ml" 16 434 459
+)
+"semantics/retOp.ml" 21 543 549 "semantics/retOp.ml" 21 543 582
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/retOp.ml" 20 511 515 "semantics/retOp.ml" 21 543 582
+type(
+  ItvDom.Mem.t
+)
+"semantics/retOp.ml" 17 463 465 "semantics/retOp.ml" 21 543 582
+type(
+  ItvDom.Mem.t
+)
+"semantics/retOp.ml" 16 434 436 "semantics/retOp.ml" 21 543 582
+type(
+  AbsDom.update_mode ->
+  (AbsDom.Proc.t -> bool) -> AbsDom.Proc.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+type(
+  AbsDom.update_mode ->
+  (AbsDom.Proc.t -> bool) -> AbsDom.Proc.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)

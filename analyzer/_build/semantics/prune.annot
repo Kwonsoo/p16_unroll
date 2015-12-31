@@ -1,0 +1,3667 @@
+"semantics/prune.ml" 9 74 78 "semantics/prune.ml" 9 74 87
+type(
+  Cil.binop -> Cil.binop
+)
+ident(
+  def rev_binop "semantics/prune.ml" 19 255 255 "semantics/prune.ml" 1 0 -1
+)
+"semantics/prune.ml" 9 74 111 "semantics/prune.ml" 9 74 113
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 10 117 119 "semantics/prune.ml" 17 211 253
+)
+"semantics/prune.ml" 10 117 125 "semantics/prune.ml" 10 117 127
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 9 74 111 "semantics/prune.ml" 9 74 113
+)
+"semantics/prune.ml" 11 133 137 "semantics/prune.ml" 11 133 139
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 11 133 143 "semantics/prune.ml" 11 133 145
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 12 146 150 "semantics/prune.ml" 12 146 152
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 12 146 156 "semantics/prune.ml" 12 146 158
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 13 159 163 "semantics/prune.ml" 13 159 165
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 13 159 169 "semantics/prune.ml" 13 159 171
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 14 172 176 "semantics/prune.ml" 14 172 178
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 14 172 182 "semantics/prune.ml" 14 172 184
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 15 185 189 "semantics/prune.ml" 15 185 191
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 15 185 195 "semantics/prune.ml" 15 185 197
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 16 198 202 "semantics/prune.ml" 16 198 204
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 16 198 208 "semantics/prune.ml" 16 198 210
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 17 211 215 "semantics/prune.ml" 17 211 216
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 17 211 220 "semantics/prune.ml" 17 211 231
+type(
+  string -> Cil.binop
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"semantics/prune.ml" 17 211 232 "semantics/prune.ml" 17 211 253
+type(
+  string
+)
+"semantics/prune.ml" 17 211 220 "semantics/prune.ml" 17 211 253
+call(
+  tail
+)
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 10 117 119 "semantics/prune.ml" 17 211 253
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 9 74 107 "semantics/prune.ml" 17 211 253
+type(
+  Cil.binop -> Cil.binop
+)
+type(
+  Cil.binop -> Cil.binop
+)
+"semantics/prune.ml" 19 255 259 "semantics/prune.ml" 19 255 268
+type(
+  Cil.binop -> Cil.binop
+)
+ident(
+  def not_binop "semantics/prune.ml" 31 468 468 "semantics/prune.ml" 1 0 -1
+)
+"semantics/prune.ml" 19 255 292 "semantics/prune.ml" 19 255 294
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 20 298 300 "semantics/prune.ml" 29 424 466
+)
+"semantics/prune.ml" 20 298 306 "semantics/prune.ml" 20 298 308
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 19 255 292 "semantics/prune.ml" 19 255 294
+)
+"semantics/prune.ml" 21 314 318 "semantics/prune.ml" 21 314 320
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 21 314 324 "semantics/prune.ml" 21 314 326
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 22 327 331 "semantics/prune.ml" 22 327 333
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 22 327 337 "semantics/prune.ml" 22 327 339
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 23 340 344 "semantics/prune.ml" 23 340 346
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 23 340 350 "semantics/prune.ml" 23 340 352
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 24 353 357 "semantics/prune.ml" 24 353 359
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 24 353 363 "semantics/prune.ml" 24 353 365
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 25 366 370 "semantics/prune.ml" 25 366 372
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 25 366 376 "semantics/prune.ml" 25 366 378
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 26 379 383 "semantics/prune.ml" 26 379 385
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 26 379 389 "semantics/prune.ml" 26 379 391
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 27 392 396 "semantics/prune.ml" 27 392 400
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 27 392 404 "semantics/prune.ml" 27 392 407
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 28 408 412 "semantics/prune.ml" 28 408 415
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 28 408 419 "semantics/prune.ml" 28 408 423
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 29 424 428 "semantics/prune.ml" 29 424 429
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 29 424 433 "semantics/prune.ml" 29 424 444
+type(
+  string -> Cil.binop
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"semantics/prune.ml" 29 424 445 "semantics/prune.ml" 29 424 466
+type(
+  string
+)
+"semantics/prune.ml" 29 424 433 "semantics/prune.ml" 29 424 466
+call(
+  tail
+)
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 20 298 300 "semantics/prune.ml" 29 424 466
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 19 255 288 "semantics/prune.ml" 29 424 466
+type(
+  Cil.binop -> Cil.binop
+)
+type(
+  Cil.binop -> Cil.binop
+)
+"semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  def make_cond_simple "semantics/prune.ml" 31 468 468 "semantics/prune.ml" 1 0 -1
+)
+"semantics/prune.ml" 31 468 519 "semantics/prune.ml" 31 468 523
+type(
+  Cil.exp
+)
+ident(
+  def cond "semantics/prune.ml" 32 527 529 "semantics/prune.ml" 62 1845 1858
+)
+"semantics/prune.ml" 32 527 535 "semantics/prune.ml" 32 527 539
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond "semantics/prune.ml" 31 468 519 "semantics/prune.ml" 31 468 523
+)
+"semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 34 574 583 "semantics/prune.ml" 35 649 662
+)
+"semantics/prune.ml" 33 545 565 "semantics/prune.ml" 33 545 566
+type(
+  Cil.lval
+)
+"semantics/prune.ml" 33 545 560 "semantics/prune.ml" 33 545 566
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 33 545 568 "semantics/prune.ml" 33 545 569
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 33 545 571 "semantics/prune.ml" 33 545 572
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 33 545 549 "semantics/prune.ml" 33 545 573
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 34 574 583 "semantics/prune.ml" 34 574 585
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+)
+"semantics/prune.ml" 34 574 586 "semantics/prune.ml" 34 574 587
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 34 574 588 "semantics/prune.ml" 34 574 590
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 34 574 583 "semantics/prune.ml" 34 574 590
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 591 "semantics/prune.ml" 34 574 593
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 34 574 594 "semantics/prune.ml" 34 574 596
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+)
+"semantics/prune.ml" 34 574 597 "semantics/prune.ml" 34 574 598
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 34 574 599 "semantics/prune.ml" 34 574 601
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 34 574 594 "semantics/prune.ml" 34 574 601
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 602 "semantics/prune.ml" 34 574 604
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 34 574 605 "semantics/prune.ml" 34 574 607
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+)
+"semantics/prune.ml" 34 574 608 "semantics/prune.ml" 34 574 609
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 34 574 610 "semantics/prune.ml" 34 574 612
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 34 574 605 "semantics/prune.ml" 34 574 612
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 613 "semantics/prune.ml" 34 574 615
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 34 574 616 "semantics/prune.ml" 34 574 618
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+)
+"semantics/prune.ml" 34 574 619 "semantics/prune.ml" 34 574 620
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 34 574 621 "semantics/prune.ml" 34 574 623
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 34 574 616 "semantics/prune.ml" 34 574 623
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 624 "semantics/prune.ml" 34 574 626
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 34 574 627 "semantics/prune.ml" 34 574 629
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+)
+"semantics/prune.ml" 34 574 630 "semantics/prune.ml" 34 574 631
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 34 574 632 "semantics/prune.ml" 34 574 634
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 34 574 627 "semantics/prune.ml" 34 574 634
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 635 "semantics/prune.ml" 34 574 637
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 34 574 638 "semantics/prune.ml" 34 574 640
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 33 545 556 "semantics/prune.ml" 33 545 558
+)
+"semantics/prune.ml" 34 574 641 "semantics/prune.ml" 34 574 642
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 34 574 643 "semantics/prune.ml" 34 574 645
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 34 574 638 "semantics/prune.ml" 34 574 645
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 627 "semantics/prune.ml" 34 574 645
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 616 "semantics/prune.ml" 34 574 645
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 605 "semantics/prune.ml" 34 574 645
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 594 "semantics/prune.ml" 34 574 645
+type(
+  bool
+)
+"semantics/prune.ml" 34 574 583 "semantics/prune.ml" 34 574 645
+type(
+  bool
+)
+"semantics/prune.ml" 35 649 658 "semantics/prune.ml" 35 649 662
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond "semantics/prune.ml" 31 468 519 "semantics/prune.ml" 31 468 523
+)
+"semantics/prune.ml" 35 649 653 "semantics/prune.ml" 35 649 662
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 37 692 701 "semantics/prune.ml" 38 767 812
+)
+"semantics/prune.ml" 36 663 678 "semantics/prune.ml" 36 663 679
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/prune.ml" 37 692 701 "semantics/prune.ml" 38 767 812
+)
+"semantics/prune.ml" 36 663 686 "semantics/prune.ml" 36 663 687
+type(
+  Cil.lval
+)
+ident(
+  def x "semantics/prune.ml" 37 692 701 "semantics/prune.ml" 38 767 812
+)
+"semantics/prune.ml" 36 663 681 "semantics/prune.ml" 36 663 687
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 36 663 689 "semantics/prune.ml" 36 663 690
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/prune.ml" 37 692 701 "semantics/prune.ml" 38 767 812
+)
+"semantics/prune.ml" 36 663 667 "semantics/prune.ml" 36 663 691
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 37 692 701 "semantics/prune.ml" 37 692 703
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 37 692 704 "semantics/prune.ml" 37 692 705
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 37 692 706 "semantics/prune.ml" 37 692 708
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 37 692 701 "semantics/prune.ml" 37 692 708
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 709 "semantics/prune.ml" 37 692 711
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 37 692 712 "semantics/prune.ml" 37 692 714
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 37 692 715 "semantics/prune.ml" 37 692 716
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 37 692 717 "semantics/prune.ml" 37 692 719
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 37 692 712 "semantics/prune.ml" 37 692 719
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 720 "semantics/prune.ml" 37 692 722
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 37 692 723 "semantics/prune.ml" 37 692 725
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 37 692 726 "semantics/prune.ml" 37 692 727
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 37 692 728 "semantics/prune.ml" 37 692 730
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 37 692 723 "semantics/prune.ml" 37 692 730
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 731 "semantics/prune.ml" 37 692 733
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 37 692 734 "semantics/prune.ml" 37 692 736
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 37 692 737 "semantics/prune.ml" 37 692 738
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 37 692 739 "semantics/prune.ml" 37 692 741
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 37 692 734 "semantics/prune.ml" 37 692 741
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 742 "semantics/prune.ml" 37 692 744
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 37 692 745 "semantics/prune.ml" 37 692 747
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 37 692 748 "semantics/prune.ml" 37 692 749
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 37 692 750 "semantics/prune.ml" 37 692 752
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 37 692 745 "semantics/prune.ml" 37 692 752
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 753 "semantics/prune.ml" 37 692 755
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 37 692 756 "semantics/prune.ml" 37 692 758
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 37 692 759 "semantics/prune.ml" 37 692 760
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 37 692 761 "semantics/prune.ml" 37 692 763
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 37 692 756 "semantics/prune.ml" 37 692 763
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 745 "semantics/prune.ml" 37 692 763
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 734 "semantics/prune.ml" 37 692 763
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 723 "semantics/prune.ml" 37 692 763
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 712 "semantics/prune.ml" 37 692 763
+type(
+  bool
+)
+"semantics/prune.ml" 37 692 701 "semantics/prune.ml" 37 692 763
+type(
+  bool
+)
+"semantics/prune.ml" 38 767 784 "semantics/prune.ml" 38 767 793
+type(
+  Cil.binop -> Cil.binop
+)
+ident(
+  int_ref rev_binop "semantics/prune.ml" 9 74 78 "semantics/prune.ml" 9 74 87
+)
+"semantics/prune.ml" 38 767 794 "semantics/prune.ml" 38 767 796
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 36 663 674 "semantics/prune.ml" 36 663 676
+)
+"semantics/prune.ml" 38 767 784 "semantics/prune.ml" 38 767 796
+call(
+  stack
+)
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 38 767 803 "semantics/prune.ml" 38 767 804
+type(
+  Cil.lval
+)
+ident(
+  int_ref x "semantics/prune.ml" 36 663 686 "semantics/prune.ml" 36 663 687
+)
+"semantics/prune.ml" 38 767 798 "semantics/prune.ml" 38 767 804
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 38 767 806 "semantics/prune.ml" 38 767 807
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/prune.ml" 36 663 678 "semantics/prune.ml" 36 663 679
+)
+"semantics/prune.ml" 38 767 809 "semantics/prune.ml" 38 767 810
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/prune.ml" 36 663 689 "semantics/prune.ml" 36 663 690
+)
+"semantics/prune.ml" 38 767 776 "semantics/prune.ml" 38 767 812
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 38 767 771 "semantics/prune.ml" 38 767 812
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 39 813 824 "semantics/prune.ml" 39 813 826
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+)
+"semantics/prune.ml" 39 813 835 "semantics/prune.ml" 39 813 840
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 39 813 847 "semantics/prune.ml" 39 813 848
+type(
+  Cil.lval
+)
+ident(
+  def x "semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+)
+"semantics/prune.ml" 39 813 842 "semantics/prune.ml" 39 813 848
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 39 813 855 "semantics/prune.ml" 39 813 856
+type(
+  Cil.lval
+)
+ident(
+  def y "semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+)
+"semantics/prune.ml" 39 813 850 "semantics/prune.ml" 39 813 856
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 39 813 858 "semantics/prune.ml" 39 813 860
+type(
+  Cil.typ
+)
+ident(
+  def t2 "semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+)
+"semantics/prune.ml" 39 813 828 "semantics/prune.ml" 39 813 861
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 39 813 863 "semantics/prune.ml" 39 813 864
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+)
+"semantics/prune.ml" 39 813 866 "semantics/prune.ml" 39 813 867
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+)
+"semantics/prune.ml" 39 813 817 "semantics/prune.ml" 39 813 868
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 892
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 40 872 901 "semantics/prune.ml" 40 872 903
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 39 813 824 "semantics/prune.ml" 39 813 826
+)
+"semantics/prune.ml" 40 872 910 "semantics/prune.ml" 40 872 911
+type(
+  Cil.lval
+)
+ident(
+  int_ref x "semantics/prune.ml" 39 813 847 "semantics/prune.ml" 39 813 848
+)
+"semantics/prune.ml" 40 872 905 "semantics/prune.ml" 40 872 911
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 40 872 920 "semantics/prune.ml" 40 872 926
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 40 872 928 "semantics/prune.ml" 40 872 929
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/prune.ml" 39 813 863 "semantics/prune.ml" 39 813 864
+)
+"semantics/prune.ml" 40 872 936 "semantics/prune.ml" 40 872 937
+type(
+  Cil.lval
+)
+ident(
+  int_ref y "semantics/prune.ml" 39 813 855 "semantics/prune.ml" 39 813 856
+)
+"semantics/prune.ml" 40 872 931 "semantics/prune.ml" 40 872 937
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 40 872 939 "semantics/prune.ml" 40 872 941
+type(
+  Cil.typ
+)
+ident(
+  int_ref t2 "semantics/prune.ml" 39 813 858 "semantics/prune.ml" 39 813 860
+)
+"semantics/prune.ml" 40 872 913 "semantics/prune.ml" 40 872 942
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 40 872 944 "semantics/prune.ml" 40 872 945
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/prune.ml" 39 813 866 "semantics/prune.ml" 39 813 867
+)
+"semantics/prune.ml" 40 872 893 "semantics/prune.ml" 40 872 947
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 40 872 876 "semantics/prune.ml" 40 872 947
+call(
+  tail
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 41 948 959 "semantics/prune.ml" 41 948 961
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+)
+"semantics/prune.ml" 41 948 970 "semantics/prune.ml" 41 948 976
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 41 948 983 "semantics/prune.ml" 41 948 984
+type(
+  Cil.lval
+)
+ident(
+  def x "semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+)
+"semantics/prune.ml" 41 948 978 "semantics/prune.ml" 41 948 984
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 41 948 991 "semantics/prune.ml" 41 948 992
+type(
+  Cil.lval
+)
+ident(
+  def y "semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+)
+"semantics/prune.ml" 41 948 986 "semantics/prune.ml" 41 948 992
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 41 948 994 "semantics/prune.ml" 41 948 996
+type(
+  Cil.typ
+)
+ident(
+  def t2 "semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+)
+"semantics/prune.ml" 41 948 963 "semantics/prune.ml" 41 948 997
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 41 948 999 "semantics/prune.ml" 41 948 1000
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+)
+"semantics/prune.ml" 41 948 1002 "semantics/prune.ml" 41 948 1003
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+)
+"semantics/prune.ml" 41 948 952 "semantics/prune.ml" 41 948 1004
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1028
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 42 1008 1037 "semantics/prune.ml" 42 1008 1039
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 41 948 959 "semantics/prune.ml" 41 948 961
+)
+"semantics/prune.ml" 42 1008 1046 "semantics/prune.ml" 42 1008 1047
+type(
+  Cil.lval
+)
+ident(
+  int_ref x "semantics/prune.ml" 41 948 983 "semantics/prune.ml" 41 948 984
+)
+"semantics/prune.ml" 42 1008 1041 "semantics/prune.ml" 42 1008 1047
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 42 1008 1056 "semantics/prune.ml" 42 1008 1061
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 42 1008 1063 "semantics/prune.ml" 42 1008 1064
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/prune.ml" 41 948 999 "semantics/prune.ml" 41 948 1000
+)
+"semantics/prune.ml" 42 1008 1071 "semantics/prune.ml" 42 1008 1072
+type(
+  Cil.lval
+)
+ident(
+  int_ref y "semantics/prune.ml" 41 948 991 "semantics/prune.ml" 41 948 992
+)
+"semantics/prune.ml" 42 1008 1066 "semantics/prune.ml" 42 1008 1072
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 42 1008 1074 "semantics/prune.ml" 42 1008 1076
+type(
+  Cil.typ
+)
+ident(
+  int_ref t2 "semantics/prune.ml" 41 948 994 "semantics/prune.ml" 41 948 996
+)
+"semantics/prune.ml" 42 1008 1049 "semantics/prune.ml" 42 1008 1077
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 42 1008 1079 "semantics/prune.ml" 42 1008 1080
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/prune.ml" 41 948 1002 "semantics/prune.ml" 41 948 1003
+)
+"semantics/prune.ml" 42 1008 1029 "semantics/prune.ml" 42 1008 1082
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 42 1008 1012 "semantics/prune.ml" 42 1008 1082
+call(
+  tail
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 44 1085 1095 "semantics/prune.ml" 44 1085 1099
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 46 1203 1258
+)
+"semantics/prune.ml" 44 1085 1112 "semantics/prune.ml" 44 1085 1114
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 46 1203 1258
+)
+"semantics/prune.ml" 44 1085 1116 "semantics/prune.ml" 44 1085 1118
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 46 1203 1258
+)
+"semantics/prune.ml" 44 1085 1120 "semantics/prune.ml" 44 1085 1122
+type(
+  Cil.typ
+)
+ident(
+  def t2 "semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 46 1203 1258
+)
+"semantics/prune.ml" 44 1085 1101 "semantics/prune.ml" 44 1085 1123
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 44 1085 1125 "semantics/prune.ml" 44 1085 1126
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 44 1085 1089 "semantics/prune.ml" 44 1085 1127
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 45 1128 1139
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 45 1128 1140 "semantics/prune.ml" 45 1128 1141
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 45 1128 1142 "semantics/prune.ml" 45 1128 1144
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 45 1128 1144
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1145 "semantics/prune.ml" 45 1128 1147
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 45 1128 1148 "semantics/prune.ml" 45 1128 1150
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 45 1128 1151 "semantics/prune.ml" 45 1128 1152
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 45 1128 1153 "semantics/prune.ml" 45 1128 1155
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 45 1128 1148 "semantics/prune.ml" 45 1128 1155
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1156 "semantics/prune.ml" 45 1128 1158
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 45 1128 1159 "semantics/prune.ml" 45 1128 1161
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 45 1128 1162 "semantics/prune.ml" 45 1128 1163
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 45 1128 1164 "semantics/prune.ml" 45 1128 1166
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 45 1128 1159 "semantics/prune.ml" 45 1128 1166
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1167 "semantics/prune.ml" 45 1128 1169
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 45 1128 1170 "semantics/prune.ml" 45 1128 1172
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 45 1128 1173 "semantics/prune.ml" 45 1128 1174
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 45 1128 1175 "semantics/prune.ml" 45 1128 1177
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 45 1128 1170 "semantics/prune.ml" 45 1128 1177
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1178 "semantics/prune.ml" 45 1128 1180
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 45 1128 1181 "semantics/prune.ml" 45 1128 1183
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 45 1128 1184 "semantics/prune.ml" 45 1128 1185
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 45 1128 1186 "semantics/prune.ml" 45 1128 1188
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 45 1128 1181 "semantics/prune.ml" 45 1128 1188
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1189 "semantics/prune.ml" 45 1128 1191
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 45 1128 1192 "semantics/prune.ml" 45 1128 1194
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 45 1128 1195 "semantics/prune.ml" 45 1128 1196
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 45 1128 1197 "semantics/prune.ml" 45 1128 1199
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 45 1128 1192 "semantics/prune.ml" 45 1128 1199
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1181 "semantics/prune.ml" 45 1128 1199
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1170 "semantics/prune.ml" 45 1128 1199
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1159 "semantics/prune.ml" 45 1128 1199
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1148 "semantics/prune.ml" 45 1128 1199
+type(
+  bool
+)
+"semantics/prune.ml" 45 1128 1137 "semantics/prune.ml" 45 1128 1199
+type(
+  bool
+)
+"semantics/prune.ml" 46 1203 1207 "semantics/prune.ml" 46 1203 1223
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 46 1203 1232 "semantics/prune.ml" 46 1203 1241
+type(
+  Cil.binop -> Cil.binop
+)
+ident(
+  int_ref not_binop "semantics/prune.ml" 19 255 259 "semantics/prune.ml" 19 255 268
+)
+"semantics/prune.ml" 46 1203 1242 "semantics/prune.ml" 46 1203 1244
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 44 1085 1108 "semantics/prune.ml" 44 1085 1110
+)
+"semantics/prune.ml" 46 1203 1232 "semantics/prune.ml" 46 1203 1244
+call(
+  stack
+)
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 46 1203 1246 "semantics/prune.ml" 46 1203 1248
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1 "semantics/prune.ml" 44 1085 1112 "semantics/prune.ml" 44 1085 1114
+)
+"semantics/prune.ml" 46 1203 1250 "semantics/prune.ml" 46 1203 1252
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/prune.ml" 44 1085 1116 "semantics/prune.ml" 44 1085 1118
+)
+"semantics/prune.ml" 46 1203 1254 "semantics/prune.ml" 46 1203 1256
+type(
+  Cil.typ
+)
+ident(
+  int_ref t2 "semantics/prune.ml" 44 1085 1120 "semantics/prune.ml" 44 1085 1122
+)
+"semantics/prune.ml" 46 1203 1224 "semantics/prune.ml" 46 1203 1258
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 46 1203 1207 "semantics/prune.ml" 46 1203 1258
+call(
+  tail
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 47 1259 1269 "semantics/prune.ml" 47 1259 1273
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 47 1259 1282 "semantics/prune.ml" 47 1259 1284
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 47 1259 1286 "semantics/prune.ml" 47 1259 1288
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 47 1259 1290 "semantics/prune.ml" 47 1259 1292
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 47 1259 1294 "semantics/prune.ml" 47 1259 1296
+type(
+  Cil.typ
+)
+ident(
+  def t2 "semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 47 1259 1275 "semantics/prune.ml" 47 1259 1297
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 47 1259 1299 "semantics/prune.ml" 47 1259 1301
+type(
+  Cil.typ
+)
+ident(
+  def t1 "semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 47 1259 1263 "semantics/prune.ml" 47 1259 1302
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 48 1303 1314
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 47 1259 1282 "semantics/prune.ml" 47 1259 1284
+)
+"semantics/prune.ml" 48 1303 1315 "semantics/prune.ml" 48 1303 1316
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 48 1303 1317 "semantics/prune.ml" 48 1303 1321
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 48 1303 1321
+type(
+  bool
+)
+"semantics/prune.ml" 48 1303 1322 "semantics/prune.ml" 48 1303 1324
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 48 1303 1325 "semantics/prune.ml" 48 1303 1327
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 47 1259 1282 "semantics/prune.ml" 47 1259 1284
+)
+"semantics/prune.ml" 48 1303 1328 "semantics/prune.ml" 48 1303 1329
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 48 1303 1330 "semantics/prune.ml" 48 1303 1333
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 48 1303 1325 "semantics/prune.ml" 48 1303 1333
+type(
+  bool
+)
+"semantics/prune.ml" 48 1303 1312 "semantics/prune.ml" 48 1303 1333
+type(
+  bool
+)
+"semantics/prune.ml" 49 1337 1345 "semantics/prune.ml" 49 1337 1351
+type(
+  Cil.exp
+)
+ident(
+  def not_e1 "semantics/prune.ml" 50 1377 1381 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 49 1337 1360 "semantics/prune.ml" 49 1337 1364
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 49 1337 1366 "semantics/prune.ml" 49 1337 1368
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1 "semantics/prune.ml" 47 1259 1286 "semantics/prune.ml" 47 1259 1288
+)
+"semantics/prune.ml" 49 1337 1370 "semantics/prune.ml" 49 1337 1372
+type(
+  Cil.typ
+)
+ident(
+  int_ref t1 "semantics/prune.ml" 47 1259 1299 "semantics/prune.ml" 47 1259 1301
+)
+"semantics/prune.ml" 49 1337 1354 "semantics/prune.ml" 49 1337 1373
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 50 1377 1385 "semantics/prune.ml" 50 1377 1391
+type(
+  Cil.exp
+)
+ident(
+  def not_e2 "semantics/prune.ml" 51 1417 1421 "semantics/prune.ml" 53 1553 1573
+)
+"semantics/prune.ml" 50 1377 1400 "semantics/prune.ml" 50 1377 1404
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 50 1377 1406 "semantics/prune.ml" 50 1377 1408
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/prune.ml" 47 1259 1290 "semantics/prune.ml" 47 1259 1292
+)
+"semantics/prune.ml" 50 1377 1410 "semantics/prune.ml" 50 1377 1412
+type(
+  Cil.typ
+)
+ident(
+  int_ref t1 "semantics/prune.ml" 47 1259 1299 "semantics/prune.ml" 47 1259 1301
+)
+"semantics/prune.ml" 50 1377 1394 "semantics/prune.ml" 50 1377 1413
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 51 1417 1428 "semantics/prune.ml" 51 1417 1444
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 51 1417 1445 "semantics/prune.ml" 51 1417 1451
+type(
+  Cil.exp
+)
+ident(
+  int_ref not_e1 "semantics/prune.ml" 49 1337 1345 "semantics/prune.ml" 49 1337 1351
+)
+"semantics/prune.ml" 51 1417 1428 "semantics/prune.ml" 51 1417 1451
+call(
+  stack
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 51 1417 1453 "semantics/prune.ml" 51 1417 1469
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 51 1417 1470 "semantics/prune.ml" 51 1417 1476
+type(
+  Cil.exp
+)
+ident(
+  int_ref not_e2 "semantics/prune.ml" 50 1377 1385 "semantics/prune.ml" 50 1377 1391
+)
+"semantics/prune.ml" 51 1417 1453 "semantics/prune.ml" 51 1417 1476
+call(
+  stack
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 51 1417 1428 "semantics/prune.ml" 51 1417 1476
+type(
+  Cil.exp option * Cil.exp option
+)
+"semantics/prune.ml" 52 1482 1494 "semantics/prune.ml" 52 1482 1497
+type(
+  Cil.exp
+)
+ident(
+  def e1' "semantics/prune.ml" 52 1482 1511 "semantics/prune.ml" 52 1482 1552
+)
+"semantics/prune.ml" 52 1482 1489 "semantics/prune.ml" 52 1482 1497
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 52 1482 1504 "semantics/prune.ml" 52 1482 1507
+type(
+  Cil.exp
+)
+ident(
+  def e2' "semantics/prune.ml" 52 1482 1511 "semantics/prune.ml" 52 1482 1552
+)
+"semantics/prune.ml" 52 1482 1499 "semantics/prune.ml" 52 1482 1507
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 52 1482 1489 "semantics/prune.ml" 52 1482 1507
+type(
+  Cil.exp option * Cil.exp option
+)
+"semantics/prune.ml" 52 1482 1524 "semantics/prune.ml" 52 1482 1533
+type(
+  Cil.binop -> Cil.binop
+)
+ident(
+  int_ref not_binop "semantics/prune.ml" 19 255 259 "semantics/prune.ml" 19 255 268
+)
+"semantics/prune.ml" 52 1482 1534 "semantics/prune.ml" 52 1482 1536
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 47 1259 1282 "semantics/prune.ml" 47 1259 1284
+)
+"semantics/prune.ml" 52 1482 1524 "semantics/prune.ml" 52 1482 1536
+call(
+  stack
+)
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 52 1482 1538 "semantics/prune.ml" 52 1482 1541
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1' "semantics/prune.ml" 52 1482 1494 "semantics/prune.ml" 52 1482 1497
+)
+"semantics/prune.ml" 52 1482 1543 "semantics/prune.ml" 52 1482 1546
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2' "semantics/prune.ml" 52 1482 1504 "semantics/prune.ml" 52 1482 1507
+)
+"semantics/prune.ml" 52 1482 1548 "semantics/prune.ml" 52 1482 1550
+type(
+  Cil.typ
+)
+ident(
+  int_ref t2 "semantics/prune.ml" 47 1259 1294 "semantics/prune.ml" 47 1259 1296
+)
+"semantics/prune.ml" 52 1482 1516 "semantics/prune.ml" 52 1482 1552
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 52 1482 1511 "semantics/prune.ml" 52 1482 1552
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 53 1553 1560 "semantics/prune.ml" 53 1553 1561
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 53 1553 1563 "semantics/prune.ml" 53 1553 1564
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 53 1553 1560 "semantics/prune.ml" 53 1553 1564
+type(
+  Cil.exp option * Cil.exp option
+)
+"semantics/prune.ml" 53 1553 1568 "semantics/prune.ml" 53 1553 1572
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 51 1417 1421 "semantics/prune.ml" 53 1553 1573
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 50 1377 1381 "semantics/prune.ml" 53 1553 1573
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 49 1337 1341 "semantics/prune.ml" 53 1553 1573
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 54 1574 1584 "semantics/prune.ml" 54 1574 1588
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 54 1574 1596 "semantics/prune.ml" 54 1574 1600
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 54 1574 1602 "semantics/prune.ml" 54 1574 1603
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/prune.ml" 54 1574 1615 "semantics/prune.ml" 54 1574 1633
+)
+"semantics/prune.ml" 54 1574 1605 "semantics/prune.ml" 54 1574 1606
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 54 1574 1590 "semantics/prune.ml" 54 1574 1607
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 54 1574 1609 "semantics/prune.ml" 54 1574 1610
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 54 1574 1578 "semantics/prune.ml" 54 1574 1611
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 54 1574 1615 "semantics/prune.ml" 54 1574 1631
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 54 1574 1632 "semantics/prune.ml" 54 1574 1633
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/prune.ml" 54 1574 1602 "semantics/prune.ml" 54 1574 1603
+)
+"semantics/prune.ml" 54 1574 1615 "semantics/prune.ml" 54 1574 1633
+call(
+  tail
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 55 1634 1644 "semantics/prune.ml" 55 1634 1648
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 55 1634 1655 "semantics/prune.ml" 55 1634 1656
+type(
+  Cil.lval
+)
+"semantics/prune.ml" 55 1634 1650 "semantics/prune.ml" 55 1634 1656
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 55 1634 1658 "semantics/prune.ml" 55 1634 1659
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 55 1634 1638 "semantics/prune.ml" 55 1634 1660
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 55 1634 1669 "semantics/prune.ml" 55 1634 1673
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond "semantics/prune.ml" 31 468 519 "semantics/prune.ml" 31 468 523
+)
+"semantics/prune.ml" 55 1634 1664 "semantics/prune.ml" 55 1634 1673
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 56 1674 1683 "semantics/prune.ml" 56 1674 1684
+type(
+  Cil.lval
+)
+"semantics/prune.ml" 56 1674 1678 "semantics/prune.ml" 56 1674 1684
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 56 1674 1693 "semantics/prune.ml" 56 1674 1697
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond "semantics/prune.ml" 31 468 519 "semantics/prune.ml" 31 468 523
+)
+"semantics/prune.ml" 56 1674 1688 "semantics/prune.ml" 56 1674 1697
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 57 1698 1709 "semantics/prune.ml" 57 1698 1711
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 57 1698 1720 "semantics/prune.ml" 57 1698 1721
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 57 1698 1723 "semantics/prune.ml" 57 1698 1725
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 57 1698 1713 "semantics/prune.ml" 57 1698 1726
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 57 1698 1728 "semantics/prune.ml" 57 1698 1730
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 57 1698 1732 "semantics/prune.ml" 57 1698 1733
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 57 1698 1702 "semantics/prune.ml" 57 1698 1734
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 58 1736 1747 "semantics/prune.ml" 58 1736 1749
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 58 1736 1751 "semantics/prune.ml" 58 1736 1753
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 58 1736 1762 "semantics/prune.ml" 58 1736 1763
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 58 1736 1765 "semantics/prune.ml" 58 1736 1767
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 58 1736 1755 "semantics/prune.ml" 58 1736 1768
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 58 1736 1770 "semantics/prune.ml" 58 1736 1771
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 58 1736 1740 "semantics/prune.ml" 58 1736 1772
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 57 1698 1702 "semantics/prune.ml" 58 1736 1772
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 59 1777 1785 "semantics/prune.ml" 59 1777 1789
+type(
+  Cil.exp
+)
+ident(
+  def newe "semantics/prune.ml" 60 1817 1821 "semantics/prune.ml" 60 1817 1842
+)
+"semantics/prune.ml" 59 1777 1799 "semantics/prune.ml" 59 1777 1801
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 57 1698 1709 "semantics/prune.ml" 57 1698 1711
+)
+"semantics/prune.ml" 59 1777 1803 "semantics/prune.ml" 59 1777 1805
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1 "semantics/prune.ml" 57 1698 1723 "semantics/prune.ml" 57 1698 1725
+)
+"semantics/prune.ml" 59 1777 1807 "semantics/prune.ml" 59 1777 1809
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/prune.ml" 57 1698 1728 "semantics/prune.ml" 57 1698 1730
+)
+"semantics/prune.ml" 59 1777 1811 "semantics/prune.ml" 59 1777 1812
+type(
+  Cil.typ
+)
+ident(
+  int_ref t "semantics/prune.ml" 57 1698 1732 "semantics/prune.ml" 57 1698 1733
+)
+"semantics/prune.ml" 59 1777 1792 "semantics/prune.ml" 59 1777 1813
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 60 1817 1821 "semantics/prune.ml" 60 1817 1837
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 60 1817 1838 "semantics/prune.ml" 60 1817 1842
+type(
+  Cil.exp
+)
+ident(
+  int_ref newe "semantics/prune.ml" 59 1777 1785 "semantics/prune.ml" 59 1777 1789
+)
+"semantics/prune.ml" 60 1817 1821 "semantics/prune.ml" 60 1817 1842
+call(
+  tail
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 59 1777 1781 "semantics/prune.ml" 60 1817 1842
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 62 1845 1849 "semantics/prune.ml" 62 1845 1850
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 62 1845 1854 "semantics/prune.ml" 62 1845 1858
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 32 527 529 "semantics/prune.ml" 62 1845 1858
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 31 468 515 "semantics/prune.ml" 62 1845 1858
+type(
+  Cil.exp -> Cil.exp option
+)
+type(
+  Cil.exp -> Cil.exp option
+)
+"semantics/prune.ml" 64 1860 1868 "semantics/prune.ml" 64 1860 1880
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  def prune_simple "semantics/prune.ml" 64 1860 1860 "semantics/prune.ml" 1 0 -1
+)
+"semantics/prune.ml" 66 1951 1957 "semantics/prune.ml" 66 1951 1961
+type(
+  AbsDom.update_mode
+)
+ident(
+  def mode "semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 99 3381 3393
+)
+"semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 66 1951 1968
+type(
+  Global.t
+)
+ident(
+  def global "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 99 3381 3393
+)
+"semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/prune.ml" 66 1951 1973 "semantics/prune.ml" 99 3381 3393
+)
+"semantics/prune.ml" 66 1951 1973 "semantics/prune.ml" 66 1951 1977
+type(
+  Cil.exp
+)
+ident(
+  def cond "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 99 3381 3393
+)
+"semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/prune.ml" 67 1985 1987 "semantics/prune.ml" 99 3381 3393
+)
+"semantics/prune.ml" 67 1985 1993 "semantics/prune.ml" 67 1985 1997
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond "semantics/prune.ml" 66 1951 1973 "semantics/prune.ml" 66 1951 1977
+)
+"semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 68 2003 2023 "semantics/prune.ml" 68 2003 2024
+type(
+  Cil.lval
+)
+ident(
+  def x "semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 68 2003 2018 "semantics/prune.ml" 68 2003 2024
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 68 2003 2026 "semantics/prune.ml" 68 2003 2027
+type(
+  Cil.exp
+)
+ident(
+  def e "semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 68 2003 2029 "semantics/prune.ml" 68 2003 2030
+type(
+  Cil.typ
+)
+ident(
+  def t "semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 68 2003 2007 "semantics/prune.ml" 68 2003 2031
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 69 2032 2043
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 69 2032 2044 "semantics/prune.ml" 69 2032 2045
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 69 2032 2046 "semantics/prune.ml" 69 2032 2048
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 69 2032 2048
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2049 "semantics/prune.ml" 69 2032 2051
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 69 2032 2052 "semantics/prune.ml" 69 2032 2054
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 69 2032 2055 "semantics/prune.ml" 69 2032 2056
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 69 2032 2057 "semantics/prune.ml" 69 2032 2059
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 69 2032 2052 "semantics/prune.ml" 69 2032 2059
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2060 "semantics/prune.ml" 69 2032 2062
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 69 2032 2063 "semantics/prune.ml" 69 2032 2065
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 69 2032 2066 "semantics/prune.ml" 69 2032 2067
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 69 2032 2068 "semantics/prune.ml" 69 2032 2070
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 69 2032 2063 "semantics/prune.ml" 69 2032 2070
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2071 "semantics/prune.ml" 69 2032 2073
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 69 2032 2074 "semantics/prune.ml" 69 2032 2076
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 69 2032 2077 "semantics/prune.ml" 69 2032 2078
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 69 2032 2079 "semantics/prune.ml" 69 2032 2081
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 69 2032 2074 "semantics/prune.ml" 69 2032 2081
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2082 "semantics/prune.ml" 69 2032 2084
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 69 2032 2085 "semantics/prune.ml" 69 2032 2087
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 69 2032 2088 "semantics/prune.ml" 69 2032 2089
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 69 2032 2090 "semantics/prune.ml" 69 2032 2092
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 69 2032 2085 "semantics/prune.ml" 69 2032 2092
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2093 "semantics/prune.ml" 69 2032 2095
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 69 2032 2096 "semantics/prune.ml" 69 2032 2098
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 69 2032 2099 "semantics/prune.ml" 69 2032 2100
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 69 2032 2101 "semantics/prune.ml" 69 2032 2103
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 69 2032 2096 "semantics/prune.ml" 69 2032 2103
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2085 "semantics/prune.ml" 69 2032 2103
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2074 "semantics/prune.ml" 69 2032 2103
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2063 "semantics/prune.ml" 69 2032 2103
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2052 "semantics/prune.ml" 69 2032 2103
+type(
+  bool
+)
+"semantics/prune.ml" 69 2032 2041 "semantics/prune.ml" 69 2032 2103
+type(
+  bool
+)
+"semantics/prune.ml" 70 2107 2115 "semantics/prune.ml" 70 2107 2119
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def x_lv "semantics/prune.ml" 71 2143 2147 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 70 2107 2122 "semantics/prune.ml" 70 2107 2129
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref EvalOp.eval_lv
+)
+"semantics/prune.ml" 70 2107 2130 "semantics/prune.ml" 70 2107 2133
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+)
+"semantics/prune.ml" 70 2107 2134 "semantics/prune.ml" 70 2107 2135
+type(
+  Cil.lval
+)
+ident(
+  int_ref x "semantics/prune.ml" 68 2003 2023 "semantics/prune.ml" 68 2003 2024
+)
+"semantics/prune.ml" 70 2107 2136 "semantics/prune.ml" 70 2107 2139
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 70 2107 2122 "semantics/prune.ml" 70 2107 2139
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/prune.ml" 71 2143 2151 "semantics/prune.ml" 71 2143 2154
+type(
+  ItvDom.Val.t
+)
+ident(
+  def x_v "semantics/prune.ml" 72 2180 2184 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 71 2143 2157 "semantics/prune.ml" 71 2143 2167
+type(
+  AbsDom.PowLoc.t -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Mem.lookup
+)
+"semantics/prune.ml" 71 2143 2168 "semantics/prune.ml" 71 2143 2172
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_lv "semantics/prune.ml" 70 2107 2115 "semantics/prune.ml" 70 2107 2119
+)
+"semantics/prune.ml" 71 2143 2173 "semantics/prune.ml" 71 2143 2176
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 71 2143 2157 "semantics/prune.ml" 71 2143 2176
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 72 2180 2188 "semantics/prune.ml" 72 2180 2189
+type(
+  ItvDom.Val.t
+)
+ident(
+  def v "semantics/prune.ml" 73 2210 2214 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 72 2180 2192 "semantics/prune.ml" 72 2180 2196
+type(
+  AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref EvalOp.eval
+)
+"semantics/prune.ml" 72 2180 2197 "semantics/prune.ml" 72 2180 2200
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+)
+"semantics/prune.ml" 72 2180 2201 "semantics/prune.ml" 72 2180 2202
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/prune.ml" 68 2003 2026 "semantics/prune.ml" 68 2003 2027
+)
+"semantics/prune.ml" 72 2180 2203 "semantics/prune.ml" 72 2180 2206
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 72 2180 2192 "semantics/prune.ml" 72 2180 2206
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 73 2210 2218 "semantics/prune.ml" 73 2210 2221
+type(
+  Itv.t
+)
+ident(
+  def e_v "semantics/prune.ml" 74 2240 2244 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 73 2210 2224 "semantics/prune.ml" 73 2210 2234
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/prune.ml" 73 2210 2235 "semantics/prune.ml" 73 2210 2236
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref v "semantics/prune.ml" 72 2180 2188 "semantics/prune.ml" 72 2180 2189
+)
+"semantics/prune.ml" 73 2210 2224 "semantics/prune.ml" 73 2210 2236
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 74 2240 2248 "semantics/prune.ml" 74 2240 2253
+type(
+  Itv.t
+)
+ident(
+  def x_itv "semantics/prune.ml" 75 2293 2297 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 74 2240 2256 "semantics/prune.ml" 74 2240 2265
+type(
+  Cil.binop -> Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.prune
+)
+"semantics/prune.ml" 74 2240 2266 "semantics/prune.ml" 74 2240 2268
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 74 2240 2270 "semantics/prune.ml" 74 2240 2280
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/prune.ml" 74 2240 2281 "semantics/prune.ml" 74 2240 2284
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 71 2143 2151 "semantics/prune.ml" 71 2143 2154
+)
+"semantics/prune.ml" 74 2240 2269 "semantics/prune.ml" 74 2240 2285
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 74 2240 2286 "semantics/prune.ml" 74 2240 2289
+type(
+  Itv.t
+)
+ident(
+  int_ref e_v "semantics/prune.ml" 73 2210 2218 "semantics/prune.ml" 73 2210 2221
+)
+"semantics/prune.ml" 74 2240 2256 "semantics/prune.ml" 74 2240 2289
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 75 2293 2301 "semantics/prune.ml" 75 2293 2307
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def x_ploc "semantics/prune.ml" 76 2352 2356 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 75 2293 2310 "semantics/prune.ml" 75 2293 2322
+type(
+  Cil.binop -> AbsDom.PowLoc.t -> Cil.exp -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref AbsDom.PowLoc.prune
+)
+"semantics/prune.ml" 75 2293 2323 "semantics/prune.ml" 75 2293 2325
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 68 2003 2014 "semantics/prune.ml" 68 2003 2016
+)
+"semantics/prune.ml" 75 2293 2327 "semantics/prune.ml" 75 2293 2341
+type(
+  ItvDom.Val.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref ItvDom.pow_loc_of_val
+)
+"semantics/prune.ml" 75 2293 2342 "semantics/prune.ml" 75 2293 2345
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 71 2143 2151 "semantics/prune.ml" 71 2143 2154
+)
+"semantics/prune.ml" 75 2293 2326 "semantics/prune.ml" 75 2293 2346
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/prune.ml" 75 2293 2347 "semantics/prune.ml" 75 2293 2348
+type(
+  Cil.exp
+)
+ident(
+  int_ref e "semantics/prune.ml" 68 2003 2026 "semantics/prune.ml" 68 2003 2027
+)
+"semantics/prune.ml" 75 2293 2310 "semantics/prune.ml" 75 2293 2348
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/prune.ml" 76 2352 2360 "semantics/prune.ml" 76 2352 2368
+type(
+  ItvDom.Val.t
+)
+ident(
+  def x_pruned "semantics/prune.ml" 77 2418 2422 "semantics/prune.ml" 77 2418 2462
+)
+"semantics/prune.ml" 76 2352 2371 "semantics/prune.ml" 76 2352 2384
+type(
+  ItvDom.Val.t -> AbsDom.PowLoc.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.modify_powloc
+)
+"semantics/prune.ml" 76 2352 2386 "semantics/prune.ml" 76 2352 2396
+type(
+  ItvDom.Val.t -> Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.modify_itv
+)
+"semantics/prune.ml" 76 2352 2397 "semantics/prune.ml" 76 2352 2400
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 71 2143 2151 "semantics/prune.ml" 71 2143 2154
+)
+"semantics/prune.ml" 76 2352 2401 "semantics/prune.ml" 76 2352 2406
+type(
+  Itv.t
+)
+ident(
+  int_ref x_itv "semantics/prune.ml" 74 2240 2248 "semantics/prune.ml" 74 2240 2253
+)
+"semantics/prune.ml" 76 2352 2385 "semantics/prune.ml" 76 2352 2407
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 76 2352 2408 "semantics/prune.ml" 76 2352 2414
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_ploc "semantics/prune.ml" 75 2293 2301 "semantics/prune.ml" 75 2293 2307
+)
+"semantics/prune.ml" 76 2352 2371 "semantics/prune.ml" 76 2352 2414
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 77 2418 2422 "semantics/prune.ml" 77 2418 2432
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.PowLoc.t -> ItvDom.Val.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.update
+)
+"semantics/prune.ml" 77 2418 2433 "semantics/prune.ml" 77 2418 2437
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/prune.ml" 66 1951 1957 "semantics/prune.ml" 66 1951 1961
+)
+"semantics/prune.ml" 77 2418 2438 "semantics/prune.ml" 77 2418 2444
+type(
+  Global.t
+)
+ident(
+  int_ref global "semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 66 1951 1968
+)
+"semantics/prune.ml" 77 2418 2445 "semantics/prune.ml" 77 2418 2449
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_lv "semantics/prune.ml" 70 2107 2115 "semantics/prune.ml" 70 2107 2119
+)
+"semantics/prune.ml" 77 2418 2450 "semantics/prune.ml" 77 2418 2458
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_pruned "semantics/prune.ml" 76 2352 2360 "semantics/prune.ml" 76 2352 2368
+)
+"semantics/prune.ml" 77 2418 2459 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 77 2418 2422 "semantics/prune.ml" 77 2418 2462
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 76 2352 2356 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 75 2293 2297 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 74 2240 2244 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 73 2210 2214 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 72 2180 2184 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 71 2143 2147 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 70 2107 2111 "semantics/prune.ml" 77 2418 2462
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 78 2463 2474 "semantics/prune.ml" 78 2463 2476
+type(
+  Cil.binop
+)
+ident(
+  def op "semantics/prune.ml" 78 2463 2494 "semantics/prune.ml" 81 2627 2691
+)
+"semantics/prune.ml" 78 2463 2478 "semantics/prune.ml" 78 2463 2480
+type(
+  Cil.exp
+)
+ident(
+  def e1 "semantics/prune.ml" 78 2463 2494 "semantics/prune.ml" 81 2627 2691
+)
+"semantics/prune.ml" 78 2463 2482 "semantics/prune.ml" 78 2463 2484
+type(
+  Cil.exp
+)
+ident(
+  def e2 "semantics/prune.ml" 78 2463 2494 "semantics/prune.ml" 81 2627 2691
+)
+"semantics/prune.ml" 78 2463 2486 "semantics/prune.ml" 78 2463 2487
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 78 2463 2467 "semantics/prune.ml" 78 2463 2488
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 78 2463 2494 "semantics/prune.ml" 78 2463 2496
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 78 2463 2474 "semantics/prune.ml" 78 2463 2476
+)
+"semantics/prune.ml" 78 2463 2497 "semantics/prune.ml" 78 2463 2498
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 78 2463 2499 "semantics/prune.ml" 78 2463 2503
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 78 2463 2494 "semantics/prune.ml" 78 2463 2503
+type(
+  bool
+)
+"semantics/prune.ml" 78 2463 2504 "semantics/prune.ml" 78 2463 2506
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"semantics/prune.ml" 78 2463 2507 "semantics/prune.ml" 78 2463 2509
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 78 2463 2474 "semantics/prune.ml" 78 2463 2476
+)
+"semantics/prune.ml" 78 2463 2510 "semantics/prune.ml" 78 2463 2511
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 78 2463 2512 "semantics/prune.ml" 78 2463 2515
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 78 2463 2507 "semantics/prune.ml" 78 2463 2515
+type(
+  bool
+)
+"semantics/prune.ml" 78 2463 2494 "semantics/prune.ml" 78 2463 2515
+type(
+  bool
+)
+"semantics/prune.ml" 79 2519 2527 "semantics/prune.ml" 79 2519 2531
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem1 "semantics/prune.ml" 80 2573 2577 "semantics/prune.ml" 81 2627 2691
+)
+"semantics/prune.ml" 79 2519 2534 "semantics/prune.ml" 79 2519 2546
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  int_ref prune_simple "semantics/prune.ml" 64 1860 1868 "semantics/prune.ml" 64 1860 1880
+)
+"semantics/prune.ml" 79 2519 2547 "semantics/prune.ml" 79 2519 2551
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/prune.ml" 66 1951 1957 "semantics/prune.ml" 66 1951 1961
+)
+"semantics/prune.ml" 79 2519 2552 "semantics/prune.ml" 79 2519 2558
+type(
+  Global.t
+)
+ident(
+  int_ref global "semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 66 1951 1968
+)
+"semantics/prune.ml" 79 2519 2559 "semantics/prune.ml" 79 2519 2562
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+)
+"semantics/prune.ml" 79 2519 2563 "semantics/prune.ml" 79 2519 2565
+type(
+  Cil.exp
+)
+ident(
+  int_ref e1 "semantics/prune.ml" 78 2463 2478 "semantics/prune.ml" 78 2463 2480
+)
+"semantics/prune.ml" 79 2519 2566 "semantics/prune.ml" 79 2519 2569
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 79 2519 2534 "semantics/prune.ml" 79 2519 2569
+call(
+  stack
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 80 2573 2581 "semantics/prune.ml" 80 2573 2585
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem2 "semantics/prune.ml" 81 2627 2631 "semantics/prune.ml" 81 2627 2691
+)
+"semantics/prune.ml" 80 2573 2588 "semantics/prune.ml" 80 2573 2600
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  int_ref prune_simple "semantics/prune.ml" 64 1860 1868 "semantics/prune.ml" 64 1860 1880
+)
+"semantics/prune.ml" 80 2573 2601 "semantics/prune.ml" 80 2573 2605
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/prune.ml" 66 1951 1957 "semantics/prune.ml" 66 1951 1961
+)
+"semantics/prune.ml" 80 2573 2606 "semantics/prune.ml" 80 2573 2612
+type(
+  Global.t
+)
+ident(
+  int_ref global "semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 66 1951 1968
+)
+"semantics/prune.ml" 80 2573 2613 "semantics/prune.ml" 80 2573 2616
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+)
+"semantics/prune.ml" 80 2573 2617 "semantics/prune.ml" 80 2573 2619
+type(
+  Cil.exp
+)
+ident(
+  int_ref e2 "semantics/prune.ml" 78 2463 2482 "semantics/prune.ml" 78 2463 2484
+)
+"semantics/prune.ml" 80 2573 2620 "semantics/prune.ml" 80 2573 2623
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 80 2573 2588 "semantics/prune.ml" 80 2573 2623
+call(
+  stack
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 81 2627 2634 "semantics/prune.ml" 81 2627 2636
+type(
+  Cil.binop
+)
+ident(
+  int_ref op "semantics/prune.ml" 78 2463 2474 "semantics/prune.ml" 78 2463 2476
+)
+"semantics/prune.ml" 81 2627 2637 "semantics/prune.ml" 81 2627 2638
+type(
+  Cil.binop -> Cil.binop -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"semantics/prune.ml" 81 2627 2639 "semantics/prune.ml" 81 2627 2643
+type(
+  Cil.binop
+)
+"semantics/prune.ml" 81 2627 2634 "semantics/prune.ml" 81 2627 2643
+type(
+  bool
+)
+"semantics/prune.ml" 81 2627 2649 "semantics/prune.ml" 81 2627 2657
+type(
+  ItvDom.Mem.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.meet
+)
+"semantics/prune.ml" 81 2627 2658 "semantics/prune.ml" 81 2627 2662
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem1 "semantics/prune.ml" 79 2519 2527 "semantics/prune.ml" 79 2519 2531
+)
+"semantics/prune.ml" 81 2627 2663 "semantics/prune.ml" 81 2627 2667
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem2 "semantics/prune.ml" 80 2573 2581 "semantics/prune.ml" 80 2573 2585
+)
+"semantics/prune.ml" 81 2627 2649 "semantics/prune.ml" 81 2627 2667
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 81 2627 2673 "semantics/prune.ml" 81 2627 2681
+type(
+  ItvDom.Mem.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.join
+)
+"semantics/prune.ml" 81 2627 2682 "semantics/prune.ml" 81 2627 2686
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem1 "semantics/prune.ml" 79 2519 2527 "semantics/prune.ml" 79 2519 2531
+)
+"semantics/prune.ml" 81 2627 2687 "semantics/prune.ml" 81 2627 2691
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem2 "semantics/prune.ml" 80 2573 2581 "semantics/prune.ml" 80 2573 2585
+)
+"semantics/prune.ml" 81 2627 2673 "semantics/prune.ml" 81 2627 2691
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 81 2627 2631 "semantics/prune.ml" 81 2627 2691
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 80 2573 2577 "semantics/prune.ml" 81 2627 2691
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 79 2519 2523 "semantics/prune.ml" 81 2627 2691
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 82 2692 2702 "semantics/prune.ml" 82 2692 2706
+type(
+  Cil.unop
+)
+"semantics/prune.ml" 82 2692 2713 "semantics/prune.ml" 82 2692 2714
+type(
+  Cil.lval
+)
+ident(
+  def x "semantics/prune.ml" 83 2722 2726 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 82 2692 2708 "semantics/prune.ml" 82 2692 2714
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 82 2692 2716 "semantics/prune.ml" 82 2692 2717
+type(
+  Cil.typ
+)
+"semantics/prune.ml" 82 2692 2696 "semantics/prune.ml" 82 2692 2718
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 83 2722 2730 "semantics/prune.ml" 83 2722 2734
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def x_lv "semantics/prune.ml" 84 2758 2762 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 83 2722 2737 "semantics/prune.ml" 83 2722 2744
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref EvalOp.eval_lv
+)
+"semantics/prune.ml" 83 2722 2745 "semantics/prune.ml" 83 2722 2748
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+)
+"semantics/prune.ml" 83 2722 2749 "semantics/prune.ml" 83 2722 2750
+type(
+  Cil.lval
+)
+ident(
+  int_ref x "semantics/prune.ml" 82 2692 2713 "semantics/prune.ml" 82 2692 2714
+)
+"semantics/prune.ml" 83 2722 2751 "semantics/prune.ml" 83 2722 2754
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 83 2722 2737 "semantics/prune.ml" 83 2722 2754
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/prune.ml" 84 2758 2766 "semantics/prune.ml" 84 2758 2769
+type(
+  ItvDom.Val.t
+)
+ident(
+  def x_v "semantics/prune.ml" 85 2795 2799 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 84 2758 2772 "semantics/prune.ml" 84 2758 2782
+type(
+  AbsDom.PowLoc.t -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Mem.lookup
+)
+"semantics/prune.ml" 84 2758 2783 "semantics/prune.ml" 84 2758 2787
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_lv "semantics/prune.ml" 83 2722 2730 "semantics/prune.ml" 83 2722 2734
+)
+"semantics/prune.ml" 84 2758 2788 "semantics/prune.ml" 84 2758 2791
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 84 2758 2772 "semantics/prune.ml" 84 2758 2791
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 85 2795 2803 "semantics/prune.ml" 85 2795 2808
+type(
+  Itv.t
+)
+ident(
+  def x_itv "semantics/prune.ml" 86 2829 2833 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 85 2795 2811 "semantics/prune.ml" 85 2795 2821
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/prune.ml" 85 2795 2822 "semantics/prune.ml" 85 2795 2825
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 84 2758 2766 "semantics/prune.ml" 84 2758 2769
+)
+"semantics/prune.ml" 85 2795 2811 "semantics/prune.ml" 85 2795 2825
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 86 2829 2837 "semantics/prune.ml" 86 2829 2840
+type(
+  Itv.t
+)
+ident(
+  def e_v "semantics/prune.ml" 87 2875 2879 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 86 2829 2858 "semantics/prune.ml" 86 2829 2859
+type(
+  int
+)
+"semantics/prune.ml" 86 2829 2850 "semantics/prune.ml" 86 2829 2859
+type(
+  Itv.t'
+)
+"semantics/prune.ml" 86 2829 2869 "semantics/prune.ml" 86 2829 2870
+type(
+  int
+)
+"semantics/prune.ml" 86 2829 2861 "semantics/prune.ml" 86 2829 2870
+type(
+  Itv.t'
+)
+"semantics/prune.ml" 86 2829 2843 "semantics/prune.ml" 86 2829 2871
+type(
+  Itv.t
+)
+"semantics/prune.ml" 87 2875 2883 "semantics/prune.ml" 87 2875 2888
+type(
+  Itv.t
+)
+ident(
+  def x_itv "semantics/prune.ml" 88 2913 2917 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 87 2875 2891 "semantics/prune.ml" 87 2875 2899
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.meet
+)
+"semantics/prune.ml" 87 2875 2900 "semantics/prune.ml" 87 2875 2905
+type(
+  Itv.t
+)
+ident(
+  int_ref x_itv "semantics/prune.ml" 85 2795 2803 "semantics/prune.ml" 85 2795 2808
+)
+"semantics/prune.ml" 87 2875 2906 "semantics/prune.ml" 87 2875 2909
+type(
+  Itv.t
+)
+ident(
+  int_ref e_v "semantics/prune.ml" 86 2829 2837 "semantics/prune.ml" 86 2829 2840
+)
+"semantics/prune.ml" 87 2875 2891 "semantics/prune.ml" 87 2875 2909
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 88 2913 2921 "semantics/prune.ml" 88 2913 2929
+type(
+  ItvDom.Val.t
+)
+ident(
+  def x_pruned "semantics/prune.ml" 89 2956 2960 "semantics/prune.ml" 89 2956 3000
+)
+"semantics/prune.ml" 88 2913 2932 "semantics/prune.ml" 88 2913 2942
+type(
+  ItvDom.Val.t -> Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.modify_itv
+)
+"semantics/prune.ml" 88 2913 2943 "semantics/prune.ml" 88 2913 2946
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 84 2758 2766 "semantics/prune.ml" 84 2758 2769
+)
+"semantics/prune.ml" 88 2913 2947 "semantics/prune.ml" 88 2913 2952
+type(
+  Itv.t
+)
+ident(
+  int_ref x_itv "semantics/prune.ml" 87 2875 2883 "semantics/prune.ml" 87 2875 2888
+)
+"semantics/prune.ml" 88 2913 2932 "semantics/prune.ml" 88 2913 2952
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 89 2956 2960 "semantics/prune.ml" 89 2956 2970
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.PowLoc.t -> ItvDom.Val.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.update
+)
+"semantics/prune.ml" 89 2956 2971 "semantics/prune.ml" 89 2956 2975
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/prune.ml" 66 1951 1957 "semantics/prune.ml" 66 1951 1961
+)
+"semantics/prune.ml" 89 2956 2976 "semantics/prune.ml" 89 2956 2982
+type(
+  Global.t
+)
+ident(
+  int_ref global "semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 66 1951 1968
+)
+"semantics/prune.ml" 89 2956 2983 "semantics/prune.ml" 89 2956 2987
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_lv "semantics/prune.ml" 83 2722 2730 "semantics/prune.ml" 83 2722 2734
+)
+"semantics/prune.ml" 89 2956 2988 "semantics/prune.ml" 89 2956 2996
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_pruned "semantics/prune.ml" 88 2913 2921 "semantics/prune.ml" 88 2913 2929
+)
+"semantics/prune.ml" 89 2956 2997 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 89 2956 2960 "semantics/prune.ml" 89 2956 3000
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 88 2913 2917 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 87 2875 2879 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 86 2829 2833 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 85 2795 2799 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 84 2758 2762 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 83 2722 2726 "semantics/prune.ml" 89 2956 3000
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 90 3001 3010 "semantics/prune.ml" 90 3001 3011
+type(
+  Cil.lval
+)
+ident(
+  def x "semantics/prune.ml" 91 3015 3019 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 90 3001 3005 "semantics/prune.ml" 90 3001 3011
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 91 3015 3023 "semantics/prune.ml" 91 3015 3027
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  def x_lv "semantics/prune.ml" 92 3051 3055 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 91 3015 3030 "semantics/prune.ml" 91 3015 3037
+type(
+  AbsDom.Proc.t -> Cil.lval -> ItvDom.Mem.t -> AbsDom.PowLoc.t
+)
+ident(
+  ext_ref EvalOp.eval_lv
+)
+"semantics/prune.ml" 91 3015 3038 "semantics/prune.ml" 91 3015 3041
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 66 1951 1969 "semantics/prune.ml" 66 1951 1972
+)
+"semantics/prune.ml" 91 3015 3042 "semantics/prune.ml" 91 3015 3043
+type(
+  Cil.lval
+)
+ident(
+  int_ref x "semantics/prune.ml" 90 3001 3010 "semantics/prune.ml" 90 3001 3011
+)
+"semantics/prune.ml" 91 3015 3044 "semantics/prune.ml" 91 3015 3047
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 91 3015 3030 "semantics/prune.ml" 91 3015 3047
+call(
+  stack
+)
+type(
+  AbsDom.PowLoc.t
+)
+"semantics/prune.ml" 92 3051 3059 "semantics/prune.ml" 92 3051 3062
+type(
+  ItvDom.Val.t
+)
+ident(
+  def x_v "semantics/prune.ml" 93 3088 3092 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 92 3051 3065 "semantics/prune.ml" 92 3051 3075
+type(
+  AbsDom.PowLoc.t -> ItvDom.Mem.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.Mem.lookup
+)
+"semantics/prune.ml" 92 3051 3076 "semantics/prune.ml" 92 3051 3080
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_lv "semantics/prune.ml" 91 3015 3023 "semantics/prune.ml" 91 3015 3027
+)
+"semantics/prune.ml" 92 3051 3081 "semantics/prune.ml" 92 3051 3084
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 92 3051 3065 "semantics/prune.ml" 92 3051 3084
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 93 3088 3096 "semantics/prune.ml" 93 3088 3101
+type(
+  Itv.t
+)
+ident(
+  def x_itv "semantics/prune.ml" 94 3122 3126 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 93 3088 3104 "semantics/prune.ml" 93 3088 3114
+type(
+  ItvDom.Val.t -> Itv.t
+)
+ident(
+  ext_ref ItvDom.itv_of_val
+)
+"semantics/prune.ml" 93 3088 3115 "semantics/prune.ml" 93 3088 3118
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 92 3051 3059 "semantics/prune.ml" 92 3051 3062
+)
+"semantics/prune.ml" 93 3088 3104 "semantics/prune.ml" 93 3088 3118
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 94 3122 3130 "semantics/prune.ml" 94 3122 3135
+type(
+  Itv.t
+)
+ident(
+  def pos_x "semantics/prune.ml" 95 3186 3190 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 94 3122 3138 "semantics/prune.ml" 94 3122 3146
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.meet
+)
+"semantics/prune.ml" 94 3122 3147 "semantics/prune.ml" 94 3122 3152
+type(
+  Itv.t
+)
+ident(
+  int_ref x_itv "semantics/prune.ml" 93 3088 3096 "semantics/prune.ml" 93 3088 3101
+)
+"semantics/prune.ml" 94 3122 3169 "semantics/prune.ml" 94 3122 3170
+type(
+  int
+)
+"semantics/prune.ml" 94 3122 3161 "semantics/prune.ml" 94 3122 3170
+type(
+  Itv.t'
+)
+"semantics/prune.ml" 94 3122 3172 "semantics/prune.ml" 94 3122 3180
+type(
+  Itv.t'
+)
+"semantics/prune.ml" 94 3122 3153 "semantics/prune.ml" 94 3122 3182
+type(
+  Itv.t
+)
+"semantics/prune.ml" 94 3122 3138 "semantics/prune.ml" 94 3122 3182
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 95 3186 3194 "semantics/prune.ml" 95 3186 3199
+type(
+  Itv.t
+)
+ident(
+  def neg_x "semantics/prune.ml" 96 3253 3257 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 95 3186 3202 "semantics/prune.ml" 95 3186 3210
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.meet
+)
+"semantics/prune.ml" 95 3186 3211 "semantics/prune.ml" 95 3186 3216
+type(
+  Itv.t
+)
+ident(
+  int_ref x_itv "semantics/prune.ml" 93 3088 3096 "semantics/prune.ml" 93 3088 3101
+)
+"semantics/prune.ml" 95 3186 3225 "semantics/prune.ml" 95 3186 3233
+type(
+  Itv.t'
+)
+"semantics/prune.ml" 95 3186 3243 "semantics/prune.ml" 95 3186 3247
+type(
+  int
+)
+"semantics/prune.ml" 95 3186 3235 "semantics/prune.ml" 95 3186 3247
+type(
+  Itv.t'
+)
+"semantics/prune.ml" 95 3186 3217 "semantics/prune.ml" 95 3186 3249
+type(
+  Itv.t
+)
+"semantics/prune.ml" 95 3186 3202 "semantics/prune.ml" 95 3186 3249
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 96 3253 3261 "semantics/prune.ml" 96 3253 3266
+type(
+  Itv.t
+)
+ident(
+  def x_itv "semantics/prune.ml" 97 3293 3297 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 96 3253 3269 "semantics/prune.ml" 96 3253 3277
+type(
+  Itv.t -> Itv.t -> Itv.t
+)
+ident(
+  ext_ref Itv.join
+)
+"semantics/prune.ml" 96 3253 3278 "semantics/prune.ml" 96 3253 3283
+type(
+  Itv.t
+)
+ident(
+  int_ref pos_x "semantics/prune.ml" 94 3122 3130 "semantics/prune.ml" 94 3122 3135
+)
+"semantics/prune.ml" 96 3253 3284 "semantics/prune.ml" 96 3253 3289
+type(
+  Itv.t
+)
+ident(
+  int_ref neg_x "semantics/prune.ml" 95 3186 3194 "semantics/prune.ml" 95 3186 3199
+)
+"semantics/prune.ml" 96 3253 3269 "semantics/prune.ml" 96 3253 3289
+call(
+  stack
+)
+type(
+  Itv.t
+)
+"semantics/prune.ml" 97 3293 3301 "semantics/prune.ml" 97 3293 3309
+type(
+  ItvDom.Val.t
+)
+ident(
+  def x_pruned "semantics/prune.ml" 98 3336 3340 "semantics/prune.ml" 98 3336 3380
+)
+"semantics/prune.ml" 97 3293 3312 "semantics/prune.ml" 97 3293 3322
+type(
+  ItvDom.Val.t -> Itv.t -> ItvDom.Val.t
+)
+ident(
+  ext_ref ItvDom.modify_itv
+)
+"semantics/prune.ml" 97 3293 3323 "semantics/prune.ml" 97 3293 3326
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_v "semantics/prune.ml" 92 3051 3059 "semantics/prune.ml" 92 3051 3062
+)
+"semantics/prune.ml" 97 3293 3327 "semantics/prune.ml" 97 3293 3332
+type(
+  Itv.t
+)
+ident(
+  int_ref x_itv "semantics/prune.ml" 96 3253 3261 "semantics/prune.ml" 96 3253 3266
+)
+"semantics/prune.ml" 97 3293 3312 "semantics/prune.ml" 97 3293 3332
+call(
+  stack
+)
+type(
+  ItvDom.Val.t
+)
+"semantics/prune.ml" 98 3336 3340 "semantics/prune.ml" 98 3336 3350
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.PowLoc.t -> ItvDom.Val.t -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  ext_ref ItvDom.Mem.update
+)
+"semantics/prune.ml" 98 3336 3351 "semantics/prune.ml" 98 3336 3355
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/prune.ml" 66 1951 1957 "semantics/prune.ml" 66 1951 1961
+)
+"semantics/prune.ml" 98 3336 3356 "semantics/prune.ml" 98 3336 3362
+type(
+  Global.t
+)
+ident(
+  int_ref global "semantics/prune.ml" 66 1951 1962 "semantics/prune.ml" 66 1951 1968
+)
+"semantics/prune.ml" 98 3336 3363 "semantics/prune.ml" 98 3336 3367
+type(
+  AbsDom.PowLoc.t
+)
+ident(
+  int_ref x_lv "semantics/prune.ml" 91 3015 3023 "semantics/prune.ml" 91 3015 3027
+)
+"semantics/prune.ml" 98 3336 3368 "semantics/prune.ml" 98 3336 3376
+type(
+  ItvDom.Val.t
+)
+ident(
+  int_ref x_pruned "semantics/prune.ml" 97 3293 3301 "semantics/prune.ml" 97 3293 3309
+)
+"semantics/prune.ml" 98 3336 3377 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 98 3336 3340 "semantics/prune.ml" 98 3336 3380
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 97 3293 3297 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 96 3253 3257 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 95 3186 3190 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 94 3122 3126 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 93 3088 3092 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 92 3051 3055 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 91 3015 3019 "semantics/prune.ml" 98 3336 3380
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 99 3381 3385 "semantics/prune.ml" 99 3381 3386
+type(
+  Cil.exp
+)
+"semantics/prune.ml" 99 3381 3390 "semantics/prune.ml" 99 3381 3393
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 66 1951 1978 "semantics/prune.ml" 66 1951 1981
+)
+"semantics/prune.ml" 67 1985 1987 "semantics/prune.ml" 99 3381 3393
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 66 1951 1953 "semantics/prune.ml" 99 3381 3393
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+"semantics/prune.ml" 101 3395 3399 "semantics/prune.ml" 101 3395 3404
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  def prune "semantics/prune.ml" 105 3558 3626 "semantics/prune.ml" 1 0 -1
+)
+"semantics/prune.ml" 102 3473 3479 "semantics/prune.ml" 102 3473 3483
+type(
+  AbsDom.update_mode
+)
+ident(
+  def mode "semantics/prune.ml" 102 3473 3484 "semantics/prune.ml" 105 3558 3626
+)
+"semantics/prune.ml" 102 3473 3484 "semantics/prune.ml" 102 3473 3490
+type(
+  Global.t
+)
+ident(
+  def global "semantics/prune.ml" 102 3473 3491 "semantics/prune.ml" 105 3558 3626
+)
+"semantics/prune.ml" 102 3473 3491 "semantics/prune.ml" 102 3473 3494
+type(
+  AbsDom.Proc.t
+)
+ident(
+  def pid "semantics/prune.ml" 102 3473 3495 "semantics/prune.ml" 105 3558 3626
+)
+"semantics/prune.ml" 102 3473 3495 "semantics/prune.ml" 102 3473 3499
+type(
+  Cil.exp
+)
+ident(
+  def cond "semantics/prune.ml" 102 3473 3500 "semantics/prune.ml" 105 3558 3626
+)
+"semantics/prune.ml" 102 3473 3500 "semantics/prune.ml" 102 3473 3503
+type(
+  ItvDom.Mem.t
+)
+ident(
+  def mem "semantics/prune.ml" 103 3507 3509 "semantics/prune.ml" 105 3558 3626
+)
+"semantics/prune.ml" 103 3507 3515 "semantics/prune.ml" 103 3507 3531
+type(
+  Cil.exp -> Cil.exp option
+)
+ident(
+  int_ref make_cond_simple "semantics/prune.ml" 31 468 476 "semantics/prune.ml" 31 468 492
+)
+"semantics/prune.ml" 103 3507 3532 "semantics/prune.ml" 103 3507 3536
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond "semantics/prune.ml" 102 3473 3495 "semantics/prune.ml" 102 3473 3499
+)
+"semantics/prune.ml" 103 3507 3515 "semantics/prune.ml" 103 3507 3536
+call(
+  stack
+)
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 104 3542 3546 "semantics/prune.ml" 104 3542 3550
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 104 3542 3554 "semantics/prune.ml" 104 3542 3557
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 102 3473 3500 "semantics/prune.ml" 102 3473 3503
+)
+"semantics/prune.ml" 105 3558 3567 "semantics/prune.ml" 105 3558 3578
+type(
+  Cil.exp
+)
+ident(
+  def cond_simple "semantics/prune.ml" 105 3558 3582 "semantics/prune.ml" 105 3558 3626
+)
+"semantics/prune.ml" 105 3558 3562 "semantics/prune.ml" 105 3558 3578
+type(
+  Cil.exp option
+)
+"semantics/prune.ml" 105 3558 3582 "semantics/prune.ml" 105 3558 3594
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+ident(
+  int_ref prune_simple "semantics/prune.ml" 64 1860 1868 "semantics/prune.ml" 64 1860 1880
+)
+"semantics/prune.ml" 105 3558 3595 "semantics/prune.ml" 105 3558 3599
+type(
+  AbsDom.update_mode
+)
+ident(
+  int_ref mode "semantics/prune.ml" 102 3473 3479 "semantics/prune.ml" 102 3473 3483
+)
+"semantics/prune.ml" 105 3558 3600 "semantics/prune.ml" 105 3558 3606
+type(
+  Global.t
+)
+ident(
+  int_ref global "semantics/prune.ml" 102 3473 3484 "semantics/prune.ml" 102 3473 3490
+)
+"semantics/prune.ml" 105 3558 3607 "semantics/prune.ml" 105 3558 3610
+type(
+  AbsDom.Proc.t
+)
+ident(
+  int_ref pid "semantics/prune.ml" 102 3473 3491 "semantics/prune.ml" 102 3473 3494
+)
+"semantics/prune.ml" 105 3558 3611 "semantics/prune.ml" 105 3558 3622
+type(
+  Cil.exp
+)
+ident(
+  int_ref cond_simple "semantics/prune.ml" 105 3558 3567 "semantics/prune.ml" 105 3558 3578
+)
+"semantics/prune.ml" 105 3558 3623 "semantics/prune.ml" 105 3558 3626
+type(
+  ItvDom.Mem.t
+)
+ident(
+  int_ref mem "semantics/prune.ml" 102 3473 3500 "semantics/prune.ml" 102 3473 3503
+)
+"semantics/prune.ml" 105 3558 3582 "semantics/prune.ml" 105 3558 3626
+call(
+  tail
+)
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 103 3507 3509 "semantics/prune.ml" 105 3558 3626
+type(
+  ItvDom.Mem.t
+)
+"semantics/prune.ml" 102 3473 3475 "semantics/prune.ml" 105 3558 3626
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)
+type(
+  AbsDom.update_mode ->
+  Global.t -> AbsDom.Proc.t -> Cil.exp -> ItvDom.Mem.t -> ItvDom.Mem.t
+)

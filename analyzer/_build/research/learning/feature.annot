@@ -1,0 +1,246 @@
+"research/learning/feature.ml" 5 28 32 "research/learning/feature.ml" 5 28 35
+type(
+  Global.t -> Flang.t BatSet.t
+)
+ident(
+  def gen "research/learning/feature.ml" 17 312 312 "research/learning/feature.ml" 1 0 -1
+)
+"research/learning/feature.ml" 6 67 73 "research/learning/feature.ml" 6 67 79
+type(
+  Global.t
+)
+ident(
+  def global "research/learning/feature.ml" 7 83 84 "research/learning/feature.ml" 15 278 310
+)
+"research/learning/feature.ml" 7 83 88 "research/learning/feature.ml" 7 83 92
+type(
+  Cil.file
+)
+ident(
+  def file "research/learning/feature.ml" 8 110 111 "research/learning/feature.ml" 15 278 310
+)
+"research/learning/feature.ml" 7 83 95 "research/learning/feature.ml" 7 83 101
+type(
+  Global.t
+)
+ident(
+  int_ref global "research/learning/feature.ml" 6 67 73 "research/learning/feature.ml" 6 67 79
+)
+"research/learning/feature.ml" 7 83 95 "research/learning/feature.ml" 7 83 106
+type(
+  Cil.file
+)
+"research/learning/feature.ml" 8 110 115 "research/learning/feature.ml" 8 110 123
+type(
+  Flang.t BatSet.t list
+)
+ident(
+  def set_list "research/learning/feature.ml" 15 278 282 "research/learning/feature.ml" 15 278 310
+)
+"research/learning/feature.ml" 9 126 128 "research/learning/feature.ml" 9 126 143
+type(
+  Cil.file ->
+  (Flang.t BatSet.t list -> Cil.global -> Flang.t BatSet.t list) ->
+  Flang.t BatSet.t list -> Flang.t BatSet.t list
+)
+ident(
+  ext_ref Cil.foldGlobals
+)
+"research/learning/feature.ml" 9 126 144 "research/learning/feature.ml" 9 126 148
+type(
+  Cil.file
+)
+ident(
+  int_ref file "research/learning/feature.ml" 7 83 88 "research/learning/feature.ml" 7 83 92
+)
+"research/learning/feature.ml" 9 126 154 "research/learning/feature.ml" 9 126 159
+type(
+  Flang.t BatSet.t list
+)
+ident(
+  def accum "research/learning/feature.ml" 9 126 160 "research/learning/feature.ml" 13 255 270
+)
+"research/learning/feature.ml" 9 126 160 "research/learning/feature.ml" 9 126 166
+type(
+  Cil.global
+)
+ident(
+  def global "research/learning/feature.ml" 10 170 173 "research/learning/feature.ml" 13 255 270
+)
+"research/learning/feature.ml" 10 170 179 "research/learning/feature.ml" 10 170 185
+type(
+  Cil.global
+)
+ident(
+  int_ref global "research/learning/feature.ml" 9 126 160 "research/learning/feature.ml" 9 126 166
+)
+"research/learning/feature.ml" 11 191 206 "research/learning/feature.ml" 11 191 208
+type(
+  Cil.fundec
+)
+ident(
+  def fd "research/learning/feature.ml" 12 216 221 "research/learning/feature.ml" 12 216 254
+)
+"research/learning/feature.ml" 11 191 210 "research/learning/feature.ml" 11 191 211
+type(
+  Cil.location
+)
+"research/learning/feature.ml" 11 191 196 "research/learning/feature.ml" 11 191 212
+type(
+  Cil.global
+)
+"research/learning/feature.ml" 12 216 222 "research/learning/feature.ml" 12 216 243
+type(
+  Cil.fundec -> Flang.t BatSet.t
+)
+ident(
+  ext_ref Extractor.get_featSet
+)
+"research/learning/feature.ml" 12 216 244 "research/learning/feature.ml" 12 216 246
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "research/learning/feature.ml" 11 191 206 "research/learning/feature.ml" 11 191 208
+)
+"research/learning/feature.ml" 12 216 221 "research/learning/feature.ml" 12 216 247
+call(
+  stack
+)
+type(
+  Flang.t BatSet.t
+)
+"research/learning/feature.ml" 12 216 249 "research/learning/feature.ml" 12 216 254
+type(
+  Flang.t BatSet.t list
+)
+ident(
+  int_ref accum "research/learning/feature.ml" 9 126 154 "research/learning/feature.ml" 9 126 159
+)
+"research/learning/feature.ml" 12 216 221 "research/learning/feature.ml" 12 216 254
+type(
+  Flang.t BatSet.t list
+)
+"research/learning/feature.ml" 13 255 260 "research/learning/feature.ml" 13 255 261
+type(
+  Cil.global
+)
+"research/learning/feature.ml" 13 255 265 "research/learning/feature.ml" 13 255 270
+type(
+  Flang.t BatSet.t list
+)
+ident(
+  int_ref accum "research/learning/feature.ml" 9 126 154 "research/learning/feature.ml" 9 126 159
+)
+"research/learning/feature.ml" 10 170 173 "research/learning/feature.ml" 13 255 270
+type(
+  Flang.t BatSet.t list
+)
+"research/learning/feature.ml" 9 126 149 "research/learning/feature.ml" 14 271 274
+type(
+  Flang.t BatSet.t list -> Cil.global -> Flang.t BatSet.t list
+)
+"research/learning/feature.ml" 14 271 275 "research/learning/feature.ml" 14 271 277
+type(
+  Flang.t BatSet.t list
+)
+"research/learning/feature.ml" 9 126 128 "research/learning/feature.ml" 14 271 277
+call(
+  stack
+)
+type(
+  Flang.t BatSet.t list
+)
+"research/learning/feature.ml" 15 278 282 "research/learning/feature.ml" 15 278 301
+type(
+  Flang.t BatSet.t list -> Flang.t BatSet.t
+)
+ident(
+  ext_ref Flang.union_over_set_list
+)
+"research/learning/feature.ml" 15 278 302 "research/learning/feature.ml" 15 278 310
+type(
+  Flang.t BatSet.t list
+)
+ident(
+  int_ref set_list "research/learning/feature.ml" 8 110 115 "research/learning/feature.ml" 8 110 123
+)
+"research/learning/feature.ml" 15 278 282 "research/learning/feature.ml" 15 278 310
+call(
+  tail
+)
+type(
+  Flang.t BatSet.t
+)
+"research/learning/feature.ml" 8 110 111 "research/learning/feature.ml" 15 278 310
+type(
+  Flang.t BatSet.t
+)
+"research/learning/feature.ml" 7 83 84 "research/learning/feature.ml" 15 278 310
+type(
+  Flang.t BatSet.t
+)
+"research/learning/feature.ml" 6 67 69 "research/learning/feature.ml" 15 278 310
+type(
+  Global.t -> Flang.t BatSet.t
+)
+type(
+  Global.t -> Flang.t BatSet.t
+)
+"research/learning/feature.ml" 17 312 316 "research/learning/feature.ml" 17 312 320
+type(
+  Global.t -> Flang.t -> bool
+)
+ident(
+  def pred "research/learning/feature.ml" 20 391 391 "research/learning/feature.ml" 1 0 -1
+)
+"research/learning/feature.ml" 18 351 356 "research/learning/feature.ml" 18 351 362
+type(
+  Global.t
+)
+ident(
+  def global "research/learning/feature.ml" 18 351 363 "research/learning/feature.ml" 18 351 378
+)
+"research/learning/feature.ml" 18 351 363 "research/learning/feature.ml" 18 351 370
+type(
+  Flang.t
+)
+ident(
+  def feature "research/learning/feature.ml" 18 351 374 "research/learning/feature.ml" 18 351 378
+)
+"research/learning/feature.ml" 18 351 374 "research/learning/feature.ml" 18 351 378
+type(
+  bool
+)
+"research/learning/feature.ml" 18 351 352 "research/learning/feature.ml" 18 351 378
+type(
+  Global.t -> Flang.t -> bool
+)
+type(
+  Global.t -> Flang.t -> bool
+)
+"research/learning/feature.ml" 29 559 564 "research/learning/feature.ml" 29 559 576
+type(
+  'a -> 'b BatSet.t
+)
+ident(
+  def gen_Features "research/learning/feature.ml" 29 559 610 "research/learning/feature.ml" 31 612 615
+)
+"research/learning/feature.ml" 29 559 583 "research/learning/feature.ml" 29 559 594
+type(
+  'a
+)
+ident(
+  def reduced_dir "research/learning/feature.ml" 29 559 598 "research/learning/feature.ml" 29 559 610
+)
+"research/learning/feature.ml" 29 559 598 "research/learning/feature.ml" 29 559 610
+type(
+  'b BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"research/learning/feature.ml" 29 559 579 "research/learning/feature.ml" 29 559 610
+type(
+  'a -> 'b BatSet.t
+)

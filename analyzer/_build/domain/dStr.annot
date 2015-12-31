@@ -1,0 +1,67 @@
+"domain/dStr.ml" 5 48 52 "domain/dStr.ml" 5 48 56
+type(
+  string
+)
+ident(
+  def name "domain/dStr.ml" 6 77 77 "domain/dStr.ml" 1 0 -1
+)
+"domain/dStr.ml" 5 48 68 "domain/dStr.ml" 5 48 76
+type(
+  string
+)
+type(
+  string
+)
+"domain/dStr.ml" 6 77 81 "domain/dStr.ml" 6 77 90
+type(
+  t -> string
+)
+ident(
+  def to_string "domain/dStr.ml" 7 118 118 "domain/dStr.ml" 1 0 -1
+)
+"domain/dStr.ml" 6 77 111 "domain/dStr.ml" 6 77 112
+type(
+  t
+)
+ident(
+  def x "domain/dStr.ml" 6 77 116 "domain/dStr.ml" 6 77 117
+)
+"domain/dStr.ml" 6 77 116 "domain/dStr.ml" 6 77 117
+type(
+  t
+)
+ident(
+  int_ref x "domain/dStr.ml" 6 77 111 "domain/dStr.ml" 6 77 112
+)
+"domain/dStr.ml" 6 77 107 "domain/dStr.ml" 6 77 117
+type(
+  t -> string
+)
+type(
+  t -> t
+)
+"domain/dStr.ml" 7 118 122 "domain/dStr.ml" 7 118 129
+type(
+  'a -> [> `String of 'a ]
+)
+ident(
+  def to_json "domain/dStr.ml" 8 134 159 "domain/dStr.ml" 1 0 -1
+)
+"domain/dStr.ml" 7 118 130 "domain/dStr.ml" 7 118 131
+type(
+  'a
+)
+ident(
+  def x "domain/dStr.ml" 8 134 136 "domain/dStr.ml" 8 134 159
+)
+"domain/dStr.ml" 8 134 157 "domain/dStr.ml" 8 134 158
+type(
+  'a
+)
+ident(
+  int_ref x "domain/dStr.ml" 7 118 130 "domain/dStr.ml" 7 118 131
+)
+"domain/dStr.ml" 8 134 149 "domain/dStr.ml" 8 134 158
+type(
+  [> `String of 'a ] as 'b
+)

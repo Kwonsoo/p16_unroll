@@ -1,0 +1,3375 @@
+"pgm/interCfg.ml" 10 137 143 "pgm/interCfg.ml" 10 137 147
+type(
+  string
+)
+ident(
+  def name "pgm/interCfg.ml" 11 157 159 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 10 137 150 "pgm/interCfg.ml" 10 137 156
+type(
+  string
+)
+"pgm/interCfg.ml" 11 157 163 "pgm/interCfg.ml" 11 157 172
+type(
+  string * IntraCfg.Node.t -> string
+)
+ident(
+  def to_string "pgm/interCfg.ml" 12 227 229 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 11 157 174 "pgm/interCfg.ml" 11 157 177
+type(
+  string
+)
+ident(
+  def pid "pgm/interCfg.ml" 11 157 186 "pgm/interCfg.ml" 11 157 226
+)
+"pgm/interCfg.ml" 11 157 178 "pgm/interCfg.ml" 11 157 182
+type(
+  IntraCfg.Node.t
+)
+ident(
+  def node "pgm/interCfg.ml" 11 157 186 "pgm/interCfg.ml" 11 157 226
+)
+"pgm/interCfg.ml" 11 157 173 "pgm/interCfg.ml" 11 157 183
+type(
+  string * IntraCfg.Node.t
+)
+"pgm/interCfg.ml" 11 157 186 "pgm/interCfg.ml" 11 157 189
+type(
+  string
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 11 157 174 "pgm/interCfg.ml" 11 157 177
+)
+"pgm/interCfg.ml" 11 157 190 "pgm/interCfg.ml" 11 157 191
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pgm/interCfg.ml" 11 157 192 "pgm/interCfg.ml" 11 157 195
+type(
+  string
+)
+"pgm/interCfg.ml" 11 157 196 "pgm/interCfg.ml" 11 157 197
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pgm/interCfg.ml" 11 157 198 "pgm/interCfg.ml" 11 157 221
+type(
+  IntraCfg.Node.t -> string
+)
+ident(
+  ext_ref IntraCfg.Node.to_string
+)
+"pgm/interCfg.ml" 11 157 222 "pgm/interCfg.ml" 11 157 226
+type(
+  IntraCfg.Node.t
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 11 157 178 "pgm/interCfg.ml" 11 157 182
+)
+"pgm/interCfg.ml" 11 157 198 "pgm/interCfg.ml" 11 157 226
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 11 157 192 "pgm/interCfg.ml" 11 157 226
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 11 157 186 "pgm/interCfg.ml" 11 157 226
+call(
+  tail
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 12 227 233 "pgm/interCfg.ml" 12 227 240
+type(
+  string * IntraCfg.Node.t -> [> `String of string ]
+)
+ident(
+  def to_json "pgm/interCfg.ml" 13 267 269 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 12 227 241 "pgm/interCfg.ml" 12 227 242
+type(
+  string * IntraCfg.Node.t
+)
+ident(
+  def x "pgm/interCfg.ml" 12 227 245 "pgm/interCfg.ml" 12 227 266
+)
+"pgm/interCfg.ml" 12 227 254 "pgm/interCfg.ml" 12 227 263
+type(
+  string * IntraCfg.Node.t -> string
+)
+ident(
+  int_ref to_string "pgm/interCfg.ml" 11 157 163 "pgm/interCfg.ml" 11 157 172
+)
+"pgm/interCfg.ml" 12 227 264 "pgm/interCfg.ml" 12 227 265
+type(
+  string * IntraCfg.Node.t
+)
+ident(
+  int_ref x "pgm/interCfg.ml" 12 227 241 "pgm/interCfg.ml" 12 227 242
+)
+"pgm/interCfg.ml" 12 227 253 "pgm/interCfg.ml" 12 227 266
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 12 227 245 "pgm/interCfg.ml" 12 227 266
+type(
+  [> `String of string ] as 'a
+)
+"pgm/interCfg.ml" 13 267 273 "pgm/interCfg.ml" 13 267 277
+type(
+  'b -> 'c -> 'b * 'c
+)
+ident(
+  def make "pgm/interCfg.ml" 14 300 302 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 13 267 278 "pgm/interCfg.ml" 13 267 281
+type(
+  'b
+)
+ident(
+  def pid "pgm/interCfg.ml" 13 267 282 "pgm/interCfg.ml" 13 267 299
+)
+"pgm/interCfg.ml" 13 267 282 "pgm/interCfg.ml" 13 267 286
+type(
+  'c
+)
+ident(
+  def node "pgm/interCfg.ml" 13 267 289 "pgm/interCfg.ml" 13 267 299
+)
+"pgm/interCfg.ml" 13 267 290 "pgm/interCfg.ml" 13 267 293
+type(
+  'b
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 13 267 278 "pgm/interCfg.ml" 13 267 281
+)
+"pgm/interCfg.ml" 13 267 294 "pgm/interCfg.ml" 13 267 298
+type(
+  'c
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 13 267 282 "pgm/interCfg.ml" 13 267 286
+)
+"pgm/interCfg.ml" 13 267 289 "pgm/interCfg.ml" 13 267 299
+type(
+  'b * 'c
+)
+"pgm/interCfg.ml" 14 300 306 "pgm/interCfg.ml" 14 300 313
+type(
+  'd * 'e -> 'd
+)
+ident(
+  def get_pid "pgm/interCfg.ml" 15 331 333 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 14 300 315 "pgm/interCfg.ml" 14 300 318
+type(
+  'd
+)
+ident(
+  def pid "pgm/interCfg.ml" 14 300 327 "pgm/interCfg.ml" 14 300 330
+)
+"pgm/interCfg.ml" 14 300 319 "pgm/interCfg.ml" 14 300 323
+type(
+  'e
+)
+ident(
+  def node "pgm/interCfg.ml" 14 300 327 "pgm/interCfg.ml" 14 300 330
+)
+"pgm/interCfg.ml" 14 300 314 "pgm/interCfg.ml" 14 300 324
+type(
+  'd * 'e
+)
+"pgm/interCfg.ml" 14 300 327 "pgm/interCfg.ml" 14 300 330
+type(
+  'd
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 14 300 315 "pgm/interCfg.ml" 14 300 318
+)
+"pgm/interCfg.ml" 15 331 337 "pgm/interCfg.ml" 15 331 348
+type(
+  'f * 'g -> 'g
+)
+ident(
+  def get_cfgnode "pgm/interCfg.ml" 16 367 369 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 15 331 350 "pgm/interCfg.ml" 15 331 353
+type(
+  'f
+)
+ident(
+  def pid "pgm/interCfg.ml" 15 331 362 "pgm/interCfg.ml" 15 331 366
+)
+"pgm/interCfg.ml" 15 331 354 "pgm/interCfg.ml" 15 331 358
+type(
+  'g
+)
+ident(
+  def node "pgm/interCfg.ml" 15 331 362 "pgm/interCfg.ml" 15 331 366
+)
+"pgm/interCfg.ml" 15 331 349 "pgm/interCfg.ml" 15 331 359
+type(
+  'f * 'g
+)
+"pgm/interCfg.ml" 15 331 362 "pgm/interCfg.ml" 15 331 366
+type(
+  'g
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 15 331 354 "pgm/interCfg.ml" 15 331 358
+)
+"pgm/interCfg.ml" 16 367 373 "pgm/interCfg.ml" 16 367 380
+type(
+  'h -> 'h -> int
+)
+ident(
+  def compare "pgm/interCfg.ml" 17 391 393 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 16 367 383 "pgm/interCfg.ml" 16 367 390
+type(
+  'h -> 'h -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"pgm/interCfg.ml" 17 391 397 "pgm/interCfg.ml" 17 391 401
+type(
+  'i -> int
+)
+ident(
+  def hash "pgm/interCfg.ml" 18 417 419 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 17 391 404 "pgm/interCfg.ml" 17 391 416
+type(
+  'i -> int
+)
+ident(
+  ext_ref Hashtbl.hash
+)
+"pgm/interCfg.ml" 18 417 423 "pgm/interCfg.ml" 18 417 428
+type(
+  'j * IntraCfg.Node.t -> 'j * IntraCfg.Node.t -> bool
+)
+ident(
+  def equal "pgm/interCfg.ml" 18 417 485 "pgm/interCfg.ml" 19 486 489
+)
+"pgm/interCfg.ml" 18 417 430 "pgm/interCfg.ml" 18 417 432
+type(
+  'j
+)
+ident(
+  def p1 "pgm/interCfg.ml" 18 417 438 "pgm/interCfg.ml" 18 417 485
+)
+"pgm/interCfg.ml" 18 417 434 "pgm/interCfg.ml" 18 417 436
+type(
+  IntraCfg.Node.t
+)
+ident(
+  def n1 "pgm/interCfg.ml" 18 417 438 "pgm/interCfg.ml" 18 417 485
+)
+"pgm/interCfg.ml" 18 417 429 "pgm/interCfg.ml" 18 417 437
+type(
+  'j * IntraCfg.Node.t
+)
+"pgm/interCfg.ml" 18 417 439 "pgm/interCfg.ml" 18 417 441
+type(
+  'j
+)
+ident(
+  def p2 "pgm/interCfg.ml" 18 417 449 "pgm/interCfg.ml" 18 417 485
+)
+"pgm/interCfg.ml" 18 417 443 "pgm/interCfg.ml" 18 417 445
+type(
+  IntraCfg.Node.t
+)
+ident(
+  def n2 "pgm/interCfg.ml" 18 417 449 "pgm/interCfg.ml" 18 417 485
+)
+"pgm/interCfg.ml" 18 417 438 "pgm/interCfg.ml" 18 417 446
+type(
+  'j * IntraCfg.Node.t
+)
+"pgm/interCfg.ml" 18 417 449 "pgm/interCfg.ml" 18 417 451
+type(
+  'j
+)
+ident(
+  int_ref p1 "pgm/interCfg.ml" 18 417 430 "pgm/interCfg.ml" 18 417 432
+)
+"pgm/interCfg.ml" 18 417 452 "pgm/interCfg.ml" 18 417 453
+type(
+  'j -> 'j -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"pgm/interCfg.ml" 18 417 454 "pgm/interCfg.ml" 18 417 456
+type(
+  'j
+)
+ident(
+  int_ref p2 "pgm/interCfg.ml" 18 417 439 "pgm/interCfg.ml" 18 417 441
+)
+"pgm/interCfg.ml" 18 417 449 "pgm/interCfg.ml" 18 417 456
+type(
+  bool
+)
+"pgm/interCfg.ml" 18 417 457 "pgm/interCfg.ml" 18 417 459
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"pgm/interCfg.ml" 18 417 460 "pgm/interCfg.ml" 18 417 479
+type(
+  IntraCfg.Node.t -> IntraCfg.Node.t -> bool
+)
+ident(
+  ext_ref IntraCfg.Node.equal
+)
+"pgm/interCfg.ml" 18 417 480 "pgm/interCfg.ml" 18 417 482
+type(
+  IntraCfg.Node.t
+)
+ident(
+  int_ref n1 "pgm/interCfg.ml" 18 417 434 "pgm/interCfg.ml" 18 417 436
+)
+"pgm/interCfg.ml" 18 417 483 "pgm/interCfg.ml" 18 417 485
+type(
+  IntraCfg.Node.t
+)
+ident(
+  int_ref n2 "pgm/interCfg.ml" 18 417 443 "pgm/interCfg.ml" 18 417 445
+)
+"pgm/interCfg.ml" 18 417 460 "pgm/interCfg.ml" 18 417 485
+call(
+  tail
+)
+type(
+  bool
+)
+"pgm/interCfg.ml" 18 417 449 "pgm/interCfg.ml" 18 417 485
+type(
+  bool
+)
+"pgm/interCfg.ml" 28 590 594 "pgm/interCfg.ml" 28 590 599
+type(
+  t
+)
+ident(
+  def dummy "pgm/interCfg.ml" 33 645 645 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 29 604 613 "pgm/interCfg.ml" 29 604 625
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pgm/interCfg.ml" 30 627 639 "pgm/interCfg.ml" 30 627 641
+type(
+  Cil.global list
+)
+"pgm/interCfg.ml" 28 590 602 "pgm/interCfg.ml" 31 642 643
+type(
+  t
+)
+"pgm/interCfg.ml" 33 645 649 "pgm/interCfg.ml" 33 645 660
+type(
+  string
+)
+ident(
+  def global_proc "pgm/interCfg.ml" 34 669 669 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 33 645 663 "pgm/interCfg.ml" 33 645 668
+type(
+  string
+)
+"pgm/interCfg.ml" 34 669 673 "pgm/interCfg.ml" 34 669 683
+type(
+  string * IntraCfg.Node.t
+)
+ident(
+  def start_node "pgm/interCfg.ml" 36 729 729 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 34 669 686 "pgm/interCfg.ml" 34 669 695
+type(
+  string -> IntraCfg.Node.t -> string * IntraCfg.Node.t
+)
+ident(
+  int_ref Node.make "pgm/interCfg.ml" 13 267 273 "pgm/interCfg.ml" 13 267 277
+)
+"pgm/interCfg.ml" 34 669 696 "pgm/interCfg.ml" 34 669 707
+type(
+  string
+)
+ident(
+  int_ref global_proc "pgm/interCfg.ml" 33 645 649 "pgm/interCfg.ml" 33 645 660
+)
+"pgm/interCfg.ml" 34 669 708 "pgm/interCfg.ml" 34 669 727
+type(
+  IntraCfg.Node.t
+)
+"pgm/interCfg.ml" 34 669 686 "pgm/interCfg.ml" 34 669 727
+call(
+  stack
+)
+type(
+  string * IntraCfg.Node.t
+)
+"pgm/interCfg.ml" 36 729 733 "pgm/interCfg.ml" 36 729 741
+type(
+  Cil.file -> (string, IntraCfg.t) BatMap.t
+)
+ident(
+  def gen_cfgs "pgm/interCfg.ml" 46 1045 1045 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 36 729 742 "pgm/interCfg.ml" 36 729 746
+type(
+  Cil.file
+)
+ident(
+  def file "pgm/interCfg.ml" 37 750 752 "pgm/interCfg.ml" 44 1007 1043
+)
+"pgm/interCfg.ml" 37 750 752 "pgm/interCfg.ml" 37 750 762
+type(
+  string ->
+  IntraCfg.t ->
+  (string, IntraCfg.t) BatMap.t -> (string, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pgm/interCfg.ml" 37 750 763 "pgm/interCfg.ml" 37 750 774
+type(
+  string
+)
+ident(
+  int_ref global_proc "pgm/interCfg.ml" 33 645 649 "pgm/interCfg.ml" 33 645 660
+)
+"pgm/interCfg.ml" 38 777 783 "pgm/interCfg.ml" 38 777 812
+type(
+  Cil.global list -> Cil.fundec -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.generate_global_proc
+)
+"pgm/interCfg.ml" 38 777 813 "pgm/interCfg.ml" 38 777 817
+type(
+  Cil.file
+)
+ident(
+  int_ref file "pgm/interCfg.ml" 36 729 742 "pgm/interCfg.ml" 36 729 746
+)
+"pgm/interCfg.ml" 38 777 813 "pgm/interCfg.ml" 38 777 829
+type(
+  Cil.global list
+)
+"pgm/interCfg.ml" 38 777 831 "pgm/interCfg.ml" 38 777 848
+type(
+  string -> Cil.fundec
+)
+ident(
+  ext_ref Cil.emptyFunction
+)
+"pgm/interCfg.ml" 38 777 849 "pgm/interCfg.ml" 38 777 860
+type(
+  string
+)
+ident(
+  int_ref global_proc "pgm/interCfg.ml" 33 645 649 "pgm/interCfg.ml" 33 645 660
+)
+"pgm/interCfg.ml" 38 777 830 "pgm/interCfg.ml" 38 777 861
+call(
+  stack
+)
+type(
+  Cil.fundec
+)
+"pgm/interCfg.ml" 37 750 775 "pgm/interCfg.ml" 39 862 869
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 40 870 875 "pgm/interCfg.ml" 40 870 884
+type(
+  (Cil.global ->
+   (string, IntraCfg.t) BatMap.t -> (string, IntraCfg.t) BatMap.t) ->
+  Cil.global list ->
+  (string, IntraCfg.t) BatMap.t -> (string, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref Vocab.list_fold
+)
+"pgm/interCfg.ml" 40 870 890 "pgm/interCfg.ml" 40 870 891
+type(
+  Cil.global
+)
+ident(
+  def g "pgm/interCfg.ml" 40 870 892 "pgm/interCfg.ml" 43 992 1006
+)
+"pgm/interCfg.ml" 40 870 892 "pgm/interCfg.ml" 40 870 893
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+ident(
+  def m "pgm/interCfg.ml" 41 897 903 "pgm/interCfg.ml" 43 992 1006
+)
+"pgm/interCfg.ml" 41 897 909 "pgm/interCfg.ml" 41 897 910
+type(
+  Cil.global
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 40 870 890 "pgm/interCfg.ml" 40 870 891
+)
+"pgm/interCfg.ml" 42 916 934 "pgm/interCfg.ml" 42 916 935
+type(
+  Cil.fundec
+)
+ident(
+  def f "pgm/interCfg.ml" 42 916 942 "pgm/interCfg.ml" 42 916 991
+)
+"pgm/interCfg.ml" 42 916 936 "pgm/interCfg.ml" 42 916 937
+type(
+  Cil.location
+)
+"pgm/interCfg.ml" 42 916 924 "pgm/interCfg.ml" 42 916 938
+type(
+  Cil.global
+)
+"pgm/interCfg.ml" 42 916 942 "pgm/interCfg.ml" 42 916 952
+type(
+  string ->
+  IntraCfg.t ->
+  (string, IntraCfg.t) BatMap.t -> (string, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pgm/interCfg.ml" 42 916 953 "pgm/interCfg.ml" 42 916 954
+type(
+  Cil.fundec
+)
+ident(
+  int_ref f "pgm/interCfg.ml" 42 916 934 "pgm/interCfg.ml" 42 916 935
+)
+"pgm/interCfg.ml" 42 916 953 "pgm/interCfg.ml" 42 916 959
+type(
+  Cil.varinfo
+)
+"pgm/interCfg.ml" 42 916 953 "pgm/interCfg.ml" 42 916 965
+type(
+  string
+)
+"pgm/interCfg.ml" 42 916 967 "pgm/interCfg.ml" 42 916 986
+type(
+  Cil.fundec -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.fromFunDec
+)
+"pgm/interCfg.ml" 42 916 987 "pgm/interCfg.ml" 42 916 988
+type(
+  Cil.fundec
+)
+ident(
+  int_ref f "pgm/interCfg.ml" 42 916 934 "pgm/interCfg.ml" 42 916 935
+)
+"pgm/interCfg.ml" 42 916 966 "pgm/interCfg.ml" 42 916 989
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 42 916 990 "pgm/interCfg.ml" 42 916 991
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+ident(
+  int_ref m "pgm/interCfg.ml" 40 870 892 "pgm/interCfg.ml" 40 870 893
+)
+"pgm/interCfg.ml" 42 916 942 "pgm/interCfg.ml" 42 916 991
+call(
+  tail
+)
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 43 992 1000 "pgm/interCfg.ml" 43 992 1001
+type(
+  Cil.global
+)
+"pgm/interCfg.ml" 43 992 1005 "pgm/interCfg.ml" 43 992 1006
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+ident(
+  int_ref m "pgm/interCfg.ml" 40 870 892 "pgm/interCfg.ml" 40 870 893
+)
+"pgm/interCfg.ml" 41 897 903 "pgm/interCfg.ml" 43 992 1006
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 40 870 885 "pgm/interCfg.ml" 44 1007 1012
+type(
+  Cil.global ->
+  (string, IntraCfg.t) BatMap.t -> (string, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 44 1007 1013 "pgm/interCfg.ml" 44 1007 1017
+type(
+  Cil.file
+)
+ident(
+  int_ref file "pgm/interCfg.ml" 36 729 742 "pgm/interCfg.ml" 36 729 746
+)
+"pgm/interCfg.ml" 44 1007 1013 "pgm/interCfg.ml" 44 1007 1029
+type(
+  Cil.global list
+)
+"pgm/interCfg.ml" 44 1007 1030 "pgm/interCfg.ml" 44 1007 1042
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.empty
+)
+"pgm/interCfg.ml" 40 870 874 "pgm/interCfg.ml" 44 1007 1043
+call(
+  stack
+)
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 37 750 752 "pgm/interCfg.ml" 44 1007 1043
+call(
+  tail
+)
+type(
+  (string, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 46 1045 1049 "pgm/interCfg.ml" 46 1045 1068
+type(
+  t -> t
+)
+ident(
+  def compute_dom_and_scc "pgm/interCfg.ml" 54 1310 1310 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 46 1045 1069 "pgm/interCfg.ml" 46 1045 1073
+type(
+  t
+)
+ident(
+  def icfg "pgm/interCfg.ml" 47 1077 1077 "pgm/interCfg.ml" 52 1209 1308
+)
+"pgm/interCfg.ml" 48 1082 1086 "pgm/interCfg.ml" 48 1082 1090
+type(
+  t
+)
+ident(
+  int_ref icfg "pgm/interCfg.ml" 46 1045 1069 "pgm/interCfg.ml" 46 1045 1073
+)
+"pgm/interCfg.ml" 49 1104 1110 "pgm/interCfg.ml" 49 1104 1120
+type(
+  (IntraCfg.t -> IntraCfg.t) ->
+  (pid, IntraCfg.t) BatMap.t -> (pid, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.map
+)
+"pgm/interCfg.ml" 49 1104 1126 "pgm/interCfg.ml" 49 1104 1129
+type(
+  IntraCfg.t
+)
+ident(
+  def cfg "pgm/interCfg.ml" 50 1133 1141 "pgm/interCfg.ml" 50 1133 1188
+)
+"pgm/interCfg.ml" 50 1133 1141 "pgm/interCfg.ml" 50 1133 1161
+type(
+  IntraCfg.t -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.compute_scc
+)
+"pgm/interCfg.ml" 50 1133 1163 "pgm/interCfg.ml" 50 1133 1183
+type(
+  IntraCfg.t -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.compute_dom
+)
+"pgm/interCfg.ml" 50 1133 1184 "pgm/interCfg.ml" 50 1133 1187
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref cfg "pgm/interCfg.ml" 49 1104 1126 "pgm/interCfg.ml" 49 1104 1129
+)
+"pgm/interCfg.ml" 50 1133 1162 "pgm/interCfg.ml" 50 1133 1188
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 50 1133 1141 "pgm/interCfg.ml" 50 1133 1188
+call(
+  tail
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 49 1104 1121 "pgm/interCfg.ml" 51 1189 1196
+type(
+  IntraCfg.t -> IntraCfg.t
+)
+"pgm/interCfg.ml" 51 1189 1197 "pgm/interCfg.ml" 51 1189 1201
+type(
+  t
+)
+ident(
+  int_ref icfg "pgm/interCfg.ml" 46 1045 1069 "pgm/interCfg.ml" 46 1045 1073
+)
+"pgm/interCfg.ml" 51 1189 1197 "pgm/interCfg.ml" 51 1189 1206
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 49 1104 1110 "pgm/interCfg.ml" 51 1189 1206
+call(
+  stack
+)
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 48 1082 1084 "pgm/interCfg.ml" 51 1189 1208
+type(
+  t
+)
+"pgm/interCfg.ml" 52 1209 1214 "pgm/interCfg.ml" 52 1209 1215
+type(
+  exn
+)
+"pgm/interCfg.ml" 52 1209 1219 "pgm/interCfg.ml" 52 1209 1232
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.prerr_endline
+)
+"pgm/interCfg.ml" 52 1209 1233 "pgm/interCfg.ml" 52 1209 1260
+type(
+  string
+)
+"pgm/interCfg.ml" 52 1209 1219 "pgm/interCfg.ml" 52 1209 1260
+call(
+  stack
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 52 1209 1262 "pgm/interCfg.ml" 52 1209 1267
+type(
+  exn -> t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"pgm/interCfg.ml" 52 1209 1277 "pgm/interCfg.ml" 52 1209 1307
+type(
+  string
+)
+"pgm/interCfg.ml" 52 1209 1268 "pgm/interCfg.ml" 52 1209 1308
+type(
+  exn
+)
+"pgm/interCfg.ml" 52 1209 1262 "pgm/interCfg.ml" 52 1209 1308
+type(
+  t
+)
+"pgm/interCfg.ml" 52 1209 1219 "pgm/interCfg.ml" 52 1209 1308
+type(
+  t
+)
+"pgm/interCfg.ml" 47 1077 1077 "pgm/interCfg.ml" 52 1209 1308
+type(
+  t
+)
+"pgm/interCfg.ml" 54 1310 1314 "pgm/interCfg.ml" 54 1310 1318
+type(
+  Cil.file -> t
+)
+ident(
+  def init "pgm/interCfg.ml" 57 1403 1403 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 55 1335 1340 "pgm/interCfg.ml" 55 1335 1344
+type(
+  Cil.file
+)
+ident(
+  def file "pgm/interCfg.ml" 55 1335 1348 "pgm/interCfg.ml" 55 1335 1400
+)
+"pgm/interCfg.ml" 55 1335 1357 "pgm/interCfg.ml" 55 1335 1365
+type(
+  Cil.file -> (pid, IntraCfg.t) BatMap.t
+)
+ident(
+  int_ref gen_cfgs "pgm/interCfg.ml" 36 729 733 "pgm/interCfg.ml" 36 729 741
+)
+"pgm/interCfg.ml" 55 1335 1366 "pgm/interCfg.ml" 55 1335 1370
+type(
+  Cil.file
+)
+ident(
+  int_ref file "pgm/interCfg.ml" 55 1335 1340 "pgm/interCfg.ml" 55 1335 1344
+)
+"pgm/interCfg.ml" 55 1335 1357 "pgm/interCfg.ml" 55 1335 1370
+call(
+  stack
+)
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 55 1335 1382 "pgm/interCfg.ml" 55 1335 1386
+type(
+  Cil.file
+)
+ident(
+  int_ref file "pgm/interCfg.ml" 55 1335 1340 "pgm/interCfg.ml" 55 1335 1344
+)
+"pgm/interCfg.ml" 55 1335 1382 "pgm/interCfg.ml" 55 1335 1398
+type(
+  Cil.global list
+)
+"pgm/interCfg.ml" 55 1335 1348 "pgm/interCfg.ml" 55 1335 1400
+type(
+  t
+)
+"pgm/interCfg.ml" 55 1335 1336 "pgm/interCfg.ml" 55 1335 1400
+type(
+  Cil.file -> t
+)
+type(
+  Cil.file -> t
+)
+"pgm/interCfg.ml" 57 1403 1407 "pgm/interCfg.ml" 57 1403 1422
+type(
+  pid -> t -> t
+)
+ident(
+  def remove_function "pgm/interCfg.ml" 61 1509 1509 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 58 1439 1444 "pgm/interCfg.ml" 58 1439 1447
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 58 1439 1448 "pgm/interCfg.ml" 59 1457 1507
+)
+"pgm/interCfg.ml" 58 1439 1448 "pgm/interCfg.ml" 58 1439 1452
+type(
+  t
+)
+ident(
+  def icfg "pgm/interCfg.ml" 59 1457 1459 "pgm/interCfg.ml" 59 1457 1507
+)
+"pgm/interCfg.ml" 59 1457 1461 "pgm/interCfg.ml" 59 1457 1465
+type(
+  t
+)
+ident(
+  int_ref icfg "pgm/interCfg.ml" 58 1439 1448 "pgm/interCfg.ml" 58 1439 1452
+)
+"pgm/interCfg.ml" 59 1457 1478 "pgm/interCfg.ml" 59 1457 1491
+type(
+  pid -> (pid, IntraCfg.t) BatMap.t -> (pid, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.remove
+)
+"pgm/interCfg.ml" 59 1457 1492 "pgm/interCfg.ml" 59 1457 1495
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 58 1439 1444 "pgm/interCfg.ml" 58 1439 1447
+)
+"pgm/interCfg.ml" 59 1457 1496 "pgm/interCfg.ml" 59 1457 1500
+type(
+  t
+)
+ident(
+  int_ref icfg "pgm/interCfg.ml" 58 1439 1448 "pgm/interCfg.ml" 58 1439 1452
+)
+"pgm/interCfg.ml" 59 1457 1496 "pgm/interCfg.ml" 59 1457 1505
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 59 1457 1478 "pgm/interCfg.ml" 59 1457 1505
+call(
+  stack
+)
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 59 1457 1459 "pgm/interCfg.ml" 59 1457 1507
+type(
+  t
+)
+"pgm/interCfg.ml" 58 1439 1440 "pgm/interCfg.ml" 59 1457 1507
+type(
+  pid -> t -> t
+)
+type(
+  pid -> t -> t
+)
+"pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  def cfgof "pgm/interCfg.ml" 64 1583 1583 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 62 1545 1550 "pgm/interCfg.ml" 62 1545 1551
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 62 1545 1552 "pgm/interCfg.ml" 62 1545 1581
+)
+"pgm/interCfg.ml" 62 1545 1552 "pgm/interCfg.ml" 62 1545 1555
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 62 1545 1559 "pgm/interCfg.ml" 62 1545 1581
+)
+"pgm/interCfg.ml" 62 1545 1559 "pgm/interCfg.ml" 62 1545 1570
+type(
+  pid -> (pid, IntraCfg.t) BatMap.t -> IntraCfg.t
+)
+ident(
+  ext_ref BatMap.find
+)
+"pgm/interCfg.ml" 62 1545 1571 "pgm/interCfg.ml" 62 1545 1574
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 62 1545 1552 "pgm/interCfg.ml" 62 1545 1555
+)
+"pgm/interCfg.ml" 62 1545 1575 "pgm/interCfg.ml" 62 1545 1576
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 62 1545 1550 "pgm/interCfg.ml" 62 1545 1551
+)
+"pgm/interCfg.ml" 62 1545 1575 "pgm/interCfg.ml" 62 1545 1581
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 62 1545 1559 "pgm/interCfg.ml" 62 1545 1581
+call(
+  tail
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 62 1545 1546 "pgm/interCfg.ml" 62 1545 1581
+type(
+  t -> pid -> IntraCfg.t
+)
+type(
+  t -> pid -> IntraCfg.t
+)
+"pgm/interCfg.ml" 64 1583 1587 "pgm/interCfg.ml" 64 1583 1592
+type(
+  t -> Node.t -> IntraCfg.cmd
+)
+ident(
+  def cmdof "pgm/interCfg.ml" 67 1682 1682 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 65 1623 1628 "pgm/interCfg.ml" 65 1623 1629
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 65 1623 1630 "pgm/interCfg.ml" 65 1623 1680
+)
+"pgm/interCfg.ml" 65 1623 1631 "pgm/interCfg.ml" 65 1623 1634
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 65 1623 1644 "pgm/interCfg.ml" 65 1623 1680
+)
+"pgm/interCfg.ml" 65 1623 1635 "pgm/interCfg.ml" 65 1623 1639
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 65 1623 1644 "pgm/interCfg.ml" 65 1623 1680
+)
+"pgm/interCfg.ml" 65 1623 1630 "pgm/interCfg.ml" 65 1623 1640
+type(
+  Node.t
+)
+"pgm/interCfg.ml" 65 1623 1644 "pgm/interCfg.ml" 65 1623 1661
+type(
+  IntraCfg.node -> IntraCfg.t -> IntraCfg.cmd
+)
+ident(
+  ext_ref IntraCfg.find_cmd
+)
+"pgm/interCfg.ml" 65 1623 1662 "pgm/interCfg.ml" 65 1623 1666
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 65 1623 1635 "pgm/interCfg.ml" 65 1623 1639
+)
+"pgm/interCfg.ml" 65 1623 1668 "pgm/interCfg.ml" 65 1623 1673
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 65 1623 1674 "pgm/interCfg.ml" 65 1623 1675
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 65 1623 1628 "pgm/interCfg.ml" 65 1623 1629
+)
+"pgm/interCfg.ml" 65 1623 1676 "pgm/interCfg.ml" 65 1623 1679
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 65 1623 1631 "pgm/interCfg.ml" 65 1623 1634
+)
+"pgm/interCfg.ml" 65 1623 1667 "pgm/interCfg.ml" 65 1623 1680
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 65 1623 1644 "pgm/interCfg.ml" 65 1623 1680
+call(
+  tail
+)
+type(
+  IntraCfg.cmd
+)
+"pgm/interCfg.ml" 65 1623 1624 "pgm/interCfg.ml" 65 1623 1680
+type(
+  t -> Node.t -> IntraCfg.cmd
+)
+type(
+  t -> Node.t -> IntraCfg.cmd
+)
+"pgm/interCfg.ml" 67 1682 1686 "pgm/interCfg.ml" 67 1682 1693
+type(
+  t -> Node.t -> IntraCfg.cmd -> t
+)
+ident(
+  def add_cmd "pgm/interCfg.ml" 71 1838 1838 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 68 1729 1734 "pgm/interCfg.ml" 68 1729 1735
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 68 1729 1736 "pgm/interCfg.ml" 69 1755 1836
+)
+"pgm/interCfg.ml" 68 1729 1737 "pgm/interCfg.ml" 68 1729 1740
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 68 1729 1747 "pgm/interCfg.ml" 69 1755 1836
+)
+"pgm/interCfg.ml" 68 1729 1741 "pgm/interCfg.ml" 68 1729 1745
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 68 1729 1747 "pgm/interCfg.ml" 69 1755 1836
+)
+"pgm/interCfg.ml" 68 1729 1736 "pgm/interCfg.ml" 68 1729 1746
+type(
+  Node.t
+)
+"pgm/interCfg.ml" 68 1729 1747 "pgm/interCfg.ml" 68 1729 1750
+type(
+  IntraCfg.cmd
+)
+ident(
+  def cmd "pgm/interCfg.ml" 69 1755 1757 "pgm/interCfg.ml" 69 1755 1836
+)
+"pgm/interCfg.ml" 69 1755 1758 "pgm/interCfg.ml" 69 1755 1759
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 68 1729 1734 "pgm/interCfg.ml" 68 1729 1735
+)
+"pgm/interCfg.ml" 69 1755 1772 "pgm/interCfg.ml" 69 1755 1782
+type(
+  pid ->
+  IntraCfg.t -> (pid, IntraCfg.t) BatMap.t -> (pid, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pgm/interCfg.ml" 69 1755 1783 "pgm/interCfg.ml" 69 1755 1786
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 68 1729 1737 "pgm/interCfg.ml" 68 1729 1740
+)
+"pgm/interCfg.ml" 69 1755 1788 "pgm/interCfg.ml" 69 1755 1804
+type(
+  IntraCfg.node -> IntraCfg.cmd -> IntraCfg.t -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.add_cmd
+)
+"pgm/interCfg.ml" 69 1755 1805 "pgm/interCfg.ml" 69 1755 1809
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 68 1729 1741 "pgm/interCfg.ml" 68 1729 1745
+)
+"pgm/interCfg.ml" 69 1755 1810 "pgm/interCfg.ml" 69 1755 1813
+type(
+  IntraCfg.cmd
+)
+ident(
+  int_ref cmd "pgm/interCfg.ml" 68 1729 1747 "pgm/interCfg.ml" 68 1729 1750
+)
+"pgm/interCfg.ml" 69 1755 1815 "pgm/interCfg.ml" 69 1755 1820
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 69 1755 1821 "pgm/interCfg.ml" 69 1755 1822
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 68 1729 1734 "pgm/interCfg.ml" 68 1729 1735
+)
+"pgm/interCfg.ml" 69 1755 1823 "pgm/interCfg.ml" 69 1755 1826
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 68 1729 1737 "pgm/interCfg.ml" 68 1729 1740
+)
+"pgm/interCfg.ml" 69 1755 1814 "pgm/interCfg.ml" 69 1755 1827
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 69 1755 1787 "pgm/interCfg.ml" 69 1755 1828
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 69 1755 1829 "pgm/interCfg.ml" 69 1755 1830
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 68 1729 1734 "pgm/interCfg.ml" 68 1729 1735
+)
+"pgm/interCfg.ml" 69 1755 1829 "pgm/interCfg.ml" 69 1755 1835
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 69 1755 1772 "pgm/interCfg.ml" 69 1755 1835
+call(
+  stack
+)
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 69 1755 1757 "pgm/interCfg.ml" 69 1755 1836
+type(
+  t
+)
+"pgm/interCfg.ml" 68 1729 1730 "pgm/interCfg.ml" 69 1755 1836
+type(
+  t -> Node.t -> IntraCfg.cmd -> t
+)
+type(
+  t -> Node.t -> IntraCfg.cmd -> t
+)
+"pgm/interCfg.ml" 71 1838 1842 "pgm/interCfg.ml" 71 1838 1854
+type(
+  t -> pid -> Node.t list
+)
+ident(
+  def nodes_of_pid "pgm/interCfg.ml" 74 1954 1954 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 72 1881 1886 "pgm/interCfg.ml" 72 1881 1887
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 72 1881 1888 "pgm/interCfg.ml" 72 1881 1952
+)
+"pgm/interCfg.ml" 72 1881 1888 "pgm/interCfg.ml" 72 1881 1891
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 72 1881 1895 "pgm/interCfg.ml" 72 1881 1952
+)
+"pgm/interCfg.ml" 72 1881 1895 "pgm/interCfg.ml" 72 1881 1903
+type(
+  (IntraCfg.node -> Node.t) -> IntraCfg.node list -> Node.t list
+)
+ident(
+  ext_ref List.map
+)
+"pgm/interCfg.ml" 72 1881 1905 "pgm/interCfg.ml" 72 1881 1914
+type(
+  pid -> IntraCfg.node -> Node.t
+)
+ident(
+  int_ref Node.make "pgm/interCfg.ml" 13 267 273 "pgm/interCfg.ml" 13 267 277
+)
+"pgm/interCfg.ml" 72 1881 1915 "pgm/interCfg.ml" 72 1881 1918
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 72 1881 1888 "pgm/interCfg.ml" 72 1881 1891
+)
+"pgm/interCfg.ml" 72 1881 1904 "pgm/interCfg.ml" 72 1881 1919
+call(
+  stack
+)
+type(
+  IntraCfg.node -> Node.t
+)
+"pgm/interCfg.ml" 72 1881 1921 "pgm/interCfg.ml" 72 1881 1937
+type(
+  IntraCfg.t -> IntraCfg.node list
+)
+ident(
+  ext_ref IntraCfg.nodesof
+)
+"pgm/interCfg.ml" 72 1881 1939 "pgm/interCfg.ml" 72 1881 1944
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 72 1881 1945 "pgm/interCfg.ml" 72 1881 1946
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 72 1881 1886 "pgm/interCfg.ml" 72 1881 1887
+)
+"pgm/interCfg.ml" 72 1881 1947 "pgm/interCfg.ml" 72 1881 1950
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 72 1881 1888 "pgm/interCfg.ml" 72 1881 1891
+)
+"pgm/interCfg.ml" 72 1881 1938 "pgm/interCfg.ml" 72 1881 1951
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 72 1881 1920 "pgm/interCfg.ml" 72 1881 1952
+call(
+  stack
+)
+type(
+  IntraCfg.node list
+)
+"pgm/interCfg.ml" 72 1881 1895 "pgm/interCfg.ml" 72 1881 1952
+call(
+  tail
+)
+type(
+  Node.t list
+)
+"pgm/interCfg.ml" 72 1881 1882 "pgm/interCfg.ml" 72 1881 1952
+type(
+  t -> pid -> Node.t list
+)
+type(
+  t -> pid -> Node.t list
+)
+"pgm/interCfg.ml" 74 1954 1958 "pgm/interCfg.ml" 74 1954 1967
+type(
+  (pid -> IntraCfg.t -> 'a -> 'a) -> t -> 'a -> 'a
+)
+ident(
+  def fold_cfgs "pgm/interCfg.ml" 76 2001 2001 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 74 1954 1968 "pgm/interCfg.ml" 74 1954 1969
+type(
+  pid -> IntraCfg.t -> 'a -> 'a
+)
+ident(
+  def f "pgm/interCfg.ml" 74 1954 1970 "pgm/interCfg.ml" 74 1954 1999
+)
+"pgm/interCfg.ml" 74 1954 1970 "pgm/interCfg.ml" 74 1954 1971
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 74 1954 1972 "pgm/interCfg.ml" 74 1954 1999
+)
+"pgm/interCfg.ml" 74 1954 1972 "pgm/interCfg.ml" 74 1954 1973
+type(
+  'a
+)
+ident(
+  def a "pgm/interCfg.ml" 74 1954 1976 "pgm/interCfg.ml" 74 1954 1999
+)
+"pgm/interCfg.ml" 74 1954 1976 "pgm/interCfg.ml" 74 1954 1988
+type(
+  (pid -> IntraCfg.t -> 'a -> 'a) -> (pid, IntraCfg.t) BatMap.t -> 'a -> 'a
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pgm/interCfg.ml" 74 1954 1989 "pgm/interCfg.ml" 74 1954 1990
+type(
+  pid -> IntraCfg.t -> 'a -> 'a
+)
+ident(
+  int_ref f "pgm/interCfg.ml" 74 1954 1968 "pgm/interCfg.ml" 74 1954 1969
+)
+"pgm/interCfg.ml" 74 1954 1991 "pgm/interCfg.ml" 74 1954 1992
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 74 1954 1970 "pgm/interCfg.ml" 74 1954 1971
+)
+"pgm/interCfg.ml" 74 1954 1991 "pgm/interCfg.ml" 74 1954 1997
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 74 1954 1998 "pgm/interCfg.ml" 74 1954 1999
+type(
+  'a
+)
+ident(
+  int_ref a "pgm/interCfg.ml" 74 1954 1972 "pgm/interCfg.ml" 74 1954 1973
+)
+"pgm/interCfg.ml" 74 1954 1976 "pgm/interCfg.ml" 74 1954 1999
+call(
+  tail
+)
+type(
+  'a
+)
+"pgm/interCfg.ml" 76 2001 2005 "pgm/interCfg.ml" 76 2001 2012
+type(
+  t -> Node.t list
+)
+ident(
+  def nodesof "pgm/interCfg.ml" 83 2174 2174 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 77 2032 2037 "pgm/interCfg.ml" 77 2032 2038
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 78 2042 2044 "pgm/interCfg.ml" 81 2159 2172
+)
+"pgm/interCfg.ml" 78 2042 2044 "pgm/interCfg.ml" 78 2042 2056
+type(
+  (pid -> IntraCfg.t -> Node.t list -> Node.t list) ->
+  (pid, IntraCfg.t) BatMap.t -> Node.t list -> Node.t list
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pgm/interCfg.ml" 78 2042 2062 "pgm/interCfg.ml" 78 2042 2065
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 78 2042 2066 "pgm/interCfg.ml" 80 2090 2158
+)
+"pgm/interCfg.ml" 78 2042 2066 "pgm/interCfg.ml" 78 2042 2069
+type(
+  IntraCfg.t
+)
+ident(
+  def cfg "pgm/interCfg.ml" 79 2073 2077 "pgm/interCfg.ml" 80 2090 2158
+)
+"pgm/interCfg.ml" 79 2073 2077 "pgm/interCfg.ml" 79 2073 2088
+type(
+  Node.t list -> Node.t list -> Node.t list
+)
+ident(
+  ext_ref List.append
+)
+"pgm/interCfg.ml" 80 2090 2099 "pgm/interCfg.ml" 80 2090 2107
+type(
+  (IntraCfg.node -> Node.t) -> IntraCfg.node list -> Node.t list
+)
+ident(
+  ext_ref List.map
+)
+"pgm/interCfg.ml" 80 2090 2113 "pgm/interCfg.ml" 80 2090 2114
+type(
+  IntraCfg.node
+)
+ident(
+  def n "pgm/interCfg.ml" 80 2090 2118 "pgm/interCfg.ml" 80 2090 2133
+)
+"pgm/interCfg.ml" 80 2090 2118 "pgm/interCfg.ml" 80 2090 2127
+type(
+  pid -> IntraCfg.node -> Node.t
+)
+ident(
+  int_ref Node.make "pgm/interCfg.ml" 13 267 273 "pgm/interCfg.ml" 13 267 277
+)
+"pgm/interCfg.ml" 80 2090 2128 "pgm/interCfg.ml" 80 2090 2131
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 78 2042 2062 "pgm/interCfg.ml" 78 2042 2065
+)
+"pgm/interCfg.ml" 80 2090 2132 "pgm/interCfg.ml" 80 2090 2133
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref n "pgm/interCfg.ml" 80 2090 2113 "pgm/interCfg.ml" 80 2090 2114
+)
+"pgm/interCfg.ml" 80 2090 2118 "pgm/interCfg.ml" 80 2090 2133
+call(
+  tail
+)
+type(
+  Node.t
+)
+"pgm/interCfg.ml" 80 2090 2108 "pgm/interCfg.ml" 80 2090 2134
+type(
+  IntraCfg.node -> Node.t
+)
+"pgm/interCfg.ml" 80 2090 2136 "pgm/interCfg.ml" 80 2090 2152
+type(
+  IntraCfg.t -> IntraCfg.node list
+)
+ident(
+  ext_ref IntraCfg.nodesof
+)
+"pgm/interCfg.ml" 80 2090 2153 "pgm/interCfg.ml" 80 2090 2156
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref cfg "pgm/interCfg.ml" 78 2042 2066 "pgm/interCfg.ml" 78 2042 2069
+)
+"pgm/interCfg.ml" 80 2090 2135 "pgm/interCfg.ml" 80 2090 2157
+call(
+  stack
+)
+type(
+  IntraCfg.node list
+)
+"pgm/interCfg.ml" 80 2090 2098 "pgm/interCfg.ml" 80 2090 2158
+call(
+  stack
+)
+type(
+  Node.t list
+)
+"pgm/interCfg.ml" 79 2073 2077 "pgm/interCfg.ml" 80 2090 2158
+call(
+  tail
+)
+type(
+  Node.t list -> Node.t list
+)
+"pgm/interCfg.ml" 78 2042 2057 "pgm/interCfg.ml" 81 2159 2162
+type(
+  pid -> IntraCfg.t -> Node.t list -> Node.t list
+)
+"pgm/interCfg.ml" 81 2159 2163 "pgm/interCfg.ml" 81 2159 2164
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 77 2032 2037 "pgm/interCfg.ml" 77 2032 2038
+)
+"pgm/interCfg.ml" 81 2159 2163 "pgm/interCfg.ml" 81 2159 2169
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 81 2159 2170 "pgm/interCfg.ml" 81 2159 2172
+type(
+  Node.t list
+)
+"pgm/interCfg.ml" 78 2042 2044 "pgm/interCfg.ml" 81 2159 2172
+call(
+  tail
+)
+type(
+  Node.t list
+)
+"pgm/interCfg.ml" 77 2032 2033 "pgm/interCfg.ml" 81 2159 2172
+type(
+  t -> Node.t list
+)
+type(
+  t -> Node.t list
+)
+"pgm/interCfg.ml" 83 2174 2178 "pgm/interCfg.ml" 83 2174 2184
+type(
+  t -> pid list
+)
+ident(
+  def pidsof "pgm/interCfg.ml" 87 2267 2267 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 84 2201 2206 "pgm/interCfg.ml" 84 2201 2207
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 85 2211 2213 "pgm/interCfg.ml" 85 2211 2265
+)
+"pgm/interCfg.ml" 85 2211 2213 "pgm/interCfg.ml" 85 2211 2225
+type(
+  (pid -> IntraCfg.t -> pid list -> pid list) ->
+  (pid, IntraCfg.t) BatMap.t -> pid list -> pid list
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pgm/interCfg.ml" 85 2211 2231 "pgm/interCfg.ml" 85 2211 2234
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 85 2211 2235 "pgm/interCfg.ml" 85 2211 2254
+)
+"pgm/interCfg.ml" 85 2211 2235 "pgm/interCfg.ml" 85 2211 2236
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 85 2211 2237 "pgm/interCfg.ml" 85 2211 2240
+type(
+  pid list
+)
+ident(
+  def acc "pgm/interCfg.ml" 85 2211 2244 "pgm/interCfg.ml" 85 2211 2254
+)
+"pgm/interCfg.ml" 85 2211 2244 "pgm/interCfg.ml" 85 2211 2247
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 85 2211 2231 "pgm/interCfg.ml" 85 2211 2234
+)
+"pgm/interCfg.ml" 85 2211 2251 "pgm/interCfg.ml" 85 2211 2254
+type(
+  pid list
+)
+ident(
+  int_ref acc "pgm/interCfg.ml" 85 2211 2237 "pgm/interCfg.ml" 85 2211 2240
+)
+"pgm/interCfg.ml" 85 2211 2244 "pgm/interCfg.ml" 85 2211 2254
+type(
+  pid list
+)
+"pgm/interCfg.ml" 85 2211 2226 "pgm/interCfg.ml" 85 2211 2255
+type(
+  pid -> IntraCfg.t -> pid list -> pid list
+)
+"pgm/interCfg.ml" 85 2211 2256 "pgm/interCfg.ml" 85 2211 2257
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 84 2201 2206 "pgm/interCfg.ml" 84 2201 2207
+)
+"pgm/interCfg.ml" 85 2211 2256 "pgm/interCfg.ml" 85 2211 2262
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 85 2211 2263 "pgm/interCfg.ml" 85 2211 2265
+type(
+  pid list
+)
+"pgm/interCfg.ml" 85 2211 2213 "pgm/interCfg.ml" 85 2211 2265
+call(
+  tail
+)
+type(
+  pid list
+)
+"pgm/interCfg.ml" 84 2201 2202 "pgm/interCfg.ml" 85 2211 2265
+type(
+  t -> pid list
+)
+type(
+  t -> pid list
+)
+"pgm/interCfg.ml" 87 2267 2271 "pgm/interCfg.ml" 87 2267 2279
+type(
+  pid -> t -> bool
+)
+ident(
+  def is_undef "pgm/interCfg.ml" 91 2344 2344 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 88 2299 2304 "pgm/interCfg.ml" 88 2299 2307
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 88 2299 2308 "pgm/interCfg.ml" 89 2313 2342
+)
+"pgm/interCfg.ml" 88 2299 2308 "pgm/interCfg.ml" 88 2299 2309
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 89 2313 2315 "pgm/interCfg.ml" 89 2313 2342
+)
+"pgm/interCfg.ml" 89 2313 2315 "pgm/interCfg.ml" 89 2313 2318
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"pgm/interCfg.ml" 89 2313 2320 "pgm/interCfg.ml" 89 2313 2330
+type(
+  pid -> (pid, IntraCfg.t) BatMap.t -> bool
+)
+ident(
+  ext_ref BatMap.mem
+)
+"pgm/interCfg.ml" 89 2313 2331 "pgm/interCfg.ml" 89 2313 2334
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 88 2299 2304 "pgm/interCfg.ml" 88 2299 2307
+)
+"pgm/interCfg.ml" 89 2313 2335 "pgm/interCfg.ml" 89 2313 2336
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 88 2299 2308 "pgm/interCfg.ml" 88 2299 2309
+)
+"pgm/interCfg.ml" 89 2313 2335 "pgm/interCfg.ml" 89 2313 2341
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 89 2313 2319 "pgm/interCfg.ml" 89 2313 2342
+call(
+  stack
+)
+type(
+  bool
+)
+"pgm/interCfg.ml" 89 2313 2315 "pgm/interCfg.ml" 89 2313 2342
+type(
+  bool
+)
+"pgm/interCfg.ml" 88 2299 2300 "pgm/interCfg.ml" 89 2313 2342
+type(
+  pid -> t -> bool
+)
+type(
+  pid -> t -> bool
+)
+"pgm/interCfg.ml" 91 2344 2348 "pgm/interCfg.ml" 91 2344 2359
+type(
+  node -> t -> bool
+)
+ident(
+  def is_callnode "pgm/interCfg.ml" 94 2442 2442 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 92 2380 2386 "pgm/interCfg.ml" 92 2380 2389
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 92 2380 2396 "pgm/interCfg.ml" 92 2380 2440
+)
+"pgm/interCfg.ml" 92 2380 2390 "pgm/interCfg.ml" 92 2380 2394
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 92 2380 2396 "pgm/interCfg.ml" 92 2380 2440
+)
+"pgm/interCfg.ml" 92 2380 2385 "pgm/interCfg.ml" 92 2380 2395
+type(
+  node
+)
+"pgm/interCfg.ml" 92 2380 2396 "pgm/interCfg.ml" 92 2380 2397
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 92 2380 2401 "pgm/interCfg.ml" 92 2380 2440
+)
+"pgm/interCfg.ml" 92 2380 2401 "pgm/interCfg.ml" 92 2380 2421
+type(
+  IntraCfg.node -> IntraCfg.t -> bool
+)
+ident(
+  ext_ref IntraCfg.is_callnode
+)
+"pgm/interCfg.ml" 92 2380 2422 "pgm/interCfg.ml" 92 2380 2426
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 92 2380 2390 "pgm/interCfg.ml" 92 2380 2394
+)
+"pgm/interCfg.ml" 92 2380 2428 "pgm/interCfg.ml" 92 2380 2433
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 92 2380 2434 "pgm/interCfg.ml" 92 2380 2435
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 92 2380 2396 "pgm/interCfg.ml" 92 2380 2397
+)
+"pgm/interCfg.ml" 92 2380 2436 "pgm/interCfg.ml" 92 2380 2439
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 92 2380 2386 "pgm/interCfg.ml" 92 2380 2389
+)
+"pgm/interCfg.ml" 92 2380 2427 "pgm/interCfg.ml" 92 2380 2440
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 92 2380 2401 "pgm/interCfg.ml" 92 2380 2440
+call(
+  tail
+)
+type(
+  bool
+)
+"pgm/interCfg.ml" 92 2380 2381 "pgm/interCfg.ml" 92 2380 2440
+type(
+  node -> t -> bool
+)
+type(
+  node -> t -> bool
+)
+"pgm/interCfg.ml" 94 2442 2446 "pgm/interCfg.ml" 94 2442 2459
+type(
+  node -> t -> bool
+)
+ident(
+  def is_returnnode "pgm/interCfg.ml" 97 2544 2544 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 95 2480 2486 "pgm/interCfg.ml" 95 2480 2489
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 95 2480 2496 "pgm/interCfg.ml" 95 2480 2542
+)
+"pgm/interCfg.ml" 95 2480 2490 "pgm/interCfg.ml" 95 2480 2494
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 95 2480 2496 "pgm/interCfg.ml" 95 2480 2542
+)
+"pgm/interCfg.ml" 95 2480 2485 "pgm/interCfg.ml" 95 2480 2495
+type(
+  node
+)
+"pgm/interCfg.ml" 95 2480 2496 "pgm/interCfg.ml" 95 2480 2497
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 95 2480 2501 "pgm/interCfg.ml" 95 2480 2542
+)
+"pgm/interCfg.ml" 95 2480 2501 "pgm/interCfg.ml" 95 2480 2523
+type(
+  IntraCfg.node -> IntraCfg.t -> bool
+)
+ident(
+  ext_ref IntraCfg.is_returnnode
+)
+"pgm/interCfg.ml" 95 2480 2524 "pgm/interCfg.ml" 95 2480 2528
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 95 2480 2490 "pgm/interCfg.ml" 95 2480 2494
+)
+"pgm/interCfg.ml" 95 2480 2530 "pgm/interCfg.ml" 95 2480 2535
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 95 2480 2536 "pgm/interCfg.ml" 95 2480 2537
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 95 2480 2496 "pgm/interCfg.ml" 95 2480 2497
+)
+"pgm/interCfg.ml" 95 2480 2538 "pgm/interCfg.ml" 95 2480 2541
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 95 2480 2486 "pgm/interCfg.ml" 95 2480 2489
+)
+"pgm/interCfg.ml" 95 2480 2529 "pgm/interCfg.ml" 95 2480 2542
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 95 2480 2501 "pgm/interCfg.ml" 95 2480 2542
+call(
+  tail
+)
+type(
+  bool
+)
+"pgm/interCfg.ml" 95 2480 2481 "pgm/interCfg.ml" 95 2480 2542
+type(
+  node -> t -> bool
+)
+type(
+  node -> t -> bool
+)
+"pgm/interCfg.ml" 97 2544 2548 "pgm/interCfg.ml" 97 2544 2556
+type(
+  node -> t -> node
+)
+ident(
+  def returnof "pgm/interCfg.ml" 100 2644 2644 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 98 2578 2584 "pgm/interCfg.ml" 98 2578 2587
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 98 2578 2594 "pgm/interCfg.ml" 98 2578 2642
+)
+"pgm/interCfg.ml" 98 2578 2588 "pgm/interCfg.ml" 98 2578 2592
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 98 2578 2594 "pgm/interCfg.ml" 98 2578 2642
+)
+"pgm/interCfg.ml" 98 2578 2583 "pgm/interCfg.ml" 98 2578 2593
+type(
+  node
+)
+"pgm/interCfg.ml" 98 2578 2594 "pgm/interCfg.ml" 98 2578 2595
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 98 2578 2599 "pgm/interCfg.ml" 98 2578 2642
+)
+"pgm/interCfg.ml" 98 2578 2600 "pgm/interCfg.ml" 98 2578 2603
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 98 2578 2584 "pgm/interCfg.ml" 98 2578 2587
+)
+"pgm/interCfg.ml" 98 2578 2605 "pgm/interCfg.ml" 98 2578 2622
+type(
+  IntraCfg.node -> IntraCfg.t -> IntraCfg.node
+)
+ident(
+  ext_ref IntraCfg.returnof
+)
+"pgm/interCfg.ml" 98 2578 2623 "pgm/interCfg.ml" 98 2578 2627
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 98 2578 2588 "pgm/interCfg.ml" 98 2578 2592
+)
+"pgm/interCfg.ml" 98 2578 2629 "pgm/interCfg.ml" 98 2578 2634
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 98 2578 2635 "pgm/interCfg.ml" 98 2578 2636
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 98 2578 2594 "pgm/interCfg.ml" 98 2578 2595
+)
+"pgm/interCfg.ml" 98 2578 2637 "pgm/interCfg.ml" 98 2578 2640
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 98 2578 2584 "pgm/interCfg.ml" 98 2578 2587
+)
+"pgm/interCfg.ml" 98 2578 2628 "pgm/interCfg.ml" 98 2578 2641
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 98 2578 2605 "pgm/interCfg.ml" 98 2578 2641
+call(
+  stack
+)
+type(
+  IntraCfg.node
+)
+"pgm/interCfg.ml" 98 2578 2599 "pgm/interCfg.ml" 98 2578 2642
+type(
+  pid * IntraCfg.node
+)
+"pgm/interCfg.ml" 98 2578 2579 "pgm/interCfg.ml" 98 2578 2642
+type(
+  node -> t -> node
+)
+type(
+  node -> t -> node
+)
+"pgm/interCfg.ml" 100 2644 2648 "pgm/interCfg.ml" 100 2644 2662
+type(
+  node -> t -> bool
+)
+ident(
+  def is_inside_loop "pgm/interCfg.ml" 103 2748 2748 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 101 2683 2689 "pgm/interCfg.ml" 101 2683 2692
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 101 2683 2699 "pgm/interCfg.ml" 101 2683 2746
+)
+"pgm/interCfg.ml" 101 2683 2693 "pgm/interCfg.ml" 101 2683 2697
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 101 2683 2699 "pgm/interCfg.ml" 101 2683 2746
+)
+"pgm/interCfg.ml" 101 2683 2688 "pgm/interCfg.ml" 101 2683 2698
+type(
+  node
+)
+"pgm/interCfg.ml" 101 2683 2699 "pgm/interCfg.ml" 101 2683 2700
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 101 2683 2704 "pgm/interCfg.ml" 101 2683 2746
+)
+"pgm/interCfg.ml" 101 2683 2704 "pgm/interCfg.ml" 101 2683 2727
+type(
+  IntraCfg.node -> IntraCfg.t -> bool
+)
+ident(
+  ext_ref IntraCfg.is_inside_loop
+)
+"pgm/interCfg.ml" 101 2683 2728 "pgm/interCfg.ml" 101 2683 2732
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 101 2683 2693 "pgm/interCfg.ml" 101 2683 2697
+)
+"pgm/interCfg.ml" 101 2683 2734 "pgm/interCfg.ml" 101 2683 2739
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 101 2683 2740 "pgm/interCfg.ml" 101 2683 2741
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 101 2683 2699 "pgm/interCfg.ml" 101 2683 2700
+)
+"pgm/interCfg.ml" 101 2683 2742 "pgm/interCfg.ml" 101 2683 2745
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 101 2683 2689 "pgm/interCfg.ml" 101 2683 2692
+)
+"pgm/interCfg.ml" 101 2683 2733 "pgm/interCfg.ml" 101 2683 2746
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 101 2683 2704 "pgm/interCfg.ml" 101 2683 2746
+call(
+  tail
+)
+type(
+  bool
+)
+"pgm/interCfg.ml" 101 2683 2684 "pgm/interCfg.ml" 101 2683 2746
+type(
+  node -> t -> bool
+)
+type(
+  node -> t -> bool
+)
+"pgm/interCfg.ml" 103 2748 2752 "pgm/interCfg.ml" 103 2748 2758
+type(
+  node -> t -> node
+)
+ident(
+  def callof "pgm/interCfg.ml" 106 2843 2843 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 104 2779 2785 "pgm/interCfg.ml" 104 2779 2788
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 104 2779 2795 "pgm/interCfg.ml" 104 2779 2841
+)
+"pgm/interCfg.ml" 104 2779 2789 "pgm/interCfg.ml" 104 2779 2793
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 104 2779 2795 "pgm/interCfg.ml" 104 2779 2841
+)
+"pgm/interCfg.ml" 104 2779 2784 "pgm/interCfg.ml" 104 2779 2794
+type(
+  node
+)
+"pgm/interCfg.ml" 104 2779 2795 "pgm/interCfg.ml" 104 2779 2796
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 104 2779 2800 "pgm/interCfg.ml" 104 2779 2841
+)
+"pgm/interCfg.ml" 104 2779 2801 "pgm/interCfg.ml" 104 2779 2804
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 104 2779 2785 "pgm/interCfg.ml" 104 2779 2788
+)
+"pgm/interCfg.ml" 104 2779 2806 "pgm/interCfg.ml" 104 2779 2821
+type(
+  IntraCfg.node -> IntraCfg.t -> IntraCfg.node
+)
+ident(
+  ext_ref IntraCfg.callof
+)
+"pgm/interCfg.ml" 104 2779 2822 "pgm/interCfg.ml" 104 2779 2826
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 104 2779 2789 "pgm/interCfg.ml" 104 2779 2793
+)
+"pgm/interCfg.ml" 104 2779 2828 "pgm/interCfg.ml" 104 2779 2833
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 104 2779 2834 "pgm/interCfg.ml" 104 2779 2835
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 104 2779 2795 "pgm/interCfg.ml" 104 2779 2796
+)
+"pgm/interCfg.ml" 104 2779 2836 "pgm/interCfg.ml" 104 2779 2839
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 104 2779 2785 "pgm/interCfg.ml" 104 2779 2788
+)
+"pgm/interCfg.ml" 104 2779 2827 "pgm/interCfg.ml" 104 2779 2840
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 104 2779 2806 "pgm/interCfg.ml" 104 2779 2840
+call(
+  stack
+)
+type(
+  IntraCfg.node
+)
+"pgm/interCfg.ml" 104 2779 2800 "pgm/interCfg.ml" 104 2779 2841
+type(
+  pid * IntraCfg.node
+)
+"pgm/interCfg.ml" 104 2779 2780 "pgm/interCfg.ml" 104 2779 2841
+type(
+  node -> t -> node
+)
+type(
+  node -> t -> node
+)
+"pgm/interCfg.ml" 106 2843 2847 "pgm/interCfg.ml" 106 2843 2853
+type(
+  t -> pid -> string list
+)
+ident(
+  def argsof "pgm/interCfg.ml" 109 2930 2930 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 107 2880 2885 "pgm/interCfg.ml" 107 2880 2886
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 107 2880 2887 "pgm/interCfg.ml" 107 2880 2928
+)
+"pgm/interCfg.ml" 107 2880 2887 "pgm/interCfg.ml" 107 2880 2890
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 107 2880 2894 "pgm/interCfg.ml" 107 2880 2928
+)
+"pgm/interCfg.ml" 107 2880 2894 "pgm/interCfg.ml" 107 2880 2914
+type(
+  IntraCfg.t -> string list
+)
+ident(
+  ext_ref IntraCfg.get_formals
+)
+"pgm/interCfg.ml" 107 2880 2916 "pgm/interCfg.ml" 107 2880 2921
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 107 2880 2922 "pgm/interCfg.ml" 107 2880 2923
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 107 2880 2885 "pgm/interCfg.ml" 107 2880 2886
+)
+"pgm/interCfg.ml" 107 2880 2924 "pgm/interCfg.ml" 107 2880 2927
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 107 2880 2887 "pgm/interCfg.ml" 107 2880 2890
+)
+"pgm/interCfg.ml" 107 2880 2915 "pgm/interCfg.ml" 107 2880 2928
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 107 2880 2894 "pgm/interCfg.ml" 107 2880 2928
+call(
+  tail
+)
+type(
+  string list
+)
+"pgm/interCfg.ml" 107 2880 2881 "pgm/interCfg.ml" 107 2880 2928
+type(
+  t -> pid -> string list
+)
+type(
+  t -> pid -> string list
+)
+"pgm/interCfg.ml" 109 2930 2934 "pgm/interCfg.ml" 109 2930 2945
+type(
+  t -> node list
+)
+ident(
+  def callnodesof "pgm/interCfg.ml" 112 3031 3031 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 110 2963 2968 "pgm/interCfg.ml" 110 2963 2969
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 110 2963 2973 "pgm/interCfg.ml" 110 2963 3029
+)
+"pgm/interCfg.ml" 110 2963 2973 "pgm/interCfg.ml" 110 2963 2984
+type(
+  (node -> bool) -> node list -> node list
+)
+ident(
+  ext_ref List.filter
+)
+"pgm/interCfg.ml" 110 2963 2990 "pgm/interCfg.ml" 110 2963 2994
+type(
+  node
+)
+ident(
+  def node "pgm/interCfg.ml" 110 2963 2998 "pgm/interCfg.ml" 110 2963 3016
+)
+"pgm/interCfg.ml" 110 2963 2998 "pgm/interCfg.ml" 110 2963 3009
+type(
+  node -> t -> bool
+)
+ident(
+  int_ref is_callnode "pgm/interCfg.ml" 91 2344 2348 "pgm/interCfg.ml" 91 2344 2359
+)
+"pgm/interCfg.ml" 110 2963 3010 "pgm/interCfg.ml" 110 2963 3014
+type(
+  node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 110 2963 2990 "pgm/interCfg.ml" 110 2963 2994
+)
+"pgm/interCfg.ml" 110 2963 3015 "pgm/interCfg.ml" 110 2963 3016
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 110 2963 2968 "pgm/interCfg.ml" 110 2963 2969
+)
+"pgm/interCfg.ml" 110 2963 2998 "pgm/interCfg.ml" 110 2963 3016
+call(
+  tail
+)
+type(
+  bool
+)
+"pgm/interCfg.ml" 110 2963 2985 "pgm/interCfg.ml" 110 2963 3017
+type(
+  node -> bool
+)
+"pgm/interCfg.ml" 110 2963 3019 "pgm/interCfg.ml" 110 2963 3026
+type(
+  t -> node list
+)
+ident(
+  int_ref nodesof "pgm/interCfg.ml" 76 2001 2005 "pgm/interCfg.ml" 76 2001 2012
+)
+"pgm/interCfg.ml" 110 2963 3027 "pgm/interCfg.ml" 110 2963 3028
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 110 2963 2968 "pgm/interCfg.ml" 110 2963 2969
+)
+"pgm/interCfg.ml" 110 2963 3018 "pgm/interCfg.ml" 110 2963 3029
+call(
+  stack
+)
+type(
+  node list
+)
+"pgm/interCfg.ml" 110 2963 2973 "pgm/interCfg.ml" 110 2963 3029
+call(
+  tail
+)
+type(
+  node list
+)
+"pgm/interCfg.ml" 110 2963 2964 "pgm/interCfg.ml" 110 2963 3029
+type(
+  t -> node list
+)
+type(
+  t -> node list
+)
+"pgm/interCfg.ml" 112 3031 3035 "pgm/interCfg.ml" 112 3031 3042
+type(
+  t -> pid -> node
+)
+ident(
+  def entryof "pgm/interCfg.ml" 115 3111 3111 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 113 3062 3067 "pgm/interCfg.ml" 113 3062 3068
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 113 3062 3069 "pgm/interCfg.ml" 113 3062 3109
+)
+"pgm/interCfg.ml" 113 3062 3069 "pgm/interCfg.ml" 113 3062 3072
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 113 3062 3076 "pgm/interCfg.ml" 113 3062 3109
+)
+"pgm/interCfg.ml" 113 3062 3076 "pgm/interCfg.ml" 113 3062 3085
+type(
+  pid -> IntraCfg.node -> node
+)
+ident(
+  int_ref Node.make "pgm/interCfg.ml" 13 267 273 "pgm/interCfg.ml" 13 267 277
+)
+"pgm/interCfg.ml" 113 3062 3086 "pgm/interCfg.ml" 113 3062 3089
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 113 3062 3069 "pgm/interCfg.ml" 113 3062 3072
+)
+"pgm/interCfg.ml" 113 3062 3090 "pgm/interCfg.ml" 113 3062 3109
+type(
+  IntraCfg.node
+)
+"pgm/interCfg.ml" 113 3062 3076 "pgm/interCfg.ml" 113 3062 3109
+call(
+  tail
+)
+type(
+  node
+)
+"pgm/interCfg.ml" 113 3062 3063 "pgm/interCfg.ml" 113 3062 3109
+type(
+  t -> pid -> node
+)
+type(
+  t -> pid -> node
+)
+"pgm/interCfg.ml" 115 3111 3115 "pgm/interCfg.ml" 115 3111 3121
+type(
+  t -> pid -> node
+)
+ident(
+  def exitof "pgm/interCfg.ml" 118 3189 3189 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 116 3141 3146 "pgm/interCfg.ml" 116 3141 3147
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 116 3141 3148 "pgm/interCfg.ml" 116 3141 3187
+)
+"pgm/interCfg.ml" 116 3141 3148 "pgm/interCfg.ml" 116 3141 3151
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 116 3141 3155 "pgm/interCfg.ml" 116 3141 3187
+)
+"pgm/interCfg.ml" 116 3141 3155 "pgm/interCfg.ml" 116 3141 3164
+type(
+  pid -> IntraCfg.node -> node
+)
+ident(
+  int_ref Node.make "pgm/interCfg.ml" 13 267 273 "pgm/interCfg.ml" 13 267 277
+)
+"pgm/interCfg.ml" 116 3141 3165 "pgm/interCfg.ml" 116 3141 3168
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 116 3141 3148 "pgm/interCfg.ml" 116 3141 3151
+)
+"pgm/interCfg.ml" 116 3141 3169 "pgm/interCfg.ml" 116 3141 3187
+type(
+  IntraCfg.node
+)
+"pgm/interCfg.ml" 116 3141 3155 "pgm/interCfg.ml" 116 3141 3187
+call(
+  tail
+)
+type(
+  node
+)
+"pgm/interCfg.ml" 116 3141 3142 "pgm/interCfg.ml" 116 3141 3187
+type(
+  t -> pid -> node
+)
+type(
+  t -> pid -> node
+)
+"pgm/interCfg.ml" 118 3189 3193 "pgm/interCfg.ml" 118 3189 3213
+type(
+  pid -> IntraCfg.t -> node BatSet.t
+)
+ident(
+  def unreachable_node_pid "pgm/interCfg.ml" 122 3341 3341 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 119 3251 3256 "pgm/interCfg.ml" 119 3251 3259
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 119 3251 3260 "pgm/interCfg.ml" 120 3268 3339
+)
+"pgm/interCfg.ml" 119 3251 3260 "pgm/interCfg.ml" 119 3251 3264
+type(
+  IntraCfg.t
+)
+ident(
+  def icfg "pgm/interCfg.ml" 120 3268 3270 "pgm/interCfg.ml" 120 3268 3339
+)
+"pgm/interCfg.ml" 120 3268 3270 "pgm/interCfg.ml" 120 3268 3280
+type(
+  (IntraCfg.node -> node) -> IntraCfg.node BatSet.t -> node BatSet.t
+)
+ident(
+  ext_ref BatSet.map
+)
+"pgm/interCfg.ml" 120 3268 3286 "pgm/interCfg.ml" 120 3268 3290
+type(
+  IntraCfg.node
+)
+ident(
+  def node "pgm/interCfg.ml" 120 3268 3294 "pgm/interCfg.ml" 120 3268 3305
+)
+"pgm/interCfg.ml" 120 3268 3295 "pgm/interCfg.ml" 120 3268 3298
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 119 3251 3256 "pgm/interCfg.ml" 119 3251 3259
+)
+"pgm/interCfg.ml" 120 3268 3300 "pgm/interCfg.ml" 120 3268 3304
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref node "pgm/interCfg.ml" 120 3268 3286 "pgm/interCfg.ml" 120 3268 3290
+)
+"pgm/interCfg.ml" 120 3268 3294 "pgm/interCfg.ml" 120 3268 3305
+type(
+  pid * IntraCfg.node
+)
+"pgm/interCfg.ml" 120 3268 3281 "pgm/interCfg.ml" 120 3268 3306
+type(
+  IntraCfg.node -> node
+)
+"pgm/interCfg.ml" 120 3268 3308 "pgm/interCfg.ml" 120 3268 3333
+type(
+  IntraCfg.t -> IntraCfg.node BatSet.t
+)
+ident(
+  ext_ref IntraCfg.unreachable_node
+)
+"pgm/interCfg.ml" 120 3268 3334 "pgm/interCfg.ml" 120 3268 3338
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref icfg "pgm/interCfg.ml" 119 3251 3260 "pgm/interCfg.ml" 119 3251 3264
+)
+"pgm/interCfg.ml" 120 3268 3307 "pgm/interCfg.ml" 120 3268 3339
+call(
+  stack
+)
+type(
+  IntraCfg.node BatSet.t
+)
+"pgm/interCfg.ml" 120 3268 3270 "pgm/interCfg.ml" 120 3268 3339
+call(
+  tail
+)
+type(
+  node BatSet.t
+)
+"pgm/interCfg.ml" 119 3251 3252 "pgm/interCfg.ml" 120 3268 3339
+type(
+  pid -> IntraCfg.t -> node BatSet.t
+)
+type(
+  pid -> IntraCfg.t -> node BatSet.t
+)
+"pgm/interCfg.ml" 122 3341 3345 "pgm/interCfg.ml" 122 3341 3361
+type(
+  t -> node BatSet.t
+)
+ident(
+  def unreachable_node "pgm/interCfg.ml" 128 3532 3532 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 123 3383 3388 "pgm/interCfg.ml" 123 3383 3389
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 124 3393 3395 "pgm/interCfg.ml" 126 3483 3530
+)
+"pgm/interCfg.ml" 124 3393 3399 "pgm/interCfg.ml" 124 3393 3419
+type(
+  pid -> IntraCfg.t -> node BatSet.t -> node BatSet.t
+)
+ident(
+  def add_unreachable_node "pgm/interCfg.ml" 126 3483 3485 "pgm/interCfg.ml" 126 3483 3530
+)
+"pgm/interCfg.ml" 124 3393 3420 "pgm/interCfg.ml" 124 3393 3423
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 124 3393 3424 "pgm/interCfg.ml" 125 3431 3479
+)
+"pgm/interCfg.ml" 124 3393 3424 "pgm/interCfg.ml" 124 3393 3428
+type(
+  IntraCfg.t
+)
+ident(
+  def icfg "pgm/interCfg.ml" 125 3431 3435 "pgm/interCfg.ml" 125 3431 3479
+)
+"pgm/interCfg.ml" 125 3431 3435 "pgm/interCfg.ml" 125 3431 3447
+type(
+  node BatSet.t -> node BatSet.t -> node BatSet.t
+)
+ident(
+  ext_ref BatSet.union
+)
+"pgm/interCfg.ml" 125 3431 3449 "pgm/interCfg.ml" 125 3431 3469
+type(
+  pid -> IntraCfg.t -> node BatSet.t
+)
+ident(
+  int_ref unreachable_node_pid "pgm/interCfg.ml" 118 3189 3193 "pgm/interCfg.ml" 118 3189 3213
+)
+"pgm/interCfg.ml" 125 3431 3470 "pgm/interCfg.ml" 125 3431 3473
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 124 3393 3420 "pgm/interCfg.ml" 124 3393 3423
+)
+"pgm/interCfg.ml" 125 3431 3474 "pgm/interCfg.ml" 125 3431 3478
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref icfg "pgm/interCfg.ml" 124 3393 3424 "pgm/interCfg.ml" 124 3393 3428
+)
+"pgm/interCfg.ml" 125 3431 3448 "pgm/interCfg.ml" 125 3431 3479
+call(
+  stack
+)
+type(
+  node BatSet.t
+)
+"pgm/interCfg.ml" 125 3431 3435 "pgm/interCfg.ml" 125 3431 3479
+call(
+  tail
+)
+type(
+  node BatSet.t -> node BatSet.t
+)
+"pgm/interCfg.ml" 126 3483 3485 "pgm/interCfg.ml" 126 3483 3494
+type(
+  (pid -> IntraCfg.t -> node BatSet.t -> node BatSet.t) ->
+  t -> node BatSet.t -> node BatSet.t
+)
+ident(
+  int_ref fold_cfgs "pgm/interCfg.ml" 74 1954 1958 "pgm/interCfg.ml" 74 1954 1967
+)
+"pgm/interCfg.ml" 126 3483 3495 "pgm/interCfg.ml" 126 3483 3515
+type(
+  pid -> IntraCfg.t -> node BatSet.t -> node BatSet.t
+)
+ident(
+  int_ref add_unreachable_node "pgm/interCfg.ml" 124 3393 3399 "pgm/interCfg.ml" 124 3393 3419
+)
+"pgm/interCfg.ml" 126 3483 3516 "pgm/interCfg.ml" 126 3483 3517
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 123 3383 3388 "pgm/interCfg.ml" 123 3383 3389
+)
+"pgm/interCfg.ml" 126 3483 3518 "pgm/interCfg.ml" 126 3483 3530
+type(
+  node BatSet.t
+)
+ident(
+  ext_ref BatSet.empty
+)
+"pgm/interCfg.ml" 126 3483 3485 "pgm/interCfg.ml" 126 3483 3530
+call(
+  tail
+)
+type(
+  node BatSet.t
+)
+"pgm/interCfg.ml" 124 3393 3395 "pgm/interCfg.ml" 126 3483 3530
+type(
+  node BatSet.t
+)
+"pgm/interCfg.ml" 123 3383 3384 "pgm/interCfg.ml" 126 3483 3530
+type(
+  t -> node BatSet.t
+)
+type(
+  t -> node BatSet.t
+)
+"pgm/interCfg.ml" 128 3532 3536 "pgm/interCfg.ml" 128 3532 3547
+type(
+  node -> t -> t
+)
+ident(
+  def remove_node "pgm/interCfg.ml" 134 3742 3742 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 129 3565 3571 "pgm/interCfg.ml" 129 3565 3574
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 129 3565 3588 "pgm/interCfg.ml" 132 3689 3740
+)
+"pgm/interCfg.ml" 129 3565 3576 "pgm/interCfg.ml" 129 3565 3586
+type(
+  IntraCfg.node
+)
+ident(
+  def intra_node "pgm/interCfg.ml" 129 3565 3588 "pgm/interCfg.ml" 132 3689 3740
+)
+"pgm/interCfg.ml" 129 3565 3570 "pgm/interCfg.ml" 129 3565 3587
+type(
+  node
+)
+"pgm/interCfg.ml" 129 3565 3588 "pgm/interCfg.ml" 129 3565 3589
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 130 3593 3595 "pgm/interCfg.ml" 132 3689 3740
+)
+"pgm/interCfg.ml" 130 3593 3599 "pgm/interCfg.ml" 130 3593 3608
+type(
+  IntraCfg.t
+)
+ident(
+  def intra_cfg "pgm/interCfg.ml" 131 3626 3628 "pgm/interCfg.ml" 132 3689 3740
+)
+"pgm/interCfg.ml" 130 3593 3611 "pgm/interCfg.ml" 130 3593 3616
+type(
+  t -> pid -> IntraCfg.t
+)
+ident(
+  int_ref cfgof "pgm/interCfg.ml" 61 1509 1513 "pgm/interCfg.ml" 61 1509 1518
+)
+"pgm/interCfg.ml" 130 3593 3617 "pgm/interCfg.ml" 130 3593 3618
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 129 3565 3588 "pgm/interCfg.ml" 129 3565 3589
+)
+"pgm/interCfg.ml" 130 3593 3619 "pgm/interCfg.ml" 130 3593 3622
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 129 3565 3571 "pgm/interCfg.ml" 129 3565 3574
+)
+"pgm/interCfg.ml" 130 3593 3611 "pgm/interCfg.ml" 130 3593 3622
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 131 3626 3632 "pgm/interCfg.ml" 131 3626 3641
+type(
+  IntraCfg.t
+)
+ident(
+  def intra_cfg "pgm/interCfg.ml" 132 3689 3691 "pgm/interCfg.ml" 132 3689 3740
+)
+"pgm/interCfg.ml" 131 3626 3644 "pgm/interCfg.ml" 131 3626 3664
+type(
+  IntraCfg.node -> IntraCfg.t -> IntraCfg.t
+)
+ident(
+  ext_ref IntraCfg.remove_node
+)
+"pgm/interCfg.ml" 131 3626 3665 "pgm/interCfg.ml" 131 3626 3675
+type(
+  IntraCfg.node
+)
+ident(
+  int_ref intra_node "pgm/interCfg.ml" 129 3565 3576 "pgm/interCfg.ml" 129 3565 3586
+)
+"pgm/interCfg.ml" 131 3626 3676 "pgm/interCfg.ml" 131 3626 3685
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref intra_cfg "pgm/interCfg.ml" 130 3593 3599 "pgm/interCfg.ml" 130 3593 3608
+)
+"pgm/interCfg.ml" 131 3626 3644 "pgm/interCfg.ml" 131 3626 3685
+call(
+  stack
+)
+type(
+  IntraCfg.t
+)
+"pgm/interCfg.ml" 132 3689 3693 "pgm/interCfg.ml" 132 3689 3694
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 129 3565 3588 "pgm/interCfg.ml" 129 3565 3589
+)
+"pgm/interCfg.ml" 132 3689 3707 "pgm/interCfg.ml" 132 3689 3717
+type(
+  pid ->
+  IntraCfg.t -> (pid, IntraCfg.t) BatMap.t -> (pid, IntraCfg.t) BatMap.t
+)
+ident(
+  ext_ref BatMap.add
+)
+"pgm/interCfg.ml" 132 3689 3718 "pgm/interCfg.ml" 132 3689 3721
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 129 3565 3571 "pgm/interCfg.ml" 129 3565 3574
+)
+"pgm/interCfg.ml" 132 3689 3722 "pgm/interCfg.ml" 132 3689 3731
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref intra_cfg "pgm/interCfg.ml" 131 3626 3632 "pgm/interCfg.ml" 131 3626 3641
+)
+"pgm/interCfg.ml" 132 3689 3732 "pgm/interCfg.ml" 132 3689 3733
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 129 3565 3588 "pgm/interCfg.ml" 129 3565 3589
+)
+"pgm/interCfg.ml" 132 3689 3732 "pgm/interCfg.ml" 132 3689 3738
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 132 3689 3707 "pgm/interCfg.ml" 132 3689 3738
+call(
+  stack
+)
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 132 3689 3691 "pgm/interCfg.ml" 132 3689 3740
+type(
+  t
+)
+"pgm/interCfg.ml" 131 3626 3628 "pgm/interCfg.ml" 132 3689 3740
+type(
+  t
+)
+"pgm/interCfg.ml" 130 3593 3595 "pgm/interCfg.ml" 132 3689 3740
+type(
+  t
+)
+"pgm/interCfg.ml" 129 3565 3566 "pgm/interCfg.ml" 132 3689 3740
+type(
+  node -> t -> t
+)
+type(
+  node -> t -> t
+)
+"pgm/interCfg.ml" 134 3742 3746 "pgm/interCfg.ml" 134 3742 3751
+type(
+  out_channel -> t -> unit
+)
+ident(
+  def print "pgm/interCfg.ml" 138 3922 3922 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 135 3779 3784 "pgm/interCfg.ml" 135 3779 3788
+type(
+  out_channel
+)
+ident(
+  def chan "pgm/interCfg.ml" 135 3779 3789 "pgm/interCfg.ml" 135 3779 3857
+)
+"pgm/interCfg.ml" 135 3779 3789 "pgm/interCfg.ml" 135 3779 3790
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 135 3779 3794 "pgm/interCfg.ml" 135 3779 3857
+)
+"pgm/interCfg.ml" 135 3779 3794 "pgm/interCfg.ml" 135 3779 3805
+type(
+  (pid -> IntraCfg.t -> unit) -> (pid, IntraCfg.t) BatMap.t -> unit
+)
+ident(
+  ext_ref BatMap.iter
+)
+"pgm/interCfg.ml" 135 3779 3811 "pgm/interCfg.ml" 135 3779 3814
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 135 3779 3815 "pgm/interCfg.ml" 135 3779 3849
+)
+"pgm/interCfg.ml" 135 3779 3815 "pgm/interCfg.ml" 135 3779 3818
+type(
+  IntraCfg.t
+)
+ident(
+  def cfg "pgm/interCfg.ml" 135 3779 3822 "pgm/interCfg.ml" 135 3779 3849
+)
+"pgm/interCfg.ml" 135 3779 3822 "pgm/interCfg.ml" 135 3779 3840
+type(
+  out_channel -> IntraCfg.t -> unit
+)
+ident(
+  ext_ref IntraCfg.print_dot
+)
+"pgm/interCfg.ml" 135 3779 3841 "pgm/interCfg.ml" 135 3779 3845
+type(
+  out_channel
+)
+ident(
+  int_ref chan "pgm/interCfg.ml" 135 3779 3784 "pgm/interCfg.ml" 135 3779 3788
+)
+"pgm/interCfg.ml" 135 3779 3846 "pgm/interCfg.ml" 135 3779 3849
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref cfg "pgm/interCfg.ml" 135 3779 3815 "pgm/interCfg.ml" 135 3779 3818
+)
+"pgm/interCfg.ml" 135 3779 3822 "pgm/interCfg.ml" 135 3779 3849
+call(
+  tail
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 135 3779 3806 "pgm/interCfg.ml" 135 3779 3850
+type(
+  pid -> IntraCfg.t -> unit
+)
+"pgm/interCfg.ml" 135 3779 3851 "pgm/interCfg.ml" 135 3779 3852
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 135 3779 3789 "pgm/interCfg.ml" 135 3779 3790
+)
+"pgm/interCfg.ml" 135 3779 3851 "pgm/interCfg.ml" 135 3779 3857
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 135 3779 3794 "pgm/interCfg.ml" 135 3779 3857
+call(
+  tail
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 135 3779 3780 "pgm/interCfg.ml" 135 3779 3857
+type(
+  out_channel -> t -> unit
+)
+type(
+  out_channel -> t -> unit
+)
+"pgm/interCfg.ml" 138 3922 3926 "pgm/interCfg.ml" 138 3922 3936
+type(
+  string -> t -> unit
+)
+ident(
+  def store_cfgs "pgm/interCfg.ml" 147 4155 4155 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 139 3959 3964 "pgm/interCfg.ml" 139 3959 3971
+type(
+  string
+)
+ident(
+  def dirname "pgm/interCfg.ml" 139 3959 3972 "pgm/interCfg.ml" 145 4143 4153
+)
+"pgm/interCfg.ml" 139 3959 3972 "pgm/interCfg.ml" 139 3959 3973
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 140 3977 3979 "pgm/interCfg.ml" 145 4143 4153
+)
+"pgm/interCfg.ml" 140 3977 3979 "pgm/interCfg.ml" 140 3977 3990
+type(
+  (pid -> IntraCfg.t -> unit) -> (pid, IntraCfg.t) BatMap.t -> unit
+)
+ident(
+  ext_ref BatMap.iter
+)
+"pgm/interCfg.ml" 140 3977 3996 "pgm/interCfg.ml" 140 3977 3999
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 140 3977 4000 "pgm/interCfg.ml" 144 4125 4142
+)
+"pgm/interCfg.ml" 140 3977 4000 "pgm/interCfg.ml" 140 3977 4003
+type(
+  IntraCfg.t
+)
+ident(
+  def cfg "pgm/interCfg.ml" 141 4007 4011 "pgm/interCfg.ml" 144 4125 4142
+)
+"pgm/interCfg.ml" 141 4007 4015 "pgm/interCfg.ml" 141 4007 4023
+type(
+  string
+)
+ident(
+  def filename "pgm/interCfg.ml" 142 4058 4062 "pgm/interCfg.ml" 144 4125 4142
+)
+"pgm/interCfg.ml" 141 4007 4026 "pgm/interCfg.ml" 141 4007 4033
+type(
+  string
+)
+ident(
+  int_ref dirname "pgm/interCfg.ml" 139 3959 3964 "pgm/interCfg.ml" 139 3959 3971
+)
+"pgm/interCfg.ml" 141 4007 4034 "pgm/interCfg.ml" 141 4007 4035
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pgm/interCfg.ml" 141 4007 4036 "pgm/interCfg.ml" 141 4007 4039
+type(
+  string
+)
+"pgm/interCfg.ml" 141 4007 4040 "pgm/interCfg.ml" 141 4007 4041
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pgm/interCfg.ml" 141 4007 4042 "pgm/interCfg.ml" 141 4007 4045
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 140 3977 3996 "pgm/interCfg.ml" 140 3977 3999
+)
+"pgm/interCfg.ml" 141 4007 4046 "pgm/interCfg.ml" 141 4007 4047
+type(
+  pid -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"pgm/interCfg.ml" 141 4007 4048 "pgm/interCfg.ml" 141 4007 4054
+type(
+  string
+)
+"pgm/interCfg.ml" 141 4007 4042 "pgm/interCfg.ml" 141 4007 4054
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 141 4007 4036 "pgm/interCfg.ml" 141 4007 4054
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 141 4007 4026 "pgm/interCfg.ml" 141 4007 4054
+call(
+  stack
+)
+type(
+  string
+)
+"pgm/interCfg.ml" 142 4058 4066 "pgm/interCfg.ml" 142 4058 4069
+type(
+  out_channel
+)
+ident(
+  def out "pgm/interCfg.ml" 143 4093 4097 "pgm/interCfg.ml" 144 4125 4142
+)
+"pgm/interCfg.ml" 142 4058 4072 "pgm/interCfg.ml" 142 4058 4080
+type(
+  string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out
+)
+"pgm/interCfg.ml" 142 4058 4081 "pgm/interCfg.ml" 142 4058 4089
+type(
+  string
+)
+ident(
+  int_ref filename "pgm/interCfg.ml" 141 4007 4015 "pgm/interCfg.ml" 141 4007 4023
+)
+"pgm/interCfg.ml" 142 4058 4072 "pgm/interCfg.ml" 142 4058 4089
+call(
+  stack
+)
+type(
+  out_channel
+)
+"pgm/interCfg.ml" 143 4093 4097 "pgm/interCfg.ml" 143 4093 4115
+type(
+  out_channel -> IntraCfg.t -> unit
+)
+ident(
+  ext_ref IntraCfg.print_dot
+)
+"pgm/interCfg.ml" 143 4093 4116 "pgm/interCfg.ml" 143 4093 4119
+type(
+  out_channel
+)
+ident(
+  int_ref out "pgm/interCfg.ml" 142 4058 4066 "pgm/interCfg.ml" 142 4058 4069
+)
+"pgm/interCfg.ml" 143 4093 4120 "pgm/interCfg.ml" 143 4093 4123
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref cfg "pgm/interCfg.ml" 140 3977 4000 "pgm/interCfg.ml" 140 3977 4003
+)
+"pgm/interCfg.ml" 143 4093 4097 "pgm/interCfg.ml" 143 4093 4123
+call(
+  stack
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 144 4125 4129 "pgm/interCfg.ml" 144 4125 4138
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_out
+)
+"pgm/interCfg.ml" 144 4125 4139 "pgm/interCfg.ml" 144 4125 4142
+type(
+  out_channel
+)
+ident(
+  int_ref out "pgm/interCfg.ml" 142 4058 4066 "pgm/interCfg.ml" 142 4058 4069
+)
+"pgm/interCfg.ml" 144 4125 4129 "pgm/interCfg.ml" 144 4125 4142
+call(
+  tail
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 143 4093 4097 "pgm/interCfg.ml" 144 4125 4142
+type(
+  unit
+)
+"pgm/interCfg.ml" 142 4058 4062 "pgm/interCfg.ml" 144 4125 4142
+type(
+  unit
+)
+"pgm/interCfg.ml" 141 4007 4011 "pgm/interCfg.ml" 144 4125 4142
+type(
+  unit
+)
+"pgm/interCfg.ml" 140 3977 3991 "pgm/interCfg.ml" 145 4143 4146
+type(
+  pid -> IntraCfg.t -> unit
+)
+"pgm/interCfg.ml" 145 4143 4147 "pgm/interCfg.ml" 145 4143 4148
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 139 3959 3972 "pgm/interCfg.ml" 139 3959 3973
+)
+"pgm/interCfg.ml" 145 4143 4147 "pgm/interCfg.ml" 145 4143 4153
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 140 3977 3979 "pgm/interCfg.ml" 145 4143 4153
+call(
+  tail
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 139 3959 3960 "pgm/interCfg.ml" 145 4143 4153
+type(
+  string -> t -> unit
+)
+type(
+  string -> t -> unit
+)
+"pgm/interCfg.ml" 147 4155 4159 "pgm/interCfg.ml" 147 4155 4166
+type(
+  t -> Yojson.Safe.json
+)
+ident(
+  def to_json "pgm/interCfg.ml" 153 4292 4292 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 148 4179 4185 "pgm/interCfg.ml" 148 4179 4186
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 149 4190 4192 "pgm/interCfg.ml" 151 4239 4290
+)
+"pgm/interCfg.ml" 150 4201 4205 "pgm/interCfg.ml" 150 4201 4217
+type(
+  (pid ->
+   IntraCfg.t ->
+   (pid * Yojson.Safe.json) list -> (pid * Yojson.Safe.json) list) ->
+  (pid, IntraCfg.t) BatMap.t ->
+  (pid * Yojson.Safe.json) list -> (pid * Yojson.Safe.json) list
+)
+ident(
+  ext_ref BatMap.foldi
+)
+"pgm/interCfg.ml" 150 4201 4223 "pgm/interCfg.ml" 150 4201 4226
+type(
+  pid
+)
+ident(
+  def pid "pgm/interCfg.ml" 150 4201 4227 "pgm/interCfg.ml" 151 4239 4278
+)
+"pgm/interCfg.ml" 150 4201 4227 "pgm/interCfg.ml" 150 4201 4230
+type(
+  IntraCfg.t
+)
+ident(
+  def cfg "pgm/interCfg.ml" 150 4201 4231 "pgm/interCfg.ml" 151 4239 4278
+)
+"pgm/interCfg.ml" 150 4201 4231 "pgm/interCfg.ml" 150 4201 4235
+type(
+  (pid * Yojson.Safe.json) list
+)
+ident(
+  def json "pgm/interCfg.ml" 151 4239 4245 "pgm/interCfg.ml" 151 4239 4278
+)
+"pgm/interCfg.ml" 151 4239 4246 "pgm/interCfg.ml" 151 4239 4249
+type(
+  pid
+)
+ident(
+  int_ref pid "pgm/interCfg.ml" 150 4201 4223 "pgm/interCfg.ml" 150 4201 4226
+)
+"pgm/interCfg.ml" 151 4239 4251 "pgm/interCfg.ml" 151 4239 4267
+type(
+  IntraCfg.t -> IntraCfg.Json.json
+)
+ident(
+  ext_ref IntraCfg.to_json
+)
+"pgm/interCfg.ml" 151 4239 4268 "pgm/interCfg.ml" 151 4239 4271
+type(
+  IntraCfg.t
+)
+ident(
+  int_ref cfg "pgm/interCfg.ml" 150 4201 4227 "pgm/interCfg.ml" 150 4201 4230
+)
+"pgm/interCfg.ml" 151 4239 4251 "pgm/interCfg.ml" 151 4239 4271
+call(
+  stack
+)
+type(
+  IntraCfg.Json.json
+)
+"pgm/interCfg.ml" 151 4239 4245 "pgm/interCfg.ml" 151 4239 4272
+type(
+  pid * Yojson.Safe.json
+)
+"pgm/interCfg.ml" 151 4239 4274 "pgm/interCfg.ml" 151 4239 4278
+type(
+  (pid * Yojson.Safe.json) list
+)
+ident(
+  int_ref json "pgm/interCfg.ml" 150 4201 4231 "pgm/interCfg.ml" 150 4201 4235
+)
+"pgm/interCfg.ml" 151 4239 4245 "pgm/interCfg.ml" 151 4239 4278
+type(
+  (pid * Yojson.Safe.json) list
+)
+"pgm/interCfg.ml" 150 4201 4218 "pgm/interCfg.ml" 151 4239 4279
+type(
+  pid ->
+  IntraCfg.t ->
+  (pid * Yojson.Safe.json) list -> (pid * Yojson.Safe.json) list
+)
+"pgm/interCfg.ml" 151 4239 4280 "pgm/interCfg.ml" 151 4239 4281
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 148 4179 4185 "pgm/interCfg.ml" 148 4179 4186
+)
+"pgm/interCfg.ml" 151 4239 4280 "pgm/interCfg.ml" 151 4239 4286
+type(
+  (pid, IntraCfg.t) BatMap.t
+)
+"pgm/interCfg.ml" 151 4239 4287 "pgm/interCfg.ml" 151 4239 4289
+type(
+  (pid * Yojson.Safe.json) list
+)
+"pgm/interCfg.ml" 149 4190 4199 "pgm/interCfg.ml" 151 4239 4290
+call(
+  stack
+)
+type(
+  (pid * Yojson.Safe.json) list
+)
+"pgm/interCfg.ml" 149 4190 4192 "pgm/interCfg.ml" 151 4239 4290
+type(
+  Yojson.Safe.json
+)
+"pgm/interCfg.ml" 148 4179 4181 "pgm/interCfg.ml" 151 4239 4290
+type(
+  t -> Yojson.Safe.json
+)
+type(
+  t -> Yojson.Safe.json
+)
+"pgm/interCfg.ml" 153 4292 4296 "pgm/interCfg.ml" 153 4292 4306
+type(
+  out_channel -> t -> unit
+)
+ident(
+  def print_json "pgm/interCfg.ml" 155 4350 4398 "pgm/interCfg.ml" 1 0 -1
+)
+"pgm/interCfg.ml" 154 4334 4340 "pgm/interCfg.ml" 154 4334 4344
+type(
+  out_channel
+)
+ident(
+  def chan "pgm/interCfg.ml" 154 4334 4345 "pgm/interCfg.ml" 155 4350 4398
+)
+"pgm/interCfg.ml" 154 4334 4345 "pgm/interCfg.ml" 154 4334 4346
+type(
+  t
+)
+ident(
+  def g "pgm/interCfg.ml" 155 4350 4352 "pgm/interCfg.ml" 155 4350 4398
+)
+"pgm/interCfg.ml" 155 4350 4352 "pgm/interCfg.ml" 155 4350 4381
+type(
+  ?std:bool -> out_channel -> Yojson.Safe.json -> unit
+)
+ident(
+  ext_ref Yojson.Safe.pretty_to_channel
+)
+"pgm/interCfg.ml" 155 4350 4382 "pgm/interCfg.ml" 155 4350 4386
+type(
+  out_channel
+)
+ident(
+  int_ref chan "pgm/interCfg.ml" 154 4334 4340 "pgm/interCfg.ml" 154 4334 4344
+)
+"pgm/interCfg.ml" 155 4350 4388 "pgm/interCfg.ml" 155 4350 4395
+type(
+  t -> Yojson.Safe.json
+)
+ident(
+  int_ref to_json "pgm/interCfg.ml" 147 4155 4159 "pgm/interCfg.ml" 147 4155 4166
+)
+"pgm/interCfg.ml" 155 4350 4396 "pgm/interCfg.ml" 155 4350 4397
+type(
+  t
+)
+ident(
+  int_ref g "pgm/interCfg.ml" 154 4334 4345 "pgm/interCfg.ml" 154 4334 4346
+)
+"pgm/interCfg.ml" 155 4350 4387 "pgm/interCfg.ml" 155 4350 4398
+call(
+  stack
+)
+type(
+  Yojson.Safe.json
+)
+"pgm/interCfg.ml" 155 4350 4352 "pgm/interCfg.ml" 155 4350 4398
+call(
+  tail
+)
+type(
+  unit
+)
+"pgm/interCfg.ml" 154 4334 4336 "pgm/interCfg.ml" 155 4350 4398
+type(
+  out_channel -> t -> unit
+)
+type(
+  out_channel -> t -> unit
+)
