@@ -16,11 +16,15 @@ module Trainer : sig
 	val copy_pgms : dir -> dir -> unit
 	(* Build all training data from the single-query programs. *)
 	val build_training_dataset : dir -> tdata BatSet.t
+	(*  *)
+	val learn_classifier : dir -> tdata BatSet.t -> unit
 
 end = struct 
 
 	let copy_pgms = fun t2dir sqdir -> ()	(* TODO *)
 
 	let build_training_dataset = fun sqdir -> BatSet.empty	(* TODO *)
+
+	let learn_classifier = fun classifier_path t_dataset -> ()	(* TODO *)
 
 end
