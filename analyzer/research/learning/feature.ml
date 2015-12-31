@@ -18,14 +18,14 @@ let pred : Global.t -> Flang.t -> bool
 =fun global feature -> true (* TODO *)
 
 module FGenerator : sig
-	type dir
+	type dir = string
 
 	(* Generate the feature set from the raw features. *)
-	val gen_Features : dir -> Flang.t BatSet.t
+	val gen_features : dir -> Flang.t BatSet.t
 
 end = struct
 	type dir = string
 
-	let gen_Features = fun reduced_dir -> BatSet.empty
+	let gen_features = fun reduced_dir -> prerr_endline ">> Automatically generated features."; BatSet.empty	(* TODO *)
 
 end

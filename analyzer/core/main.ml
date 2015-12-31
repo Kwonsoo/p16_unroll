@@ -10,8 +10,10 @@ open Visitors
 open Observe
 open Report
 
+open Reduce
 open Classify
 open Training
+open Apply
 open Feature
 
 let _ = Random.self_init ()
@@ -316,11 +318,20 @@ let main () =
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
-		(*
-		Reduce.reduce ();
-		let fvector = Flang.fgen () in
-		Classifier.learn fvector
-		*)
+		(* 1. Generate features. *)
+		Reducer.reduce "../T1" "../reduced";	
+		let features = FGenerator.gen_features "../reduced" in
+		
+		(* 2. Learn classifier. *)
+		Trainer.copy_pgms "../T2" "../T2_singleq";
+		let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
+		Classifier.learn training_dataset;
+
+		(* 3. Apply to new program. *)
+		Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";
+		let candidates = Predictor.build_candidates "../N_singleq" in
+		Predictor.apply "research/learning/classifier.sh" candidates;
+		prerr_endline ">> Auto-Features-analysis done."
 	)
 	else if !Options.opt_auto_apply then (
 		

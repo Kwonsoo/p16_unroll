@@ -1,6 +1,7 @@
-type locset = Loc.t BatSet.t
+open Types
 
 module Predictor : sig
+
 	(* Produce single-query programs from the given new program. *)
 	val copy_pgms : dir -> dir -> unit
 	(**)
@@ -9,7 +10,7 @@ module Predictor : sig
 	val apply : dir -> (fvector * locset) BatSet.t -> unit
 
 end = struct
-	
+
 	let copy_pgms = fun newprog sqdir -> ()	(* TODO *)
 
 	let build_candidates = fun sqdir -> BatSet.empty	(* TODO *)
