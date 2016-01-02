@@ -1,6 +1,6 @@
 open Flang
 open Extractor
-
+open Types
 
 let gen : Global.t -> Flang.t BatSet.t
 = fun global ->
@@ -18,7 +18,7 @@ let pred : Global.t -> Flang.t -> bool
 =fun global feature -> true (* TODO *)
 
 module FGenerator : sig
-	type dir = string
+	type dir
 
 	(* Generate the feature set from the raw features. *)
 	val gen_features : dir -> Flang.t BatSet.t
@@ -26,6 +26,6 @@ module FGenerator : sig
 end = struct
 	type dir = string
 
-	let gen_features = fun reduced_dir -> prerr_endline ">> Automatically generated features."; BatSet.empty	(* TODO *)
+	let gen_features = fun reduced_dir -> BatSet.empty
 
 end
