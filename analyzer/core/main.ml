@@ -474,13 +474,14 @@ let main () =
 		Profiler.report stdout;
 		prerr_endline (string_of_float (Sys.time () -. t0));
 		exit 1
-	)
+	);
 
-(*
+	Cil.initCIL (); 
+	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
-   
-(*    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); *)
+	(*   
+    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); 
 
     if !Options.opt_insert_observe then 
       ((match !Options.opt_diff_type with
@@ -489,7 +490,7 @@ let main () =
       ); exit 1);
 
     if !Options.opt_observe then (analysis_and_observe one; exit 1);
-
+*)
     let (pre, global) = init_analysis one in
 
     let pids = InterCfg.pidsof (Global.get_icfg global) in
@@ -497,8 +498,12 @@ let main () =
 
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
+	if !Options.opt_test then (
+		let featSet = gen_features "/Users/seongjoon/pl/p16/reduced" in
+		(BatSet.iter Flang.print_flang featSet);
+	 exit 1);
 
-
+(*
     if !Options.opt_cfgs then ( 
        InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;
        exit 1);
@@ -517,6 +522,7 @@ let main () =
         do_itv_analysis pre global;
 
 
+	*)
     prerr_endline "Finished properly.";
     Profiler.report stdout;
     prerr_endline (string_of_float (Sys.time () -. t0));
@@ -524,5 +530,4 @@ let main () =
   with exc ->
     prerr_endline (Printexc.to_string exc);
     prerr_endline (Printexc.get_backtrace())
-*)
 let _ = main ()
