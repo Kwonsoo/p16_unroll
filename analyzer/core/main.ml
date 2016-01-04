@@ -402,23 +402,20 @@ let main () =
   let _ = Profiler.start_logger () in
 
   let usageMsg = "Usage: main.native [options] source-files" in
-
   Printexc.record_backtrace true;
 
-  (* process arguments *)
-  Arg.parse Options.opts args usageMsg;
-  List.iter (fun f -> prerr_string (f ^ " ")) !files;
-  prerr_endline "";
-  
-  Cil.initCIL ();
-
-  let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
+	(* process arguments *)
+	Arg.parse Options.opts args usageMsg;
+	List.iter (fun f -> prerr_string (f ^ " ")) !files;
+	prerr_endline "";
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";
 		let features = FGenerator.gen_features !Options.opt_reduced in
+		prerr_endline "OK";
+		exit;
 		
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
@@ -436,6 +433,10 @@ let main () =
 
 		(* 4. Give full precision to the selected locset. *)
 		prerr_endline "\nSTEP4: Apply Precision to the Selected";
+		
+		Cil.initCIL (); 
+		let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
+
 		makeCFGinfo one;
 		let (pre, global) = init_analysis one in
 		let pids = InterCfg.pidsof (Global.get_icfg global) in

@@ -26,6 +26,18 @@ module FGenerator : sig
 end = struct
 	type dir = string
 
-	let gen_features = fun reduced_dir -> prerr_endline ">> Features have been generated."; BatSet.empty	(* TODO *)
+	let gen_from_one_source = fun file ->
+		BatSet.empty
+		
+	let gen_features = fun reduced_dir ->
+		(*각 reduced code를 읽어와서 extract 해서 나온 flang set들을 모두 union 하면 된다.*)	
+		let files = Sys.readdir reduced_dir in
+		let files = Array.to_list files in
+		let features = List.fold_left (fun accum elem -> 
+				let full_file_path = "../reduced" ^ elem in
+				let a_feature_set = gen_from_one_source full_file_path in
+				BatSet.union accum a_feature_set
+				) BatSet.empty files in
+		features
 
 end
