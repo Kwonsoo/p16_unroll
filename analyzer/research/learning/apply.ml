@@ -15,6 +15,6 @@ end = struct
 
 	let build_candidates = fun sqdir -> BatSet.empty	(* TODO *)
 
-	let select = fun classifier_path candidates -> BatSet.empty	(* TODO *)
+	let select = fun classifier_path candidates -> ">> Location sets are selected."; BatSet.empty	(* TODO *)
 
 end

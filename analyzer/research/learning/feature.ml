@@ -18,7 +18,7 @@ let pred : Global.t -> Flang.t -> bool
 =fun global feature -> true (* TODO *)
 
 module FGenerator : sig
-	type dir
+	type dir = string
 
 	(* Generate the feature set from the raw features. *)
 	val gen_features : dir -> Flang.t BatSet.t

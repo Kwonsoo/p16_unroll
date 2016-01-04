@@ -425,7 +425,9 @@ let main () =
 		Trainer.copy_pgms "../T2" "../T2_singleq";
 		let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
 		Classifier.learn training_dataset;
-
+		exit 1
+	)
+	else if !Options.opt_auto_apply then (	
 		(* 3. Select New Locations. *)
 		prerr_endline "\nSTEP3: Select New Locations";
 		Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";
@@ -447,9 +449,6 @@ let main () =
 		Profiler.report stdout;
 		prerr_endline (string_of_float (Sys.time () -. t0));
 		exit 1
-	)
-	else if !Options.opt_auto_apply then (
-		
 	)
 
 (*
@@ -474,33 +473,6 @@ let main () =
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
-		(* For simple tests *)
-		if !Options.opt_test then (
-			let featSet = Feature.gen global in
-			BatSet.iter Flang.print_flang featSet;
-			exit 1;
-		)	
-		(*
-		else if !Options.opt_auto_learn then (
-			(* 1. Generate features. *)
-			Reducer.reduce "../T1" "../reduced";	
-			let features = FGenerator.gen_features "../reduced" in
-			
-			(* 2. Learn classifier. *)
-			Trainer.copy_pgms "../T2" "../T2_singleq";
-			let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
-			Classifier.learn training_dataset;
-	
-			(* 3. Apply to new program. *)
-			Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";
-			let candidates = Predictor.build_candidates "../N_singleq" in
-			Predictor.apply "research/learning/classifier.sh" candidates;
-			prerr_endline ">> Auto-Features-analysis done."
-		)
-		*)
-		else if !Options.opt_auto_apply then (
-			
-		);
 
     if !Options.opt_cfgs then ( 
        InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;
