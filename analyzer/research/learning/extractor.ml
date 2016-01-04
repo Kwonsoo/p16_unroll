@@ -1,3 +1,5 @@
+open Cil
+
 let card_succs : Cil.stmt -> int
 = fun s -> List.length s.succs
 
@@ -12,6 +14,19 @@ let get_the_succ : Cil.stmt -> Cil.stmt
 
 let get_succs : Cil.stmt -> Cil.stmt list
 = fun s -> s.succs
+
+(* Use this only to find a loop stmt. *)
+let get_the_pred : Cil.stmt -> Cil.stmt
+= fun this -> List.find (fun stmt ->
+	this.sid > stmt.sid) this.preds
+	
+let get_loop_break : Cil.stmt -> Cil.stmt
+= fun s ->
+	let loop_next = get_the_succ s in
+	let loop_stmt = get_the_pred loop_next in
+	match loop_stmt.skind with
+	| Cil.Loop (_, _, _, break) -> BatOption.get break
+	| _ -> raise (Failure "get_loop_break: Not a loop stmt ")
 
 let is_backward : Cil.stmt * Cil.stmt -> bool
 = fun (this, succ) -> this.sid > succ.sid
@@ -42,7 +57,8 @@ let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
 			List.iter (fun succ ->
 				if is_backward (stmt, succ)
 				then
-					((Hashtbl.add featTbl !idx appended); idx := !idx + 1)
+					let break = get_loop_break stmt in
+					add_paths break appended
 				else
 					add_paths succ appended
 			) succs
