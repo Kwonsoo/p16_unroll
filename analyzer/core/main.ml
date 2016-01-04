@@ -51,12 +51,81 @@ let do_sparse_analysis (pre, global) =
   prerr_memory_usage ();
   (inputof, outputof, dug, memFI, locset, order)
 
+
+let do_sparse_analysis_autopfs : (ItvPre.t * Global.t * Loc.t BatSet.t) -> (Table.t * Table.t * DUGraph.t * Mem.t * Loc.t BatSet.t * ItvWorklist.Workorder.t)
+= fun (pre, global, matched_locset) ->
+	let _ = prerr_memory_usage () in
+	let abslocs = ItvPre.get_total_abslocs pre in
+	let _ = print_abslocs_info abslocs in
+	(*NOTE*)
+	let _ = prerr_endline ("#Selected locations : " ^ i2s (BatSet.cardinal matched_locset)
+					^ " / " ^ i2s (BatSet.cardinal (ItvPre.get_total_abslocs pre))) in
+	let dug = StepManager.stepf false "Def-use graph construction" ItvSSA.icfg2dug (global, pre, matched_locset) in
+	prerr_memory_usage ();
+	prerr_endline ("#Nodes in def-use graph : "
+								^ i2s (BatSet.cardinal (DUGraph.nodesof dug)));
+	prerr_endline ("Locs on def-use graph : " ^ i2s (DUGraph.sizeof dug));
+	let order = StepManager.stepf_s false false "Workorder computation" ItvWorklist.Workorder.perform dug in
+	let (inputof, outputof, memFI) = ItvSparseAnalysis.perform (global, dug, pre, matched_locset, Table.empty, order) in
+	prerr_memory_usage ();
+	(inputof, outputof, dug, memFI, matched_locset, order)
+
 let fill_deadcode_with_premem pre global inputof =
   list_fold (fun n t -> 
     if Mem.bot = (Table.find n t) then Table.add n (ItvPre.get_mem pre) t
     else t
   ) (InterCfg.nodesof (Global.get_icfg global)) inputof 
 
+let is_proved (size,offset,index) =
+	let idx = Itv.plus offset index in
+	match idx, size with
+	| Itv.V (Itv.Int ol, Itv.Int oh), Itv.V (Itv.Int sl, _) ->
+		if oh >= sl || ol < 0 then false else true
+	| _ -> false
+
+let get_observe_info (buf,idx) node pre premem inputof_FS global =
+	let mem_FI = premem in
+	let mem_FS = Table.find node inputof_FS in
+	let pid = InterCfg.Node.get_pid node in
+	let size_FS = ArrayBlk.sizeof (ItvDom.array_of_val (EvalOp.eval pid buf mem_FS)) in
+	let size_FI = ArrayBlk.sizeof (ItvDom.array_of_val (EvalOp.eval pid buf mem_FI)) in
+	let offset_FS = ArrayBlk.offsetof (ItvDom.array_of_val (EvalOp.eval pid buf mem_FS)) in
+	let offset_FI = ArrayBlk.offsetof (ItvDom.array_of_val (EvalOp.eval pid buf mem_FI)) in
+	let index_FS = itv_of_val (EvalOp.eval pid idx mem_FS) in
+	let index_FI = itv_of_val (EvalOp.eval pid idx mem_FI) in
+	let proved_FI = is_proved (size_FI, offset_FI, index_FI) in
+	let proved_FS = is_proved (size_FS, offset_FS, index_FS) in
+	let buf_name = Cil2str.s_exp buf in
+	let idx_name = Cil2str.s_exp idx in
+		(size_FI, offset_FI, index_FI, size_FS, offset_FS, index_FS, proved_FI, proved_FS, buf_name, idx_name)
+ 
+let observe (pre, global, premem, inputof_FS) =
+	let g = Global.get_icfg global in
+	let nodes = InterCfg.nodesof g in
+		list_fold (fun n a ->
+				match InterCfg.cmdof g n with
+				| IntraCfg.Cmd.Ccall (None, Cil.Lval (Cil.Var f, Cil.NoOffset), exps, _) when f.vname = "airac_observe" ->
+					begin
+						match exps with
+						| buf::idx::[] -> get_observe_info (buf,idx) n pre premem inputof_FS global
+						| _ -> raise (Failure "airac_observe requires two arguments (buffer and index expressions)")
+					end
+				| _ -> a
+		) nodes (Itv.bot, Itv.bot, Itv.bot, Itv.bot, Itv.bot, Itv.bot, false, false, "", "")
+	 
+let string_of_observe (size_FI, offset_FI, index_FI, size_FS, offset_FS, index_FS, proved_FI, proved_FS, buf_name, idx_name) =
+	"(AIRAC_OBSERVE)" ^
+	"FI (" ^ string_of_bool proved_FI ^")" ^
+			" Size: " ^ Itv.to_string size_FI ^
+			" Offset: "      ^ Itv.to_string offset_FI ^
+			" Index : "      ^ Itv.to_string index_FI ^
+	" FS (" ^ string_of_bool proved_FS ^ ")" ^
+	" Size: " ^ Itv.to_string size_FS ^
+	" Offset: "      ^ Itv.to_string offset_FS ^
+	" Index : "      ^ Itv.to_string index_FS ^
+	" " ^ buf_name ^ " " ^ idx_name ^ "\n"
+
+(*
 let do_itv_analysis : ItvPre.t -> Global.t -> unit
 = fun pre global ->
   (* Set widening threshold *)
@@ -80,6 +149,35 @@ let do_itv_analysis : ItvPre.t -> Global.t -> unit
   let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global,inputof,alarm_type) in 
   let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global,inputof_FI,alarm_type) in
     Report.print !Options.opt_noalarm !Options.opt_diff queries_FS queries_FI alarm_type
+*)
+let do_itv_analysis_autopfs : ItvPre.t -> Global.t -> Loc.t BatSet.t -> unit
+= fun pre global matched_locset ->
+	(* Set widening threshold. *)
+	let thresholds =
+		if !Options.opt_auto_thresholds then Thresholds.collect_thresholds pre global
+		else list2set (List.map int_of_string (Str.split (Str.regexp "[ \t]+") !Options.opt_widen_thresholds)) in
+	let _ = prerr_endline ("Widening threshold : " ^ string_of_set string_of_int thresholds) in
+	let _ = Itv.set_threshold thresholds in
+	(*Perform the analysis -- sparse analysis by default *)
+	let (inputof, _, _, _, _, _) =
+		StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis_autopfs (pre, global, matched_locset) in
+	let inputof =
+		if !Options.opt_deadcode then inputof
+		else list_fold (fun n t ->
+				if Mem.bot = (Table.find n t) then Table.add n (ItvPre.get_mem pre) t
+				else t
+				) (InterCfg.nodesof (Global.get_icfg global)) inputof in
+	let inputof_FI =
+		list_fold (fun n t ->
+				if Mem.bot = (Table.find n t) then Table.add n (ItvPre.get_mem pre) t
+				else t
+				) (InterCfg.nodesof (Global.get_icfg global)) Table.empty in
+	let obs = observe (pre, global, ItvPre.get_mem pre, inputof) in
+	let _ = print_endline (string_of_observe obs) in
+	let alarm_type = get_alarm_type () in
+	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, alarm_type) in
+	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, alarm_type) in
+	Report.print !Options.opt_noalarm !Options.opt_diff queries_FS queries_FI alarm_type
 
 let select_functions_to_inline (pre, global) = 
   if !Options.opt_inline_small_functions then
@@ -165,7 +263,7 @@ and insert_observe_ptsto_fs : Cil.file -> unit
     ) map_FI;
     prerr_endline ("Inserted " ^ string_of_int !no ^ " files");
     prerr_endline ("Skipped  " ^ string_of_int !skipped ^ " files")
- 
+
 and insert_observe_bo_fs : Cil.file -> unit
 =fun file ->
   let (pre,global) = init_analysis file in
@@ -270,7 +368,7 @@ else (* load from /tmp/__diff the diff results *)
     prerr_endline ("Inserted " ^ string_of_int !no ^ " files");
     prerr_endline ("Skipped  " ^ string_of_int !skipped ^ " files")
   end
-
+(*
 let analysis_and_observe file =  
   if !Options.opt_diff_type = Options.FS then
     let (pre,global) = init_analysis file in
@@ -297,7 +395,7 @@ let analysis_and_observe file =
     let (inputof_CS, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis with Context-Sensitivity" do_sparse_analysis (pre,global_CS) in
     let _ = print_endline (observe (global, inputof_CI) (global_CS, inputof_CS)) in 
      ()
-
+*)
  
 let main () =
   let t0 = Sys.time () in
@@ -318,25 +416,43 @@ let main () =
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
-		(* 1. Generate features. *)
-		Reducer.reduce "../T1" "../reduced";	
-		let features = FGenerator.gen_features "../reduced" in
+		(* 1. Generate features from the reduced. *)
+		prerr_endline "STEP1: Generate Features";
+		let features = FGenerator.gen_features !Options.opt_reduced in
 		
 		(* 2. Learn classifier. *)
+		prerr_endline "\nSTEP2: Learn the Classifier";
 		Trainer.copy_pgms "../T2" "../T2_singleq";
 		let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
 		Classifier.learn training_dataset;
 
-		(* 3. Apply to new program. *)
+		(* 3. Select New Locations. *)
+		prerr_endline "\nSTEP3: Select New Locations";
 		Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";
 		let candidates = Predictor.build_candidates "../N_singleq" in
-		Predictor.apply "research/learning/classifier.sh" candidates;
-		prerr_endline ">> Auto-Features-analysis done."
+		let locset = Predictor.select "research/learning/classifier.sh" candidates in
+
+		(* 4. Give full precision to the selected locset. *)
+		prerr_endline "\nSTEP4: Apply Precision to the Selected";
+		makeCFGinfo one;
+		let (pre, global) = init_analysis one in
+		let pids = InterCfg.pidsof (Global.get_icfg global) in
+		let nodes = InterCfg.nodesof (Global.get_icfg global) in
+		
+		prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
+		prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
+
+		do_itv_analysis_autopfs pre global locset;
+		prerr_endline "Finished properly.";
+		Profiler.report stdout;
+		prerr_endline (string_of_float (Sys.time () -. t0));
+		exit 1
 	)
 	else if !Options.opt_auto_apply then (
 		
-	);
-	
+	)
+
+(*
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
    
@@ -384,5 +500,5 @@ let main () =
   with exc ->
     prerr_endline (Printexc.to_string exc);
     prerr_endline (Printexc.get_backtrace())
-
+*)
 let _ = main ()

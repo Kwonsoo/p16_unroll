@@ -1,4 +1,6 @@
 (* Stuffs related to alarm reduction *)
+
+(*
 open Types
 
 module Reducer : sig
@@ -8,6 +10,7 @@ module Reducer : sig
 
 end = struct
 
-	let reduce = fun t1dir rdir -> prerr_endline ">> Reduced done."; ()
+	let reduce = fun t1dir rdir -> prerr_endline ">> Raw feature code has been reduced."; ()
 
 end
+*)

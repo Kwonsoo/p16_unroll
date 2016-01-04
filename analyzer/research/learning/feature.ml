@@ -26,6 +26,6 @@ module FGenerator : sig
 end = struct
 	type dir = string
 
-	let gen_features = fun reduced_dir -> prerr_endline ">> Automatically generated features."; BatSet.empty	(* TODO *)
+	let gen_features = fun reduced_dir -> prerr_endline ">> Features have been generated."; BatSet.empty	(* TODO *)
 
 end
