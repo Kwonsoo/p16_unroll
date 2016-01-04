@@ -6,8 +6,8 @@ module Predictor : sig
 	val copy_pgms : dir -> dir -> unit
 	(**)
 	val build_candidates : dir -> (fvector * locset) BatSet.t
-	(* Selectively apply precision to some variables. *)
-	val apply : dir -> (fvector * locset) BatSet.t -> unit
+	(* Select and return the locset's that are highly likely to increase precision. *)
+	val select : dir -> (fvector * locset) BatSet.t -> locset
 
 end = struct
 
@@ -15,6 +15,6 @@ end = struct
 
 	let build_candidates = fun sqdir -> BatSet.empty	(* TODO *)
 
-	let apply = fun classifier_path candidates -> ()	(* TODO *)
+	let select = fun classifier_path candidates -> ">> Location sets are selected."; BatSet.empty	(* TODO *)
 
 end

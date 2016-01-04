@@ -8,7 +8,7 @@ module Classifier : sig
 
 end = struct
 
-	let learn = fun tdata_set -> ()	(* TODO *)
+	let learn = fun tdata_set -> prerr_endline ">> The classifier is learned."; ()	(* TODO *)
 		
 	let classify = fun newprog -> true	(* TODO *)
 
