@@ -14,4 +14,9 @@ let gen : Global.t -> Flang.t BatSet.t
 	in union_over_set_list set_list
 
 let pred : Global.t -> Flang.t -> bool
-=fun global feature -> true (* TODO *)
+= fun global feature ->
+	let sliced_fd = Slicer.find_observe_fundec global.file in
+	let pgm_in_fl = Extractor.get_featSet sliced_fd in
+	BatSet.exists (fun p ->
+		Match.match_fl p feature
+	) pgm_in_fl

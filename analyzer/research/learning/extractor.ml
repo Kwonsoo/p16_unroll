@@ -64,10 +64,18 @@ let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
 			) succs
 		in add_paths begin_stmt []); featTbl
 
+let delete_skip : Flang.t -> Flang.t
+= fun f ->
+	List.filter (fun s ->
+		match s with
+		| Flang.Skip -> false
+		| _ -> true
+	) f
+
 let tbl_to_set : (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
 = fun tbl ->
 	let fold_f key value accum =
-		BatSet.add value accum
+		BatSet.add (delete_skip value) accum
 	in Hashtbl.fold fold_f tbl BatSet.empty
 
 let get_featSet : Cil.fundec -> Flang.t BatSet.t
@@ -77,3 +85,6 @@ let get_featSet : Cil.fundec -> Flang.t BatSet.t
 
 let unroll_loop : Cil.stmt list -> int -> Cil.stmt list
 = fun orgs factor -> orgs (* TO DO *)
+
+
+
