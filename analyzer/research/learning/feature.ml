@@ -40,7 +40,7 @@ end = struct
 		let files = Sys.readdir reduced_dir in
 		let files = Array.to_list files in
 		let features = List.fold_left (fun accum elem -> 
-				let full_file_path = "../reduced" ^ elem in
+				let full_file_path = "../reduced/" ^ elem in
 				let a_feature_set = gen_from_one_source full_file_path in
 				BatSet.union accum a_feature_set
 				) BatSet.empty files in
