@@ -396,7 +396,30 @@ let analysis_and_observe file =
     let _ = print_endline (observe (global, inputof_CI) (global_CS, inputof_CS)) in 
      ()
 *)
- 
+
+(* Generate features from one reduce code. *)
+let gen_features_from_one_file = fun file ->
+	(* 소스파일 path로부터 global 데이터를 만들어낸 다음에 gen을 사용해서 feature를 extract 해내면 된다.*)
+	(*let one = Frontend.parseOneFile file in*)
+	let one = StepManager.stepf true "ParseOneFile" Frontend.parseOneFile file in
+	makeCFGinfo one;
+
+	let (pre, global) = init_analysis one in
+	let feature_set = Feature.gen global in
+	feature_set
+
+(* Generate feature set from the reduced given directory. *)
+let gen_features = fun reduced_dir ->
+	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
+	let files = Sys.readdir reduced_dir in
+	let files = Array.to_list files in 
+	let features = List.fold_left (fun accum elem ->
+			let full_file_path = "../reduced/" ^ elem in
+			let a_feature_set = gen_features_from_one_file full_file_path in
+			BatSet.union accum a_feature_set
+			) BatSet.empty files in
+	features
+
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -413,9 +436,10 @@ let main () =
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";
-		let features = FGenerator.gen_features !Options.opt_reduced in
+		(*let features = FGenerator.gen_features !Options.opt_reduced in*)
+		let features = gen_features !Options.opt_reduced in
 		prerr_endline "OK";
-		exit;
+		exit 1;
 		
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
