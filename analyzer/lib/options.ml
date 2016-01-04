@@ -1,5 +1,6 @@
 open Arg
 
+let opt_test = ref false
 let opt_auto_learn = ref false
 let opt_reduced = ref ""
 let opt_auto_apply = ref false
@@ -33,6 +34,8 @@ let opt_dir = ref ""
 let opt_inline_small_functions = ref false
 let opts =
   [
+	(* option for simple tests *)
+	("-simtest", (Arg.Set opt_test), "Print translated F-lang sequences");
 	(* options for the auto-feature research *)
 	("-auto_learn", (Arg.Set opt_auto_learn), "Automatically generate features from the T1 program set and learn a classifier with the T2 program set.");
 	("-reduced", (Arg.String (fun s -> opt_dir := s)), "a directory where the reduced code files exist");
