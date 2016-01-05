@@ -46,7 +46,7 @@ let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
 	let idx = ref 0 in
 	let featTbl = Hashtbl.create 251 in
 	let begin_stmt = get_begin_stmt fd in
-
+			
 	(let rec add_paths : Cil.stmt -> Flang.t -> unit
 	= fun stmt accum ->
 		let appended = process_one_stmt stmt accum in
@@ -63,6 +63,30 @@ let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
 					add_paths succ appended
 			) succs
 		in add_paths begin_stmt []); featTbl
+
+let build_varTbl : Cil.fundec -> (int, stmt list) Hashtbl.t
+= fun fd ->
+	let idx = ref 0 in
+	let rawTbl = Hashtbl.create 251 in
+	let begin_stmt = get_begin_stmt fd in
+
+	(let rec add_paths : Cil.stmt -> stmt list -> unit
+	= fun stmt accum ->
+		let appended = accum @ [stmt] in
+		match (card_succs stmt) with
+		| 0 -> (Hashtbl.add rawTbl !idx appended); idx := !idx + 1
+		| _ ->
+			let succs = get_succs stmt in
+			List.iter (fun succ ->
+				if is_backward (stmt, succ)
+				then
+					let break = get_loop_break stmt in
+					add_paths break appended
+				else
+					add_paths succ appended
+			) succs
+		in add_paths begin_stmt []); rawTbl
+		
 
 let delete_skip : Flang.t -> Flang.t
 = fun f ->

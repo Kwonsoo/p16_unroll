@@ -12,6 +12,14 @@ open Training
 (* extract TODO
 		- 인자로 받는 프로그램은 single-query prgram 이어야 한다.
 		- 만들어진 feature set의 각 원소들은 쿼리까지의 서로 다른 path 여아 한다.*)
+
+let gen : Global.t -> Flang.t BatSet.t
+= fun global ->
+	let file = global.file in
+	let observe_fd = Slicer.find_observe_fundec file in
+	Extractor.get_featSet observe_fd 
+
+(*
 let gen : Global.t -> Flang.t BatSet.t
 = fun global ->
 	let file = global.file in
@@ -23,10 +31,17 @@ let gen : Global.t -> Flang.t BatSet.t
 			| _ -> accum
 		) []
 	in union_over_set_list set_list
+*)
 
 (* Extract literally raw paths from the given single-query program. *)
-let extract_raw_paths : Global.t -> ? BatSet.t
+let extract_raw_paths : Global.t -> Cil.stmt list BatSet.t
 =fun global ->
+	let file = global.file in
+	let observe_fd = Slicer.find_observe_fundec file in
+	let rawTbl = Extractor.build_varTbl observe_fd in
+	Hashtbl.fold (fun key value accum -> 
+		BatSet.add value accum) rawTbl BatSet.empty
+	
 	
 
 (* match TODO
