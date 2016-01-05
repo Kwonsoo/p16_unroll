@@ -457,8 +457,8 @@ let gen_features_from_one_file = fun file ->
 	let feature_set = Feature.gen global in
 	feature_set
 
-(* Generate feature set from the reduced given directory. *)
-let gen_features = fun reduced_dir ->
+(* Generate feature list from the reduced given directory. *)
+let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
 	let files = Sys.readdir reduced_dir in
 	let files = Array.to_list files in 
@@ -467,7 +467,7 @@ let gen_features = fun reduced_dir ->
 			let a_feature_set = gen_features_from_one_file full_file_path in
 			BatSet.union accum a_feature_set
 		) BatSet.empty files in
-	features
+	BatSet.to_list features
 
 let main () =
   let t0 = Sys.time () in
@@ -485,8 +485,7 @@ let main () =
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";
-		(*let features = FGenerator.gen_features !Options.opt_reduced in*)
-		let features = gen_features !Options.opt_reduced in
+		let features = gen_feature_list !Options.opt_reduced in
 		
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";

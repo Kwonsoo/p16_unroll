@@ -6,9 +6,17 @@ type tdata = (fvector * bool)
 let fvectorize : Global.t -> fvector
 =fun global -> [true] (* TODO *)
 
-let build_t_data : Global.t -> tdata
-=fun global -> ([true], true)	(* TODO *)
-
+(* NOTE: 첫번쩨 인자로 받는 프로그램은 Q(x)까지 extract된 프로그램이고,
+				 이 extract 처리된 프로그램의 형태는 flang으로 표현된 path들의 집합이다.
+				 두번째 인자로 받는 feature list는 실제 자동으로 만들어진 feature들의 리스트이다.*)
+let build_t_data : Flang.t BatSet.t -> Flang.t list -> tdata
+=fun extracted_prog feature_list -> (*([true], true)*)
+	let feature_bool_vector = 
+		List.fold_right (fun f accum ->
+				(pred extracted_prog f) :: accum
+			) feature_list []
+	in
+	
 	
 module Trainer : sig
 
@@ -23,12 +31,11 @@ end = struct
 		let files = Sys.readdir t2dir in
 		let files = Array.to_list files in
 		List.iter (fun f -> 
-				Sys.command ("./main.native ../T2/" ^ f ^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq");
-				()
+				Sys.command ("./main.native ../T2/" ^ f ^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq"); ()
 			) files
 
-	let build_training_dataset = fun sqdir -> BatSet.empty	(* TODO *)
-
+	let build_training_dataset = fun sqdir -> BatSet.empty (* TODO *)
+		
 end
 
 module Slicer =
