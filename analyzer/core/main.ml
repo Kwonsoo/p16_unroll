@@ -125,7 +125,6 @@ let string_of_observe (size_FI, offset_FI, index_FI, size_FS, offset_FS, index_F
 	" Index : "      ^ Itv.to_string index_FS ^
 	" " ^ buf_name ^ " " ^ idx_name ^ "\n"
 
-(*
 let do_itv_analysis : ItvPre.t -> Global.t -> unit
 = fun pre global ->
   (* Set widening threshold *)
@@ -144,12 +143,15 @@ let do_itv_analysis : ItvPre.t -> Global.t -> unit
       else fill_deadcode_with_premem pre global inputof in
   let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
   (* print observation for flow-sensitivity *)
-  let _ = print_endline (observe (global, inputof_FI) (global, inputof)) in
+  (*NOTE: observe 타입에 맞지 않게 사용되어 수정함.*)
+	(*let _ = print_endline (observe (global, inputof_FI) (global, inputof)) in*)
+	let _ = print_endline (string_of_observe (observe (pre, global, ItvPre.get_mem pre, inputof))) in
   let alarm_type = get_alarm_type () in
   let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global,inputof,alarm_type) in 
   let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global,inputof_FI,alarm_type) in
     Report.print !Options.opt_noalarm !Options.opt_diff queries_FS queries_FI alarm_type
-*)
+
+
 let do_itv_analysis_autopfs : ItvPre.t -> Global.t -> Loc.t BatSet.t -> unit
 = fun pre global matched_locset ->
 	(* Set widening threshold. *)
@@ -207,7 +209,14 @@ let init_analysis one =
     else (pre, global) (* nothing inlined *) in
   (pre, global)
 
-let rec insert_observe_fs : Cil.file -> unit
+let rec insert_observe_imprecise_fs : Cil.file -> unit
+= fun file ->
+	match get_alarm_type () with
+	| Report.BO -> insert_observe_imprecise_bo_fs file
+	| Report.PTSTO -> raise (Failure "not yet implemented")
+	| _ -> raise (Failure "insert_observe_imprecise: unsupported alarmtype")
+
+and insert_observe_fs : Cil.file -> unit
 =fun file ->
   match get_alarm_type () with
   | Report.BO -> insert_observe_bo_fs file 
@@ -266,7 +275,7 @@ and insert_observe_ptsto_fs : Cil.file -> unit
 
 (* Insert observe for all FI alarms. 
 	 NOTE: Context-Sensitivity를 위해서는 또다른 비슷한 함수가 필요하겠지.*)
-and insert_observe_bo_fs_allFI : Cil.file -> unit
+and insert_observe_imprecise_bo_fs : Cil.file -> unit
 = fun file ->
 	let (pre,global) = init_analysis file in
 	let inputof_FI =
@@ -288,7 +297,10 @@ and insert_observe_bo_fs_allFI : Cil.file -> unit
 					if !inserted then (
 						Report.display_alarms "Insert airac_observe for the following alarm" (BatMap.add loc [al] BatMap.empty);
 						no:=!no+1;
-						let out = open_out (!Options.opt_dir ^ "/" ^ string_of_int !no ^ ".c") in
+						let which_benchmark = if (BatString.contains (snd (BatString.rsplit file.fileName "/")) '-')
+																	then fst (BatString.split (snd (BatString.rsplit file.fileName "/")) "-")
+																	else fst (BatString.split (snd (BatString.rsplit file.fileName "/")) ".") in
+						let out = open_out (!Options.opt_dir ^ "/" ^ which_benchmark ^ "_" ^ string_of_int !no ^ ".c") in
 							print_cil out file;
 							flush out;
 							close_out out
@@ -406,7 +418,7 @@ else (* load from /tmp/__diff the diff results *)
     prerr_endline ("Inserted " ^ string_of_int !no ^ " files");
     prerr_endline ("Skipped  " ^ string_of_int !skipped ^ " files")
   end
-(*
+
 let analysis_and_observe file =  
   if !Options.opt_diff_type = Options.FS then
     let (pre,global) = init_analysis file in
@@ -431,9 +443,10 @@ let analysis_and_observe file =
       else (pre, global) (* nothing inlined *) in
 
     let (inputof_CS, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis with Context-Sensitivity" do_sparse_analysis (pre,global_CS) in
-    let _ = print_endline (observe (global, inputof_CI) (global_CS, inputof_CS)) in 
+		(*NOTE: observe 타입에 맞지 않게 사용되어 수정함.*)
+    (*let _ = print_endline (observe (global, inputof_CI) (global_CS, inputof_CS)) in *)
+		let _ = print_endline (string_of_observe (observe (pre, global, ItvPre.get_mem pre, inputof_CS))) in
      ()
-*)
 
 (* Generate features from one reduce code. *)
 let gen_features_from_one_file = fun file ->
@@ -474,12 +487,11 @@ let main () =
 		prerr_endline "STEP1: Generate Features";
 		(*let features = FGenerator.gen_features !Options.opt_reduced in*)
 		let features = gen_features !Options.opt_reduced in
-		prerr_endline "OK";
-		exit 1;
 		
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
-		Trainer.copy_pgms "../T2" "../T2_singleq";
+		Trainer.t2_to_singleq_progs "../T2" "../T2_singleq";
+		exit 1;
 		let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
 		Classifier.learn training_dataset;
 		exit 1
@@ -512,11 +524,20 @@ let main () =
 		exit 1
 	)
 
-(*
+	Cil.initCIL ();
+	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
+
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
    
 (*    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); *)
+
+		if !Options.opt_insert_observe_imprecise then (
+			(match !Options.opt_imprecise_type with
+			 | Options.FS -> insert_observe_imprecise_fs one
+			 | Options.CS -> raise (Failure "insert observe for all the imprecise: Not Yet Implemented"));
+			exit 1
+		);
 
     if !Options.opt_insert_observe then 
       ((match !Options.opt_diff_type with
@@ -550,8 +571,7 @@ let main () =
         Yojson.Safe.pretty_to_channel stdout json;
         exit 1);
     
-        do_itv_analysis pre global;
-
+    do_itv_analysis pre global;
 
     prerr_endline "Finished properly.";
     Profiler.report stdout;
@@ -560,5 +580,5 @@ let main () =
   with exc ->
     prerr_endline (Printexc.to_string exc);
     prerr_endline (Printexc.get_backtrace())
-*)
+
 let _ = main ()
