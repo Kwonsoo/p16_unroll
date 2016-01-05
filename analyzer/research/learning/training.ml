@@ -13,13 +13,19 @@ let build_t_data : Global.t -> tdata
 module Trainer : sig
 
 	(* Produce single-query programs from the given T2 directory. *)
-	val copy_pgms : dir -> dir -> unit
+	val t2_to_singleq_progs : dir -> dir -> unit
 	(* Build all training data from the single-query programs. *)
 	val build_training_dataset : dir -> tdata BatSet.t
 
 end = struct 
 
-	let copy_pgms = fun t2dir sqdir -> ()	(* TODO *)
+	let t2_to_singleq_progs = fun t2dir sqdir ->
+		let files = Sys.readdir t2dir in
+		let files = Array.to_list files in
+		List.iter (fun f -> 
+				Sys.command ("./main.native ../T2/" ^ f ^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq");
+				()
+			) files
 
 	let build_training_dataset = fun sqdir -> BatSet.empty	(* TODO *)
 
