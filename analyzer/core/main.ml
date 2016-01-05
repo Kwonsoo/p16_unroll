@@ -532,6 +532,7 @@ let main () =
 	Cil.initCIL ();
 	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
 
+
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
    
@@ -560,6 +561,10 @@ let main () =
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
+	(* For simple tests *)
+	if !Options.opt_test then (
+		let featSet = Feature.gen global in
+		BatSet.iter Flang.print_flang featSet);
 
     if !Options.opt_cfgs then ( 
        InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;

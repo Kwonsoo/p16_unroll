@@ -78,6 +78,12 @@ and trans_lv : Cil.lval -> lv
 		| Cil.NoOffset -> Id 
 		| Cil.Field _ -> Id
 		| Cil.Index _ -> Array)
+	| Cil.Mem e ->
+		(match e with
+		| Cil.Lval lv ->
+			let lv = trans_lv lv in
+			Deref lv
+		| _ -> raise (Failure "trans_lv: Invalid Mem."))
 	| _ -> Id 
 
 let union_over_set_list : t BatSet.t list -> t BatSet.t
@@ -108,7 +114,7 @@ and lv_to_str : lv -> string
 	match lv with
 	| Id -> "ID "
 	| Array -> "Array "
-	| _ -> "lv: Not yet done "
+	| Deref lv -> "Deref " ^ (lv_to_str lv)
 
 let cmd_to_str : cmd -> string
 = fun c ->
