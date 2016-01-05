@@ -17,7 +17,7 @@ and exp =
 and lv =
 	| Id
 	| Deref of lv
-	| Array of lv * exp
+	| Array 
 
 and bops =
 	| Arith
@@ -66,11 +66,19 @@ and trans_exp : Cil.exp -> exp
 				let e1 = trans_exp e1 in
 				let e2 = trans_exp e2 in
 				Bexp (bop, e1, e2)
-	|	Cil.AddrOf lv -> Lval (trans_lv lv)
+	| Cil.AddrOf lv -> Lval (trans_lv lv)
+	| Cil.StartOf lv -> Lval (trans_lv lv)
 	| _ -> Nothing (* TO DO *)
 
 and trans_lv : Cil.lval -> lv
-= fun (lh, off) -> Id (* TO DO *)
+= fun (lh, off) ->
+	match lh with
+	| Cil.Var v ->
+		(match off with
+		| Cil.NoOffset -> Id 
+		| Cil.Field _ -> Id
+		| Cil.Index _ -> Array)
+	| _ -> Id 
 
 let union_over_set_list : t BatSet.t list -> t BatSet.t
 = fun set_list ->
@@ -99,6 +107,7 @@ and lv_to_str : lv -> string
 = fun lv ->
 	match lv with
 	| Id -> "ID "
+	| Array -> "Array "
 	| _ -> "lv: Not yet done "
 
 let cmd_to_str : cmd -> string

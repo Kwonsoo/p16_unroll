@@ -17,6 +17,7 @@ and match_lv : lv * lv -> bool
 = fun (l1, l2) ->
 	match l1, l2 with
 	| Id, Id -> true
+	| Array, Array -> true
 	| _ -> false (* TO DO *)
 
 let match_cmd : cmd * cmd -> bool
