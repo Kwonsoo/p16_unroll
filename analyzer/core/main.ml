@@ -15,6 +15,7 @@ open Classify
 open Training
 open Apply
 open Feature
+open Types
 
 let _ = Random.self_init ()
 
@@ -489,18 +490,23 @@ let main () =
 		
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
-		Trainer.t2_to_singleq_progs "../T2" "../T2_singleq";
+		(*TODO*)
+		(*Trainer.t2_to_singleq_progs "../T2" "../T2_singleq";*)
 		exit 1;
+		(*
 		let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
 		Classifier.learn training_dataset;
+		*)
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
 		(* 3. Select New Locations. *)
 		prerr_endline "\nSTEP3: Select New Locations";
-		Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";
-		let candidates = Predictor.build_candidates "../N_singleq" in
-		let locset = Predictor.select "research/learning/classifier.sh" candidates in
+		(*TODO*)
+		(*Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";*)
+		(*let candidates = Predictor.build_candidates "../N_singleq" in*)
+		(*let locset = Apply.select "research/learning/classifier.sh" candidates in*)
+		let locset = BatSet.empty in
 
 		(* 4. Give full precision to the selected locset. *)
 		prerr_endline "\nSTEP4: Apply Precision to the Selected";

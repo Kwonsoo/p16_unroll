@@ -43,7 +43,6 @@ let extract_raw_paths : Global.t -> Cil.stmt list BatSet.t
 		BatSet.add value accum) rawTbl BatSet.empty
 	
 	
-
 (* match TODO
 		- 인자로 받는 프로그램은 extract된 program, 즉, feature path들의 set이어야 한다.
 		- 인자로 받는 feature는 feature path 하나를 의미한다.
