@@ -25,9 +25,10 @@ let gen : Global.t -> Flang.t BatSet.t
 	in union_over_set_list set_list
 
 (* Extract literally raw paths from the given single-query program. *)
-let extract_raw_paths : Global.t -> ? BatSet.t
+(* TODO
+let extract_raw_paths : Global.t -> Cil.stmt BatSet.t
 =fun global ->
-	
+*)
 
 (* match TODO
 		- 인자로 받는 프로그램은 extract된 program, 즉, feature path들의 set이어야 한다.

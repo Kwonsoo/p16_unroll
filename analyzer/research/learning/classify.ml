@@ -4,7 +4,7 @@ module Classifier : sig
 	val learn : Types.tdata BatSet.t -> unit
 	
 	(* Classify the given new fvectorized query. *)
-	val classify : Types.fvector -> bool
+	val classify : Types.fbvector -> bool
 
 end = struct
 

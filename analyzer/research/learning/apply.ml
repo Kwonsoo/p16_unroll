@@ -1,20 +1,23 @@
 open Types
+open Feature
 
-module Predictor : sig
+(* Produce single-query programs from the given new program. *)
+let newprog_to_singleq_progs : dir -> unit
+= fun file ->
+	Sys.command ("mkdir ../new_singleq_temp");
+	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir ../new_singleq_temp"); ()
 
-	(* Produce single-query programs from the given new program. *)
-	val copy_pgms : dir -> dir -> unit
-	(**)
-	val build_candidates : dir -> (fvector * locset) BatSet.t
-	(* Select and return the locset's that are highly likely to increase precision. *)
-	val select : dir -> (fvector * locset) BatSet.t -> locset
+(* flang path set 하나와 실제 feature list를 받아서 하나의 fbvector를 만들어낸다. *)
+let build_fbvector : Flang.t BatSet.t -> Flang.t list -> fbvector
+= fun paths feature_list -> 
+	let fbvector = List.fold_right (fun f accum ->
+			(Feature.pred paths f) :: accum
+		) feature_list [] in
+	fbvector
 
-end = struct
+(*TODO*)
+(* Select and return the locset's that are highly likely to increase precision. *)
+let select : dir -> (fbvector * locset) BatSet.t -> locset 
+= fun classifier_path candidates -> 
+	">> Location sets are selected."; BatSet.empty
 
-	let copy_pgms = fun newprog sqdir -> ()	(* TODO *)
-
-	let build_candidates = fun sqdir -> BatSet.empty	(* TODO *)
-
-	let select = fun classifier_path candidates -> ">> Location sets are selected."; BatSet.empty	(* TODO *)
-
-end

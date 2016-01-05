@@ -2,7 +2,7 @@ open AbsDom
 
 type dir = string
 
-type fvector = bool list
-type tdata = (fvector * bool)
+type fbvector = bool list
+type tdata = (fbvector * bool)
 
 type locset = Loc.t BatSet.t
