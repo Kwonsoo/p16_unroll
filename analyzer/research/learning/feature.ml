@@ -1,5 +1,6 @@
 open Flang
 open Extractor
+open Training
 
 let gen : Global.t -> Flang.t BatSet.t
 = fun global ->

@@ -264,6 +264,44 @@ and insert_observe_ptsto_fs : Cil.file -> unit
     prerr_endline ("Inserted " ^ string_of_int !no ^ " files");
     prerr_endline ("Skipped  " ^ string_of_int !skipped ^ " files")
 
+(* Insert observe for all FI alarms. 
+	 NOTE: Context-Sensitivity를 위해서는 또다른 비슷한 함수가 필요하겠지.*)
+and insert_observe_bo_fs_allFI : Cil.file -> unit
+= fun file ->
+	let (pre,global) = init_analysis file in
+	let inputof_FI =
+		list_fold (fun n t ->
+				if Mem.bot = (Table.find n t) then Table.add n (ItvPre.get_mem pre) t
+				else t
+			) (InterCfg.nodesof (Global.get_icfg global)) Table.empty in
+	let alarm_type = get_alarm_type () in
+	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global,inputof_FI,alarm_type) in
+	let fi = Report.get_alarms_fi queries_FI in
+	let _ = Report.display_alarms "" fi in
+	let no = ref 0 in
+	let skipped = ref 0 in
+		BatMap.iter (fun loc (al::alarms) ->
+				inserted := false;
+				let _ = visitCilFile (new removeObserveVisitor ()) file in
+				let vis = new insertObserveVisitor (al.Report.exp)
+				in  visitCilFile vis file;
+					if !inserted then (
+						Report.display_alarms "Insert airac_observe for the following alarm" (BatMap.add loc [al] BatMap.empty);
+						no:=!no+1;
+						let out = open_out (!Options.opt_dir ^ "/" ^ string_of_int !no ^ ".c") in
+							print_cil out file;
+							flush out;
+							close_out out
+					)
+					else (
+						skipped := !skipped + 1;
+						Report.display_alarms "Skip airac_observe for the following alarm" (BatMap.add loc [al] BatMap.empty)
+					)
+		) fi;
+		prerr_endline ("Inserted " ^ string_of_int !no ^ " files");
+		prerr_endline ("Skipped  " ^ string_of_int !skipped ^ " files")
+
+(* 이게 기존의 diff에만 observe 삽입하는 insert_observe *)
 and insert_observe_bo_fs : Cil.file -> unit
 =fun file ->
   let (pre,global) = init_analysis file in
@@ -399,11 +437,9 @@ let analysis_and_observe file =
 
 (* Generate features from one reduce code. *)
 let gen_features_from_one_file = fun file ->
-	(* 소스파일 path로부터 global 데이터를 만들어낸 다음에 gen을 사용해서 feature를 extract 해내면 된다.*)
-	(*let one = Frontend.parseOneFile file in*)
-	let one = StepManager.stepf true "ParseOneFile" Frontend.parseOneFile file in
+	(* 소스파일 path로부터 global 데이터를 만들어낸 다음에 gen을 사용해서 모든 feature를 extract 해내면 된다.*)
+	let one = Frontend.parseOneFile file in
 	makeCFGinfo one;
-
 	let (pre, global) = init_analysis one in
 	let feature_set = Feature.gen global in
 	feature_set
@@ -417,7 +453,7 @@ let gen_features = fun reduced_dir ->
 			let full_file_path = "../reduced/" ^ elem in
 			let a_feature_set = gen_features_from_one_file full_file_path in
 			BatSet.union accum a_feature_set
-			) BatSet.empty files in
+		) BatSet.empty files in
 	features
 
 let main () =
@@ -474,14 +510,13 @@ let main () =
 		Profiler.report stdout;
 		prerr_endline (string_of_float (Sys.time () -. t0));
 		exit 1
-	);
+	)
 
-	Cil.initCIL (); 
-	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
+(*
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
-	(*   
-    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); 
+   
+(*    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); *)
 
     if !Options.opt_insert_observe then 
       ((match !Options.opt_diff_type with
@@ -490,7 +525,7 @@ let main () =
       ); exit 1);
 
     if !Options.opt_observe then (analysis_and_observe one; exit 1);
-*)
+
     let (pre, global) = init_analysis one in
 
     let pids = InterCfg.pidsof (Global.get_icfg global) in
@@ -498,12 +533,8 @@ let main () =
 
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
-	if !Options.opt_test then (
-		let featSet = gen_features "/Users/seongjoon/pl/p16/reduced" in
-		(BatSet.iter Flang.print_flang featSet);
-	 exit 1);
 
-(*
+
     if !Options.opt_cfgs then ( 
        InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;
        exit 1);
@@ -522,7 +553,6 @@ let main () =
         do_itv_analysis pre global;
 
 
-	*)
     prerr_endline "Finished properly.";
     Profiler.report stdout;
     prerr_endline (string_of_float (Sys.time () -. t0));
@@ -530,4 +560,5 @@ let main () =
   with exc ->
     prerr_endline (Printexc.to_string exc);
     prerr_endline (Printexc.get_backtrace())
+*)
 let _ = main ()

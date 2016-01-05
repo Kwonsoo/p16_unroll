@@ -280,6 +280,21 @@ let display_alarms title alarms_part =
    k+1
   ) 1 alarms_part) 
 
+let fi_alarms queries_FI =
+	let loc = BatMap.foldi (fun p _ -> BatSet.add p) queries_FI BatSet.empty in
+	if BatSet.is_empty loc then prerr_endline "empty set";
+	BatSet.fold (fun loc ->
+			BatMap.add loc (BatMap.find loc queries_FI)
+	) loc BatMap.empty
+
+(* Get all FI alarms. *)
+let get_alarms_fi q =
+	let bot_alarms = get q BotAlarm in
+	let q_unproven = get q UnProven in
+	let q_unproven = (* exclude bot alarms *)
+		List.filter (fun q -> not (List.exists (fun q' -> q.loc = q'.loc) bot_alarms)) q_unproven in
+	fi_alarms (partition q_unproven) 
+
 (* queries1: FI, queries2: FS *)
 let diff_alarms queries1 queries2 = 
   let locs1 = BatMap.foldi (fun p _ -> BatSet.add p) queries1 BatSet.empty in
