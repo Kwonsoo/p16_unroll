@@ -610,6 +610,7 @@ let main () =
 
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
+
    
 (*    if !Options.opt_dec_prec > 0 then (decrease_precision one; exit 1); *)
 
@@ -629,6 +630,11 @@ let main () =
     if !Options.opt_observe then (analysis_and_observe one; exit 1);
 
     let (pre, global) = init_analysis one in
+
+	if !Options.opt_test then (
+		let featSet = Feature.gen global in
+		BatSet.iter (Flang.print_flang) featSet
+	); exit 1;
 
     let pids = InterCfg.pidsof (Global.get_icfg global) in
     let nodes = InterCfg.nodesof (Global.get_icfg global) in

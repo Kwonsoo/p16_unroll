@@ -20,13 +20,13 @@ let get_the_pred : Cil.stmt -> Cil.stmt
 = fun this -> List.find (fun stmt ->
 	this.sid > stmt.sid) this.preds
 	
-let get_loop_break : Cil.stmt -> Cil.stmt
+let get_loop_break : Cil.stmt -> Cil.stmt option
 = fun s ->
 	let loop_next = get_the_succ s in
 	let loop_stmt = get_the_pred loop_next in
 	match loop_stmt.skind with
-	| Cil.Loop (_, _, _, break) -> BatOption.get break
-	| _ -> raise (Failure "get_loop_break: Not a loop stmt ")
+	| Cil.Loop (_, _, _, break) -> break
+	| _ -> None
 
 let is_backward : Cil.stmt * Cil.stmt -> bool
 = fun (this, succ) -> this.sid > succ.sid
@@ -58,35 +58,16 @@ let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
 				if is_backward (stmt, succ)
 				then
 					let break = get_loop_break stmt in
-					add_paths break appended
+					if BatOption.is_some break 
+					then 
+						let break = BatOption.get break in
+						add_paths break appended
+					else 
+						() (* TO FIX *)
 				else
 					add_paths succ appended
 			) succs
 		in add_paths begin_stmt []); featTbl
-
-let build_varTbl : Cil.fundec -> (int, stmt list) Hashtbl.t
-= fun fd ->
-	let idx = ref 0 in
-	let rawTbl = Hashtbl.create 251 in
-	let begin_stmt = get_begin_stmt fd in
-
-	(let rec add_paths : Cil.stmt -> stmt list -> unit
-	= fun stmt accum ->
-		let appended = accum @ [stmt] in
-		match (card_succs stmt) with
-		| 0 -> (Hashtbl.add rawTbl !idx appended); idx := !idx + 1
-		| _ ->
-			let succs = get_succs stmt in
-			List.iter (fun succ ->
-				if is_backward (stmt, succ)
-				then
-					let break = get_loop_break stmt in
-					add_paths break appended
-				else
-					add_paths succ appended
-			) succs
-		in add_paths begin_stmt []); rawTbl
-		
 
 let delete_skip : Flang.t -> Flang.t
 = fun f ->
