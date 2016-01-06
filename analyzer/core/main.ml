@@ -471,7 +471,7 @@ let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 	BatSet.to_list features
 
 (* Return local variable names from the given function.
-	 NOTE: Formal Parameter들은 여기에 포함 안 되어있다. *)
+	 NOTE: extract된 프로그램의 모든 변수들을 가져올 때, 일단은 이렇게 함수 내 모든 로컬 변수들만 가져오고 있는데, Formal Parameter들은 여기에 포함 안 되어있다. *)
 let extract_locl_vnames : Cil.fundec -> (string * string) BatSet.t
 =fun fd ->
 	let funname = fd.svar.vname in
@@ -485,7 +485,6 @@ let make_a_loc : (string * string) -> Loc.t
 	let loc = Loc.loc_of_var var in
 	loc
 
-
 (* Produce single-query programs into the given directory, from the given source file. *)
 let imprecise_singleq_progs : dir -> dir -> unit
 =fun file outdir ->
@@ -493,13 +492,16 @@ let imprecise_singleq_progs : dir -> dir -> unit
 	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir " ^ outdir);
 	()
 
+(* Remove the given single-query directory. *)
 let clear_singleq_dir : dir -> unit
 =fun singleq_dir ->
 	Sys.command ("rm -r " ^ singleq_dir); ()
 
+(* Parse the given single-query source file to CIL. *)
 let parse_to_cil : dir -> Cil.file
 =fun file -> Frontend.parseOneFile file
 
+(* Check, given the single-query source file, if the query is proven when only the given selected locations are given precision (flow-sensitivity). *)
 let check_answer file selected =
 	let global = StepManager.stepf true "Translation to graphs" Global.init file in
 	let (pre, global) = StepManager.stepf true "Pre-analysis" ItvPre.do_preanalysis global in
@@ -537,6 +539,16 @@ let tdata_from_one_benchmark : dir -> Flang.t list -> tdata list
 	clear_singleq_dir "../T2_singleq_temp";
 	tdata_from_a_bench
 
+let tdata_from_allT2_benchmarks : Flang.t list -> tdata list
+=fun features ->
+	let fname_list = Array.to_list (Sys.readdir "../T2") in
+	let all_training_data =
+		List.fold_left (fun accum fname ->
+				let tdata_from_a_benchmark = tdata_from_one_benchmark ("../T2/" ^ fname) features in
+				tdata_from_a_benchmark @ accum
+			) [] fname_list in
+	all_training_data
+
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -558,11 +570,7 @@ let main () =
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
 		let fname_list = Array.to_list (Sys.readdir "../T2") in
-		let all_training_data =
-			List.fold_left (fun accum fname -> 
-					let tdata_from_a_benchmark = tdata_from_one_benchmark ("../T2/" ^ fname) features in
-					tdata_from_a_benchmark @ accum
-				) [] fname_list in
+		let all_training_data = tdata_from_allT2_benchmarks features in
 		(*TODO: Give the training data to the classifier.*)
 
 		exit 1
