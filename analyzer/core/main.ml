@@ -470,31 +470,43 @@ let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 		) BatSet.empty files in
 	BatSet.to_list features
 
-(* Return local variable names from the given function. *)
-let extract_locl_vars : Cil.fundec -> string BatSet.t
+(* Return local variable names from the given function.
+	 NOTE: Formal Parameter들은 여기에 포함 안 되어있다. *)
+let extract_locl_vnames : Cil.fundec -> (string * string) BatSet.t
 =fun fd ->
+	let funname = fd.svar.vname in
 	let vinfos = fd.slocals in
-	let vnames = List.map (fun vinfo -> vinfo.vname) vinfos in
-	BatSet.of_list vnames
+	let funname_vname_tuples = List.map (fun vinfo -> (funname, vinfo.vname)) vinfos in
+	BatSet.of_list funname_vname_tuples
 
-(*----------------------------------------------------------------------*)
-(*
-(* Make a loc from the given function name and the local variable name. *)
-let make_a_loc : string -> string -> Loc.t
-=fun funname v -> 
-	let var = Var.var_of_lvar (funname, v) in
+let make_a_loc : (string * string) -> Loc.t
+=fun (funname, vname) ->
+	let var = Var.var_of_lvar (funname, vname) in
 	let loc = Loc.loc_of_var var in
 	loc
 
-let get_vars_from_stmt : Cil.stmt -> Var.t BatSet.t
-=fun stmt ->
-	match stmt.skind with
-	| Cil.instr
+(*TODO*)
+let sparrow_answer : Loc.t BatSet.t -> bool
+=fun locset -> true	(*placeholder*)
 
-let get_locs_from_a_raw_path : Cil.stmt list -> locset
-=fun path ->
-*)
-(*----------------------------------------------------------------------*)
+(* Build a training data with the given feature-boolean-vector and the (funname, vname) tuples. *)
+let build_a_tdata : fbvector -> (string * string) BatSet.t -> tdata
+=fun fbvec participated_f_v_tuples ->
+	let participated_locs = BatSet.map (fun elm ->
+			make_a_loc elm) participated_f_v_tuples in
+	let is_alarm_proved = sparrow_answer participated_locs in
+	(fbvec, is_alarm_proved)
+
+(* Produce single-query programs into the given directory, from the given source file. *)
+let imprecise_singleq_progs : dir -> dir -> unit
+=fun file outdir ->
+	Sys.command ("mkdir " ^ outdir);
+	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir " ^ outdir);
+	()
+
+let clear_singleq_dir : dir -> unit
+=fun singleq_dir ->
+	Sys.command ("rm -r " ^ singleq_dir)
 
 let main () =
   let t0 = Sys.time () in
@@ -517,12 +529,15 @@ let main () =
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
 		(*TODO*)
-		(*Trainer.t2_to_singleq_progs "../T2" "../T2_singleq";*)
-		exit 1;
-		(*
-		let training_dataset = Trainer.build_training_dataset "../T2_singleq" in
-		Classifier.learn training_dataset;
-		*)
+		(* For all benchmarks, do the following steps. *)
+		(*---------------------------------------------*)
+		imprecise_singleq_progs "sourcefile" "outdir";	
+		let fbvector = Feature.fvectorize extracted_prog features in	
+		(* participated (f,v) tuples *)
+		let participants = 
+		let one_tdata = build_a_tdata fbvector participants in
+		clear_singleq_dir "outdir"
+		(*---------------------------------------------*)
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	

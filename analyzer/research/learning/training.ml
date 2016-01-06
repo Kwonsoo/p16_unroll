@@ -1,13 +1,5 @@
 open Types
 
-(* Prodice single-query programs into a temporary directory, from the given T2 source file. *)
-let t2prog_to_singleq_progs : dir -> unit  = fun file -> 
-	Sys.command ("mkdir ../T2_singleq_temp");
-	Sys.command ("./main.native " ^ file
-								^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq_temp");
-	()
-
-
 module Slicer =
 struct
 	open Cil
