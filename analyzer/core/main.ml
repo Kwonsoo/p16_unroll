@@ -470,16 +470,24 @@ let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 		) BatSet.empty files in
 	BatSet.to_list features
 
+(*----------------------------------------------------------------------*)
+(*
 (* Make a loc from the given function name and the local variable name. *)
 let make_a_loc : string -> string -> Loc.t
 =fun funname v -> 
 	let var = Var.var_of_lvar (funname, v) in
 	let loc = Loc.loc_of_var var in
 	loc
-(*
+
+let get_vars_from_stmt : Cil.stmt -> Var.t BatSet.t
+=fun stmt ->
+	match stmt.skind with
+	| Cil.instr
+
 let get_locs_from_a_raw_path : Cil.stmt list -> locset
 =fun path ->
 *)
+(*----------------------------------------------------------------------*)
 
 let main () =
   let t0 = Sys.time () in

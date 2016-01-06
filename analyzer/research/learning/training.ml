@@ -3,16 +3,17 @@ open Types
 (* Prodice single-query programs into a temporary directory, from the given T2 source file. *)
 let t2prog_to_singleq_progs : dir -> unit  = fun file -> 
 	Sys.command ("mkdir ../T2_singleq_temp");
-	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq_temp"); ()
+	Sys.command ("./main.native " ^ file
+								^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq_temp");
+	()
 
 (*TODO*)
-(* Build training data from the given "flang paths"<->"raw paths" pair. *)
-(*
-let build_traiining_data : Flang.t BatSet.t -> ??? -> tdata
-= fun flang_paths raw_paths -> 
-	BatSet.empty
-*)	
-		
+(* Build a feature-boolean vector from the given extracted program and *)
+let fbvectorize : Flang.t BatSet.t -> fbvector
+=fun fpaths ->
+	
+
+
 
 module Slicer =
 struct
