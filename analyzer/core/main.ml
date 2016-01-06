@@ -470,6 +470,13 @@ let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 		) BatSet.empty files in
 	BatSet.to_list features
 
+(* Return local variable names from the given function. *)
+let extract_locl_vars : Cil.fundec -> string BatSet.t
+=fun fd ->
+	let vinfos = fd.slocals in
+	let vnames = List.map (fun vinfo -> vinfo.vname) vinfos in
+	BatSet.of_list vnames
+
 (*----------------------------------------------------------------------*)
 (*
 (* Make a loc from the given function name and the local variable name. *)

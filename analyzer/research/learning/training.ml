@@ -7,13 +7,6 @@ let t2prog_to_singleq_progs : dir -> unit  = fun file ->
 								^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq_temp");
 	()
 
-(*TODO*)
-(* Build a feature-boolean vector from the given extracted program and *)
-let fbvectorize : Flang.t BatSet.t -> fbvector
-=fun fpaths ->
-	
-
-
 
 module Slicer =
 struct
