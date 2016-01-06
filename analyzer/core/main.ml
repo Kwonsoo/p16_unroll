@@ -470,6 +470,17 @@ let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 		) BatSet.empty files in
 	BatSet.to_list features
 
+(* Make a loc from the given function name and the local variable name. *)
+let make_a_loc : string -> string -> Loc.t
+=fun funname v -> 
+	let var = Var.var_of_lvar (funname, v) in
+	let loc = Loc.loc_of_var var in
+	loc
+(*
+let get_locs_from_a_raw_path : Cil.stmt list -> locset
+=fun path ->
+*)
+
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -532,7 +543,6 @@ let main () =
 	Cil.initCIL ();
 	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
 
-
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
    
@@ -561,10 +571,6 @@ let main () =
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
-	(* For simple tests *)
-	if !Options.opt_test then (
-		let featSet = Feature.gen global in
-		BatSet.iter Flang.print_flang featSet);
 
     if !Options.opt_cfgs then ( 
        InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;

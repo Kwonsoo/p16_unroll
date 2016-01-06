@@ -34,14 +34,15 @@ let gen : Global.t -> Flang.t BatSet.t
 *)
 
 (* Extract literally raw paths from the given single-query program. *)
-let extract_raw_paths : Global.t -> Cil.stmt list BatSet.t
+let extract_raw_paths : Global.t -> (string * Cil.stmt list BatSet.t)
 =fun global ->
 	let file = global.file in
 	let observe_fd = Slicer.find_observe_fundec file in
+	let funname = observe_fd.svar.vname in
 	let rawTbl = Extractor.build_varTbl observe_fd in
-	Hashtbl.fold (fun key value accum -> 
-		BatSet.add value accum) rawTbl BatSet.empty
-	
+	let raw_paths = Hashtbl.fold (fun key value accum -> 
+			BatSet.add value accum) rawTbl BatSet.empty in
+	(funname, raw_paths)
 	
 (* match TODO
 		- 인자로 받는 프로그램은 extract된 program, 즉, feature path들의 set이어야 한다.
