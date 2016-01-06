@@ -1,246 +1,429 @@
-"research/learning/feature.ml" 5 28 32 "research/learning/feature.ml" 5 28 35
+"research/learning/feature.ml" 16 645 649 "research/learning/feature.ml" 16 645 652
 type(
   Global.t -> Flang.t BatSet.t
 )
 ident(
-  def gen "research/learning/feature.ml" 17 312 312 "research/learning/feature.ml" 1 0 -1
+  def gen "research/learning/feature.ml" 37 1177 1177 "research/learning/feature.ml" 1 0 -1
 )
-"research/learning/feature.ml" 6 67 73 "research/learning/feature.ml" 6 67 79
+"research/learning/feature.ml" 17 684 690 "research/learning/feature.ml" 17 684 696
 type(
   Global.t
 )
 ident(
-  def global "research/learning/feature.ml" 7 83 84 "research/learning/feature.ml" 15 278 310
+  def global "research/learning/feature.ml" 18 700 701 "research/learning/feature.ml" 20 780 813
 )
-"research/learning/feature.ml" 7 83 88 "research/learning/feature.ml" 7 83 92
+"research/learning/feature.ml" 18 700 705 "research/learning/feature.ml" 18 700 709
 type(
   Cil.file
 )
 ident(
-  def file "research/learning/feature.ml" 8 110 111 "research/learning/feature.ml" 15 278 310
+  def file "research/learning/feature.ml" 19 727 728 "research/learning/feature.ml" 20 780 813
 )
-"research/learning/feature.ml" 7 83 95 "research/learning/feature.ml" 7 83 101
+"research/learning/feature.ml" 18 700 712 "research/learning/feature.ml" 18 700 718
 type(
   Global.t
 )
 ident(
-  int_ref global "research/learning/feature.ml" 6 67 73 "research/learning/feature.ml" 6 67 79
+  int_ref global "research/learning/feature.ml" 17 684 690 "research/learning/feature.ml" 17 684 696
 )
-"research/learning/feature.ml" 7 83 95 "research/learning/feature.ml" 7 83 106
+"research/learning/feature.ml" 18 700 712 "research/learning/feature.ml" 18 700 723
 type(
   Cil.file
 )
-"research/learning/feature.ml" 8 110 115 "research/learning/feature.ml" 8 110 123
-type(
-  Flang.t BatSet.t list
-)
-ident(
-  def set_list "research/learning/feature.ml" 15 278 282 "research/learning/feature.ml" 15 278 310
-)
-"research/learning/feature.ml" 9 126 128 "research/learning/feature.ml" 9 126 143
-type(
-  Cil.file ->
-  (Flang.t BatSet.t list -> Cil.global -> Flang.t BatSet.t list) ->
-  Flang.t BatSet.t list -> Flang.t BatSet.t list
-)
-ident(
-  ext_ref Cil.foldGlobals
-)
-"research/learning/feature.ml" 9 126 144 "research/learning/feature.ml" 9 126 148
-type(
-  Cil.file
-)
-ident(
-  int_ref file "research/learning/feature.ml" 7 83 88 "research/learning/feature.ml" 7 83 92
-)
-"research/learning/feature.ml" 9 126 154 "research/learning/feature.ml" 9 126 159
-type(
-  Flang.t BatSet.t list
-)
-ident(
-  def accum "research/learning/feature.ml" 9 126 160 "research/learning/feature.ml" 13 255 270
-)
-"research/learning/feature.ml" 9 126 160 "research/learning/feature.ml" 9 126 166
-type(
-  Cil.global
-)
-ident(
-  def global "research/learning/feature.ml" 10 170 173 "research/learning/feature.ml" 13 255 270
-)
-"research/learning/feature.ml" 10 170 179 "research/learning/feature.ml" 10 170 185
-type(
-  Cil.global
-)
-ident(
-  int_ref global "research/learning/feature.ml" 9 126 160 "research/learning/feature.ml" 9 126 166
-)
-"research/learning/feature.ml" 11 191 206 "research/learning/feature.ml" 11 191 208
+"research/learning/feature.ml" 19 727 732 "research/learning/feature.ml" 19 727 742
 type(
   Cil.fundec
 )
 ident(
-  def fd "research/learning/feature.ml" 12 216 221 "research/learning/feature.ml" 12 216 254
+  def observe_fd "research/learning/feature.ml" 20 780 781 "research/learning/feature.ml" 20 780 813
 )
-"research/learning/feature.ml" 11 191 210 "research/learning/feature.ml" 11 191 211
+"research/learning/feature.ml" 19 727 745 "research/learning/feature.ml" 19 727 771
 type(
-  Cil.location
+  Cil.file -> Cil.fundec
 )
-"research/learning/feature.ml" 11 191 196 "research/learning/feature.ml" 11 191 212
+ident(
+  ext_ref Training.Slicer.find_observe_fundec
+)
+"research/learning/feature.ml" 19 727 772 "research/learning/feature.ml" 19 727 776
 type(
-  Cil.global
+  Cil.file
 )
-"research/learning/feature.ml" 12 216 222 "research/learning/feature.ml" 12 216 243
+ident(
+  int_ref file "research/learning/feature.ml" 18 700 705 "research/learning/feature.ml" 18 700 709
+)
+"research/learning/feature.ml" 19 727 745 "research/learning/feature.ml" 19 727 776
+call(
+  stack
+)
+type(
+  Cil.fundec
+)
+"research/learning/feature.ml" 20 780 781 "research/learning/feature.ml" 20 780 802
 type(
   Cil.fundec -> Flang.t BatSet.t
 )
 ident(
   ext_ref Extractor.get_featSet
 )
-"research/learning/feature.ml" 12 216 244 "research/learning/feature.ml" 12 216 246
+"research/learning/feature.ml" 20 780 803 "research/learning/feature.ml" 20 780 813
 type(
   Cil.fundec
 )
 ident(
-  int_ref fd "research/learning/feature.ml" 11 191 206 "research/learning/feature.ml" 11 191 208
+  int_ref observe_fd "research/learning/feature.ml" 19 727 732 "research/learning/feature.ml" 19 727 742
 )
-"research/learning/feature.ml" 12 216 221 "research/learning/feature.ml" 12 216 247
-call(
-  stack
-)
-type(
-  Flang.t BatSet.t
-)
-"research/learning/feature.ml" 12 216 249 "research/learning/feature.ml" 12 216 254
-type(
-  Flang.t BatSet.t list
-)
-ident(
-  int_ref accum "research/learning/feature.ml" 9 126 154 "research/learning/feature.ml" 9 126 159
-)
-"research/learning/feature.ml" 12 216 221 "research/learning/feature.ml" 12 216 254
-type(
-  Flang.t BatSet.t list
-)
-"research/learning/feature.ml" 13 255 260 "research/learning/feature.ml" 13 255 261
-type(
-  Cil.global
-)
-"research/learning/feature.ml" 13 255 265 "research/learning/feature.ml" 13 255 270
-type(
-  Flang.t BatSet.t list
-)
-ident(
-  int_ref accum "research/learning/feature.ml" 9 126 154 "research/learning/feature.ml" 9 126 159
-)
-"research/learning/feature.ml" 10 170 173 "research/learning/feature.ml" 13 255 270
-type(
-  Flang.t BatSet.t list
-)
-"research/learning/feature.ml" 9 126 149 "research/learning/feature.ml" 14 271 274
-type(
-  Flang.t BatSet.t list -> Cil.global -> Flang.t BatSet.t list
-)
-"research/learning/feature.ml" 14 271 275 "research/learning/feature.ml" 14 271 277
-type(
-  Flang.t BatSet.t list
-)
-"research/learning/feature.ml" 9 126 128 "research/learning/feature.ml" 14 271 277
-call(
-  stack
-)
-type(
-  Flang.t BatSet.t list
-)
-"research/learning/feature.ml" 15 278 282 "research/learning/feature.ml" 15 278 301
-type(
-  Flang.t BatSet.t list -> Flang.t BatSet.t
-)
-ident(
-  ext_ref Flang.union_over_set_list
-)
-"research/learning/feature.ml" 15 278 302 "research/learning/feature.ml" 15 278 310
-type(
-  Flang.t BatSet.t list
-)
-ident(
-  int_ref set_list "research/learning/feature.ml" 8 110 115 "research/learning/feature.ml" 8 110 123
-)
-"research/learning/feature.ml" 15 278 282 "research/learning/feature.ml" 15 278 310
+"research/learning/feature.ml" 20 780 781 "research/learning/feature.ml" 20 780 813
 call(
   tail
 )
 type(
   Flang.t BatSet.t
 )
-"research/learning/feature.ml" 8 110 111 "research/learning/feature.ml" 15 278 310
+"research/learning/feature.ml" 19 727 728 "research/learning/feature.ml" 20 780 813
 type(
   Flang.t BatSet.t
 )
-"research/learning/feature.ml" 7 83 84 "research/learning/feature.ml" 15 278 310
+"research/learning/feature.ml" 18 700 701 "research/learning/feature.ml" 20 780 813
 type(
   Flang.t BatSet.t
 )
-"research/learning/feature.ml" 6 67 69 "research/learning/feature.ml" 15 278 310
+"research/learning/feature.ml" 17 684 686 "research/learning/feature.ml" 20 780 813
 type(
   Global.t -> Flang.t BatSet.t
 )
 type(
   Global.t -> Flang.t BatSet.t
 )
-"research/learning/feature.ml" 17 312 316 "research/learning/feature.ml" 17 312 320
+"research/learning/feature.ml" 37 1177 1181 "research/learning/feature.ml" 37 1177 1198
 type(
-  Global.t -> Flang.t -> bool
+  Global.t -> string * Cil.stmt list BatSet.t
 )
 ident(
-  def pred "research/learning/feature.ml" 20 391 391 "research/learning/feature.ml" 1 0 -1
+  def extract_raw_paths "research/learning/feature.ml" 51 1844 1844 "research/learning/feature.ml" 1 0 -1
 )
-"research/learning/feature.ml" 18 351 356 "research/learning/feature.ml" 18 351 362
+"research/learning/feature.ml" 38 1247 1252 "research/learning/feature.ml" 38 1247 1258
 type(
   Global.t
 )
 ident(
-  def global "research/learning/feature.ml" 18 351 363 "research/learning/feature.ml" 18 351 378
+  def global "research/learning/feature.ml" 39 1262 1263 "research/learning/feature.ml" 45 1538 1559
 )
-"research/learning/feature.ml" 18 351 363 "research/learning/feature.ml" 18 351 370
+"research/learning/feature.ml" 39 1262 1267 "research/learning/feature.ml" 39 1262 1271
 type(
-  Flang.t
+  Cil.file
 )
 ident(
-  def feature "research/learning/feature.ml" 18 351 374 "research/learning/feature.ml" 18 351 378
+  def file "research/learning/feature.ml" 40 1289 1290 "research/learning/feature.ml" 45 1538 1559
 )
-"research/learning/feature.ml" 18 351 374 "research/learning/feature.ml" 18 351 378
+"research/learning/feature.ml" 39 1262 1274 "research/learning/feature.ml" 39 1262 1280
 type(
-  bool
-)
-"research/learning/feature.ml" 18 351 352 "research/learning/feature.ml" 18 351 378
-type(
-  Global.t -> Flang.t -> bool
-)
-type(
-  Global.t -> Flang.t -> bool
-)
-"research/learning/feature.ml" 29 559 564 "research/learning/feature.ml" 29 559 576
-type(
-  'a -> 'b BatSet.t
+  Global.t
 )
 ident(
-  def gen_Features "research/learning/feature.ml" 29 559 610 "research/learning/feature.ml" 31 612 615
+  int_ref global "research/learning/feature.ml" 38 1247 1252 "research/learning/feature.ml" 38 1247 1258
 )
-"research/learning/feature.ml" 29 559 583 "research/learning/feature.ml" 29 559 594
+"research/learning/feature.ml" 39 1262 1274 "research/learning/feature.ml" 39 1262 1285
 type(
-  'a
+  Cil.file
+)
+"research/learning/feature.ml" 40 1289 1294 "research/learning/feature.ml" 40 1289 1304
+type(
+  Cil.fundec
 )
 ident(
-  def reduced_dir "research/learning/feature.ml" 29 559 598 "research/learning/feature.ml" 29 559 610
+  def observe_fd "research/learning/feature.ml" 41 1342 1343 "research/learning/feature.ml" 45 1538 1559
 )
-"research/learning/feature.ml" 29 559 598 "research/learning/feature.ml" 29 559 610
+"research/learning/feature.ml" 40 1289 1307 "research/learning/feature.ml" 40 1289 1333
 type(
-  'b BatSet.t
+  Cil.file -> Cil.fundec
+)
+ident(
+  ext_ref Training.Slicer.find_observe_fundec
+)
+"research/learning/feature.ml" 40 1289 1334 "research/learning/feature.ml" 40 1289 1338
+type(
+  Cil.file
+)
+ident(
+  int_ref file "research/learning/feature.ml" 39 1262 1267 "research/learning/feature.ml" 39 1262 1271
+)
+"research/learning/feature.ml" 40 1289 1307 "research/learning/feature.ml" 40 1289 1338
+call(
+  stack
+)
+type(
+  Cil.fundec
+)
+"research/learning/feature.ml" 41 1342 1347 "research/learning/feature.ml" 41 1342 1354
+type(
+  string
+)
+ident(
+  def funname "research/learning/feature.ml" 42 1382 1383 "research/learning/feature.ml" 45 1538 1559
+)
+"research/learning/feature.ml" 41 1342 1357 "research/learning/feature.ml" 41 1342 1367
+type(
+  Cil.fundec
+)
+ident(
+  int_ref observe_fd "research/learning/feature.ml" 40 1289 1294 "research/learning/feature.ml" 40 1289 1304
+)
+"research/learning/feature.ml" 41 1342 1357 "research/learning/feature.ml" 41 1342 1372
+type(
+  Cil.varinfo
+)
+"research/learning/feature.ml" 41 1342 1357 "research/learning/feature.ml" 41 1342 1378
+type(
+  string
+)
+"research/learning/feature.ml" 42 1382 1387 "research/learning/feature.ml" 42 1382 1393
+type(
+  (int, Cil.stmt list) Hashtbl.t
+)
+ident(
+  def rawTbl "research/learning/feature.ml" 43 1433 1434 "research/learning/feature.ml" 45 1538 1559
+)
+"research/learning/feature.ml" 42 1382 1396 "research/learning/feature.ml" 42 1382 1418
+type(
+  Cil.fundec -> (int, Cil.stmt list) Hashtbl.t
+)
+ident(
+  ext_ref Extractor.build_varTbl
+)
+"research/learning/feature.ml" 42 1382 1419 "research/learning/feature.ml" 42 1382 1429
+type(
+  Cil.fundec
+)
+ident(
+  int_ref observe_fd "research/learning/feature.ml" 40 1289 1294 "research/learning/feature.ml" 40 1289 1304
+)
+"research/learning/feature.ml" 42 1382 1396 "research/learning/feature.ml" 42 1382 1429
+call(
+  stack
+)
+type(
+  (int, Cil.stmt list) Hashtbl.t
+)
+"research/learning/feature.ml" 43 1433 1438 "research/learning/feature.ml" 43 1433 1447
+type(
+  Cil.stmt list BatSet.t
+)
+ident(
+  def raw_paths "research/learning/feature.ml" 45 1538 1539 "research/learning/feature.ml" 45 1538 1559
+)
+"research/learning/feature.ml" 43 1433 1450 "research/learning/feature.ml" 43 1433 1462
+type(
+  (int -> Cil.stmt list -> Cil.stmt list BatSet.t -> Cil.stmt list BatSet.t) ->
+  (int, Cil.stmt list) Hashtbl.t ->
+  Cil.stmt list BatSet.t -> Cil.stmt list BatSet.t
+)
+ident(
+  ext_ref Hashtbl.fold
+)
+"research/learning/feature.ml" 43 1433 1468 "research/learning/feature.ml" 43 1433 1471
+type(
+  int
+)
+ident(
+  def key "research/learning/feature.ml" 43 1433 1472 "research/learning/feature.ml" 44 1488 1513
+)
+"research/learning/feature.ml" 43 1433 1472 "research/learning/feature.ml" 43 1433 1477
+type(
+  Cil.stmt list
+)
+ident(
+  def value "research/learning/feature.ml" 43 1433 1478 "research/learning/feature.ml" 44 1488 1513
+)
+"research/learning/feature.ml" 43 1433 1478 "research/learning/feature.ml" 43 1433 1483
+type(
+  Cil.stmt list BatSet.t
+)
+ident(
+  def accum "research/learning/feature.ml" 44 1488 1491 "research/learning/feature.ml" 44 1488 1513
+)
+"research/learning/feature.ml" 44 1488 1491 "research/learning/feature.ml" 44 1488 1501
+type(
+  Cil.stmt list -> Cil.stmt list BatSet.t -> Cil.stmt list BatSet.t
+)
+ident(
+  ext_ref BatSet.add
+)
+"research/learning/feature.ml" 44 1488 1502 "research/learning/feature.ml" 44 1488 1507
+type(
+  Cil.stmt list
+)
+ident(
+  int_ref value "research/learning/feature.ml" 43 1433 1472 "research/learning/feature.ml" 43 1433 1477
+)
+"research/learning/feature.ml" 44 1488 1508 "research/learning/feature.ml" 44 1488 1513
+type(
+  Cil.stmt list BatSet.t
+)
+ident(
+  int_ref accum "research/learning/feature.ml" 43 1433 1478 "research/learning/feature.ml" 43 1433 1483
+)
+"research/learning/feature.ml" 44 1488 1491 "research/learning/feature.ml" 44 1488 1513
+call(
+  tail
+)
+type(
+  Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 43 1433 1463 "research/learning/feature.ml" 44 1488 1514
+type(
+  int -> Cil.stmt list -> Cil.stmt list BatSet.t -> Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 44 1488 1515 "research/learning/feature.ml" 44 1488 1521
+type(
+  (int, Cil.stmt list) Hashtbl.t
+)
+ident(
+  int_ref rawTbl "research/learning/feature.ml" 42 1382 1387 "research/learning/feature.ml" 42 1382 1393
+)
+"research/learning/feature.ml" 44 1488 1522 "research/learning/feature.ml" 44 1488 1534
+type(
+  Cil.stmt list BatSet.t
 )
 ident(
   ext_ref BatSet.empty
 )
-"research/learning/feature.ml" 29 559 579 "research/learning/feature.ml" 29 559 610
+"research/learning/feature.ml" 43 1433 1450 "research/learning/feature.ml" 44 1488 1534
+call(
+  stack
+)
 type(
-  'a -> 'b BatSet.t
+  Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 45 1538 1540 "research/learning/feature.ml" 45 1538 1547
+type(
+  string
+)
+ident(
+  int_ref funname "research/learning/feature.ml" 41 1342 1347 "research/learning/feature.ml" 41 1342 1354
+)
+"research/learning/feature.ml" 45 1538 1549 "research/learning/feature.ml" 45 1538 1558
+type(
+  Cil.stmt list BatSet.t
+)
+ident(
+  int_ref raw_paths "research/learning/feature.ml" 43 1433 1438 "research/learning/feature.ml" 43 1433 1447
+)
+"research/learning/feature.ml" 45 1538 1539 "research/learning/feature.ml" 45 1538 1559
+type(
+  string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 43 1433 1434 "research/learning/feature.ml" 45 1538 1559
+type(
+  string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 42 1382 1383 "research/learning/feature.ml" 45 1538 1559
+type(
+  string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 41 1342 1343 "research/learning/feature.ml" 45 1538 1559
+type(
+  string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 40 1289 1290 "research/learning/feature.ml" 45 1538 1559
+type(
+  string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 39 1262 1263 "research/learning/feature.ml" 45 1538 1559
+type(
+  string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 38 1247 1248 "research/learning/feature.ml" 45 1538 1559
+type(
+  Global.t -> string * Cil.stmt list BatSet.t
+)
+type(
+  Global.t -> string * Cil.stmt list BatSet.t
+)
+"research/learning/feature.ml" 51 1844 1848 "research/learning/feature.ml" 51 1844 1852
+type(
+  Flang.t BatSet.t -> Flang.t -> bool
+)
+ident(
+  def pred "research/learning/feature.ml" 55 1953 1961 "research/learning/feature.ml" 1 0 -1
+)
+"research/learning/feature.ml" 52 1891 1896 "research/learning/feature.ml" 52 1891 1900
+type(
+  Flang.t BatSet.t
+)
+ident(
+  def prog "research/learning/feature.ml" 52 1891 1901 "research/learning/feature.ml" 55 1953 1961
+)
+"research/learning/feature.ml" 52 1891 1901 "research/learning/feature.ml" 52 1891 1902
+type(
+  Flang.t
+)
+ident(
+  def f "research/learning/feature.ml" 53 1906 1907 "research/learning/feature.ml" 55 1953 1961
+)
+"research/learning/feature.ml" 53 1906 1907 "research/learning/feature.ml" 53 1906 1920
+type(
+  (Flang.t -> bool) -> Flang.t BatSet.t -> bool
+)
+ident(
+  ext_ref BatSet.exists
+)
+"research/learning/feature.ml" 53 1906 1926 "research/learning/feature.ml" 53 1906 1927
+type(
+  Flang.t
+)
+ident(
+  def p "research/learning/feature.ml" 54 1931 1934 "research/learning/feature.ml" 54 1931 1952
+)
+"research/learning/feature.ml" 54 1931 1934 "research/learning/feature.ml" 54 1931 1948
+type(
+  Flang.t -> Flang.t -> bool
+)
+ident(
+  ext_ref Match.match_fl
+)
+"research/learning/feature.ml" 54 1931 1949 "research/learning/feature.ml" 54 1931 1950
+type(
+  Flang.t
+)
+ident(
+  int_ref p "research/learning/feature.ml" 53 1906 1926 "research/learning/feature.ml" 53 1906 1927
+)
+"research/learning/feature.ml" 54 1931 1951 "research/learning/feature.ml" 54 1931 1952
+type(
+  Flang.t
+)
+ident(
+  int_ref f "research/learning/feature.ml" 52 1891 1901 "research/learning/feature.ml" 52 1891 1902
+)
+"research/learning/feature.ml" 54 1931 1934 "research/learning/feature.ml" 54 1931 1952
+call(
+  tail
+)
+type(
+  bool
+)
+"research/learning/feature.ml" 53 1906 1921 "research/learning/feature.ml" 55 1953 1956
+type(
+  Flang.t -> bool
+)
+"research/learning/feature.ml" 55 1953 1957 "research/learning/feature.ml" 55 1953 1961
+type(
+  Flang.t BatSet.t
+)
+ident(
+  int_ref prog "research/learning/feature.ml" 52 1891 1896 "research/learning/feature.ml" 52 1891 1900
+)
+"research/learning/feature.ml" 53 1906 1907 "research/learning/feature.ml" 55 1953 1961
+call(
+  tail
+)
+type(
+  bool
+)
+"research/learning/feature.ml" 52 1891 1892 "research/learning/feature.ml" 55 1953 1961
+type(
+  Flang.t BatSet.t -> Flang.t -> bool
+)
+type(
+  Flang.t BatSet.t -> Flang.t -> bool
 )

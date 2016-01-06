@@ -1,120 +1,683 @@
-"research/learning/training.ml" 6 76 80 "research/learning/training.ml" 6 76 90
+"research/learning/training.ml" 4 107 111 "research/learning/training.ml" 4 107 134
 type(
-  Global.t -> fvector
+  Types.dir -> unit
 )
 ident(
-  def fvectorize "research/learning/training.ml" 9 147 147 "research/learning/training.ml" 1 0 -1
+  def t2prog_to_singleq_progs "research/learning/training.ml" 17 527 527 "research/learning/training.ml" 1 0 -1
 )
-"research/learning/training.ml" 7 113 118 "research/learning/training.ml" 7 113 124
+"research/learning/training.ml" 4 107 156 "research/learning/training.ml" 4 107 160
 type(
-  Global.t
+  Types.dir
 )
 ident(
-  def global "research/learning/training.ml" 7 113 128 "research/learning/training.ml" 7 113 134
+  def file "research/learning/training.ml" 5 165 166 "research/learning/training.ml" 6 208 324
 )
-"research/learning/training.ml" 7 113 129 "research/learning/training.ml" 7 113 133
+"research/learning/training.ml" 5 165 166 "research/learning/training.ml" 5 165 177
 type(
-  bool
-)
-"research/learning/training.ml" 7 113 128 "research/learning/training.ml" 7 113 134
-type(
-  fvector
-)
-"research/learning/training.ml" 7 113 114 "research/learning/training.ml" 7 113 134
-type(
-  Global.t -> fvector
-)
-type(
-  Global.t -> fvector
-)
-"research/learning/training.ml" 9 147 151 "research/learning/training.ml" 9 147 163
-type(
-  Global.t -> tdata
+  string -> int
 )
 ident(
-  def build_t_data "research/learning/training.ml" 13 228 228 "research/learning/training.ml" 1 0 -1
+  ext_ref Sys.command
 )
-"research/learning/training.ml" 10 184 189 "research/learning/training.ml" 10 184 195
+"research/learning/training.ml" 5 165 178 "research/learning/training.ml" 5 165 206
 type(
-  Global.t
+  string
+)
+"research/learning/training.ml" 5 165 166 "research/learning/training.ml" 5 165 206
+type(
+  int
+)
+"research/learning/training.ml" 6 208 209 "research/learning/training.ml" 6 208 220
+type(
+  string -> int
 )
 ident(
-  def global "research/learning/training.ml" 10 184 199 "research/learning/training.ml" 10 184 213
+  ext_ref Sys.command
 )
-"research/learning/training.ml" 10 184 201 "research/learning/training.ml" 10 184 205
+"research/learning/training.ml" 6 208 222 "research/learning/training.ml" 6 208 238
 type(
-  bool
+  string
 )
-"research/learning/training.ml" 10 184 200 "research/learning/training.ml" 10 184 206
+"research/learning/training.ml" 6 208 239 "research/learning/training.ml" 6 208 240
 type(
-  fvector
-)
-"research/learning/training.ml" 10 184 208 "research/learning/training.ml" 10 184 212
-type(
-  bool
-)
-"research/learning/training.ml" 10 184 199 "research/learning/training.ml" 10 184 213
-type(
-  fvector * bool
-)
-"research/learning/training.ml" 10 184 185 "research/learning/training.ml" 10 184 213
-type(
-  Global.t -> tdata
-)
-type(
-  Global.t -> tdata
-)
-"research/learning/training.ml" 22 483 488 "research/learning/training.ml" 22 483 497
-type(
-  'a -> 'b -> unit
+  string -> string -> string
 )
 ident(
-  def copy_pgms "research/learning/training.ml" 24 534 535 "research/learning/training.ml" 26 602 605
+  ext_ref Pervasives.( ^ )
 )
-"research/learning/training.ml" 22 483 504 "research/learning/training.ml" 22 483 509
+"research/learning/training.ml" 6 208 241 "research/learning/training.ml" 6 208 245
 type(
-  'a
+  Types.dir
 )
 ident(
-  def t2dir "research/learning/training.ml" 22 483 510 "research/learning/training.ml" 22 483 521
+  int_ref file "research/learning/training.ml" 4 107 156 "research/learning/training.ml" 4 107 160
 )
-"research/learning/training.ml" 22 483 510 "research/learning/training.ml" 22 483 515
+"research/learning/training.ml" 6 208 246 "research/learning/training.ml" 6 208 247
 type(
-  'b
+  Types.dir -> string -> string
 )
 ident(
-  def sqdir "research/learning/training.ml" 22 483 519 "research/learning/training.ml" 22 483 521
+  ext_ref Pervasives.( ^ )
 )
-"research/learning/training.ml" 22 483 519 "research/learning/training.ml" 22 483 521
+"research/learning/training.ml" 6 208 248 "research/learning/training.ml" 6 208 319
+type(
+  string
+)
+"research/learning/training.ml" 6 208 241 "research/learning/training.ml" 6 208 319
+call(
+  stack
+)
+type(
+  string
+)
+"research/learning/training.ml" 6 208 221 "research/learning/training.ml" 6 208 320
+call(
+  stack
+)
+type(
+  string
+)
+"research/learning/training.ml" 6 208 209 "research/learning/training.ml" 6 208 320
+type(
+  int
+)
+"research/learning/training.ml" 6 208 322 "research/learning/training.ml" 6 208 324
 type(
   unit
 )
-"research/learning/training.ml" 22 483 500 "research/learning/training.ml" 22 483 521
+"research/learning/training.ml" 6 208 209 "research/learning/training.ml" 6 208 324
 type(
-  'a -> 'b -> unit
+  unit
 )
-"research/learning/training.ml" 24 534 539 "research/learning/training.ml" 24 534 561
+"research/learning/training.ml" 5 165 166 "research/learning/training.ml" 6 208 324
 type(
-  'c -> 'd BatSet.t
+  unit
+)
+"research/learning/training.ml" 4 107 152 "research/learning/training.ml" 6 208 324
+type(
+  Types.dir -> unit
+)
+type(
+  Types.dir -> unit
+)
+"research/learning/training.ml" 21 561 566 "research/learning/training.ml" 21 561 577
+type(
+  Cil.file -> Cil.fundec list
 )
 ident(
-  def build_training_dataset "research/learning/training.ml" 24 534 589 "research/learning/training.ml" 26 602 605
+  def get_fundecs "research/learning/training.ml" 29 744 745 "research/learning/training.ml" 61 1500 1503
 )
-"research/learning/training.ml" 24 534 568 "research/learning/training.ml" 24 534 573
+"research/learning/training.ml" 22 608 615 "research/learning/training.ml" 22 608 619
 type(
-  'c
+  Cil.file
 )
 ident(
-  def sqdir "research/learning/training.ml" 24 534 577 "research/learning/training.ml" 24 534 589
+  def file "research/learning/training.ml" 23 623 625 "research/learning/training.ml" 27 723 742
 )
-"research/learning/training.ml" 24 534 577 "research/learning/training.ml" 24 534 589
+"research/learning/training.ml" 23 623 625 "research/learning/training.ml" 23 623 639
 type(
-  'd BatSet.t
+  (Cil.fundec list -> Cil.global -> Cil.fundec list) ->
+  Cil.fundec list -> Cil.global list -> Cil.fundec list
 )
 ident(
-  ext_ref BatSet.empty
+  ext_ref List.fold_left
 )
-"research/learning/training.ml" 24 534 564 "research/learning/training.ml" 24 534 589
+"research/learning/training.ml" 23 623 645 "research/learning/training.ml" 23 623 648
 type(
-  'c -> 'd BatSet.t
+  Cil.fundec list
+)
+ident(
+  def acc "research/learning/training.ml" 23 623 649 "research/learning/training.ml" 26 709 722
+)
+"research/learning/training.ml" 23 623 649 "research/learning/training.ml" 23 623 653
+type(
+  Cil.global
+)
+ident(
+  def glob "research/learning/training.ml" 24 657 660 "research/learning/training.ml" 26 709 722
+)
+"research/learning/training.ml" 24 657 666 "research/learning/training.ml" 24 657 670
+type(
+  Cil.global
+)
+ident(
+  int_ref glob "research/learning/training.ml" 23 623 649 "research/learning/training.ml" 23 623 653
+)
+"research/learning/training.ml" 25 676 691 "research/learning/training.ml" 25 676 693
+type(
+  Cil.fundec
+)
+ident(
+  def fd "research/learning/training.ml" 25 676 701 "research/learning/training.ml" 25 676 708
+)
+"research/learning/training.ml" 25 676 695 "research/learning/training.ml" 25 676 696
+type(
+  Cil.location
+)
+"research/learning/training.ml" 25 676 681 "research/learning/training.ml" 25 676 697
+type(
+  Cil.global
+)
+"research/learning/training.ml" 25 676 701 "research/learning/training.ml" 25 676 703
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "research/learning/training.ml" 25 676 691 "research/learning/training.ml" 25 676 693
+)
+"research/learning/training.ml" 25 676 705 "research/learning/training.ml" 25 676 708
+type(
+  Cil.fundec list
+)
+ident(
+  int_ref acc "research/learning/training.ml" 23 623 645 "research/learning/training.ml" 23 623 648
+)
+"research/learning/training.ml" 25 676 701 "research/learning/training.ml" 25 676 708
+type(
+  Cil.fundec list
+)
+"research/learning/training.ml" 26 709 714 "research/learning/training.ml" 26 709 715
+type(
+  Cil.global
+)
+"research/learning/training.ml" 26 709 719 "research/learning/training.ml" 26 709 722
+type(
+  Cil.fundec list
+)
+ident(
+  int_ref acc "research/learning/training.ml" 23 623 645 "research/learning/training.ml" 23 623 648
+)
+"research/learning/training.ml" 24 657 660 "research/learning/training.ml" 26 709 722
+type(
+  Cil.fundec list
+)
+"research/learning/training.ml" 23 623 640 "research/learning/training.ml" 27 723 726
+type(
+  Cil.fundec list -> Cil.global -> Cil.fundec list
+)
+"research/learning/training.ml" 27 723 727 "research/learning/training.ml" 27 723 729
+type(
+  Cil.fundec list
+)
+"research/learning/training.ml" 27 723 730 "research/learning/training.ml" 27 723 734
+type(
+  Cil.file
+)
+ident(
+  int_ref file "research/learning/training.ml" 22 608 615 "research/learning/training.ml" 22 608 619
+)
+"research/learning/training.ml" 27 723 730 "research/learning/training.ml" 27 723 742
+type(
+  Cil.global list
+)
+"research/learning/training.ml" 23 623 625 "research/learning/training.ml" 27 723 742
+call(
+  tail
+)
+type(
+  Cil.fundec list
+)
+"research/learning/training.ml" 22 608 611 "research/learning/training.ml" 27 723 742
+type(
+  Cil.file -> Cil.fundec list
+)
+type(
+  Cil.file -> Cil.fundec list
+)
+"research/learning/training.ml" 29 744 749 "research/learning/training.ml" 29 744 755
+type(
+  Cil.lval -> bool
+)
+ident(
+  def is_var "research/learning/training.ml" 35 858 859 "research/learning/training.ml" 61 1500 1503
+)
+"research/learning/training.ml" 30 775 783 "research/learning/training.ml" 30 775 788
+type(
+  Cil.lhost
+)
+ident(
+  def lhost "research/learning/training.ml" 31 796 798 "research/learning/training.ml" 33 841 855
+)
+"research/learning/training.ml" 30 775 790 "research/learning/training.ml" 30 775 791
+type(
+  Cil.offset
+)
+"research/learning/training.ml" 30 775 782 "research/learning/training.ml" 30 775 792
+type(
+  Cil.lval
+)
+"research/learning/training.ml" 31 796 804 "research/learning/training.ml" 31 796 809
+type(
+  Cil.lhost
+)
+ident(
+  int_ref lhost "research/learning/training.ml" 30 775 783 "research/learning/training.ml" 30 775 788
+)
+"research/learning/training.ml" 32 815 827 "research/learning/training.ml" 32 815 832
+type(
+  Cil.varinfo
+)
+ident(
+  def vinfo "research/learning/training.ml" 32 815 836 "research/learning/training.ml" 32 815 840
+)
+"research/learning/training.ml" 32 815 819 "research/learning/training.ml" 32 815 832
+type(
+  Cil.lhost
+)
+"research/learning/training.ml" 32 815 836 "research/learning/training.ml" 32 815 840
+type(
+  bool
+)
+"research/learning/training.ml" 33 841 845 "research/learning/training.ml" 33 841 846
+type(
+  Cil.lhost
+)
+"research/learning/training.ml" 33 841 850 "research/learning/training.ml" 33 841 855
+type(
+  bool
+)
+"research/learning/training.ml" 31 796 798 "research/learning/training.ml" 33 841 855
+type(
+  bool
+)
+"research/learning/training.ml" 30 775 778 "research/learning/training.ml" 33 841 855
+type(
+  Cil.lval -> bool
+)
+type(
+  Cil.lval -> bool
+)
+"research/learning/training.ml" 35 858 863 "research/learning/training.ml" 35 858 878
+type(
+  Cil.instr -> bool
+)
+ident(
+  def is_observe_call "research/learning/training.ml" 46 1142 1143 "research/learning/training.ml" 61 1500 1503
+)
+"research/learning/training.ml" 36 899 906 "research/learning/training.ml" 36 899 911
+type(
+  Cil.instr
+)
+ident(
+  def instr "research/learning/training.ml" 37 915 917 "research/learning/training.ml" 44 1126 1140
+)
+"research/learning/training.ml" 37 915 923 "research/learning/training.ml" 37 915 928
+type(
+  Cil.instr
+)
+ident(
+  int_ref instr "research/learning/training.ml" 36 899 906 "research/learning/training.ml" 36 899 911
+)
+"research/learning/training.ml" 38 934 948 "research/learning/training.ml" 38 934 951
+type(
+  Cil.lval option
+)
+ident(
+  def ret "research/learning/training.ml" 39 971 975 "research/learning/training.ml" 43 1108 1125
+)
+"research/learning/training.ml" 38 934 953 "research/learning/training.ml" 38 934 957
+type(
+  Cil.exp
+)
+ident(
+  def func "research/learning/training.ml" 39 971 975 "research/learning/training.ml" 43 1108 1125
+)
+"research/learning/training.ml" 38 934 959 "research/learning/training.ml" 38 934 963
+type(
+  Cil.exp list
+)
+ident(
+  def args "research/learning/training.ml" 39 971 975 "research/learning/training.ml" 43 1108 1125
+)
+"research/learning/training.ml" 38 934 965 "research/learning/training.ml" 38 934 966
+type(
+  Cil.location
+)
+"research/learning/training.ml" 38 934 938 "research/learning/training.ml" 38 934 967
+type(
+  Cil.instr
+)
+"research/learning/training.ml" 39 971 982 "research/learning/training.ml" 39 971 986
+type(
+  Cil.exp
+)
+ident(
+  int_ref func "research/learning/training.ml" 38 934 953 "research/learning/training.ml" 38 934 957
+)
+"research/learning/training.ml" 40 992 1007 "research/learning/training.ml" 40 992 1009
+type(
+  Cil.lval
+)
+ident(
+  def lv "research/learning/training.ml" 40 992 1015 "research/learning/training.ml" 42 1072 1107
+)
+"research/learning/training.ml" 40 992 998 "research/learning/training.ml" 40 992 1009
+type(
+  Cil.exp
+)
+"research/learning/training.ml" 40 992 1015 "research/learning/training.ml" 40 992 1021
+type(
+  Cil.lval -> bool
+)
+ident(
+  int_ref is_var "research/learning/training.ml" 29 744 749 "research/learning/training.ml" 29 744 755
+)
+"research/learning/training.ml" 40 992 1022 "research/learning/training.ml" 40 992 1024
+type(
+  Cil.lval
+)
+ident(
+  int_ref lv "research/learning/training.ml" 40 992 1007 "research/learning/training.ml" 40 992 1009
+)
+"research/learning/training.ml" 40 992 1015 "research/learning/training.ml" 40 992 1024
+call(
+  stack
+)
+type(
+  bool
+)
+"research/learning/training.ml" 41 1028 1047 "research/learning/training.ml" 41 1028 1052
+type(
+  Cil.varinfo
+)
+ident(
+  def vinfo "research/learning/training.ml" 42 1072 1078 "research/learning/training.ml" 42 1072 1107
+)
+"research/learning/training.ml" 41 1028 1039 "research/learning/training.ml" 41 1028 1052
+type(
+  Cil.lhost
+)
+"research/learning/training.ml" 41 1028 1054 "research/learning/training.ml" 41 1028 1055
+type(
+  Cil.offset
+)
+"research/learning/training.ml" 41 1028 1038 "research/learning/training.ml" 41 1028 1056
+type(
+  Cil.lval
+)
+"research/learning/training.ml" 41 1028 1059 "research/learning/training.ml" 41 1028 1061
+type(
+  Cil.lval
+)
+ident(
+  int_ref lv "research/learning/training.ml" 40 992 1007 "research/learning/training.ml" 40 992 1009
+)
+"research/learning/training.ml" 42 1072 1078 "research/learning/training.ml" 42 1072 1083
+type(
+  Cil.varinfo
+)
+ident(
+  int_ref vinfo "research/learning/training.ml" 41 1028 1047 "research/learning/training.ml" 41 1028 1052
+)
+"research/learning/training.ml" 42 1072 1078 "research/learning/training.ml" 42 1072 1089
+type(
+  string
+)
+"research/learning/training.ml" 42 1072 1090 "research/learning/training.ml" 42 1072 1091
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"research/learning/training.ml" 42 1072 1092 "research/learning/training.ml" 42 1072 1107
+type(
+  string
+)
+"research/learning/training.ml" 42 1072 1078 "research/learning/training.ml" 42 1072 1107
+type(
+  bool
+)
+"research/learning/training.ml" 41 1028 1034 "research/learning/training.ml" 42 1072 1107
+type(
+  bool
+)
+"research/learning/training.ml" 43 1108 1114 "research/learning/training.ml" 43 1108 1115
+type(
+  Cil.exp
+)
+"research/learning/training.ml" 43 1108 1119 "research/learning/training.ml" 43 1108 1124
+type(
+  bool
+)
+"research/learning/training.ml" 39 971 975 "research/learning/training.ml" 43 1108 1125
+type(
+  bool
+)
+"research/learning/training.ml" 44 1126 1130 "research/learning/training.ml" 44 1126 1131
+type(
+  Cil.instr
+)
+"research/learning/training.ml" 44 1126 1135 "research/learning/training.ml" 44 1126 1140
+type(
+  bool
+)
+"research/learning/training.ml" 37 915 917 "research/learning/training.ml" 44 1126 1140
+type(
+  bool
+)
+"research/learning/training.ml" 36 899 902 "research/learning/training.ml" 44 1126 1140
+type(
+  Cil.instr -> bool
+)
+type(
+  Cil.instr -> bool
+)
+"research/learning/training.ml" 46 1142 1147 "research/learning/training.ml" 46 1142 1159
+type(
+  Cil.fundec -> bool
+)
+ident(
+  def has_observer "research/learning/training.ml" 56 1365 1366 "research/learning/training.ml" 61 1500 1503
+)
+"research/learning/training.ml" 47 1181 1188 "research/learning/training.ml" 47 1181 1190
+type(
+  Cil.fundec
+)
+ident(
+  def fd "research/learning/training.ml" 48 1194 1196 "research/learning/training.ml" 54 1349 1358
+)
+"research/learning/training.ml" 48 1194 1200 "research/learning/training.ml" 48 1194 1205
+type(
+  Cil.stmt list
+)
+ident(
+  def stmts "research/learning/training.ml" 49 1224 1226 "research/learning/training.ml" 54 1349 1358
+)
+"research/learning/training.ml" 48 1194 1208 "research/learning/training.ml" 48 1194 1210
+type(
+  Cil.fundec
+)
+ident(
+  int_ref fd "research/learning/training.ml" 47 1181 1188 "research/learning/training.ml" 47 1181 1190
+)
+"research/learning/training.ml" 48 1194 1208 "research/learning/training.ml" 48 1194 1220
+type(
+  Cil.stmt list
+)
+"research/learning/training.ml" 49 1224 1226 "research/learning/training.ml" 49 1224 1237
+type(
+  (Cil.stmt -> bool) -> Cil.stmt list -> bool
+)
+ident(
+  ext_ref List.exists
+)
+"research/learning/training.ml" 49 1224 1243 "research/learning/training.ml" 49 1224 1247
+type(
+  Cil.stmt
+)
+ident(
+  def stmt "research/learning/training.ml" 50 1251 1254 "research/learning/training.ml" 53 1333 1348
+)
+"research/learning/training.ml" 50 1251 1260 "research/learning/training.ml" 50 1251 1264
+type(
+  Cil.stmt
+)
+ident(
+  int_ref stmt "research/learning/training.ml" 49 1224 1243 "research/learning/training.ml" 49 1224 1247
+)
+"research/learning/training.ml" 50 1251 1260 "research/learning/training.ml" 50 1251 1270
+type(
+  Cil.stmtkind
+)
+"research/learning/training.ml" 51 1276 1291 "research/learning/training.ml" 51 1276 1293
+type(
+  Cil.instr list
+)
+ident(
+  def il "research/learning/training.ml" 52 1297 1302 "research/learning/training.ml" 52 1297 1332
+)
+"research/learning/training.ml" 51 1276 1281 "research/learning/training.ml" 51 1276 1293
+type(
+  Cil.stmtkind
+)
+"research/learning/training.ml" 52 1297 1302 "research/learning/training.ml" 52 1297 1313
+type(
+  (Cil.instr -> bool) -> Cil.instr list -> bool
+)
+ident(
+  ext_ref List.exists
+)
+"research/learning/training.ml" 52 1297 1314 "research/learning/training.ml" 52 1297 1329
+type(
+  Cil.instr -> bool
+)
+ident(
+  int_ref is_observe_call "research/learning/training.ml" 35 858 863 "research/learning/training.ml" 35 858 878
+)
+"research/learning/training.ml" 52 1297 1330 "research/learning/training.ml" 52 1297 1332
+type(
+  Cil.instr list
+)
+ident(
+  int_ref il "research/learning/training.ml" 51 1276 1291 "research/learning/training.ml" 51 1276 1293
+)
+"research/learning/training.ml" 52 1297 1302 "research/learning/training.ml" 52 1297 1332
+call(
+  tail
+)
+type(
+  bool
+)
+"research/learning/training.ml" 53 1333 1338 "research/learning/training.ml" 53 1333 1339
+type(
+  Cil.stmtkind
+)
+"research/learning/training.ml" 53 1333 1343 "research/learning/training.ml" 53 1333 1348
+type(
+  bool
+)
+"research/learning/training.ml" 50 1251 1254 "research/learning/training.ml" 53 1333 1348
+type(
+  bool
+)
+"research/learning/training.ml" 49 1224 1238 "research/learning/training.ml" 54 1349 1352
+type(
+  Cil.stmt -> bool
+)
+"research/learning/training.ml" 54 1349 1353 "research/learning/training.ml" 54 1349 1358
+type(
+  Cil.stmt list
+)
+ident(
+  int_ref stmts "research/learning/training.ml" 48 1194 1200 "research/learning/training.ml" 48 1194 1205
+)
+"research/learning/training.ml" 49 1224 1226 "research/learning/training.ml" 54 1349 1358
+call(
+  tail
+)
+type(
+  bool
+)
+"research/learning/training.ml" 48 1194 1196 "research/learning/training.ml" 54 1349 1358
+type(
+  bool
+)
+"research/learning/training.ml" 47 1181 1184 "research/learning/training.ml" 54 1349 1358
+type(
+  Cil.fundec -> bool
+)
+type(
+  Cil.fundec -> bool
+)
+"research/learning/training.ml" 56 1365 1370 "research/learning/training.ml" 56 1365 1389
+type(
+  Cil.file -> Cil.fundec
+)
+ident(
+  def find_observe_fundec "research/learning/training.ml" 59 1466 1498 "research/learning/training.ml" 61 1500 1503
+)
+"research/learning/training.ml" 57 1415 1422 "research/learning/training.ml" 57 1415 1426
+type(
+  Cil.file
+)
+ident(
+  def file "research/learning/training.ml" 58 1430 1432 "research/learning/training.ml" 59 1466 1498
+)
+"research/learning/training.ml" 58 1430 1436 "research/learning/training.ml" 58 1430 1443
+type(
+  Cil.fundec list
+)
+ident(
+  def fundecs "research/learning/training.ml" 59 1466 1468 "research/learning/training.ml" 59 1466 1498
+)
+"research/learning/training.ml" 58 1430 1446 "research/learning/training.ml" 58 1430 1457
+type(
+  Cil.file -> Cil.fundec list
+)
+ident(
+  int_ref get_fundecs "research/learning/training.ml" 21 561 566 "research/learning/training.ml" 21 561 577
+)
+"research/learning/training.ml" 58 1430 1458 "research/learning/training.ml" 58 1430 1462
+type(
+  Cil.file
+)
+ident(
+  int_ref file "research/learning/training.ml" 57 1415 1422 "research/learning/training.ml" 57 1415 1426
+)
+"research/learning/training.ml" 58 1430 1446 "research/learning/training.ml" 58 1430 1462
+call(
+  stack
+)
+type(
+  Cil.fundec list
+)
+"research/learning/training.ml" 59 1466 1468 "research/learning/training.ml" 59 1466 1477
+type(
+  (Cil.fundec -> bool) -> Cil.fundec list -> Cil.fundec
+)
+ident(
+  ext_ref List.find
+)
+"research/learning/training.ml" 59 1466 1478 "research/learning/training.ml" 59 1466 1490
+type(
+  Cil.fundec -> bool
+)
+ident(
+  int_ref has_observer "research/learning/training.ml" 46 1142 1147 "research/learning/training.ml" 46 1142 1159
+)
+"research/learning/training.ml" 59 1466 1491 "research/learning/training.ml" 59 1466 1498
+type(
+  Cil.fundec list
+)
+ident(
+  int_ref fundecs "research/learning/training.ml" 58 1430 1436 "research/learning/training.ml" 58 1430 1443
+)
+"research/learning/training.ml" 59 1466 1468 "research/learning/training.ml" 59 1466 1498
+call(
+  tail
+)
+type(
+  Cil.fundec
+)
+"research/learning/training.ml" 58 1430 1432 "research/learning/training.ml" 59 1466 1498
+type(
+  Cil.fundec
+)
+"research/learning/training.ml" 57 1415 1418 "research/learning/training.ml" 59 1466 1498
+type(
+  Cil.file -> Cil.fundec
+)
+type(
+  Cil.file -> Cil.fundec
 )

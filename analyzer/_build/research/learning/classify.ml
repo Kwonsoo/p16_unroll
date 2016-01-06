@@ -1,14 +1,14 @@
 module Classifier : sig
 	
 	(* Learn a classifer based on the training data set D from T2. *)
-	val learn : Training.tdata BatSet.t -> unit
+	val learn : Types.tdata BatSet.t -> unit
 	
 	(* Classify the given new fvectorized query. *)
-	val classify : Training.fvector -> bool
+	val classify : Types.fbvector -> bool
 
 end = struct
 
-	let learn = fun tdata_set -> ()	(* TODO *)
+	let learn = fun tdata_set -> prerr_endline ">> The classifier is learned."; ()	(* TODO *)
 		
 	let classify = fun newprog -> true	(* TODO *)
 

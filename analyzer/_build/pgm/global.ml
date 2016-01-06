@@ -166,7 +166,7 @@ let get_icfg : t -> InterCfg.t
 let get_callgraph : t -> Callgraph.t
 =fun pgm -> pgm.callgraph
 
-let init file = 
+let init file =
   let global = 
   { file = file;
     icfg = InterCfg.init file;

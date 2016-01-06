@@ -1,26 +1,61 @@
-type dir = string
+open Types
 
-type fvector = bool list
-type tdata = (fvector * bool)
+(* Prodice single-query programs into a temporary directory, from the given T2 source file. *)
+let t2prog_to_singleq_progs : dir -> unit  = fun file -> 
+	Sys.command ("mkdir ../T2_singleq_temp");
+	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir ../T2_singleq_temp"); ()
+
+(*TODO*)
+(* Build training data from the given "flang paths"<->"raw paths" pair. *)
+(*
+let build_traiining_data : Flang.t BatSet.t -> ??? -> tdata
+= fun flang_paths raw_paths -> 
+	BatSet.empty
+*)	
+		
+
+module Slicer =
+struct
+	open Cil
+
+	let get_fundecs : Cil.file -> Cil.fundec list
+	= fun file ->
+		List.fold_left (fun acc glob ->
+			match glob with
+			| Cil.GFun (fd, _) -> fd::acc
+			| _ -> acc
+		) [] file.globals
+
+	let is_var : Cil.lval -> bool
+	= fun (lhost, _) ->
+		match lhost with
+		| Cil.Var vinfo -> true
+		| _ -> false
 	
-let fvectorize : Global.t -> fvector
-=fun global -> [true] (* TODO *)
+	let is_observe_call : Cil.instr -> bool
+	= fun instr ->
+		match instr with
+		| Cil.Call (ret, func, args, _) ->
+				(match func with
+				| Cil.Lval lv when is_var lv ->
+						let (Cil.Var vinfo, _) = lv in 						
+						vinfo.vname = "airac_observe"
+				| _ -> false)
+		| _ -> false
 
-let build_t_data : Global.t -> tdata
-=fun global -> ([true], true)	(* TODO *)
-
-	
-module Trainer : sig
-
-	(* Produce single-query programs from the given T2 directory. *)
-	val copy_pgms : dir -> dir -> unit
-	(* Build all training data from the single-query programs. *)
-	val build_training_dataset : dir -> tdata BatSet.t
-
-end = struct 
-
-	let copy_pgms = fun t2dir sqdir -> ()	(* TODO *)
-
-	let build_training_dataset = fun sqdir -> BatSet.empty	(* TODO *)
+	let has_observer : Cil.fundec -> bool
+	= fun fd ->
+		let stmts = fd.sallstmts in
+		List.exists (fun stmt ->
+			match stmt.skind with
+			| Cil.Instr il ->
+					List.exists is_observe_call il
+			| _ -> false
+		) stmts
+					
+	let find_observe_fundec : Cil.file -> Cil.fundec
+	= fun file ->
+		let fundecs = get_fundecs file in
+		List.find has_observer fundecs
 
 end
