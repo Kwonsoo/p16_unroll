@@ -1,6 +1,8 @@
 open Arg
 
+let opt_test = ref false
 let opt_auto_learn = ref false
+let opt_reduced = ref ""
 let opt_auto_apply = ref false
 
 let opt_il = ref false
@@ -23,25 +25,38 @@ let opt_debug = ref false
 let opt_pf = ref false
 let opt_diff = ref false
 let opt_dec_prec = ref 0
+let opt_insert_observe_imprecise = ref false
 let opt_insert_observe = ref false
 let opt_insert_observe_save_diff = ref false
 let opt_observe = ref false
+type imprecise_type = FS | CS
+let opt_imprecise_type = ref FS
 type diff_type = FS | CS
 let opt_diff_type = ref FS
 let opt_dir = ref ""
 let opt_inline_small_functions = ref false
 let opts =
   [
+	(* option for simple tests *)
+	("-simtest", (Arg.Set opt_test), "Print translated F-lang sequences");
 	(* options for the auto-feature research *)
 	("-auto_learn", (Arg.Set opt_auto_learn), "Automatically generate features from the T1 program set and learn a classifier with the T2 program set.");
+	("-reduced", (Arg.String (fun s -> opt_reduced := s)), "a directory where the reduced code files exist");
 	("-auto_apply", (Arg.Set opt_auto_apply), "Selectively apply precision based on the learned knowledge");
  
 	(* options for inserting observe-stmts *)
   ("-dec_prec", (Arg.Set_int opt_dec_prec), "Randomly transform the input program to be less impreicse and then print it in C");
+	("-insert_observe_imprecise", (Arg.Set opt_insert_observe_imprecise), "Insert airac_observe for all alarms from imprecise(e.g., flow-insensitive) analysis");
   ("-insert_observe", (Arg.Set opt_insert_observe), "Insert airac_observe for each diff alarm and store each");
   ("-insert_observe_save_diff", (Arg.Set opt_insert_observe_save_diff), "Save diff only");
   ("-observe", (Arg.Set opt_observe), "observe");
-  ("-difftype", (Arg.String (fun s ->
+  ("-imprecise_type", (Arg.String (fun s ->
+			match s with
+			| "fs" -> opt_imprecise_type := FS
+			| "cs" -> opt_imprecise_type := CS
+			| _ -> raise (Failure "Imprecise type must be either fs or cs")
+		)), "Imprecise type: fs, cs");
+	("-difftype", (Arg.String (fun s ->
       match s with
       | "fs" -> opt_diff_type := FS
       | "cs" -> opt_diff_type := CS

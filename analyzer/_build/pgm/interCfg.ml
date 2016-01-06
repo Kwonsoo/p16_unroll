@@ -37,7 +37,8 @@ let gen_cfgs file =
   BatMap.add global_proc (
       IntraCfg.generate_global_proc file.Cil.globals (Cil.emptyFunction global_proc)
       )
-    (list_fold (fun g m ->
+    (
+		 list_fold (fun g m ->
       match g with
       | Cil.GFun (f,_) -> BatMap.add f.svar.vname (IntraCfg.fromFunDec f) m
       | _ -> m
