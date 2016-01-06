@@ -485,17 +485,6 @@ let make_a_loc : (string * string) -> Loc.t
 	let loc = Loc.loc_of_var var in
 	loc
 
-(*TODO*)
-let sparrow_answer : Loc.t BatSet.t -> bool
-=fun locset -> true	(*placeholder*)
-
-(* Build a training data with the given feature-boolean-vector and the (funname, vname) tuples. *)
-let build_a_tdata : fbvector -> (string * string) BatSet.t -> tdata
-=fun fbvec participated_f_v_tuples ->
-	let participated_locs = BatSet.map (fun elm ->
-			make_a_loc elm) participated_f_v_tuples in
-	let is_alarm_proved = sparrow_answer participated_locs in
-	(fbvec, is_alarm_proved)
 
 (* Produce single-query programs into the given directory, from the given source file. *)
 let imprecise_singleq_progs : dir -> dir -> unit
@@ -511,6 +500,14 @@ let clear_singleq_dir : dir -> unit
 let parse_to_cil : dir -> Cil.file
 =fun file -> Frontend.parseOneFile file
 
+let check_answer file selected =
+	let global = StepManager.stepf true "Translation to graphs" Global.init file in
+	let (pre, global) = StepManager.stepf true "Pre-analysis" ItvPre.do_preanalysis global in
+	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis_autopfs (pre, global, selected) in
+	let observation = observe (pre, global, ItvPre.get_mem pre, inputof) in
+	let (_, _, _, _, _, _, proved_FI, proved_FS, _, _) = observation in
+	proved_FS 
+
 (* Return participants from the given single-query program. *)
 let get_participants : Cil.file -> (string * string) BatSet.t
 =fun cil_file ->
@@ -525,8 +522,9 @@ let one_tdata_from_sqprog : dir -> Flang.t list -> tdata
 	let extracted_prog = Feature.gen global in
 	let fbvector = Feature.fbvectorize extracted_prog features in
 	let participants = get_participants cil_file in	(*participated (f,v) tuples*)
-	let one_tdata = build_a_tdata fbvector participants in
-	one_tdata
+	let participants = BatSet.map (make_a_loc) participants in
+	let answer = check_answer cil_file participants in
+	(fbvector, answer)
 
 let tdata_from_one_benchmark : dir -> Flang.t list -> tdata list
 =fun benchmark_path features ->
