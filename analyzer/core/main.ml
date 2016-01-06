@@ -506,7 +506,38 @@ let imprecise_singleq_progs : dir -> dir -> unit
 
 let clear_singleq_dir : dir -> unit
 =fun singleq_dir ->
-	Sys.command ("rm -r " ^ singleq_dir)
+	Sys.command ("rm -r " ^ singleq_dir); ()
+
+let parse_to_cil : dir -> Cil.file
+=fun file -> Frontend.parseOneFile file
+
+(* Return participants from the given single-query program. *)
+let get_participants : Cil.file -> (string * string) BatSet.t
+=fun cil_file ->
+	let observe_fd = Slicer.find_observe_fundec cil_file in
+	let participants = extract_locl_vnames observe_fd in
+	participants
+
+let one_tdata_from_sqprog : dir -> Flang.t list -> tdata
+=fun sqprog_path features ->
+	let cil_file = parse_to_cil sqprog_path in
+	let (pre, global) = init_analysis cil_file in
+	let extracted_prog = Feature.gen global in
+	let fbvector = Feature.fbvectorize extracted_prog features in
+	let participants = get_participants cil_file in	(*participated (f,v) tuples*)
+	let one_tdata = build_a_tdata fbvector participants in
+	one_tdata
+
+let tdata_from_one_benchmark : dir -> Flang.t list -> tdata list
+=fun benchmark_path features ->
+	imprecise_singleq_progs benchmark_path "../T2_singleq_temp";
+	(* Do the following for all single-query programs. *)
+	let fname_list = Array.to_list (Sys.readdir "../T2_singleq_temp") in
+	let tdata_from_a_bench = List.fold_left (fun accum fname ->
+			(one_tdata_from_sqprog ("../T2_singleq_temp/" ^ fname) features) :: accum
+		) [] fname_list in
+	clear_singleq_dir "../T2_singleq_temp";
+	tdata_from_a_bench
 
 let main () =
   let t0 = Sys.time () in
@@ -528,16 +559,14 @@ let main () =
 		
 		(* 2. Learn classifier. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
-		(*TODO*)
-		(* For all benchmarks, do the following steps. *)
-		(*---------------------------------------------*)
-		imprecise_singleq_progs "sourcefile" "outdir";	
-		let fbvector = Feature.fvectorize extracted_prog features in	
-		(* participated (f,v) tuples *)
-		let participants = 
-		let one_tdata = build_a_tdata fbvector participants in
-		clear_singleq_dir "outdir"
-		(*---------------------------------------------*)
+		let fname_list = Array.to_list (Sys.readdir "../T2") in
+		let all_training_data =
+			List.fold_left (fun accum fname -> 
+					let tdata_from_a_benchmark = tdata_from_one_benchmark ("../T2/" ^ fname) features in
+					tdata_from_a_benchmark @ accum
+				) [] fname_list in
+		(*TODO: Give the training data to the classifier.*)
+
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
