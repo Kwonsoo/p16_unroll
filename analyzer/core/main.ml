@@ -550,6 +550,17 @@ let tdata_from_allT2_benchmarks : Flang.t list -> tdata list
 			) [] fname_list in
 	all_training_data
 
+(*TODO*)
+(* Write all training data to the classifier directory. *)
+let write_all_tdata_to_file : tdata list -> dir -> unit
+=fun tdata_list outdir ->
+	()
+
+(*TODO*)
+(* Run the classifier to learn from the written training data. *)
+let learn_classifier : unit -> unit
+=fun () -> ()
+
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -572,9 +583,10 @@ let main () =
 		prerr_endline "\nSTEP2: Learn the Classifier";
 		let fname_list = Array.to_list (Sys.readdir "../T2") in
 		let all_training_data = tdata_from_allT2_benchmarks features in
-		(*TODO: Give the training data to the classifier.*)
-
-		prerr_endline "TRAINING DATA : done";
+		write_all_tdata_to_file all_training_data "../classifier";
+		prerr_endline "TRAINING DATA : done --> Let classifier learn...";
+		learn_classifier ();
+		prerr_endline "Classifier is learned.";
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
