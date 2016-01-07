@@ -83,7 +83,7 @@ and trans_lv : Cil.lval -> lv
 		| Cil.Lval lv ->
 			let lv = trans_lv lv in
 			Deref lv
-		| _ -> raise (Failure "trans_lv: Invalid Mem."))
+		| _ -> Id)
 	| _ -> Id 
 
 let union_over_set_list : t BatSet.t list -> t BatSet.t
