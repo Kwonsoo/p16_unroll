@@ -487,9 +487,9 @@ let make_a_loc : (string * string) -> Loc.t
 
 (* Produce single-query programs into the given directory, from the given source file. *)
 let imprecise_singleq_progs : dir -> dir -> unit
-=fun file outdir ->
+=fun benchmark outdir ->
 	Sys.command ("mkdir " ^ outdir);
-	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir " ^ outdir);
+	Sys.command ("./main.native " ^ benchmark ^ " -insert_observe_imprecise -imprecise_type fs -dir " ^ outdir);
 	()
 
 (* Remove the given single-query directory. *)
@@ -561,6 +561,39 @@ let write_all_tdata_to_file : tdata list -> dir -> unit
 let learn_classifier : unit -> unit
 =fun () -> ()
 
+(* Build a candidate from the given single-query program. *)
+let one_candidate_from_sqprog : dir -> Flang.t list -> (fbvector * locset)
+=fun sqprog_path features ->
+	let cil_file = parse_to_cil sqprog_path in
+	makeCFGinfo cil_file;
+	let (pre, global) = init_analysis cil_file in
+	let extracted_prog = Feature.gen global in
+	let fbvector = Feature.fbvectorize extracted_prog features in
+	let participants = get_participants cil_file in	(* participated (f,v) tuples *)
+	let participants = BatSet.map make_a_loc participants in
+	(fbvector, participants)
+
+(*TODO*)
+(* Ask classifier if the given new extracted program deserves precision. *)
+let candidate_deserve_precision : unit -> bool
+=fun () -> true
+
+(* Collect and return participants from the given single-query program. *)
+let collect_promising_participants_from_sqprog : dir -> Flang.t list -> locset
+=fun sqprog features ->
+	let (fbvector, participants) = one_candidate_from_sqprog sqprog features in
+	let deserve_precision = candidate_deserve_precision () in
+	if deserve_precision then participants else BatSet.empty
+
+(* Collect and return participants from the all new single-query programs in the given directory. *)
+let collect_promising_participants : dir -> Flang.t list -> locset
+=fun n_sqdir features ->
+	let files = Array.to_list (Sys.readdir n_sqdir) in
+	let all_participants = List.fold_left (fun accum sqprog ->
+			BatSet.union (collect_promising_participants_from_sqprog ("../N_singleq/" ^ sqprog) features) accum
+		) BatSet.empty files in
+	all_participants
+
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -590,13 +623,14 @@ let main () =
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
-		(* 3. Select New Locations. *)
-		prerr_endline "\nSTEP3: Select New Locations";
-		(*TODO*)
-		(*Predictor.copy_pgms "../benchmarks/bc-1.06.c" "../N_singleq";*)
-		(*let candidates = Predictor.build_candidates "../N_singleq" in*)
-		(*let locset = Apply.select "research/learning/classifier.sh" candidates in*)
-		let locset = BatSet.empty in
+		(* 3. Select Promising Locations. *)
+		prerr_endline "\nSTEP3: Select Promising Locations";
+		if (List.length !files) <> 1 then raise (Failure "The one and only one file as new program");
+		let newprog = List.nth !files 0 in
+		imprecise_singleq_progs newprog "../N_singleq";
+		(*NOTE: -auto_learn 옵션에서 feature를 파일로 출력하여 기억해놓지 않아서 여기서 또 generate한다. 수정할 것.*)
+		let features = gen_feature_list !Options.opt_reduced in
+		let promising_participants = collect_promising_participants "../N_singleq" features in
 
 		(* 4. Give full precision to the selected locset. *)
 		prerr_endline "\nSTEP4: Apply Precision to the Selected";
@@ -612,12 +646,12 @@ let main () =
 		prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
 		prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
-		do_itv_analysis_autopfs pre global locset;
+		do_itv_analysis_autopfs pre global promising_participants;
 		prerr_endline "Finished properly.";
 		Profiler.report stdout;
 		prerr_endline (string_of_float (Sys.time () -. t0));
 		exit 1
-	)
+	);
 
 	Cil.initCIL ();
 	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
