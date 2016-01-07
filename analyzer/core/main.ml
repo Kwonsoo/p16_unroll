@@ -520,6 +520,7 @@ let get_participants : Cil.file -> (string * string) BatSet.t
 let one_tdata_from_sqprog : dir -> Flang.t list -> tdata
 =fun sqprog_path features ->
 	let cil_file = parse_to_cil sqprog_path in
+	makeCFGinfo cil_file;
 	let (pre, global) = init_analysis cil_file in
 	let extracted_prog = Feature.gen global in
 	let fbvector = Feature.fbvectorize extracted_prog features in
@@ -573,6 +574,7 @@ let main () =
 		let all_training_data = tdata_from_allT2_benchmarks features in
 		(*TODO: Give the training data to the classifier.*)
 
+		prerr_endline "TRAINING DATA : done";
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
