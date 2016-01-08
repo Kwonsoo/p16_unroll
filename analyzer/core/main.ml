@@ -16,6 +16,7 @@ open Training
 open Apply
 open Feature
 open Types
+open Printf
 
 let _ = Random.self_init ()
 
@@ -550,16 +551,33 @@ let tdata_from_allT2_benchmarks : Flang.t list -> tdata list
 			) [] fname_list in
 	all_training_data
 
-(*TODO*)
+let one_tdata_to_str : tdata -> string
+=fun tdata ->
+	let (fbvector, answer) = tdata in
+	let line = List.fold_right (fun elm accum ->
+			(match elm with
+			 | true -> "1 " ^ accum
+			 | false -> "0 " ^ accum)
+		) fbvector "" in
+	let line = line ^ (match answer with
+			| true -> ": 1"
+			| false -> ": 0") in
+	line
+
 (* Write all training data to the classifier directory. *)
 let write_all_tdata_to_file : tdata list -> dir -> unit
-=fun tdata_list outdir ->
-	()
+=fun tdata_list outfile ->
+	let out = open_out outfile in
+	List.iter (fun tdata ->
+			(*write_a_tdata_to_file tdata out;*)
+			Printf.fprintf out "%s\n" (one_tdata_to_str tdata)
+		) tdata_list;
+	close_out out
 
-(*TODO*)
 (* Run the classifier to learn from the written training data. *)
 let learn_classifier : unit -> unit
-=fun () -> ()
+=fun () ->
+	Sys.command ("python ../classifier/classfier.py tdata.txt tdata.txt"); ()
 
 (* Build a candidate from the given single-query program. *)
 let one_candidate_from_sqprog : dir -> Flang.t list -> (fbvector * locset)
@@ -575,14 +593,15 @@ let one_candidate_from_sqprog : dir -> Flang.t list -> (fbvector * locset)
 
 (*TODO*)
 (* Ask classifier if the given new extracted program deserves precision. *)
-let candidate_deserve_precision : unit -> bool
-=fun () -> true
+let candidate_deserve_precision : fbvector -> bool
+=fun fbvector -> true
+	(*Sys.command ("python ../classifier/classifier.py ")*)
 
 (* Collect and return participants from the given single-query program. *)
 let collect_promising_participants_from_sqprog : dir -> Flang.t list -> locset
 =fun sqprog features ->
 	let (fbvector, participants) = one_candidate_from_sqprog sqprog features in
-	let deserve_precision = candidate_deserve_precision () in
+	let deserve_precision = candidate_deserve_precision fbvector in
 	if deserve_precision then participants else BatSet.empty
 
 (* Collect and return participants from the all new single-query programs in the given directory. *)
@@ -616,7 +635,7 @@ let main () =
 		prerr_endline "\nSTEP2: Learn the Classifier";
 		let fname_list = Array.to_list (Sys.readdir "../T2") in
 		let all_training_data = tdata_from_allT2_benchmarks features in
-		write_all_tdata_to_file all_training_data "../classifier";
+		write_all_tdata_to_file all_training_data "../classifier/tdata.txt";
 		prerr_endline "TRAINING DATA : done --> Let classifier learn...";
 		learn_classifier ();
 		prerr_endline "Classifier is learned.";
