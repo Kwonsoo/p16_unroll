@@ -551,17 +551,22 @@ let tdata_from_allT2_benchmarks : Flang.t list -> tdata list
 			) [] fname_list in
 	all_training_data
 
+let fbvector_to_str : fbvector -> string
+=fun fbvector ->
+	let as_string = List.fold_right (fun elm accum ->
+			(match elm with
+			 | true -> "1 " ^ accum
+			 | false -> "0 ")
+		) fbvector "" in
+	String.trim as_string
+
 let one_tdata_to_str : tdata -> string
 =fun tdata ->
 	let (fbvector, answer) = tdata in
-	let line = List.fold_right (fun elm accum ->
-			(match elm with
-			 | true -> "1 " ^ accum
-			 | false -> "0 " ^ accum)
-		) fbvector "" in
+	let line = fbvector_to_str fbvector in
 	let line = line ^ (match answer with
-			| true -> ": 1"
-			| false -> ": 0") in
+			| true -> " : 1"
+			| false -> " : 0") in
 	line
 
 (* Write all training data to the classifier directory. *)
@@ -574,8 +579,8 @@ let write_all_tdata_to_file : tdata list -> dir -> unit
 		) tdata_list;
 	close_out out
 
-(* Run the classifier to learn from the written training data. *)
-let learn_classifier : unit -> unit
+(* Test the performance with classifier along with the written tdata. *)
+let test_with_classifier : unit -> unit
 =fun () ->
 	Sys.command ("python ../classifier/classfier.py tdata.txt tdata.txt"); ()
 
@@ -591,11 +596,19 @@ let one_candidate_from_sqprog : dir -> Flang.t list -> (fbvector * locset)
 	let participants = BatSet.map make_a_loc participants in
 	(fbvector, participants)
 
-(*TODO*)
+let write_fbvector_to_file : fbvector -> dir -> unit
+=fun fbvector outfile ->
+	let out = open_out outfile in	(*open_out : truncate if the file already exists*)
+	let fbvector_as_str = fbvector_to_str fbvector in
+	Printf.fprintf out "%s" fbvector_as_str
+
 (* Ask classifier if the given new extracted program deserves precision. *)
 let candidate_deserve_precision : fbvector -> bool
-=fun fbvector -> true
-	(*Sys.command ("python ../classifier/classifier.py ")*)
+=fun fbvector ->
+	write_fbvector_to_file fbvector "../a_new_fbvector_temp";
+	(*exit code 10 : true, 11 : false*)
+	let classifier_say_yes = Sys.command ("python ../classifier/classifier.py fbector_predict LR train-small.txt a_new_fbvector_temp") in
+	if classifier_say_yes = 10 then true else false
 
 (* Collect and return participants from the given single-query program. *)
 let collect_promising_participants_from_sqprog : dir -> Flang.t list -> locset
@@ -631,18 +644,18 @@ let main () =
 		prerr_endline "STEP1: Generate Features";
 		let features = gen_feature_list !Options.opt_reduced in
 		
-		(* 2. Learn classifier. *)
+		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Learn the Classifier";
 		let fname_list = Array.to_list (Sys.readdir "../T2") in
 		let all_training_data = tdata_from_allT2_benchmarks features in
 		write_all_tdata_to_file all_training_data "../classifier/tdata.txt";
-		prerr_endline "TRAINING DATA : done --> Let classifier learn...";
-		learn_classifier ();
-		prerr_endline "Classifier is learned.";
+		prerr_endline ">> TRAINING DATA : done --> Test with classifier..";
+		test_with_classifier ();
+		prerr_endline ">> TEST : done";
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
-		(* 3. Select Promising Locations. *)
+		(* 3. Learn a classifier and select promising locations. *)
 		prerr_endline "\nSTEP3: Select Promising Locations";
 		if (List.length !files) <> 1 then raise (Failure "The one and only one file as new program");
 		let newprog = List.nth !files 0 in
