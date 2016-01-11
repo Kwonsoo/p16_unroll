@@ -7,7 +7,7 @@ let rec match_exp : exp * exp -> bool
 	| Const, Const -> true
 	| Uexp e1, Uexp e2 ->
 		match_exp (e1, e2)
-	| Bexp (bops1, e11, e12), Bexp (bops2, e21, e22) when bops1 = bops2 ->
+	| Bexp (bops1, e11, e12), Bexp (bops2, e21, e22) ->
 		match_exp (e11, e21) && match_exp (e12, e22)
 	| Lval l1, Lval l2 | Addr l1, Addr l2
 		-> match_lv (l1, l2)
@@ -18,6 +18,7 @@ and match_lv : lv * lv -> bool
 	match l1, l2 with
 	| Id, Id -> true
 	| Array, Array -> true
+	| Deref _, Deref _ -> true
 	| _ -> false (* TO DO *)
 
 let match_cmd : cmd * cmd -> bool
@@ -42,6 +43,7 @@ let rec remove_same_seq : cmd -> t -> t
 			rest
 	| _ -> []	
 
+(* Too strict 
 let match_fl : t -> t -> bool
 = fun feat target ->
 	let entire_feat = feat in
@@ -57,6 +59,23 @@ let match_fl : t -> t -> bool
 		| [],  _ -> true
 		| _ -> false
 	in match_helper feat target
-				
+*)
+
+let match_fl : t -> t -> bool
+= fun feat target ->
+	let entire_feat = feat in
+	let rec match_helper feat target =
+		match feat, target with
+		| hd_feat::tl_feat, hd_target::tl_target ->
+			if match_cmd (hd_feat, hd_target)
+			then
+				let rest = remove_same_seq hd_feat tl_target in
+				match_helper tl_feat rest
+			else
+				match_helper feat tl_target				
+		| [], _ -> true
+		| _ -> false
+	in match_helper feat target
+
 			
 
