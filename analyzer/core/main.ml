@@ -452,14 +452,13 @@ let analysis_and_observe file =
 
 (* Generate features from one reduce code. *)
 let gen_features_from_one_file = fun file ->
-	(* 소스파일 path로부터 global 데이터를 만들어낸 다음에 gen을 사용해서 모든 feature를 extract 해내면 된다.*)
 	let one = Frontend.parseOneFile file in
 	makeCFGinfo one;
 	let (pre, global) = init_analysis one in
 	let feature_set = Feature.gen global in
 	feature_set
 
-(* Generate feature list from the reduced given directory. *)
+(* Generate feature list from the given reduced directory. *)
 let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
 	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
 	let files = Sys.readdir reduced_dir in
@@ -532,6 +531,7 @@ let one_tdata_from_sqprog : dir -> Flang.t list -> tdata
 
 let tdata_from_one_benchmark : dir -> Flang.t list -> tdata list
 =fun benchmark_path features ->
+	(*NOTE*)
 	imprecise_singleq_progs benchmark_path "../T2_singleq_temp";
 	(* Do the following for all single-query programs. *)
 	let fname_list = Array.to_list (Sys.readdir "../T2_singleq_temp") in
@@ -582,7 +582,7 @@ let write_all_tdata_to_file : tdata list -> dir -> unit
 (* Test the performance with classifier along with the written tdata. *)
 let test_with_classifier : unit -> unit
 =fun () ->
-	Sys.command ("python ../classifier/classfier.py tdata.txt tdata.txt"); ()
+	Sys.command ("python ../classifier/classifier.py test ../classifier/tdata.txt ../classifier/tdata.txt"); ()
 
 (* Build a candidate from the given single-query program. *)
 let one_candidate_from_sqprog : dir -> Flang.t list -> (fbvector * locset)
@@ -645,8 +645,7 @@ let main () =
 		let features = gen_feature_list !Options.opt_reduced in
 		
 		(* 2. Collect and write tdata to file. *)
-		prerr_endline "\nSTEP2: Learn the Classifier";
-		let fname_list = Array.to_list (Sys.readdir "../T2") in
+		prerr_endline "\nSTEP2: Generate Training Data";
 		let all_training_data = tdata_from_allT2_benchmarks features in
 		write_all_tdata_to_file all_training_data "../classifier/tdata.txt";
 		prerr_endline ">> TRAINING DATA : done --> Test with classifier..";
@@ -655,12 +654,12 @@ let main () =
 		exit 1
 	)
 	else if !Options.opt_auto_apply then (	
-		(* 3. Learn a classifier and select promising locations. *)
+		(* 3. Learn a classifier from the tdata and select promising locations. *)
 		prerr_endline "\nSTEP3: Select Promising Locations";
 		if (List.length !files) <> 1 then raise (Failure "The one and only one file as new program");
 		let newprog = List.nth !files 0 in
 		imprecise_singleq_progs newprog "../N_singleq";
-		(*NOTE: -auto_learn 옵션에서 feature를 파일로 출력하여 기억해놓지 않아서 여기서 또 generate한다. 수정할 것.*)
+		(*NOTE: -auto_learn 옵션에서 feature를 파일로 출력하여 기억해놓지 않아서 여기서 또 generate한다.*)
 		let features = gen_feature_list !Options.opt_reduced in
 		let promising_participants = collect_promising_participants "../N_singleq" features in
 
@@ -714,7 +713,7 @@ let main () =
 	if !Options.opt_test then (
 		let featSet = Feature.gen global in
 		BatSet.iter (Flang.print_flang) featSet
-	); exit 1;
+	); (*exit 1;*)
 
     let pids = InterCfg.pidsof (Global.get_icfg global) in
     let nodes = InterCfg.nodesof (Global.get_icfg global) in
