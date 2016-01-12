@@ -81,8 +81,7 @@ and trans_lv : Cil.lval -> lv
 	| Cil.Mem e ->
 		(match e with
 		| Cil.Lval lv ->
-			let lv = trans_lv lv in
-			Deref lv
+			Deref Id
 		| _ -> Id)
 	| _ -> Id 
 
