@@ -686,6 +686,32 @@ let main () =
 
 	Cil.initCIL ();
 	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
+	
+	if !Options.opt_test then (
+		let _ = iterGlobals one (fun g ->
+			match g with
+			| Cil.GFun (fd, _) ->
+				let vis = new Unroller.unrollingVisitor (fd, 0) in
+				visitCilFile vis one
+			| _ -> ()) in
+		let _ = makeCFGinfo one in
+		let (pre, global) = init_analysis one in
+		let filename = ref 0 in
+		BatMap.iter (fun pid cfg ->
+			if (pid <> "_G_" && pid <> "main") then begin
+				print_endline pid;
+				let paths = Zex.get_paths cfg in
+				BatSet.iter (fun cfg ->
+					print_endline (string_of_int !filename);
+            		let out = open_out (!Options.opt_dir ^ "/" ^ (string_of_int !filename) ^ ".cfg") in 
+					IntraCfg.print_dot out cfg; filename := !filename + 1;
+					flush out; close_out out;
+				) paths end
+			else
+				print_endline "*** PASS _G_ ***"
+			) global.icfg.cfgs;
+		exit 1);
+
 
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
@@ -709,11 +735,6 @@ let main () =
     if !Options.opt_observe then (analysis_and_observe one; exit 1);
 
     let (pre, global) = init_analysis one in
-
-	if !Options.opt_test then (
-		let featSet = Feature.gen global in
-		BatSet.iter (Flang.print_flang) featSet
-	); (*exit 1;*)
 
     let pids = InterCfg.pidsof (Global.get_icfg global) in
     let nodes = InterCfg.nodesof (Global.get_icfg global) in
