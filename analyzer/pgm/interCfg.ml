@@ -4,6 +4,8 @@ open Vocab
 open Cil
 open Yojson.Safe
 
+module SS = Set.Make(String)
+
 type pid = string
 module Node = struct
   type t = pid * IntraCfg.node
@@ -144,6 +146,22 @@ let store_cfgs : string -> t -> unit
     IntraCfg.print_dot out cfg;
     close_out out
   ) g.cfgs
+
+(*NOTE*)
+let dependency : t -> t
+=fun inter ->
+	let new_cfgs = BatMap.map (fun cfg ->
+			IntraCfg.dependency cfg
+		) inter.cfgs in
+	{cfgs = new_cfgs;
+	 globals = inter.globals}
+
+(*NOTE*)
+let print_intras : t -> unit
+=fun inter ->
+	BatMap.iter (fun pid cfg ->
+			IntraCfg.print_intra_cmds cfg IntraCfg.Node.ENTRY
+		) inter.cfgs
 
 let to_json : t -> json
 = fun g ->

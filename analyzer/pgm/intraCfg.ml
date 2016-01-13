@@ -5,6 +5,8 @@ open Cil
 open Cil2str
 open Printf 
 
+module SS = Set.Make(String)
+
 module Node = struct
   type t = ENTRY | EXIT | Node of int
   let compare = compare
@@ -1011,6 +1013,159 @@ let print_dot : out_channel -> t -> unit
       fprintf chan "%s -> %s\n" (Node.to_string v1) (Node.to_string v2)
   ) g.graph;
   fprintf chan "}\n"
+
+let rec print_intra_cmds : t -> node -> unit
+=fun intra node ->
+	let cmd = find_cmd node intra in
+	prerr_endline (Cmd.to_string cmd);
+	if List.length (succ node intra) <> 0
+	then print_intra_cmds intra (List.nth (succ node intra) 0)
+	else ()
+
+(*Return the last node in the extracted one-path intracfg.*)
+let rec node_before_return : t -> node -> node
+=fun intra current_node ->
+	let exit_node = Node.EXIT in
+	let return_node = List.nth (pred exit_node intra) 0 in
+	let node_before_return = List.nth (pred return_node intra) 0 in
+	node_before_return
+
+(*variable names from lval*)
+let rec vnames_lval : lval -> SS.t -> SS.t
+=fun lval accum ->
+	let (lhost, _) = lval in
+	match lhost with
+	| Var varinfo -> SS.add varinfo.vname accum
+	| Mem exp -> vnames_exp exp accum
+
+(*variable names from exp*)
+and vnames_exp : exp -> SS.t -> SS.t
+=fun exp accum ->
+	match exp with
+	| Lval l -> vnames_lval l accum
+	| UnOp (_, e, _) -> vnames_exp e accum
+	| BinOp (_, e1, e2, _) -> SS.union (vnames_exp e1 accum) (vnames_exp e2 accum)
+	| CastE (_, e) -> vnames_exp e accum
+	| Question (e1, e2, e3, _) -> SS.union (SS.union (vnames_exp e1 accum) (vnames_exp e2 accum)) (vnames_exp e3 accum)
+	| AddrOf l -> vnames_lval l accum
+	| StartOf l -> vnames_lval l accum
+	| _ -> accum
+
+(*simply all vnames from cmd*)
+let all_vnames_from_node : t -> node -> SS.t
+=fun intra node ->
+	let cmd = find_cmd node intra in
+	match cmd with
+	| Cset (lval, exp, location) -> SS.union (vnames_lval lval SS.empty) (vnames_exp exp SS.empty)
+	| Cexternal (lval, location) -> vnames_lval lval SS.empty
+	| Calloc (lval, alloc, static, location) ->
+			(match alloc with
+			 | Array exp -> SS.union (vnames_lval lval SS.empty) (vnames_exp exp SS.empty))
+	| Csalloc (lval, str, location) -> vnames_lval lval SS.empty
+	| Cfalloc (lval, fd, location) -> vnames_lval lval SS.empty
+	| Cassume (exp, location) -> vnames_exp exp SS.empty
+	| Cassert (exp, location) -> vnames_exp exp SS.empty
+	| Ccall (lval_opt, exp, exp_list, location) -> 
+			let from_lval_opt = (match lval_opt with
+					| Some lval -> vnames_lval lval SS.empty
+					| None -> SS.empty) in
+			let from_exp = vnames_exp exp SS.empty in
+			let from_exp_list = List.fold_left (fun accum e ->
+					SS.union accum (vnames_exp e SS.empty)
+				) SS.empty exp_list in
+			SS.union from_lval_opt (SS.union from_exp from_exp_list)
+	| Creturn (exp_opt, location) -> 
+			(match exp_opt with
+			 | Some exp -> vnames_exp exp SS.empty
+			 | None -> SS.empty)
+	| _ -> prerr_endline "Yo!"; SS.empty
+
+(*def + assume*)
+let all_def_vnames_from_node : t -> node -> SS.t
+=fun intra node ->
+	let cmd = find_cmd node intra in
+	match cmd with 
+	| Cset (lval, exp, _) -> vnames_lval lval SS.empty
+	| Cexternal (lval, _) -> vnames_lval lval SS.empty
+	| Calloc (lval, alloc, _, _) -> vnames_lval lval SS.empty
+	| Csalloc (lval, _, _) -> vnames_lval lval SS.empty
+	| Cfalloc (lval, fd, _) -> vnames_lval lval SS.empty
+	| Cassume (exp, _) -> vnames_exp exp SS.empty
+	| Ccall (lval_opt, exp, exp_list, _) ->
+			(match lval_opt with
+			 | Some lval -> vnames_lval lval SS.empty
+			 | None -> SS.empty)
+	| _ -> SS.empty
+
+(*use + assume*)
+let new_dep_vnames : t -> node -> SS.t
+=fun intra node ->
+	let cmd = find_cmd node intra in
+	match cmd with
+	| Cset (lval, exp, _) -> vnames_exp exp SS.empty
+	| Cexternal (lval, _) -> SS.empty
+	| Calloc (lval, alloc, _, _) -> 
+			(match alloc with
+			 | Array exp -> vnames_exp exp SS.empty)
+	| Csalloc (lval, _, _) -> SS.empty
+	| Cfalloc (lval, fd, _) -> SS.empty
+	| Cassume (exp, _) -> vnames_exp exp SS.empty
+	| Ccall (lval_opt, exp, exp_list, _) ->
+			List.fold_left (fun accum e ->
+					SS.union accum (vnames_exp e SS.empty)
+				) SS.empty exp_list
+	| _ -> SS.empty
+
+let remove_and_connect : t -> node -> node -> node  -> t
+=fun intra pred_node node_to_remove succ_node ->
+	let intra1 = remove_edge pred_node node_to_remove intra in
+	(*
+	prerr_endline ("Removed edge: {" ^ (Cmd.to_string (find_cmd pred_node intra)) ^ "} -> {"
+																	 ^ (Cmd.to_string (find_cmd node_to_remove intra)) ^ "}");
+	*)
+	let intra2 = add_edge pred_node succ_node intra1 in
+	(*
+	prerr_endline ("Added edge: {" ^ (Cmd.to_string (find_cmd pred_node intra)) ^ "} -> {"
+																 ^ (Cmd.to_string (find_cmd succ_node intra)) ^ "}");
+	prerr_endline ((Cmd.to_string (find_cmd pred_node intra2)) ^ " >> new successor >> " ^ (Cmd.to_string (find_cmd succ_node intra2)));
+	*)
+	let intra3 = remove_node node_to_remove intra2 in
+	(*
+	prerr_endline ("Removed node: {" ^ (Cmd.to_string (find_cmd node_to_remove intra2)) ^ "}");
+	*)
+	intra3
+
+let rec investigate : t -> node -> SS.t -> t
+=fun intra node appeared ->
+	let def_vnames = all_def_vnames_from_node intra node in
+	let (updated_intra, updated_appeared) =
+			if SS.exists (fun vname -> 
+					SS.mem vname appeared
+				) def_vnames
+			then (
+					let new_appeared = SS.union appeared (new_dep_vnames intra node) in
+					(intra, new_appeared)
+			)
+			else (
+					if List.length (pred node intra) <> 0 then (
+							let pre = List.nth (pred node intra) 0 in
+							let suc = List.nth (succ node intra) 0 in
+							let new_intra = remove_and_connect intra pre node suc in
+							(new_intra, appeared))
+					else (intra, appeared)
+			) in
+	if List.length (pred node intra) <> 0
+	then investigate updated_intra (List.nth (pred node intra) 0) updated_appeared
+	else updated_intra
+
+let dependency : t -> t
+=fun intra ->
+	(*지금 테스트해보는 것에서는 리턴 노드 바로 전이 마지막 노드이다.*)
+	let before_return = node_before_return intra Node.ENTRY in
+	let vnames_last_node = all_vnames_from_node intra before_return in
+	prerr_int (SS.cardinal vnames_last_node);
+	let dependency_intra = investigate intra (List.nth (pred before_return intra) 0) vnames_last_node in
+	dependency_intra
 
 let print_dom_fronts dom_fronts = 
   BatMap.iter (fun node fronts ->

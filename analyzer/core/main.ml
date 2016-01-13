@@ -723,8 +723,16 @@ let main () =
 
 
     if !Options.opt_cfgs then ( 
-       InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;
-       exit 1);
+				(*Cmd print for test*)
+				prerr_endline "=========";
+				InterCfg.print_intras global.icfg;
+				prerr_endline "=========";
+				InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;
+				(*InterCfg.count_nodes_each_intracfg global.icfg;*)
+				(*NOTE: Dependency 적용*)
+				prerr_endline ">>>>>>>";
+				InterCfg.store_cfgs (!Options.opt_cfgs_dir ^ "_dep") (InterCfg.dependency global.icfg);
+				exit 1);
     if !Options.opt_dug then (
         let dug = ItvSSA.icfg2dug (global, pre, ItvPre.get_total_abslocs pre) in
         let json = `Assoc 
