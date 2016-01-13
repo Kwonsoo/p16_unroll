@@ -698,7 +698,7 @@ let main () =
 		let (pre, global) = init_analysis one in
 		let filename = ref 0 in
 		BatMap.iter (fun pid cfg ->
-			if (pid <> "_G_" ) then begin
+			if (pid <> "_G_" && pid <> "main") then begin
 				print_endline pid;
 				let paths = Zex.get_paths cfg in
 				BatSet.iter (fun cfg ->
