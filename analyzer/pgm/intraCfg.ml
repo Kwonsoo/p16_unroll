@@ -1158,9 +1158,17 @@ let rec investigate : t -> node -> SS.t -> t
 	then investigate updated_intra (List.nth (pred node intra) 0) updated_appeared
 	else updated_intra
 
+(******************************************************************************************************
+	@ our concern for dependency: {def-use} and {assume}
+	@ the USE set: the set that contains variables used in successors who survived
+	@ condition for survival: any variable in {def} or {assume} is in the current USE set.
+	
+	As the last node is the query, add all the variable names in the query Cmd to the USE set, which makes the initial USE set.
+	Checking all the predecessors, going backward, remove the node if no variable in it is in the USE set.
+ ******************************************************************************************************)
 let dependency : t -> t
 =fun intra ->
-	(*지금 테스트해보는 것에서는 리턴 노드 바로 전이 마지막 노드이다.*)
+	(*지금 테스트해보는 것에서는 리턴 노드 바로 전이 마지막 노드. 실제로는 마지막 노드가 쿼리일 것이므로 약간 수정해줘야겠지.*)
 	let before_return = node_before_return intra Node.ENTRY in
 	let vnames_last_node = all_vnames_from_node intra before_return in
 	prerr_int (SS.cardinal vnames_last_node);
