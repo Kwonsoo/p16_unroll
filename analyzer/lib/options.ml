@@ -1,5 +1,6 @@
 open Arg
 
+let opt_nid = ref false
 let opt_test = ref false
 let opt_auto_learn = ref false
 let opt_reduced = ref ""
@@ -38,6 +39,7 @@ let opt_inline_small_functions = ref false
 let opts =
   [
 	(* option for simple tests *)
+	("-nid", (Arg.Set opt_nid), "insert nid of the query to where alarm occurs");
 	("-simtest", (Arg.Set opt_test), "Print translated F-lang sequences");
 	(* options for the auto-feature research *)
 	("-auto_learn", (Arg.Set opt_auto_learn), "Automatically generate features from the T1 program set and learn a classifier with the T2 program set.");

@@ -45,17 +45,22 @@ let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
 = fun fd ->
 	let idx = ref 0 in
 	let featTbl = Hashtbl.create 251 in
+	let predTbl = Hashtbl.create 251 in
 	let begin_stmt = get_begin_stmt fd in
 			
 	(let rec add_paths : Cil.stmt -> Flang.t -> unit
 	= fun stmt accum ->
 		let appended = process_one_stmt stmt accum in
+		(if card_preds stmt > 1
+			then Hashtbl.add predTbl stmt.sid stmt
+			else ());
 		match (card_succs stmt) with
 		| 0 -> (Hashtbl.add featTbl !idx appended); idx := !idx + 1
 		| _ -> 
 			let succs = get_succs stmt in
 			List.iter (fun succ ->
-				if is_backward (stmt, succ)
+				if Hashtbl.mem predTbl succ.sid then ()
+				else if is_backward (stmt, succ)
 				then
 					let break = get_loop_break stmt in
 					if BatOption.is_some break 
@@ -86,7 +91,9 @@ let tbl_to_set : (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
 let get_featSet : Cil.fundec -> Flang.t BatSet.t
 = fun fd ->
 	let featTbl = build_featTbl fd in
-	tbl_to_set featTbl
+	let featSet = tbl_to_set featTbl in
+	BatSet.filter (fun fl ->
+		List.length fl > 2) featSet
 
 let unroll_loop : Cil.stmt list -> int -> Cil.stmt list
 = fun orgs factor -> orgs (* TO DO *)

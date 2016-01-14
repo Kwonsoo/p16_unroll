@@ -1,4 +1,5 @@
 open IntraCfg
+open Report
 
 type branch_map = (node, (node * node)) BatMap.t
 
@@ -40,3 +41,4 @@ let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
 = fun g ->
 	let branches = get_branch_map g in
 	extract_paths g branches
+

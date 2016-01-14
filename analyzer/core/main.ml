@@ -686,7 +686,28 @@ let main () =
 
 	Cil.initCIL ();
 	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
-	
+	let _ = makeCFGinfo one in	
+	if !Options.opt_nid then (
+		let (pre, global) = init_analysis one in
+		let inputof_FI =
+			list_fold (fun n t ->
+				if Mem.bot = (Table.find n t) 
+				then Table.add n (ItvPre.get_mem pre) t
+				else t
+			) (InterCfg.nodesof (Global.get_icfg global)) Table.empty in
+		let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
+		let fi = Report.get_alarms_fi queries_FI in
+		BatMap.iter (fun loc (al::alarms) ->
+			let vis = new Unroller.insertNidVisitor (al) in
+			let _ = visitCilFile vis one in
+			let out = open_out "nid.c" in
+			print_cil out one;
+			flush out;
+			close_out out
+		) fi;
+		exit 1);
+
+
 	if !Options.opt_test then (
 		let _ = iterGlobals one (fun g ->
 			match g with
@@ -743,6 +764,7 @@ let main () =
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
 
+(*
     if !Options.opt_cfgs then ( 
 				(*Cmd print for test*)
 				prerr_endline "=========";
@@ -754,6 +776,9 @@ let main () =
 				prerr_endline ">>>>>>>";
 				InterCfg.store_cfgs (!Options.opt_cfgs_dir ^ "_dep") (InterCfg.dependency global.icfg);
 				exit 1);
+	*)
+	if !Options.opt_cfgs then (
+			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
     if !Options.opt_dug then (
         let dug = ItvSSA.icfg2dug (global, pre, ItvPre.get_total_abslocs pre) in
         let json = `Assoc 
