@@ -3,6 +3,7 @@ open Extractor
 open Training
 open Cil
 open Types
+open Visitors
 
 (*=========================================================================== 
  NOTE:
@@ -17,9 +18,32 @@ open Types
 
 let gen : Global.t -> Flang.t BatSet.t
 = fun global ->
-	let file = global.file in
-	let observe_fd = Slicer.find_observe_fundec file in
-	Extractor.get_featSet observe_fd 
+	let intercfg = global.icfg in
+	(*only with observe*)
+	let intracfg_observe = Slicer.find_observe_intracfg intercfg in
+	let fd_observe = intracfg_with_observe.fd in
+	let vis = new Unroller.unrollingVisitor (fd_with_observe, 0)	(*This fd position is meaningless for now: not implemented*)
+	let fd_observe_unrolled = fdvisitCilFunction vis fd_with_observe in
+	(*NOTE: intracfg 데이터에서 unrolling한 fundec만 바꿔주면 나머지 데이터와 불일치하는 것들이 생겨 문제되지는 않을까?*)
+	let intracfg_observe_unrolled = 
+		{
+			fd = fd_observe_unrolled;
+			graph = intracfg_observe.graph;
+			cmd_map = intracfg_observe.cmd_map;
+			dom_fronts = intracfg_observe.dom_fronts
+			dom_tree = intracfg_observe.dom_tree
+			scc_list = intracfg_observe.scc_list
+		} in
+	let paths_in_intracfg = Zex.get_paths intracfg_observe_unrolled in
+	(*paths containing and ending with query*)
+	(*TODO*)
+	let paths_to_query = paths_in_intracfg in
+	(*dependency*)
+	let paths_dependency = BatSet.map (fun path ->
+			IntraCfg.dependency path
+		) paths_to_query in
+	(*translate to flang*)
+	let paths_flang = Zflang.trans_graph paths_dependency
 
 	
 (* match TODO

@@ -44,4 +44,19 @@ struct
 		let fundecs = get_fundecs file in
 		List.find has_observer fundecs
 
+	(* Return a intracfg that has airac_observe from the given intercfg. *)
+	let find_observe_intracfg : InterCfg.t -> IntraCfg.t
+	=fun inter ->
+		let cfgs = intercfg.cfgs in
+		let cfgs' = BatMap.filteri (fun pid intracfg -> 
+				let fd = intracfg.fd in
+				has_observer fd
+			) cfgs in
+		if BatMap.cardinal cfgs' = 1
+		then (
+				let (pid, intra) = BatMap.choose cfgs' in
+				intra
+		)
+		else raise (Failure "Slicer.find_observe_intracfg: airac_observe should be one and only one.")
+
 end
