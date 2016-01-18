@@ -8,7 +8,7 @@ let newprog_to_singleq_progs : dir -> unit
 	Sys.command ("./main.native " ^ file ^ " -insert_observe_imprecise -imprecise_type fs -dir ../new_singleq_temp"); ()
 
 (* flang path set 하나와 실제 feature list를 받아서 하나의 fbvector를 만들어낸다. *)
-let build_fbvector : Flang.t BatSet.t -> Flang.t list -> fbvector
+let build_fbvector : Zflang.t BatSet.t -> Zflang.t list -> fbvector
 = fun paths feature_list -> 
 	let fbvector = List.fold_right (fun f accum ->
 			(Feature.pred paths f) :: accum

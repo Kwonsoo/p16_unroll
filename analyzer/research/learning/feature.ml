@@ -18,13 +18,15 @@ let gen_t1 : Global.t -> Zflang.t BatSet.t
 	(*TODO*)
 	let paths_in_intracfg = paths_in_intracfg in
 	(*dependency*)
+	(*
 	let paths_dependency = BatSet.map (fun path ->
 			IntraCfg.dependency path
 		) paths_in_intracfg in
+	*)
 	(*translate to flang*)
 	let paths_flang = BatSet.map (fun path ->
 			Zflang.trans_graph path
-		) paths_dependency in
+		) paths_in_intracfg in
 	paths_flang
 
 (*EXTRACT for T2.

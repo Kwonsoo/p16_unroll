@@ -454,12 +454,16 @@ let analysis_and_observe file =
 let gen_features_from_one_file = fun file ->
 	let one = Frontend.parseOneFile file in
 	makeCFGinfo one;
+	let vis = new Unroller.unrollingVisitor (Cil.dummyFunDec, 0) in
+	let _ = visitCilFile vis one in
+	let _ = makeCFGinfo one in
 	let (pre, global) = init_analysis one in
 	let feature_set = Feature.gen_t1 global in
 	feature_set
 
 (* Generate feature list from the given reduced directory. *)
-let gen_feature_list : dir -> Zflang.t list = fun reduced_dir ->
+let gen_feature_set : dir -> Zflang.t BatSet.t = fun reduced_dir ->
+	try
 	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
 	let files = Sys.readdir reduced_dir in
 	let files = Array.to_list files in 
@@ -468,7 +472,8 @@ let gen_feature_list : dir -> Zflang.t list = fun reduced_dir ->
 			let a_feature_set = gen_features_from_one_file full_file_path in
 			BatSet.union accum a_feature_set
 		) BatSet.empty files in
-	BatSet.to_list features
+	features
+	with _ -> raise (Failure "gen_feature_set")
 
 (* Return local variable names from the given function.
 	 NOTE: extract된 프로그램의 모든 변수들을 가져올 때, 일단은 이렇게 함수 내 모든 로컬 변수들만 가져오고 있는데, Formal Parameter들은 여기에 포함 안 되어있다. *)
@@ -530,28 +535,6 @@ let one_tdata_from_sqprog : dir -> Zflang.t list -> tdata
 	let answer = check_answer cil_file participants in
 	(fbvector, answer)
 
-let tdata_from_one_benchmark : dir -> Zflang.t list -> tdata list
-=fun benchmark_path features ->
-	(*NOTE*)
-	imprecise_singleq_progs benchmark_path "../T2_singleq_temp";
-	(* Do the following for all single-query programs. *)
-	let fname_list = Array.to_list (Sys.readdir "../T2_singleq_temp") in
-	let tdata_from_a_bench = List.fold_left (fun accum fname ->
-			(one_tdata_from_sqprog ("../T2_singleq_temp/" ^ fname) features) :: accum
-		) [] fname_list in
-	clear_singleq_dir "../T2_singleq_temp";
-	tdata_from_a_bench
-
-let tdata_from_allT2_benchmarks : Zflang.t list -> tdata list
-=fun features ->
-	let fname_list = Array.to_list (Sys.readdir "../T2") in
-	let all_training_data =
-		List.fold_left (fun accum fname ->
-				let tdata_from_a_benchmark = tdata_from_one_benchmark ("../T2/" ^ fname) features in
-				tdata_from_a_benchmark @ accum
-			) [] fname_list in
-	all_training_data
-
 let fbvector_to_str : fbvector -> string
 =fun fbvector ->
 	let as_string = List.fold_right (fun elm accum ->
@@ -585,6 +568,7 @@ let test_with_classifier : unit -> unit
 =fun () ->
 	Sys.command ("python ../classifier/classifier.py test ../classifier/tdata.txt ../classifier/tdata.txt"); ()
 
+(*
 (* Build a candidate from the given single-query program. *)
 let one_candidate_from_sqprog : dir -> Zflang.t list -> (fbvector * locset)
 =fun sqprog_path features ->
@@ -596,6 +580,7 @@ let one_candidate_from_sqprog : dir -> Zflang.t list -> (fbvector * locset)
 	let participants = get_participants cil_file in	(* participated (f,v) tuples *)
 	let participants = BatSet.map make_a_loc participants in
 	(fbvector, participants)
+	*)
 
 let write_fbvector_to_file : fbvector -> dir -> unit
 =fun fbvector outfile ->
@@ -611,13 +596,13 @@ let candidate_deserve_precision : fbvector -> bool
 	let classifier_say_yes = Sys.command ("python ../classifier/classifier.py fbector_predict LR train-small.txt a_new_fbvector_temp") in
 	if classifier_say_yes = 10 then true else false
 
+(*
 (* Collect and return participants from the given single-query program. *)
 let collect_promising_participants_from_sqprog : dir -> Zflang.t list -> locset
 =fun sqprog features ->
 	let (fbvector, participants) = one_candidate_from_sqprog sqprog features in
 	let deserve_precision = candidate_deserve_precision fbvector in
 	if deserve_precision then participants else BatSet.empty
-
 (* Collect and return participants from the all new single-query programs in the given directory. *)
 let collect_promising_participants : dir -> Zflang.t list -> locset
 =fun n_sqdir features ->
@@ -627,6 +612,53 @@ let collect_promising_participants : dir -> Zflang.t list -> locset
 		) BatSet.empty files in
 	all_participants
 
+*)
+
+let rec tdata_from_allT2_benchmarks : Zflang.t BatSet.t -> tdata list
+= fun features ->
+	let files = Array.to_list (Sys.readdir "../T2") in
+	let all_training_data =
+		List.fold_left (fun acc file ->
+			let tdata_from_one_bench = tdata_from_one_bench ("../T2/" ^ file) features in
+			tdata_from_one_bench @ acc
+		) [] files in
+	all_training_data
+
+and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
+= fun file features ->
+	let cilfile = parse_to_cil file in
+	let _ = makeCFGinfo cilfile in
+	let (pre, global) = init_analysis cilfile in
+	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis (pre, global) in
+	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
+	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, Report.BO) in
+	let queries_FS = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FS in
+	(*
+	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
+	*)
+	let _ = List.iter (fun q ->
+		let vis = new Unroller.insertNidVisitor (q) in
+		visitCilFile vis cilfile) queries_FS in
+	let fd = Cil.dummyFunDec in
+	let vis = new Unroller.unrollingVisitor (fd, 0) in
+	let _ = visitCilFile vis cilfile in
+	let _ = makeCFGinfo cilfile in
+	let (pre, global) = init_analysis cilfile in
+	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FS in
+	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 global query) q2pmap in
+	let tdata_list = BatMap.foldi (fun query flset acc ->
+		let tdata = tdata_from_one_query query flset features in
+		tdata::acc) q2flmap [] in
+	tdata_list
+	
+and tdata_from_one_query : Report.query -> Zflang.t BatSet.t -> Zflang.t BatSet.t -> tdata
+= fun query flset features ->
+	let fbvector = BatSet.fold (fun feature acc ->
+		let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
+		column::acc) features [] in
+	let answer = (query.status = Report.Proven) in
+	(fbvector, answer)
+	
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -643,7 +675,7 @@ let main () =
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";
-		let features = gen_feature_list !Options.opt_reduced in
+		let features = gen_feature_set !Options.opt_reduced in
 		
 		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Generate Training Data";
@@ -652,8 +684,9 @@ let main () =
 		prerr_endline ">> TRAINING DATA : done --> Test with classifier..";
 		test_with_classifier ();
 		prerr_endline ">> TEST : done";
-		exit 1
-	)
+		exit 1;
+	);
+			(*
 	else if !Options.opt_auto_apply then (	
 		(* 3. Learn a classifier from the tdata and select promising locations. *)
 		prerr_endline "\nSTEP3: Select Promising Locations";
@@ -661,12 +694,13 @@ let main () =
 		let newprog = List.nth !files 0 in
 		imprecise_singleq_progs newprog "../N_singleq";
 		(*NOTE: -auto_learn 옵션에서 feature를 파일로 출력하여 기억해놓지 않아서 여기서 또 generate한다.*)
-		let features = gen_feature_list !Options.opt_reduced in
+		let features = gen_feature_set !Options.opt_reduced in
 		let promising_participants = collect_promising_participants "../N_singleq" features in
 
 		(* 4. Give full precision to the selected locset. *)
 		prerr_endline "\nSTEP4: Apply Precision to the Selected";
 		
+		*)
 		Cil.initCIL (); 
 		let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
 
@@ -678,58 +712,12 @@ let main () =
 		prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
 		prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
+(*
 		do_itv_analysis_autopfs pre global promising_participants;
 		prerr_endline "Finished properly.";
 		Profiler.report stdout;
 		prerr_endline (string_of_float (Sys.time () -. t0));
-		exit 1
-	);
-
-	Cil.initCIL ();
-	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
-	let _ = makeCFGinfo one in	
-	if !Options.opt_nid then (
-		let (pre, global) = init_analysis one in
-		let inputof_FI =
-			list_fold (fun n t ->
-				if Mem.bot = (Table.find n t) 
-				then Table.add n (ItvPre.get_mem pre) t
-				else t
-			) (InterCfg.nodesof (Global.get_icfg global)) Table.empty in
-		let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
-		let fi = Report.get_alarms_fi queries_FI in
-		BatMap.iter (fun loc (al::alarms) ->
-			let vis = new Unroller.insertNidVisitor (al) in
-			let _ = visitCilFile vis one in
-			let out = open_out "nid.c" in
-			print_cil out one;
-			flush out;
-			close_out out
-		) fi;
-		exit 1);
-
-
-	if !Options.opt_test then (
-		let fd = Cil.dummyFunDec in
-		let vis = new Unroller.unrollingVisitor (fd, 0) in
-		let _ = visitCilFile vis one in
-		let _ = makeCFGinfo one in
-		let (pre, global) = init_analysis one in
-		let filename = ref 0 in
-		BatMap.iter (fun pid cfg ->
-			if (pid <> "_G_" ) then begin
-				print_endline pid;
-				let paths = Zex.get_paths cfg in
-				BatSet.iter (fun cfg ->
-					print_endline (string_of_int !filename);
-            		let out = open_out (!Options.opt_dir ^ "/" ^ (string_of_int !filename) ^ ".cfg") in 
-					IntraCfg.print_dot out cfg; filename := !filename + 1;
-					flush out; close_out out;
-				) paths end
-			else
-				print_endline "*** PASS _G_ ***"
-			) global.icfg.cfgs;
-		exit 1);
+		*)
 
 
 	try 
