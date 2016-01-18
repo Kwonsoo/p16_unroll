@@ -535,24 +535,15 @@ let one_tdata_from_sqprog : dir -> Zflang.t list -> tdata
 	let answer = check_answer cil_file participants in
 	(fbvector, answer)
 
-let fbvector_to_str : fbvector -> string
-=fun fbvector ->
-	let as_string = List.fold_right (fun elm accum ->
-			(match elm with
-			 | true -> "1 " ^ accum
-			 | false -> "0 ")
-		) fbvector "" in
-	String.trim as_string
-
 let one_tdata_to_str : tdata -> string
-=fun tdata ->
-	let (fbvector, answer) = tdata in
-	let line = fbvector_to_str fbvector in
-	let line = line ^ (match answer with
-			| true -> " : 1"
-			| false -> " : 0") in
-	line
+= fun (fbvector, answer) ->
+	let str_vec = List.fold_left (fun acc column ->
+		let mark = if (column = true) then "1 " else "0 " in
+		acc ^ mark) "" fbvector in
+	let str_ans = if (answer = true) then "1\n" else "0\n" in
+	str_vec ^ ": " ^ str_ans
 
+	
 (* Write all training data to the classifier directory. *)
 let write_all_tdata_to_file : tdata list -> dir -> unit
 =fun tdata_list outfile ->
@@ -582,12 +573,8 @@ let one_candidate_from_sqprog : dir -> Zflang.t list -> (fbvector * locset)
 	(fbvector, participants)
 	*)
 
-let write_fbvector_to_file : fbvector -> dir -> unit
-=fun fbvector outfile ->
-	let out = open_out outfile in	(*open_out : truncate if the file already exists*)
-	let fbvector_as_str = fbvector_to_str fbvector in
-	Printf.fprintf out "%s" fbvector_as_str
 
+(*
 (* Ask classifier if the given new extracted program deserves precision. *)
 let candidate_deserve_precision : fbvector -> bool
 =fun fbvector ->
@@ -595,6 +582,7 @@ let candidate_deserve_precision : fbvector -> bool
 	(*exit code 10 : true, 11 : false*)
 	let classifier_say_yes = Sys.command ("python ../classifier/classifier.py fbector_predict LR train-small.txt a_new_fbvector_temp") in
 	if classifier_say_yes = 10 then true else false
+			*)
 
 (*
 (* Collect and return participants from the given single-query program. *)
@@ -645,7 +633,7 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let _ = makeCFGinfo cilfile in
 	let (pre, global) = init_analysis cilfile in
 	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FS in
-	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 global query) q2pmap in
+	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
 		let tdata = tdata_from_one_query query flset features in
 		tdata::acc) q2flmap [] in
