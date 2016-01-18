@@ -18,19 +18,29 @@ let gen_t1 : Global.t -> Zflang.t BatSet.t
 	(*TODO*)
 	let paths_in_intracfg = paths_in_intracfg in
 	(*dependency*)
-	(*
 	let paths_dependency = BatSet.map (fun path ->
 			IntraCfg.dependency path
 		) paths_in_intracfg in
-	*)
 	(*translate to flang*)
 	let paths_flang = BatSet.map (fun path ->
 			Zflang.trans_graph path
-		) paths_in_intracfg in
+		) paths_dependency in
+	paths_flang
+
+(*The given intracfg paths should be unique paths to the given query.*)
+let gen_t2 : query -> IntraCfg.t BatSet.t -> Zflang.t BatSet.t
+=fun q pathset ->
+	let paths_dependency = BatSet.map (fun path ->
+			IntraCfg.dependency path
+		) pathset in
+	let paths_flang = BatSet.map (fun path ->
+			Zflang.trans_graph path
+		) paths_dependency in
 	paths_flang
 
 (*EXTRACT for T2.
 	Get global that is already unrolled and return a set of unique paths to query in flang.*)
+(*
 let gen_t2 : Global.t -> query -> Zflang.t BatSet.t
 = fun global q ->
 	let pid_query = fst q.node in
@@ -49,7 +59,8 @@ let gen_t2 : Global.t -> query -> Zflang.t BatSet.t
 			Zflang.trans_graph path
 		) paths_dependency in
 	paths_flang
-	
+*)
+
 (* match TODO
 		- 인자로 받는 프로그램은 extract된 program, 즉, feature path들의 set이어야 한다.
 		- 인자로 받는 feature는 feature path 하나를 의미한다.
