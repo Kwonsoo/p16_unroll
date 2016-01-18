@@ -88,7 +88,7 @@ let trans_graph : IntraCfg.t -> t
 		let succs = (succ node g) in
 		match List.length succs with
 		| 0 -> acc
-		| 1 -> process_one_node node (acc @ [translated])
+		| 1 -> process_one_node (List.hd succs) (acc @ [translated])
 		| _ -> raise (Failure "process_one_node") in
 	process_one_node entry []
 

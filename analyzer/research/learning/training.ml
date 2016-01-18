@@ -80,7 +80,7 @@ let filter_normal_queries : query list -> query list
 = fun qs ->
 	let queries = List.filter (fun q -> 
 		let pid = Report.get_pid q in
-		pid <> "_G_" || pid <> "main") qs in
+		pid <> "_G_" ) qs in
 	List.filter (fun q -> q.status <> BotAlarm) queries 
 	
 let cluster_queries_with_pid : query list -> (pid, query list) BatMap.t
@@ -127,6 +127,7 @@ let slice_query_path : query -> IntraCfg.t -> IntraCfg.t
 let get_query_depend_paths : IntraCfg.t BatSet.t -> query -> IntraCfg.t BatSet.t
 = fun cfgs query ->
 	let paths_have_query = BatSet.filter (has_query_node query) cfgs in
+		print_endline ("paths cardinal: " ^ (string_of_int (BatSet.cardinal cfgs)));
 	BatSet.map (slice_query_path query) paths_have_query
 
 (* Use this function to get paths of a query *)

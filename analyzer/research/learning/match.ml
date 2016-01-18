@@ -1,5 +1,6 @@
 open Zflang
 
+(*
 let rec match_exp : exp * exp -> bool
 = fun (e1, e2) ->
 	match e1, e2 with
@@ -11,6 +12,16 @@ let rec match_exp : exp * exp -> bool
 		match_exp (e11, e21) && match_exp (e12, e22)
 	| Lval l1, Lval l2 | Addr l1, Addr l2
 		-> match_lv (l1, l2)
+	| _ -> false
+	*)
+let rec match_exp : exp * exp -> bool
+= fun (e1, e2) ->
+	match e1, e2 with
+	| Nothing, _ | _, Nothing -> true
+	| Const, Const -> true
+	| Uexp e1, Uexp e2 -> true
+	| Bexp (e11, e12), Bexp (e21, e22) -> true
+	| Lval l1, Lval l2 | Addr l1, Addr l2 -> true
 	| _ -> false
 
 and match_lv : lv * lv -> bool
@@ -26,7 +37,10 @@ let match_cmd : cmd * cmd -> bool
 	match c1, c2 with
 	| Assign (l1, e1), Assign (l2, e2) 
 	| Alloc (l1, e1), Alloc (l2, e2) 
+	(*
 		-> match_lv (l1, l2) && match_exp (e1, e2)
+		*)
+		-> match_exp (e1, e2)
 	| Cond e1, Cond e2 ->
 		match_exp (e1, e2)
 	| _ -> false
@@ -60,7 +74,6 @@ let match_fl : t -> t -> bool
 		| _ -> false
 	in match_helper feat target
 *)
-
 let match_fl : t -> t -> bool
 = fun feat target ->
 	let entire_feat = feat in
@@ -76,6 +89,4 @@ let match_fl : t -> t -> bool
 		| [], _ -> true
 		| _ -> false
 	in match_helper feat target
-
 			
-
