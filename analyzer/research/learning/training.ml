@@ -1,6 +1,8 @@
 open Types
 open Report
 type pid = InterCfg.pid
+open InterCfg
+open IntraCfg
 
 module Slicer =
 struct
@@ -49,8 +51,8 @@ struct
 	(* Return a intracfg that has airac_observe from the given intercfg. *)
 	let find_observe_intracfg : InterCfg.t -> IntraCfg.t
 	=fun inter ->
-		let cfgs = intercfg.cfgs in
-		let cfgs' = BatMap.filteri (fun pid intracfg -> 
+		let cfgs = inter.cfgs in
+		let cfgs' = BatMap.filter (fun pid intracfg -> 
 				let fd = intracfg.fd in
 				has_observer fd
 			) cfgs in
@@ -60,7 +62,7 @@ struct
 				intra
 		)
 		else raise (Failure "Slicer.find_observe_intracfg: airac_observe should be one and only one.")
-
+		
 end
 
 let do_insert_nid_from_query : Cil.file -> Report.query -> unit

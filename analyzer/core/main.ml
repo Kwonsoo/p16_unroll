@@ -455,11 +455,11 @@ let gen_features_from_one_file = fun file ->
 	let one = Frontend.parseOneFile file in
 	makeCFGinfo one;
 	let (pre, global) = init_analysis one in
-	let feature_set = Feature.gen global in
+	let feature_set = Feature.gen_t1 global in
 	feature_set
 
 (* Generate feature list from the given reduced directory. *)
-let gen_feature_list : dir -> Flang.t list = fun reduced_dir ->
+let gen_feature_list : dir -> Zflang.t list = fun reduced_dir ->
 	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
 	let files = Sys.readdir reduced_dir in
 	let files = Array.to_list files in 
@@ -517,19 +517,20 @@ let get_participants : Cil.file -> (string * string) BatSet.t
 	let participants = extract_locl_vnames observe_fd in
 	participants
 
-let one_tdata_from_sqprog : dir -> Flang.t list -> tdata
+let one_tdata_from_sqprog : dir -> Zflang.t list -> tdata
 =fun sqprog_path features ->
 	let cil_file = parse_to_cil sqprog_path in
 	makeCFGinfo cil_file;
 	let (pre, global) = init_analysis cil_file in
-	let extracted_prog = Feature.gen global in
+	(*NOTE: wrong. gen_t2 instead of gen_t1*)
+	let extracted_prog = Feature.gen_t1 global in
 	let fbvector = Feature.fbvectorize extracted_prog features in
 	let participants = get_participants cil_file in	(*participated (f,v) tuples*)
 	let participants = BatSet.map (make_a_loc) participants in
 	let answer = check_answer cil_file participants in
 	(fbvector, answer)
 
-let tdata_from_one_benchmark : dir -> Flang.t list -> tdata list
+let tdata_from_one_benchmark : dir -> Zflang.t list -> tdata list
 =fun benchmark_path features ->
 	(*NOTE*)
 	imprecise_singleq_progs benchmark_path "../T2_singleq_temp";
@@ -541,7 +542,7 @@ let tdata_from_one_benchmark : dir -> Flang.t list -> tdata list
 	clear_singleq_dir "../T2_singleq_temp";
 	tdata_from_a_bench
 
-let tdata_from_allT2_benchmarks : Flang.t list -> tdata list
+let tdata_from_allT2_benchmarks : Zflang.t list -> tdata list
 =fun features ->
 	let fname_list = Array.to_list (Sys.readdir "../T2") in
 	let all_training_data =
@@ -585,7 +586,7 @@ let test_with_classifier : unit -> unit
 	Sys.command ("python ../classifier/classifier.py test ../classifier/tdata.txt ../classifier/tdata.txt"); ()
 
 (* Build a candidate from the given single-query program. *)
-let one_candidate_from_sqprog : dir -> Flang.t list -> (fbvector * locset)
+let one_candidate_from_sqprog : dir -> Zflang.t list -> (fbvector * locset)
 =fun sqprog_path features ->
 	let cil_file = parse_to_cil sqprog_path in
 	makeCFGinfo cil_file;
@@ -611,14 +612,14 @@ let candidate_deserve_precision : fbvector -> bool
 	if classifier_say_yes = 10 then true else false
 
 (* Collect and return participants from the given single-query program. *)
-let collect_promising_participants_from_sqprog : dir -> Flang.t list -> locset
+let collect_promising_participants_from_sqprog : dir -> Zflang.t list -> locset
 =fun sqprog features ->
 	let (fbvector, participants) = one_candidate_from_sqprog sqprog features in
 	let deserve_precision = candidate_deserve_precision fbvector in
 	if deserve_precision then participants else BatSet.empty
 
 (* Collect and return participants from the all new single-query programs in the given directory. *)
-let collect_promising_participants : dir -> Flang.t list -> locset
+let collect_promising_participants : dir -> Zflang.t list -> locset
 =fun n_sqdir features ->
 	let files = Array.to_list (Sys.readdir n_sqdir) in
 	let all_participants = List.fold_left (fun accum sqprog ->
