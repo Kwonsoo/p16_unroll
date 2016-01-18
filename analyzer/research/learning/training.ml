@@ -150,5 +150,4 @@ let extract_and_match : IntraCfg.t -> query list -> tdata
 let get_fbvector_from_query : query -> Flang.t BatSet.t -> fbvector
 = fun query features ->
 	let cfg_query = slice_query query in
-
 *)

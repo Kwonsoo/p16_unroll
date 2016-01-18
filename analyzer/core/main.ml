@@ -709,17 +709,14 @@ let main () =
 
 
 	if !Options.opt_test then (
-		let _ = iterGlobals one (fun g ->
-			match g with
-			| Cil.GFun (fd, _) ->
-				let vis = new Unroller.unrollingVisitor (fd, 0) in
-				visitCilFile vis one
-			| _ -> ()) in
+		let fd = Cil.dummyFunDec in
+		let vis = new Unroller.unrollingVisitor (fd, 0) in
+		let _ = visitCilFile vis one in
 		let _ = makeCFGinfo one in
 		let (pre, global) = init_analysis one in
 		let filename = ref 0 in
 		BatMap.iter (fun pid cfg ->
-			if (pid <> "_G_" && pid <> "main") then begin
+			if (pid <> "_G_" ) then begin
 				print_endline pid;
 				let paths = Zex.get_paths cfg in
 				BatSet.iter (fun cfg ->
