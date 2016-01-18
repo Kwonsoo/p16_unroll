@@ -1030,6 +1030,13 @@ let rec node_before_return : t -> node -> node
 	let node_before_return = List.nth (pred return_node intra) 0 in
 	node_before_return
 
+(*Return the last node in the extracted one-path intracfg.*)
+let rec get_last_node : t -> node -> node
+=fun intra current_node ->
+	let successors = succ current_node intra in
+	if List.length successors = 0 then current_node
+	else get_last_node intra (List.nth successors 0)
+
 (*variable names from lval*)
 let rec vnames_lval : lval -> SS.t -> SS.t
 =fun lval accum ->
@@ -1069,11 +1076,10 @@ let all_vnames_from_node : t -> node -> SS.t
 			let from_lval_opt = (match lval_opt with
 					| Some lval -> vnames_lval lval SS.empty
 					| None -> SS.empty) in
-			let from_exp = vnames_exp exp SS.empty in
 			let from_exp_list = List.fold_left (fun accum e ->
 					SS.union accum (vnames_exp e SS.empty)
 				) SS.empty exp_list in
-			SS.union from_lval_opt (SS.union from_exp from_exp_list)
+			SS.union from_lval_opt from_exp_list
 	| Creturn (exp_opt, location) -> 
 			(match exp_opt with
 			 | Some exp -> vnames_exp exp SS.empty
@@ -1168,11 +1174,9 @@ let rec investigate : t -> node -> SS.t -> t
  ******************************************************************************************************)
 let dependency : t -> t
 =fun intra ->
-	(*지금 테스트해보는 것에서는 리턴 노드 바로 전이 마지막 노드. 실제로는 마지막 노드가 쿼리일 것이므로 약간 수정해줘야겠지.*)
-	let before_return = node_before_return intra Node.ENTRY in
-	let vnames_last_node = all_vnames_from_node intra before_return in
-	prerr_int (SS.cardinal vnames_last_node);
-	let dependency_intra = investigate intra (List.nth (pred before_return intra) 0) vnames_last_node in
+	let last_node = get_last_node intra Node.ENTRY in
+	let vnames_last_node = all_vnames_from_node intra last_node in
+	let dependency_intra = investigate intra (List.nth (pred last_node intra) 0) vnames_last_node in
 	dependency_intra
 
 let print_dom_fronts dom_fronts = 
