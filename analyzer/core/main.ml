@@ -18,6 +18,8 @@ open Feature
 open Types
 open Printf
 
+type fifsmap = (Report.query, Report.query) BatMap.t
+
 let _ = Random.self_init ()
 
 let print_cil out file = C.dumpFile !C.printerForMaincil out "" file
@@ -622,10 +624,10 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis (pre, global) in
 	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
 	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, Report.BO) in
-	let queries_FS = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FS in
-	(*
 	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
-	*)
+	let queries_FI = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FI in
+	let fifsmap = List.fold_left (fun acc fiq ->
+		BatMap.add fiq (List.find (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) queries_FS) acc) BatMap.empty queries_FI in
 	let _ = List.iter (fun q ->
 		let vis = new Unroller.insertNidVisitor (q) in
 		visitCilFile vis cilfile) queries_FS in
@@ -637,18 +639,16 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FS in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
-		let tdata = tdata_from_one_query query flset features in
+		let tdata = tdata_from_one_query fifsmap query flset features in
 		tdata::acc) q2flmap [] in
 	tdata_list
 	
-and tdata_from_one_query : Report.query -> Zflang.t BatSet.t -> Zflang.t BatSet.t -> tdata
-= fun query flset features ->
-		print_endline (string_of_int (BatSet.cardinal features));
-		print_endline (string_of_int (BatSet.cardinal flset));
+and tdata_from_one_query : fifsmap -> Report.query -> Zflang.t BatSet.t -> Zflang.t BatSet.t -> tdata
+= fun fifsmap query flset features ->
 	let fbvector = BatSet.fold (fun feature acc ->
 		let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
 		column::acc) features [] in
-	let answer = (query.status = Report.Proven) in
+	let answer = ((BatMap.find query fifsmap).status = Report.Proven) in
 	(fbvector, answer)
 	
 let main () =
