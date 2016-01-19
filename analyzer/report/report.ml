@@ -258,7 +258,6 @@ let print_raw : bool -> query list -> unit
   prerr_endline ("#unproven                : " ^ i2s (List.length unproven));
   prerr_endline ("#bot-involved            : " ^ i2s (List.length botalarm))
 
-
 let display_alarms title alarms_part = 
   prerr_endline "";
   prerr_endline ("= " ^ title ^ " =");

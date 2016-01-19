@@ -1078,6 +1078,13 @@ let all_vnames_from_node : t -> node -> SS.t
 			 | None -> SS.empty)
 	| _ -> prerr_endline "Yo!"; SS.empty
 
+(*From the ENTRY node, collect all variables on the given path(intracfg).*)
+let rec all_vnames_from_singlepath : t -> node -> SS.t -> SS.t
+=fun intra node accum ->
+	let current_vnames = all_vnames_from_node intra node in
+	if List.length (succ node intra) = 0 then (SS.union current_vnames accum)
+	else all_vnames_from_singlepath intra (List.nth (succ node intra) 0) (SS.union current_vnames accum)
+
 (*def + assume*)
 let all_def_vnames_from_node : t -> node -> SS.t
 =fun intra node ->

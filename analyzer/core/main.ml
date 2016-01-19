@@ -9,6 +9,7 @@ open ItvAnalysis
 open Visitors
 open Observe
 open Report
+open IntraCfg
 
 open Reduce
 open Classify
@@ -17,6 +18,8 @@ open Apply
 open Feature
 open Types
 open Printf
+
+module SS = Set.Make(String)
 
 type fifsmap = (Report.query, bool) BatMap.t
 
@@ -451,7 +454,7 @@ let analysis_and_observe file =
     (*let _ = print_endline (observe (global, inputof_CI) (global_CS, inputof_CS)) in *)
 		let _ = print_endline (string_of_observe (observe (pre, global, ItvPre.get_mem pre, inputof_CS))) in
      ()
-
+(*---------------------------------------------------------------------*)
 (* Generate features from one reduce code. *)
 let gen_features_from_one_file = fun file ->
 	let one = Frontend.parseOneFile file in
@@ -477,65 +480,10 @@ let gen_feature_set : dir -> Zflang.t BatSet.t = fun reduced_dir ->
 	features
 	with _ -> raise (Failure "gen_feature_set")
 
-(* Return local variable names from the given function.
-	 NOTE: extract된 프로그램의 모든 변수들을 가져올 때, 일단은 이렇게 함수 내 모든 로컬 변수들만 가져오고 있는데, Formal Parameter들은 여기에 포함 안 되어있다. *)
-let extract_locl_vnames : Cil.fundec -> (string * string) BatSet.t
-=fun fd ->
-	let funname = fd.svar.vname in
-	let vinfos = fd.slocals in
-	let funname_vname_tuples = List.map (fun vinfo -> (funname, vinfo.vname)) vinfos in
-	BatSet.of_list funname_vname_tuples
-
-let make_a_loc : (string * string) -> Loc.t
-=fun (funname, vname) ->
-	let var = Var.var_of_lvar (funname, vname) in
-	let loc = Loc.loc_of_var var in
-	loc
-
-(* Produce single-query programs into the given directory, from the given source file. *)
-let imprecise_singleq_progs : dir -> dir -> unit
-=fun benchmark outdir ->
-	Sys.command ("mkdir " ^ outdir);
-	Sys.command ("./main.native " ^ benchmark ^ " -insert_observe_imprecise -imprecise_type fs -dir " ^ outdir);
-	()
-
-(* Remove the given single-query directory. *)
-let clear_singleq_dir : dir -> unit
-=fun singleq_dir ->
-	Sys.command ("rm -r " ^ singleq_dir); ()
-
+(*----------------------------------------------------------------------*)
 (* Parse the given single-query source file to CIL. *)
 let parse_to_cil : dir -> Cil.file
 =fun file -> Frontend.parseOneFile file
-
-(* Check, given the single-query source file, if the query is proven when only the given selected locations are given precision (flow-sensitivity). *)
-let check_answer file selected =
-	let global = StepManager.stepf true "Translation to graphs" Global.init file in
-	let (pre, global) = StepManager.stepf true "Pre-analysis" ItvPre.do_preanalysis global in
-	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis_autopfs (pre, global, selected) in
-	let observation = observe (pre, global, ItvPre.get_mem pre, inputof) in
-	let (_, _, _, _, _, _, proved_FI, proved_FS, _, _) = observation in
-	proved_FS 
-
-(* Return participants from the given single-query program. *)
-let get_participants : Cil.file -> (string * string) BatSet.t
-=fun cil_file ->
-	let observe_fd = Slicer.find_observe_fundec cil_file in
-	let participants = extract_locl_vnames observe_fd in
-	participants
-
-let one_tdata_from_sqprog : dir -> Zflang.t list -> tdata
-=fun sqprog_path features ->
-	let cil_file = parse_to_cil sqprog_path in
-	makeCFGinfo cil_file;
-	let (pre, global) = init_analysis cil_file in
-	(*NOTE: wrong. gen_t2 instead of gen_t1*)
-	let extracted_prog = Feature.gen_t1 global in
-	let fbvector = Feature.fbvectorize extracted_prog features in
-	let participants = get_participants cil_file in	(*participated (f,v) tuples*)
-	let participants = BatSet.map (make_a_loc) participants in
-	let answer = check_answer cil_file participants in
-	(fbvector, answer)
 
 let one_tdata_to_str : tdata -> string
 = fun (fbvector, answer) ->
@@ -544,7 +492,6 @@ let one_tdata_to_str : tdata -> string
 		acc ^ mark) "" fbvector in
 	let str_ans = if (answer = true) then "1" else "0" in
 	str_vec ^ ": " ^ str_ans
-
 	
 (* Write all training data to the classifier directory. *)
 let write_all_tdata_to_file : tdata list -> dir -> unit
@@ -560,49 +507,6 @@ let write_all_tdata_to_file : tdata list -> dir -> unit
 let test_with_classifier : unit -> unit
 =fun () ->
 	Sys.command ("python ../classifier/classifier.py test ../classifier/tdata.txt ../classifier/tdata.txt"); ()
-
-(*
-(* Build a candidate from the given single-query program. *)
-let one_candidate_from_sqprog : dir -> Zflang.t list -> (fbvector * locset)
-=fun sqprog_path features ->
-	let cil_file = parse_to_cil sqprog_path in
-	makeCFGinfo cil_file;
-	let (pre, global) = init_analysis cil_file in
-	let extracted_prog = Feature.gen global in
-	let fbvector = Feature.fbvectorize extracted_prog features in
-	let participants = get_participants cil_file in	(* participated (f,v) tuples *)
-	let participants = BatSet.map make_a_loc participants in
-	(fbvector, participants)
-	*)
-
-
-(*
-(* Ask classifier if the given new extracted program deserves precision. *)
-let candidate_deserve_precision : fbvector -> bool
-=fun fbvector ->
-	write_fbvector_to_file fbvector "../a_new_fbvector_temp";
-	(*exit code 10 : true, 11 : false*)
-	let classifier_say_yes = Sys.command ("python ../classifier/classifier.py fbector_predict LR train-small.txt a_new_fbvector_temp") in
-	if classifier_say_yes = 10 then true else false
-			*)
-
-(*
-(* Collect and return participants from the given single-query program. *)
-let collect_promising_participants_from_sqprog : dir -> Zflang.t list -> locset
-=fun sqprog features ->
-	let (fbvector, participants) = one_candidate_from_sqprog sqprog features in
-	let deserve_precision = candidate_deserve_precision fbvector in
-	if deserve_precision then participants else BatSet.empty
-(* Collect and return participants from the all new single-query programs in the given directory. *)
-let collect_promising_participants : dir -> Zflang.t list -> locset
-=fun n_sqdir features ->
-	let files = Array.to_list (Sys.readdir n_sqdir) in
-	let all_participants = List.fold_left (fun accum sqprog ->
-			BatSet.union (collect_promising_participants_from_sqprog ("../N_singleq/" ^ sqprog) features) accum
-		) BatSet.empty files in
-	all_participants
-
-*)
 
 let rec tdata_from_allT2_benchmarks : Zflang.t BatSet.t -> tdata list
 = fun features ->
@@ -648,7 +552,115 @@ and tdata_from_one_query : fifsmap -> Report.query -> Zflang.t BatSet.t -> Zflan
 		column::acc) features [] in
 	let answer = BatMap.find query fifsmap in
 	(fbvector, answer)
+
+(*----------------------------------------------------*)
+
+let make_a_loc : (string * string) -> Loc.t
+=fun (funname, vname) ->
+	let var = Var.var_of_lvar (funname, vname) in
+	let loc = Loc.loc_of_var var in
+	loc
+
+(* Check, given the single-query source file, if the query is proven when only the given selected locations are given precision (flow-sensitivity). *)
+let check_answer file selected =
+	let global = StepManager.stepf true "Translation to graphs" Global.init file in
+	let (pre, global) = StepManager.stepf true "Pre-analysis" ItvPre.do_preanalysis global in
+	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis_autopfs (pre, global, selected) in
+	let observation = observe (pre, global, ItvPre.get_mem pre, inputof) in
+	let (_, _, _, _, _, _, proved_FI, proved_FS, _, _) = observation in
+	proved_FS 
+
+let fbvector_to_str : fbvector -> string
+=fun fbvec ->
+	let as_string = List.fold_right (fun elm accum ->
+			(match elm with
+			 | true -> "1 " ^ accum
+			 | false -> "0 ")
+		) fbvec "" in
+	String.trim as_string
+
+let write_fbvector_to_file : fbvector -> dir -> unit
+=fun fbvec outfile ->
+	let out = open_out outfile in (*open_out : truncate if the file already exists*)
+	let fbvector_as_str = fbvector_to_str fbvec in
+	Printf.fprintf out "%s" fbvector_as_str
+
+(* Ask classifier if the given new extracted program deserves precision. *)
+let candidate_deserve_precision : fbvector -> bool
+=fun fbvector ->
+	write_fbvector_to_file fbvector "../a_new_fbvector_temp";
+	(*exit code 10 : true, 11 : false*)
+	let classifier_say_yes = Sys.command ("python ../classifier/classifier.py fbvector_predict LR train-small.txt a_new_fbvector_temp") in
+	if classifier_say_yes = 10 then true else false
+
+(*Collect all (funname,vname) set from the given paths.*)
+let get_participants : IntraCfg.t BatSet.t -> (string * string) BatSet.t
+=fun paths ->
+	BatSet.fold (fun path acc -> 
+			let funname = path.fd.svar.vname in
+			let vnames_from_path = IntraCfg.all_vnames_from_singlepath path Node.ENTRY SS.empty in
+			(*Just transform from SS.t to BatSet.t*)
+			let vnames_from_path = SS.fold (fun v acc ->
+					BatSet.add v acc
+				) vnames_from_path BatSet.empty in
+			let funname_vname_set = BatSet.map (fun v -> (funname, v)) vnames_from_path in
+			BatSet.union acc funname_vname_set
+		) paths BatSet.empty
+
+(*Return fbvector list and participants list (with correct order).*)
+let rec fbvector_participants_list_from_newprog : dir -> Zflang.t BatSet.t -> (fbvector * (string * string) BatSet.t) list
+=fun file features ->
+	let cilfile = parse_to_cil file in
+	let _ = makeCFGinfo cilfile in
+	let (pre, global) = init_analysis cilfile in
+	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis (pre, global) in
+	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
+	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
+	let queries_FI = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FI in
+	let _ = List.iter (fun q ->
+		let vis = new Unroller.insertNidVisitor (q) in
+		visitCilFile vis cilfile) queries_FI in
+	let fd = Cil.dummyFunDec in
+	let vis = new Unroller.unrollingVisitor (fd, 0) in
+	let _ = visitCilFile vis cilfile in
+	let _ = makeCFGinfo cilfile in
+	let (pre, global) = init_analysis cilfile in
+	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FI in
+	(*NOTE: Collect participants.*)
+	let participants_list = BatMap.foldi (fun query paths acc ->
+			let participants = get_participants paths in
+			participants::acc
+		) q2pmap [] in
+	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
+	let fbvector_list = BatMap.foldi (fun query flset acc ->
+			let fbvector = fbvector_from_query flset features in
+			fbvector::acc
+		) q2flmap [] in
+	let fbvector_participants_list = List.fold_right2 (fun vec participants acc ->
+			(vec, participants)::acc
+		) fbvector_list participants_list [] in
+	fbvector_participants_list
 	
+and fbvector_from_query : Zflang.t BatSet.t -> Zflang.t BatSet.t -> fbvector
+=fun flset features ->
+	let fbvector = BatSet.fold (fun feature acc -> 
+			let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
+			column::acc
+		) features [] in
+	fbvector
+
+let collect_promising_participants : (fbvector * (string * string) BatSet.t) list -> locset
+=fun vec_parts_list ->
+	let participants = List.fold_right (fun (fbvector, participants) acc ->
+			if candidate_deserve_precision fbvector then BatSet.union acc participants
+			else acc
+		) vec_parts_list BatSet.empty in
+	let participants = BatSet.map (fun (funname, vname) ->
+			make_a_loc (funname, vname)
+		) participants in
+	participants
+
+(*----------------------------------------------------*)
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -675,22 +687,21 @@ let main () =
 		test_with_classifier ();
 		prerr_endline ">> TEST : done";
 		exit 1;
-	);
-			(*
+	)		
 	else if !Options.opt_auto_apply then (	
 		(* 3. Learn a classifier from the tdata and select promising locations. *)
 		prerr_endline "\nSTEP3: Select Promising Locations";
 		if (List.length !files) <> 1 then raise (Failure "The one and only one file as new program");
 		let newprog = List.nth !files 0 in
-		imprecise_singleq_progs newprog "../N_singleq";
-		(*NOTE: -auto_learn 옵션에서 feature를 파일로 출력하여 기억해놓지 않아서 여기서 또 generate한다.*)
+		Options.opt_pfs := 0;
+		
 		let features = gen_feature_set !Options.opt_reduced in
-		let promising_participants = collect_promising_participants "../N_singleq" features in
-
+		let vec_parts_list = fbvector_participants_list_from_newprog newprog features in
+		let promising_participants = collect_promising_participants vec_parts_list in
+		
 		(* 4. Give full precision to the selected locset. *)
 		prerr_endline "\nSTEP4: Apply Precision to the Selected";
 		
-		*)
 		Cil.initCIL (); 
 		let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
 
@@ -702,13 +713,15 @@ let main () =
 		prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
 		prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
-(*
 		do_itv_analysis_autopfs pre global promising_participants;
 		prerr_endline "Finished properly.";
 		Profiler.report stdout;
 		prerr_endline (string_of_float (Sys.time () -. t0));
-		*)
+		exit 1
+	);
 
+	Cil.initCIL ();
+	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
 
 	try 
     makeCFGinfo one; (*if !E.hadErrors then E.s (E.error "Cabs2cil had some errors");*)
