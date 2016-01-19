@@ -522,6 +522,7 @@ let get_participants : Cil.file -> (string * string) BatSet.t
 	let participants = extract_locl_vnames observe_fd in
 	participants
 
+(*
 let one_tdata_from_sqprog : dir -> Zflang.t list -> tdata
 =fun sqprog_path features ->
 	let cil_file = parse_to_cil sqprog_path in
@@ -534,6 +535,7 @@ let one_tdata_from_sqprog : dir -> Zflang.t list -> tdata
 	let participants = BatSet.map (make_a_loc) participants in
 	let answer = check_answer cil_file participants in
 	(fbvector, answer)
+*)
 
 let one_tdata_to_str : tdata -> string
 = fun (fbvector, answer) ->
@@ -670,7 +672,7 @@ let main () =
 		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Generate Training Data";
 		let all_training_data = tdata_from_allT2_benchmarks features in
-		write_all_tdata_to_file all_training_data "../classifier/tdata.txt";
+		write_all_tdata_to_file all_training_data "../classifier/new.txt";
 		prerr_endline ">> TRAINING DATA : done --> Test with classifier..";
 		test_with_classifier ();
 		prerr_endline ">> TEST : done";
