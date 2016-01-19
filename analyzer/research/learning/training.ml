@@ -147,6 +147,20 @@ let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatS
 		BatMap.union map_from_each_paths acc) paths2qs_map BatMap.empty in
 	query_to_paths_map	
 	
+let get_fi_fs_query_map : query list -> query list -> (query, bool) BatMap.t
+= fun fiqs fsqs ->
+	let fiqs = List.filter (fun fiq -> fiq.status <> Report.BotAlarm) fiqs in
+	let fiqs = Report.get fiqs Report.UnProven in
+	List.fold_left (fun q2a_map fiq ->
+		let answer = try
+			let same_query = List.find (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) fsqs in
+			same_query.status = Report.Proven
+		with _ -> raise (Failure "get_fi_fs_query_map") in
+		BatMap.add fiq answer q2a_map) BatMap.empty fiqs
+
+
+
+
 	
 (*
 let extract_and_match : IntraCfg.t -> query list -> tdata
