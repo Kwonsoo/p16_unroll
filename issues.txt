@@ -1,0 +1,11 @@
+<Reduce 관련>
+1. sed : single-query program 자체가 컴파일 에러 : gcc -c reduce.c
+		일단 이 프로그램은 넘어가고 다른 프로그램부터 reduce 함.
+
+
+<구현 관련>
+1. 함수 간 데이터 패스 고려 해줘야 함.
+
+2. extract : switch 문 cut
+
+3. reduced paths : airac_observe까지 자르기

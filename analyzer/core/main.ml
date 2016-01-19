@@ -671,7 +671,7 @@ let main () =
 		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Generate Training Data";
 		let all_training_data = tdata_from_allT2_benchmarks features in
-		write_all_tdata_to_file all_training_data "../classifier/tdata.txt";
+		write_all_tdata_to_file all_training_data "../classifier/new.txt";
 		prerr_endline ">> TRAINING DATA : done --> Test with classifier..";
 		test_with_classifier ();
 		prerr_endline ">> TEST : done";
