@@ -622,10 +622,11 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis (pre, global) in
 	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
 	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, Report.BO) in
-	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
-	let queries_FI = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FI in
-	let fifsmap = List.fold_left (fun acc fiq ->
-		BatMap.add fiq (not (List.exists (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) queries_FS)) acc) BatMap.empty queries_FI in
+	let queries_FI = 
+		StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO)
+		|> List.filter (fun fiq -> fiq.status <> Report.BotAlarm)
+		|> List.filter (fun fiq -> fiq.status = Report.UnProven) in
+	let fiq2ans_map = Training.get_fi_fs_query_map queries_FI queries_FS in
 	let _ = List.iter (fun q ->
 		let vis = new Unroller.insertNidVisitor (q) in
 		visitCilFile vis cilfile) queries_FI in
@@ -637,7 +638,7 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FI in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
-		let tdata = tdata_from_one_query fifsmap query flset features in
+		let tdata = tdata_from_one_query fiq2ans_map query flset features in
 		tdata::acc) q2flmap [] in
 	tdata_list
 	
