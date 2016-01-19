@@ -18,6 +18,11 @@ open Feature
 open Types
 open Printf
 
+<<<<<<< HEAD
+=======
+type fifsmap = (Report.query, bool) BatMap.t
+
+>>>>>>> ad841255d842fbf0602bcba9578a19c705f80957
 let _ = Random.self_init ()
 
 let print_cil out file = C.dumpFile !C.printerForMaincil out "" file
@@ -623,9 +628,9 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
 	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, Report.BO) in
 	let queries_FS = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FS in
-	(*
-	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
-	*)
+	let queries_FI = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FI in
+	let fifsmap = List.fold_left (fun acc fiq ->
+		BatMap.add fiq (not (List.exists (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) queries_FS)) acc) BatMap.empty queries_FI in
 	let _ = List.iter (fun q ->
 		let vis = new Unroller.insertNidVisitor (q) in
 		visitCilFile vis cilfile) queries_FS in
@@ -648,7 +653,11 @@ and tdata_from_one_query : Report.query -> Zflang.t BatSet.t -> Zflang.t BatSet.
 	let fbvector = BatSet.fold (fun feature acc ->
 		let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
 		column::acc) features [] in
+<<<<<<< HEAD
 	let answer = (query.status = Report.Proven) in
+=======
+	let answer = BatMap.find query fifsmap in
+>>>>>>> ad841255d842fbf0602bcba9578a19c705f80957
 	(fbvector, answer)
 	
 let main () =
