@@ -1023,14 +1023,6 @@ let rec print_intra_cmds : t -> node -> unit
 	else ()
 
 (*Return the last node in the extracted one-path intracfg.*)
-let rec node_before_return : t -> node -> node
-=fun intra current_node ->
-	let exit_node = Node.EXIT in
-	let return_node = List.nth (pred exit_node intra) 0 in
-	let node_before_return = List.nth (pred return_node intra) 0 in
-	node_before_return
-
-(*Return the last node in the extracted one-path intracfg.*)
 let rec get_last_node : t -> node -> node
 =fun intra current_node ->
 	let successors = succ current_node intra in
