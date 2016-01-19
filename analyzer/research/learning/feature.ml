@@ -18,24 +18,28 @@ let gen_t1 : Global.t -> Zflang.t BatSet.t
 	(*TODO*)
 	let paths_in_intracfg = paths_in_intracfg in
 	(*dependency*)
+	(*
 	let paths_dependency = BatSet.map (fun path ->
 			IntraCfg.dependency path
 		) paths_in_intracfg in
 	(*translate to flang*)
+		*)
 	let paths_flang = BatSet.map (fun path ->
 			Zflang.trans_graph path
-		) paths_dependency in
+		) paths_in_intracfg in
 	paths_flang
 
 (*The given intracfg paths should be unique paths to the given query.*)
 let gen_t2 : query -> IntraCfg.t BatSet.t -> Zflang.t BatSet.t
 =fun q pathset ->
+(*
 	let paths_dependency = BatSet.map (fun path ->
 			IntraCfg.dependency path
 		) pathset in
+		*)
 	let paths_flang = BatSet.map (fun path ->
 			Zflang.trans_graph path
-		) paths_dependency in
+		) pathset in
 	paths_flang
 
 (*EXTRACT for T2.

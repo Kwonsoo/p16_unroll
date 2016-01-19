@@ -540,7 +540,7 @@ let one_tdata_to_str : tdata -> string
 	let str_vec = List.fold_left (fun acc column ->
 		let mark = if (column = true) then "1 " else "0 " in
 		acc ^ mark) "" fbvector in
-	let str_ans = if (answer = true) then "1\n" else "0\n" in
+	let str_ans = if (answer = true) then "1" else "0" in
 	str_vec ^ ": " ^ str_ans
 
 	
@@ -641,6 +641,8 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	
 and tdata_from_one_query : Report.query -> Zflang.t BatSet.t -> Zflang.t BatSet.t -> tdata
 = fun query flset features ->
+		print_endline (string_of_int (BatSet.cardinal features));
+		print_endline (string_of_int (BatSet.cardinal flset));
 	let fbvector = BatSet.fold (fun feature acc ->
 		let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
 		column::acc) features [] in

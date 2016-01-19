@@ -105,8 +105,11 @@ let is_query_node : IntraCfg.t -> query -> IntraCfg.node -> bool
 	let nid_string = string_of_int (Unroller.nidof_q q) in
 	let cmd = IntraCfg.find_cmd node cfg in
 	match cmd with
-	| IntraCfg.Cmd.Ccall (None, Cil.Lval (Cil.Var vinfo, Cil.NoOffset), _, _) when vinfo.vname = nid_string ->
-		true
+	| IntraCfg.Cmd.Ccall (None, Cil.Lval (Cil.Var vinfo, Cil.NoOffset), exps, _) when vinfo.vname = "airac_nid" ->
+		let _ = assert (List.length exps = 1) in
+		let call_arg = List.hd exps in
+		let call_nid = Unroller.nid_from_arg_exp call_arg in
+		call_nid = nid_string
 	| _ -> false
 
 let has_query_node : query -> IntraCfg.t -> bool
@@ -127,12 +130,12 @@ let slice_query_path : query -> IntraCfg.t -> IntraCfg.t
 let get_query_depend_paths : IntraCfg.t BatSet.t -> query -> IntraCfg.t BatSet.t
 = fun cfgs query ->
 	let paths_have_query = BatSet.filter (has_query_node query) cfgs in
-		print_endline ("paths cardinal: " ^ (string_of_int (BatSet.cardinal cfgs)));
 	BatSet.map (slice_query_path query) paths_have_query
 
 (* Use this function to get paths of a query *)
 let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatSet.t) BatMap.t
 = fun icfg queries ->
+	let filename = ref 0 in
 	let pid2qs_map = cluster_queries_with_pid queries in
 	let paths2qs_map = BatMap.foldi (fun pid qs acc ->
 		let paths = get_paths_from_pid icfg pid in

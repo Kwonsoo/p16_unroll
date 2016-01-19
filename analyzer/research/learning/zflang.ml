@@ -90,7 +90,10 @@ let trans_graph : IntraCfg.t -> t
 		| 0 -> acc
 		| 1 -> process_one_node (List.hd succs) (acc @ [translated])
 		| _ -> raise (Failure "process_one_node") in
-	process_one_node entry []
+	let transed = process_one_node entry [] in
+	let skip_removed = List.filter (fun cmd ->
+		not (cmd = Skip)) transed in
+	skip_removed
 
 let rec exp_to_str : exp -> string
 = fun e ->

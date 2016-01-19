@@ -2,6 +2,19 @@ open Cil
 open Visitors
 open Report
 
+(* Use this function only to extract the nid from airac_nid *)
+let nid_from_arg_exp : Cil.exp -> string
+= fun e ->
+	match e with
+	| Cil.Lval lv ->
+		(match lv with
+		| (lh, _) -> 
+			(match lh with
+			| Cil.Var v -> v.vname
+			| _ -> assert false)
+		| _ -> assert false)
+	| _ -> assert false
+
 let nidof_q : Report.query -> int
 = fun q -> 
 	let intra_node = InterCfg.Node.get_cfgnode q.node in

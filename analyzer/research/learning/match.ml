@@ -33,29 +33,17 @@ and match_lv : lv * lv -> bool
 	| _ -> false (* TO DO *)
 
 let match_cmd : cmd * cmd -> bool
-= fun (c1, c2) ->
+= fun (c1, c2) -> 
 	match c1, c2 with
 	| Assign (l1, e1), Assign (l2, e2) 
 	| Alloc (l1, e1), Alloc (l2, e2) 
 	(*
 		-> match_lv (l1, l2) && match_exp (e1, e2)
 		*)
-		-> match_exp (e1, e2)
-	| Cond e1, Cond e2 ->
-		match_exp (e1, e2)
+		-> true
+	| Cond e1, Cond e2 -> true
 	| _ -> false
 
-
-let rec remove_same_seq : cmd -> t -> t
-= fun cmd rest ->
-	match rest with
-	| hd::tl ->
-		if (match_cmd (cmd, List.hd rest))
-		then
-			remove_same_seq cmd (List.tl rest)
-		else
-			rest
-	| _ -> []	
 
 (* Too strict 
 let match_fl : t -> t -> bool
@@ -82,11 +70,9 @@ let match_fl : t -> t -> bool
 		| hd_feat::tl_feat, hd_target::tl_target ->
 			if match_cmd (hd_feat, hd_target)
 			then
-				let rest = remove_same_seq hd_feat tl_target in
-				match_helper tl_feat rest
+				match_helper tl_feat tl_target
 			else
 				match_helper feat tl_target				
 		| [], _ -> true
 		| _ -> false
 	in match_helper feat target
-			
