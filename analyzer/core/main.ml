@@ -621,20 +621,16 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let (pre, global) = init_analysis cilfile in
 	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis (pre, global) in
 	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
-	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, Report.BO) in
-	let queries_FS = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FS in
-	(*
 	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
-	*)
 	let _ = List.iter (fun q ->
 		let vis = new Unroller.insertNidVisitor (q) in
-		visitCilFile vis cilfile) queries_FS in
+		visitCilFile vis cilfile) queries_FI in
 	let fd = Cil.dummyFunDec in
 	let vis = new Unroller.unrollingVisitor (fd, 0) in
 	let _ = visitCilFile vis cilfile in
 	let _ = makeCFGinfo cilfile in
 	let (pre, global) = init_analysis cilfile in
-	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FS in
+	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FI in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
 		let tdata = tdata_from_one_query query flset features in
