@@ -9,3 +9,18 @@
 2. extract : switch 문 cut
 
 3. reduced paths : airac_observe까지 자르기
+
+
+
+---------------------------
+* 세부 구현 메모 *
+
+Trans : IntraCfg -> Flang
+
+	1. flang exp
+		(pointer) type cast -> Nothing 으로 번역
+
+		array index access (e.g., buf[idx]) -> Array 로 번역
+
+	2. flang cmd
+		function call -> Skip 으로 번역
