@@ -38,6 +38,7 @@ let opt_dir = ref ""
 let opt_inline_small_functions = ref false
 
 let opt_test_trans = ref false
+let opt_test_match = ref false
 
 let opts =
   [
@@ -96,4 +97,5 @@ let opts =
   ("-thresholds", (Arg.String (fun s -> opt_widen_thresholds := s)), "Widening with threshold (e.g., \"0 1 2 3 ...\")");
   ("-auto_thresholds", (Arg.Set opt_auto_thresholds), "Choose thresholds automatically");
 	("-test_trans", (Arg.Set opt_test_trans), "flang translation test");
+	("-test_match", (Arg.Set opt_test_match), "match test");
   ]

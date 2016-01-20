@@ -660,9 +660,13 @@ let collect_promising_participants : (fbvector * (string * string) BatSet.t) lis
 		) participants in
 	participants
 
-(*----------------------------------------------------*)
+(*****************************
+ * 
+ * Test : reduce된 코드들로만 해봄.
+ * 
+ *****************************)
 
-let test_trans : unit -> unit
+let get_unique_paths_to_observe : unit -> IntraCfg.t BatSet.t
 =fun () ->
 	let _ = Cil.initCIL () in
 	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
@@ -670,7 +674,13 @@ let test_trans : unit -> unit
 	let (_, global) = init_analysis one in
 	let intracfg_observe = Trans_test.get_intracfg_observe global in
 	let unique_paths = Trans_test.get_paths_intracfg intracfg_observe in
+	unique_paths
+
+let test_trans : unit -> unit
+=fun () ->
+	let unique_paths = get_unique_paths_to_observe () in
 	prerr_endline "\n<<IntraCfg>>";
+	(*Print all intracfg's.*)
 	BatSet.iter (fun path ->
 			Trans_test.print_singlepath_intracfg path
 		) unique_paths;
@@ -682,6 +692,20 @@ let test_trans : unit -> unit
 	prerr_endline "\n<<Flang>>";
 	BatSet.iter (fun fl -> 
 			Trans_test.print_flang fl
+		) flangs
+
+let test_self_match : unit -> unit
+=fun () ->
+	let unique_paths = get_unique_paths_to_observe () in
+	(*Translate to flang.*)
+	let flangs = BatSet.map (fun sp_intra ->
+			Trans_test.translate sp_intra
+		) unique_paths in
+	(*self match test for each flang*)
+	let numof_flangs = BatSet.cardinal flangs in
+	prerr_endline ("number of flangs: " ^ (string_of_int numof_flangs));
+	BatSet.iter (fun fl ->
+			if Match.match_fl fl fl then prerr_endline "O" else prerr_endline "X"
 		) flangs
 
 let main () =
@@ -698,6 +722,8 @@ let main () =
 
 	(*TEST: translation*)
 	if !Options.opt_test_trans then (test_trans (); exit 1);
+	(*TEST: match*)
+	if !Options.opt_test_match then (test_self_match (); exit 1);
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
