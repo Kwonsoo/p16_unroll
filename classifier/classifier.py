@@ -120,15 +120,15 @@ def predict_new_fbvector (fbvector, classifier_kind, features, solutions):
 
 def predict_test (features, solutions, testFeatures, testSolutions):
 	C = 1.0
-	classifiers = [#('Nearest Neighbors', KNeighborsClassifier(5)),
+	classifiers = [('Nearest Neighbors', KNeighborsClassifier(5)),
 								('Logistic Regression (l1)', LogisticRegression(C=C, penalty='l1')),
-#               ('Logistic Regression (l2)', LogisticRegression(C=C, penalty='l2')),
+               ('Logistic Regression (l2)', LogisticRegression(C=C, penalty='l2')),
                ('Linear SVM', SVC(kernel='linear',C=C,probability=True,random_state=0)),
-#               ('RBF SVM', SVC(gamma=2,C=C,probability=True,random_state=0)),
-#               ('Decision Tree', DecisionTreeClassifier(max_depth=10)),
-#               ('Random Forest', RandomForestClassifier(max_depth=10,n_estimators=10,max_features=1)),
-#               ('AdaBoost', AdaBoostClassifier()),
-#               ('Naive Bayes', GaussianNB())
+               ('RBF SVM', SVC(gamma=2,C=C,probability=True,random_state=0)),
+               ('Decision Tree', DecisionTreeClassifier(max_depth=10)),
+               ('Random Forest', RandomForestClassifier(max_depth=10,n_estimators=10,max_features=1)),
+               ('AdaBoost', AdaBoostClassifier()),
+               ('Naive Bayes', GaussianNB())
              ]
 
 	index = 0;

@@ -526,11 +526,10 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let (inputof, _, _, _, _, _) = StepManager.stepf true "Main Sparse Analysis" do_sparse_analysis (pre, global) in
 	let inputof_FI = fill_deadcode_with_premem pre global Table.empty in
 	let queries_FS = StepManager.stepf true "Generate report (FS)" Report.generate (global, inputof, Report.BO) in
-	let queries_FI = 
-		StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO)
-		|> List.filter (fun fiq -> fiq.status <> Report.BotAlarm)
-		|> List.filter (fun fiq -> fiq.status = Report.UnProven) in
-	let fiq2ans_map = Training.get_fi_fs_query_map queries_FI queries_FS in
+	let queries_FI = StepManager.stepf true "Generate report (FI)" Report.generate (global, inputof_FI, Report.BO) in
+	let queries_FI = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FI in
+	let fifsmap = List.fold_left (fun acc fiq ->
+		BatMap.add fiq (not (List.exists (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) queries_FS)) acc) BatMap.empty queries_FI in
 	let _ = List.iter (fun q ->
 		let vis = new Unroller.insertNidVisitor (q) in
 		visitCilFile vis cilfile) queries_FI in
@@ -542,7 +541,7 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FI in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
-		let tdata = tdata_from_one_query fiq2ans_map query flset features in
+		let tdata = tdata_from_one_query fifsmap query flset features in
 		tdata::acc) q2flmap [] in
 	tdata_list
 	
@@ -662,6 +661,29 @@ let collect_promising_participants : (fbvector * (string * string) BatSet.t) lis
 	participants
 
 (*----------------------------------------------------*)
+
+let test_trans : unit -> unit
+=fun () ->
+	let _ = Cil.initCIL () in
+	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
+	let _ = makeCFGinfo one in
+	let (_, global) = init_analysis one in
+	let intracfg_observe = Trans_test.get_intracfg_observe global in
+	let unique_paths = Trans_test.get_paths_intracfg intracfg_observe in
+	prerr_endline "\n<<IntraCfg>>";
+	BatSet.iter (fun path ->
+			Trans_test.print_singlepath_intracfg path
+		) unique_paths;
+	(*Translate to flang.*)
+	let flangs = BatSet.map (fun sp_intra -> 
+			Trans_test.translate sp_intra
+		) unique_paths in
+	(*Print all flangs.*)
+	prerr_endline "\n<<Flang>>";
+	BatSet.iter (fun fl -> 
+			Trans_test.print_flang fl
+		) flangs
+
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -674,6 +696,9 @@ let main () =
 	List.iter (fun f -> prerr_string (f ^ " ")) !files;
 	prerr_endline "";
 
+	(*TEST: translation*)
+	if !Options.opt_test_trans then (test_trans (); exit 1);
+
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
@@ -683,7 +708,7 @@ let main () =
 		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Generate Training Data";
 		let all_training_data = tdata_from_allT2_benchmarks features in
-		write_all_tdata_to_file all_training_data "../classifier/new.txt";
+		write_all_tdata_to_file all_training_data "../classifier/tdata.txt";
 		prerr_endline ">> TRAINING DATA : done --> Test with classifier..";
 		test_with_classifier ();
 		prerr_endline ">> TEST : done";

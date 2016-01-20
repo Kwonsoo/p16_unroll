@@ -36,6 +36,9 @@ type diff_type = FS | CS
 let opt_diff_type = ref FS
 let opt_dir = ref ""
 let opt_inline_small_functions = ref false
+
+let opt_test_trans = ref false
+
 let opts =
   [
 	(* option for simple tests *)
@@ -92,4 +95,5 @@ let opts =
   ("-wv", (Arg.String (fun s -> opt_weights := s)), "Weight vector for flow-sensitivity (e.g., \"0 1 -1 ... \"). Unspecified weights are zeros.");
   ("-thresholds", (Arg.String (fun s -> opt_widen_thresholds := s)), "Widening with threshold (e.g., \"0 1 2 3 ...\")");
   ("-auto_thresholds", (Arg.Set opt_auto_thresholds), "Choose thresholds automatically");
+	("-test_trans", (Arg.Set opt_test_trans), "flang translation test");
   ]

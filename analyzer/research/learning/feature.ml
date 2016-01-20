@@ -22,8 +22,8 @@ let gen_t1 : Global.t -> Zflang.t BatSet.t
 	let paths_dependency = BatSet.map (fun path ->
 			IntraCfg.dependency path
 		) paths_in_intracfg in
+	*)
 	(*translate to flang*)
-		*)
 	let paths_flang = BatSet.map (fun path ->
 			Zflang.trans_graph path
 		) paths_in_intracfg in

@@ -27,7 +27,7 @@ let rec trans_exp : Cil.exp -> exp
 = fun exp ->
 	match exp with
 	| Cil.Const _ -> Const
-	| Cil.Lval lv -> Lval Id
+	| Cil.Lval lv -> Lval (trans_lv lv)
 	| Cil.UnOp (_, exp, _) -> Uexp (trans_exp exp)
 	| Cil.BinOp (_, e1, e2, _) ->
 		let e1, e2 = trans_exp e1, trans_exp e2 in
