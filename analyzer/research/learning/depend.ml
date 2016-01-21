@@ -10,11 +10,6 @@ module SS = Set.Make(String)
 
 type defsinfo = (string, int BatSet.t) BatMap.t
 
-(*TODO*)
-(*Construct a var-to-defnode_id map from the given cfg.*)
-let cal_defsinfo : IntraCfg.t -> defsinfo
-=fun cfg -> BatMap.empty
-
 (*Check if the node has def.*)
 let has_def : IntraCfg.t -> IntraCfg.Node.t -> bool
 =fun cfg node ->
@@ -89,6 +84,17 @@ let get_usevars : IntraCfg.t -> IntraCfg.Node.t -> SS.t
 			 | None -> SS.empty)
 	| _ -> SS.empty
 	
+(*Construct a var-to-defnode_id map from the given cfg.*)
+let cal_defsinfo : IntraCfg.t -> defsinfo
+=fun cfg ->
+	fold_vertex (fun node v2nids_map ->
+		let defvars = get_defvars cfg node in
+		let updated = SS.fold (fun var map ->
+			let bound = try BatMap.find var map with Not_found -> BatSet.empty in
+			let added = BatSet.add (Node.getid node) bound in
+			BatMap.add var added map) defvars v2nids_map in
+		updated) cfg BatMap.empty
+
 (*gen-nid-set of the given node*)
 let gen : IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t
 =fun cfg node -> 
