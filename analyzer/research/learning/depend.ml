@@ -1,5 +1,8 @@
-(*Generate dependency graph by reaching definition analysis.
-	domain: node*)
+(**************************************************************
+ * Generate dependency graph by reaching definition analysis.	*
+ * domain: node																								*
+ * Our definition of Def: typical def + assume								*
+ **************************************************************)
 
 open IntraCfg
 
@@ -29,26 +32,27 @@ let has_def : IntraCfg.t -> IntraCfg.Node.t -> bool
 	| _ -> false
 
 (*Get def variables from exp.*)
-let rec get_defvars_exp : Cil.exp -> SS.t -> SS.t
+let rec get_vars_exp : Cil.exp -> SS.t -> SS.t
 =fun exp acc ->
 	match exp with
-	| Lval l -> get_defvars_lval l acc
-	| UnOp (_, e, _) -> get_defvars_exp e acc
-	| BinOp (_, e1, e2, _) -> SS.union (get_defvars_exp e1 acc) (get_defvars_exp e2 acc)
-	| CastE (_, e) -> get_defvars_exp e acc
-	| AddrOf l -> get_defvars_lval l acc
-	| StartOf l -> get_defvars_lval l acc
+	| Lval l -> get_vars_lval l acc
+	| UnOp (_, e, _) -> get_vars_exp e acc
+	| BinOp (_, e1, e2, _) -> SS.union (get_vars_exp e1 acc) (get_vars_exp e2 acc)
+	| CastE (_, e) -> get_vars_exp e acc
+	| AddrOf l -> get_vars_lval l acc
+	| StartOf l -> get_vars_lval l acc
 	| _ -> acc
 
 (*Get def variables from lval.*)
-and get_defvars_lval : Cil.lval -> SS.t -> SS.t
+and get_vars_lval : Cil.lval -> SS.t -> SS.t
 =fun lval acc -> 
 	let (lhost, _) = lval in
 	match lhost with
 	| Var varinfo -> SS.add varinfo.vname acc
-	| Mem exp -> get_defvars_exp exp acc
+	| Mem exp -> get_vars_exp exp acc
 
-(*Get def variables from the given node.*)
+(*Get DEF variables from the given node.
+	NOTE: Our DEF includes assume.*)
 let get_defvars : IntraCfg.t -> IntraCfg.Node.t -> SS.t
 =fun cfg node ->
 	let cmd = find_cmd node cfg in
@@ -57,13 +61,34 @@ let get_defvars : IntraCfg.t -> IntraCfg.Node.t -> SS.t
 	| Cexternal (lval, _)
 	| Calloc (lval, _, _, _)
 	| Csalloc (lval, _, _)
-	| Cfalloc (lval, _, _) -> get_defvars_lval lval SS.empty
+	| Cfalloc (lval, _, _) -> get_vars_lval lval SS.empty
+	| Cassume (e, _) -> get_vars_exp e SS.empty
 	| Ccall (lval_opt, _, _, _) ->
 			(match lval_opt with
-			 | Some lval -> get_defvars_lval lval SS.empty
+			 | Some lval -> get_vars_lval lval SS.empty
 			 | None -> SS.empty)
 	| _ -> SS.empty
 
+(*Get USE variables from the given node.*)
+let get_usevars : IntraCfg.t -> IntraCfg.Node.t -> SS.t
+=fun cfg node ->
+	let cmd = find_cmd node cfg in
+	match cmd with
+	| Cset (_, e, _)
+	| Cassume (e, _) -> get_vars_exp e SS.empty
+	| Calloc (_, alloc, _, _) -> 
+			(match alloc with
+			 | Array e -> get_vars_exp e SS.empty)
+	| Ccall (_, _, e_list, _) ->
+			List.fold_right (fun e acc ->
+					SS.union (get_vars_exp e SS.empty) acc
+				) e_list SS.empty
+	| Creturn (e_opt, _) ->
+			(match e_opt with
+			 | Some e -> get_vars_exp e SS.empty
+			 | None -> SS.empty)
+	| _ -> SS.empty
+	
 (*gen-nid-set of the given node*)
 let gen : IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t
 =fun cfg node -> 
@@ -100,4 +125,22 @@ and out : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 	let kills = kill cfg node defsinfo in
 	BatSet.union gens (BatSet.diff inns kills)
 
-(**)
+(**************************
+ * Draw dependency graph	*
+ **************************)
+
+let connect : IntraCfg.t -> IntraCfg.Node.t -> IntraCfg.Node.t -> IntraCfg.t
+=fun cfg n1 n2 ->
+	let cfg = add_node n1 cfg in
+	let cfg = add_node n2 cfg in
+	let cfg = add_edge n1 n2 cfg in
+	cfg
+
+let du_connect : IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> IntraCfg.t
+=fun cfg node reaching_defs ->
+	let use_vars = get_usevars cfg node in
+	(*TODO*)
+
+
+
+
