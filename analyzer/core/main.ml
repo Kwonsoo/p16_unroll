@@ -19,6 +19,8 @@ open Feature
 open Types
 open Printf
 
+open Depend
+
 module SS = Set.Make(String)
 
 type fifsmap = (Report.query, bool) BatMap.t

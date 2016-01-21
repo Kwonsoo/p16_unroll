@@ -25,3 +25,8 @@ Trans : IntraCfg -> Flang
 
 	2. flang cmd
 		function call -> Skip 으로 번역
+
+
+Match : Flang * Flang -> true/false
+
+	
