@@ -121,7 +121,6 @@ let rec inn : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 	let preds = pred node cfg in
 	let preds = BatSet.of_list preds in
 	BatSet.fold (fun pred acc ->
-			prerr_endline "out";
 			BatSet.union (out cfg pred defsinfo) acc
 		) preds BatSet.empty
 
@@ -129,7 +128,6 @@ let rec inn : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 and out : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 =fun cfg node defsinfo ->
 	let gens = gen cfg node in
-	prerr_endline "in";
 	let inns = inn cfg node defsinfo in
 	let kills = kill cfg node defsinfo in
 	BatSet.union gens (BatSet.diff inns kills)
@@ -144,7 +142,6 @@ let init_inn_out : IntraCfg.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 
 let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo nodes prev_io_map ->
-	prerr_endline "in-out one iter";
 	List.fold_right (fun n acc ->
 			let preds = pred n cfg in
 			let ins = List.fold_right (fun pre acc' ->
@@ -216,7 +213,7 @@ let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> 
 (*Connect, for all nodes, from defs to node.*)
 let du_connect_all : IntraCfg.t -> (int, int BatSet.t) BatMap.t -> IntraCfg.t
 =fun cfg_orig n2reach_map ->
-	let initial = IntraCfg.empty Cil.dummyFunDec in
+	let initial = IntraCfg.empty (Cil.emptyFunction "dummy") in
 	let initial = add_node Node.ENTRY initial in
 	let succ_of_entry = List.nth (succ Node.ENTRY cfg_orig) 0 in
 	let initial = add_node_with_cmd succ_of_entry (find_cmd succ_of_entry cfg_orig) initial in
@@ -246,11 +243,20 @@ let from_entry : IntraCfg.t -> IntraCfg.t
 		) nodes cfg in
 	cfg_entry_connected
 
+let connect_exit : IntraCfg.t -> IntraCfg.t
+=fun cfg ->
+	fold_vertex (fun node g ->
+		if (List.length (succ node g) = 0)
+		then add_edge node Node.EXIT g 
+		else g
+	) cfg cfg
+
 (*Use this function to get the dependency graph*)
 let get_dep_graph : IntraCfg.t -> IntraCfg.t
 =fun cfg ->
 	let defsinfo = cal_defsinfo cfg in
 	let final_io_map = cal_inn_out cfg defsinfo in
 	let rd_map = BatMap.map (fun io -> snd io) final_io_map in
-	let dug = du_connect_all cfg rd_map in
-	from_entry dug
+	du_connect_all cfg rd_map 
+	|> from_entry 
+	|> connect_exit

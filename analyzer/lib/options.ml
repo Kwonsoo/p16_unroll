@@ -44,7 +44,7 @@ let opts =
   [
 	(* option for simple tests *)
 	("-nid", (Arg.Set opt_nid), "insert nid of the query to where alarm occurs");
-	("-simtest", (Arg.Set opt_test), "Print translated F-lang sequences");
+	("-test", (Arg.Set opt_test), "Print translated F-lang sequences");
 	(* options for the auto-feature research *)
 	("-auto_learn", (Arg.Set opt_auto_learn), "Automatically generate features from the T1 program set and learn a classifier with the T2 program set.");
 	("-reduced", (Arg.String (fun s -> opt_reduced := s)), "a directory where the reduced code files exist");
