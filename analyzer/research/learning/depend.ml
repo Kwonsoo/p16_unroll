@@ -121,6 +121,7 @@ let rec inn : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 	let preds = pred node cfg in
 	let preds = BatSet.of_list preds in
 	BatSet.fold (fun pred acc ->
+			prerr_endline "out";
 			BatSet.union (out cfg pred defsinfo) acc
 		) preds BatSet.empty
 
@@ -128,6 +129,7 @@ let rec inn : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 and out : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 =fun cfg node defsinfo ->
 	let gens = gen cfg node in
+	prerr_endline "in";
 	let inns = inn cfg node defsinfo in
 	let kills = kill cfg node defsinfo in
 	BatSet.union gens (BatSet.diff inns kills)
@@ -141,17 +143,20 @@ let init_inn_out : IntraCfg.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 	initial_io
 
 let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
-=fun cfg defsinfo nodes io_map ->
+=fun cfg defsinfo nodes prev_io_map ->
+	prerr_endline "in-out one iter";
 	List.fold_right (fun n acc ->
 			let preds = pred n cfg in
 			let ins = List.fold_right (fun pre acc' ->
-					BatSet.union (out cfg pre defsinfo) acc'
+					(*BatSet.union (out cfg pre defsinfo) acc'*)
+					let pred_outs_from_previous_iter = snd (BatMap.find (Node.getid pre) prev_io_map) in
+					BatSet.union pred_outs_from_previous_iter acc'
 				) preds BatSet.empty in
 			let gens = gen cfg n in
 			let kills = kill cfg n defsinfo in
 			let outs = BatSet.union gens (BatSet.diff ins kills) in
 			BatMap.add (Node.getid n) (ins, outs) acc
-		) nodes io_map
+		) nodes prev_io_map
 
 let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> bool
 =fun prev current ->
@@ -172,6 +177,12 @@ let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int Ba
 let cal_inn_out : IntraCfg.t -> defsinfo -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo ->
 	let initial_io_map = init_inn_out cfg in
+	(*--------------*)
+	(*
+	let initial_inn = BatMap.map (fun io_tuple -> fst io_tuple) initial_io_map in
+	let initial_out = BatMap.map (fun io_tuple -> snd io_tuple) initial_io_map in
+	*)
+	(*--------------*)
 	let nodes = nodesof cfg in
 	let final_io_map = io_map_fixpoint cfg defsinfo nodes initial_io_map in
 	final_io_map
