@@ -135,18 +135,42 @@ and out : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
  * Draw dependency graph	*
  **************************)
 
+(*Actually connect the two nodes.*)
 let connect : IntraCfg.t -> IntraCfg.Node.t -> IntraCfg.Node.t -> IntraCfg.t
 =fun cfg n1 n2 ->
-	let cfg = add_node n1 cfg in
-	let cfg = add_node n2 cfg in
-	let cfg = add_edge n1 n2 cfg in
-	cfg
+	let cfg' = add_node n1 cfg in
+	let cfg' = add_node n2 cfg' in
+	let cfg' = add_edge n1 n2 cfg' in
+	cfg'
 
-let du_connect : IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> IntraCfg.t
-=fun cfg node reaching_defs ->
-	let use_vars = get_usevars cfg node in
-	(*TODO*)
+(*Connect all the defs node to the given node, according to its USE variables.*)
+let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> IntraCfg.t
+=fun cfg_orig cfg_new node reaching_defs ->
+	let use_vars = get_usevars cfg_orig node in
+	let cfg_after_all_usevars = SS.fold (fun usevar acc ->
+			let cfg_after_usevar = BatSet.fold (fun r acc' ->
+					let defvars_r = get_defvars cfg_orig (Node r) in
+					if SS.mem usevar defvars_r then connect acc' node (Node r)
+					else acc'
+				) reaching_defs acc in
+			cfg_after_usevar
+		) use_vars cfg_new in
+	cfg_after_all_usevars
 
+(*Check if the node has any predecessor.*)
+let has_pred : IntraCfg.t -> IntraCfg.Node.t -> bool
+=fun cfg node ->
+	if List.length (pred node cfg) = 0 then false else true
 
-
-
+(*Connect from the ENTRY node to unconnected paths.*)
+let from_entry : IntraCfg.t -> IntraCfg.t
+=fun cfg ->
+	let nodes = nodesof cfg in
+	let cfg_entry_connected = List.fold_right (fun n acc ->
+			if not has_pred acc n then (
+					if not is_entry n then connect acc Node.ENTRY n
+					else acc
+			)
+			else acc
+		) nodes cfg in
+	cfg_entry_connected
