@@ -15,11 +15,12 @@ let has_def : IntraCfg.t -> IntraCfg.Node.t -> bool
 =fun cfg node ->
 	let cmd = find_cmd node cfg in
 	match cmd with
-	| Cset (lval, _, _)
-	| Cexternal (lval, _)
-	| Calloc (lval, _, _, _)
-	| Csalloc (lval, _, _)
-	| Cfalloc (lval, _, _) -> true
+	| Cset (_, _, _)
+	| Cexternal (_, _)
+	| Calloc (_, _, _, _)
+	| Csalloc (_, _, _)
+	| Cfalloc (_, _, _)
+	| Cassume (_, _) -> true
 	| Ccall (lval_opt, _, _, _) ->
 			(match lval_opt with
 			 | Some lval -> true
@@ -167,8 +168,8 @@ let from_entry : IntraCfg.t -> IntraCfg.t
 =fun cfg ->
 	let nodes = nodesof cfg in
 	let cfg_entry_connected = List.fold_right (fun n acc ->
-			if not has_pred acc n then (
-					if not is_entry n then connect acc Node.ENTRY n
+			if not (has_pred acc n) then (
+					if not (is_entry n) then connect acc Node.ENTRY n
 					else acc
 			)
 			else acc
