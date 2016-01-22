@@ -813,13 +813,13 @@ let main () =
 
 
 	if !Options.opt_test then (
-		let idx = ref 0 in
 		BatMap.iter (fun pid cfg ->
-			let filename = !Options.opt_dir ^ pid ^ ".dot" in
-			let org = open_out ("org_" ^ filename) in
-			let dep = open_out ("dep_" ^ filename) in
+			let basename = !Options.opt_dir ^ "/" ^ pid in
+			let org = open_out (basename ^ "_org" ^ ".dot") in
+			let dep = open_out (basename ^ "_dep" ^ ".dot") in
 			let dep_g = Depend.get_dep_graph cfg in
-			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g;);
+			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g; 
+			flush org; flush dep; close_out org; close_out dep) global.icfg.cfgs;
 		exit 1);
 			
 
