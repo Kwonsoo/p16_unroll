@@ -140,7 +140,7 @@ let init_inn_out : IntraCfg.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 		) nodes BatMap.empty in
 	initial_io
 
-let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
+let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo nodes io_map ->
 	List.fold_right (fun n acc ->
 			let preds = pred n cfg in
@@ -161,7 +161,6 @@ let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (in
 			let (prev_fst, prev_snd) = prev_bind in
 			(curr_fst = prev_fst) && (curr_snd = prev_snd)
 		with Not_found -> false) prev
-	
 
 let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo nodes prev_io_map ->
@@ -206,7 +205,7 @@ let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> 
 (*Connect, for all nodes, from defs to node.*)
 let du_connect_all : IntraCfg.t -> (int, int BatSet.t) BatMap.t -> IntraCfg.t
 =fun cfg_orig n2reach_map ->
-	let initial = empty in
+	let initial = IntraCfg.empty Cil.dummyFunDec in
 	let initial = add_node Node.ENTRY initial in
 	let succ_of_entry = List.nth (succ Node.ENTRY cfg_orig) 0 in
 	let initial = add_node_with_cmd succ_of_entry (find_cmd succ_of_entry cfg_orig) initial in
