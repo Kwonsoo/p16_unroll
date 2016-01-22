@@ -164,7 +164,7 @@ let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (in
 		try 
 			let (curr_fst, curr_snd) = BatMap.find prev_key current in
 			let (prev_fst, prev_snd) = prev_bind in
-			(curr_fst = prev_fst) && (curr_snd = prev_snd)
+			(BatSet.equal curr_fst prev_fst) && (BatSet.equal curr_snd prev_snd)
 		with Not_found -> false) prev
 
 let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
