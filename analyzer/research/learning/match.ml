@@ -1,4 +1,4 @@
-open Zflang
+open Flang
 
 (*
 let rec match_exp : exp * exp -> bool

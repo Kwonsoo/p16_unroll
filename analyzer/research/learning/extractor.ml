@@ -1,102 +1,44 @@
-open Cil
+open IntraCfg
+open Report
 
-let card_succs : Cil.stmt -> int
-= fun s -> List.length s.succs
+type branch_map = (node, (node * node)) BatMap.t
 
-let card_preds : Cil.stmt -> int 
-= fun s -> List.length s.preds
+let card_succs : IntraCfg.t -> node -> int
+= fun g node -> List.length (succ node g)
 
-let is_branch : Cil.stmt -> bool
-= fun s -> if (card_succs s) > 1 then true else false
+let remove_unreaches : IntraCfg.t -> IntraCfg.t
+= fun g ->
+	let unreaches = IntraCfg.unreachable_node g in
+	BatSet.fold (fun node acc ->
+		remove_node node acc) unreaches g 
 
-let get_the_succ : Cil.stmt -> Cil.stmt
-= fun s -> List.hd s.succs
+let get_branch_map : IntraCfg.t -> branch_map
+= fun g ->
+	fold_vertex (fun node acc -> 
+		if card_succs g node = 2
+		then
+			let left = List.nth (succ node g) 0 in
+			let right = List.nth (succ node g) 1 in 
+			BatMap.add node (left, right) acc
+		else 
+			acc) g BatMap.empty
 
-let get_succs : Cil.stmt -> Cil.stmt list
-= fun s -> s.succs
+let rec extract_paths : IntraCfg.t -> branch_map -> IntraCfg.t BatSet.t
+= fun g branch_map -> 
+	match BatMap.cardinal branch_map with
+	| 0 -> 
+		let clean_g = remove_unreaches g in
+		BatSet.singleton clean_g
+	| _ ->
+		let (branch, (left, right)), map_rest = BatMap.pop branch_map in
+		let g_left = remove_edge branch left g in
+		let g_right = remove_edge branch right g in
+		let left_side = extract_paths g_left map_rest in
+		let right_side = extract_paths g_right map_rest in
+		BatSet.union left_side right_side
 
-(* Use this only to find a loop stmt. *)
-let get_the_pred : Cil.stmt -> Cil.stmt
-= fun this -> List.find (fun stmt ->
-	this.sid > stmt.sid) this.preds
-	
-let get_loop_break : Cil.stmt -> Cil.stmt option
-= fun s ->
-	let loop_next = get_the_succ s in
-	let loop_stmt = get_the_pred loop_next in
-	match loop_stmt.skind with
-	| Cil.Loop (_, _, _, break) -> break
-	| _ -> None
-
-let is_backward : Cil.stmt * Cil.stmt -> bool
-= fun (this, succ) -> this.sid > succ.sid
-
-let get_begin_stmt : Cil.fundec -> Cil.stmt
-= fun fd ->
-	let allStmts = fd.sallstmts in
-	List.hd allStmts
-
-let process_one_stmt : Cil.stmt -> Flang.t -> Flang.t
-= fun stmt accum ->
-	let trans = Flang.trans_stmt stmt in
-	Flang.append_fl accum trans
-
-let build_featTbl : Cil.fundec -> (int, Flang.t) Hashtbl.t
-= fun fd ->
-	let idx = ref 0 in
-	let featTbl = Hashtbl.create 251 in
-	let predTbl = Hashtbl.create 251 in
-	let begin_stmt = get_begin_stmt fd in
-			
-	(let rec add_paths : Cil.stmt -> Flang.t -> unit
-	= fun stmt accum ->
-		let appended = process_one_stmt stmt accum in
-		(if card_preds stmt > 1
-			then Hashtbl.add predTbl stmt.sid stmt
-			else ());
-		match (card_succs stmt) with
-		| 0 -> (Hashtbl.add featTbl !idx appended); idx := !idx + 1
-		| _ -> 
-			let succs = get_succs stmt in
-			List.iter (fun succ ->
-				if Hashtbl.mem predTbl succ.sid then ()
-				else if is_backward (stmt, succ)
-				then
-					let break = get_loop_break stmt in
-					if BatOption.is_some break 
-					then 
-						let break = BatOption.get break in
-						add_paths break appended
-					else 
-						() (* TO FIX *)
-				else
-					add_paths succ appended
-			) succs
-		in add_paths begin_stmt []); featTbl
-
-let delete_skip : Flang.t -> Flang.t
-= fun f ->
-	List.filter (fun s ->
-		match s with
-		| Flang.Skip -> false
-		| _ -> true
-	) f
-
-let tbl_to_set : (int, Flang.t) Hashtbl.t -> Flang.t BatSet.t
-= fun tbl ->
-	let fold_f key value accum =
-		BatSet.add (delete_skip value) accum
-	in Hashtbl.fold fold_f tbl BatSet.empty
-
-let get_featSet : Cil.fundec -> Flang.t BatSet.t
-= fun fd ->
-	let featTbl = build_featTbl fd in
-	let featSet = tbl_to_set featTbl in
-	BatSet.filter (fun fl ->
-		List.length fl > 2) featSet
-
-let unroll_loop : Cil.stmt list -> int -> Cil.stmt list
-= fun orgs factor -> orgs (* TO DO *)
-
-
+let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
+= fun g ->
+	let branches = get_branch_map g in
+	extract_paths g branches
 

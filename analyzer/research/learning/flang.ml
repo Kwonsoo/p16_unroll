@@ -1,3 +1,6 @@
+open Cil
+open IntraCfg
+
 type t = cmd list
 
 and cmd =
@@ -8,64 +11,27 @@ and cmd =
 
 and exp =
 	| Nothing
+	| Top
 	| Const
 	| Uexp of exp
-	| Bexp of bops * exp * exp
+	| Bexp of exp * exp
 	| Lval of lv
 	| Addr of lv
 
 and lv =
 	| Id
 	| Deref of lv
-	| Array 
+	| Array
 
-and bops =
-	| Arith
-	| Compare
-
-let rec trans_stmt : Cil.stmt -> t
-= fun stmt ->
-	match stmt.skind with
-	|	Cil.Instr il -> List.map trans_il il
-	| Cil.If (e, _, _, _) -> [Cond (trans_exp e)]
-	| _ -> [Skip]
-
-and trans_il : Cil.instr -> cmd
-= fun instr ->
-	match instr with
-	| Cil.Set (lv, e, _) ->  
-			let lv = trans_lv lv in
-			let e = trans_exp e in
-			Assign (lv, e)
-	| Cil.Call (Some lv, Lval (Var vinfo, _), [size], _) ->
-			if (vinfo.vname = "malloc" || vinfo.vname = "__builtin_alloca")
-			then
-				let lv = trans_lv lv in
-				let size = trans_exp size in
-				Alloc (lv, size)
-			else
-				Skip
-	| _ -> Skip
-
-and trans_exp : Cil.exp -> exp
-= fun cexp ->
-	match cexp with
+let rec trans_exp : Cil.exp -> exp
+= fun exp ->
+	match exp with
 	| Cil.Const _ -> Const
 	| Cil.Lval lv -> Lval (trans_lv lv)
-	| Cil.UnOp (_, e, _) -> Uexp (trans_exp e)
-	| Cil.BinOp (cbop, e1, e2, _) -> 
-			let bop =
-			match cbop with
-				| PlusA | PlusPI | IndexPI | MinusA | MinusPI | MinusPP
-				| Mult | Div | Mod | Shiftlt | Shiftrt
-					-> Arith
-				| Lt | Gt | Le | Ge | Eq | Ne | BAnd | BXor | BOr
-				| LAnd | LOr
-					-> Compare
-			in 
-				let e1 = trans_exp e1 in
-				let e2 = trans_exp e2 in
-				Bexp (bop, e1, e2)
+	| Cil.UnOp (_, exp, _) -> Uexp (trans_exp exp)
+	| Cil.BinOp (_, e1, e2, _) ->
+		let e1, e2 = trans_exp e1, trans_exp e2 in
+		Bexp (e1, e2)
 	| Cil.AddrOf lv -> Lval (trans_lv lv)
 	| Cil.StartOf lv -> Lval (trans_lv lv)
 	| _ -> Nothing (* TO DO *)
@@ -75,23 +41,59 @@ and trans_lv : Cil.lval -> lv
 	match lh with
 	| Cil.Var v ->
 		(match off with
-		| Cil.NoOffset -> Id 
+		| Cil.NoOffset -> Id
 		| Cil.Field _ -> Id
 		| Cil.Index _ -> Array)
 	| Cil.Mem e ->
 		(match e with
-		| Cil.Lval lv ->
-			Deref Id
+		| Cil.Lval lv -> Deref Id
 		| _ -> Id)
-	| _ -> Id 
+	| _ -> Id
 
-let union_over_set_list : t BatSet.t list -> t BatSet.t
-= fun set_list ->
-	let sets = BatSet.of_list set_list in
-	BatSet.fold BatSet.union sets BatSet.empty
+and trans_alloc : IntraCfg.Cmd.alloc -> exp
+= fun alloc ->
+	match alloc with
+	| IntraCfg.Cmd.Array e -> trans_exp e
 
-let append_fl : t -> t -> t
-= fun f1 f2 -> f1 @ f2
+let rec trans_cmd : IntraCfg.Cmd.t -> cmd
+= fun cmd ->
+	match cmd with
+	| Cskip -> Skip
+	| Cset (lv, e, _) ->
+		let flv = trans_lv lv in
+		let fexp = trans_exp e in
+		Assign (flv, fexp)
+	| Cexternal (lv, _) ->
+		let flv = trans_lv lv in
+		Assign (flv, Top)
+	| Calloc (lv, alloc, _, _) ->
+		let flv = trans_lv lv in
+		let size = trans_alloc alloc in
+		Alloc (flv, size)
+	| Cassume (exp, _) -> 
+		let fexp = trans_exp exp in
+		Cond fexp
+	| _ -> Skip
+
+let trans_graph : IntraCfg.t -> t
+= fun g ->
+	let entry = fold_vertex (fun node acc ->
+		match List.length (pred node g) with
+		| 0 -> node
+		| _ -> acc) g Node.ENTRY in
+	
+	let rec process_one_node node acc =
+		let cmd = find_cmd node g in
+		let translated = trans_cmd cmd in
+		let succs = (succ node g) in
+		match List.length succs with
+		| 0 -> acc
+		| 1 -> process_one_node (List.hd succs) (acc @ [translated])
+		| _ -> raise (Failure "process_one_node") in
+	let transed = process_one_node entry [] in
+	let skip_removed = List.filter (fun cmd ->
+		not (cmd = Skip)) transed in
+	skip_removed
 
 let rec exp_to_str : exp -> string
 = fun e ->
@@ -99,45 +101,33 @@ let rec exp_to_str : exp -> string
 	| Nothing -> "Nothing "
 	| Const -> "Const "
 	| Uexp e -> "Uexp " ^ (exp_to_str e)
-	| Bexp (bo, e1, e2) -> 
-			let bo_str = 
-								match bo with
-				| Arith -> "Arith "
-				| Compare -> "Compare "
-			in "Bexp " ^ bo_str ^ (exp_to_str e1) ^ (exp_to_str e2)
+	| Bexp (e1, e2) -> "Bexp "^ (exp_to_str e1) ^ (exp_to_str e2)
 	| Lval lv -> "Lval " ^ (lv_to_str lv)
 	| Addr lv -> "Addr " ^ (lv_to_str lv)
 
 and lv_to_str : lv -> string
 = fun lv ->
 	match lv with
-	| Id -> "ID "
+	| Id -> "Id "
+	| Deref lv -> "Deref "
 	| Array -> "Array "
-	| Deref lv -> "Deref " ^ (lv_to_str lv)
 
 let cmd_to_str : cmd -> string
 = fun c ->
 	match c with
 	| Skip -> "Skip \n"
 	| Assign (lv, e) ->
-			let lv = lv_to_str lv in
-			let e = exp_to_str e in
-			"Assign " ^ lv ^ e ^ "\n"
+		let lv = lv_to_str lv in
+		let e = exp_to_str e in
+		"Assign " ^ lv ^ e ^ "\n"
 	| Alloc (lv, e) ->
-			let lv = lv_to_str lv in
-			let e = exp_to_str e in
-			"Alloc " ^ lv ^ e ^ "\n"
-	| Cond e ->
-			"Cond " ^ (exp_to_str e) ^ "\n"
-
-let flang_to_str : t -> string
-= fun t ->
-	"*** F-lang *** \n" ^
-	(String.concat "" (List.map cmd_to_str t))
+		let lv = lv_to_str lv in
+		let e = exp_to_str e in
+		"Alooc " ^ lv ^ e ^ "\n"
+	| Cond e -> "Cond " ^ (exp_to_str e) ^ "\n"
 
 let print_flang : t -> unit
 = fun t ->
-	let contents = flang_to_str t in
+	let contents = String.concat "" (List.map cmd_to_str t) in
 	print_endline contents
-			
-	
+

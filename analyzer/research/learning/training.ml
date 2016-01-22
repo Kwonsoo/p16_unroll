@@ -98,7 +98,7 @@ let cluster_queries_with_pid : query list -> (pid, query list) BatMap.t
 let get_paths_from_pid : InterCfg.t -> pid -> IntraCfg.t BatSet.t
 = fun icfg pid ->
 	let cfg = InterCfg.cfgof icfg pid in
-	Zex.get_paths cfg
+	Extractor.get_paths cfg
 
 let is_query_node : IntraCfg.t -> query -> IntraCfg.node -> bool
 = fun cfg q node ->
@@ -158,16 +158,3 @@ let get_fi_fs_query_map : query list -> query list -> (query, bool) BatMap.t
 		with _ -> raise (Failure "get_fi_fs_query_map") in
 		BatMap.add fiq answer q2a_map) BatMap.empty fiqs
 
-
-
-
-	
-(*
-let extract_and_match : IntraCfg.t -> query list -> tdata
-= fun cfg queries ->
-	let paths = Zex.get_paths cfg in
-	
-let get_fbvector_from_query : query -> Flang.t BatSet.t -> fbvector
-= fun query features ->
-	let cfg_query = slice_query query in
-*)

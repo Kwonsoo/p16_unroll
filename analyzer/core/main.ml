@@ -469,7 +469,7 @@ let gen_features_from_one_file = fun file ->
 	feature_set
 
 (* Generate feature list from the given reduced directory. *)
-let gen_feature_set : dir -> Zflang.t BatSet.t = fun reduced_dir ->
+let gen_feature_set : dir -> Flang.t BatSet.t = fun reduced_dir ->
 	try
 	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
 	let files = Sys.readdir reduced_dir in
@@ -510,7 +510,7 @@ let test_with_classifier : unit -> unit
 =fun () ->
 	Sys.command ("python ../classifier/classifier.py test ../classifier/tdata.txt ../classifier/tdata.txt"); ()
 
-let rec tdata_from_allT2_benchmarks : Zflang.t BatSet.t -> tdata list
+let rec tdata_from_allT2_benchmarks : Flang.t BatSet.t -> tdata list
 = fun features ->
 	let files = Array.to_list (Sys.readdir "../T2") in
 	let all_training_data =
@@ -520,7 +520,7 @@ let rec tdata_from_allT2_benchmarks : Zflang.t BatSet.t -> tdata list
 		) [] files in
 	all_training_data
 
-and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
+and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 = fun file features ->
 	let cilfile = parse_to_cil file in
 	let _ = makeCFGinfo cilfile in
@@ -547,7 +547,7 @@ and tdata_from_one_bench : dir -> Zflang.t BatSet.t -> tdata list
 		tdata::acc) q2flmap [] in
 	tdata_list
 	
-and tdata_from_one_query : fifsmap -> Report.query -> Zflang.t BatSet.t -> Zflang.t BatSet.t -> tdata
+and tdata_from_one_query : fifsmap -> Report.query -> Flang.t BatSet.t -> Flang.t BatSet.t -> tdata
 = fun fifsmap query flset features ->
 	let fbvector = BatSet.fold (fun feature acc ->
 		let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
@@ -610,7 +610,7 @@ let get_participants : IntraCfg.t BatSet.t -> (string * string) BatSet.t
 		) paths BatSet.empty
 
 (*Return fbvector list and participants list (with correct order).*)
-let rec fbvector_participants_list_from_newprog : dir -> Zflang.t BatSet.t -> (fbvector * (string * string) BatSet.t) list
+let rec fbvector_participants_list_from_newprog : dir -> Flang.t BatSet.t -> (fbvector * (string * string) BatSet.t) list
 =fun file features ->
 	let cilfile = parse_to_cil file in
 	let _ = makeCFGinfo cilfile in
@@ -643,7 +643,7 @@ let rec fbvector_participants_list_from_newprog : dir -> Zflang.t BatSet.t -> (f
 		) fbvector_list participants_list [] in
 	fbvector_participants_list
 	
-and fbvector_from_query : Zflang.t BatSet.t -> Zflang.t BatSet.t -> fbvector
+and fbvector_from_query : Flang.t BatSet.t -> Flang.t BatSet.t -> fbvector
 =fun flset features ->
 	let fbvector = BatSet.fold (fun feature acc -> 
 			let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
@@ -668,6 +668,7 @@ let collect_promising_participants : (fbvector * (string * string) BatSet.t) lis
  * 
  *****************************)
 
+(*
 let get_unique_paths_to_observe : unit -> IntraCfg.t BatSet.t
 =fun () ->
 	let _ = Cil.initCIL () in
@@ -709,6 +710,7 @@ let test_self_match : unit -> unit
 	BatSet.iter (fun fl ->
 			if Match.match_fl fl fl then prerr_endline "O" else prerr_endline "X"
 		) flangs
+*)
 
 let main () =
   let t0 = Sys.time () in
@@ -722,10 +724,12 @@ let main () =
 	List.iter (fun f -> prerr_string (f ^ " ")) !files;
 	prerr_endline "";
 
+(*
 	(*TEST: translation*)
 	if !Options.opt_test_trans then (test_trans (); exit 1);
 	(*TEST: match*)
 	if !Options.opt_test_match then (test_self_match (); exit 1);
+*)
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
@@ -800,6 +804,7 @@ let main () =
 
     let (pre, global) = init_analysis one in
 
+
     let pids = InterCfg.pidsof (Global.get_icfg global) in
     let nodes = InterCfg.nodesof (Global.get_icfg global) in
 
@@ -807,19 +812,17 @@ let main () =
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
 
-(*
-    if !Options.opt_cfgs then ( 
-				(*Cmd print for test*)
-				prerr_endline "=========";
-				InterCfg.print_intras global.icfg;
-				prerr_endline "=========";
-				InterCfg.store_cfgs !Options.opt_cfgs_dir global.icfg;
-				(*InterCfg.count_nodes_each_intracfg global.icfg;*)
-				(*NOTE: Dependency 적용*)
-				prerr_endline ">>>>>>>";
-				InterCfg.store_cfgs (!Options.opt_cfgs_dir ^ "_dep") (InterCfg.dependency global.icfg);
-				exit 1);
-	*)
+	if !Options.opt_test then (
+		let idx = ref 0 in
+		BatMap.iter (fun pid cfg ->
+			let filename = !Options.opt_dir ^ pid ^ ".dot" in
+			let org = open_out ("org_" ^ filename) in
+			let dep = open_out ("dep_" ^ filename) in
+			let dep_g = Depend.get_dep_graph cfg in
+			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g;);
+		exit 1);
+			
+
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
   if !Options.opt_dug then (

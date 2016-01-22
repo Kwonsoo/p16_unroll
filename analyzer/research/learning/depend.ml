@@ -234,3 +234,12 @@ let from_entry : IntraCfg.t -> IntraCfg.t
 			else acc
 		) nodes cfg in
 	cfg_entry_connected
+
+(*Use this function to get the dependency graph*)
+let get_dep_graph : IntraCfg.t -> IntraCfg.t
+=fun cfg ->
+	let defsinfo = cal_defsinfo cfg in
+	let final_io_map = cal_inn_out cfg defsinfo in
+	let rd_map = BatMap.map (fun io -> snd io) final_io_map in
+	let dug = du_connect_all cfg rd_map in
+	from_entry dug
