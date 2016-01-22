@@ -822,7 +822,7 @@ let main () =
 	*)
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
-    if !Options.opt_dug then (
+  if !Options.opt_dug then (
         let dug = ItvSSA.icfg2dug (global, pre, ItvPre.get_total_abslocs pre) in
         let json = `Assoc 
             [ ("callgraph", Callgraph.to_json global.callgraph); 

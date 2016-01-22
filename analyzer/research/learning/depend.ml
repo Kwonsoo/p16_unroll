@@ -132,6 +132,45 @@ and out : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 	let kills = kill cfg node defsinfo in
 	BatSet.union gens (BatSet.diff inns kills)
 
+let init_inn_out : IntraCfg.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
+=fun cfg ->
+	let nodes = nodesof cfg in
+	let initial_io = List.fold_right (fun n acc ->
+			BatMap.add (Node.getid n) (BatSet.empty, BatSet.empty) acc
+		) nodes BatMap.empty in
+	initial_io
+
+let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
+=fun cfg defsinfo nodes io_map ->
+	List.fold_right (fun n acc ->
+			let preds = pred n cfg in
+			let ins = List.fold_right (fun pre acc' ->
+					BatSet.union (out cfg pre defsinfo) acc'
+				) preds BatSet.empty in
+			let gens = gen cfg n in
+			let kills = kill cfg n defsinfo in
+			let outs = BatSet.union gens (BatSet.diff ins kills) in
+			BatMap.add (Node.getid n) (ins, outs) acc
+		) nodes io_map
+
+(*TODO*)
+let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> bool
+=fun prev_io_map new_io_map -> true
+
+let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
+=fun cfg defsinfo nodes prev_io_map ->
+	let new_io_map = cal_inn_out_one_iteration cfg defsinfo nodes prev_io_map in
+	if check_io_map_fixpoint prev_io_map new_io_map
+	then new_io_map
+	else io_map_fixpoint cfg defsinfo nodes new_io_map
+
+let cal_inn_out : IntraCfg.t -> defsinfo -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
+=fun cfg defsinfo ->
+	let initial_io_map = init_inn_out cfg in
+	let nodes = nodesof cfg in
+	let final_io_map = io_map_fixpoint cfg defsinfo nodes initial_io_map in
+	final_io_map
+
 (**************************
  * Draw dependency graph	*
  **************************)
@@ -157,6 +196,21 @@ let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> 
 			cfg_after_usevar
 		) use_vars cfg_new in
 	cfg_after_all_usevars
+
+(*Connect, for all nodes, from defs to node.*)
+let du_connect_all : IntraCfg.t -> (int, int BatSet.t) BatMap.t -> IntraCfg.t
+=fun cfg_orig n2reach_map ->
+	let initial = empty in
+	let initial = add_node Node.ENTRY initial in
+	let succ_of_entry = List.nth (succ Node.ENTRY cfg_orig) 0 in
+	let initial = add_node_with_cmd succ_of_entry (find_cmd succ_of_entry cfg_orig) initial in
+	let initial = add_edge Node.ENTRY succ_of_entry initial in
+	(*For each node, connect from defnodes to it.*)
+	let nodes = nodesof cfg_orig in
+	let dug = List.fold_right (fun n acc ->
+			du_connect cfg_orig acc n (BatMap.find (Node.getid n) n2reach_map)
+		) nodes initial in
+	dug
 
 (*Check if the node has any predecessor.*)
 let has_pred : IntraCfg.t -> IntraCfg.Node.t -> bool
