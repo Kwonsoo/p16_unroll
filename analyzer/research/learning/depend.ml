@@ -183,10 +183,7 @@ let cal_inn_out : IntraCfg.t -> defsinfo -> (int, (int BatSet.t * int BatSet.t))
 (*Actually connect the two nodes.*)
 let connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> IntraCfg.Node.t -> IntraCfg.t
 =fun cfg_orig cfg_new n1 n2 ->
-	prerr_endline "HAHA";
-	let cmd1 = find_cmd n1 cfg_orig in
-	prerr_endline "GAGA";
-	let cfg' = add_node_with_cmd n1 cmd1 cfg_new in
+	let cfg' = add_node_with_cmd n1 (find_cmd n1 cfg_orig) cfg_new in
 	let cfg' = add_node_with_cmd n2 (find_cmd n2 cfg_orig) cfg' in
 	let cfg' = add_edge n1 n2 cfg' in
 	cfg'
