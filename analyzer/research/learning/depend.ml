@@ -47,8 +47,7 @@ and get_vars_lval : Cil.lval -> SS.t -> SS.t
 	| Var varinfo -> SS.add varinfo.vname acc
 	| Mem exp -> get_vars_exp exp acc
 
-(*Get DEF variables from the given node.
-	NOTE: Our DEF includes assume.*)
+(*Get DEF variables from the given node.*)
 let get_defvars : IntraCfg.t -> IntraCfg.Node.t -> SS.t
 =fun cfg node ->
 	let cmd = find_cmd node cfg in
@@ -132,6 +131,7 @@ and out : IntraCfg.t -> IntraCfg.Node.t -> defsinfo -> int BatSet.t
 	let kills = kill cfg node defsinfo in
 	BatSet.union gens (BatSet.diff inns kills)
 
+(*Initialize In & Out to empty set.*)
 let init_inn_out : IntraCfg.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg ->
 	let nodes = nodesof cfg in
@@ -140,12 +140,12 @@ let init_inn_out : IntraCfg.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 		) nodes BatMap.empty in
 	initial_io
 
+(*Calculate In & Out by iterating all nodes.*)
 let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo nodes prev_io_map ->
 	List.fold_right (fun n acc ->
 			let preds = pred n cfg in
 			let ins = List.fold_right (fun pre acc' ->
-					(*BatSet.union (out cfg pre defsinfo) acc'*)
 					let pred_outs_from_previous_iter = snd (BatMap.find (Node.getid pre) prev_io_map) in
 					BatSet.union pred_outs_from_previous_iter acc'
 				) preds BatSet.empty in
@@ -155,6 +155,7 @@ let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (
 			BatMap.add (Node.getid n) (ins, outs) acc
 		) nodes prev_io_map
 
+(*Check if we have reached fixpoint of In * Out.*)
 let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> bool
 =fun prev current ->
 	BatMap.for_all (fun prev_key prev_bind ->
@@ -164,6 +165,7 @@ let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (in
 			(BatSet.equal curr_fst prev_fst) && (BatSet.equal curr_snd prev_snd)
 		with Not_found -> false) prev
 
+(*Find fixpoint of In & Out.*)
 let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo nodes prev_io_map ->
 	let new_io_map = cal_inn_out_one_iteration cfg defsinfo nodes prev_io_map in
@@ -171,21 +173,16 @@ let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int Ba
 	then new_io_map
 	else io_map_fixpoint cfg defsinfo nodes new_io_map
 
+(*Calculate In & Out of all nodes in the given cfg.*)
 let cal_inn_out : IntraCfg.t -> defsinfo -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo ->
 	let initial_io_map = init_inn_out cfg in
-	(*--------------*)
-	(*
-	let initial_inn = BatMap.map (fun io_tuple -> fst io_tuple) initial_io_map in
-	let initial_out = BatMap.map (fun io_tuple -> snd io_tuple) initial_io_map in
-	*)
-	(*--------------*)
 	let nodes = nodesof cfg in
 	let final_io_map = io_map_fixpoint cfg defsinfo nodes initial_io_map in
 	final_io_map
 
 (**************************
- * Draw dependency graph	*
+ * Draw dependency graph.	*
  **************************)
 
 (*Actually connect the two nodes.*)
