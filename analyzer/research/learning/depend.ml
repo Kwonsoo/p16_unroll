@@ -181,10 +181,13 @@ let cal_inn_out : IntraCfg.t -> defsinfo -> (int, (int BatSet.t * int BatSet.t))
  **************************)
 
 (*Actually connect the two nodes.*)
-let connect : IntraCfg.t -> IntraCfg.Node.t -> IntraCfg.Node.t -> IntraCfg.t
-=fun cfg n1 n2 ->
-	let cfg' = add_node n1 cfg in
-	let cfg' = add_node n2 cfg' in
+let connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> IntraCfg.Node.t -> IntraCfg.t
+=fun cfg_orig cfg_new n1 n2 ->
+	prerr_endline "HAHA";
+	let cmd1 = find_cmd n1 cfg_orig in
+	prerr_endline "GAGA";
+	let cfg' = add_node_with_cmd n1 cmd1 cfg_new in
+	let cfg' = add_node_with_cmd n2 (find_cmd n2 cfg_orig) cfg' in
 	let cfg' = add_edge n1 n2 cfg' in
 	cfg'
 
@@ -195,7 +198,7 @@ let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> 
 	let cfg_after_all_usevars = SS.fold (fun usevar acc ->
 			let cfg_after_usevar = BatSet.fold (fun r acc' ->
 					let defvars_r = get_defvars cfg_orig (Node r) in
-					if SS.mem usevar defvars_r then connect acc' node (Node r)
+					if SS.mem usevar defvars_r then connect cfg_orig acc' node (Node r)
 					else acc'
 				) reaching_defs acc in
 			cfg_after_usevar
@@ -228,7 +231,7 @@ let from_entry : IntraCfg.t -> IntraCfg.t
 	let nodes = nodesof cfg in
 	let cfg_entry_connected = List.fold_right (fun n acc ->
 			if not (has_pred acc n) then (
-					if not (is_entry n) then connect acc Node.ENTRY n
+					if not (is_entry n) then connect acc acc Node.ENTRY n
 					else acc
 			)
 			else acc
