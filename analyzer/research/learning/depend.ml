@@ -153,9 +153,15 @@ let cal_inn_out_one_iteration : IntraCfg.t -> defsinfo -> Node.t list -> (int, (
 			BatMap.add (Node.getid n) (ins, outs) acc
 		) nodes io_map
 
-(*TODO*)
 let check_io_map_fixpoint : (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> bool
-=fun prev_io_map new_io_map -> true
+=fun prev current ->
+	BatMap.for_all (fun prev_key prev_bind ->
+		try 
+			let (curr_fst, curr_snd) = BatMap.find prev_key current in
+			let (prev_fst, prev_snd) = prev_bind in
+			(curr_fst = prev_fst) && (curr_snd = prev_snd)
+		with Not_found -> false) prev
+	
 
 let rec io_map_fixpoint : IntraCfg.t -> defsinfo -> Node.t list -> (int, (int BatSet.t * int BatSet.t)) BatMap.t -> (int, (int BatSet.t * int BatSet.t)) BatMap.t
 =fun cfg defsinfo nodes prev_io_map ->
