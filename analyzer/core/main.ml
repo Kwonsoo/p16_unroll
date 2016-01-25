@@ -813,6 +813,12 @@ let main () =
 
 
 	if !Options.opt_test then (
+		(*Unroll*)
+		let vis = new Unroller.unrollingVisitor (Cil.dummyFunDec, 0) in
+		let _ = visitCilFile vis one in
+		let _ = makeCFGinfo one in
+		let (_, global) = init_analysis one in
+
 		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
 			let org = open_out (basename ^ "_org" ^ ".dot") in
