@@ -200,7 +200,7 @@ let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> 
 	let cfg_after_all_usevars = SS.fold (fun usevar acc ->
 			let cfg_after_usevar = BatSet.fold (fun r acc' ->
 					let defvars_r = get_defvars cfg_orig (Node r) in
-					if SS.mem usevar defvars_r then connect cfg_orig acc' node (Node r)
+					if SS.mem usevar defvars_r then connect cfg_orig acc' (Node r) node
 					else acc'
 				) reaching_defs acc in
 			cfg_after_usevar
