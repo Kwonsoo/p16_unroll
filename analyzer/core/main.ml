@@ -818,21 +818,39 @@ let main () =
 		let _ = makeCFGinfo one in
 		let (_, global) = init_analysis one in
 		BatMap.iter (fun pid cfg ->
-				let basename = !Options.opt_dir ^ "/" ^ pid in
-				let org = open_out (basename ^ "_org" ^ ".dot") in
-				IntraCfg.print_dot org cfg;
-				flush org; close_out org
-			) global.icfg.cfgs;
-
-		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
+			let org = open_out (basename ^ "_org" ^ ".dot") in
 			let unr = open_out (basename ^ "_unr" ^ ".dot") in
 			let dep = open_out (basename ^ "_dep" ^ ".dot") in
+			
+			(*
+			let t0 = Sys.time () in
+			prerr_endline (">> Start [" ^ pid ^ "]");
+			let dep_g = Depend.get_dep_graph cfg in
+			prerr_endline ">> dug completed";
+			let recon = Recon.unroll_cfg dep_g in
+			prerr_endline ">> unroll completed";
+			*)
+
+			let t0 = Sys.time () in
+			prerr_endline (">> Start [" ^ pid ^ "]");
 			let recon = Recon.unroll_cfg cfg in
+			prerr_endline ">> unroll completed";
 			let dep_g = Depend.get_dep_graph recon in
+			prerr_endline ">> dug completed\n";
+			prerr_endline (string_of_float (Sys.time () -. t0));
+			
+			
+			(*
 			let paths = Extractor.get_paths dep_g in
-			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g; 
-			flush org; flush dep; close_out org; close_out dep) global.icfg.cfgs;
+			prerr_endline ">> paths extracted";
+			prerr_endline (string_of_float (Sys.time () -. t0));
+			*)
+
+			IntraCfg.print_dot org cfg;
+			IntraCfg.print_dot unr recon;
+			IntraCfg.print_dot dep dep_g; 
+			flush org; flush unr; flush dep; close_out org; close_out unr; close_out dep) global.icfg.cfgs;
 		exit 1);
 	
 	if !Options.opt_cfgs then (
