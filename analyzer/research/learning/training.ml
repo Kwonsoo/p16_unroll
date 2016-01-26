@@ -97,7 +97,9 @@ let cluster_queries_with_pid : query list -> (pid, query list) BatMap.t
 
 let get_paths_from_pid : InterCfg.t -> pid -> IntraCfg.t BatSet.t
 = fun icfg pid ->
-	let cfg = InterCfg.cfgof icfg pid in
+	let cfg = InterCfg.cfgof icfg pid 
+	|> Unroller.unroll_cfg
+	|> Depend.get_dep_graph in
 	Extractor.get_paths cfg
 
 let is_query_node : IntraCfg.t -> query -> IntraCfg.node -> bool
