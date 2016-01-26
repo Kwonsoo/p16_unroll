@@ -3,7 +3,6 @@ open Report
 
 module Path = Graph.Path.Check (G)
 type branch_map = (node, (node * node)) BatMap.t
-let idx = ref 0
 
 let cfg_reachables_only : IntraCfg.t -> Path.path_checker -> IntraCfg.t
 = fun g pc ->
@@ -48,13 +47,11 @@ let rec extract_paths : IntraCfg.t -> node -> branch_map -> IntraCfg.t BatSet.t
 		let paths_left = extract_paths g_left lb bmap in
 		let paths_right = extract_paths g_right rb bmap in
 		BatSet.union paths_left paths_right
-
+	| _ -> raise (Failure "Extractor.extract_paths: fatal")
 
 let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
 = fun g ->
-	idx := 0;
 	let branches = get_branch_map g in
-	let _ = print_endline (IntraCfg.get_pid g) in
-	let _ = print_endline (string_of_int (BatMap.cardinal branches)) in
+	let _ = print_endline ((IntraCfg.get_pid g) ^ (string_of_int (BatMap.cardinal branches))) in
 	extract_paths g Node.ENTRY branches
 
