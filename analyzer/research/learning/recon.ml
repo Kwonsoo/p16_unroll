@@ -63,6 +63,6 @@ let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 				reconstruct_cfg cfg loop_nodes) cfg sccs
 		in unroll_cfg updated
 	else
-		let _ = print_endline ((get_pid cfg) ^ "unrolling_end") in
+		(*let _ = print_endline ((get_pid cfg) ^ "unrolling_end") in*)
 		cfg
 		
