@@ -813,9 +813,6 @@ let main () =
 
 
 	if !Options.opt_test then (
-		(*Unroll*)
-		let vis = new Unroller.unrollingVisitor (Cil.dummyFunDec, 0) in
-		let _ = visitCilFile vis one in
 		let _ = makeCFGinfo one in
 		let (_, global) = init_analysis one in
 
@@ -823,12 +820,13 @@ let main () =
 			let basename = !Options.opt_dir ^ "/" ^ pid in
 			let org = open_out (basename ^ "_org" ^ ".dot") in
 			let dep = open_out (basename ^ "_dep" ^ ".dot") in
-			let dep_g = Depend.get_dep_graph cfg in
+			let recon = Recon.unroll_cfg cfg in
+			let dep_g = Depend.get_dep_graph recon in
+			let paths = Extractor.get_paths dep_g in
 			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g; 
 			flush org; flush dep; close_out org; close_out dep) global.icfg.cfgs;
 		exit 1);
-			
-
+	
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
   if !Options.opt_dug then (

@@ -1,5 +1,6 @@
 open Arg
 
+let opt_recon = ref false
 let opt_nid = ref false
 let opt_test = ref false
 let opt_auto_learn = ref false
@@ -43,6 +44,7 @@ let opt_test_match = ref false
 let opts =
   [
 	(* option for simple tests *)
+	("-recon", (Arg.Set opt_recon), "");
 	("-nid", (Arg.Set opt_nid), "insert nid of the query to where alarm occurs");
 	("-test", (Arg.Set opt_test), "Print translated F-lang sequences");
 	(* options for the auto-feature research *)
