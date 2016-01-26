@@ -10,6 +10,7 @@ open Visitors
 open Observe
 open Report
 open IntraCfg
+open InterCfg
 
 open Reduce
 open Classify
@@ -20,6 +21,7 @@ open Types
 open Printf
 
 open Depend
+open Unroll
 
 module SS = Set.Make(String)
 
@@ -600,7 +602,7 @@ let get_participants : IntraCfg.t BatSet.t -> (string * string) BatSet.t
 =fun paths ->
 	BatSet.fold (fun path acc -> 
 			let funname = path.fd.svar.vname in
-			let vnames_from_path = IntraCfg.all_vnames_from_singlepath path Node.ENTRY SS.empty in
+			let vnames_from_path = IntraCfg.all_vnames_from_singlepath path IntraCfg.Node.ENTRY SS.empty in
 			(*Just transform from SS.t to BatSet.t*)
 			let vnames_from_path = SS.fold (fun v acc ->
 					BatSet.add v acc
@@ -815,10 +817,16 @@ let main () =
 	if !Options.opt_test then (
 		let _ = makeCFGinfo one in
 		let (_, global) = init_analysis one in
+		BatMap.iter (fun pid cfg ->
+				let basename = !Options.opt_dir ^ "/" ^ pid in
+				let org = open_out (basename ^ "_org" ^ ".dot") in
+				IntraCfg.print_dot org cfg;
+				flush org; close_out org
+			) global.icfg.cfgs;
 
 		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
-			let org = open_out (basename ^ "_org" ^ ".dot") in
+			let unr = open_out (basename ^ "_unr" ^ ".dot") in
 			let dep = open_out (basename ^ "_dep" ^ ".dot") in
 			let recon = Recon.unroll_cfg cfg in
 			let dep_g = Depend.get_dep_graph recon in
