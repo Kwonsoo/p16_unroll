@@ -839,7 +839,8 @@ let main () =
 			let basename = !Options.opt_dir ^ "/" ^ pid in
 			let out = open_out (basename ^ "_dep" ^ ".dot") in
 			let recon = Recon.unroll_cfg cfg in
-			let paths = Extractor.get_paths recon in
+			let dep_g = Depend.get_dep_graph recon in
+			let paths = Extractor.get_paths dep_g in
 			let idx = ref 0 in
 			BatSet.iter (fun path -> 
 				let out = open_out (basename ^ "_" ^ (string_of_int !idx) ^ ".dot") in
