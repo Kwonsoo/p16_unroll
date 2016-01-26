@@ -813,10 +813,7 @@ let main () =
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
-
 	if !Options.opt_test then (
-		let _ = makeCFGinfo one in
-		let (_, global) = init_analysis one in
 		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
 			let org = open_out (basename ^ "_org" ^ ".dot") in
@@ -840,7 +837,6 @@ let main () =
 			prerr_endline ">> dug completed\n";
 			prerr_endline (string_of_float (Sys.time () -. t0));
 			
-			
 			(*
 			let paths = Extractor.get_paths dep_g in
 			prerr_endline ">> paths extracted";
@@ -852,6 +848,22 @@ let main () =
 			IntraCfg.print_dot dep dep_g; 
 			flush org; flush unr; flush dep; close_out org; close_out unr; close_out dep) global.icfg.cfgs;
 		exit 1);
+
+		(*	
+		if !Options.opt_test then (
+		BatMap.iter (fun pid cfg ->
+			let basename = !Options.opt_dir ^ "/" ^ pid in
+			let out = open_out (basename ^ "_dep" ^ ".dot") in
+			let recon = Recon.unroll_cfg cfg in
+			let paths = Extractor.get_paths recon in
+			let idx = ref 0 in
+			BatSet.iter (fun path -> 
+				let out = open_out (basename ^ "_" ^ (string_of_int !idx) ^ ".dot") in
+				let _ = idx := !idx + 1 in
+				IntraCfg.print_dot out path; flush out; close_out out) paths
+			) global.icfg.cfgs;  
+			exit 1);
+		*)
 	
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
