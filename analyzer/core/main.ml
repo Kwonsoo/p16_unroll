@@ -10,6 +10,7 @@ open Visitors
 open Observe
 open Report
 open IntraCfg
+open InterCfg
 
 open Reduce
 open Classify
@@ -20,6 +21,7 @@ open Types
 open Printf
 
 open Depend
+open Unroll
 
 module SS = Set.Make(String)
 
@@ -600,7 +602,7 @@ let get_participants : IntraCfg.t BatSet.t -> (string * string) BatSet.t
 =fun paths ->
 	BatSet.fold (fun path acc -> 
 			let funname = path.fd.svar.vname in
-			let vnames_from_path = IntraCfg.all_vnames_from_singlepath path Node.ENTRY SS.empty in
+			let vnames_from_path = IntraCfg.all_vnames_from_singlepath path IntraCfg.Node.ENTRY SS.empty in
 			(*Just transform from SS.t to BatSet.t*)
 			let vnames_from_path = SS.fold (fun v acc ->
 					BatSet.add v acc
@@ -813,19 +815,39 @@ let main () =
 
 
 	if !Options.opt_test then (
-		(*Unroll*)
+		(* Unrolling on CIL*)
+		(*-------------------------------------
 		let vis = new Unroller.unrollingVisitor (Cil.dummyFunDec, 0) in
 		let _ = visitCilFile vis one in
 		let _ = makeCFGinfo one in
 		let (_, global) = init_analysis one in
+		---------------------------------------*)
+		(*Unrolling on IntraCfg*)
+		(*----------------------
+		let cfgs = global.icfg.cfgs in
+		let cfgs_new = BatMap.map (fun cfg ->
+				Unroll.unroll cfg
+			) cfgs in
+		let icfg_new = {cfgs = cfgs_new; globals = global.icfg.globals} in
+		let global_new = {file = global.file; icfg = icfg_new; callgraph = global.callgraph; dump = global.dump} in
+		let global = global_new in
+		-----------------------*)
+		BatMap.iter (fun pid cfg ->
+				let basename = !Options.opt_dir ^ "/" ^ pid in
+				let org = open_out (basename ^ "_org" ^ ".dot") in
+				IntraCfg.print_dot org cfg;
+				flush org; close_out org
+			) global.icfg.cfgs;
 
 		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
-			let org = open_out (basename ^ "_org" ^ ".dot") in
+			let unr = open_out (basename ^ "_unr" ^ ".dot") in
 			let dep = open_out (basename ^ "_dep" ^ ".dot") in
-			let dep_g = Depend.get_dep_graph cfg in
-			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g; 
-			flush org; flush dep; close_out org; close_out dep) global.icfg.cfgs;
+			let unr_g = Unroll.unroll cfg in
+			let dep_g = Depend.get_dep_graph unr_g in
+			IntraCfg.print_dot unr unr_g;
+			IntraCfg.print_dot dep dep_g;
+			flush unr; flush dep; close_out unr; close_out dep) global.icfg.cfgs;
 		exit 1);
 			
 
