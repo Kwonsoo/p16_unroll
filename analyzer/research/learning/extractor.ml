@@ -1,7 +1,16 @@
 open IntraCfg
 open Report
 
+module Path = Graph.Path.Check (G)
 type branch_map = (node, (node * node)) BatMap.t
+let idx = ref 0
+
+let cfg_reachables_only : IntraCfg.t -> Path.path_checker -> IntraCfg.t
+= fun g pc ->
+	fold_vertex (fun node g ->
+		if (Path.check_path pc Node.ENTRY node)
+		then g
+		else remove_node node g) g g
 
 let card_succs : IntraCfg.t -> node -> int
 = fun g node -> List.length (succ node g)
@@ -23,22 +32,29 @@ let get_branch_map : IntraCfg.t -> branch_map
 		else 
 			acc) g BatMap.empty
 
-let rec extract_paths : IntraCfg.t -> branch_map -> IntraCfg.t BatSet.t
-= fun g branch_map -> 
-	match BatMap.cardinal branch_map with
-	| 0 -> 
-		let clean_g = remove_unreaches g in
-		BatSet.singleton clean_g
-	| _ ->
-		let (branch, (left, right)), map_rest = BatMap.pop branch_map in
-		let g_left = remove_edge branch left g in
-		let g_right = remove_edge branch right g in
-		let left_side = extract_paths g_left map_rest in
-		let right_side = extract_paths g_right map_rest in
-		BatSet.union left_side right_side
+let rec extract_paths : IntraCfg.t -> node -> branch_map -> IntraCfg.t BatSet.t
+= fun g node bmap -> 
+	let succs = succ node g in
+	match List.length succs with
+	| 0 ->
+		let _ = assert (node = Node.EXIT) in
+		BatSet.singleton g
+	| 1 ->
+		extract_paths g (List.hd succs) bmap
+	| 2 ->
+		let (lb, rb) = BatMap.find node bmap in
+		let g_left = remove_edge node rb g in
+		let g_right = remove_edge node lb g in
+		let paths_left = extract_paths g_left lb bmap in
+		let paths_right = extract_paths g_right rb bmap in
+		BatSet.union paths_left paths_right
+
 
 let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
 = fun g ->
+	idx := 0;
 	let branches = get_branch_map g in
-	extract_paths g branches
+	let _ = print_endline (IntraCfg.get_pid g) in
+	let _ = print_endline (string_of_int (BatMap.cardinal branches)) in
+	extract_paths g Node.ENTRY branches
 
