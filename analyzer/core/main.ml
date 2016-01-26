@@ -815,23 +815,8 @@ let main () =
 
 
 	if !Options.opt_test then (
-		(* Unrolling on CIL*)
-		(*-------------------------------------
-		let vis = new Unroller.unrollingVisitor (Cil.dummyFunDec, 0) in
-		let _ = visitCilFile vis one in
 		let _ = makeCFGinfo one in
 		let (_, global) = init_analysis one in
-		---------------------------------------*)
-		(*Unrolling on IntraCfg*)
-		(*----------------------
-		let cfgs = global.icfg.cfgs in
-		let cfgs_new = BatMap.map (fun cfg ->
-				Unroll.unroll cfg
-			) cfgs in
-		let icfg_new = {cfgs = cfgs_new; globals = global.icfg.globals} in
-		let global_new = {file = global.file; icfg = icfg_new; callgraph = global.callgraph; dump = global.dump} in
-		let global = global_new in
-		-----------------------*)
 		BatMap.iter (fun pid cfg ->
 				let basename = !Options.opt_dir ^ "/" ^ pid in
 				let org = open_out (basename ^ "_org" ^ ".dot") in
@@ -843,14 +828,13 @@ let main () =
 			let basename = !Options.opt_dir ^ "/" ^ pid in
 			let unr = open_out (basename ^ "_unr" ^ ".dot") in
 			let dep = open_out (basename ^ "_dep" ^ ".dot") in
-			let unr_g = Unroll.unroll cfg in
-			let dep_g = Depend.get_dep_graph unr_g in
-			IntraCfg.print_dot unr unr_g;
-			IntraCfg.print_dot dep dep_g;
-			flush unr; flush dep; close_out unr; close_out dep) global.icfg.cfgs;
+			let recon = Recon.unroll_cfg cfg in
+			let dep_g = Depend.get_dep_graph recon in
+			let paths = Extractor.get_paths dep_g in
+			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g; 
+			flush org; flush dep; close_out org; close_out dep) global.icfg.cfgs;
 		exit 1);
-			
-
+	
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
   if !Options.opt_dug then (
