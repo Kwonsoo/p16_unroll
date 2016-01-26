@@ -47,7 +47,15 @@ let rec extract_paths : IntraCfg.t -> node -> branch_map -> IntraCfg.t BatSet.t
 		let paths_left = extract_paths g_left lb bmap in
 		let paths_right = extract_paths g_right rb bmap in
 		BatSet.union paths_left paths_right
-	| _ -> raise (Failure "Extractor.extract_paths: fatal")
+	| _ -> 
+		if node = Node.ENTRY 
+		then
+			List.fold_left (fun paths succ ->
+				let path = extract_paths g succ bmap in
+				BatSet.union path paths) BatSet.empty succs
+		else 
+			raise (Failure "Extractor.extract_paths: fatal")
+	
 
 let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
 = fun g ->

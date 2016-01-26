@@ -823,18 +823,17 @@ let main () =
 				IntraCfg.print_dot org cfg;
 				flush org; close_out org
 			) global.icfg.cfgs;
-
+	if !Options.opt_test then (
 		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
 			let unr = open_out (basename ^ "_unr" ^ ".dot") in
 			let dep = open_out (basename ^ "_dep" ^ ".dot") in
 			let recon = Recon.unroll_cfg cfg in
 			let dep_g = Depend.get_dep_graph recon in
-			let paths = Extractor.get_paths dep_g in
-			IntraCfg.print_dot org cfg; IntraCfg.print_dot dep dep_g; 
-			flush org; flush dep; close_out org; close_out dep) global.icfg.cfgs;
+			IntraCfg.print_dot unr cfg; IntraCfg.print_dot dep dep_g; 
+			flush unr; flush dep; close_out unr; close_out dep) global.icfg.cfgs;
 		exit 1);
-	*)
+*)
 	if !Options.opt_test then (
 		BatMap.iter (fun pid cfg ->
 			let basename = !Options.opt_dir ^ "/" ^ pid in
