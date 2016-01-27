@@ -467,15 +467,15 @@ let gen_features_from_one_file = fun file ->
 	let (pre, global) = init_analysis one in
 	let cfgs = global.icfg.cfgs in
 	let unrolled = BatMap.map (fun cfg -> 
-		cfg |> Unroller.unroll_cfg |> Depend.get_dep_graph) cfgs in
+		cfg |> Unroller.unroll_cfg) cfgs in
 	let icfg = {global.icfg with cfgs = unrolled} in
 	let global = {global with icfg = icfg} in
 	let feature_set = Feature.gen_t1 global in
 	feature_set
 
+
 (* Generate feature list from the given reduced directory. *)
 let gen_feature_set : dir -> Flang.t BatSet.t = fun reduced_dir ->
-	try
 	(*각 reduced code를 읽어와서 extract 해서 나온 feature set들을 모두 union 하면 된다.*)
 	let files = Sys.readdir reduced_dir in
 	let files = Array.to_list files in 
@@ -485,7 +485,6 @@ let gen_feature_set : dir -> Flang.t BatSet.t = fun reduced_dir ->
 			BatSet.union accum a_feature_set
 		) BatSet.empty files in
 	features
-	with _ -> raise (Failure "gen_feature_set")
 
 (*----------------------------------------------------------------------*)
 (* Parse the given single-query source file to CIL. *)
@@ -547,7 +546,8 @@ and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 	let tdata_list = BatMap.foldi (fun query flset acc ->
 		let tdata = tdata_from_one_query fifsmap query flset features in
 		tdata::acc) q2flmap [] in
-	tdata_list
+	let tdata_set = BatSet.of_list tdata_list in
+	BatSet.to_list tdata_set
 	
 and tdata_from_one_query : fifsmap -> Report.query -> Flang.t BatSet.t -> Flang.t BatSet.t -> tdata
 = fun fifsmap query flset features ->
@@ -680,7 +680,7 @@ let main () =
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";
-		let features = gen_feature_set !Options.opt_reduced in
+		let features = gen_feature_set "../reduced" in
 		
 		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Generate Training Data";

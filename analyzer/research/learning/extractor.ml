@@ -37,6 +37,7 @@ let rec extract_paths : IntraCfg.t -> node -> IntraCfg.t BatSet.t
 	match List.length succs with
 	| 0 ->
 		let _ = assert (node = Node.EXIT) in
+		let g = remove_unreaches g in
 		BatSet.singleton g
 	| 1 ->
 		extract_paths g (List.hd succs)
