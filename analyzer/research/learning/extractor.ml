@@ -49,9 +49,25 @@ let rec extract_paths : IntraCfg.t -> node -> IntraCfg.t BatSet.t
 			let paths = extract_paths g_add succ in
 			BatSet.union paths acc) BatSet.empty succs
 
+let rec traverse_branches : IntraCfg.t -> node -> int -> int
+= fun g node num ->
+	let succs = succ node g in
+	match List.length succs with
+	| 0 ->
+		let _ = assert (node = Node.EXIT) in
+		1
+	| 1 ->
+		traverse_branches g (List.hd succs) num
+	| _ ->
+		List.fold_left (fun acc succ ->
+			(+) acc (traverse_branches g succ num)) 0 succs
+
 let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
 = fun g ->
-	let branches = get_branch_map g in
-	let _ = print_endline ((IntraCfg.get_pid g) ^ (string_of_int (BatMap.cardinal branches))) in
+	let _ = print_endline ((IntraCfg.get_pid g) ^ " Extracting begins ... ") in
+	let branch_map = get_branch_map g in
+	let _ = print_endline ((IntraCfg.get_pid g) ^ " # branches : " ^ (string_of_int (BatMap.cardinal branch_map))) in
+	let paths_num = traverse_branches g Node.ENTRY 0 in
+	let _ = print_endline ((IntraCfg.get_pid g) ^ " # Paths : " ^ (string_of_int (paths_num))) in
 	extract_paths g Node.ENTRY
 

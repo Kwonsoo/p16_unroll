@@ -262,6 +262,11 @@ let get_dep_graph : IntraCfg.t -> IntraCfg.t
 			|> connect_exit
 	)
 
+let get_dep_icfg : InterCfg.t -> InterCfg.t
+= fun icfg ->
+	let dep_cfgs = BatMap.map (fun cfg -> get_dep_graph cfg) icfg.cfgs in
+	{icfg with cfgs = dep_cfgs}
+
 (****************
  * test					*
  ****************)

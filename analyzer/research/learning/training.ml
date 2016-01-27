@@ -71,17 +71,6 @@ struct
 		
 end
 
-let do_insert_nid_from_query : Cil.file -> Report.query -> unit
-= fun file query ->
-	let vis = new Unroller.insertNidVisitor (query) in
-	Cil.visitCilFile vis file
-
-let do_unrolling : Cil.file -> unit
-= fun file ->
-	let fd = Cil.dummyFunDec in
-	let vis = new Unroller.unrollingVisitor (fd, 0) in
-	Cil.visitCilFile vis file
-
 let filter_normal_queries : query list -> query list
 = fun qs ->
 	let queries = List.filter (fun q -> 
@@ -100,13 +89,6 @@ let cluster_queries_with_pid : query list -> (pid, query list) BatMap.t
 			BatMap.add pid qs map
 		| false ->
 			BatMap.add pid [q] map) BatMap.empty queries
-
-let get_paths_from_pid : InterCfg.t -> pid -> IntraCfg.t BatSet.t
-= fun icfg pid ->
-	let cfg = InterCfg.cfgof icfg pid 
-	|> Unroller.unroll_cfg
-	|> Depend.get_dep_graph in
-	Extractor.get_paths cfg
 
 let is_query_node : IntraCfg.t -> query -> IntraCfg.node -> bool
 = fun cfg q node ->
@@ -143,10 +125,9 @@ let get_query_depend_paths : IntraCfg.t BatSet.t -> query -> IntraCfg.t BatSet.t
 (* Use this function to get paths of a query *)
 let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatSet.t) BatMap.t
 = fun icfg queries ->
-	let filename = ref 0 in
 	let pid2qs_map = cluster_queries_with_pid queries in
 	let paths2qs_map = BatMap.foldi (fun pid qs acc ->
-		let paths = get_paths_from_pid icfg pid in
+		let paths = InterCfg.cfgof icfg pid |> Extractor.get_paths in
 		BatMap.add paths qs acc) pid2qs_map BatMap.empty in
 	let query_to_paths_map = BatMap.foldi (fun paths qs acc ->
 		let map_from_each_paths = List.fold_left (fun acc q ->
@@ -154,15 +135,5 @@ let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatS
 			BatMap.add q query_dep_paths acc) BatMap.empty qs in
 		BatMap.union map_from_each_paths acc) paths2qs_map BatMap.empty in
 	query_to_paths_map	
-	
-let get_fi_fs_query_map : query list -> query list -> (query, bool) BatMap.t
-= fun fiqs fsqs ->
-	let fiqs = List.filter (fun fiq -> fiq.status <> Report.BotAlarm) fiqs in
-	let fiqs = Report.get fiqs Report.UnProven in
-	List.fold_left (fun q2a_map fiq ->
-		let answer = try
-			let same_query = List.find (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) fsqs in
-			same_query.status = Report.Proven
-		with _ -> raise (Failure "get_fi_fs_query_map") in
-		BatMap.add fiq answer q2a_map) BatMap.empty fiqs
+
 

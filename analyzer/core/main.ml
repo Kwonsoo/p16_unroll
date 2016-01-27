@@ -461,20 +461,14 @@ let analysis_and_observe file =
 (*---------------------------------------------------------------------*)
 (* Generate features from one reduce code. *)
 let gen_features_from_one_file = fun file ->
-	prerr_endline ("Reduced file: " ^ file);
 	let one = Frontend.parseOneFile file in
 	makeCFGinfo one;
 	let _ = makeCFGinfo one in
 	let (pre, global) = init_analysis one in
-	let cfgs = global.icfg.cfgs in
-	let unrolled = BatMap.map (fun cfg -> 
-		(*NOTE*)
-		cfg |> Unroller.unroll_cfg |> Depend.get_dep_graph) cfgs in
-	let icfg = {global.icfg with cfgs = unrolled} in
+	let icfg = Unroller.get_unrolled_icfg global |> Depend.get_dep_icfg in
 	let global = {global with icfg = icfg} in
 	let feature_set = Feature.gen_t1 global in
 	feature_set
-
 
 (* Generate feature list from the given reduced directory. *)
 let gen_feature_set : dir -> Flang.t BatSet.t = fun reduced_dir ->
@@ -543,7 +537,8 @@ and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 		visitCilFile vis cilfile) queries_FI in
 	let _ = makeCFGinfo cilfile in
 	let (pre, global) = init_analysis cilfile in
-	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FI in
+	let unrolled_icfg = Unroller.get_unrolled_icfg global |> Depend.get_dep_icfg in
+	let q2pmap = Training.get_query_to_paths_map unrolled_icfg queries_FI in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
 		let tdata = tdata_from_one_query fifsmap query flset features in
@@ -757,36 +752,6 @@ let main () =
 
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
-
-		
-		if !Options.opt_test then (
-				let _ = makeCFGinfo one in
-				let (_, global) = init_analysis one in
-				BatMap.iter (fun pid cfg ->
-						let basename = !Options.opt_dir ^ "/" ^ pid in
-						let org = open_out (basename ^ "_org" ^ ".dot") in
-						let unr = open_out (basename ^ "_unr" ^ ".dot") in
-						let dep = open_out (basename ^ "_dep" ^ ".dot") in
-																										
-						let t0 = Sys.time () in
-						prerr_endline (">> Start [" ^ pid ^ "]");
-						let recon = Unroller.unroll_cfg cfg in
-						prerr_endline ">> unroll completed";
-						let dep_g = Depend.get_dep_graph recon in
-						prerr_endline ">> dug completed\n";
-						prerr_endline (string_of_float (Sys.time () -. t0));
-																
-						(*
-						let paths = Extractor.get_paths dep_g in
-						prerr_endline ">> paths extracted";
-						prerr_endline (string_of_float (Sys.time () -. t0));
-						*)
-
-						IntraCfg.print_dot org cfg;
-						IntraCfg.print_dot unr recon;
-						IntraCfg.print_dot dep dep_g; 
-						flush org; flush unr; flush dep; close_out org; close_out unr; close_out dep) global.icfg.cfgs;
-				exit 1);
 
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));

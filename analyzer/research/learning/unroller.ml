@@ -47,7 +47,7 @@ let get_loop_nodes : IntraCfg.t -> scc -> loop_nodes
 	let loop_break = find_loop_break cfg tail loop_head in
 	(tail, loop_head, loop_break)
 	
-let reconstruct_cfg : IntraCfg.t -> loop_nodes -> IntraCfg.t
+let reconstruct : IntraCfg.t -> loop_nodes -> IntraCfg.t
 = fun cfg (tail, head, break) ->
 	remove_edge tail head cfg
 	|> add_edge tail break
@@ -63,11 +63,25 @@ let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 			if List.length scc < 2 then cfg 
 			else
 				let loop_nodes = get_loop_nodes cfg scc in
-				reconstruct_cfg cfg loop_nodes) cfg sccs
+				reconstruct cfg loop_nodes) cfg sccs
 		in unroll_cfg updated
 	else
 		cfg
-		
+
+let get_unrolled_icfg : Global.t -> InterCfg.t
+= fun global ->
+	let cfgs = global.icfg.cfgs in
+	let _ = print_endline ("Program	: " ^ global.file.fileName ^ " Unrolling begins ...") in
+	let _ = print_endline ("#_pids	: " ^ (string_of_int (BatMap.cardinal cfgs))) in
+	let idx = ref 0 in
+	let unrolled_cfgs = BatMap.map (fun cfg -> 
+		let _ = idx := !idx + 1 in
+		let status = "(" ^ (string_of_int !idx) ^ " of " ^ (string_of_int (BatMap.cardinal cfgs)) ^ ")" in
+		let _ = print_endline ((get_pid cfg) ^ " ... " ^ status) in
+		unroll_cfg cfg) cfgs in
+	let _ = print_endline ("Program : " ^ global.file.fileName ^ " Unrolling is finished") in 
+	{global.icfg with cfgs = unrolled_cfgs}
+
 (* Use this function only to extract the nid from airac_nid *)
 let nid_from_arg_exp : Cil.exp -> string
 = fun e ->
