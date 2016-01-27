@@ -252,13 +252,15 @@ let connect_exit : IntraCfg.t -> IntraCfg.t
 (*Use this function to get the dependency graph*)
 let get_dep_graph : IntraCfg.t -> IntraCfg.t
 =fun cfg ->
-	let defsinfo = cal_defsinfo cfg in
-	let final_io_map = cal_inn_out cfg defsinfo in
-	let rd_map = BatMap.map (fun io -> fst io) final_io_map in
-	du_connect_all cfg rd_map 
-	|> from_entry
-	|> connect_exit
-
+	if cfg.fd.svar.vname = "_G_" then cfg
+	else (
+			let defsinfo = cal_defsinfo cfg in
+			let final_io_map = cal_inn_out cfg defsinfo in
+			let rd_map = BatMap.map (fun io -> fst io) final_io_map in
+			du_connect_all cfg rd_map 
+			|> from_entry
+			|> connect_exit
+	)
 
 (****************
  * test					*
