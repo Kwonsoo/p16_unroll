@@ -210,7 +210,8 @@ let du_connect : IntraCfg.t -> IntraCfg.t -> IntraCfg.Node.t -> int BatSet.t -> 
 (*Connect, for all nodes, from defs to node.*)
 let du_connect_all : IntraCfg.t -> (int, int BatSet.t) BatMap.t -> IntraCfg.t
 =fun cfg_orig n2reach_map ->
-	let initial = IntraCfg.empty (Cil.emptyFunction "dummy") in
+	(*let initial = IntraCfg.empty (Cil.emptyFunction "dummy") in*)
+	let initial = IntraCfg.empty (cfg_orig.fd) in
 	let initial = add_node Node.ENTRY initial in
 	let succ_of_entry = List.nth (succ Node.ENTRY cfg_orig) 0 in
 	let initial = add_node_with_cmd succ_of_entry (find_cmd succ_of_entry cfg_orig) initial in

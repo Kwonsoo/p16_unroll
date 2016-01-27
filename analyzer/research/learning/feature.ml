@@ -57,10 +57,6 @@ let gen_t2 : Global.t -> query -> Flang.t BatSet.t
 	paths_flang
 *)
 
-(* match TODO
-		- 인자로 받는 프로그램은 extract된 program, 즉, feature path들의 set이어야 한다.
-		- 인자로 받는 feature는 feature path 하나를 의미한다.
-		- 리턴값은 feature path가 extracted program에 있으면 true, 없으면 false 이다. *)
 let pred : Flang.t BatSet.t -> Flang.t -> bool
 =fun prog f ->
 	BatSet.exists (fun p ->
@@ -73,7 +69,6 @@ let fbvectorize : Flang.t BatSet.t -> Flang.t list -> fbvector
 	List.fold_right (fun f accum ->
 			(pred fpaths f) :: accum
 		) features []
-
 
 (* May be used in futere *)
 (* Extract literally raw paths from the given single-query program. *)
