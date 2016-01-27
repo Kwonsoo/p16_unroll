@@ -676,7 +676,7 @@ let main () =
 	List.iter (fun f -> prerr_string (f ^ " ")) !files;
 	prerr_endline "";
 
-	(* auto-feature research *)
+	(* P16 *)
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";

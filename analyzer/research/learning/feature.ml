@@ -14,14 +14,7 @@ let gen_t1 : Global.t -> Flang.t BatSet.t
 	let intracfg_observe = Slicer.find_observe_intracfg intercfg in
 	let paths_in_intracfg = Extractor.get_paths intracfg_observe in
 	(*paths containing and ending with airac_observe*)
-	(*TODO*)
 	let paths_in_intracfg = paths_in_intracfg in
-	(*dependency*)
-	(*
-	let paths_dependency = BatSet.map (fun path ->
-			IntraCfg.dependency path
-		) paths_in_intracfg in
-	*)
 	(*translate to flang*)
 	let paths_flang = BatSet.map (fun path ->
 			Flang.trans_graph path

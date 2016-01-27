@@ -56,6 +56,7 @@ struct
 				let fd = intracfg.fd in
 				has_observer fd
 			) cfgs in
+		prerr_int (BatMap.cardinal cfgs');
 		if BatMap.cardinal cfgs' = 1
 		then (
 				let (pid, intra) = BatMap.choose cfgs' in
