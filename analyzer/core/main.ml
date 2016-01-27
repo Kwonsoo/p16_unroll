@@ -536,8 +536,8 @@ and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 		visitCilFile vis cilfile) queries_FI in
 	let _ = makeCFGinfo cilfile in
 	let (pre, global) = init_analysis cilfile in
-	let unrolled_icfg = Unroller.get_unrolled_icfg global |> Depend.get_dep_icfg in
-	let q2pmap = Training.get_query_to_paths_map unrolled_icfg queries_FI in
+	let unrolled_idug = Unroller.get_unrolled_icfg global |> Depend.get_dep_icfg in
+	let q2pmap = Training.get_query_to_paths_map unrolled_idug queries_FI in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
 	let tdata_list = BatMap.foldi (fun query flset acc ->
 		let tdata = tdata_from_one_query fifsmap query flset features in

@@ -125,7 +125,13 @@ let get_query_depend_paths : IntraCfg.t BatSet.t -> query -> IntraCfg.t BatSet.t
 (* Use this function to get paths of a query *)
 let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatSet.t) BatMap.t
 = fun icfg queries ->
-	let pid2qs_map = cluster_queries_with_pid queries in
+	(*NOTE*)
+	let queries_not_in_G = List.filter (fun q -> 
+			let pid = fst (q.node) in
+			pid <> "_G_"
+		) queries in
+	prerr_endline ">> extract for queries start...";
+	let pid2qs_map = cluster_queries_with_pid queries_not_in_G in
 	let paths2qs_map = BatMap.foldi (fun pid qs acc ->
 		let paths = InterCfg.cfgof icfg pid |> Extractor.get_paths in
 		BatMap.add paths qs acc) pid2qs_map BatMap.empty in
@@ -134,6 +140,7 @@ let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatS
 			let query_dep_paths = get_query_depend_paths paths q in	
 			BatMap.add q query_dep_paths acc) BatMap.empty qs in
 		BatMap.union map_from_each_paths acc) paths2qs_map BatMap.empty in
+	prerr_endline ">> extract for queries done";
 	query_to_paths_map	
 
 

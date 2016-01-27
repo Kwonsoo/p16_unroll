@@ -252,7 +252,7 @@ let connect_exit : IntraCfg.t -> IntraCfg.t
 (*Use this function to get the dependency graph*)
 let get_dep_graph : IntraCfg.t -> IntraCfg.t
 =fun cfg ->
-	if cfg.fd.svar.vname = "_G_" then cfg
+	if cfg.fd.svar.vname = "_G_" then cfg	(*no dug for _G_*)
 	else (
 			let defsinfo = cal_defsinfo cfg in
 			let final_io_map = cal_inn_out cfg defsinfo in
@@ -264,7 +264,9 @@ let get_dep_graph : IntraCfg.t -> IntraCfg.t
 
 let get_dep_icfg : InterCfg.t -> InterCfg.t
 = fun icfg ->
+	prerr_endline ">> DUG start...";
 	let dep_cfgs = BatMap.map (fun cfg -> get_dep_graph cfg) icfg.cfgs in
+	prerr_endline ">> DUG done";
 	{icfg with cfgs = dep_cfgs}
 
 (****************

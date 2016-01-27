@@ -71,7 +71,8 @@ let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 let get_unrolled_icfg : Global.t -> InterCfg.t
 = fun global ->
 	let cfgs = global.icfg.cfgs in
-	let _ = print_endline ("Program	: " ^ global.file.fileName ^ " Unrolling begins ...") in
+	let _ = print_endline ("\nProgram	: " ^ global.file.fileName) in
+	let _ = print_endline (">> Unrolling begins ...") in
 	let _ = print_endline ("#_pids	: " ^ (string_of_int (BatMap.cardinal cfgs))) in
 	let idx = ref 0 in
 	let unrolled_cfgs = BatMap.map (fun cfg -> 
@@ -79,7 +80,7 @@ let get_unrolled_icfg : Global.t -> InterCfg.t
 		let status = "(" ^ (string_of_int !idx) ^ " of " ^ (string_of_int (BatMap.cardinal cfgs)) ^ ")" in
 		let _ = print_endline ((get_pid cfg) ^ " ... " ^ status) in
 		unroll_cfg cfg) cfgs in
-	let _ = print_endline ("Program : " ^ global.file.fileName ^ " Unrolling is finished") in 
+	let _ = print_endline (">> Unrolling is done") in 
 	{global.icfg with cfgs = unrolled_cfgs}
 
 (* Use this function only to extract the nid from airac_nid *)
