@@ -463,10 +463,13 @@ let analysis_and_observe file =
 let gen_features_from_one_file = fun file ->
 	let one = Frontend.parseOneFile file in
 	makeCFGinfo one;
-	let vis = new Unroller.unrollingVisitor (Cil.dummyFunDec, 0) in
-	let _ = visitCilFile vis one in
 	let _ = makeCFGinfo one in
 	let (pre, global) = init_analysis one in
+	let cfgs = global.icfg.cfgs in
+	let unrolled = BatMap.map (fun cfg -> 
+		cfg |> Unroller.unroll_cfg |> Depend.get_dep_graph) cfgs in
+	let icfg = {global.icfg with cfgs = unrolled} in
+	let global = {global with icfg = icfg} in
 	let feature_set = Feature.gen_t1 global in
 	feature_set
 
@@ -537,9 +540,6 @@ and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 	let _ = List.iter (fun q ->
 		let vis = new Unroller.insertNidVisitor (q) in
 		visitCilFile vis cilfile) queries_FI in
-	let fd = Cil.dummyFunDec in
-	let vis = new Unroller.unrollingVisitor (fd, 0) in
-	let _ = visitCilFile vis cilfile in
 	let _ = makeCFGinfo cilfile in
 	let (pre, global) = init_analysis cilfile in
 	let q2pmap = Training.get_query_to_paths_map global.icfg queries_FI in
@@ -664,56 +664,6 @@ let collect_promising_participants : (fbvector * (string * string) BatSet.t) lis
 		) participants in
 	participants
 
-(*****************************
- * 
- * Test : reduce된 코드들로만 해봄.
- * 
- *****************************)
-
-(*
-let get_unique_paths_to_observe : unit -> IntraCfg.t BatSet.t
-=fun () ->
-	let _ = Cil.initCIL () in
-	let one = StepManager.stepf true "Parse-and-merge" Frontend.parse_and_merge () in
-	let _ = makeCFGinfo one in
-	let (_, global) = init_analysis one in
-	let intracfg_observe = Trans_test.get_intracfg_observe global in
-	let unique_paths = Trans_test.get_paths_intracfg intracfg_observe in
-	unique_paths
-
-let test_trans : unit -> unit
-=fun () ->
-	let unique_paths = get_unique_paths_to_observe () in
-	prerr_endline "\n<<IntraCfg>>";
-	(*Print all intracfg's.*)
-	BatSet.iter (fun path ->
-			Trans_test.print_singlepath_intracfg path
-		) unique_paths;
-	(*Translate to flang.*)
-	let flangs = BatSet.map (fun sp_intra -> 
-			Trans_test.translate sp_intra
-		) unique_paths in
-	(*Print all flangs.*)
-	prerr_endline "\n<<Flang>>";
-	BatSet.iter (fun fl -> 
-			Trans_test.print_flang fl
-		) flangs
-
-let test_self_match : unit -> unit
-=fun () ->
-	let unique_paths = get_unique_paths_to_observe () in
-	(*Translate to flang.*)
-	let flangs = BatSet.map (fun sp_intra ->
-			Trans_test.translate sp_intra
-		) unique_paths in
-	(*self match test for each flang*)
-	let numof_flangs = BatSet.cardinal flangs in
-	prerr_endline ("number of flangs: " ^ (string_of_int numof_flangs));
-	BatSet.iter (fun fl ->
-			if Match.match_fl fl fl then prerr_endline "O" else prerr_endline "X"
-		) flangs
-*)
-
 let main () =
   let t0 = Sys.time () in
   let _ = Profiler.start_logger () in
@@ -725,13 +675,6 @@ let main () =
 	Arg.parse Options.opts args usageMsg;
 	List.iter (fun f -> prerr_string (f ^ " ")) !files;
 	prerr_endline "";
-
-(*
-	(*TEST: translation*)
-	if !Options.opt_test_trans then (test_trans (); exit 1);
-	(*TEST: match*)
-	if !Options.opt_test_match then (test_self_match (); exit 1);
-*)
 
 	(* auto-feature research *)
 	if !Options.opt_auto_learn then (
@@ -813,50 +756,6 @@ let main () =
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
 
-
-	if !Options.opt_test then (
-		let _ = makeCFGinfo one in
-		let (_, global) = init_analysis one in
-		BatMap.iter (fun pid cfg ->
-			(*
-			if pid <> "_G_" then (
-				let basename = !Options.opt_dir ^ "/" ^ pid in
-				let org = open_out (basename ^ "_org" ^ ".dot") in
-				let unr = open_out (basename ^ "_unr" ^ ".dot") in
-				let dep = open_out (basename ^ "_dep" ^ ".dot") in
-			
-				(*
-				let t0 = Sys.time () in
-				prerr_endline (">> Start [" ^ pid ^ "]");
-				let dep_g = Depend.get_dep_graph cfg in
-				prerr_endline ">> dug completed";
-				let recon = Recon.unroll_cfg dep_g in
-				prerr_endline ">> unroll completed";
-				*)
-
-				let t0 = Sys.time () in
-				prerr_endline (">> Start [" ^ pid ^ "]");
-				let recon = Recon.unroll_cfg cfg in
-				prerr_endline ">> unroll completed";
-				let dep_g = Depend.get_dep_graph recon in
-				prerr_endline ">> dug completed";
-				prerr_endline (string_of_float (Sys.time () -. t0)); prerr_endline "";
-			
-			
-				(*
-				let paths = Extractor.get_paths dep_g in
-				prerr_endline ">> paths extracted";
-				prerr_endline (string_of_float (Sys.time () -. t0));
-				*)
-
-				IntraCfg.print_dot org cfg;
-				IntraCfg.print_dot unr recon;
-				IntraCfg.print_dot dep dep_g; 
-				flush org; flush unr; flush dep; close_out org; close_out unr; close_out dep)
-			*)
-			) global.icfg.cfgs;
-			exit 1);
-	
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));
   if !Options.opt_dug then (

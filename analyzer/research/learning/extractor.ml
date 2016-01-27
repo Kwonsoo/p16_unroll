@@ -31,35 +31,26 @@ let get_branch_map : IntraCfg.t -> branch_map
 		else 
 			acc) g BatMap.empty
 
-let rec extract_paths : IntraCfg.t -> node -> branch_map -> IntraCfg.t BatSet.t
-= fun g node bmap -> 
+let rec extract_paths : IntraCfg.t -> node -> IntraCfg.t BatSet.t
+= fun g node -> 
 	let succs = succ node g in
 	match List.length succs with
 	| 0 ->
 		let _ = assert (node = Node.EXIT) in
 		BatSet.singleton g
 	| 1 ->
-		extract_paths g (List.hd succs) bmap
-	| 2 ->
-		let (lb, rb) = BatMap.find node bmap in
-		let g_left = remove_edge node rb g in
-		let g_right = remove_edge node lb g in
-		let paths_left = extract_paths g_left lb bmap in
-		let paths_right = extract_paths g_right rb bmap in
-		BatSet.union paths_left paths_right
-	| _ -> 
-		if node = Node.ENTRY 
-		then
-			List.fold_left (fun paths succ ->
-				let path = extract_paths g succ bmap in
-				BatSet.union path paths) BatSet.empty succs
-		else 
-			raise (Failure "Extractor.extract_paths: fatal")
-	
+		extract_paths g (List.hd succs)
+	| _ ->
+		List.fold_left (fun acc succ ->
+			let g_cut_all = List.fold_left (fun g succ ->
+				remove_edge node succ g) g succs in
+			let g_add = add_edge node succ g_cut_all in
+			let paths = extract_paths g_add succ in
+			BatSet.union paths acc) BatSet.empty succs
 
 let get_paths : IntraCfg.t -> IntraCfg.t BatSet.t
 = fun g ->
 	let branches = get_branch_map g in
 	let _ = print_endline ((IntraCfg.get_pid g) ^ (string_of_int (BatMap.cardinal branches))) in
-	extract_paths g Node.ENTRY branches
+	extract_paths g Node.ENTRY
 
