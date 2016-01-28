@@ -69,7 +69,13 @@ let get_usevars : IntraCfg.t -> IntraCfg.Node.t -> SS.t
 =fun cfg node ->
 	let cmd = find_cmd node cfg in
 	match cmd with
-	| Cset (_, e, _)
+	| Cset (lval, e, _) ->
+			let use_r = get_vars_exp e SS.empty in
+			let (lhost, _) = lval in
+			let use_l = (match lhost with
+					| Mem exp -> get_vars_exp exp SS.empty
+					| _ -> SS.empty) in
+			SS.union use_r use_l
 	| Cassume (e, _) -> get_vars_exp e SS.empty
 	| Calloc (_, alloc, _, _) -> 
 			(match alloc with
