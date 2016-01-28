@@ -90,22 +90,18 @@ let cluster_queries_with_pid : query list -> (pid, query list) BatMap.t
 		| false ->
 			BatMap.add pid [q] map) BatMap.empty queries
 
-let is_query_node : IntraCfg.t -> query -> IntraCfg.node -> bool
-= fun cfg q node ->
-	let nid_string = string_of_int (Unroller.nidof_q q) in
-	let cmd = IntraCfg.find_cmd node cfg in
-	match cmd with
-	| IntraCfg.Cmd.Ccall (None, Cil.Lval (Cil.Var vinfo, Cil.NoOffset), exps, _) when vinfo.vname = "airac_nid" ->
-		let _ = assert (List.length exps = 1) in
-		let call_arg = List.hd exps in
-		let call_nid = Unroller.nid_from_arg_exp call_arg in
-		call_nid = nid_string
-	| _ -> false
+let is_query_node : IntraCfg.t -> query -> node -> bool
+= fun cfg query node ->
+	let nid_query = InterCfg.Node.get_cfgnode query.node |> IntraCfg.Node.getid in
+	let nid_node = IntraCfg.Node.getid node in
+	nid_query = nid_node
+			
+
 
 let has_query_node : query -> IntraCfg.t -> bool
 = fun query cfg ->
 	let nodes = IntraCfg.nodesof cfg in
-	List.exists (is_query_node cfg query) nodes
+	List.exists (fun node -> is_query_node cfg query node) nodes
 
 let slice_query_path : query -> IntraCfg.t -> IntraCfg.t
 = fun q cfg ->

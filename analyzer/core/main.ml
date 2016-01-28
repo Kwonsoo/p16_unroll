@@ -531,11 +531,6 @@ and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 	let queries_FI = List.filter (fun q -> q.status <> Report.BotAlarm) queries_FI in
 	let fifsmap = List.fold_left (fun acc fiq ->
 		BatMap.add fiq (not (List.exists (fun fsq -> AlarmExp.eq fsq.exp fiq.exp) queries_FS)) acc) BatMap.empty queries_FI in
-	let _ = List.iter (fun q ->
-		let vis = new Unroller.insertNidVisitor (q) in
-		visitCilFile vis cilfile) queries_FI in
-	let _ = makeCFGinfo cilfile in
-	let (pre, global) = init_analysis cilfile in
 	let unrolled_idug = Unroller.get_unrolled_icfg global |> Depend.get_dep_icfg in
 	let q2pmap = Training.get_query_to_paths_map unrolled_idug queries_FI in
 	let q2flmap = BatMap.mapi (fun query paths -> Feature.gen_t2 query paths) q2pmap in
