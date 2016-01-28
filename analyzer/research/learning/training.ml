@@ -125,7 +125,6 @@ let get_query_depend_paths : IntraCfg.t BatSet.t -> query -> IntraCfg.t BatSet.t
 (* Use this function to get paths of a query *)
 let get_query_to_paths_map : InterCfg.t -> query list -> (query, IntraCfg.t BatSet.t) BatMap.t
 = fun icfg queries ->
-	(*NOTE*)
 	let queries_not_in_G = List.filter (fun q -> 
 			let pid = fst (q.node) in
 			pid <> "_G_"

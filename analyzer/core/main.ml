@@ -475,7 +475,7 @@ let gen_feature_set : dir -> Flang.t BatSet.t = fun reduced_dir ->
 	let files = Sys.readdir reduced_dir in
 	let files = Array.to_list files in 
 	let features = List.fold_left (fun accum elem ->
-			let full_file_path = "../reduced/" ^ elem in
+			let full_file_path = reduced_dir ^ "/" ^ elem in
 			let a_feature_set = gen_features_from_one_file full_file_path in
 			BatSet.union accum a_feature_set
 		) BatSet.empty files in
@@ -511,10 +511,10 @@ let test_with_classifier : unit -> unit
 
 let rec tdata_from_allT2_benchmarks : Flang.t BatSet.t -> tdata list
 = fun features ->
-	let files = Array.to_list (Sys.readdir "../T2") in
+	let files = Array.to_list (Sys.readdir "../tmp_T2") in
 	let all_training_data =
 		List.fold_left (fun acc file ->
-			let tdata_from_one_bench = tdata_from_one_bench ("../T2/" ^ file) features in
+			let tdata_from_one_bench = tdata_from_one_bench ("../tmp_T2/" ^ file) features in
 			tdata_from_one_bench @ acc
 		) [] files in
 	all_training_data
@@ -547,8 +547,17 @@ and tdata_from_one_bench : dir -> Flang.t BatSet.t -> tdata list
 	
 and tdata_from_one_query : fifsmap -> Report.query -> Flang.t BatSet.t -> Flang.t BatSet.t -> tdata
 = fun fifsmap query flset features ->
+	prerr_string "flset size: ";
+	prerr_int (BatSet.cardinal flset); prerr_endline "";
 	let fbvector = BatSet.fold (fun feature acc ->
-		let column = BatSet.exists (fun fl -> Match.match_fl feature fl) flset in
+		prerr_endline "feature:";
+		Flang.print_flang feature;
+		let column = BatSet.exists (fun fl ->
+				prerr_endline "t-path";
+				Flang.print_flang fl;
+				Match.match_fl feature fl
+			) flset in
+		if column = false then prerr_endline "False" else prerr_endline "True";
 		column::acc) features [] in
 	let answer = BatMap.find query fifsmap in
 	(fbvector, answer)
@@ -676,7 +685,7 @@ let main () =
 	if !Options.opt_auto_learn then (
 		(* 1. Generate features from the reduced. *)
 		prerr_endline "STEP1: Generate Features";
-		let features = gen_feature_set "../reduced" in
+		let features = gen_feature_set !Options.opt_reduced in
 		
 		(* 2. Collect and write tdata to file. *)
 		prerr_endline "\nSTEP2: Generate Training Data";
@@ -751,6 +760,33 @@ let main () =
 
     prerr_endline ("#Procs : " ^ string_of_int (List.length pids));
     prerr_endline ("#Nodes : " ^ string_of_int (List.length nodes));
+
+		if !Options.opt_test then (
+				BatMap.iter (fun pid cfg ->
+				let basename = !Options.opt_dir ^ "/" ^ pid in
+				let org = open_out (basename ^ "_org" ^ ".dot") in
+				let unr = open_out (basename ^ "_unr" ^ ".dot") in
+				let dep = open_out (basename ^ "_dep" ^ ".dot") in
+																				
+				let t0 = Sys.time () in
+				prerr_endline (">> Start [" ^ pid ^ "]");
+				let recon = Unroller.unroll_cfg cfg in
+				prerr_endline ">> unroll completed";
+				let dep_g = Depend.get_dep_graph recon in
+				prerr_endline ">> dug completed\n";
+				prerr_endline (string_of_float (Sys.time () -. t0));
+										
+				(*
+				let paths = Extractor.get_paths dep_g in
+				prerr_endline ">> paths extracted";
+				prerr_endline (string_of_float (Sys.time () -. t0));
+				*)
+
+				IntraCfg.print_dot org cfg;
+				IntraCfg.print_dot unr recon;
+				IntraCfg.print_dot dep dep_g; 
+				flush org; flush unr; flush dep; close_out org; close_out unr; close_out dep) global.icfg.cfgs;
+				exit 1);
 
 	if !Options.opt_cfgs then (
 			InterCfg.store_cfgs (!Options.opt_cfgs_dir) (global.icfg));

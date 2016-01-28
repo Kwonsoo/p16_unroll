@@ -44,7 +44,6 @@ let match_cmd : cmd * cmd -> bool
 	| Cond e1, Cond e2 -> true
 	| _ -> false
 
-
 (* Too strict 
 let match_fl : t -> t -> bool
 = fun feat target ->
@@ -62,6 +61,7 @@ let match_fl : t -> t -> bool
 		| _ -> false
 	in match_helper feat target
 *)
+
 let match_fl : t -> t -> bool
 = fun feat target ->
 	let entire_feat = feat in
@@ -69,10 +69,8 @@ let match_fl : t -> t -> bool
 		match feat, target with
 		| hd_feat::tl_feat, hd_target::tl_target ->
 			if match_cmd (hd_feat, hd_target)
-			then
-				match_helper tl_feat tl_target
-			else
-				match_helper feat tl_target				
+			then match_helper tl_feat tl_target
+			else match_helper feat tl_target
 		| [], _ -> true
 		| _ -> false
 	in match_helper feat target
