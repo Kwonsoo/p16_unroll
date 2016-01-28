@@ -770,21 +770,30 @@ let main () =
 																				
 				let t0 = Sys.time () in
 				prerr_endline (">> Start [" ^ pid ^ "]");
-				let recon = Unroller.unroll_cfg cfg in
+				prerr_string "nids_org: ";
+				List.iter (fun n -> prerr_int (IntraCfg.Node.getid n); prerr_string " ") (IntraCfg.nodesof cfg); prerr_endline "";
+				
+				let unrolled = Unroller.unroll_cfg cfg in
+				prerr_string "nids_unr: ";
+				List.iter (fun n -> prerr_int (IntraCfg.Node.getid n); prerr_string " ") (IntraCfg.nodesof unrolled); prerr_endline "";
 				prerr_endline ">> unroll completed";
-				let dep_g = Depend.get_dep_graph recon in
+				
+				let dug = Depend.get_dep_graph unrolled in
+				prerr_string "nids_dug: ";
+				List.iter (fun n -> prerr_int (IntraCfg.Node.getid n); prerr_string " ") (IntraCfg.nodesof dug); prerr_endline "";
 				prerr_endline ">> dug completed\n";
+				
 				prerr_endline (string_of_float (Sys.time () -. t0));
 										
 				(*
-				let paths = Extractor.get_paths dep_g in
+				let paths = Extractor.get_paths dug in
 				prerr_endline ">> paths extracted";
 				prerr_endline (string_of_float (Sys.time () -. t0));
 				*)
 
 				IntraCfg.print_dot org cfg;
-				IntraCfg.print_dot unr recon;
-				IntraCfg.print_dot dep dep_g; 
+				IntraCfg.print_dot unr unrolled;
+				IntraCfg.print_dot dep dug; 
 				flush org; flush unr; flush dep; close_out org; close_out unr; close_out dep) global.icfg.cfgs;
 				exit 1);
 
