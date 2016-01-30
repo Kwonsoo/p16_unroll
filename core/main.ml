@@ -21,6 +21,7 @@ open Types
 open Printf
 
 open Depend
+open Unroll
 
 module SS = Set.Make(String)
 

@@ -42,15 +42,84 @@ let get_loop_nodes : IntraCfg.t -> scc -> loop_nodes
 = fun cfg scc ->
 	let loop_head = find_loop_head cfg scc in
 	let tail = try
-		List.find (fun node -> List.mem node scc) (pred loop_head cfg) 
+		List.find (fun node -> List.mem node scc) (pred loop_head cfg)
 		with _ -> raise (Failure "Recon.get_loop_nodes: fatal") in
 	let loop_break = find_loop_break cfg tail loop_head in
 	(tail, loop_head, loop_break)
-	
-let reconstruct : IntraCfg.t -> loop_nodes -> IntraCfg.t
-= fun cfg (tail, head, break) ->
+
+(*-----------------------------*)
+let connect_two_nodes : IntraCfg.t -> Node.t -> Cmd.t -> Node.t -> Cmd.t -> IntraCfg.t
+=fun cfg n1 cmd1 n2 cmd2 -?
+	let cfg' = add_node_with_cmd n1 cmd1 cfg in
+	let cfg' = add_node_with_cmd n2 cmd2 cfg' in
+	let cfg' = add_edge n1 n2 cfg' in
+	cfg'
+
+let rec copy_scc : IntraCfg.t -> Node.t -> IntraCfg.t
+=fun cfg curnode loophead ->
+	let succs = succ curnode cfg in
+	if List.mem loophead succs then connect_two_nodes cfg (curnode) (find_cmd curnode cfg) (loophead) (find_cmd loophead cfg)
+	else (
+			let cfg' = List.fold_right (fun suc acc -> 
+					let cfg'' = connect_two_nodes acc () () () () in
+					copy_scc cfg'' suc loophead
+				) succs cfg in
+			cfg'
+	)
+
+(*Copy loop-head and the next node of loop-head in SCC and connect them together.*)
+let copy_loophead : IntraCfg.t -> Node.t -> IntraCfg.t
+=fun cfg loophead scc node_next_to_lhead ->
+	connect_two_nodes cfg (Node.make ()) (find_cmd loophead cfg) (Node.make ()) (find_cmd node_next_to_lhead cfg) in
+
+(**)
+let copy_loop : IntraCfg.t -> Node.t -> Node.t -> Node.t -> scc -> IntraCfg.t
+=fun cfg looptail loophead looppbreak scc ->
+	if List.length (succ loophead cfg) < 2 then raise (Failure "copy_loop: loophead succs less than 2")
+	else (
+			let node_next_to_lhead_in_scc = List.find (fun s -> List.mem s scc) (scc loophead cfg) in
+			let cfg_lh_copied = copy_loophead cfg loophead node_next_to_lhead_in_scc in
+			let cfg_scc_copied = copy_scc cfg_lh_copied node_next_to_lhead_in_scc loophead in
+
+	)
+			
+			
+
+
+(*
+let copy_loop : IntraCfg.t -> Node.t -> Node.t -> Node.t -> IntraCfg.t
+=fun cfg looptail loophead loopbreak ->
+	if List.length (succ loophead cfg) < 2 then raise (Failure "copy_loop: loop-head successors less than 2")
+	else (
+
+			let loopin =
+					if Node.equal (List.nth (succ loophead cfg) 0) loopbreak
+					then List.nth (succ loophead cfg) 1 
+					else List.nth (succ loophead cfg) 0 in
+			let loop_initial = IntraCfg.empty (Cil.emptyFunction "dummy") in	(*empty*)
+			let loop_initial =  in	(*loop-head*)
+			
+			let loophead_new = Node.make () in
+			let loopbreak_new = Node.make () in
+			let loopin_new = Node.make () in
+			let looptail_new = Node.make () in
+			
+			let cfg_new = connect_two_nodes cfg cfg loophead_new (find_cmd loophead cfg) loopbreak_new (find_cmd loopbreak cfg) in	(*loophead -> loopbreak*)
+			let cfg_new = connect_two_nodes cfg cfg_new loophead_new (find_cmd loophead cfg) loopin_new (find_cmd loopin cfg) in	(*loophead -> loopin*)
+			let cfg_new = connect_two_nodes cfg cfg_new looptail_new (find_cmd loophead cfg) loophead_new (find_cmd loophead cfg) in	(*backedge_from -> loophead*)
+			let cfg_new = connect_cycle cfg cfg_new loophead_new looptail in	(*connect cycle backards from backedge_from to loophead*)
+			(*Connect separate two loops.*)
+			let cfg_new = connect_two_loops cfg cfg_new looptail loophead loopbreak looptail_new loophead_new loopbreak_new in
+			cfg_new
+	)
+*)
+
+let reconstruct : IntraCfg.t -> loop_nodes -> scc -> IntraCfg.t
+= fun cfg (tail, head, break) scc ->
+	(*
 	remove_edge tail head cfg
 	|> add_edge tail break
+	*)
 
 let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 = fun cfg ->
@@ -63,7 +132,7 @@ let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 			if List.length scc < 2 then cfg 
 			else
 				let loop_nodes = get_loop_nodes cfg scc in
-				reconstruct cfg loop_nodes) cfg sccs
+				reconstruct cfg loop_nodes scc) cfg sccs
 		in unroll_cfg updated
 	else
 		cfg
@@ -83,6 +152,10 @@ let get_unrolled_icfg : Global.t -> InterCfg.t
 	let _ = print_endline (">> Unrolling is done") in 
 	{global.icfg with cfgs = unrolled_cfgs}
 
+
+(*-----------------------------------------------------------------------------------------------*)
+
+(*
 (* Use this function only to extract the nid from airac_nid *)
 let nid_from_arg_exp : Cil.exp -> string
 = fun e ->
@@ -122,13 +195,13 @@ let is_break_stmt : Cil.stmt -> bool
 			BatString.exists name "while_break"
 		| _ -> false) labels
 
-(* TO DO *)
 let unroll_body : Cil.fundec -> Cil.block -> int -> Cil.block
 = fun fd body k ->
 	match k with
 	| 0 -> body
 	| _ -> body
 
+(*
 class unrollingVisitor (fd, k) = object(self)
 	inherit nopCilVisitor
 	method vstmt (s : stmt) =
@@ -173,3 +246,5 @@ class insertNidVisitor (query) = object(self)
         	ChangeTo {labels = s.labels; skind = skind; sid = s.sid; succs = s.succs; preds = s.preds}
     	| _ -> DoChildren 
 end
+
+*)

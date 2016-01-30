@@ -761,7 +761,7 @@ try
     ) BatMap.empty (nodesof g) in
     {g with dom_tree = dom_tree;
             dom_fronts = dom_fronts}
-with _ -> prerr_endline "IntraCfg.compute_dom"; raise (Failure "IntraCfg.compute_dom")
+with _ -> raise (Failure "IntraCfg.compute_dom")
 
 let compute_scc : t -> t
 =fun g -> { g with scc_list = Scc.scc_list g.graph }
