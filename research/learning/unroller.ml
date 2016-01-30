@@ -49,77 +49,85 @@ let get_loop_nodes : IntraCfg.t -> scc -> loop_nodes
 
 (*-----------------------------*)
 let connect_two_nodes : IntraCfg.t -> Node.t -> Cmd.t -> Node.t -> Cmd.t -> IntraCfg.t
-=fun cfg n1 cmd1 n2 cmd2 -?
+=fun cfg n1 cmd1 n2 cmd2 ->
 	let cfg' = add_node_with_cmd n1 cmd1 cfg in
 	let cfg' = add_node_with_cmd n2 cmd2 cfg' in
 	let cfg' = add_edge n1 n2 cfg' in
 	cfg'
 
-let rec copy_scc : IntraCfg.t -> Node.t -> IntraCfg.t
-=fun cfg curnode loophead ->
-	let succs = succ curnode cfg in
-	if List.mem loophead succs then connect_two_nodes cfg (curnode) (find_cmd curnode cfg) (loophead) (find_cmd loophead cfg)
+(*Copy SCC.*)
+let rec copy_scc : IntraCfg.t -> IntraCfg.t -> Node.t -> Node.t -> Node.t -> Node.t -> Node.t -> IntraCfg.t
+=fun cfg_orig cfg_updating curnode curnode_new loophead looptail loopbreak ->
+	let succs = succ curnode cfg_orig in
+	if List.mem loophead succs then (
+			let suc_of_loopbreak_orig = List.nth (succ loopbreak cfg_orig) 0 in
+			add_edge (curnode_new) (suc_of_loopbreak_orig) (cfg_updating)
+	)
 	else (
-			let cfg' = List.fold_right (fun suc acc -> 
-					let cfg'' = connect_two_nodes acc () () () () in
-					copy_scc cfg'' suc loophead
-				) succs cfg in
-			cfg'
+			List.fold_right (fun s acc ->
+					let sucnode_new = Node.make () in
+					let cfg'' = add_node_with_cmd (sucnode_new) (find_cmd s cfg_orig) acc in
+					let cfg'' = add_edge curnode_new sucnode_new cfg'' in
+					copy_scc cfg_orig cfg'' s sucnode_new loophead looptail loopbreak
+				) succs cfg_updating
 	)
 
 (*Copy loop-head and the next node of loop-head in SCC and connect them together.*)
-let copy_loophead : IntraCfg.t -> Node.t -> IntraCfg.t
-=fun cfg loophead scc node_next_to_lhead ->
-	connect_two_nodes cfg (Node.make ()) (find_cmd loophead cfg) (Node.make ()) (find_cmd node_next_to_lhead cfg) in
+let copy_loophead : IntraCfg.t -> Node.t -> Node.t -> Node.t -> (IntraCfg.t * Node.t * Node.t)
+=fun cfg loophead node_next_to_lhead looptail ->
+	let loophead_new = Node.make () in
+	let loophead_new_cmd = find_cmd loophead cfg in
+	let next2loophead_new = Node.make () in
+	let next2loophead_new_cmd = find_cmd node_next_to_lhead cfg in
+	let cfg' = connect_two_nodes cfg (loophead_new) (loophead_new_cmd) (next2loophead_new) (next2loophead_new_cmd) in
+	let cfg' = List.fold_right (fun s acc -> remove_edge looptail s cfg') (succ looptail cfg') cfg' in
+	let cfg' = connect_two_nodes cfg' (looptail) (find_cmd looptail cfg) (loophead_new) (loophead_new_cmd) in
+	(cfg', loophead_new, next2loophead_new)
 
-(**)
+(*Copy loop-break.*)
+let copy_loopbreak : IntraCfg.t -> Node.t -> Node.t -> IntraCfg.t
+=fun cfg loopbreak loophead_new ->
+	let loopbreak_new = Node.make () in
+	let loopbreak_new_cmd = find_cmd loopbreak cfg in
+	let suc_of_loopbreak = List.nth (succ loopbreak cfg) 0 in
+	let cfg' = add_node_with_cmd (loopbreak_new) (loopbreak_new_cmd) (cfg) in
+	let cfg' = add_edge (loopbreak_new) (suc_of_loopbreak) (cfg') in
+	add_edge (loophead_new) (loopbreak_new) (cfg')
+
+(*Copy the loop.*)
 let copy_loop : IntraCfg.t -> Node.t -> Node.t -> Node.t -> scc -> IntraCfg.t
-=fun cfg looptail loophead looppbreak scc ->
-	if List.length (succ loophead cfg) < 2 then raise (Failure "copy_loop: loophead succs less than 2")
-	else (
-			let node_next_to_lhead_in_scc = List.find (fun s -> List.mem s scc) (scc loophead cfg) in
-			let cfg_lh_copied = copy_loophead cfg loophead node_next_to_lhead_in_scc in
-			let cfg_scc_copied = copy_scc cfg_lh_copied node_next_to_lhead_in_scc loophead in
-
+=fun cfg looptail loophead loopbreak scc ->
+	if List.length (succ loophead cfg) < 2 then (
+			(*
+			print_endline (Cmd.to_string (find_cmd loophead cfg));
+			print_int (List.length (succ loophead cfg)); print_endline "";
+			raise (Failure "copy_loop: loophead succs less than 2")
+			*)
+			cfg
 	)
-			
-			
-
+	else (
+			prerr_endline "haha";
+			let next2loophead_in_scc = List.find (fun s -> List.mem s scc) (succ loophead cfg) in
+			prerr_endline "kaka";
+			let (cfg_lhead_copied, loophead_new, next2loophead_new) = copy_loophead cfg loophead next2loophead_in_scc looptail in
+			prerr_endline "jaja";
+			(*NOTE: loop 안에 loop이 있으면 copy_scc 가 안 끝나는 문제가 있을 수 있겠다.*)
+			let cfg_scc_copied = copy_scc cfg cfg_lhead_copied next2loophead_in_scc next2loophead_new loophead looptail loopbreak in
+			prerr_endline "gaga";
+			let cfg_lbreak_copied = copy_loopbreak cfg_scc_copied loopbreak loophead_new in
+			cfg_lbreak_copied
+	)
 
 (*
-let copy_loop : IntraCfg.t -> Node.t -> Node.t -> Node.t -> IntraCfg.t
-=fun cfg looptail loophead loopbreak ->
-	if List.length (succ loophead cfg) < 2 then raise (Failure "copy_loop: loop-head successors less than 2")
-	else (
-
-			let loopin =
-					if Node.equal (List.nth (succ loophead cfg) 0) loopbreak
-					then List.nth (succ loophead cfg) 1 
-					else List.nth (succ loophead cfg) 0 in
-			let loop_initial = IntraCfg.empty (Cil.emptyFunction "dummy") in	(*empty*)
-			let loop_initial =  in	(*loop-head*)
-			
-			let loophead_new = Node.make () in
-			let loopbreak_new = Node.make () in
-			let loopin_new = Node.make () in
-			let looptail_new = Node.make () in
-			
-			let cfg_new = connect_two_nodes cfg cfg loophead_new (find_cmd loophead cfg) loopbreak_new (find_cmd loopbreak cfg) in	(*loophead -> loopbreak*)
-			let cfg_new = connect_two_nodes cfg cfg_new loophead_new (find_cmd loophead cfg) loopin_new (find_cmd loopin cfg) in	(*loophead -> loopin*)
-			let cfg_new = connect_two_nodes cfg cfg_new looptail_new (find_cmd loophead cfg) loophead_new (find_cmd loophead cfg) in	(*backedge_from -> loophead*)
-			let cfg_new = connect_cycle cfg cfg_new loophead_new looptail in	(*connect cycle backards from backedge_from to loophead*)
-			(*Connect separate two loops.*)
-			let cfg_new = connect_two_loops cfg cfg_new looptail loophead loopbreak looptail_new loophead_new loopbreak_new in
-			cfg_new
-	)
+let reconstruct : IntraCfg.t -> loop_nodes -> scc -> IntraCfg.t
+= fun cfg (tail, head, break) scc ->
+	remove_edge tail head cfg
+	|> add_edge tail break
 *)
 
 let reconstruct : IntraCfg.t -> loop_nodes -> scc -> IntraCfg.t
-= fun cfg (tail, head, break) scc ->
-	(*
-	remove_edge tail head cfg
-	|> add_edge tail break
-	*)
+=fun cfg (tail, head, break) scc ->
+	copy_loop cfg tail head break scc
 
 let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 = fun cfg ->
@@ -131,9 +139,13 @@ let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
 		let updated = List.fold_left (fun cfg scc ->
 			if List.length scc < 2 then cfg 
 			else
+				let _ = prerr_endline "jeje" in
 				let loop_nodes = get_loop_nodes cfg scc in
-				reconstruct cfg loop_nodes scc) cfg sccs
-		in unroll_cfg updated
+				let _ = prerr_endline "keke" in
+				reconstruct cfg loop_nodes scc
+			) cfg sccs in
+		(*unroll_cfg updated*)
+		updated
 	else
 		cfg
 
@@ -153,9 +165,8 @@ let get_unrolled_icfg : Global.t -> InterCfg.t
 	{global.icfg with cfgs = unrolled_cfgs}
 
 
-(*-----------------------------------------------------------------------------------------------*)
+(*================================================================================*)
 
-(*
 (* Use this function only to extract the nid from airac_nid *)
 let nid_from_arg_exp : Cil.exp -> string
 = fun e ->
@@ -201,7 +212,6 @@ let unroll_body : Cil.fundec -> Cil.block -> int -> Cil.block
 	| 0 -> body
 	| _ -> body
 
-(*
 class unrollingVisitor (fd, k) = object(self)
 	inherit nopCilVisitor
 	method vstmt (s : stmt) =
@@ -246,5 +256,3 @@ class insertNidVisitor (query) = object(self)
         	ChangeTo {labels = s.labels; skind = skind; sid = s.sid; succs = s.succs; preds = s.preds}
     	| _ -> DoChildren 
 end
-
-*)
