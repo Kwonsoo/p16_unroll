@@ -1,0 +1,6 @@
+<Reduce 관련>
+1. sed : single-query program 자체가 컴파일 에러 : gcc -c reduce.c
+		일단 이 프로그램은 넘어가고 다른 프로그램부터 reduce 함.
+
+
+<구현 관련>
