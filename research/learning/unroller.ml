@@ -1,6 +1,7 @@
 (***********************
- * real k=1 unroller
- * reference: http://www.cs.colostate.edu/~mstrout/CS553Fall06/slides/lecture13-control.pdf
+ * k=0 & k=1 unroller
+ * reference 1: http://www.cs.colostate.edu/~mstrout/CS553Fall06/slides/lecture13-control.pdf
+ * reference 2: http://www.cs.utexas.edu/~pingali/CS380C/2016/lectures/Dominators.pdf
  ***********************)
 
 open Cil
