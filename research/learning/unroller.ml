@@ -41,6 +41,9 @@ let find_loop_break : IntraCfg.t -> node -> node -> node
 let get_loop_nodes : IntraCfg.t -> scc -> loop_nodes
 = fun cfg scc ->
 	let loop_head = find_loop_head cfg scc in
+	prerr_endline "---------";
+	prerr_int (Node.getid loop_head);
+	prerr_endline "\n--------";
 	let tail = try
 		List.find (fun node -> List.mem node scc) (pred loop_head cfg)
 		with _ -> raise (Failure "Recon.get_loop_nodes: fatal") in
@@ -55,9 +58,12 @@ let connect_two_nodes : IntraCfg.t -> Node.t -> Cmd.t -> Node.t -> Cmd.t -> Intr
 	let cfg' = add_edge n1 n2 cfg' in
 	cfg'
 
-let connect_original_and_copied_scc : IntraCfg.t -> 
-=fun cfg scc sccorig_sccnew_map ->
-	(*TODO*)
+let connect_original_and_copied_scc : IntraCfg.t -> (Node.t, Node.t) BatMap.t -> Node.t -> Node.t -> Node.t -> IntraCfg.t
+=fun cfg sccorig_sccnew_map loophead looptail loopbreak ->
+	let cfg' = remove_edge looptail loophead cfg in
+	let cfg' = remove_edge (BatMap.find looptail sccorig_sccnew_map) (BatMap.find loophead sccorig_sccnew_map) cfg' in
+	let cfg' = add_edge looptail (BatMap.find loophead sccorig_sccnew_map) cfg' in
+	add_edge (BatMap.find looptail sccorig_sccnew_map) (List.nth (succ loopbreak cfg) 0) cfg'
 
 let copy_scc : IntraCfg.t -> IntraCfg.t -> scc -> (Node.t, Node.t) BatMap.t -> IntraCfg.t
 =fun cfg_orig cfg_updating scc sccorig_sccnew_map ->
@@ -68,84 +74,27 @@ let copy_scc : IntraCfg.t -> IntraCfg.t -> scc -> (Node.t, Node.t) BatMap.t -> I
 			List.fold_right (fun s acc' ->
 					try connect_two_nodes acc' (n_new) (n_new_cmd) (BatMap.find s sccorig_sccnew_map) (find_cmd s cfg_orig) with _ -> acc'
 				) succs acc
-		) scc cfg_updating in 
+		) scc cfg_updating
 
-let copy_loop : IntraCfg.t -> Node.t -> Node.t -> Node.t -> scc -> IntraCfg.t
-=fun cfg looptail loophead loopbreak scc ->
-	if List.length (succ loophead cfg) < 2 then cfg
-	else (
-			let sccorig_sccnew_map = List.fold_right (fun n acc ->
-					let new_node = Node.make () in
-					BatMap.add n new_node acc
-				) scc BatMap.empty in
-			let cfg_scc_copied = copy_scc cfg cfg scc sccorig_sccnew_map in
-			let cfg_scc_connected = connect_original_and_copied_scc cfg_scc_copied scc sccorig_sccnew_map in
-
-	)
-	
-
-(*
-(*Copy SCC.*)
-let rec copy_scc : IntraCfg.t -> IntraCfg.t -> Node.t -> Node.t -> Node.t -> Node.t -> Node.t -> IntraCfg.t
-=fun cfg_orig cfg_updating curnode curnode_new loophead looptail loopbreak ->
-	let succs = succ curnode cfg_orig in
-	if List.mem loophead succs then (
-			let suc_of_loopbreak_orig = List.nth (succ loopbreak cfg_orig) 0 in
-			add_edge (curnode_new) (suc_of_loopbreak_orig) (cfg_updating)
-	)
-	else (
-			List.fold_right (fun s acc ->
-					let sucnode_new = Node.make () in
-					let cfg'' = add_node_with_cmd (sucnode_new) (find_cmd s cfg_orig) acc in
-					let cfg'' = add_edge curnode_new sucnode_new cfg'' in
-					copy_scc cfg_orig cfg'' s sucnode_new loophead looptail loopbreak
-				) succs cfg_updating
-	)
-
-(*Copy loop-head and the next node of loop-head in SCC and connect them together.*)
-let copy_loophead : IntraCfg.t -> Node.t -> Node.t -> Node.t -> (IntraCfg.t * Node.t * Node.t)
-=fun cfg loophead node_next_to_lhead looptail ->
-	let loophead_new = Node.make () in
-	let loophead_new_cmd = find_cmd loophead cfg in
-	let next2loophead_new = Node.make () in
-	let next2loophead_new_cmd = find_cmd node_next_to_lhead cfg in
-	let cfg' = connect_two_nodes cfg (loophead_new) (loophead_new_cmd) (next2loophead_new) (next2loophead_new_cmd) in
-	let cfg' = List.fold_right (fun s acc -> remove_edge looptail s cfg') (succ looptail cfg') cfg' in
-	let cfg' = connect_two_nodes cfg' (looptail) (find_cmd looptail cfg) (loophead_new) (loophead_new_cmd) in
-	(cfg', loophead_new, next2loophead_new)
-
-(*Copy loop-break.*)
-let copy_loopbreak : IntraCfg.t -> Node.t -> Node.t -> IntraCfg.t
-=fun cfg loopbreak loophead_new ->
+let copy_lbreak_and_connect2 : IntraCfg.t -> IntraCfg.t -> (Node.t, Node.t) BatMap.t -> Node.t -> Node.t -> IntraCfg.t
+=fun cfg_orig cfg_updating sccorig_sccnew_map loophead loopbreak ->
 	let loopbreak_new = Node.make () in
-	let loopbreak_new_cmd = find_cmd loopbreak cfg in
-	let suc_of_loopbreak = List.nth (succ loopbreak cfg) 0 in
-	let cfg' = add_node_with_cmd (loopbreak_new) (loopbreak_new_cmd) (cfg) in
-	let cfg' = add_edge (loopbreak_new) (suc_of_loopbreak) (cfg') in
-	add_edge (loophead_new) (loopbreak_new) (cfg')
+	let cfg' = add_node_with_cmd (loopbreak_new) (find_cmd loopbreak cfg_orig) cfg_updating in
+	let cfg' = add_edge (BatMap.find loophead sccorig_sccnew_map) (loopbreak_new) cfg' in
+	let cfg' = add_edge (loopbreak_new) (List.nth (succ loopbreak cfg') 0) cfg' in
+	cfg'
 
-(*Copy the loop.*)
 let copy_loop : IntraCfg.t -> Node.t -> Node.t -> Node.t -> scc -> IntraCfg.t
 =fun cfg looptail loophead loopbreak scc ->
-	if List.length (succ loophead cfg) < 2 then (
-			(*
-			print_endline (Cmd.to_string (find_cmd loophead cfg));
-			print_int (List.length (succ loophead cfg)); print_endline "";
-			raise (Failure "copy_loop: loophead succs less than 2")
-			*)
-			cfg
-	)
-	else (
-			let next2loophead_in_scc = List.find (fun s -> List.mem s scc) (succ loophead cfg) in
-			let (cfg_lhead_copied, loophead_new, next2loophead_new) = copy_loophead cfg loophead next2loophead_in_scc looptail in
-			(*NOTE: loop 안에 loop이 있으면 copy_scc 가 안 끝나는 문제가 있을 수 있겠다.*)
-			let cfg_scc_copied = copy_scc cfg cfg_lhead_copied next2loophead_in_scc next2loophead_new loophead looptail loopbreak in
-			let cfg_lbreak_copied = copy_loopbreak cfg_scc_copied loopbreak loophead_new in
-			cfg_lbreak_copied
-	)
-*)
-
-
+	let sccorig_sccnew_map = List.fold_right (fun n acc ->
+			let new_node = Node.make () in
+			BatMap.add n new_node acc
+		) scc BatMap.empty in
+	let cfg_scc_copied = copy_scc cfg cfg scc sccorig_sccnew_map in
+	let cfg_scc_connected = connect_original_and_copied_scc cfg_scc_copied sccorig_sccnew_map loophead looptail loopbreak in
+	let cfg_done = copy_lbreak_and_connect2 cfg cfg_scc_connected sccorig_sccnew_map loophead loopbreak in
+	cfg_done
+	
 (*
 let reconstruct : IntraCfg.t -> loop_nodes -> scc -> IntraCfg.t
 = fun cfg (tail, head, break) scc ->
@@ -157,23 +106,24 @@ let reconstruct : IntraCfg.t -> loop_nodes -> scc -> IntraCfg.t
 =fun cfg (tail, head, break) scc ->
 	copy_loop cfg tail head break scc
 
-let rec unroll_cfg : IntraCfg.t -> IntraCfg.t
-= fun cfg ->
-	let sccs = cfg.scc_list in
-	if (List.exists (fun scc -> List.length scc > 1) sccs)
-	then
-		let cfg = compute_scc cfg |> compute_dom in
-		let sccs = cfg.scc_list in
-		let updated = List.fold_left (fun cfg scc ->
-			if List.length scc < 2 then cfg 
-			else
-				let loop_nodes = get_loop_nodes cfg scc in
-				reconstruct cfg loop_nodes scc
-			) cfg sccs in
-		(*unroll_cfg updated*)
-		updated
-	else
-		cfg
+let rec unroll_cfg : IntraCfg.t -> scc list -> IntraCfg.t 
+=fun cfg sccs ->
+	if cfg.fd.svar.vname = "_G_" then cfg
+	else (
+			(*
+			let sccs = List.filter (fun scc -> (List.length scc) > 1) sccs in
+			if List.length sccs = 0 then (prerr_endline "tete"; cfg)*)
+			if not (List.exists (fun scc -> List.length scc > 1) sccs) then (cfg)
+			else (
+					prerr_int (List.length sccs);prerr_endline "";
+					let one_scc_longer_than1 = List.find (fun scc -> List.length scc > 1) sccs in	(*one SCC means one loop.*)
+					let loop_nodes = get_loop_nodes cfg one_scc_longer_than1 in
+					let cfg' = reconstruct cfg loop_nodes one_scc_longer_than1 in	(*unroll*)
+					let cfg' = compute_scc cfg' |> compute_dom in			(*recompute SCC and Dom*)
+					let sccs' = cfg'.scc_list in
+					unroll_cfg cfg' sccs'
+			)
+	)
 
 let get_unrolled_icfg : Global.t -> InterCfg.t
 = fun global ->
@@ -186,7 +136,7 @@ let get_unrolled_icfg : Global.t -> InterCfg.t
 		let _ = idx := !idx + 1 in
 		let status = "(" ^ (string_of_int !idx) ^ " of " ^ (string_of_int (BatMap.cardinal cfgs)) ^ ")" in
 		let _ = print_endline ((get_pid cfg) ^ " ... " ^ status) in
-		unroll_cfg cfg) cfgs in
+		unroll_cfg cfg (cfg.scc_list)) cfgs in
 	let _ = print_endline (">> Unrolling is done") in 
 	{global.icfg with cfgs = unrolled_cfgs}
 
