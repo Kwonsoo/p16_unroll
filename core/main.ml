@@ -768,7 +768,7 @@ let main () =
 				prerr_string "nids_org: ";
 				List.iter (fun n -> prerr_int (IntraCfg.Node.getid n); prerr_string " ") (IntraCfg.nodesof cfg); prerr_endline "";
 			
-				let unrolled = Unroller.unroll_cfg cfg cfg.scc_list in
+				let unrolled = Unroller.unroll_cfg_1 cfg cfg.scc_list in
 				prerr_endline ">> unroll completed\n";
 				prerr_string "nids_unr: \n";
 				List.iter (fun n -> prerr_int (IntraCfg.Node.getid n); prerr_string " ") (IntraCfg.nodesof unrolled); prerr_endline "";
